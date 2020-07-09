@@ -98,3 +98,10 @@ SyntaxError: invalid syntax
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Thu Jul 09 2020 16:57:34.948 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 8
+  """Mostra a cena da Praia"""
+  ^
+IndentationError: expected an indented block
+'''},
