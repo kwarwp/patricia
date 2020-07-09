@@ -23,4 +23,6 @@ class Praia:
         """ Mostra a cena da praia """
         Cena(CENA_PRAIA).vai()
     
-#Praia().vai()
+
+if __name__ == "__main__":
+    Praia().vai()
