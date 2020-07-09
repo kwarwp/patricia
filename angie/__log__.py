@@ -100,3 +100,10 @@ IndentationError: expected an indented block
     if name== __main__:
 NameError: name 'name' is not defined
 '''},
+{'date': 'Thu Jul 09 2020 17:30:21.850 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 15
+  self.banhista = Elemento(BANHISTA, x=100, y=200cena=self.cena)
+                                                  ^
+SyntaxError: invalid syntax
+'''},
