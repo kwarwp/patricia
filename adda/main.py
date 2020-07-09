@@ -12,7 +12,7 @@ Changelog
 
 """
 from _spy.vitollino.main import Cena
-from grace.main import Praia
+# from grace.main import Praia
 __version__ = "20.07"
 __author__ = "Carlo"
 CENA_CALCADA = "https://i.imgur.com/zOxshRh.jpg"
