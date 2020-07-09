@@ -1,6 +1,7 @@
 # patricia.sara.main.py
 
 from spy.vitollino.main import Cena
+
 __version__ = "20.07"
 __author__ = "Paulo Assumpção"
 
