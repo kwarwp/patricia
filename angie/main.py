@@ -10,6 +10,6 @@ class Calcada:
 	""" Representa a cena da calcada """
 	def vai(self):
 	"""" Mostra a cena da praia """
-        Cena(cena_praia, direita=Praia()).vai()
+		Cena(cena_praia, direita=Praia()).vai()
         #Cena(cena_praia).vai()
 Calcada().vai()
