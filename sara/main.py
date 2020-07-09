@@ -4,12 +4,12 @@ from spy.vitollino.main import Cena
 __version__ = "20.07"
 __author__ = "Paulo Assumpção"
 
-CENA_PRAIA = "https://i.imgur.com/zOxshRh.jpg"
+CENA_CALCADA = "https://i.imgur.com/zOxshRh.jpg"
 
 class Calcada:
     """ representa uma cena na calçada da praia """
-    def vai():
-        """ Mostra a cena da praia """"
-        Cena(CENA_PRAIA).vai()
+    def vai(self):
+        """ Mostra a cena da praia """
+        Cena(CENA_CALCADA).vai()
         
 Calcada().vai()
