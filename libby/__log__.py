@@ -84,3 +84,10 @@ Traceback (most recent call last):
       ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Jul 09 2020 16:56:39.788 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 6
+  class Calcada_Praia
+                      ^
+SyntaxError: invalid syntax
+'''},
