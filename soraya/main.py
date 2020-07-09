@@ -14,7 +14,7 @@ Changelog
 from _spy.vitollino.main import Cena
 from grace.main import praia
 __version__ = "20.07"
-__author__ = "Isabel Hortencia Garnica""
+__author__ = "Isabel Hortencia Garnica"
 CENA_PRAIA = "https://i.imgur.com/zOxshRh.jpg"
 
 
