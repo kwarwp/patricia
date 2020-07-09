@@ -12,15 +12,16 @@ Changelog
 
 """
 from _spy.vitollino.main import Cena
+from grace.main import Praia
 __version__ = "20.07"
 __author__ = "Carlo"
-CENA_PRAIA = "https://i.imgur.com/zOxshRh.jpg"
+CENA_CALCADA = "https://i.imgur.com/zOxshRh.jpg"
 
 
 class Calcada:
     """ Representa uma cena da calçada da praia """
     def vai(self):
         """ Mostra a cena da praia """
-        Cena(CENA_PRAIA).vai()
+        Cena(CENA_CALCADA, direita=Praia()).vai()
     
-Calcada().vai()
+Calcada()
