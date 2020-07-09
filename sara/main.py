@@ -10,10 +10,10 @@ BANHISTA = "https://i.imgur.com/CWQ00XG.jpg"
 
 class Calcada:
 
-    def __init__():
+    def __init__(self):
         """ Mostra a cena da praia """
         self.cena = Cena(CENA_CALCADA)
-        self.banhista = Elemento(BANHISTA, cena=self.cena)
+        self.banhista = Elemento(BANHISTA, x=100, y=100, cena=self.cena)
         
     """ representa uma cena na calçada da praia """
     def vai(self):
