@@ -1,10 +1,11 @@
 # patricia.sara.main.py
 
-from _spy.vitollino.main import Cena, Elemento
+from _spy.vitollino.main import Cena, Elemento,STYLE
 
 __version__ = "20.07"
 __author__ = "Paulo Assumpção"
 
+STYLE["width"] = 500
 CENA_CALCADA = "https://i.imgur.com/zOxshRh.jpg"
 BANHISTA = "https://i.imgur.com/CWQ00XG.jpg"
 
