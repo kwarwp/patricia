@@ -1,6 +1,6 @@
 # patricia.sara.main.py
 
-from _spy.vitollino.main import Cena, Element
+from _spy.vitollino.main import Cena, Elemento
 
 __version__ = "20.07"
 __author__ = "Paulo Assumpção"
@@ -13,7 +13,7 @@ class Calcada:
     def __init__():
         """ Mostra a cena da praia """
         self.cena = Cena(CENA_CALCADA)
-        self.banhista = Element(BANHISTA, cena=self.cena)
+        self.banhista = Elemento(BANHISTA, cena=self.cena)
         
     """ representa uma cena na calçada da praia """
     def vai(self):
