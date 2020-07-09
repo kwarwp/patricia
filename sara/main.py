@@ -1,6 +1,6 @@
 # patricia.sara.main.py
 
-from _spy.vitollino.main import Cena, Elemento,STYLE
+from _spy.vitollino.main import Cena, Elemento, STYLE
 
 __version__ = "20.07"
 __author__ = "Paulo Assumpção"
