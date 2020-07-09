@@ -36,3 +36,10 @@ IndentationError: expected an indented block
     oi(nome)
 TypeError: oi() takes 0 positional argument but more were given
 '''},
+{'date': 'Thu Jul 09 2020 15:54:24.783 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 9
+  def sobre_pessoa(self)
+                         ^
+SyntaxError: invalid syntax
+'''},
