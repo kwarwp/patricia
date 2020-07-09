@@ -12,7 +12,7 @@ class Calcada:
 	def __init__(self):
 		"""" Mostra a cena da praia """
 		self.cena = Cena(cena_praia, direita=Praia())
-		self.banhista = Elemento(BANHISTA, x=100, y=200cena=self.cena)
+		self.banhista = Elemento(BANHISTA, x=100, y=200, cena=self.cena)
         
 	def vai(self):
 		"""" Mostra a cena da praia """
