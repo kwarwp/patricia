@@ -1,3 +1,12 @@
-_autor_="Charles"
-o_nome_de_um_numero = 5**2
-print("Olá programação! Veja um número:", o_nome_de_um_numero)
+from _spy.vitollino.main import Cena
+_version_ = "20.07"
+_autor_ = "Carlo_Charles"
+CENA_PRAIA = "https://i.imgur.com/zOxshRh.jpg"
+
+class Calcada: 
+   """Representa uma cena da calçada"""
+   def vai(self):
+      """Mostra a cena da Praia"""
+      Cena(CENA_PRAIA).vai()
+
+Calcada().vai()
