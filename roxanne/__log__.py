@@ -13,3 +13,10 @@ SyntaxError: invalid syntax
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Thu Jul 09 2020 15:33:04.971 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 3
+  nome = input("Digite o seu nome: ")
+  ^
+IndentationError: expected an indented block
+'''},
