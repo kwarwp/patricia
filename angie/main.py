@@ -12,5 +12,5 @@ class Calcada:
 		"""" Mostra a cena da praia """
 		Cena(cena_praia, direita=Praia()).vai()
         #Cena(cena_praia).vai()
-#if name== __main__:
-Calcada().vai()
+if __name__ == "__main__":
+	Calcada().vai()
