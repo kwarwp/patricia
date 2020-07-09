@@ -145,3 +145,10 @@ TypeError: vai() takes 0 positional argument but more were given
     Cena(CENA_PRAIA).vai()
 NameError: name 'CENA_PRAIA' is not defined
 '''},
+{'date': 'Thu Jul 09 2020 17:21:20.436 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 29
+  if __name__ == '__main__'
+                            ^
+SyntaxError: invalid syntax
+'''},
