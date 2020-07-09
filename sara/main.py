@@ -1,3 +1,15 @@
 # patricia.sara.main.py
+
+from spy.vitollino.main import Cena
+__version__ = "20.07"
 __author__ = "Paulo Assumpção"
-print(__author__)
+
+CENA_PRAIA = "https://i.imgur.com/zOxshRh.jpg"
+
+class Calcada:
+    """ representa uma cena na calçada da praia """
+    def vai():
+        """ Mostra a cena da praia """"
+        Cena(CENA_PRAIA).vai()
+        
+Calcada().vai()
