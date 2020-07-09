@@ -77,3 +77,10 @@ Traceback (most recent call last):
   module <module> line 1
     from _spy.vitollino.main import cena
 '''},
+{'date': 'Thu Jul 09 2020 16:54:53.482 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 7
+  def
+      ^
+SyntaxError: invalid syntax
+'''},
