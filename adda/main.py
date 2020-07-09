@@ -22,6 +22,7 @@ class Calcada:
     """ Representa uma cena da calçada da praia """
     def vai(self):
         """ Mostra a cena da praia """
-        Cena(CENA_CALCADA, direita=Praia()).vai()
+        #Cena(CENA_CALCADA, direita=Praia()).vai()
+        Cena(CENA_CALCADA).vai()
     
 Calcada()
