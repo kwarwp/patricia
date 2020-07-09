@@ -91,3 +91,10 @@ SyntaxError: invalid syntax
                       ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Jul 09 2020 16:57:19.910 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 7
+  def vai():
+  ^
+IndentationError: expected an indented block
+'''},
