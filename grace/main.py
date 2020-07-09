@@ -23,4 +23,4 @@ class Praia:
         """ Mostra a cena da praia """
         Cena(CENA_PRAIA).vai()
     
-Praia().vai()
+#Praia().vai()
