@@ -11,7 +11,7 @@ class Calcada:
 	""" Representa a cena da calcada """
 	def __init__(self):
 		"""" Mostra a cena da praia """
-		self.cena(cena_praia, direita=Praia())
+		self.cena = Cena(cena_praia, direita=Praia())
 		self.banhista = Elemento(BANHISTA, x=100, y=200cena=self.cena)
         
 	def vai(self):
