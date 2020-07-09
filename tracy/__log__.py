@@ -20,3 +20,10 @@ SyntaxError: invalid syntax
                                    ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Jul 09 2020 15:19:15.977 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 5
+  print("Qual o nome do projeto?",\n nome_do_projeto)
+                                   ^
+SyntaxError: invalid syntax
+'''},
