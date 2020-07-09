@@ -225,3 +225,10 @@ NameError: name 'STYLE' is not defined
     STYLE["width"] = 500
 NameError: name 'STYLE' is not defined
 '''},
+{'date': 'Thu Jul 09 2020 19:09:59.465 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 6
+  http://1.bp.blogspot.com/_j2E5RPBo45s/S1Hi7RGkIMI/AAAAAAAAADI/Xn66c31EJNw/s1600-h/cartoes_memoria.JPG
+       ^
+SyntaxError: invalid syntax
+'''},
