@@ -129,3 +129,10 @@ TypeError: 'module' object is not callable
     Cena(CENA_CALCADA).vai()
 TypeError: 'module' object is not callable
 '''},
+{'date': 'Thu Jul 09 2020 17:17:33.91 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 17
+  if __name__ == "__main__"
+                            ^
+SyntaxError: invalid syntax
+'''},
