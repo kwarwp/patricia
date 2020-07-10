@@ -22,3 +22,7 @@ SyntaxError: invalid syntax
     document.html = SITE
 NameError: name 'SITE' is not defined
 '''},
+{'date': 'Fri Jul 10 2020 13:42:26.259 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: obj is undefined>
+'''},
