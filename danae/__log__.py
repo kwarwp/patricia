@@ -26,3 +26,10 @@ NameError: name 'SITE' is not defined
 'error': '''
 Exception: <TypeError: obj is undefined>
 '''},
+{'date': 'Fri Jul 10 2020 14:28:25.697 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 10
+  document.body <= S(D(D(
+                                                                                                                                           ^
+SyntaxError: invalid syntax
+'''},
