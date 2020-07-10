@@ -7,12 +7,13 @@ class App:
         #H, D, S, P, B = CONST.ELM
         document.html = CONST.SITE
         document.body.html = ""
-        document.body <= S(D(D(
+        body = S(D(D(
             H("Hello World", Class=t)+P("My first website with "+B("Bulma"), Class=u),
         Class=c), Class=b), Class=h+w+p)+
         S(D(
             "".join([D("1234"+tx, Class="tile is-parent") for tx in "abcd"])
         Class="tile is-ancestor has-text-centered"), Class="info-tiles")
+        document.body <= body
         
 class CONST:
     CLS = "section container title subtitle hero hero-body is-primary".split()
