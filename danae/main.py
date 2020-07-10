@@ -5,10 +5,15 @@ H, D = html.H1, html.DIV
 #document["pydiv"] <= D( H("Olá", Class="title"), Class="container")
 class App:
     def __init__(self):
+        s, c, t, u = CONST.CLS
+        H, D, S, P, B = CONST.ELM
         document.html = CONST.SITE
-        document.bodi.html = CONST.BODY
+        document.body.html = ""
+        document.body <= S(D( H("Hello World", Class=t), Class=c), Class=s)
         
 class CONST:
+    CLS = "section container title subtitle".split()
+    ELM = [html.H1, html.DIV, html.SECTION, html.P, html.STRONG]
     SITE = """<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
