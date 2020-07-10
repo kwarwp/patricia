@@ -6,6 +6,7 @@ H, D = html.H1, html.DIV
 class App:
     def __init__(self):
         document.html = CONST.SITE
+        document.bodi.html = CONST.BODY
         
 class CONST:
     SITE = """<head>
@@ -15,7 +16,10 @@ class CONST:
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
   </head>
   <body>
-  <section class="section">
+  </section>
+  </body>
+"""
+    BODY = """  <section class="section">
     <div class="container">
       <h1 class="title">
         Hello World
@@ -24,9 +28,6 @@ class CONST:
         My first website with <strong>Bulma</strong>!
       </p>
     </div>
-  </section>
-  </body>
-
 """
 App()        
 
