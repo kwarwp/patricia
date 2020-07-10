@@ -3,7 +3,6 @@ from browser import document, html
 H, D = html.H1, html.DIV
 #document["pydiv"].html = ""
 #document["pydiv"] <= D( H("Olá", Class="title"), Class="container")
-document.html = SITE
 
 SITE = """<head>
     <meta charset="utf-8">
@@ -25,3 +24,4 @@ SITE = """<head>
   </body>
 
 """
+document.html = SITE
