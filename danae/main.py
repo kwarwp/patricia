@@ -10,7 +10,7 @@ class App:
         #H, D, S, P, B = CONST.ELM
         document.html = CONST.SITE
         document.body.html = ""
-        document.body <= S(D( H("Hello World", Class=t), Class=c), Class=s)
+        document.body <= S(D(H("Hello World", Class=t)+P("My first website with", Class=u), Class=c), Class=s)
         
 class CONST:
     CLS = "section container title subtitle".split()
@@ -22,7 +22,6 @@ class CONST:
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
   </head>
   <body>
-  </section>
   </body>
 """
     BODY = """  <section class="section">
