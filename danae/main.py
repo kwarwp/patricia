@@ -1,12 +1,13 @@
 # patricia.danae.main.py
 from browser import document, html
+from browser.html import H1 as H, DIV as D, SECTION as S, P, STRONG as B
 H, D = html.H1, html.DIV
 #document["pydiv"].html = ""
 #document["pydiv"] <= D( H("Olá", Class="title"), Class="container")
 class App:
     def __init__(self):
         s, c, t, u = CONST.CLS
-        H, D, S, P, B = CONST.ELM
+        #H, D, S, P, B = CONST.ELM
         document.html = CONST.SITE
         document.body.html = ""
         document.body <= S(D( H("Hello World", Class=t), Class=c), Class=s)
