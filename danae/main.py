@@ -7,7 +7,6 @@ class App:
     def __init__(self):
         document.html = CONST.SITE
         
-App()        
 class CONST:
     SITE = """<head>
     <meta charset="utf-8">
@@ -29,3 +28,5 @@ class CONST:
   </body>
 
 """
+App()        
+
