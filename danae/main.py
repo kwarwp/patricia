@@ -3,8 +3,13 @@ from browser import document, html
 H, D = html.H1, html.DIV
 #document["pydiv"].html = ""
 #document["pydiv"] <= D( H("Olá", Class="title"), Class="container")
-
-SITE = """<head>
+class App:
+    def __init__(self):
+        document.html = CONST.SITE
+        
+App()        
+class CONST:
+    SITE = """<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hello Bulma!</title>
@@ -24,4 +29,3 @@ SITE = """<head>
   </body>
 
 """
-document.html = SITE
