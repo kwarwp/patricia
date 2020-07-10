@@ -68,3 +68,10 @@ SyntaxError: invalid syntax
                                                                                                                                                                                                                                                     ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Jul 10 2020 14:50:55.556 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 10
+  body = S(D(D(
+                                                                                                                                                                               ^
+SyntaxError: invalid syntax
+'''},
