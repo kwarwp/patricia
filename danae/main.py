@@ -1,19 +1,18 @@
 # patricia.danae.main.py
 from browser import document, html
 from browser.html import H1 as H, DIV as D, SECTION as S, P, STRONG as B
-H, D = html.H1, html.DIV
-#document["pydiv"].html = ""
-#document["pydiv"] <= D( H("Olá", Class="title"), Class="container")
 class App:
     def __init__(self):
-        s, c, t, u = CONST.CLS
+        s, c, t, u, h, b = CONST.CLS
         #H, D, S, P, B = CONST.ELM
         document.html = CONST.SITE
         document.body.html = ""
-        document.body <= S(D(H("Hello World", Class=t)+P("My first website with", Class=u), Class=c), Class=s)
+        document.body <= S(D(D(
+            H("Hello World", Class=t)+P("My first website with", Class=u
+        ), Class=c), Class=b), Class=h)
         
 class CONST:
-    CLS = "section container title subtitle".split()
+    CLS = "section container title subtitle hero hero-body".split()
     ELM = [html.H1, html.DIV, html.SECTION, html.P, html.STRONG]
     SITE = """<head>
     <meta charset="utf-8">
