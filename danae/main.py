@@ -10,10 +10,13 @@ class App:
         body = S(D(D(
             H("Hello World", Class=t)+P("My first website with "+B("Bulma"), Class=u),
         Class=c), Class=b), Class=h+w+p)+S(D(
-        
-            D(R(P("439k" ,class="title"), Class="tile is-child box"), Class="tile is-parent"),
-        Class="tile is-ancestor has-text-centered"), Class="info-tiles")
+        Class="tile is-ancestor has-text-centered", Id="ancestor-tile"), Class="info-tiles")
+
         document.body <= body
+        tiles = document["ancestor-tile"]
+        [tiles <= D(R(
+                P("439k" , Class=t)+P("User" , Class=u),
+            Class="tile is-child box"), Class="tile is-parent") for tx in "aeio"]
         
 class CONST:
     CLS = "section container title subtitle hero hero-body is-primary".split()
