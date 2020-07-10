@@ -1,6 +1,21 @@
 # patricia.danae.main.py
+# SPDX-License-Identifier: GPL-3.0-or-later
+""" Usando Bulma para criar páginas formatadas em HTML e CSS.
+
+    Exemplo de um painel de controle do Administrador.
+
+Changelog
+---------
+    20.07
+        * NEW: Exemplo inicial.
+
+"""
 from browser import document, html
 from browser.html import H1 as H, DIV as D, SECTION as S, P, STRONG as B, ARTICLE as R
+__version__ = "20.07"
+__author__ = "Carlo"
+
+
 class App:
     """ Implementa um painel de controle de admnistrador.
         Código original em : https://bulmatemplates.github.io/bulma-templates/templates/admin.html
@@ -13,7 +28,7 @@ class App:
             H("Hello World", Class=t)+P("My first website with "+B("Bulma"), Class=u),
         Class=c), Class=b), Class=h+w+p)+S(D(
         Class="tile is-ancestor has-text-centered", Id="ancestor-tile"), Class="info-tiles")
-        # ^^^ constrói a estrutura do corpo, onde ancestor-tile é onde adiciona os ladrilhos
+        # ^^^ constrói a estrutura do corpo, onde 'ancestor-tile' é onde adiciona os ladrilhos
 
         document.body <= body  # instala os elementos estruturados no corpo do documento
         tiles = document["ancestor-tile"]  # localiza os elemento onde coloca os ladrilhos
@@ -26,7 +41,6 @@ class App:
         
 class CONST:
     CLS = "section container title subtitle hero hero-body is-primary".split()
-    ELM = [html.H1, html.DIV, html.SECTION, html.P, html.STRONG]
     SITE = """<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,15 +50,6 @@ class CONST:
   <body>
   </body>
 """
-    BODY = """  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        Hello World
-      </h1>
-      <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
-      </p>
-    </div>
-"""
+
 App()        
 
