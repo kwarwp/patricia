@@ -1,6 +1,6 @@
 # patricia.danae.main.py
 from browser import document, html
-from browser.html import H1 as H, DIV as D, SECTION as S, P, STRONG as B
+from browser.html import H1 as H, DIV as D, SECTION as S, P, STRONG as B, ARTICLE as R
 class App:
     def __init__(self):
         s, c, t, u, h, b, p, w = CONST.CLS + [" "]
@@ -9,7 +9,10 @@ class App:
         document.body.html = ""
         document.body <= S(D(D(
             H("Hello World", Class=t)+P("My first website with "+B("Bulma"), Class=u),
-        Class=c), Class=b), Class=h+w+p)
+        Class=c), Class=b), Class=h+w+p)+
+        S(D(
+            "".join([D("1234"+tx, Class="tile is-parent") for tx in "abcd"])
+        Class="tile is-ancestor has-text-centered"), Class="info-tiles")
         
 class CONST:
     CLS = "section container title subtitle hero hero-body is-primary".split()
