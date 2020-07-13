@@ -15,9 +15,10 @@ Changelog
 
 """
 from _spy.vitollino.main import Cena, Elemento
+from browser import document # importa o DOM para atribuir o evento de teclado
 
 class Eventos:
-    """ Associa um evento a uma imagem. """
+    """ Associa um evento a uma imagem e captura eventos de teclado. """
     CENA_CALCADA = "https://i.imgur.com/zOxshRh.jpg"
     BANHISTA = "https://i.imgur.com/CWQ00XG.png"
     DARK_SIDE = "https://i.imgur.com/BKitDgi.png"
@@ -25,27 +26,36 @@ class Eventos:
     def __init__(self):
         self.calcada = Cena(self.CENA_CALCADA)
         self.banhista = Elemento(self.BANHISTA, , x=100, y=200, cena=self.calcada)
-        self.dark_side = Elemento(self.DARK_SIDE, , x=-1100, y=100, cena=self.calcada)
-        self.calcada.elt.bind("keypress", self.anda_banhista)
-        self.calcada.elt.setAttribute("tabindex", 0)
-        self.calcada.elt.focus()
+        self.dark_side = Elemento(self.DARK_SIDE, , x=100, y=100, cena=self.calcada)
+        self.dark_side.o = 0  # faz a opacidade virar zero, não mostra o letreiro
+        document.bind("keydown", self.anda_banhista)  # captura o evento de teclado
         
-        self.banhista.elt.bind("mouseover", self.ve_dark)
-        self.banhista.elt.bind("mouseout", self.ve_dark)
-        self.muda = 1200
+        self.banhista.elt.bind("mouseover", self.ve_dark)  # usa o evento para mostrar "dark side"
+        self.banhista.elt.bind("mouseout", self.ve_dark)  # usa o mesmo evento para ocultar "dark side"
+        self.muda = 1
         
     def vai(self):
+        """ mostra a cena da calçada. """
         self.calcada.vai()
         
     def anda_banhista(self, ev=None):
-        keys = dict(x=1, y=-1)
-        print(ev.keyCode)
+        """" Faz o banhista caminhar com a cptura das setas. 
         
+            :param ev: estrutura enviad pelo evento onde se recupera informações.
+        """
+        key = ev.keyCode # recupera o código da tecla enviada no evento
+        # os códigos 37 e 38 são a seta para esquerda e para direita
+        # se não for nenhum deles, anda zero
+        key = key - 38 if key in [37, 39] else 0
+        self.banhista.x += key # muda a posição de mais um ou menos um
         
     def ve_dark(self, ev=None):
-        print(self.muda)
-        self.dark_side.y += self.muda
-        self.muda = - self.muda
+        """" Faz o letreiro mostrar ou ocultar quando se passa o mouse no banhista. 
+        
+            :param ev: estrutura enviad pelo evento onde se recupera informações.
+        """
+        self.dark_side.o = self.muda  # muda a opacidade do letreiro
+        self.muda = abs(self.muda - 1)  # chaveia para na próxima chamada inverter
         
         
         
