@@ -13,16 +13,24 @@ Changelog
 from browser.local_storage import storage
 class Open:
     def __init__(self, filename, mode="r"):
-        def create(n):
-            storage[n] = ""
+        def create(n, value=""):
+            storage[n] = value
             return storage[n]
+        
+        def read():
+            return storage[self.filename]
+            
+        def write(content):
+            self.filehandle += content
+
         self.filename, self.mode = filename, mode
         if mode not in "rwa".split():
             raise ValueError("must have exactly one of create/read/write/append mode")
         self.__enter = dict(
-            r=lambda n: raise FileNotFoundError(n)
-            w=create
-            a=create
+            r=lambda n: raise FileNotFoundError(n),
+            w=create,
+            a=create,
+            rr=read
         self.filehandle = None
         self.__enter__()
 
@@ -37,18 +45,14 @@ class Open:
         return self.close()
             
     def write(self, content):
-        storage[self.filename] += content
+        return self__enter[self.mode+"w"](content)
         
     def read(self):
-        return storage[self.filename]
+        return self__enter[self.mode+"r"]()
         
     def close(self):
         return True
 
-f = Open("nome.txt")
-f.write("carlo")
-f.close()
-print (f.read())
 with Open("nome.txt") as no:
     no.write("jo")
     print(no.read())
