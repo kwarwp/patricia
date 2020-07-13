@@ -418,3 +418,9 @@ Exception: Cannot read property '$methods' of undefined
   module '$exec_1930' line 8
 class fundo(self, imgBoard):
 '''},
+{'date': 'Mon Jul 13 2020 18:10:49.31 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: Cannot read property '$methods' of undefined
+  module '$exec_1935' line 8
+class fundo(self, imgBoard):
+'''},
