@@ -38,3 +38,10 @@ AttributeError: 'Eventos' object has no attribute 'cacada'
                 ^
 SyntaxError: keyword can't be an expression
 '''},
+{'date': 'Mon Jul 13 2020 19:45:15.861 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 44
+  if 
+      ^
+SyntaxError: invalid syntax
+'''},
