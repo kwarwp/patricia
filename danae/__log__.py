@@ -100,3 +100,10 @@ SyntaxError: invalid syntax
     self.filename = filename
 NameError: name 'filename' is not defined
 '''},
+{'date': 'Mon Jul 13 2020 14:17:23.30 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 29
+  self.__enter = dict(
+                                                ^
+SyntaxError: invalid syntax
+'''},
