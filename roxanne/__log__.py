@@ -432,3 +432,9 @@ Exception: <TypeError: Cannot read property '$methods' of undefined>
 'error': '''
 Exception: <TypeError: Cannot read property '$methods' of undefined>
 '''},
+{'date': 'Mon Jul 13 2020 18:13:51.35 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: Cannot read property '$methods' of undefined
+  module '$exec_1950' line 8
+class fundo(self, imgBoard):
+'''},
