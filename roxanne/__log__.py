@@ -264,3 +264,10 @@ AttributeError: 'str' object has no attribute 'style'
                                                                                       ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Mon Jul 13 2020 17:25:31.576 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 12
+  if __name__ == "__main__":
+                            ^
+IndentationError: expected an indented block
+'''},
