@@ -31,3 +31,10 @@ SyntaxError: invalid syntax
     self.cacada.elt.bind("keypressed", self.anda_banhista)
 AttributeError: 'Eventos' object has no attribute 'cacada'
 '''},
+{'date': 'Mon Jul 13 2020 19:35:24.835 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 41
+  keys = dict(37=1, 39=-1)
+                ^
+SyntaxError: keyword can't be an expression
+'''},
