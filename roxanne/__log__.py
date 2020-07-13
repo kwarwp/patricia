@@ -405,3 +405,10 @@ NameError: name 'STYLE' is not defined
     	fundoJogodaVelha = Cena(img=imgBoard)
 TypeError: 'module' object is not callable
 '''},
+{'date': 'Mon Jul 13 2020 17:47:29.973 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 4
+  STYLE['width'] = 100%
+                        ^
+SyntaxError: invalid syntax
+'''},
