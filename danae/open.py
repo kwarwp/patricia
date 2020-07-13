@@ -53,6 +53,6 @@ class Open:
     def close(self):
         return True
 
-with Open("nome.txt") as no:
+with Open("x.txt") as no:
     no.write("jo")
     print(no.read())
