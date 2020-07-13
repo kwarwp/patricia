@@ -51,5 +51,32 @@ class CONST:
   </body>
 """
 
-App()        
+#App()  
+from browser.local_storage import storage
+class Open:
+    def __init__(self, flename, kind="r"):
+        self.filename = filename
+        self.__enter__()
 
+    def __enter__(self):
+        try:
+            storage[self.filename]
+        except:
+            storage[self.filename] = ""
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        return self.close()
+            
+    def write(self, content):
+        storage[self.filename] += content
+        
+    def read(self):
+        return storage[self.filename]
+        
+    def close(self):
+        return True
+
+f = Open("nome.txt")
+f.write("carlo")
+f.close()
+print (f.read())
