@@ -151,3 +151,40 @@ AttributeError: 'Pessoa' object has no attribute '__nome'
     (self.__nome)
 AttributeError: 'Pessoa' object has no attribute '__nome'
 '''},
+{'date': 'Mon Jul 13 2020 13:44:45.239 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Nome: Isaac | Idade: 27 | Profissão: Analista | Redes Sociais: idcesares
+Olá programação!
+Olá, Papai Noel !
+Quantos presentes você pode distribuir? 35184372088832
+Qual o nome do projeto? Active Light
+Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 212
+    main().inicia()
+  module <module> line 207
+    return Jogo(gui=gui, jogadores=[JogadorSimples(None, jogador) for jogador in jogadores])
+  module _spy.tesouro.tesouro line 353
+    self.mesa = Mesa(jogadores)
+  module _spy.tesouro.tesouro line 239
+    self.baralho = Baralho()
+  module _spy.tesouro.tesouro line 154
+    self.monta_baralho()
+  module _spy.tesouro.tesouro line 167
+    self.cartas.append(Perigo(face=perigo))
+  module _spy.tesouro.tesouro line 48
+    self.elt = Jogo.GUI.carta(face)
+  module <module> line 148
+    return Sprite(**SPRITES["t{}".format(face) if face.isdigit() else face])
+  module <module> line 69
+    self.img.style.marginLeft = "-{}px".format(index * w)
+AttributeError: 'str' object has no attribute 'style'
+'''},
