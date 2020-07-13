@@ -22,15 +22,20 @@ class Open:
             
         def write(content):
             self.filehandle += content
+            
+        def filerr(n):
+            raise FileNotFoundError(n)
 
         self.filename, self.mode = filename, mode
         if mode not in "rwa".split():
-            raise ValueError("must have exactly one of create/read/write/append mode")
+            print(mode, "rwa".split())
+            #raise ValueError("must have exactly one of create/read/write/append mode")
         self.__enter = dict(
-            r=lambda n: raise FileNotFoundError(n),
+            r=filerr,
             w=create,
             a=create,
             rr=read
+            )
         self.filehandle = None
         self.__enter__()
 
@@ -53,6 +58,6 @@ class Open:
     def close(self):
         return True
 
-with Open("x.txt") as no:
-    no.write("jo")
+with Open("names.txt", "r") as no:
+    # no.write("jo")
     print(no.read())
