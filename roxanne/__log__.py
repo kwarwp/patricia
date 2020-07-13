@@ -257,3 +257,10 @@ Traceback (most recent call last):
     self.img.style.marginLeft = "-{}px".format(index * w)
 AttributeError: 'str' object has no attribute 'style'
 '''},
+{'date': 'Mon Jul 13 2020 17:25:14.89 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 13
+  #circus(<ponha aqui o número do desafio e descomente a linha>, <parâmetro indicado>)
+                                                                                      ^
+IndentationError: expected an indented block
+'''},
