@@ -26,16 +26,23 @@ class Eventos:
         self.calcada = Cena(self.CENA_CALCADA)
         self.banhista = Elemento(self.BANHISTA, , x=100, y=200, cena=self.calcada)
         self.dark_side = Elemento(self.DARK_SIDE, , x=-1100, y=100, cena=self.calcada)
+        self.cacada.elt.bind("keypressed", self.anda_banhista)
         
-        self.dark_side.elt.bind("mouseover", self.ve_dark)
-        self.dark_side.elt.bind("mouseout", self.ve_dark)
-        self.muda = 1000
+        self.banhista.elt.bind("mouseover", self.ve_dark)
+        self.banhista.elt.bind("mouseout", self.ve_dark)
+        self.muda = 1200
         
     def vai(self):
         self.calcada.vai()
+        
+    def anda_banhista(self, ev=None):
+        keys = dict(x=+1, y=-1):
+        print(ev.keyCode)
+        
+        
     def ve_dark(self, ev=None):
         print(self.muda)
-        self.dark_side.x += self.muda
+        self.dark_side.y += self.muda
         self.muda = - self.muda
         
         
