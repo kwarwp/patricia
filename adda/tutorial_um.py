@@ -27,12 +27,14 @@ class Eventos:
         self.banhista = Elemento(self.BANHISTA, , x=100, y=200, cena=self.calcada)
         self.dark_side = Elemento(self.DARK_SIDE, , x=-1100, y=100, cena=self.calcada)
         
-        self.dark_side.elt.bind("hover", self.ve_dark)
+        self.dark_side.elt.bind("mouseover", self.ve_dark)
+        self.dark_side.elt.bind("mouseout", self.ve_dark)
         self.muda = 1000
         
     def vai(self):
         self.calcada.vai()
     def ve_dark(self, ev=None):
+        print(self.muda)
         self.dark_side.x += self.muda
         self.muda = - self.muda
         
