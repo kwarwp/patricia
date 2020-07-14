@@ -114,3 +114,10 @@ SyntaxError: invalid syntax
     d = Elemento(self.dPIN, cena=self.tabuleiro, x=t*5, y=t*3, w=t*2, h=t*4)
 AttributeError: 'Tabuleiro' object has no attribute 'dPIN'
 '''},
+{'date': 'Tue Jul 14 2020 15:19:45.724 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 53
+  bx, by = -x*t, -y*t
+                ^
+SyntaxError: invalid syntax
+'''},
