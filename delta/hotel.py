@@ -10,3 +10,7 @@ Changelog
         Descreva o que você adicionou no código.
 
 """
+import random
+s=[1,2,3,4]
+random.shuffle(s,random.random)
+print(s)
