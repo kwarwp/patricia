@@ -1,22 +1,9 @@
 # patricia.angie.main.py
+_author_ = "Monica"
 
-# patricia.adda.tutorial_um.py
-# SPDX-License-Identifier: GPL-3.0-or-later
-""" Tutorial Um - respondendo dúvidas do SuperPython.
-
-.. codeauthor:: Carlo Oliveira 
-
-- Como associar um evento a uma imagem
-- Como capturar o teclado
-
-Changelog
----------
-.. versionadded::    20.07
-        Exemplos de evento de mouse e de teclado.
-
-"""
-from _spy.vitollino.main import Cena, Elemento
+from _spy.vitollino.main import Cena, Elemento, style
 from browser import document # importa o DOM para atribuir o evento de teclado
+#from grace.main import Praia
 
 class Eventos:
     """ Associa um evento a uma imagem e captura eventos de teclado. """
@@ -24,7 +11,9 @@ class Eventos:
     CENA_LABIRINTO = "https://www.gratispng.com/png-6rk4z5/download.html"
     BANHISTA = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Prick%C3%A4tarpucken.svg/200px-Prick%C3%A4tarpucken.svg.png"
     DARK_SIDE = "https://i.imgur.com/BKitDgi.png"
-    
+    style["width"] = 500
+    style["height"] = 500
+
     def __init__(self):
         self.calcada = Cena(self.CENA_CALCADA)
         self.labirinto = Cena(self.CENA_LABIRINTO)
@@ -78,7 +67,7 @@ if __name__ == "__main__":
     Eventos().vai()
     
     
-#_author_ = "Monica"
+#
 
 #from _spy.vitollino.main import Cena, Elemento, STYLE
 
