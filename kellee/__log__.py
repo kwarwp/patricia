@@ -26,3 +26,10 @@ IndentationError: unexpected indent
     pygame.int()
 AttributeError: 'module' object has no attribute 'int'
 '''},
+{'date': 'Tue Jul 14 2020 13:59:59.416 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 17
+  for event in pygame.event.get():
+  ^
+IndentationError: unexpected indent
+'''},
