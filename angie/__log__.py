@@ -271,3 +271,10 @@ SyntaxError: invalid syntax
                     ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Jul 14 2020 17:38:36.433 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 53
+  if self.boneco.x = 500 and self.boneco.y = 500:
+                    ^
+SyntaxError: invalid syntax
+'''},
