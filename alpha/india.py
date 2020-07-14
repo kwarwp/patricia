@@ -50,10 +50,10 @@ from browser import document # importa o DOM para atribuir o evento de teclado
 class Eventos:
     """ Associa um evento a uma imagem e captura eventos de teclado. """
     CENA_COZINHA = "https://www.decorfacil.com/wp-content/uploads/2018/03/20180311tons-de-rosa-03.jpg"
-    CENA_ESCRITORIO = "https://www.decorfacil.com/wp-content/uploads/2018/03/20180311tons-de-rosa-05.jpg"
-    CENA_PLANTA = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline"
+    CENA_ESCRITORIO = "https://i.imgur.com/fEcFvG5.png"
+    CENA_PLANTA = "https://i.imgur.com/L71ZV6Z.png"
     
-    BONECO = "https://activufrj.nce.ufrj.br/file/ProgOO/fantasma_80.png"
+    BONECO = "https://i.imgur.com/k63kwfa.png"
     
     #tamanho da cena
     STYLE["width"] = 1000
