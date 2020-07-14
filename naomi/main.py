@@ -8,7 +8,8 @@ numero_de_presentes=2**45
 def _init_ (self):
 	pycharm="http://activufrj.nce.ufrj.br/file/info/ProgOO/Card_pycharm.png"
 	teste="https://i.imgur.com/CWQ00XG.png"
-	self.pycharm=cena(self.pycharm_)
+	self.pycharm=cena(self.pycharm)
+	self.teste=cena(self.teste)
 	
 	
 def vai(self):
