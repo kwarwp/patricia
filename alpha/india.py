@@ -56,7 +56,7 @@ class Eventos:
     BONECO = "https://i.imgur.com/k63kwfa.png"
     
     #tamanho da cena
-    STYLE["width"] = 800
+    STYLE["width"] = 700
     
     def __init__(self):
         self.ambiente = Cena(self.CENA_PLANTA)
