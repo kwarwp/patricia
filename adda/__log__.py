@@ -121,3 +121,10 @@ AttributeError: 'Tabuleiro' object has no attribute 'dPIN'
                 ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Jul 14 2020 15:27:12.812 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 54
+  casa = Elemento(fundo, x=x, y=y, w=t, h=1.44*t, cena=base, tipo="auto"
+                                                                                                                                                       ^
+SyntaxError: invalid syntax
+'''},
