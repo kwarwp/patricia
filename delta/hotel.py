@@ -7,11 +7,27 @@
 Changelog
 ---------
 .. versionadded::    20.07
-        Descreva o que você adicionou no código.
+        
 
 """
 
 import random
-s=['Carta1','Carta2','Carta3','Carta4']
-random.shuffle(s,random.random)
-print(s)
+
+class evento:
+	def linkar (self):
+		self.Carta1="http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline"
+
+	def embaralhar (self):
+
+		s=['Carta1','Carta2','Carta3','Carta4']
+
+		random.shuffle(s,random.random)
+      	self.s=s
+   
+   
+	def mostrar_carta(self):
+		self.s.vai()
+def _name_=="_main_":
+	self.eventos.vai()
+    
+
