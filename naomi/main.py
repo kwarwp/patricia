@@ -7,6 +7,6 @@ numero_de_presentes=2**45
 #print("Quantos presentes você pode distribuir?",numero_de_presentes)
 
 pycharm='http://activufrj.nce.ufrj.br/file/info/ProgOO/Card_pycharm.png'
-s=[pycharm,3,5,7,9]
+s=[1,3,5,7,9]
 random.shuffle(s,random.random)
 print(s)
