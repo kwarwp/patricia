@@ -3,7 +3,8 @@
 #nome="Papai Noel"
 import random
 from _spy.vitollino.main import Cena, Elemento
-numero_de_presentes=2**45
+from browser import document
+#numero_de_presentes=2**45
 #print("Olá,",nome,"!")
 #print("Quantos presentes você pode distribuir?",numero_de_presentes)
 class Eventos:
