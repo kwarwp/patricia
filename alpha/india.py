@@ -53,7 +53,7 @@ class Eventos:
     CENA_ESCRITORIO = "https://www.decorfacil.com/wp-content/uploads/2018/03/20180311tons-de-rosa-05.jpg"
     CENA_PLANTA = "https://imgur.com/HsEpVwQ"
     
-    BONECO = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Prick%C3%A4tarpucken.svg/200px-Prick%C3%A4tarpucken.svg.png"
+    BONECO = "https://activufrj.nce.ufrj.br/file/ProgOO/fantasma_80.png?disp=inline"
     
     #tamanho da cena
     STYLE["width"] = 1000
