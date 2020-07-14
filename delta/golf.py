@@ -22,29 +22,7 @@ class Card():
         self.imageFaceDown = Elemento("http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline", cena=cena)
         self.removed = False
         self.position = [0,0]
-    
-    #returns if a click was withing the bounds of the card
-    def checkBounds(self, x, y):
-        if (x > self.position[0] and x < self.position[0] + Card.width
-            and y > self.position[1] and y < self.position[1] + Card.height):
-            self.faceDown = not self.faceDown
-            return True
-        return False
         
-
-
-STYLE["width"] = 500
-
-class Calcada:
-
-    def __init__(self):
-        """ Mostra a cena da praia """
-        self.cena = Cena(CENA_CALCADA)
-        self.banhista = Elemento(BANHISTA, x=100, y=100, cena=self.cena)
-        
-    """ representa uma cena na calçada da praia """
-    def vai(self):
-        self.cena.vai()
         
 class Game:
     def crate_cards(self):
@@ -54,7 +32,7 @@ class Game:
         card3 = Card("http://activufrj.nce.ufrj.br/file/ProgOO/Card_Gitlab.png?disp=inline", self.cena)
         card4 = Card("http://activufrj.nce.ufrj.br/file/ProgOO/Card_github.png?disp=inline", self.cena)
         card5 = Card("http://activufrj.nce.ufrj.br/file/ProgOO/Card_Activ.png?disp=inline", self.cena)
-    
+        self.cena.vai()
 
 
 if __name__ == "__main__":
