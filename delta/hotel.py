@@ -10,7 +10,8 @@ Changelog
         Descreva o que você adicionou no código.
 
 """
+
 import random
-s=[1,2,3,4]
+s=['Carta1','Carta2','Carta3','Carta4']
 random.shuffle(s,random.random)
 print(s)
