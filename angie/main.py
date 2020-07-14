@@ -22,7 +22,7 @@ class Eventos:
     """ Associa um evento a uma imagem e captura eventos de teclado. """
     CENA_CALCADA = "https://i.imgur.com/zOxshRh.jpg"
     CENA_LABIRINTO = "https://www.gratispng.com/png-6rk4z5/download.html"
-    BANHISTA = "https://i.imgur.com/CWQ00XG.png"
+    BANHISTA = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Prick%C3%A4tarpucken.svg/200px-Prick%C3%A4tarpucken.svg.png"
     DARK_SIDE = "https://i.imgur.com/BKitDgi.png"
     
     def __init__(self):
