@@ -7,36 +7,38 @@ from browser import document # importa o DOM para atribuir o evento de teclado
 
 class Eventos:
     """ Associa um evento a uma imagem e captura eventos de teclado. """
-    CENA_CALCADA = "https://i.imgur.com/zOxshRh.jpg"
-    CENA_LABIRINTO = "https://www.gratispng.com/png-6rk4z5/download.html"
+    CENA_COZINHA = "https://www.decorfacil.com/wp-content/uploads/2018/03/20180311tons-de-rosa-03.jpg"
+    CENA_ESCRITORIO = "https://www.decorfacil.com/wp-content/uploads/2018/03/20180311tons-de-rosa-05.jpg"
+    CENA_PLANTA = "https://w7.pngwing.com/pngs/38/713/png-transparent-floor-plan-design-plan-media-schematic.png"
+    
     BONECO = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Prick%C3%A4tarpucken.svg/200px-Prick%C3%A4tarpucken.svg.png"
     DARK_SIDE = "https://i.imgur.com/BKitDgi.png"
+    
+    #tamanho da cena
     STYLE["width"] = 1000
-    STYLE["height"] = 1000
+    STYLE["height"] = 500
 
     def __init__(self):
-        self.calcada = Cena(self.CENA_CALCADA)
-        self.labirinto = Cena(self.CENA_LABIRINTO)
-        self.boneco = Elemento(self.BONECO, , x=100, y=200, cena=self.calcada)
-        self.dark_side = Elemento(self.DARK_SIDE, , x=100, y=100, cena=self.calcada)
-        self.dark_side.o = 0  # faz a opacidade virar zero, não mostra o letreiro
-        document.bind("keydown", self.anda_banhista)  # captura o evento de teclado
+        self.ambiente = Cena(self.CENA_PLANTA)
+        self.boneco = Elemento(self.BONECO, , x=100, y=200, cena=self.ambiente)
+        #self.dark_side = Elemento(self.DARK_SIDE, , x=100, y=100, cena=self.ambiente)
+        #self.dark_side.o = 0  # faz a opacidade virar zero, não mostra o letreiro
+        document.bind("keydown", self.anda_boneco)  # captura o evento de teclado
         
-        self.boneco.elt.bind("mouseover", self.ve_dark)  # usa o evento para mostrar "dark side"
-        self.boneco.elt.bind("mouseout", self.ve_dark)  # usa o mesmo evento para ocultar "dark side"
-        self.muda = 1
+        #self.boneco.elt.bind("mouseover", self.ve_dark)  # usa o evento para mostrar "dark side"
+        #self.boneco.elt.bind("mouseout", self.ve_dark)  # usa o mesmo evento para ocultar "dark side"
+        #self.muda = 1
         
     def vai(self):
-        """ mostra a cena da calçada. """
-        self.calcada.vai()
-        #self.labirinto.vai()
+        """ mostra a cena da planta da casa. """
+        self.ambiente.vai()
+        
     def anda_boneco(self, ev=None):
         """" Faz o boneco caminhar com a cptura das setas. 
-     
             :param ev: estrutura enviad pelo evento onde se recupera informações.
         """
         key = ev.keyCode # recupera o código da tecla enviada no evento
-        print (key)
+        
         # os códigos 37 e 38 são a seta para esquerda e para direita
         # se não for nenhum deles, anda zero
         if key in [37, 39]:
@@ -47,9 +49,10 @@ class Eventos:
             self.boneco.y += key # muda a posição de mais um ou menos um
         else: 
             0
-        
-        
         #se o elemento atingiu uma porta, muda para a próxima cena
+        if self.boneco.x = 500 and self.boneco.y = 500:
+            self.boneco.x = 100
+        #    self.boneco.y = 100
         
         #se atingiu o bau, ganhou o jogo.
         
