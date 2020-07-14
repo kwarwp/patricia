@@ -17,3 +17,10 @@ Traceback (most recent call last):
     random.shuffle(s,random.random)
 AttributeError: 'function' object has no attribute 'shuffle'
 '''},
+{'date': 'Tue Jul 14 2020 17:27:49.42 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 8
+  1="http://activufrj.nce.ufrj.br/file/info/ProgOO/Card_pycharm.png"
+   ^
+SyntaxError: can't assign to literal
+'''},
