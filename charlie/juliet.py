@@ -10,8 +10,9 @@ Changelog
         Descreva o que você adicionou no código.
 
 """
-
-
+HERDO1 = " "#IMAGENS QUE FICAM NO QUEBRA CABEÇA, TEM QUE SER ONLINE(PNG OU JPG) 
+HERDO2 = " "
+HERDO3 = " "
 class minipython:
     """Usa um editor de imagem ( /) e recorta o Herdograma em linhas geracionais.
        No game, o jogador terá que clicar nas linhas em ordem certa para montar o herdograma corretamente.
@@ -41,7 +42,7 @@ class minipython:
         self.acertou = chama_quando_acerta
         self.linha_inicial = 300
         self.altura_da_linha = 50  # cada peça do herdograma tem esta altura
-        self.posicoes_montadas = []  #l ista das linhas já montadas no herdograma
+        self.posicoes_montadas = []  #l ista das linhas já montadas 
         self.posicoes_corretas = [3, 0, 2, 1]  # lista das linhas montadas corretamente
 
     def posiciona_proxima(self, posicao):
