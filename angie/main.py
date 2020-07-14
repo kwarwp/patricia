@@ -50,13 +50,15 @@ class Eventos:
         print (key)
         # os códigos 37 e 38 são a seta para esquerda e para direita
         # se não for nenhum deles, anda zero
-        key = key - 38 if key in [37, 39] else 0
-        self.banhista.x += key # muda a posição de mais um ou menos um
+        if key in [37, 39]:
+            key = key - 38 
+            self.banhista.x += key # muda a posição de mais um ou menos um
+        elif key in [38, 40]:
+            key = key - 39  
+            self.banhista.y += key # muda a posição de mais um ou menos um
+        else: 
+            0
         
-        # os códigos 37 e 38 são a seta para cima e para baixo
-        # se não for nenhum deles, anda zero
-        key = key - 39 if key in [38, 40] else 0
-        self.banhista.y += key # muda a posição de mais um ou menos um
         
         #se o elemento atingiu uma porta, muda para a próxima cena
         
