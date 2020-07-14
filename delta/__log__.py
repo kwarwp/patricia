@@ -153,3 +153,10 @@ NameError: name 'teste' is not defined
     s=[Carta1,'Carta2','Carta3','Carta4']
 NameError: name 'Carta1' is not defined
 '''},
+{'date': 'Tue Jul 14 2020 20:56:33.468 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 30
+  def _name_=="_main_":
+             ^
+SyntaxError: invalid syntax
+'''},
