@@ -28,8 +28,8 @@ class Eventos:
     def __init__(self):
         self.calcada = Cena(self.CENA_CALCADA)
         self.labirinto = Cena(self.CENA_LABIRINTO)
-        self.banhista = Elemento(self.BANHISTA, , x=100, y=200, cena=self.labirinto)
-        self.dark_side = Elemento(self.DARK_SIDE, , x=100, y=100, cena=self.labirinto)
+        self.banhista = Elemento(self.BANHISTA, , x=100, y=200, cena=self.calcada)
+        self.dark_side = Elemento(self.DARK_SIDE, , x=100, y=100, cena=self.calcada)
         self.dark_side.o = 0  # faz a opacidade virar zero, não mostra o letreiro
         document.bind("keydown", self.anda_banhista)  # captura o evento de teclado
         
@@ -39,15 +39,15 @@ class Eventos:
         
     def vai(self):
         """ mostra a cena da calçada. """
-        #self.calcada.vai()
-        self.labirinto.vai()
+        self.calcada.vai()
+        #self.labirinto.vai()
     def anda_banhista(self, ev=None):
         """" Faz o banhista caminhar com a cptura das setas. 
         
             :param ev: estrutura enviad pelo evento onde se recupera informações.
         """
         key = ev.keyCode # recupera o código da tecla enviada no evento
-        input ("Digite" + key)
+        print (key)
         # os códigos 37 e 38 são a seta para esquerda e para direita
         # se não for nenhum deles, anda zero
         key = key - 38 if key in [37, 39] else 0
