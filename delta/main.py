@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 """ Delta - Projeto sem descrição, (mude esta linha).
 
-.. codeauthor:: Nome Sobrenome (golf) <mail@local.tipo>
+.. codeauthor:: Paulo Assumpção (golf) <mail@local.tipo>
 
 .. codeauthor:: Nome Sobrenome (hotel) <mail@local.tipo>
 
