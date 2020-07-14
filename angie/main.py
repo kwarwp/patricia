@@ -55,10 +55,12 @@ class Eventos:
         
         # os códigos 37 e 38 são a seta para cima e para baixo
         # se não for nenhum deles, anda zero
-        #key = key - 38 if key in [37, 39] else 0
-        #self.banhista.y += key # muda a posição de mais um ou menos um
+        key = key - 39 if key in [38, 40] else 0
+        self.banhista.y += key # muda a posição de mais um ou menos um
         
-        input ("Digite" + key)
+        #se o elemento atingiu uma porta, muda para a próxima cena
+        
+        #se atingiu o bau, ganhou o jogo.
         
     def ve_dark(self, ev=None):
         """" Faz o letreiro mostrar ou ocultar quando se passa o mouse no banhista. 
