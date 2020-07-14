@@ -89,3 +89,10 @@ TypeError: unsupported operand type(s) for //: 'set' and 'int'
     t, margin = self.lado = self.lado // 3
 TypeError: 'int' object is not iterable
 '''},
+{'date': 'Tue Jul 14 2020 13:10:40.703 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 41
+  casa.elt <= = SPAN("", style={"fontSize":"30px"})
+               ^
+SyntaxError: invalid syntax
+'''},
