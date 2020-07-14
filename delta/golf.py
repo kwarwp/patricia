@@ -15,15 +15,14 @@ from _spy.vitollino.main import Cena, Elemento, STYLE
 __version__ = "20.07"
 __author__ = "Paulo Assumpção"
 
-class Card(object):
+class Card():
     width = 70
     height = 95
 
-    def __init__(self, name):
-        self.name = name
-        #extracts only the type information from the card name parameter
-        self.type = self.name[1:]
+    def __init__(self, image):
+        self.image = image
         self.faceDown = True
+        self.imageFaceDown = Elemento("http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline", x=width, y=height, cena=cena)
         self.removed = False
         self.position = [0,0]
     
@@ -38,8 +37,6 @@ class Card(object):
 
 
 STYLE["width"] = 500
-CENA_CALCADA = "https://i.imgur.com/zOxshRh.jpg"
-BANHISTA = "https://i.imgur.com/CWQ00XG.jpg"
 
 class Calcada:
 
@@ -51,7 +48,16 @@ class Calcada:
     """ representa uma cena na calçada da praia """
     def vai(self):
         self.cena.vai()
+        
+
+def crate_cards(self):
+    card1 = Card("http://activufrj.nce.ufrj.br/file/ProgOO/Card_pycharm.png?disp=inline")
+    card2 = Card("http://activufrj.nce.ufrj.br/file/ProgOO/Card_Linux.png?disp=inline")
+    card3 = Card("http://activufrj.nce.ufrj.br/file/ProgOO/Card_Gitlab.png?disp=inline")
+    card4 = Card("http://activufrj.nce.ufrj.br/file/ProgOO/Card_github.png?disp=inline")
+    card5 = Card("http://activufrj.nce.ufrj.br/file/ProgOO/Card_Activ.png?disp=inline")
+    
 
 
 if __name__ == "__main__":
-    Calcada().vai()
+    self.crate_cards()
