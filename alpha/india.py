@@ -79,7 +79,7 @@ class Eventos:
             key = (key - 38)*4 
             self.boneco.x += key # muda a posição de mais um ou menos um
         elif key in [38, 40]:
-            key = key - 39  
+            key = (key - 39)*4  
             self.boneco.y += key # muda a posição de mais um ou menos um
             
         #se o elemento atingiu uma porta, muda para a próxima cena
