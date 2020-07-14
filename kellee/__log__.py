@@ -251,3 +251,10 @@ NameError: name 'FUNDO' is not defined
                ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Jul 14 2020 16:01:13.481 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 11
+  FUNDO = img C:\Users\Rosilane\Desktop\jogo_python\fundo.png'
+               ^
+SyntaxError: invalid syntax
+'''},
