@@ -7,7 +7,7 @@ numero_de_presentes=2**45
 #print("Quantos presentes você pode distribuir?",numero_de_presentes)
 def _init_ (self):
 	pycharm="http://activufrj.nce.ufrj.br/file/info/ProgOO/Card_pycharm.png"
-	
+	teste="https://i.imgur.com/CWQ00XG.png"
 	self.pycharm=cena(self.pycharm_)
 	
 	
