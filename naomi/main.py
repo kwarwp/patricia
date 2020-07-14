@@ -1,6 +1,6 @@
 # patricia.naomi.main.py
-_author_= "Anni"
-nome="Papai Noel"
+#_author_= "Anni"
+#nome="Papai Noel"
 import random
 from _spy.vitollino.main import Cena, Elemento
 numero_de_presentes=2**45
