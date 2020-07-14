@@ -16,13 +16,10 @@ __version__ = "20.07"
 __author__ = "Paulo Assumpção"
 
 class Card():
-    width = 70
-    height = 95
-
-    def __init__(self, image):
+    def __init__(self, image,cena):
         self.image = image
         self.faceDown = True
-        self.imageFaceDown = Elemento("http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline", x=width, y=height, cena=cena)
+        self.imageFaceDown = Elemento("http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline", cena=cena)
         self.removed = False
         self.position = [0,0]
     
@@ -49,15 +46,16 @@ class Calcada:
     def vai(self):
         self.cena.vai()
         
-
-def crate_cards(self):
-    card1 = Card("http://activufrj.nce.ufrj.br/file/ProgOO/Card_pycharm.png?disp=inline")
-    card2 = Card("http://activufrj.nce.ufrj.br/file/ProgOO/Card_Linux.png?disp=inline")
-    card3 = Card("http://activufrj.nce.ufrj.br/file/ProgOO/Card_Gitlab.png?disp=inline")
-    card4 = Card("http://activufrj.nce.ufrj.br/file/ProgOO/Card_github.png?disp=inline")
-    card5 = Card("http://activufrj.nce.ufrj.br/file/ProgOO/Card_Activ.png?disp=inline")
+class Game:
+    def crate_cards(self):
+        self.cena = Cena()
+        card1 = Card("http://activufrj.nce.ufrj.br/file/ProgOO/Card_pycharm.png?disp=inline", cena)
+        card2 = Card("http://activufrj.nce.ufrj.br/file/ProgOO/Card_Linux.png?disp=inline", cena)
+        card3 = Card("http://activufrj.nce.ufrj.br/file/ProgOO/Card_Gitlab.png?disp=inline", cena)
+        card4 = Card("http://activufrj.nce.ufrj.br/file/ProgOO/Card_github.png?disp=inline", cena)
+        card5 = Card("http://activufrj.nce.ufrj.br/file/ProgOO/Card_Activ.png?disp=inline", cena)
     
 
 
 if __name__ == "__main__":
-    self.crate_cards()
+    Game().crate_cards()
