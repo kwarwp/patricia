@@ -450,3 +450,10 @@ Exception: Cannot read property '$methods' of undefined
   module '$exec_1960' line 8
 class fundo(self, imgBoard):
 '''},
+{'date': 'Tue Jul 14 2020 12:26:25.636 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 10
+  self.fundo_jogo = Cena(img=fundo_jogo)
+  ^
+IndentationError: expected an indented block
+'''},
