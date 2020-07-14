@@ -1,7 +1,7 @@
 # patricia.angie.main.py
 _author_ = "Monica"
 
-from _spy.vitollino.main import Cena, Elemento, style
+from _spy.vitollino.main import Cena, Elemento, STYLE
 from browser import document # importa o DOM para atribuir o evento de teclado
 #from grace.main import Praia
 
@@ -9,30 +9,30 @@ class Eventos:
     """ Associa um evento a uma imagem e captura eventos de teclado. """
     CENA_CALCADA = "https://i.imgur.com/zOxshRh.jpg"
     CENA_LABIRINTO = "https://www.gratispng.com/png-6rk4z5/download.html"
-    BANHISTA = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Prick%C3%A4tarpucken.svg/200px-Prick%C3%A4tarpucken.svg.png"
+    BONECO = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Prick%C3%A4tarpucken.svg/200px-Prick%C3%A4tarpucken.svg.png"
     DARK_SIDE = "https://i.imgur.com/BKitDgi.png"
-    style["width"] = 500
-    style["height"] = 500
+    STYLE["width"] = 1000
+    STYLE["height"] = 1000
 
     def __init__(self):
         self.calcada = Cena(self.CENA_CALCADA)
         self.labirinto = Cena(self.CENA_LABIRINTO)
-        self.banhista = Elemento(self.BANHISTA, , x=100, y=200, cena=self.calcada)
+        self.boneco = Elemento(self.BONECO, , x=100, y=200, cena=self.calcada)
         self.dark_side = Elemento(self.DARK_SIDE, , x=100, y=100, cena=self.calcada)
         self.dark_side.o = 0  # faz a opacidade virar zero, não mostra o letreiro
         document.bind("keydown", self.anda_banhista)  # captura o evento de teclado
         
-        self.banhista.elt.bind("mouseover", self.ve_dark)  # usa o evento para mostrar "dark side"
-        self.banhista.elt.bind("mouseout", self.ve_dark)  # usa o mesmo evento para ocultar "dark side"
+        self.boneco.elt.bind("mouseover", self.ve_dark)  # usa o evento para mostrar "dark side"
+        self.boneco.elt.bind("mouseout", self.ve_dark)  # usa o mesmo evento para ocultar "dark side"
         self.muda = 1
         
     def vai(self):
         """ mostra a cena da calçada. """
         self.calcada.vai()
         #self.labirinto.vai()
-    def anda_banhista(self, ev=None):
-        """" Faz o banhista caminhar com a cptura das setas. 
-        
+    def anda_boneco(self, ev=None):
+        """" Faz o boneco caminhar com a cptura das setas. 
+     
             :param ev: estrutura enviad pelo evento onde se recupera informações.
         """
         key = ev.keyCode # recupera o código da tecla enviada no evento
@@ -41,10 +41,10 @@ class Eventos:
         # se não for nenhum deles, anda zero
         if key in [37, 39]:
             key = key - 38 
-            self.banhista.x += key # muda a posição de mais um ou menos um
+            self.boneco.x += key # muda a posição de mais um ou menos um
         elif key in [38, 40]:
             key = key - 39  
-            self.banhista.y += key # muda a posição de mais um ou menos um
+            self.boneco.y += key # muda a posição de mais um ou menos um
         else: 
             0
         
