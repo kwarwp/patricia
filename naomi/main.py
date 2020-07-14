@@ -11,13 +11,8 @@ class Eventos:
     def __init__(self):
         self.calcada = Cena(self.CENA_TABULEIRO)
         self.banhista = Elemento(self.CARTA_PYCHARM, , x=100, y=200, cena=self.calcada)
-        self.dark_side = Elemento(self.DARK_SIDE, , x=100, y=100, cena=self.calcada)
-        self.dark_side.o = 0  # faz a opacidade virar zero, não mostra o letreiro
-        document.bind("keydown", self.anda_banhista)  # captura o evento de teclado
         
-        self.banhista.elt.bind("mouseover", self.ve_dark)  # usa o evento para mostrar "dark side"
-        self.banhista.elt.bind("mouseout", self.ve_dark)  # usa o mesmo evento para ocultar "dark side"
-        self.muda = 1
+        
         
     def vai(self):
         """ mostra a cena da calçada. """
