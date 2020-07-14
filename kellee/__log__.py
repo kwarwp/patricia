@@ -149,3 +149,10 @@ NameError: name 'cena' is not defined
     cena(FUNDO).vai()
 NameError: name 'cena' is not defined
 '''},
+{'date': 'Tue Jul 14 2020 14:37:08.868 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 10
+  cena(CENA_PRAIA).vai()
+  ^
+IndentationError: expected an indented block
+'''},
