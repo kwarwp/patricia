@@ -12,6 +12,7 @@ class Eventos:
     def __init__(self):
         self.tabuleiro = Cena(self.CENA_TABULEIRO)
         self.pycharm = Elemento(self.CARTA_PYCHARM, , x=100, y=200, cena=self.tabuleiro)
+        self.pycharm=Elemento(self.CARTA_PYCHARM,,X=200,y=300,cena=self.tabuleiro)
         
         
         
