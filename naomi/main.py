@@ -13,7 +13,7 @@ def _init_ (self):
 	
 	
 def vai(self):
-	s=[1,3,5,7,9]
-	random.shuffle(s,random.random)
-	print(s)
-	self.teste.vai()
+	#s=[1,3,5,7,9]
+	#random.shuffle(s,random.random)
+	#print(s)
+	self.pycharm.vai()
