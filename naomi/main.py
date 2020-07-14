@@ -10,5 +10,5 @@ def _init_ (self):
 	s=[1,3,5,7,9]
 	random.shuffle(s,random.random)
 	print(s)
-	self.pycharm=Elemento(self.pycharm_)
-	self.pycharm.vai()
+	self.pycharm=cena(self.pycharm_)
+	
