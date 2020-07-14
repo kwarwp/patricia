@@ -11,6 +11,7 @@ Changelog
 
 """
 from _spy.vitollino.main import Cena, Elemento, STYLE
+from browser.html import SPAN
 TAMANHO = 600
 STYLE.update(width=TAMANHO, height=f"{TAMANHO}px")
 
@@ -24,18 +25,20 @@ class Tabuleiro:
         self.tabuleiro = Cena(self.MADEIRA)
         margin = self.lado // 3
         self.tabua = self.table(self.tabuleiro, self.TABULEIRO, mx=margin, my=margin)
-        mx, my = 1.5 * margin, 0.66 * margin
-        self.tab_alto = self.table(self.tabuleiro, self.MINITAB, 2, 4, 1, 1, mx, my)
-        self.tab_lado = self.table(self.tabuleiro, self.MINITAB, 4, 2, 5, 3)
+        mx, my = self.lado//3, 0.66 * self.lado
+        self.tab_alto = self.table(self.tabuleiro, self.MINITAB, 2, 4, 0, 1, 50, 50)
+        self.tab_lado = self.table(self.tabuleiro, self.MINITAB, 4, 2, 5, 4, 50, 60)
         
     def vai(self):
         self.tabuleiro.vai()
     
     def table(self, base, fundo, linhas=5, colunas=5, dx=0, dy=3, mx=0, my=0):
         def casa(x, y):
-            t, margin = self.lado, self.lado // 3
+            t = self.lado
             x, y = t * (x + dx) + mx, t * (y + dy) - my
             casa = Elemento(fundo, x=x, y=y, w=t, h=t, cena=base)
+            casa.style.fontSize = "30px"
+            casa.elt <= SPAN("", style={"fontSize":"90px", "margin-top":"-60px"})
         return [[casa(i, j) for j in range(linhas)] for i in range(colunas)]
 
 
