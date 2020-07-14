@@ -170,3 +170,10 @@ IndentationError: expected an indented block
                 ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Jul 14 2020 14:48:43.724 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 11
+  Fundo(FUNDO).vai()
+  ^
+IndentationError: unexpected indent
+'''},
