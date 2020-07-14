@@ -96,3 +96,21 @@ TypeError: 'int' object is not iterable
                ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Jul 14 2020 14:33:36.593 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 50
+    Tabuleiro().vai()
+  module <module> line 34
+    d = Elemento(self.dPIN, cena=self.tabuleiro, x=t*5, y=t*3, w=t*2, h=t*4)
+AttributeError: 'Tabuleiro' object has no attribute 'dPIN'
+'''},
