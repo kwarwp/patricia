@@ -51,9 +51,9 @@ class Eventos:
     """ Associa um evento a uma imagem e captura eventos de teclado. """
     CENA_COZINHA = "https://www.decorfacil.com/wp-content/uploads/2018/03/20180311tons-de-rosa-03.jpg"
     CENA_ESCRITORIO = "https://www.decorfacil.com/wp-content/uploads/2018/03/20180311tons-de-rosa-05.jpg"
-    CENA_PLANTA = "https://imgur.com/HsEpVwQ"
+    CENA_PLANTA = "https://activufrj.nce.ufrj.br/file/ProgOO/lab_1_640.png?disp"
     
-    BONECO = "https://activufrj.nce.ufrj.br/file/ProgOO/fantasma_80.png?disp=inline"
+    BONECO = "https://activufrj.nce.ufrj.br/file/ProgOO/fantasma_80.png"
     
     #tamanho da cena
     STYLE["width"] = 1000
