@@ -244,3 +244,10 @@ NameError: name 'FUNDO' is not defined
     	Cena(FUNDO).vai()
 NameError: name 'FUNDO' is not defined
 '''},
+{'date': 'Tue Jul 14 2020 16:01:12.43 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 11
+  FUNDO = img C:\Users\Rosilane\Desktop\jogo_python\fundo.png'
+               ^
+SyntaxError: invalid syntax
+'''},
