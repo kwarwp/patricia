@@ -49,8 +49,8 @@ from browser import document # importa o DOM para atribuir o evento de teclado
 
 class Eventos:
     """ Associa um evento a uma imagem e captura eventos de teclado. """
-    CENA_COZINHA = "https://i.imgur.com/fEcFvG5.png"
-    CENA_ESCRITORIO = "https://i.imgur.com/fEcFvG5.png"
+    CENA_COZINHA = "https://i.imgur.com/5Qno2fs.png"
+    CENA_ESCRITORIO = "https://i.imgur.com/5Qno2fs.png"
     CENA_PLANTA = "https://i.imgur.com/L71ZV6Z.png"
     
     BONECO = "https://i.imgur.com/k63kwfa.png"
@@ -84,7 +84,7 @@ class Eventos:
             
         #se o elemento atingiu uma porta, muda para a próxima cena
         # FALTA mapear os pontos, criar função para passar parametros ou chamar outra classe
-        if self.boneco.x > 500 and self.boneco.y > 500:
+        if self.boneco.x > 400 and self.boneco.y > 400:
             self.ambiente = Cena(self.CENA_COZINHA)
             STYLE["width"] = 500
             self.boneco = Elemento(self.BONECO, , x=100, y=200, cena=self.ambiente)
