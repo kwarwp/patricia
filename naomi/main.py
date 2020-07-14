@@ -15,7 +15,7 @@ class Eventos:
         self.pycharm=Elemento(self.CARTA_PYCHARM,,X=200,y=300,cena=self.tabuleiro)
         self.pycharm=Elemento(self.CARTA_PYCHARM,,X=300,y=400,cena=self.tabuleiro)
         self.pycharm=Elemento(self.CARTA_PYCHARM,,X=200,y=300,cena=self.tabuleiro)
-        self.pycharm=Elemento(self.CARTA_PYCHARM,,X=200,y=300,cena=self.tabuleiro)
+        self.pycharm=Elemento(self.CARTA_PYCHARM,,X=100,y=200,cena=self.tabuleiro)
         
         
         
