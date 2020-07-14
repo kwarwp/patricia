@@ -160,3 +160,10 @@ NameError: name 'Carta1' is not defined
              ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Jul 14 2020 20:57:33.818 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 32
+  def __name__=="__main__":
+               ^
+SyntaxError: invalid syntax
+'''},
