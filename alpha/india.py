@@ -56,7 +56,7 @@ class Eventos:
     BONECO = "https://i.imgur.com/k63kwfa.png"
     
     #tamanho da cena
-    STYLE["width"] = 700
+    STYLE["width"] = 640
     
     def __init__(self):
         self.ambiente = Cena(self.CENA_PLANTA)
@@ -76,7 +76,7 @@ class Eventos:
         # os códigos 37 e 38 são a seta para esquerda e para direita
         # os códigos 39 e 40 são a seta para cima e para baixo
         if key in [37, 39]:
-            key = key - 38 
+            key = (key - 38)*2 
             self.boneco.x += key # muda a posição de mais um ou menos um
         elif key in [38, 40]:
             key = key - 39  
