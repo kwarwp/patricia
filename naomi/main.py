@@ -4,17 +4,17 @@ from browser import document # importa o DOM para atribuir o evento de teclado
 
 class Eventos:
     """ Associa um evento a uma imagem e captura eventos de teclado. """
-    CENA_TABULEIRO = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline"
-    CENA_CARTA1= "http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline"
+    CENA_TABULEIRO = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Color_icon_green.svg/200px-Color_icon_green.svg.png"
+    CARTA_VERSO= "http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline"
     CARTA_PYCHARM = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_pycharm.png?disp=inline"
     
     
     def __init__(self):
         self.tabuleiro = Cena(self.CENA_TABULEIRO)
-        self.pycharm = Elemento(self.CARTA_PYCHARM, , x=400, y=200, cena=self.tabuleiro)
-        self.pycharm=Elemento(self.CARTA_PYCHARM,,X=100,y=100,cena=self.tabuleiro)
-       # self.pycharm=Elemento(self.CARTA_PYCHARM,,X=300,y=400,cena=self.tabuleiro)
-       # self.pycharm=Elemento(self.CARTA_PYCHARM,,X=200,y=400,cena=self.tabuleiro)
+        self.pycharm = Elemento(self.CARTA_PYCHARM, , x=200, y=200, cena=self.tabuleiro)
+        self.pycharm=Elemento(self.CARTA_PYCHARM,,X=250,y=250,cena=self.tabuleiro)
+        self.pycharm=Elemento(self.CARTA_PYCHARM,,X=350,y=350,cena=self.tabuleiro)
+        self.pycharm=Elemento(self.CARTA_PYCHARM,,X=350,y=250,cena=self.tabuleiro)
        # self.pycharm=Elemento(self.CARTA_PYCHARM,,X=100,y=300,cena=self.tabuleiro)
         
         
