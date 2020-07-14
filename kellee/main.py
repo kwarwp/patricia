@@ -1,2 +1,7 @@
 # patricia.kellee.main.py
-print("Olá programação!")
+#print("Olá programação!")
+import pygame
+
+
+
+        
