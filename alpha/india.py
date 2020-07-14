@@ -49,14 +49,14 @@ from browser import document # importa o DOM para atribuir o evento de teclado
 
 class Eventos:
     """ Associa um evento a uma imagem e captura eventos de teclado. """
-    CENA_COZINHA = "https://www.decorfacil.com/wp-content/uploads/2018/03/20180311tons-de-rosa-03.jpg"
+    CENA_COZINHA = "https://i.imgur.com/fEcFvG5.png"
     CENA_ESCRITORIO = "https://i.imgur.com/fEcFvG5.png"
     CENA_PLANTA = "https://i.imgur.com/L71ZV6Z.png"
     
     BONECO = "https://i.imgur.com/k63kwfa.png"
     
     #tamanho da cena
-    STYLE["width"] = 1000
+    STYLE["width"] = 800
     
     def __init__(self):
         self.ambiente = Cena(self.CENA_PLANTA)
