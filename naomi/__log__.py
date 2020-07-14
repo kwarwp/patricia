@@ -205,3 +205,10 @@ AttributeError: 'Eventos' object has no attribute 'tabuleiro'
     self.pycharm = Elemento(self.CARTA_PYCHARM, , x=200, y=200, cena=self.tabuleiro)
 AttributeError: 'Eventos' object has no attribute 'tabuleiro'
 '''},
+{'date': 'Tue Jul 14 2020 20:43:59.596 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 17
+  1=self.pycharm
+   ^
+SyntaxError: can't assign to literal
+'''},
