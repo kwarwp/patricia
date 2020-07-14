@@ -12,6 +12,8 @@ Changelog
 """
 
 import random
+from _spy.vitollino.main import Cena, Elemento
+from browser import document 
 
 class evento:
 	def linkar (self):
@@ -27,7 +29,7 @@ class evento:
    
 	def mostrar_carta(self):
 		self.s.vai()
-def _name_=="_main_":
+def __name__=="__main__":
 	self.eventos.vai()
     
 
