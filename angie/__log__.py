@@ -264,3 +264,10 @@ AttributeError: 'Eventos' object has no attribute 'anda_banhista'
                ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Jul 14 2020 17:25:48.815 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 58
+  if self.boneco.x = 500 and boneco.y = 500:
+                    ^
+SyntaxError: invalid syntax
+'''},
