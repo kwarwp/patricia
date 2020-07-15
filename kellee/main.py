@@ -35,16 +35,15 @@ __author__ = "Rosilane"
 STYLE["width"] = 500
 CENA_CALCADA = "https://i.imgur.com/zOxshRh.jpg"
 #BANHISTA = "https://i.imgur.com/CWQ00XG.png"
-
+txt = Texto("OK IMAGEM1")
 
 class Calcada:
     """ Representa uma cena da calçada da praia """
     def __init__(self):
         """ Mostra a cena da praia """
-        self.cena = Cena(CENA_CALCADA, direita=Praia())
+        self.cena = Cena(CENA_CALCADA,TEXTO, direita=Praia())
         #self.banhista = Elemento(BANHISTA, x=100, y=200, cena=self.cena)
-        txt = Texto(CENA_CALCADA,
-        		"OK IMAGEM1")
+        
         #Cena(CENA_CALCADA).vai()
     def vai(self):
         """ Mostra a cena da praia """
