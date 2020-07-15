@@ -16,7 +16,7 @@ IMG_WIDTH = 150
 IMG_HEIGHT = 150
 
 class Card():
-    def _init_(self, name, image, position, cena, rule):
+    def __init__(self, name, image, position, cena, rule):
         self.rule = rule
         self.name = name
         self.cena = cena
