@@ -7,12 +7,15 @@
 Changelog
 ---------
 .. versionadded::    20.07
-        Descreva o que você adicionou no código.
+        Grid 2x5 de cartões do jogo da memória
+        shuffle das cartas
+        bind do click sobre o botão
+        regra do jogo
 
 """
 
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
-import random, time
+import random
 
 __version__ = "20.07"
 __author__ = "Paulo Assumpção"
@@ -37,26 +40,25 @@ class Card():
         self.position = position
         self.pos_x = 50 + self.position[0] * IMG_WIDTH
         self.pos_y = 50 + self.position[1] * IMG_HEIGHT
-        self.card = Elemento(IMG_CARD_FACE_DOWN, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
-        self.card.elt.bind("click", self.turnOn)
+        self.card = Elemento(IMG_CARD_FACE_DOWN, tit=self.name, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
+        self.card.elt.bind("click", self.turnUp)
         self.removed = False
         
-    def turnOn(self, env=None):
-        self.card = Elemento(self.image, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
-        self.faceDown = False
+    def turnUp(self, env=None):
+        self.card = Elemento(self.image, tit=self.name, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
+        self.faceDown = False 
         self.card.elt.bind("click", self.turnDown)
         self.rule(self)
         
     def turnDown(self, env=None):
-        self.card = Elemento(IMG_CARD_FACE_DOWN, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
+        self.card = Elemento(IMG_CARD_FACE_DOWN, tit=self.name, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.faceDown = True
-        self.card.elt.bind("click", self.turnOn)
-
+        self.card.elt.bind("click", self.turnUp)
+        
         
 class Game:
     # referência para o Elemento
     previous_selected_card = None
-    current_selected_card = None
     
     cena = Cena()
     
@@ -69,7 +71,7 @@ class Game:
             1A 1B 2A 2B 3A
             3B 4A 4B 5A 5B
         """
-        list_cards=self.shuffle_cards()
+        list_cards = self.shuffle_cards()
         
         self.card1a = Card("PyCharm", IMG_CARD_1, list_cards[0], Game.cena, Game.rule)
         self.card1b = Card("PyCharm", IMG_CARD_1, list_cards[1], Game.cena, Game.rule)
@@ -91,40 +93,40 @@ class Game:
     @staticmethod
     def rule(selected_card):
     
-        # tem um par selecionado?
-        if Game.previous_selected_card is None:
-            Game.previous_selected_card = selected_card
-            # desabilita o clique sobre carta virada
-            Game.previous_selected_card.card.elt.bind("click", Game.teste)
+        # abortar se o clique ocorrer sobre a mesma carta
+        if Game.previous_selected_card == selected_card:
             return
         
-        Game.current_selected_card = selected_card
+        # tem um par selecionado?
+        if Game.previous_selected_card is None:
+            # primeira carta selecionada
+            Game.previous_selected_card = selected_card
+            # desabilita o clique sobre carta virada
+            Game.previous_selected_card.card.elt.unbind("click")
+            return
+        
+        #Vamos gastar um tempo aqui
+        while(x<10000):
+            x=x+1
         
         # Não acertou
-        if Game.previous_selected_card.name != Game.current_selected_card.name:            
+        if Game.previous_selected_card.name != selected_card.name:            
             # reabilita a ação o clique e vira a carta 1 para baixo
-            Game.previous_selected_card.card.elt.bind("click", Game.previous_selected_card.turnOn)
+            Game.previous_selected_card.card.elt.bind("click", Game.previous_selected_card.turnUp)
             Game.previous_selected_card.turnDown()
             
             # reabilita a ação do clique e vira a carta 2 para baixo
-            Game.current_selected_card.card.elt.bind("click", Game.current_selected_card.turnOn)
-            Game.current_selected_card.turnDown()
+            selected_card.card.elt.bind("click", selected_card.turnUp)
+            selected_card.turnDown()
             Texto(Game.cena, "Errou!!!").vai()
+            Game.previous_selected_card = None
             
         # acertou 
         else:
             # desabilita o clique sobre as cartas acertadas
-            Game.previous_selected_card.card.elt.unbind("click")
-            Game.current_selected_card.card.elt.unbind("click")
+            Game.previous_selected_card = None
+            selected_card.card.elt.unbind("click")
             Texto(Game.cena, "Acertou!!!").vai()
-            
-            
-        # reinicia turno
-        Game.previous_selected_card = None
-        Game.current_selected_card = None
-        
-    def teste():
-        Texto(Game.cena, "Cheguei aqui!!!").vai()
         
 
     def shuffle_cards(self):   

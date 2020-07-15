@@ -60,17 +60,17 @@ class Eventos:
         # os códigos 37 e 38 são a seta para esquerda e para direita
         # os códigos 39 e 40 são a seta para cima e para baixo
         if key in [37, 39]:
-            key = key - 38
+            key = (key - 38) * 5
             self.boneco.x += key # muda a posição de mais um ou menos um
         elif key in [38, 40]:
-            key = key - 39
+            key = (key - 39) * 5
             self.boneco.y += key # muda a posição de mais um ou menos um
             
         #se o elemento atingiu uma porta, muda para a próxima cena
         # FALTA mapear os pontos, criar função para passar parametros ou chamar outra classe
         #ideia de cria uma matriz com os pontos de localização do portal
         
-        if andaboneco.self.boneco.x > 100 and self.boneco.y > 100:
+        if self.boneco.x > 400 and self.boneco.y > 200:
             self.ambiente = Cena(self.matrizMapaFase[0][0])
             STYLE["width"] = 640
             self.boneco = Elemento(self.BONECO, , x=int, y=int, cena=self.ambiente)

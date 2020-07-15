@@ -2861,3 +2861,24 @@ SyntaxError: invalid syntax
                                          ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Jul 15 2020 16:39:50.485 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 110
+  await asyncio.sleep(3)
+         ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Wed Jul 15 2020 16:40:07.194 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 110
+  await asyncio.sleep(3)
+         ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Wed Jul 15 2020 16:40:07.621 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 110
+  await asyncio.sleep(3)
+         ^
+SyntaxError: invalid syntax
+'''},
