@@ -2234,3 +2234,10 @@ NameError: name 'carta' is not defined
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Jul 15 2020 04:17:53.158 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 39
+  def matriz_2x2(self):
+  ^
+IndentationError: unexpected indent
+'''},
