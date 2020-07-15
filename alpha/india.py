@@ -78,7 +78,7 @@ class Eventos:
         # FALTA mapear os pontos, criar função para passar parametros ou chamar outra classe
         #ideia de cria uma matriz com os pontos de localização do portal
         if self.boneco.x > 400 and self.boneco.y > 200:
-            self.portal()
+            self.portal(self.boneco.x,self.boneco.y)
 #            def portal(self,x,y):
  #               self.ambiente = Cena(self.matrizMapaFase[0][0])
   #              STYLE["width"] = 640
