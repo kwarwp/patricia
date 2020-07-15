@@ -27,6 +27,7 @@ class Card():
         self.pos_y = 50 + self.position[1] * IMG_HEIGHT
         self.card = Elemento(IMG_CARD_FACE_DOWN, tit=self.name, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.card.elt.bind("click", self.turnUp)
+        self.card.elt.bind("click", self.turnUp)
         self.removed = False
         
     def turnUp(self, env=None):
