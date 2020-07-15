@@ -10,6 +10,7 @@ Changelog
         Descreva o que você adicionou no código.
 
 """
+
 from _spy.vitollino.main import Cena, Elemento, STYLE, Texto
 from browser import html, alert, timer
 from random import choice, shuffle
@@ -24,10 +25,16 @@ def teste():
     cena = Cena(img = fundo)
     cenas = Elemento(img = balao, style=dict(left=200, top=250, width=200, height="200px"))
     elementos = Elemento(img = balao2, style=dict(left=800, top=250, width=200, height="200px"))
+    txt1 = Texto(cena,"Vamos aprender a programar?")
+    txt2 = Texto(cena,"Escolha entre cenas ou elementos para começar.")
+    #txt1.vai=txt2.vai
     cena.vai()
     cenas.entra(cena)
     elementos.entra(cena)
-    cenas.vai()
-    elementos.vai()
+    txt1.vai()
+    if txt1.vai == true:
+        txt2.vai()
+    #cenas.vai()
+    #elementos.vai()
 teste()    
     
