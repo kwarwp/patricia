@@ -501,3 +501,23 @@ IndentationError: expected an indented block
     Game().create_4x5_cards()
 AttributeError: 'Game' object has no attribute 'create_4x5_cards'
 '''},
+{'date': 'Tue Jul 14 2020 21:25:46.984 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 83
+    Game().create_2x5_cards()
+  module <module> line 54
+    self.card1a = Card(IMG_CARD_1, [0,0], self.cena)
+  module <module> line 38
+    if faceDown:
+NameError: name 'faceDown' is not defined
+'''},
