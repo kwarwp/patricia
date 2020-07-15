@@ -32,25 +32,22 @@ class Eventos:
 	def __init__(self):
 		self.tabuleiro = Cena(self.CENA_TABULEIRO)
 		  
-		self.carta1= Elemento(self.CARTA_PYCHARM, ,x=100,y=300 , cena=self.tabuleiro)
-		self.carta2= Elemento(self.CARTA_VERSO, , x=200, y=300, cena=self.tabuleiro)
+		self.carta[0]= Elemento(self.CARTA_PYCHARM, ,x=100,y=300 , cena=self.tabuleiro)
+		self.carta[1]= Elemento(self.CARTA_VERSO, , x=200, y=300, cena=self.tabuleiro)
 		
            
         
        # self.pycharm=Elemento(self.CARTA_PYCHARM,,X=100,y=300,cena=self.tabuleiro)
 	#def embaralhar(self):
-		x=[self.carta1,self.carta2,self.carta1,self.carta2]
-		random.shuffle(x,random.random)
-		self.carta_nova1=x[0]
-		self.carta_nova1=x[1]
-		self.carta_nova1=x[2]
-		self.carta_nova1=x[3]        
+		
+		random.shuffle(self.carta,random.random)
+		   
 	
         
 	def vai(self):
 		""" mostra a cena da calçada. """
 		self.tabuleiro.vai()
-		self.carta_nova1.vai()
+		
         
         	 
     	 
