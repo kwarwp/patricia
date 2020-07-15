@@ -15,7 +15,7 @@ casa= Cena (img = "https://plantasdecasas.com/storage/2017/07/planta-fachada-cas
 triste = Elemento (img= "https://i.imgur.com/0R5Xo83.png", tit="Aminoácido", x=1000, y=100)
 feliz = Elemento (img= "https://i.imgur.com/UaihdhW.png", tit="Aminoácido", x=40, y=80)
 codigo1 = Elemento (img="https://i.imgur.com/mlsszQm.png", tit="Aminoácido", style=dict(left=80, top=80, width=500, height="250px"))
-codigo2 = Elemento (img="https://i.imgur.com/d6uejyE.png", tit="Aminoácido", style=dict(left=80, top=400, width=500, height="250px"))
+codigo2 = Elemento (img="https://i.imgur.com/d6uejyE.png", tit="Aminoácido", style=dict(left=680, top=80, width=500, height="250px"))
 #aqui eu coloquei o elemento para entrar na cena
 codigo1.entra(praia)
 codigo2.entra(praia)
