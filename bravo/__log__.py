@@ -310,3 +310,7 @@ KeyError: img
 'error': '''
 Exception: <TypeError: Cannot read property 'charAt' of undefined>
 '''},
+{'date': 'Wed Jul 15 2020 16:22:35.372 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: Cannot read property 'charAt' of undefined>
+'''},
