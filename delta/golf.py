@@ -115,10 +115,10 @@ class Game:
             # reabilita a ação do clique e vira a carta 2 para baixo
             selected_card.card.elt.bind("click", selected_card.turnUp)
             
-            # Aqui tem q esteparar pelo menos 3 segundos, como fazer? (sleep, não funciona)
+            Texto(Game.cena, "Opa!", "Errou!!!").vai()
             
+            # Aqui tem q esperar pelo menos 3 segundos, como fazer? (sleep, não funciona)
             
-            Texto("Opa!", "Errou!!!").vai()
             selected_card.turnDown()
             Game.previous_selected_card = None
             
