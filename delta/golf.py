@@ -95,9 +95,9 @@ class Game:
             return
             
         if Game.previous_selected_card.name != selected_card.name:
-            Texto = Texto(self.cena, "Errou!!!")
-            Texto.mostra()
-            Texto.esconde()
+            self.texto = Texto(self.cena, "Errou!!!")
+            self.texto.mostra()
+            self.texto.esconde()
             Game.previous_selected_card.turnDown()
             selected_card.turnDown()
         else:
