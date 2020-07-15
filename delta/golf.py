@@ -48,9 +48,14 @@ class Card():
         
         
 class Game:
+
+    def vai(self): 
+        self.create_2x5_cards()
+    
     def create_2x5_cards(self):
     
-        """ matrix 4x5
+        """ 
+             matrix 2x5:
             1A 1B 2A 2B 3A
             3B 4A 4B 5A 5B
         """
@@ -90,4 +95,4 @@ class Game:
 
 
 if __name__ == "__main__":
-    Game().create_2x5_cards()
+    Game().vai()
