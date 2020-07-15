@@ -23,9 +23,9 @@ class Eventos:
     
     
 	def __init__(self):
-        self.tabuleiro = Cena(self.CENA_TABULEIRO)
-        self.pycharm = Elemento(self.CARTA_PYCHARM, , posicao1, cena=self.tabuleiro)
-        self.verso=Elemento(self.CARTA_VERSO, , posicao2, cena=self.tabuleiro)
+		self.tabuleiro = Cena(self.CENA_TABULEIRO)
+		self.pycharm = Elemento(self.CARTA_PYCHARM, , posicao1, cena=self.tabuleiro)
+		self.verso=Elemento(self.CARTA_VERSO, , posicao2, cena=self.tabuleiro)
         
        # self.pycharm=Elemento(self.CARTA_PYCHARM,,X=100,y=300,cena=self.tabuleiro)
         
