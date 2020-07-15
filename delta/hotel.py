@@ -29,8 +29,8 @@ def Embaralha():
 	def posicao(self):
 		self.carta1=Cena(self.carta[0],,x=200,y=400)
 		self.carta2=Cena(self.carta[1],,x=100,y=100)
-		carta1.vai()
-		carta2.vai()
+	carta1.vai()
+	carta2.vai()
 
 
 Embaralha()
