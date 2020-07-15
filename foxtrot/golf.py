@@ -17,8 +17,8 @@ STYLE["width"] = 1010
 STYLE["heigth"] = "500px"
 #figuras
 capa_do_jogo = "https://i.imgur.com/0RVnppj.png"
-botao_jogar = "https://i.imgur.com/F3Q0bDv.png"
-botao_sobre = "https://i.imgur.com/pG9wDIz.png"
+botao_jogar = "https://i.imgur.com/pG9wDIz.png"
+botao_sobre = "https://i.imgur.com/F3Q0bDv.png"
 #criando classe jogo
 class Jogo:
     def __init__(self):
@@ -28,12 +28,12 @@ class Jogo:
         
         #inserindo elementos na cena
         self.botao_jogar = Elemento (img=botao_jogar,
-        tit="jogar",
-        style= dict(left=400, top=400))
+        tit="Jogar",
+        style= dict(left=500, top=400))
         
         self.botao_sobre = Elemento (img=botao_sobre, 
-        tit="sobre", 
-        style= dict(left=500, top=400))
+        tit="Sobre", 
+        style= dict(left=400, top=400))
         
         #exibindo cena
         self.capa.vai()
