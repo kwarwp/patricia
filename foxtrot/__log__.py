@@ -1150,3 +1150,10 @@ AttributeError: 'Jogo' object has no attribute 'Sobre'
     self.botao_sobre.vai=self.Sobre
 AttributeError: 'Jogo' object has no attribute 'Sobre'
 '''},
+{'date': 'Wed Jul 15 2020 19:33:05.768 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 56
+  def Sobre(self):
+  ^
+IndentationError: unexpected indent
+'''},
