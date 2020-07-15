@@ -342,3 +342,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Jul 15 2020 02:20:19.673 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 19
+  print i
+        ^
+SyntaxError: missing parenthesis in call to 'print'
+'''},
