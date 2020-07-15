@@ -36,13 +36,12 @@ class Eventos:
     BONECO = "https://i.imgur.com/k63kwfa.png"
     
     
-    
     #tamanho da cena
     STYLE["width"] = 640
     
     def __init__(self):
         self.ambiente = Cena(self.CENA_corredor_1)
-        self.boneco = Elemento(self.BONECO, , x=120, y=20, cena=self.ambiente)
+        self.boneco = Elemento(self.BONECO, , x=120, y=40, cena=self.ambiente)
         document.bind("keydown", self.anda_boneco)  # captura o evento de teclado
            
     def vai(self):
@@ -70,7 +69,7 @@ class Eventos:
         if self.boneco.x > 500 and self.boneco.y > 500:
             self.ambiente = Cena(self.CENA_corredor_2)
             STYLE["width"] = 640
-            self.boneco = Elemento(self.BONECO, , x, y, cena=self.ambiente)
+            self.boneco = Elemento(self.BONECO, , x=100, y=200, cena=self.ambiente)
             self.boneco.x = 100
             self.boneco.y = 100
             self.ambiente.vai()
