@@ -36,7 +36,7 @@ class Jogo:
 	def vai(self):
 		self.matriz()
 "matriz 2x2"
-	def matriz_2x2(self):
+	def matriz(self):
 		self.cena = Cena()
 		self.card1a = Card(IMG_PYCHARM, list_cards[0], self.cena)
 		self.card1b = Card(IMG_PYCHARM, list_cards[1], self.cena)
