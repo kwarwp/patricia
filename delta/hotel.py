@@ -32,6 +32,7 @@ def Embaralha():
 	def vai():
 		self.carta1.vai()
 		self.carta2.vai()
+		carta[2].vai()
 
 
 Embaralha()
