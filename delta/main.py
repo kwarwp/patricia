@@ -6,6 +6,7 @@
 
 .. codeauthor:: Nome Sobrenome (hotel) <mail@local.tipo>
 
+
 .. codeauthor:: Nome Sobrenome (india) <mail@local.tipo>
 
 .. codeauthor:: Nome Sobrenome (juliet) <mail@local.tipo>
@@ -16,5 +17,4 @@ Changelog
         Descreva o que você adicionou no código.
 
 """
-if __name__ == "__main__":
-    Eventos().vai()
+
