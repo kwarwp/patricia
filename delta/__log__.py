@@ -767,3 +767,10 @@ IndentationError: unexpected indent
     		self.carta1 = Elemento(self.CARTA_1, ,x=300,y=400 , cena=self.tabuleiro)
 AttributeError: 'Eventos' object has no attribute 'CARTA_1'
 '''},
+{'date': 'Tue Jul 14 2020 21:51:27.673 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 24
+  CARTA_1
+  ^
+IndentationError: unexpected indent
+'''},
