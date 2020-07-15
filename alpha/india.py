@@ -24,18 +24,21 @@ Código alterado de Monica Novellino <monicanovellino@gmail.com>
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
 from browser import document # importa o DOM para atribuir o evento de teclado
-contador = 0
+
 class Eventos:
     """ Associa um evento a uma imagem e captura eventos de teclado. """
-    CENA_corredor_1 = "https://i.imgur.com/L71ZV6Z.png"
-    CENA_corredor_2 = "https://i.imgur.com/5Qno2fs.png"
-    CENA_corredor_3 = "https://i.imgur.com/gZ5wc0h.png"
-    CENA_corredor_4 = "https://i.imgur.com/xI8i7Nc.png"
-    CENA_corredor_5 = "https://i.imgur.com/GLVctqb.png"
+    CENA_corredor_1 = link1 = "https://i.imgur.com/L71ZV6Z.png"
+    CENA_corredor_2 = link2 = "https://i.imgur.com/5Qno2fs.png"
+    CENA_corredor_3 = link3 = "https://i.imgur.com/gZ5wc0h.png"
+    CENA_corredor_4 = link4 = "https://i.imgur.com/xI8i7Nc.png"
+    CENA_corredor_5 = link5 = "https://i.imgur.com/GLVctqb.png"
     
     BONECO = "https://i.imgur.com/k63kwfa.png"
     
-    
+    matrizMapaFase = [[link2],
+                      [link3],
+                      [link4],
+                      [link5]]
     #tamanho da cena
     STYLE["width"] = 640
     
@@ -66,13 +69,14 @@ class Eventos:
         #se o elemento atingiu uma porta, muda para a próxima cena
         # FALTA mapear os pontos, criar função para passar parametros ou chamar outra classe
         #ideia de cria uma matriz com os pontos de localização do portal
-        global contador
+        contador = 0
         if self.boneco.x > 100 and self.boneco.y > 100:
-            self.ambiente = Cena(self.CENA_corredor_2)
+            self.ambiente = Cena(self.matrizMapaFase[contador][0])
             STYLE["width"] = 640
             self.boneco = Elemento(self.BONECO, , x=int, y=int, cena=self.ambiente)
             self.boneco.x = 60
             self.boneco.y = 240
+            contador = contador + 1
             self.ambiente.vai()
             
         #se atingiu o bau, ganhou o jogo.
