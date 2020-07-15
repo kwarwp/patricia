@@ -7,7 +7,10 @@
 Changelog
 ---------
 .. versionadded::    20.07
-        Descreva o que você adicionou no código.
+        Grid 2x5 de cartões do jogo da memória
+        shuffle das cartas
+        bind do click sobre o botão
+        regra do jogo
 
 """
 
@@ -95,7 +98,7 @@ class Game:
         if Game.previous_selected_card is None:
             Game.previous_selected_card = selected_card
             # desabilita o clique sobre carta virada
-            Game.previous_selected_card.card.elt.unbind("click")
+            Game.previous_selected_card.card.elt.unbind("click", None)
             Texto(Game.cena, "unbind!!!").vai()
             return
         
