@@ -259,3 +259,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Jul 15 2020 03:17:25.458 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 9
+  from _spy.vitollino.main import Cena, Elemento, STYLE, ESTYLE
+  ^
+IndentationError: unexpected indent
+'''},
