@@ -10,13 +10,16 @@ Changelog
         Página inicial do Jogo.
 
 """
-from __spy.vitollino.main import Cena,Elemento,Texto
+from __spy.vitollino.main import Cena, Elemento, Texto, STYLE
 
+capa = "https://i.imgur.com/SI1BO9E.png"
+botao_jogar = "https://i.imgur.com/F3Q0bDv.png"
+botao_sobre = "https://i.imgur.com/pG9wDIz.png"
 class Jogo:
     def __init__(self):
-        self.capa = Cena (img= "https://i.imgur.com/0RVnppj.png")
-        self.botao_jogar = Elemento (img = "https://i.imgur.com/F3Q0bDv.png")
-        self.botao_sobre = Elemento (img = "https://i.imgur.com/pG9wDIz.png")
+        self.capa=Cena
+        self.botao_jogar=Elemento
+        self.botao_sobre=Elemento
 
         self.botao_sobre.entra(self.capa)
         self.botao_jogar.entra(self.capa)
