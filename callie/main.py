@@ -8,6 +8,7 @@ STYLE["width"] = 600
 
 TABULEIRO = "https://activufrj.nce.ufrj.br/file/ProgOO/TAB_VAZIO.png"
 CARTA = "https://activufrj.nce.ufrj.br/file/ProgOO/Card_Activ.png"
+CARTA2 = "https://activufrj.nce.ufrj.br/file/ProgOO/Card_github.png"
 #PosicaoX=
 #Posicaoy=
 class Jogo:
