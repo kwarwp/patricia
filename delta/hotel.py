@@ -29,17 +29,7 @@ def embaralha():
 		carta1=Elemento(self.carta[0],,x=200,y=400)
 		self.carta2=Cena(self.carta[1],,x=100,y=100)
       """
-
-	
-	contador=0
-	contador1=0
-	contador2=0
-	while (contador<4):
-		carta[0].vai()
-	while (contador1<4):
-		carta[1].vai() 
-	while (contador2<4):
-		carta[2].vai()
+	carta[1].vai()
 	
 
 embaralha()
