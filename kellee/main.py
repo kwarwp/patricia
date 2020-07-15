@@ -28,13 +28,13 @@ Changelog
 
 """
 from _spy.vitollino.main import Cena, Elemento, Texto,STYLE
-from natalia.main import Praia
+from natalia.main import Mar
 from grace.main import Praia
 __version__ = "15.07"
 __author__ = "Rosilane"
 STYLE["width"] = 500
 CENA_CALCADA = "https://i.imgur.com/zOxshRh.jpg"
-#BANHISTA = "https://i.imgur.com/CWQ00XG.png"
+BANHISTA = "https://i.imgur.com/CWQ00XG.png"
 txt = Texto("OK IMAGEM1")
 
 class Calcada:
@@ -42,7 +42,10 @@ class Calcada:
     def __init__(self):
         """ Mostra a cena da praia """
         self.cena = Cena(CENA_CALCADA, direita=Praia())
-        #self.banhista = Elemento(BANHISTA, x=100, y=200, cena=self.cena)
+        self.banhista = Elemento(BANHISTA, x=100, y=200, cena=self.cena)
+        
+        self.cena = Cena(CENA_CALCADA, direita=Mar())
+        self.banhista = Elemento(BANHISTA, x=100, y=200, cena=self.cena)
         
         #Cena(CENA_CALCADA).vai()
     def vai(self):
