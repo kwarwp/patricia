@@ -22,7 +22,7 @@ class Eventos:
 	#= "http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline"
 	CARTA_PYCHARM = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_pycharm.png?disp=inline"
 	
-	self.carta=[1,2,3,4]
+	carta=[1,2,3,4]
     
 	
 	
@@ -32,7 +32,7 @@ class Eventos:
 	def __init__(self):
 		self.tabuleiro = Cena(self.CENA_TABULEIRO)
 		  
-		self.carta[0]= Elemento(self.CARTA_PYCHARM, ,x=100,y=300 , cena=self.tabuleiro)
+		carta[0]= Elemento(self.CARTA_PYCHARM, ,x=100,y=300 , cena=self.tabuleiro)
 		self.carta[1]= Elemento(self.CARTA_VERSO, , x=200, y=300, cena=self.tabuleiro)
 		
            
