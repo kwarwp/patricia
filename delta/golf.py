@@ -16,6 +16,7 @@ from _spy.vitollino.main import Cena, Elemento, STYLE
 __version__ = "20.07"
 __author__ = "Paulo Assumpção"
 
+IMG_CARD_FACE_DOWN = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline"
 IMG_CARD_1 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_pycharm.png?disp=inline"
 IMG_CARD_2 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Linux.png?disp=inline"
 IMG_CARD_3 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Gitlab.png?disp=inline"
@@ -34,13 +35,16 @@ class Card():
         self.position = position
         pos_x = 50 + self.position[0]*IMG_WIDTH
         pos_y = 50 + self.position[1]*IMG_HEIGHT
-        self.imageFaceDown = Elemento("http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline", x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
+        if faceDown:
+            Elemento(IMG_CARD_FACE_DOWN, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
+        else: 
+            Elemento(self.image, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
         self.removed = False
         
         
         
 class Game:
-    def create_4x5_cards(self):
+    def create_2x5_cards(self):
     
         """ matrix 4x5
             1A 1B 2A 2B 3A
@@ -50,7 +54,7 @@ class Game:
         self.card1a = Card(IMG_CARD_1, [0,0], self.cena)
         self.card1b = Card(IMG_CARD_1, [1,0], self.cena)
         
-        self.card2a = Card(IMG_CARD_2, [2,0], self.cena)
+        self.card2a = Card(IMG_CARD_2, [2,0], self.cena, self.faceDown=False)
         self.card2b = Card(IMG_CARD_2, [3,0], self.cena)
         
         self.card3a = Card(IMG_CARD_3, [4,0], self.cena)
@@ -63,7 +67,7 @@ class Game:
         self.card5b = Card(IMG_CARD_5, [4,1], self.cena)
         self.cena.vai()
         
-    def randomize_cards(self):
+    def randomize_cards(self, ):
         pass
     
     def create_grid(self, grid_size):
