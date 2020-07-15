@@ -80,4 +80,4 @@ class Game:
 
 
 if __name__ == "__main__":
-    Game().create_4x5_cards()
+    Game().create_2x5_cards()
