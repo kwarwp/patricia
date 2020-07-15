@@ -79,6 +79,21 @@ class Casa(Elemento):
     
         Observação: Uma *folha sprite* é uma imagem contendo vários desenhos com peças
         que serão usados em um jogo.
+        
+ .. note::
+ 
+        :dropper: dicionário necessário para definir o comportamento do drop.
+            Cada chave deste dicionário deve ser o nome de um pino passível de
+            ser arrastado para esta casa. Os nomes são do tipo *topo0 ... topo7*
+            ou *lado0 ... lado7*. A construção *{f"{nome}{pino}": ..}* é chamada
+            em Python de dict comprehension, pois gera um dicionário a partir de
+            uma iteração. O termo *f"{nome}{pino}"* constrói as chaves do dicionário
+            a partir da lista (topo, lado) e dos números de 0 a 7. O termo
+            *lambda ev, nome_pino, \*_: self.entrar(nome_pino)* é uma função anônima
+            que recebe os parametros *ev* e *nome_pino* enviados pelo mecanismo interno
+            de arrasto do Elemento. Neste caso, para qualquer pino eu quero que ele
+            entre na casa corrente, por isso o *self.entrar(nome_pino)* é chamado dentro
+            da função anônima.
     
         :param base: A cena em que este tabuleiro vai entrar.
         :param fundo: A imagem que representa esta casa.
