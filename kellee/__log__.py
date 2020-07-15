@@ -288,3 +288,10 @@ SyntaxError: invalid syntax
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Jul 15 2020 13:44:18.449 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 19
+  """ Jogo do Mistério da Praia.
+  ^
+IndentationError: unexpected indent
+'''},
