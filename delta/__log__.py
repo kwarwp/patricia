@@ -2847,3 +2847,10 @@ NameError: name 'cena' is not defined
     cena.vai()
 NameError: name 'cena' is not defined
 '''},
+{'date': 'Wed Jul 15 2020 10:14:43.804 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 106
+  Game.previous_selected_card.elt.bind("click", Game.previous_selected_card.turnOn()
+                                                                                                  ^
+SyntaxError: invalid syntax
+'''},
