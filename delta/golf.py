@@ -16,6 +16,7 @@ Changelog
 
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
 import random
+import time
 
 __version__ = "20.07"
 __author__ = "Paulo Assumpção"
@@ -116,8 +117,9 @@ class Game:
             
             # Aqui tem q esteparar pelo menos 3 segundos, como fazer? (sleep, não funciona)
             
+            
+            Texto("Opa!", "Errou!!!").vai()
             selected_card.turnDown()
-            Texto(Game.cena, "Errou!!!").vai()
             Game.previous_selected_card = None
             
         # acertou 
