@@ -33,6 +33,7 @@ from grace.main import Praia
 __version__ = "15.07"
 __author__ = "Rosilane"
 STYLE["width"] = 600
+STYLE["length"]= 800
 CENA_FUNDO = "https://static.vecteezy.com/system/resources/previews/000/561/495/non_2x/gray-white-polygonal-background-creative-design-templates-vector.jpg"
 BANHISTA = "https://i.imgur.com/CWQ00XG.png"
 class Opcao:
