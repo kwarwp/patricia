@@ -44,13 +44,20 @@ class Jogo:
             vira2 = Elemento(CARTA, x=153, y=5, w=145,h=190,cena=self.tab)
             vira3 = Elemento(CARTA3, x=2, y=203,w=145,h=190, cena=self.tab)
             vira4 = Elemento(CARTA3, x=153, y=203, w=145, h=190, cena=self.tab)
-            #lista_verso = (self.verso, self.verso2, self.verso3, self.verso4)
+            lista_verso = (self.verso, self.verso2, self.verso3, self.verso4)
+            possib = (vira, vira2, vira3,vira4)
+            
+            for i in lista_verso:
+                
+            
+                
+            
             #lista_carta=(self.carta, self.carta2,self.carta3, self.carta4)
             
-        self.verso.vai= vira
-        self.verso2.vai=vira2
-        self.verso3.vai=vira3
-        self.verso.vai=vira4
+        self.verso.vai= vira_carta
+        self.verso2.vai=vira_carta
+        self.verso3.vai=vira_carta
+        self.verso.vai=vira_carta
             
     def vai(self):
         """ Mostra a cena do tabuleiro e versos"""
