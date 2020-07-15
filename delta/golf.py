@@ -101,9 +101,7 @@ class Game:
         Game.current_selected_card = selected_card
         
         # Não acertou
-        if Game.previous_selected_card.name != Game.current_selected_card.name:
-            Texto(Game.cena, "Errou!!!").vai()
-            
+        if Game.previous_selected_card.name != Game.current_selected_card.name:            
             # reabilita a ação o clique e vira a carta 1 para baixo
             Game.previous_selected_card.card.elt.bind("click", Game.previous_selected_card.turnOn)
             Game.previous_selected_card.turnDown()
@@ -111,11 +109,16 @@ class Game:
             # reabilita a ação do clique e vira a carta 2 para baixo
             Game.current_selected_card.card.elt.bind("click", Game.current_selected_card.turnOn)
             Game.current_selected_card.turnDown()
-
-        else: # acertou       
-            Texto(Game.cena, "Acertou!!!").vai()
-            Game.current_selected_card.card.elt.unbind("click")
+            Texto(Game.cena, "Errou!!!").vai()
+            
+        # acertou 
+        else:       
             Game.previous_selected_card.card.elt.unbind("click")
+            Game.previous_selected_card = None
+            Game.current_selected_card.card.elt.unbind("click")
+            Game.current_selected_card = None
+            Texto(Game.cena, "Acertou!!!").vai()
+            
             
         # reinicia turno
         Game.previous_selected_card = None
