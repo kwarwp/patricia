@@ -52,7 +52,7 @@ class Eventos:
         self.ambiente.vai()
         
     def portal (self, x, y):
-        cont = cont + 2    
+        cont = cont + 1    
         x = self.boneco
         y = self.boneco.y
         if x > 400 and y > 200:
@@ -77,7 +77,7 @@ class Eventos:
         elif key in [38, 40]:
             key = (key - 39) * 5
             self.boneco.y += key # muda a posição de mais um ou menos um
-        self.portal()
+        #self.portal()
         #se o elemento atingiu uma porta, muda para a próxima cena
         # FALTA mapear os pontos, criar função para passar parametros ou chamar outra classe
         #ideia de cria uma matriz com os pontos de localização do portal
