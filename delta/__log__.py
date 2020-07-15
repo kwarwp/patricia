@@ -1435,3 +1435,10 @@ SyntaxError: invalid syntax
     		carta[i].vai(x=100,y=100)
 TypeError: vai() got an unexpected keyword argument 'x'
 '''},
+{'date': 'Wed Jul 15 2020 02:26:10.390 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 24
+  carta[0]=Elemento(img="http://activufrj.nce.ufrj.br/file/ProgOO/Card_pycharm.png?disp=inline",,x=100,y=100)
+                                                                                                 ^
+SyntaxError: invalid syntax
+'''},
