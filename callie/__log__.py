@@ -224,3 +224,10 @@ SyntaxError: keyword can't be an expression
                                                   ^
 SyntaxError: keyword can't be an expression
 '''},
+{'date': 'Wed Jul 15 2020 02:34:11.918 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 18
+  self.carta = Elemento(CARTA, x=2, y=5,w=1000,h='30px'), cena=self.tab)
+                                                                     ^
+SyntaxError: invalid syntax
+'''},
