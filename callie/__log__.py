@@ -245,3 +245,10 @@ SyntaxError: EOL while scanning string literal
              ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Jul 15 2020 03:16:45.874 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 10
+  from _spy.vitollino.main import Cena, Elemento, STYLE, ESTYLE
+  ^
+IndentationError: unexpected indent
+'''},
