@@ -25,7 +25,7 @@ IMG_VERSO="http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline"
 IMG_WIDTH=200
 IMG_HEIGHT=200
 class Carta():
-	def _init_(self,imagem,posicao,cena):
+	def __init__(self,imagem,posicao,cena):
 		self.imagem=imagem
 		self.posicao=posicao
 		pos_x = 50 + self.posicao[0]*IMG_WIDTH
