@@ -25,7 +25,7 @@ class Card():
         self.position = position
         self.pos_x = 50 + self.position[0] * IMG_WIDTH
         self.pos_y = 50 + self.position[1] * IMG_HEIGHT
-        self.card = Elemento(IMG_CARD_FACE_DOWN, tit=self.name, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
+        self.card = Elemento(IMG_CARD_FACE_DOWN, , x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.card.elt.bind("click", self.turnUp)
         self.card.elt.bind("click", self.turnUp)
         self.removed = False
@@ -99,8 +99,9 @@ class Game:
             
             # Aqui tem q esperar pelo menos 3 segundos, como fazer? (sleep, não funciona)
             
+            
+            #Texto(Game.cena, "Opa!", "Errou!!!").vai()
             selected_card.turnDown()
-            Texto(Game.cena, "Opa!", "Errou!!!").vai()
             # reabilita a ação o clique e vira a carta 1 para baixo
             Game.previous_selected_card.card.elt.bind("click", Game.previous_selected_card.turnUp)
             Game.previous_selected_card.turnDown()
