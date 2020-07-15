@@ -196,3 +196,10 @@ TypeError: object() takes no parameters
     self.scorer = dict(ponto=1, valor=cena.nome, carta=tit or img, casa=self.xy, move=None)
 AttributeError: 'int' object has no attribute 'nome'
 '''},
+{'date': 'Wed Jul 15 2020 10:13:42.939 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 48
+  return [[Casa(, base, fundoi, j, dx, dy, mx, my) for j in range(linhas)] for i in range(colunas)]
+                 ^
+SyntaxError: invalid syntax
+'''},
