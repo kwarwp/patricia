@@ -659,3 +659,23 @@ SyntaxError: invalid syntax
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Tue Jul 14 2020 21:40:17.12 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 89
+    Game().create_2x5_cards()
+  module <module> line 54
+    list_cards=self.shuffle_cards()
+  module <module> line 74
+    list_cards =  {[0,0], [1,0], [2,0], [3,0], [4,0], [0,1], [1,1], [2,1], [3,1], [4,1]}
+TypeError: unhashable type: 'list'
+'''},
