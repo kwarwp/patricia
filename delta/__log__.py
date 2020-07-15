@@ -588,3 +588,10 @@ SyntaxError: invalid syntax
                   ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Jul 14 2020 21:29:01.457 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 44
+  """ mostra a cena da calçada. """
+  ^
+IndentationError: expected an indented block
+'''},
