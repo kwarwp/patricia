@@ -1442,3 +1442,10 @@ TypeError: vai() got an unexpected keyword argument 'x'
                                                                                                  ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Jul 15 2020 02:26:25.472 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 25
+  carta[1]=Elemento(img="http://activufrj.nce.ufrj.br/file/ProgOO/Card_Linux.png?disp=inline",,x=200,y=200)
+                                                                                               ^
+SyntaxError: invalid syntax
+'''},
