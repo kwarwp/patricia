@@ -36,7 +36,7 @@ def teste():
         #txt1.vai()
         print("1")
         x = 1
-    if txt1.vai == 1:
+    if x == 1:
         #txt2.vai()
         print("2")
     #cenas.vai()
