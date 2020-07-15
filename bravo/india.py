@@ -31,7 +31,7 @@ def teste():
     txt2 = Elemento(img = frase2, style=dict(left=500, top=100, width=200, height="200px"))
     txt1.entra(cena)
     txt2.entra(cena)
-    txt1.vai=txt2.vai
+    txt2.vai=txt2.vai
     cena.vai()
     cenas.entra(cena)
     elementos.entra(cena)
