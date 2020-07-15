@@ -1,45 +1,23 @@
 # patricia.alpha.india.py
 # SPDX-License-Identifier: GPL-3.0-or-later
-""" Projeto sem descrição, (mude esta linha).
+""" 
+Projeto ALPHA - Jogo de Labirinto com cenas. 
 
-.. codeauthor:: Nome Sobrenome <mail@local.tipo>
+Calabouço de Barro.
+
+.. codeauthor:: Rodrigo Esquinelato <resquinelato@gmail.com>
 
 Changelog
 ---------
+
+Código alterado de Monica Novellino <monicanovellino@gmail.com>
+
 .. versionadded::    20.07
-        Descreva o que você adicionou no código.
+        Adicionei 5 imagens iniciais do labirinto e alterei o pacman (podem criar outro peronagem)
+        
 
 """
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# patricia.alpha.hotel.py
-# SPDX-License-Identifier: GPL-3.0-or-later
-""" Projeto ALPHA - Jogo de Labirinto com cenas.
-
-.. codeauthor:: Monica Novellino <monicanovellino@gmail.com>
-
-Changelog
----------
-.. versionadded::    0.1
-        - Planta da casa
-        - Boneco andando com as setas
-
-"""
 #FALTA - melhorar o código: criar as classes, funções, passar parametros
 #FALTA - Mapear os pontos dos ambientes (x e Y) para mudar para a cena correta
 #FALTA - VErifica se esta na cena correta e se chegou no baú do tesouro
@@ -49,9 +27,11 @@ from browser import document # importa o DOM para atribuir o evento de teclado
 
 class Eventos:
     """ Associa um evento a uma imagem e captura eventos de teclado. """
-    CENA_COZINHA = "https://i.imgur.com/5Qno2fs.png"
-    CENA_ESCRITORIO = "https://i.imgur.com/5Qno2fs.png"
-    CENA_PLANTA = "https://i.imgur.com/L71ZV6Z.png"
+    CENA_corredor_1 = "https://i.imgur.com/L71ZV6Z.png"
+    CENA_corredor_2 = "https://i.imgur.com/5Qno2fs.png"
+    CENA_corredor_3 = "https://i.imgur.com/gZ5wc0h.png"
+    CENA_corredor_4 = "https://i.imgur.com/xI8i7Nc.png"
+    CENA_corredor_5 = "https://i.imgur.com/GLVctqb.png"
     
     BONECO = "https://i.imgur.com/k63kwfa.png"
     
@@ -59,7 +39,7 @@ class Eventos:
     STYLE["width"] = 640
     
     def __init__(self):
-        self.ambiente = Cena(self.CENA_PLANTA)
+        self.ambiente = Cena(self.CENA_corredor_1)
         self.boneco = Elemento(self.BONECO, , x=100, y=200, cena=self.ambiente)
         document.bind("keydown", self.anda_boneco)  # captura o evento de teclado
            
@@ -76,16 +56,16 @@ class Eventos:
         # os códigos 37 e 38 são a seta para esquerda e para direita
         # os códigos 39 e 40 são a seta para cima e para baixo
         if key in [37, 39]:
-            key = (key - 38)*4 
+            key = key - 38
             self.boneco.x += key # muda a posição de mais um ou menos um
         elif key in [38, 40]:
-            key = (key - 39)*4  
+            key = key - 39
             self.boneco.y += key # muda a posição de mais um ou menos um
             
         #se o elemento atingiu uma porta, muda para a próxima cena
         # FALTA mapear os pontos, criar função para passar parametros ou chamar outra classe
-        if self.boneco.x > 400 and self.boneco.y > 400:
-            self.ambiente = Cena(self.CENA_COZINHA)
+        if self.boneco.x > 500 and self.boneco.y > 500:
+            self.ambiente = Cena(self.CENA_corredor_2)
             STYLE["width"] = 500
             self.boneco = Elemento(self.BONECO, , x=100, y=200, cena=self.ambiente)
             self.boneco.x = 100
