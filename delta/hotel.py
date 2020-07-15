@@ -28,8 +28,8 @@ class Carta():
 	def _init_(self,imagem,posicao,cena):
 		self.imagem=imagem
 		self.posicao=posicao
-		pos_x = 50 + self.position[0]*IMG_WIDTH
-		pos_y = 50 + self.position[1]*IMG_HEIGHT
+		pos_x = 50 + self.posicao[0]*IMG_WIDTH
+		pos_y = 50 + self.posicao[1]*IMG_HEIGHT
 		Elemento(IMG_VERSO, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
 	def cartas():
 		if self.verso:
