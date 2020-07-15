@@ -12,20 +12,22 @@ Changelog
 """
 
 import random
-from _spy.vitollino.main import Cena, Elemento
+from _spy.vitollino.main import Cena, Elemento, Texto
 
 
 """ Imagens do Jogo da Memória: verso, pycharm, linux
 """
-def cartas():
-	carta=[0,0,0]
-	carta[0]=Cena(img="http://activufrj.nce.ufrj.br/file/ProgOO/Card_pycharm.png?disp=inline")
-	carta[1]=Cena(img="http://activufrj.nce.ufrj.br/file/ProgOO/Card_Linux.png?disp=inline")
-	carta[2]=Cena(img="http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline")
-	random.shuffle(carta,random.random)
-def posicao(self):
-	self.carta1=Cena(self.carta[0],,x=200,y=400)
-	self.carta2=Cena(self.carta[1],,x=100,y=100)
-	carta1.vai()
-	carta2.vai()
-cartas()
+class Eventos:
+
+	def cartas():
+		carta=[0,0,0]
+		carta[0]=Cena(img="http://activufrj.nce.ufrj.br/file/ProgOO/Card_pycharm.png?disp=inline")
+		carta[1]=Cena(img="http://activufrj.nce.ufrj.br/file/ProgOO/Card_Linux.png?disp=inline")
+		carta[2]=Cena(img="http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline")
+		random.shuffle(carta,random.random)
+	def posicao(self):
+		self.carta1=Cena(self.carta[0],,x=200,y=400)
+		self.carta2=Cena(self.carta[1],,x=100,y=100)
+		carta1.vai()
+		carta2.vai()
+
