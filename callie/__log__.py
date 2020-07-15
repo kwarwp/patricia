@@ -154,3 +154,10 @@ AttributeError: 'module' object has no attribute '__setitem__'
     STYLE["width"] = 500
 AttributeError: 'module' object has no attribute '__setitem__'
 '''},
+{'date': 'Wed Jul 15 2020 01:49:05.605 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 11
+  PosicaoX=
+            ^
+SyntaxError: invalid syntax
+'''},
