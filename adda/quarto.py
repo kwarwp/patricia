@@ -99,6 +99,23 @@ class Casa(Elemento):
 
 
 class JogoDoQuarto:
+    """ Jogo do Quarto - Jogo de Tabuleiro.
+    Quarto é um jogo de tabuleiro para dois jogadores inventado pelo matemático suíço Blaise Müller em 1991.
+
+    O jogo é jogado em um tabuleiro 4 × 4. Existem 16 peças únicas para brincar, cada uma das quais é:
+
+    - alto ou baixo;
+    - vermelho ou azul (ou um par diferente de cores, por exemplo, madeira manchada de clara ou escura);
+    - quadrado ou circular; e
+    - topo oco ou topo sólido.
+
+    Os jogadores se revezam na escolha de uma peça que o outro jogador deve colocar no tabuleiro.
+    Um jogador vence colocando uma peça no tabuleiro que forma uma linha horizontal,
+    vertical ou diagonal de quatro peças, todas com um atributo em comum
+    (todas curtas, todas circulares, etc.). Uma regra de variante incluída em muitas edições
+    fornece uma segunda maneira de ganhar colocando quatro peças correspondentes em um quadrado 2 × 2.
+    
+    """
     MADEIRA = "https://i.imgur.com/8mPjfYk.jpg"  # Textura do fundo do jogo.
     TABULEIRO = "https://i.imgur.com/yPFsdKw.png"  # Desenho da casa no tabuleiro central.
     MINITAB = "https://i.imgur.com/DjKe0KY.png" # Desenho da casa no tabuleiro adjacente.
