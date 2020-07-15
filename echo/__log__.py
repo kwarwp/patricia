@@ -152,3 +152,10 @@ SyntaxError: trailing comma not allowed without surrounding parentheses
                                                ^
 SyntaxError: trailing comma not allowed without surrounding parentheses
 '''},
+{'date': 'Wed Jul 15 2020 20:36:17.124 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 7
+  tabuleiro = Cena (img ="https://www.ibilce.unesp.br/Home/Departamentos/Matematica/2cejta/avancando-com-o-resto.png", style=dict(left=680, top=280, width=500, height="250px")
+                                                                                                                                                                                 ^
+SyntaxError: invalid syntax
+'''},
