@@ -29,6 +29,8 @@ def teste():
     elementos = Elemento(img = balao2, style=dict(left=800, top=250, width=200, height="200px"))
     txt1 = Elemento(img = frase1, style=dict(left=500, top=100, width=200, height="200px"))
     txt2 = Elemento(img = frase2, style=dict(left=500, top=100, width=200, height="200px"))
+    txt1.entra(cena)
+    txt2.entra(cena)
     txt1.vai=txt2.vai
     cena.vai()
     cenas.entra(cena)
