@@ -1092,3 +1092,9 @@ NameError: name 'capa' is not defined
     self.botao_sobre.vai=sobre()
 TypeError: 'str' object is not callable
 '''},
+{'date': 'Wed Jul 15 2020 19:27:28.632 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: $locals_$exec_322.Sobre is not a function
+  module '$exec_322' line 55
+class Sobre:
+'''},
