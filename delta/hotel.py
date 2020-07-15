@@ -4,7 +4,7 @@
 
 """codeauthor:: Anni Provietti <anniprovietti@gmail.com>
 
-"""Changelog"""
+Changelog
 
 .. versionadded::    20.07"""
         
