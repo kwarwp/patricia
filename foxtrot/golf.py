@@ -47,7 +47,8 @@ class Jogo:
         self.texto_jogar = Texto (self.capa, "Volte em breve para Jogar")
 
         #ação caso seja clicado
-        self.botao_sobre.vai(
+        self.botao_sobre.vai=self.texto_sobre.vai
+        self.botao_jogar.vai=self.texto_jogar.vai
         
 if __name__ == "__main__":
     Jogo()
