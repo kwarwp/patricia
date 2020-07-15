@@ -57,8 +57,7 @@ class Card():
         
 class Game:
 
-    def __init__(self):
-        self.previous_selected_card = None
+    previous_selected_card = None
     
     def vai(self): 
         self.create_2x5_cards()
@@ -91,21 +90,21 @@ class Game:
         self.cena.vai()
 
     def rule(self, selected_card):  
-        if self.previous_selected_card == None:
-            self.previous_selected_card = selected_card
+        if previous_selected_card == None:
+            previous_selected_card = selected_card
             return
             
-        if self.previous_selected_card.name != selected_card.name:
+        if previous_selected_card.name != selected_card.name:
             self.Texto = Texto(self.cena, "Errou!!!")
             self.Texto.mostra()
             self.Texto.esconde()
-            self.previous_selected_card.turnDown()
+            previous_selected_card.turnDown()
             selected_card.turnDown()
         else:
-            self.previous_selected_card.elt.bind("click", None)
+            previous_selected_card.elt.bind("click", None)
             self.selected_card.elt.bind("click", None)
             
-        self.previous_selected_card = None
+        previous_selected_card = None
               
 
     def shuffle_cards(self):   
