@@ -35,7 +35,7 @@ class Eventos:
     
     BONECO = "https://i.imgur.com/k63kwfa.png"
     
-    matrizMapaFase = [[link2],
+    matrizMapaFase = [[link4],
                       [link3],
                       [link4],
                       [link5]]
