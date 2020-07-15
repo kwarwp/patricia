@@ -114,22 +114,13 @@ class Game:
 
         else: # acertou
             Texto(Game.cena, "Acertou!!!").vai()
-            Game.current_selected_card.card.elt.unbind("click")
-            Game.previous_selected_card.card.elt.unbind("click")
+            #Game.current_selected_card.card.elt.unbind("click")
+            #Game.previous_selected_card.card.elt.unbind("click")
             
         # reinicia turno
         Texto(Game.cena, "Vou reiniciar aqui!!!").vai()
         Game.previous_selected_card = None
         Game.current_selected_card = None
-        
-        if Game.previous_selected_card is None:
-            Texto(Game.cena, "previous é nulo!!!").vai()
-            
-        if Game.current_selected_card is None:
-            Texto(Game.cena, "current é nulo!!!").vai()
-            
-        if Game.current_selected_card is None and Game.previous_selected_card is None:
-            Texto(Game.cena, "previous current é nulo!!!").vai()
 
 
     def shuffle_cards(self):   
