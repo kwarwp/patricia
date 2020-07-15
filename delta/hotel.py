@@ -45,9 +45,10 @@ class Jogo():
 		self.cena.vai()
 	def embaralha(self):   
 		list_cards =  [(0,0), (1,0)]
-		random.shuffle(carta,random.random)
-	
-	carta[2].vai()
+		random.shuffle(list_cards,random.random)
+		return list_cards
+if __name__ == "__main__":
+    Game().vai()
 	
 
 embaralha()
