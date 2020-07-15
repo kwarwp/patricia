@@ -219,3 +219,10 @@ SyntaxError: can't assign to literal
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Jul 15 2020 01:17:36.205 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 2
+  def cartas():
+  ^
+IndentationError: unexpected indent
+'''},
