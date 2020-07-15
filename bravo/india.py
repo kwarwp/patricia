@@ -27,7 +27,7 @@ def teste():
     x = 0
     cena = Cena(img = fundo)
     cenas = Elemento(img = balao, style=dict(left=200, top=250, width=200, height="200px"))
-    cena2 = Cena(img = fundo)
+    cena1 = Cena(img = fundo)
     elementos = Elemento(img = balao2, style=dict(left=800, top=250, width=200, height="200px"))
     txt = Texto(cena,"Vamos aprender a programar?")#
     txt1 = Elemento(img = frase1, style=dict(left=500, top=100, width=200, height="200px"))
