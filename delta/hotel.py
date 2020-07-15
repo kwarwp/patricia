@@ -27,7 +27,7 @@ class Eventos:
 	#CARTA_4
 	
 	def embaralhar(self):    
-		s=[CARTA_VERSO,CARTA_PYCHARM,CARTA_3,4]
+		s=[1,2,3,4]
 
 		random.shuffle(s,random.random)
       	
