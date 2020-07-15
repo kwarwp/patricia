@@ -25,13 +25,12 @@ IMG_CARD_5 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Activ.png?disp=inlin
 IMG_WIDTH = 100
 IMG_HEIGHT = 100
 
+
 class Card():
-    def __init__(self, image, cena, position):
-        self.position = position
+    def __init__(self, image, position cena):
+    
         self.image = image
         self.faceDown = True
-        pos_x = (position-1) * IMG_WIDTH
-        pos_y = (position-1) * IMG_HEIGHT
         self.imageFaceDown = Elemento("http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline", x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
         self.removed = False
         self.position = [0,0]
@@ -40,11 +39,11 @@ class Card():
 class Game:
     def crate_4x5_cards(self):
         self.cena = Cena()
-        self.card1 = Card(IMG_CARD_1, self.cena, 1)
-        self.card2 = Card(IMG_CARD_2, self.cena, 2)
-        self.card3 = Card(IMG_CARD_3, self.cena, 3)
-        self.card4 = Card(IMG_CARD_4, self.cena, 4)
-        self.card5 = Card(IMG_CARD_5, self.cena, 5)
+        self.card1 = Card(IMG_CARD_1, self.cena)
+        self.card2 = Card(IMG_CARD_2, self.cena)
+        self.card3 = Card(IMG_CARD_3, self.cena)
+        self.card4 = Card(IMG_CARD_4, self.cena)
+        self.card5 = Card(IMG_CARD_5, self.cena)
         self.cena.vai()
         
     def randomize_cards(self):
