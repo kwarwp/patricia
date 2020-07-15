@@ -2383,3 +2383,10 @@ TypeError: object() takes no parameters
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Wed Jul 15 2020 04:29:17.662 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 36
+  Elemento(IMG_VERSO x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
+  ^
+IndentationError: expected an indented block
+'''},
