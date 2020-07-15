@@ -48,19 +48,19 @@ class Game:
         """
         self.cena = Cena()
         self.card1a = Card(IMG_CARD_1, [0,0], self.cena)
-        self.card1b = Card(IMG_CARD_1, [0,1], self.cena)
+        self.card1b = Card(IMG_CARD_1, [1,0], self.cena)
         
-        self.card2a = Card(IMG_CARD_2, [0,2], self.cena)
-        self.card2b = Card(IMG_CARD_2, [0,3], self.cena)
+        self.card2a = Card(IMG_CARD_2, [2,0], self.cena)
+        self.card2b = Card(IMG_CARD_2, [3,0], self.cena)
         
-        self.card3a = Card(IMG_CARD_3, [0,4], self.cena)
-        self.card3b = Card(IMG_CARD_3, [1,0], self.cena)
+        self.card3a = Card(IMG_CARD_3, [4,0], self.cena)
+        self.card3b = Card(IMG_CARD_3, [0,1], self.cena)
         
         self.card4a = Card(IMG_CARD_4, [1,1], self.cena)
-        self.card4b = Card(IMG_CARD_4, [1,2], self.cena)
+        self.card4b = Card(IMG_CARD_4, [2,1], self.cena)
         
-        self.card5a = Card(IMG_CARD_5, [1, 3], self.cena)
-        self.card5b = Card(IMG_CARD_5, [1, 4], self.cena)
+        self.card5a = Card(IMG_CARD_5, [3,1], self.cena)
+        self.card5b = Card(IMG_CARD_5, [4,1], self.cena)
         self.cena.vai()
         
     def randomize_cards(self):
