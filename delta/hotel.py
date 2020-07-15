@@ -30,13 +30,13 @@ def embaralha():
 		self.carta2=Cena(self.carta[1],,x=100,y=100)
       """
 
-	for i in range(0,3):
+	"""for i in range(0,3):
 		
 		carta[i].vai()
 		i+=1
 		
-		 
-	carta[i-2].vai()
+	"""	 
+	carta[1].vai()
 
 
 embaralha()
