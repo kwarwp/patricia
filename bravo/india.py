@@ -18,7 +18,8 @@ from random import choice, shuffle
 balao = "https://i.pinimg.com/236x/d2/dd/c4/d2ddc45b2599d5fc60f03ec81c53bb6c.jpg"
 balao2 = "https://i.pinimg.com/236x/14/3a/14/143a14c4535873de51301549ba96e051.jpg"
 fundo = "https://i.pinimg.com/originals/ca/a8/25/caa8256ded30c7703fadf79651d7833b.jpg"
-
+frase2 = "https://i.pinimg.com/236x/7a/d6/c2/7ad6c2fdfd198c6903dee4425825ed9a.jpg"
+frase1 = "https://i.pinimg.com/236x/4c/f8/6c/4cf86c786beb1c6457f31bf4fcd7ec99.jpg"
 STYLE["width"] , STYLE["height"] = 1200, "600px"
 
 def teste():
@@ -26,19 +27,19 @@ def teste():
     cena = Cena(img = fundo)
     cenas = Elemento(img = balao, style=dict(left=200, top=250, width=200, height="200px"))
     elementos = Elemento(img = balao2, style=dict(left=800, top=250, width=200, height="200px"))
-    txt1 = Texto(cena,"Vamos aprender a programar?")
-    txt2 = Texto(cena,"Escolha entre cenas ou elementos para começar.")
-    #txt1.vai=txt2.vai
+    txt1 = Elemento(img = frase1, style=dict(left=500, top=100, width=200, height="200px"))
+    txt2 = Elemento(img = frase2, style=dict(left=500, top=100, width=200, height="200px"))
+    txt1.vai=txt2.vai
     cena.vai()
     cenas.entra(cena)
     elementos.entra(cena)
-    if x == 0:
+    '''if x == 0:
         txt1.vai()
         print("1")
         x = 1
     if x == 1:
         txt2.vai()
-        print("2")
+        print("2")'''
     #cenas.vai()
     #elementos.vai()
 teste()    
