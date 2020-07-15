@@ -92,7 +92,7 @@ class Game:
     def rule(selected_card):
     
         # tem um par selecionado?
-        if Game.previous_selected_card == None:
+        if Game.previous_selected_card is None:
             Game.previous_selected_card = selected_card
             # desabilita o clique sobre carta virada
             Game.previous_selected_card.card.elt.unbind("click")
