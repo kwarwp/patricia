@@ -2316,3 +2316,23 @@ NameError: name 'Game' is not defined
     		self.card1a = Card(IMG_PYCHARM, list_cards[0], self.cena)
 NameError: name 'Card' is not defined
 '''},
+{'date': 'Wed Jul 15 2020 04:21:39.836 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 51
+    Jogo().vai()
+  module <module> line 37
+    		self.matriz()
+  module <module> line 41
+    		self.card1a = Carta(IMG_PYCHARM, list_cards[0], self.cena)
+NameError: name 'list_cards' is not defined
+'''},
