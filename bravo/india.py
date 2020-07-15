@@ -22,19 +22,23 @@ fundo = "https://i.pinimg.com/originals/ca/a8/25/caa8256ded30c7703fadf79651d7833
 STYLE["width"] , STYLE["height"] = 1200, "600px"
 
 def teste():
+    x = 0
     cena = Cena(img = fundo)
     cenas = Elemento(img = balao, style=dict(left=200, top=250, width=200, height="200px"))
     elementos = Elemento(img = balao2, style=dict(left=800, top=250, width=200, height="200px"))
     txt1 = Texto(cena,"Vamos aprender a programar?")
     txt2 = Texto(cena,"Escolha entre cenas ou elementos para começar.")
     #txt1.vai=txt2.vai
-    cena.vai()
+    #cena.vai()
     cenas.entra(cena)
     elementos.entra(cena)
-    txt1.vai()
-    x = 1
+    if x == 0:
+        #txt1.vai()
+        print("1")
+        x = 1
     if txt1.vai == 1:
-        txt2.vai()
+        #txt2.vai()
+        print("2")
     #cenas.vai()
     #elementos.vai()
 teste()    
