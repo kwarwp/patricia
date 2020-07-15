@@ -31,7 +31,6 @@ IMG_HEIGHT = 150
 class Card():
     def __init__(self, name, image, position, cena, rule):
         self.name = name
-        self.rule = rule
         self.cena = cena
         self.image = image
         self.faceDown = True
@@ -46,7 +45,7 @@ class Card():
         self.card = Elemento(self.image, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.faceDown = False
         self.card.elt.bind("click", self.turnDown)
-        self.rule(self)
+        Game.rule(self)
         
     def turnDown(self, env=None):
         self.card = Elemento(IMG_CARD_FACE_DOWN, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
@@ -98,7 +97,7 @@ class Game:
             #self.texto = Texto(self.cena, "Errou!!!")
             #self.texto.mostra()
             #self.texto.esconde()
-            time.sleep(5)
+            #time.sleep(5)
             Game.previous_selected_card.turnDown()
             selected_card.turnDown()
         else:
