@@ -186,3 +186,10 @@ IndentationError: expected an indented block
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Jul 15 2020 02:39:07.516 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 83
+  contador = contador + 
+                         ^
+SyntaxError: invalid syntax
+'''},
