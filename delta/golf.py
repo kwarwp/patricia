@@ -54,7 +54,7 @@ class Game:
         self.card1a = Card(IMG_CARD_1, [0,0], self.cena)
         self.card1b = Card(IMG_CARD_1, [1,0], self.cena)
         
-        self.card2a = Card(IMG_CARD_2, [2,0], self.cena, self.faceDown=False)
+        self.card2a = Card(IMG_CARD_2, [2,0], self.cena, faceDown=False)
         self.card2b = Card(IMG_CARD_2, [3,0], self.cena)
         
         self.card3a = Card(IMG_CARD_3, [4,0], self.cena)
