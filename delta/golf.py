@@ -40,21 +40,26 @@ class Card():
         
 class Game:
     def crate_4x5_cards(self):
+    
+        """ matrix 4x5
+            1A 1B 2A 2B 3A
+            3B 4A 4B 5A 5B
+        """
         self.cena = Cena()
-        self.card1a = Card(IMG_CARD_1, 1, self.cena)
-        self.card1b = Card(IMG_CARD_1, 2, self.cena)
+        self.card1a = Card(IMG_CARD_1, [0,0], self.cena)
+        self.card1b = Card(IMG_CARD_1, [0,1], self.cena)
         
-        self.card2a = Card(IMG_CARD_2, 3, self.cena)
-        self.card2b = Card(IMG_CARD_2, 4, self.cena)
+        self.card2a = Card(IMG_CARD_2, [0,2], self.cena)
+        self.card2b = Card(IMG_CARD_2, [0,3], self.cena)
         
-        self.card3a = Card(IMG_CARD_3, 5, self.cena)
-        self.card3b = Card(IMG_CARD_3, 6, self.cena)
+        self.card3a = Card(IMG_CARD_3, [0,4], self.cena)
+        self.card3b = Card(IMG_CARD_3, [1,0], self.cena)
         
-        self.card4a = Card(IMG_CARD_4, 7, self.cena)
-        self.card4b = Card(IMG_CARD_4, 8, self.cena)
+        self.card4a = Card(IMG_CARD_4, [1,1], self.cena)
+        self.card4b = Card(IMG_CARD_4, [1,2], self.cena)
         
-        self.card5a = Card(IMG_CARD_5, 9, self.cena)
-        self.card5b = Card(IMG_CARD_5, 10, self.cena)
+        self.card5a = Card(IMG_CARD_5, [1, 3], self.cena)
+        self.card5b = Card(IMG_CARD_5, [1, 4], self.cena)
         self.cena.vai()
         
     def randomize_cards(self):
