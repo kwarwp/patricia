@@ -1449,3 +1449,10 @@ SyntaxError: invalid syntax
                                                                                                ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Jul 15 2020 02:28:07.223 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 37
+  sleep(1)
+  ^
+IndentationError: unexpected indent
+'''},
