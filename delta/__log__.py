@@ -1890,3 +1890,10 @@ AttributeError: 'GUI' object has no attribute 'carta1'
     	carta[0]=Elemento(img="http://activufrj.nce.ufrj.br/file/ProgOO/Card_pycharm.png?disp=inline",cena=self.fundo)
 AttributeError: 'GUI' object has no attribute 'fundo'
 '''},
+{'date': 'Wed Jul 15 2020 03:26:31.371 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 28
+  carta[0]=(img="http://activufrj.nce.ufrj.br/file/ProgOO/Card_pycharm.png?disp=inline")
+                                                                                        ^
+SyntaxError: invalid syntax
+'''},
