@@ -71,11 +71,11 @@ class Eventos:
         #ideia de cria uma matriz com os pontos de localização do portal
         if self.boneco.x > 400 and self.boneco.y > 200:
             global cont
-            self.ambiente = Cena(self.matrizMapaFase[cont][0])
+            self.ambiente = Cena(self.matrizMapaFase[cont][0]) #lê a cena que está descrita na primeira coluna da matriz
             STYLE["width"] = 640
             self.boneco = Elemento(self.BONECO, , x=int, y=int, cena=self.ambiente)
-            self.boneco.x = int(matrizMapaFase[cont][1])
-            self.boneco.y = int(matrizMapaFase[cont][2])
+            self.boneco.x = int(matrizMapaFase[cont][1]) #posição x da fase, descrita na matriz pela segunda coluna
+            self.boneco.y = int(matrizMapaFase[cont][2]) #posição y da fase descita pela terceira coluna
             self.ambiente.vai()
             cont = cont + 1
             if cont > 3:
