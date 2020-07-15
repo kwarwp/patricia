@@ -9,6 +9,3 @@ Changelog
 .. versionadded::    20.07
         Descreva o que você adicionou no código.
 """
-dado_1 = "https://i.imgur.com/eEqs1z7.png"
-
-
