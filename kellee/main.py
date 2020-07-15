@@ -41,7 +41,7 @@ class Calcada:
     def __init__(self):
         """ Mostra a cena da praia """
         self.cena = Cena(CENA_CALCADA)
-        self.banhista = Elemento(BANHISTA, x=100, y=200, cena=self.cena, Praia())
+        self.banhista = Elemento(BANHISTA, x=100, y=200, cena=self.cena, direita=Praia())
         #Cena(CENA_CALCADA).vai()
     def vai(self):
         """ Mostra a cena da praia """
