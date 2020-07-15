@@ -27,8 +27,9 @@ Changelog
         * NEW: O jogo original.
 
 """
-from _spy.vitollino.main import Cena, Elemento, STYLE
+from _spy.vitollino.main import Cena, Elemento, Texto,STYLE
 from natalia.main import Praia
+from grace.main import Praia
 __version__ = "15.07"
 __author__ = "Rosilane"
 STYLE["width"] = 500
@@ -42,6 +43,7 @@ class Calcada:
         """ Mostra a cena da praia """
         self.cena = Cena(CENA_CALCADA, direita=Praia())
         self.banhista = Elemento(BANHISTA, x=100, y=200, cena=self.cena)
+        
         #Cena(CENA_CALCADA).vai()
     def vai(self):
         """ Mostra a cena da praia """
