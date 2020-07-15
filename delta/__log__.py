@@ -2787,3 +2787,23 @@ SyntaxError: invalid syntax
          ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Jul 15 2020 09:59:35.230 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 117
+    Game().vai()
+  module <module> line 62
+    self.create_2x5_cards()
+  module <module> line 74
+    self.card1a = Card("Pycharm", IMG_CARD_1, list_cards[0], self.cena, self.rule)
+TypeError: __init__() takes 5 positional arguments but more were given
+'''},
