@@ -98,15 +98,14 @@ class Game:
         
         # Não acertou
         if Game.previous_selected_card.name != selected_card.name:
-            Texto(Game.cena, "Errou!!!").vai()
-            #self.texto.esconde()
-            #time.sleep(5)
+            #Texto(Game.cena, "Errou!!!").vai()
             Game.previous_selected_card.turnDown()
             selected_card.turnDown()
         else: # acertou
-            #Game.previous_selected_card.turnOn()
-            Texto(Game.cena, "Acertou!!!").vai()
+            #Texto(Game.cena, "Acertou!!!").vai()
             Game.previous_selected_card.card.elt.bind("click", None)
+            Game.previous_selected_card.turnOn()
+            selected_card.turnOn()
             selected_card.card.elt.bind("click", None)
             Game.previous_selected_card = None
             
