@@ -123,7 +123,6 @@ class Game:
             
             Texto(Game.cena, "Acertou!!!").vai()
             
-            
         # reinicia turno
         Game.previous_selected_card = None
         Game.current_selected_card = None
