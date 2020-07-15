@@ -22,8 +22,8 @@ from _spy.vitollino.main import Cena, Elemento, Texto
 def embaralha():
 	carta=[0,0,0]
 	carta[0]=Elemento(img="http://activufrj.nce.ufrj.br/file/ProgOO/Card_pycharm.png?disp=inline")
-	carta[1]=Cena(img="http://activufrj.nce.ufrj.br/file/ProgOO/Card_Linux.png?disp=inline")
-	carta[2]=Cena(img="http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline")
+	carta[1]=Elemento(img="http://activufrj.nce.ufrj.br/file/ProgOO/Card_Linux.png?disp=inline")
+	carta[2]=Elemento(img="http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline")
 	random.shuffle(carta,random.random)
 	"""def posicao():
 		carta1=Elemento(self.carta[0],,x=200,y=400)
@@ -31,7 +31,8 @@ def embaralha():
       """
 
 	for i in range(0,3):
-		carta[i].vai(x=100,y=100)
+		
+		carta[i].vai()
 		i+=1
 		x+=100 
 		y+=100
