@@ -13,6 +13,7 @@ Changelog
 
 import random
 from _spy.vitollino.main import Cena, Elemento, Texto
+from browser import document
 
 
 """ Imagens do Jogo da Memória: verso, pycharm, linux
