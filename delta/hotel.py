@@ -22,7 +22,7 @@ class Eventos:
 	#= "http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline"
 	CARTA_PYCHARM = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_pycharm.png?disp=inline"
 	
-	
+	self.carta=[1,2,3,4]
     
 	
 	
