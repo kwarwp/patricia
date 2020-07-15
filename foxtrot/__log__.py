@@ -1029,3 +1029,10 @@ NameError: name 'capa' is not defined
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Wed Jul 15 2020 19:24:13.271 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 43
+  """exibindo elementos na cena"""
+  ^
+IndentationError: unexpected indent
+'''},
