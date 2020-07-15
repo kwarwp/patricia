@@ -93,18 +93,20 @@ class Game:
         
         # Não acertou
         if Game.previous_selected_card.name != selected_card.name:            
+            
+            
+           
+            
+            # Aqui tem q esperar pelo menos 3 segundos, como fazer? (sleep, não funciona)
+            
+            selected_card.turnDown()
+            Texto(Game.cena, "Opa!", "Errou!!!").vai()
             # reabilita a ação o clique e vira a carta 1 para baixo
             Game.previous_selected_card.card.elt.bind("click", Game.previous_selected_card.turnUp)
             Game.previous_selected_card.turnDown()
             
             # reabilita a ação do clique e vira a carta 2 para baixo
             selected_card.card.elt.bind("click", selected_card.turnUp)
-            
-            Texto(Game.cena, "Opa!", "Errou!!!").vai()
-            
-            # Aqui tem q esperar pelo menos 3 segundos, como fazer? (sleep, não funciona)
-            
-            selected_card.turnDown()
             Game.previous_selected_card = None
             
         # acertou 
