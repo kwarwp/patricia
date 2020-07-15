@@ -48,6 +48,6 @@ class Jogo:
 		random.shuffle(list_cards,random.random)
 		return list_cards
 if __name__ == "__main__":
-    Game().vai()
+    Jogo().vai()
 	
 
