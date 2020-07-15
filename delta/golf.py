@@ -41,10 +41,10 @@ class Card():
         self.pos_x = 50 + self.position[0] * IMG_WIDTH
         self.pos_y = 50 + self.position[1] * IMG_HEIGHT
         self.card = Elemento(IMG_CARD_FACE_DOWN, tit=self.name, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
-        self.card.elt.bind("click", self.turnOn)
+        self.card.elt.bind("click", self.turnUp)
         self.removed = False
         
-    def turnOn(self, env=None):
+    def turnUp(self, env=None):
         self.card = Elemento(self.image, tit=self.name, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.faceDown = False 
         self.card.elt.bind("click", self.turnDown)
@@ -53,13 +53,8 @@ class Card():
     def turnDown(self, env=None):
         self.card = Elemento(IMG_CARD_FACE_DOWN, tit=self.name, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.faceDown = True
-        self.card.elt.bind("click", self.turnOn)
+        self.card.elt.bind("click", self.turnUp)
         
-    def unbind_click(self, env=None):
-        Texto(Game.cena, "unbind11!!!").vai()
-        self.card.elt.unbind("click", self.turnDown)
-        self.card.elt.unbind("click", self.turnOn)
-        Texto(Game.cena, "unbind22!!!").vai()
         
 class Game:
     # referência para o Elemento
@@ -103,8 +98,7 @@ class Game:
         if Game.previous_selected_card is None:
             Game.previous_selected_card = selected_card
             # desabilita o clique sobre carta virada
-            Game.previous_selected_card.unbind_click()
-            Texto(Game.cena, "unbind!!!").vai()
+            Game.previous_selected_card.elt.unbind("click")
             return
         
         Game.current_selected_card = selected_card
@@ -112,19 +106,21 @@ class Game:
         # Não acertou
         if Game.previous_selected_card.name != Game.current_selected_card.name:            
             # reabilita a ação o clique e vira a carta 1 para baixo
-            Game.previous_selected_card.card.elt.bind("click", Game.previous_selected_card.turnOn)
+            Game.previous_selected_card.card.elt.unbind("click")
             Game.previous_selected_card.turnDown()
             
             # reabilita a ação do clique e vira a carta 2 para baixo
-            Game.current_selected_card.card.elt.bind("click", Game.current_selected_card.turnOn)
+            Game.current_selected_card.card.elt.unbind("click")
             Game.current_selected_card.turnDown()
+            
             Texto(Game.cena, "Errou!!!").vai()
             
         # acertou 
         else:
             # desabilita o clique sobre as cartas acertadas
-            Game.previous_selected_card.card.elt.unbind("click", Game.previous_selected_card.turnDown)
-            Game.current_selected_card.card.elt.unbind("click", Game.current_selected_card.turnDown)
+            Game.previous_selected_card.card.elt.unbind("click")
+            Game.current_selected_card.card.elt.unbind("click")
+            
             Texto(Game.cena, "Acertou!!!").vai()
             
             
