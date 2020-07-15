@@ -28,7 +28,7 @@ Changelog
 
 """
 from _spy.vitollino.main import Cena, Elemento, STYLE
-from Natalia.main import Praia
+from natalia.main import Praia
 __version__ = "15.07"
 __author__ = "Rosilane"
 STYLE["width"] = 500
@@ -40,8 +40,8 @@ class Calcada:
     """ Representa uma cena da calçada da praia """
     def __init__(self):
         """ Mostra a cena da praia """
-        self.cena = Cena(CENA_CALCADA, direita=Praia())
-        self.banhista = Elemento(BANHISTA, x=100, y=200, cena=self.cena)
+        self.cena = Cena(CENA_CALCADA)
+        self.banhista = Elemento(BANHISTA, x=100, y=200, cena=self.cena, direita=Praia())
         #Cena(CENA_CALCADA).vai()
     def vai(self):
         """ Mostra a cena da praia """
