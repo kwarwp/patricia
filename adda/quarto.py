@@ -44,12 +44,23 @@ class Pino(Elemento):
         
     @staticmethod
     def pino(nome):
-        """ Retorna o pino localizado dado o nome."""
+        """ Retorna o pino localizado dado o nome.
+        
+            :param nome: O nome do pino no dicionário de pinos *PINOS*.
+            :return: O objeto pino que tem o nome dado.
+            :rtype: Instância da classe Pino.
+        """
         return Pino.PINOS[nome]
         
     @staticmethod
     def pinos(cor, table):
-        """ Cria um conjunto de pinos de uma cor e aloca no dado tabuleiro."""
+        """ Cria um conjunto de pinos de uma cor e aloca no dado tabuleiro.
+        
+            :param table: A tabela contendo um cojunto de casas onde os pinos serão alocados.
+            :param cor: Nome da imagem sprite com um conjunto de pinos claros ou escuros.
+            :return: Uma lista de pinos alocados nas casas do tabuleiro dado.
+            :rtype: Lista contendo instâncias da classe Pino.
+        """
         casas = enumerate([casa for linha in table for casa in linha])
         return [Pino(indice, cor, casa) for indice, casa in casas]
 
@@ -88,9 +99,9 @@ class Casa(Elemento):
 
 
 class JogoDoQuarto:
-    MADEIRA = "https://i.imgur.com/8mPjfYk.jpg"
-    TABULEIRO = "https://i.imgur.com/yPFsdKw.png"
-    MINITAB = "https://i.imgur.com/DjKe0KY.png"
+    MADEIRA = "https://i.imgur.com/8mPjfYk.jpg"  # Textura do fundo do jogo.
+    TABULEIRO = "https://i.imgur.com/yPFsdKw.png"  # Desenho da casa no tabuleiro central.
+    MINITAB = "https://i.imgur.com/DjKe0KY.png" # Desenho da casa no tabuleiro adjacente.
     def __init__(self):
         self.lado = TAMANHO // 8
         self.tabuleiro = Cena(self.MADEIRA)
@@ -103,9 +114,26 @@ class JogoDoQuarto:
         self.pin_lado = Pino.pinos("lado", self.tab_lado)  # , dy=101.5)
         
     def vai(self):
+        """ Aloca esta cena na página do navegador.
+        """
         self.tabuleiro.vai()
     
     def table(self, base, fundo, linhas=5, colunas=5, dx=0, dy=3, mx=0, my=0, livre=False):
+        """ Cria um conjunto de casas de um tipo e aloca na cena dada.
+        
+            :param base: A cena em que este tabuleiro vai entrar.
+            :param fundo: A imagem que representa cada casa.
+            :param livre: Indica se as casas estão livres ou ocupadas quando forem criadas.
+            :param t: Tamanho (altura e largura do desenho da casa, inicia em um oitavo do tabuleiro.
+            :param linhas: O número de linhas de casas neste tabuleiro.
+            :param colunas:  O número de colunas de casas neste tabuleiro.
+            :param dx: O deslocamento horizontal em casas que cada casa tem em relação à esquerda.
+            :param dy: O deslocamento vertical em casas que cada casa tem em relação ao topo.
+            :param mx: Ajuste fino horizontal em pixels do posicionamento de cada casa.
+            :param my: Ajuste fino vertical em pixels do posicionamento de cada casa.
+            :return: Uma tabela de duas dimensões de casas arranjadas nas posições dadas.
+            :rtype: Lista de listas contendo instâncias da classe Casa.
+        """
         return [[Casa(base, fundo, i, j, dx, dy, mx, my, livre)
                 for j in range(linhas)] for i in range(colunas)]
 
