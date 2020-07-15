@@ -105,6 +105,7 @@ class Game:
             selected_card.turnDown()
         else: # acertou
             #Game.previous_selected_card.turnOn()
+            Texto(Game.cena, "Acertou!!!").vai()
             Game.previous_selected_card.elt.bind("click", None)
             selected_card.elt.bind("click", None)
             Game.previous_selected_card = None
