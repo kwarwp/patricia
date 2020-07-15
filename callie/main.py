@@ -6,7 +6,7 @@ __author__= 'Emanuelle Simas'
 
 STYLE["width"] = 600
 
-TABULEIRO = "https://activufrj.nce.ufrj.br/file/ProgOO/TAB_COMPL_5x5.png"
+TABULEIRO = "https://activufrj.nce.ufrj.br/file/ProgOO/TAB_VAZIO.png"
 CARTA = "https://activufrj.nce.ufrj.br/file/ProgOO/Card_Activ.png"
 #PosicaoX=
 #Posicaoy=
@@ -15,9 +15,9 @@ class Jogo:
     def __init__(self):
         """ Mostra o tabuleiro """
         self.tab = Cena(TABULEIRO)
-        self.carta = Elemento(CARTA, x=2, y=5,w=150,h=190, cena=self.tab)
+        self.carta = Elemento(CARTA, x=2, y=5,w=145,h=190, cena=self.tab)
         ''' Sendo o Width da cena 600, o melhor tamanho 
-                            para a carta é w=150 e h-190'''
+                            para a carta é w=145 e h-190'''
 
     def vai(self):
         """ Mostra a cena do tabuleiro """
