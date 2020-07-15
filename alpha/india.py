@@ -37,11 +37,11 @@ class Eventos:
     
     
     #tamanho da cena
-    STYLE["width"] = 1000
+    STYLE["width"] = 640
     
     def __init__(self):
         self.ambiente = Cena(self.CENA_corredor_1)
-        self.boneco = Elemento(self.BONECO, , x=100, y=200, cena=self.ambiente)
+        self.boneco = Elemento(self.BONECO, , x=220, y=220, cena=self.ambiente)
         document.bind("keydown", self.anda_boneco)  # captura o evento de teclado
            
     def vai(self):
@@ -66,12 +66,12 @@ class Eventos:
         #se o elemento atingiu uma porta, muda para a próxima cena
         # FALTA mapear os pontos, criar função para passar parametros ou chamar outra classe
         #ideia de cria uma matriz com os pontos de localização do portal
-        if self.boneco.x > 500 and self.boneco.y > 500:
+        if self.boneco.x > 100 and self.boneco.y > 100:
             self.ambiente = Cena(self.CENA_corredor_2)
             STYLE["width"] = 500
-            self.boneco = Elemento(self.BONECO, , x=100, y=200, cena=self.ambiente)
-            self.boneco.x = 100
-            self.boneco.y = 100
+            self.boneco = Elemento(self.BONECO, , x=200, y=200, cena=self.ambiente)
+            self.boneco.x = 200
+            self.boneco.y = 220
             self.ambiente.vai()
             
         #se atingiu o bau, ganhou o jogo.
