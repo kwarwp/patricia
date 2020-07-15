@@ -2759,3 +2759,10 @@ NameError: name 'Texto' is not defined
     self.nomeTexto = Texto(self.card, "texto")
 NameError: name 'Texto' is not defined
 '''},
+{'date': 'Wed Jul 15 2020 08:22:49.508 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 104
+  def shuffle_cards(self):   
+  ^
+IndentationError: unexpected indent
+'''},
