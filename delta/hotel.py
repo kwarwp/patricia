@@ -1,15 +1,15 @@
 # patricia.delta.hotel.py
 # SPDX-License-Identifier: GPL-3.0-or-later
-""" Projeto sem descrição, (mude esta linha).
+""" Projeto sem descrição, (mude esta linha)."""
 
-.. codeauthor:: Anni Provietti <anniprovietti@gmail.com>
+  codeauthor:: Anni Provietti <anniprovietti@gmail.com>
 
-Changelog
----------
+"""Changelog"""
+
 .. versionadded::    20.07
         
 
-"""
+""" modificações de acordo com a sala golf"""
 
 import random
 from _spy.vitollino.main import Cena, Elemento, Texto
@@ -43,6 +43,7 @@ class Jogo:
 	def matriz(self):
 		self.cena = Cena()
 		list_cards=self.embaralha()
+           self.verso=False
 		self.card1a = Carta(IMG_VERSO, list_cards[0], self.cena)
 		self.card1b = Carta(IMG_PYCHARM, list_cards[1], self.cena)
 		self.card2a = Carta(IMG_LINUX, list_cards[2], self.cena)
