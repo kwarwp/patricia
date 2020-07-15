@@ -23,3 +23,5 @@ Indices e tabelas
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+.. include:: footer.rst

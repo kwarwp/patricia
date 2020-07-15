@@ -32,4 +32,4 @@ Módulo :ref:`dev2020_tutorial1`
     :members:
     :show-inheritance:
 
-
+.. include:: footer.rst

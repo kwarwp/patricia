@@ -37,3 +37,5 @@ Projetos das Equipes:
 
 * Em Construção
 
+.. include:: footer.rst
+

@@ -21,6 +21,22 @@ Modulo Quarto
 .. note::
    Este módulo é um tutorial ensinando a programar um jogo de tabuleiro simples.
 
+Classe Pino
+=====================
+
+Módulo :ref:`dev2020_quarto`
+
+.. autoclass:: Pino
+    :members:
+
+Classe Casa
+=====================
+
+Módulo :ref:`dev2020_quarto`
+
+
+.. autoclass:: Casa
+    :members:
 
 Classe Jogo do Quarto
 =====================
@@ -33,26 +49,4 @@ Módulo :ref:`dev2020_quarto`
     :show-inheritance:
 
 
-
-Classe Pino
-=====================
-
-Módulo :ref:`dev2020_quarto`
-
-.. autoclass:: Pino
-    :members:
-    :show-inheritance:
-
-
-
-Classe Casa
-=====================
-
-Módulo :ref:`dev2020_quarto`
-
-
-.. autoclass:: Casa
-    :members:
-    :show-inheritance:
-
-
+.. include:: footer.rst
