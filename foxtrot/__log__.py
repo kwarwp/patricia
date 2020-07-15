@@ -83,3 +83,10 @@ AttributeError: 'module' object has no attribute '__setitem__'
                      ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Jul 15 2020 17:33:15.348 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 20
+  def ___init___(self):
+  ^
+IndentationError: expected an indented block
+'''},
