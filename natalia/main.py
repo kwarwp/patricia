@@ -10,7 +10,7 @@ Changelog
         * NEW: O jogo original.
 
 """
-from _spy.vitollino.main import Cena
+from _spy.vitollino.main import Elemento
 __version__ = "15.07"
 __author__ = "Rosilane"
 CENA_PRAIA = "https://i.imgur.com/wz5XKcr.jpg"
