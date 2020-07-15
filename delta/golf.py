@@ -59,6 +59,8 @@ class Game:
     
     # referência para o Elemento
     previous_selected_card = None
+    current_selected_card = None
+    
     cena = Cena()
     
     def vai(self): 
@@ -96,27 +98,28 @@ class Game:
         if Game.previous_selected_card == None:
             Game.previous_selected_card = selected_card
             # desabilita o clique sobre carta virada
-            selected_card.card.elt.unbind("click")
+            Game.previous_selected_card.card.elt.unbind("click")
             return
         
+        Game.current_selected_card = selected_card
+        
         # Não acertou
-        if Game.previous_selected_card.name != selected_card.name:
+        if Game.previous_selected_card.name != Game.current_selected_card.name:
             Texto(Game.cena, "Errou!!!").vai()
             
-            # habilita novamente o clique e vira a carta 1 para baixo
+            # rehabilita a ação o clique e vira a carta 1 para baixo
             Game.previous_selected_card.card.elt.bind("click", Game.previous_selected_card.turnOn)
             Game.previous_selected_card.turnDown()
             
-            # habilita novamente o clique e vira a carta 2 para baixo
-            selected_card.card.elt.bind("click", selected_card.turnOn)
-            selected_card.turnDown()
+            # rehabilita a ação do clique e vira a carta 2 para baixo
+            Game.current_selected_card.card.elt.bind("click", Game.current_selected_card.turnOn)
+            Game.current_selected_card.turnDown()
             
 
         else: # acertou
             Texto(Game.cena, "Acertou!!!").vai()
             Game.previous_selected_card.card.elt.unbind("click")
             selected_card.card.elt.unbind("click")
-            Game.previous_selected_card = None
             
         Game.previous_selected_card = None
 
