@@ -27,3 +27,10 @@ SyntaxError: EOL while scanning string literal
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Jul 15 2020 15:42:09.184 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 9
+  opi = Elemento (img = "https://images.vexels.com/media/users/3/139740/isolated/preview/bfecbaa063a84b2e9bbd9f8b9b41d410-bot--o-de-reprodu----o-redondo-azul-by-vexels.png")
+  ^
+IndentationError: unexpected indent
+'''},
