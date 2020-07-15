@@ -20,6 +20,7 @@ CARTA2 = "https://activufrj.nce.ufrj.br/file/ProgOO/Card_github.png"
 VERSO = "https://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png"
 #PosicaoX= (width_inicial+8)*coluna  (8+145)*1=153/ (145+8)*2=306
 #Posicaoy=(heigth_inicial+8)*linha
+
 class Jogo:
     """ Representa apenas o tabuleiro do jogo """
     def __init__(self):
@@ -36,7 +37,7 @@ class Jogo:
         ''' Sendo o Width da cena 600px, o melhor tamanho 
                             para a carta é w=145 e h-190'''
         
-        def vira_carta(self):
+        def vira_carta(self,_=0):
             '''Troca a carta quando eu clico no verso
          '''
             vira = Elemento(CARTA,x=2, y=5,w=145,h=190, cena=self.tab)
