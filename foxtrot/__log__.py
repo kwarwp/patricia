@@ -568,3 +568,10 @@ AttributeError: 'Jogo' object has no attribute 'cena'
     self.capa_do_jogo.vai()
 AttributeError: 'Jogo' object has no attribute 'capa_do_jogo'
 '''},
+{'date': 'Wed Jul 15 2020 18:04:35.948 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 28
+  self.botao_jogar = Elemento(img=botao_jogar, tit="Jogar", style=dict(left=180, top=50)
+                                                                                                  ^
+SyntaxError: invalid syntax
+'''},
