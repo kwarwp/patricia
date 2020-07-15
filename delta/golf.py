@@ -95,7 +95,7 @@ class Game:
     def rule(selected_card):
     
         # abortar se o clique ocorrer sobre a mesma carta
-        if Game.previous_selected_card == Game.current_selected_card:
+        if Game.previous_selected_card == selected_card:
             return
         
         # tem um par selecionado?
@@ -103,7 +103,7 @@ class Game:
             # primeira carta selecionada
             Game.previous_selected_card = selected_card
             # desabilita o clique sobre carta virada
-            Game.previous_selected_card.elt.unbind("click")
+            Game.previous_selected_card.card.elt.unbind("click")
             return
         
         Game.current_selected_card = selected_card
