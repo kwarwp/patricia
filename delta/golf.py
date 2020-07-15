@@ -45,7 +45,7 @@ class Card():
         #if self.faceDown:
         #    self.card =Elemento(IMG_CARD_FACE_DOWN, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
         #else: 
-        self.card = Elemento(self.image, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
+        self.card.img(self.image)
         
         # para teste
         self.nomeTexto = Texto(self.card, "texto")
