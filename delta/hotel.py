@@ -22,8 +22,8 @@ from browser import document
 IMG_PYCHARM="http://activufrj.nce.ufrj.br/file/ProgOO/Card_pycharm.png?disp=inline"
 IMG_LINUX="http://activufrj.nce.ufrj.br/file/ProgOO/Card_Linux.png?disp=inline"
 IMG_VERSO="http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline"
-IMG_ALTURA=200
-IMG_LARGURA=200
+IMG_WIDTH=200
+IMG_HEIGHT=200
 class Carta():
 	def _init_(self,imagem,posicao,cena):
 		self.imagem=imagem
@@ -31,7 +31,11 @@ class Carta():
 		pos_x = 50 + self.position[0]*IMG_WIDTH
 		pos_y = 50 + self.position[1]*IMG_HEIGHT
 		Elemento(IMG_VERSO, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
-	
+	def cartas():
+		if self.verso:
+            Elemento(IMG_VERSO x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
+        else: 
+            Elemento(self.image, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
 class Jogo:
 	def vai(self):
 		self.matriz()
