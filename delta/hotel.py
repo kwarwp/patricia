@@ -18,7 +18,7 @@ from browser import document
 
 """ Imagens do Jogo da Memória: verso, pycharm, linux
 """
-class Eventos:
+def Embaralha():
 
 	def cartas():
 		carta=[0,0,0]
@@ -32,5 +32,5 @@ class Eventos:
 		carta1.vai()
 		carta2.vai()
 
-if _name_=="_main_":
-	Eventos().vai()
+
+Embaralha.vai()
