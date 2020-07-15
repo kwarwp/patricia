@@ -27,13 +27,12 @@ class Jogo:
         self.capa =Cena(img= capa_do_jogo)
         
         #inserindo elementos na cena
-        self.botao_jogar = Elemento(img=botao_jogar, 
-        tit= "Jogar", 
-        style=dict(left=180, top=50)
+        self.botao_jogar = Elemento (img= botao_jogar, tit = "jogar",
+        style= dict((left=180, top=50,  Width=3, height=20))
         
-        self.botao_sobre = Elemento(img=botao_sobre, 
-        tit="Sobre", 
-        style=dict(left=100, top=80)
+        self.botao_sobre = Elemento (img=botao_sobre, 
+        tit="sobre", 
+        style=dict((left=180, top=50,  Width=3, height=20))
         
         #exibindo cena
         self.capa.vai()
