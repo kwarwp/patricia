@@ -14,7 +14,7 @@ Changelog
 from _spy.vitollino.main import Cena, Elemento, STYLE, Texto
 from browser import html, alert, timer
 from random import choice, shuffle
-#from _spy.vitollino.main  import Cena,Elemento,Texto
+
 balao = "https://i.pinimg.com/236x/d2/dd/c4/d2ddc45b2599d5fc60f03ec81c53bb6c.jpg"
 balao2 = "https://i.pinimg.com/236x/14/3a/14/143a14c4535873de51301549ba96e051.jpg"
 fundo = "https://i.pinimg.com/originals/ca/a8/25/caa8256ded30c7703fadf79651d7833b.jpg"
@@ -37,14 +37,5 @@ def teste():
     txt2.vai()
     cenas.entra(cena)
     elementos.entra(cena)
-    '''if x == 0:
-        txt1.vai()
-        print("1")
-        x = 1
-    if x == 1:
-        txt2.vai()
-        print("2")'''
-    #cenas.vai()
-    #elementos.vai()
 teste()    
     
