@@ -111,19 +111,24 @@ class Game:
             # reabilita a ação do clique e vira a carta 2 para baixo
             Game.current_selected_card.card.elt.bind("click", Game.current_selected_card.turnOn)
             Game.current_selected_card.turnDown()
-            
-            # reinicia turno
-            Game.previous_selected_card = None
-            Game.current_selected_card = None 
 
         else: # acertou
             Texto(Game.cena, "Acertou!!!").vai()
             Game.current_selected_card.card.elt.unbind("click")
             Game.previous_selected_card.card.elt.unbind("click")
             
-            # reinicia turno
-            Game.previous_selected_card = None
-            Game.current_selected_card = None 
+        # reinicia turno
+        Game.previous_selected_card = None
+        Game.current_selected_card = None
+        
+        if Game.previous_selected_card is None:
+            Texto(Game.cena, "previous é nulo!!!").vai()
+            
+        if Game.current_selected_card is None:
+            Texto(Game.cena, "current é nulo!!!").vai()
+            
+        if Game.current_selected_card is None and Game.previous_selected_card is None:
+            Texto(Game.cena, "previous current é nulo!!!").vai()
 
 
     def shuffle_cards(self):   
