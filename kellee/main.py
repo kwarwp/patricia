@@ -35,7 +35,7 @@ __author__ = "Rosilane"
 STYLE["width"] = 500
 CENA_CALCADA = "https://i.imgur.com/zOxshRh.jpg"
 BANHISTA = "https://i.imgur.com/CWQ00XG.png"
-txt = Texto("OK IMAGEM1")
+
 
 class Calcada:
     """ Representa uma cena da calçada da praia """
