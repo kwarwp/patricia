@@ -212,3 +212,10 @@ AttributeError: 'Eventos' object has no attribute 'tabuleiro'
    ^
 SyntaxError: can't assign to literal
 '''},
+{'date': 'Tue Jul 14 2020 21:02:29.171 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 28
+  def embaralhar (self):
+  ^
+IndentationError: unexpected indent
+'''},
