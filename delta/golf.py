@@ -89,23 +89,22 @@ class Game:
         self.card5b = Card("Activ", IMG_CARD_5, list_cards[9], self.cena, self.rule)
         
         self.cena.vai()
-        
-    def rule(self, selected_card):  
+
+    @staticmethod
+    def rule(selected_card):  
         if self.previous_selected_card == None:
             self.previous_selected_card = selected_card
-            return
-        
-        if self.previous_selected_card.name != selected_card.name:
+        elif self.previous_selected_card.name != selected_card.name:
             self.Texto = Texto(self.cena, "Errou!!!")
             self.Texto.mostra()
             self.Texto.esconde()
             self.previous_selected_card.turnDown()
             selected_card.turnDown()
-            self.previous_selected_card = None
         else:
             self.previous_selected_card.elt.bind("click", None)
             self.selected_card.elt.bind("click", None)
-            self.previous_selected_card = None
+            
+        self.previous_selected_card = None
               
 
     def shuffle_cards(self):   
