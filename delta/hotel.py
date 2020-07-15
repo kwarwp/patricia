@@ -21,10 +21,11 @@ class Eventos:
 	CARTA_VERSO= "http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline"
 	#= "http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline"
 	CARTA_PYCHARM = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_pycharm.png?disp=inline"
-    
-	s=[CARTA_VERSO,CARTA_PYCHARM,CARTA_3,4]
+	
+	def embaralhar(self):    
+		s=[CARTA_VERSO,CARTA_PYCHARM,CARTA_3,4]
 
-	random.shuffle(s,random.random)
+		random.shuffle(s,random.random)
       	
 	def linkar (self):
 		CARTA_1=s[0]
