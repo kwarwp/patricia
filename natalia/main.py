@@ -13,7 +13,7 @@ Changelog
 from _spy.vitollino.main import Cena
 __version__ = "15.07"
 __author__ = "Rosilane"
-CENA_PRAIA = "https://i.imgur.com/wz5XKcr.jpg"
+#CENA_PRAIA = "https://i.imgur.com/wz5XKcr.jpg"
 
 
 class Mar:
