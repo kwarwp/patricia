@@ -98,6 +98,8 @@ class Game:
         if self.previous_selected_card.name != selected_card.name:
             self.Texto = Texto(self.cena, "Errou!!!")
             self.Texto.vai()
+            self.previous_selected_card.elt.bind("click", None)
+            self.selected_card.elt.bind("click", None)
             self.previous_selected_card.turnDown()
             selected_card.turnDown()
             self.previous_selected_card = None
