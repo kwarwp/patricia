@@ -289,3 +289,10 @@ SyntaxError: can't assign to function call
                                                                          ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Jul 15 2020 11:48:15.561 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 29
+  super().__init__(pino, x=8, y=-2, w=dx, h=dy, cena=casa, tipo="auto", tit=nome, drag=True
+                                                                                                     ^
+SyntaxError: invalid syntax
+'''},
