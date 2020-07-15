@@ -17,13 +17,9 @@ botao_jogar = "https://i.imgur.com/F3Q0bDv.png"
 botao_sobre = "https://i.imgur.com/pG9wDIz.png"
 
 class Jogo:
-    def ___init___(self):
+    def __init__(self):
         self.capa = Cena (img= capa_do_jogo)
-        self.botao_jogar = Elemento (img = botao_jogar)
-        self.botao_sobre = Elemento (img = botao_sobre)
-
-        self.botao_sobre.entra(self.capa)
-        self.botao_jogar.entra(self.capa)
+     
         
 
 
