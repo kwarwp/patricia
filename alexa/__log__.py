@@ -52,3 +52,10 @@ IndentationError: unexpected indent
     opi.ope.entra(cena)
 AttributeError: 'Elemento' object has no attribute 'ope'
 '''},
+{'date': 'Wed Jul 15 2020 15:45:43.180 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 9
+  cena2 = Cena (img= "https://i.imgur.com/wdwjGCt.jpg'
+                                                      ^
+SyntaxError: EOL while scanning string literal
+'''},
