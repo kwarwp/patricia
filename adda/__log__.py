@@ -210,3 +210,10 @@ SyntaxError: invalid syntax
                     ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Jul 15 2020 10:41:40.640 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 25
+  super().__init__(, w=dx, h=dy, cena=casa, tipo="auto",
+                    ^
+SyntaxError: invalid syntax
+'''},
