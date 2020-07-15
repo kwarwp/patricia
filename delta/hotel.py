@@ -34,6 +34,7 @@ def embaralha():
 		
 		carta[i].vai()
 		i+=1
+		document.bind("keydown")
 		
 		 
 	
