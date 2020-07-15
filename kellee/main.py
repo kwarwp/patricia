@@ -43,7 +43,8 @@ class Calcada:
         """ Mostra a cena da praia """
         self.cena = Cena(CENA_CALCADA, direita=Praia())
         #self.banhista = Elemento(BANHISTA, x=100, y=200, cena=self.cena)
-        
+        txt = Texto(CENA_CALCADA,
+        		"OK IMAGEM1")
         #Cena(CENA_CALCADA).vai()
     def vai(self):
         """ Mostra a cena da praia """
