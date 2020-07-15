@@ -12,7 +12,7 @@ Changelog
 """
 
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
-import random
+import random, time
 
 __version__ = "20.07"
 __author__ = "Paulo Assumpção"
@@ -98,13 +98,14 @@ class Game:
         if self.previous_selected_card.name != selected_card.name:
             self.Texto = Texto(self.cena, "Errou!!!")
             self.Texto.mostra()
+            self.Texto.esconde()
             self.previous_selected_card.turnDown()
             selected_card.turnDown()
+            self.previous_selected_card = None
         else:
             self.previous_selected_card.elt.bind("click", None)
             self.selected_card.elt.bind("click", None)
-        
-        self.previous_selected_card = None
+            self.previous_selected_card = None
               
 
     def shuffle_cards(self):   
