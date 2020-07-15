@@ -24,4 +24,4 @@ class Mar:
     
 
 if __name__ == "__main__":
-   # Mar().vai()
+    Mar().vai()
