@@ -12,20 +12,20 @@ STYLE["leight"]= "550px"
 praia= Cena (img = "https://i.imgur.com/cdMKAka.png")
 erro= Cena (img = "https://i.imgur.com/idqEr5C.png")
 casa= Cena (img = "https://plantasdecasas.com/storage/2017/07/planta-fachada-casa-115-fr-AG.jpg")
-boneca = Elemento (img= "https://i.pinimg.com/originals/05/27/ea/0527ea10d8ef34745e6c808d620c7813.png", tit="Aminoácido", x=20, y=80)
-menino = Elemento (img= "https://cdn.vitaclinica.com.br/wp-content/uploads/2018/06/Wagner1.jpg", tit="Aminoácido", x=140, y=80)
-codigo1 = Elemento (img="https://i.imgur.com/VzhxCNZ.png", tit="Aminoácido", x=100, y=100)
-codigo2 = Elemento (imag="https://i.imgur.com/WiY2KLh.png", tit="Aminoácido", x=200, y=100)
+triste = Elemento (img= "https://i.imgur.com/0R5Xo83.png", tit="Aminoácido", x=500, y=100)
+feliz = Elemento (img= "https://i.imgur.com/UaihdhW.png", tit="Aminoácido", x=40, y=80)
+codigo1 = Elemento (img="https://i.imgur.com/mlsszQm.png", tit="Aminoácido", x=100, y=100)
+codigo2 = Elemento (imag="https://i.imgur.com/d6uejyE.png", tit="Aminoácido", x=300, y=100)
 #aqui eu coloquei o elemento para entrar na cena
 codigo1.entra(praia)
 codigo2.entra(praia)
-boneca.entra(erro)
-menino.entra(casa)
+triste.entra(erro)
+feliz.entra(casa)
 #aqui eu falei para o elemento ir para o jardim, então quando clicar na boca ela vai p jardim
 codigo1.vai=erro.vai
 codigo2.vai=casa.vai
-boneca.vai=praia.vai
-menino.vai=praia.vai
+triste.vai=praia.vai
+feliz.vai=praia.vai
 praia.vai()
 
 
