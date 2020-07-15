@@ -464,3 +464,10 @@ NameError: name 'teste' is not defined
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Tue Jul 14 2020 21:25:05.166 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 20
+  CENA_TABULEIRO = "http://activufrj.nce.ufrj.br/file/ProgOO/TAB_VAZIO.png?disp=inline"
+  ^
+IndentationError: unexpected indent
+'''},
