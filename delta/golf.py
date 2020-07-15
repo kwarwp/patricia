@@ -30,6 +30,7 @@ IMG_HEIGHT = 150
 
 class Card():
     def __init__(self, name, image, position, cena, rule):
+        self.rule = rule
         self.name = name
         self.cena = cena
         self.image = image
@@ -45,7 +46,7 @@ class Card():
         self.card = Elemento(self.image, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.faceDown = False
         self.card.elt.bind("click", self.turnDown)
-        Game.rule(self)
+        self.rule(self)
         
     def turnDown(self, env=None):
         self.card = Elemento(IMG_CARD_FACE_DOWN, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
@@ -88,6 +89,7 @@ class Game:
         
         self.cena.vai()
 
+    @staticmethod
     def rule(self, selected_card):  
         if Game.previous_selected_card == None:
             Game.previous_selected_card = selected_card
