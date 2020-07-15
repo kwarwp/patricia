@@ -122,6 +122,7 @@ class Game:
             Game.current_selected_card.card.elt.unbind("click")
             
         Game.previous_selected_card = None
+        Game.current_selected_card = None
 
 
     def shuffle_cards(self):   
