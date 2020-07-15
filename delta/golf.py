@@ -38,16 +38,22 @@ class Card():
         self.pos_x = 50 + self.position[0]*IMG_WIDTH
         self.pos_y = 50 + self.position[1]*IMG_HEIGHT
         self.card = Elemento(IMG_CARD_FACE_DOWN, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
-        self.card.elt.bind("click", self.turn)
+        self.card.elt.bind("click", self.turnOn)
         self.removed = False
         
-    def turn(self, ev=None):
+    def turnOn(self, ev=None):
         self.card =Elemento(self.image, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
-        #self.cena.vai()
+        self.faceDown = False
+        self.card.elt.bind("click", self.turnDown)
         
         # para teste
         #self.nomeTexto = Texto(self.card, self.image)
         #self.nomeTexto.vai()
+    
+    def turnDown(self, env=None):
+        self.card =Elemento(IMG_CARD_FACE_DOWN, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
+        self.faceDown = True
+        self.card.elt.bind("click", self.turnOn)
         
         
 class Game:
@@ -79,6 +85,8 @@ class Game:
         
         self.card5a = Card(IMG_CARD_5, list_cards[8], self.cena)
         self.card5b = Card(IMG_CARD_5, list_cards[9], self.cena)
+        
+        
         self.cena.vai()
         
     def shuffle_cards(self):
