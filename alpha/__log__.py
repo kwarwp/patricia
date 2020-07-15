@@ -296,3 +296,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Jul 15 2020 20:25:36.789 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 80
+  if se cont > 3:
+         ^
+SyntaxError: invalid syntax
+'''},
