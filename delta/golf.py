@@ -93,17 +93,15 @@ class Game:
     def rule(self, selected_card):  
         if self.previous_selected_card == None:
             self.previous_selected_card = selected_card
-            self.Texto = Texto(self.cena, "Errou!!!")
-            self.Texto.vai()
             return
-        """
+        
         if self.previous_selected_card.name != selected_card.name:
             self.previous_selected_card.turnDown()
             selected_card.turnDown()
             self.previous_selected_card = None
             self.Texto = Texto(self.cena, "Errou!!!")
             self.Texto.vai()
-        """        
+              
 
     def shuffle_cards(self):   
         list_cards =  [(0,0), (1,0), (2,0), (3,0), (4,0), (0,1), (1,1), (2,1), (3,1), (4,1)]
