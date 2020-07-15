@@ -7,14 +7,14 @@
 from _spy.vitollino.main import Cena, Elemento, Labirinto, Texto, Codigo, Sala, STYLE
 from _spy.vittolino.main import INVENTARIO as inv
 #aqui eu importei os cenarios e os elementos
-STYLE["width"] = 700
+STYLE["width"] = 1300
 STYLE["leight"]= "550px"
 praia= Cena (img = "https://i.imgur.com/cdMKAka.png")
 erro= Cena (img = "https://i.imgur.com/idqEr5C.png")
 casa= Cena (img = "https://plantasdecasas.com/storage/2017/07/planta-fachada-casa-115-fr-AG.jpg")
 triste = Elemento (img= "https://i.imgur.com/0R5Xo83.png", tit="Aminoácido", x=500, y=100)
 feliz = Elemento (img= "https://i.imgur.com/UaihdhW.png", tit="Aminoácido", x=40, y=80)
-codigo1 = Elemento (img="https://i.imgur.com/mlsszQm.png", tit="Aminoácido", style=dict(left=80, top=280, width=300, height="90px"))
+codigo1 = Elemento (img="https://i.imgur.com/mlsszQm.png", tit="Aminoácido", style=dict(left=80, top=80, width=300, height="150px"))
 codigo2 = Elemento (imag="https://i.imgur.com/d6uejyE.png", tit="Aminoácido", x=300, y=100)
 #aqui eu coloquei o elemento para entrar na cena
 codigo1.entra(praia)
