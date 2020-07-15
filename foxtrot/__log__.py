@@ -1104,3 +1104,9 @@ Exception: $locals_$exec_322.Sobre is not a function
   module '$exec_322' line 55
 class Sobre:
 '''},
+{'date': 'Wed Jul 15 2020 19:29:46.111 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: $locals_$exec_322.Jogo is not a function
+  module '$exec_322' line 24
+class Sobre:
+'''},
