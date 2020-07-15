@@ -96,10 +96,6 @@ class Game:
             Game.previous_selected_card = selected_card
             selected_card.card.elt.unbind("click")
             return
-            
-        #if Game.previous_selected_card == selected_card:
-            #Texto(Game.cena, "Opa!!! Clicou no mesmo!!!").vai()
-            #return
         
         # Não acertou
         if Game.previous_selected_card.name != selected_card.name:
