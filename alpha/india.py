@@ -53,14 +53,17 @@ class Eventos:
     
     def portal(self,x,y):
         global cont
-        self.ambiente = Cena(self.matrizMapaFase[cont][0])
+        self.ambiente = Cena(self.matrizMapaFase[cont][0])   
         STYLE["width"] = 640
         self.boneco = Elemento(self.BONECO, , x=int, y=int, cena=self.ambiente)
         self.boneco.x = 60
         self.boneco.y = 240
         self.ambiente.vai()
         self.portal(self.boneco.x,self.boneco.y)
-    
+        cont = cont + 1
+        if cont > 3:
+            cont = 0
+            
     def anda_boneco(self, ev=None):
         """" Faz o boneco caminhar com a cptura das setas. 
             :param ev: estrutura enviad pelo evento onde se recupera informações.
