@@ -16,3 +16,5 @@ Changelog
         Descreva o que você adicionou no código.
 
 """
+if __name__ == "__main__":
+    Eventos().vai()
