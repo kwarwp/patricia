@@ -85,3 +85,10 @@ SyntaxError: trailing comma not allowed without surrounding parentheses
                                                ^
 SyntaxError: trailing comma not allowed without surrounding parentheses
 '''},
+{'date': 'Wed Jul 15 2020 20:31:31.565 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 5
+  from _spy.vitollino.main import Cenafrom _spy.vitollino.main import Cena, Elemento, Labirinto, Texto, Codigo, Sala, STYLE
+                                               ^
+SyntaxError: trailing comma not allowed without surrounding parentheses
+'''},
