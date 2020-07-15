@@ -4,7 +4,7 @@
 
 .. codeauthor:: Paulo Assumpção (golf) <mail@local.tipo>
 
-.. codeauthor:: Nome Sobrenome (hotel) <mail@local.tipo>
+.. codeauthor:: Anni Provietti (hotel) <mail@local.tipo>
 
 
 .. codeauthor:: Nome Sobrenome (india) <mail@local.tipo>
