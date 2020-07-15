@@ -25,5 +25,6 @@ class Jogo:
         self.botao_sobre.entra(self.capa)
         self.botao_jogar.entra(self.capa)
         
-
+if __name__ == "__main__":
+    main()
 
