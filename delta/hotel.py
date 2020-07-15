@@ -31,7 +31,10 @@ def embaralha():
       """
 
 	for i in range(0,3):
-		carta[i].vai()
+		carta[i].vai(x=100,y=100)
+		i+=1
+		x+=100 
+		y+=100
 
 
 embaralha()
