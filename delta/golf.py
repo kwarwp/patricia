@@ -118,7 +118,6 @@ class Game:
             Texto(Game.cena, "Opa!", "Errou!!!").vai()
             
             # Aqui tem q esperar pelo menos 3 segundos, como fazer? (sleep, não funciona)
-            
             selected_card.turnDown()
             Game.previous_selected_card = None
             
