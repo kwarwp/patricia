@@ -31,3 +31,5 @@ class Eventos:
 		carta1.vai()
 		carta2.vai()
 
+if _name_=="_main_":
+Eventos().vai()
