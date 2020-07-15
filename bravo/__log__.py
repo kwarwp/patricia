@@ -306,3 +306,7 @@ SyntaxError: invalid syntax
     imagem, kwargs = (imagem, {}) if isinstance(imagem, str) \
 KeyError: img
 '''},
+{'date': 'Wed Jul 15 2020 16:22:23.759 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: Cannot read property 'charAt' of undefined>
+'''},
