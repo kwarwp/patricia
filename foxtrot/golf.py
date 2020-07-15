@@ -19,8 +19,6 @@ STYLE["heigth"] = "500px"
 capa_do_jogo = "https://i.imgur.com/0RVnppj.png"
 botao_jogar = "https://i.imgur.com/pG9wDIz.png"
 botao_sobre = "https://i.imgur.com/F3Q0bDv.png"
-sobre = "https://i.imgur.com/lear9Bn.png"
-
 #criando classe jogo
 class Jogo:
     def __init__(self):
@@ -31,11 +29,11 @@ class Jogo:
         #inserindo elementos na cena
         self.botao_jogar = Elemento (img=botao_jogar,
         tit="Jogar",
-        style= dict(left=500, top=400))
+        style= dict(left=400, top=400))
         
         self.botao_sobre = Elemento (img=botao_sobre, 
         tit="Sobre", 
-        style= dict(left=400, top=400))
+        style= dict(left=500, top=400))
         
         #exibindo cena
         self.capa.vai()
@@ -45,19 +43,12 @@ class Jogo:
         self.botao_jogar.entra(self.capa)
         
         #textos
-        self.texto_jogar = Texto (self.capa, "Olá! Volte em breve para Jogar!")
+        self.texto_sobre = Texto (self.capa, "Volte em breve para saber mais")
+        self.texto_jogar = Texto (self.capa, "Volte em breve para Jogar")
 
-        #cenasobre
-        self.cena_sobre = Cena (img=sobre)
-        self.cena_sobre.esquerda=capa.vai
-        
         #ação caso seja clicado
+        self.botao_sobre.vai=self.texto_sobre.vai
         self.botao_jogar.vai=self.texto_jogar.vai
-        self.botao_sobre.vai=self.cena_sobre.vai
-     
-     
-       #voltar 
-        
         
 if __name__ == "__main__":
     Jogo()
