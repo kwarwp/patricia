@@ -1703,3 +1703,10 @@ NameError: name 'document' is not defined
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Jul 15 2020 02:49:24.420 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 40
+  else 0
+        ^
+SyntaxError: invalid syntax
+'''},
