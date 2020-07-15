@@ -42,9 +42,8 @@ class Card():
         self.removed = False
         
     def turn(self, ev=None):
-        #self.card =Elemento(self.image, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
-        self.card.remover()
-        #self.card.vai()
+        self.card =Elemento(self.image, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
+        self.cena.vai()
         
         # para teste
         self.nomeTexto = Texto(self.card, self.image)
