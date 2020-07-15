@@ -30,7 +30,7 @@ class Carta():
 		self.posicao=posicao
 		pos_x = 50 + self.posicao[0]*IMG_WIDTH
 		pos_y = 50 + self.posicao[1]*IMG_HEIGHT
-		Elemento(IMG_VERSO, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
+		Elemento(self.imagem, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
 	def cartas():
 		if self.verso:
 			Elemento(self.imagem, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
