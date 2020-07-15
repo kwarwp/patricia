@@ -12,6 +12,7 @@ Changelog
 """
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
+import random
 
 __version__ = "20.07"
 __author__ = "Paulo Assumpção"
