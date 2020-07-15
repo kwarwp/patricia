@@ -20,7 +20,7 @@ class Mar:
     """ Representa uma cena da calçada da praia """
     def vai(self):
         """ Mostra a cena da praia """
-        Cena(CENA_PRAIA).vai()
+        #Cena(CENA_PRAIA).vai()
     
 
 if __name__ == "__main__":
