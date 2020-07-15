@@ -24,7 +24,7 @@ class Eventos:
     
 	def __init__(self):
 		self.tabuleiro = Cena(self.CENA_TABULEIRO)
-		self.pycharm = Elemento(self.CARTA_PYCHARM, , , cena=self.tabuleiro)
+		#self.pycharm = Elemento(self.CARTA_PYCHARM, , , cena=self.tabuleiro)
 		self.verso=Elemento(self.CARTA_VERSO, , x=100, y=200, cena=self.tabuleiro)
 		self.verso2=Elemento(self.CARTA_VERSO, , x=200, y=300, cena=self.tabuleiro)
         
@@ -52,7 +52,7 @@ class Eventos:
     
    
 	def mostrar_carta(self):
-		self.s.vai()
+		#self.s.vai()
         
     
         
