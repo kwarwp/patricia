@@ -99,3 +99,10 @@ SyntaxError: trailing comma not allowed without surrounding parentheses
                                                                             ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Jul 15 2020 20:32:05.865 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 2
+  """ Jogo Olimpíadas de Matemática20.07
+                                                                            ^
+SyntaxError: invalid syntax
+'''},
