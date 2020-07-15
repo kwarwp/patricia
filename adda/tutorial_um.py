@@ -8,10 +8,14 @@
 - Como combinar cenas em salas diferentes
 - Como capturar o teclado
 
+Classes neste modulo:
+
+    :py:class:`Eventos` Exemplo de capturar eventos de mouse e teclado.
+
 Changelog
 ---------
 .. versionadded::    20.07
-        Descreva o que você adicionou no código.
+        Documentação do tutorial.
 
 """
 from _spy.vitollino.main import Cena, Elemento
@@ -25,8 +29,8 @@ class Eventos:
     
     def __init__(self):
         self.calcada = Cena(self.CENA_CALCADA)
-        self.banhista = Elemento(self.BANHISTA, , x=100, y=200, cena=self.calcada)
-        self.dark_side = Elemento(self.DARK_SIDE, , x=100, y=100, cena=self.calcada)
+        self.banhista = Elemento(self.BANHISTA, x=100, y=200, cena=self.calcada)
+        self.dark_side = Elemento(self.DARK_SIDE, x=100, y=100, cena=self.calcada)
         self.dark_side.o = 0  # faz a opacidade virar zero, não mostra o letreiro
         document.bind("keydown", self.anda_banhista)  # captura o evento de teclado
         
@@ -39,9 +43,9 @@ class Eventos:
         self.calcada.vai()
         
     def anda_banhista(self, ev=None):
-        """" Faz o banhista caminhar com a cptura das setas. 
+        """" Faz o banhista caminhar com a captura das setas. 
         
-            :param ev: estrutura enviad pelo evento onde se recupera informações.
+            :param ev: estrutura enviada pelo evento onde se recupera informações.
         """
         key = ev.keyCode # recupera o código da tecla enviada no evento
         # os códigos 37 e 38 são a seta para esquerda e para direita
@@ -52,7 +56,7 @@ class Eventos:
     def ve_dark(self, ev=None):
         """" Faz o letreiro mostrar ou ocultar quando se passa o mouse no banhista. 
         
-            :param ev: estrutura enviad pelo evento onde se recupera informações.
+            :param ev: estrutura enviada pelo evento onde se recupera informações.
         """
         self.dark_side.o = self.muda  # muda a opacidade do letreiro
         self.muda = abs(self.muda - 1)  # chaveia para na próxima chamada inverter

@@ -2,6 +2,14 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 """ Jogo de Tabuleiro Quarto.
 
+Classes neste módulo:
+
+    :py:class:`JogoDoQuarto` Jogo de tabuleiro para dois jogadores.
+
+    :py:class:`Pino` Representa um pino que se move de um tabuleiro para outro.
+
+    :py:class:`Casa` Representa um case que pode receber um pino no tabueiro.
+
 .. codeauthor:: Carlo Oliveira <carlo@ufrj.br>
 
 Changelog
