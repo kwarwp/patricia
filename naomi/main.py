@@ -120,5 +120,5 @@ class Game:
         return list_cards
         
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     Game().vai()
