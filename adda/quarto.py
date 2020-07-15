@@ -79,11 +79,15 @@ class Casa(Elemento):
         self.livre = livre
         
     def entrar(self,nome):
+        """ Permite um pino entrar nesta casa se ela estiver livre.
+
+            :param nome: O nome do pino que vai entrar na casa.
+        """
         Pino.pino(nome).entra(self) if self.livre else None
         self.livre = False
 
 
-class Tabuleiro:
+class JogoDoQuarto:
     MADEIRA = "https://i.imgur.com/8mPjfYk.jpg"
     TABULEIRO = "https://i.imgur.com/yPFsdKw.png"
     MINITAB = "https://i.imgur.com/DjKe0KY.png"
@@ -107,4 +111,4 @@ class Tabuleiro:
 
 
 if __name__ == "__main__":
-    Tabuleiro().vai()
+    JogoDoQuarto().vai()
