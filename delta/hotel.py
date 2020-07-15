@@ -32,7 +32,7 @@ class Carta():
 		pos_y = 50 + self.position[1]*IMG_HEIGHT
 		Elemento(self.imagem, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
 	
-class Jogo():
+class Jogo:
 	def vai(self):
 		self.matriz()
 "matriz 2x2"
