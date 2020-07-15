@@ -40,7 +40,7 @@ class Card():
         self.card.elt.bind("mouseover", self.turn)
         self.removed = False
         
-    def turn():
+    def turn(self, ev=None):
         #if self.faceDown:
         #    self.card =Elemento(IMG_CARD_FACE_DOWN, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
         #else: 
