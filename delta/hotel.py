@@ -34,8 +34,9 @@ def embaralha():
 		
 		carta[i].vai()
 		i+=1
-		x+=100 
-		y+=100
+		
+		 
+	carta[i-2].vai()
 
 
 embaralha()
