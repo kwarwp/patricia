@@ -104,8 +104,8 @@ class Game:
             time.sleep(10)
         else: # acertou
             #Texto(Game.cena, "Acertou!!!").vai()
-            Game.previous_selected_card.card.elt.bind("click", None)
-            selected_card.card.elt.bind("click", None)
+            Game.previous_selected_card.card.elt.onclick = None
+            selected_card.card.elt.onclick = None
             Game.previous_selected_card = None
             
         Game.previous_selected_card = None
