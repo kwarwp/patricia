@@ -631,3 +631,10 @@ NameError: name 'posicao1' is not defined
     		self.pycharm = Elemento(self.CARTA_PYCHARM, , x1, cena=self.tabuleiro)
 NameError: name 'x1' is not defined
 '''},
+{'date': 'Tue Jul 14 2020 21:32:43.680 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 28
+  self.verso=Elemento(self.CARTA_VERSO, , x=100 y=200, cena=self.tabuleiro)
+                                                 ^
+SyntaxError: invalid syntax
+'''},
