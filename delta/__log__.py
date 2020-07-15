@@ -645,3 +645,10 @@ SyntaxError: invalid syntax
                                                  ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Jul 14 2020 21:36:50.749 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 29
+  self.verso2=Elemento(self.CARTA_VERSO, , x=200 y=300, cena=self.tabuleiro)
+                                                  ^
+SyntaxError: invalid syntax
+'''},
