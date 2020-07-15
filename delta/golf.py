@@ -58,6 +58,7 @@ class Card():
 class Game:
 
     previous_selected_card = None
+    cena = Cena()
     
     def vai(self): 
         self.create_2x5_cards()
@@ -69,25 +70,24 @@ class Game:
             1A 1B 2A 2B 3A
             3B 4A 4B 5A 5B
         """
-        self.cena = Cena()
         list_cards=self.shuffle_cards()
         
-        self.card1a = Card("Pycharm", IMG_CARD_1, list_cards[0], self.cena, self.rule)
-        self.card1b = Card("PyCharm", IMG_CARD_1, list_cards[1], self.cena, self.rule)
+        self.card1a = Card("Pycharm", IMG_CARD_1, list_cards[0], cena, self.rule)
+        self.card1b = Card("PyCharm", IMG_CARD_1, list_cards[1], cena, self.rule)
         
-        self.card2a = Card("Linux", IMG_CARD_2, list_cards[2], self.cena, self.rule)
-        self.card2b = Card("Linux", IMG_CARD_2, list_cards[3], self.cena, self.rule)
+        self.card2a = Card("Linux", IMG_CARD_2, list_cards[2], cena, self.rule)
+        self.card2b = Card("Linux", IMG_CARD_2, list_cards[3], cena, self.rule)
         
-        self.card3a = Card("GitLab", IMG_CARD_3, list_cards[4], self.cena, self.rule)
-        self.card3b = Card("GitLab", IMG_CARD_3, list_cards[5], self.cena, self.rule)
+        self.card3a = Card("GitLab", IMG_CARD_3, list_cards[4], cena, self.rule)
+        self.card3b = Card("GitLab", IMG_CARD_3, list_cards[5], cena, self.rule)
         
-        self.card4a = Card("GitHub", IMG_CARD_4, list_cards[6], self.cena, self.rule)
-        self.card4b = Card("GitHub", IMG_CARD_4, list_cards[7], self.cena, self.rule)
+        self.card4a = Card("GitHub", IMG_CARD_4, list_cards[6], cena, self.rule)
+        self.card4b = Card("GitHub", IMG_CARD_4, list_cards[7], cena, self.rule)
         
-        self.card5a = Card("Activ", IMG_CARD_5, list_cards[8], self.cena, self.rule)
-        self.card5b = Card("Activ", IMG_CARD_5, list_cards[9], self.cena, self.rule)
+        self.card5a = Card("Activ", IMG_CARD_5, list_cards[8], cena, self.rule)
+        self.card5b = Card("Activ", IMG_CARD_5, list_cards[9], cena, self.rule)
         
-        self.cena.vai()
+        cena.vai()
 
     def rule(self, selected_card):  
         if Game.previous_selected_card == None:
