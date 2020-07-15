@@ -119,7 +119,7 @@ class Game:
         else: # acertou
             Texto(Game.cena, "Acertou!!!").vai()
             Game.previous_selected_card.card.elt.unbind("click")
-            selected_card.card.elt.unbind("click")
+            Game.current_selected_card.card.elt.unbind("click")
             
         Game.previous_selected_card = None
 
