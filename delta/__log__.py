@@ -2227,3 +2227,10 @@ AttributeError: 'function' object has no attribute '__getitem__'
     carta[0].vai()
 NameError: name 'carta' is not defined
 '''},
+{'date': 'Wed Jul 15 2020 04:17:04.561 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 39
+  def matriz_2x2(self):
+  ^
+IndentationError: unexpected indent
+'''},
