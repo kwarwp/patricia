@@ -55,19 +55,19 @@ class Game:
         list_cards=self.shuffle_cards()
         
         self.card1a = Card(IMG_CARD_1, list_cards[0], self.cena)
-        self.card1b = Card(IMG_CARD_1, [1,0], self.cena)
+        self.card1b = Card(IMG_CARD_1, list_cards[1], self.cena)
         
-        self.card2a = Card(IMG_CARD_2, [2,0], self.cena)
-        self.card2b = Card(IMG_CARD_2, [3,0], self.cena)
+        self.card2a = Card(IMG_CARD_2, list_cards[2], self.cena)
+        self.card2b = Card(IMG_CARD_2, list_cards[3], self.cena)
         
-        self.card3a = Card(IMG_CARD_3, [4,0], self.cena)
-        self.card3b = Card(IMG_CARD_3, [0,1], self.cena)
+        self.card3a = Card(IMG_CARD_3, list_cards[4], self.cena)
+        self.card3b = Card(IMG_CARD_3, list_cards[5], self.cena)
         
-        self.card4a = Card(IMG_CARD_4, [1,1], self.cena)
-        self.card4b = Card(IMG_CARD_4, [2,1], self.cena)
+        self.card4a = Card(IMG_CARD_4, list_cards[6], self.cena)
+        self.card4b = Card(IMG_CARD_4, list_cards[7], self.cena)
         
-        self.card5a = Card(IMG_CARD_5, [3,1], self.cena)
-        self.card5b = Card(IMG_CARD_5, [4,1], self.cena)
+        self.card5a = Card(IMG_CARD_5, list_cards[8], self.cena)
+        self.card5b = Card(IMG_CARD_5, list_cards[9], self.cena)
         self.cena.vai()
         
     def shuffle_cards(self):
