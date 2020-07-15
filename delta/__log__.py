@@ -1897,3 +1897,10 @@ AttributeError: 'GUI' object has no attribute 'fundo'
                                                                                         ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Jul 15 2020 03:26:48.465 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 29
+  carta[1]=(img="http://activufrj.nce.ufrj.br/file/ProgOO/Card_Linux.png?disp=inline")
+                                                                                      ^
+SyntaxError: invalid syntax
+'''},
