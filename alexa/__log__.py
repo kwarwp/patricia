@@ -59,3 +59,10 @@ AttributeError: 'Elemento' object has no attribute 'ope'
                                                       ^
 SyntaxError: EOL while scanning string literal
 '''},
+{'date': 'Wed Jul 15 2020 20:13:57.794 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 11
+  op1 = Elemento ( img = "https://images.vexels.com/media/users/3/139740/isolated/preview/bfecbaa063a84b2e9bbd9f8b9b41d410-bot--o-de-reprodu----o-redondo-azul-by-vexels.png" , x = 700, y=390, tit "clique")
+                                                                                                                                                                                                     ^
+SyntaxError: invalid syntax
+'''},
