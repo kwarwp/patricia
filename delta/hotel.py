@@ -25,28 +25,25 @@ class Eventos:
 	#CARTA_2
 	#CARTA_3
 	#CARTA_4
+	X = [10,120,230,10,120,230,10,120,230,10,120,230]
+	Y = [10, 10, 10, 150,150, 150, 290, 290,290,430,430, 430]
 	
-	def embaralhar(self):    
-		s=[1,2,3,4]
-
-		random.shuffle(s,random.random)
-      	
-	def linkar (self):
-		self.CARTA_PYCHARM=s[0]
-		self.CARTA_VERSO=s[1]
-		#CARTA_PYCHARM=s[2]
-		#CARTA_VERSO=s[0]
-		     
+	
+	def embaralhar(self):
+		random.shuffle(x,random.random)
+		random.shuffle(y,random.random)
+	
+	    
 	def __init__(self):
 		self.tabuleiro = Cena(self.CENA_TABULEIRO)
-		self.carta1 = Elemento(self.CARTA_PYCHARM, ,x=300,y=400 , cena=self.tabuleiro)
-		self.carta2=Elemento(self.CARTA_VERSO, , x=100, y=200, cena=self.tabuleiro)
+		self.carta1 = Elemento(self.CARTA_PYCHARM, ,x[i],y[j] , cena=self.tabuleiro)
+		self.carta2=Elemento(self.CARTA_VERSO, , x[i+1], y[j+1], cena=self.tabuleiro)
 		#self.verso2=Elemento(self.CARTA_VERSO2, , x=200, y=300, cena=self.tabuleiro)
         
        # self.pycharm=Elemento(self.CARTA_PYCHARM,,X=100,y=300,cena=self.tabuleiro)
         
         
-	         
+	
         
 	def vai(self):
 		""" mostra a cena da calçada. """
