@@ -70,8 +70,8 @@ class Eventos:
             self.ambiente = Cena(self.CENA_corredor_2)
             STYLE["width"] = 500
             self.boneco = Elemento(self.BONECO, , x=200, y=200, cena=self.ambiente)
-            self.boneco.x = 200
-            self.boneco.y = 220
+            self.boneco.x = 60
+            self.boneco.y = 240
             self.ambiente.vai()
             
         #se atingiu o bau, ganhou o jogo.
