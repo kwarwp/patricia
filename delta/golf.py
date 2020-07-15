@@ -72,7 +72,7 @@ class Game:
         """
         list_cards=self.shuffle_cards()
         
-        self.card1a = Card("Pycharm", IMG_CARD_1, list_cards[0], Game.cena, Game.rule)
+        self.card1a = Card("PyCharm", IMG_CARD_1, list_cards[0], Game.cena, Game.rule)
         self.card1b = Card("PyCharm", IMG_CARD_1, list_cards[1], Game.cena, Game.rule)
         
         self.card2a = Card("Linux", IMG_CARD_2, list_cards[2], Game.cena, Game.rule)
