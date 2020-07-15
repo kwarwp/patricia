@@ -77,7 +77,6 @@ class Eventos:
             self.boneco.x = 60
             self.boneco.y = 240
             self.ambiente.vai()
-            self.portal(self.boneco.x,self.boneco.y)
             if cont > 3:
                 cont = 0
             
