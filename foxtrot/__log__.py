@@ -478,3 +478,191 @@ TypeError: vai missing 1 positional argument: 'self'
     self.botao_sobre.entra(self.capa)
 TypeError: entra missing 1 positional argument: 'cena'
 '''},
+{'date': 'Wed Jul 15 2020 17:57:04.123 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 29
+    main()
+  module _core.main line 239
+    Main(**kwargs)
+TypeError: __init__ missing 1 positional argument: 'br'
+'''},
+{'date': 'Wed Jul 15 2020 17:57:19.781 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 29
+    Jogo()
+  module <module> line 21
+    self.capa = Cena (img= capa_do_jogo)
+TypeError: 'module' object is not callable
+'''},
+{'date': 'Wed Jul 15 2020 17:57:46.534 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 29
+    Jogo()
+  module <module> line 21
+    self.capa = Cena (img= capa_do_jogo)
+TypeError: 'module' object is not callable
+'''},
+{'date': 'Wed Jul 15 2020 17:58:33.164 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 29
+    Jogo()
+  module <module> line 24
+    self.cena.vai()
+AttributeError: 'Jogo' object has no attribute 'cena'
+'''},
+{'date': 'Wed Jul 15 2020 17:58:53.945 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 29
+    Jogo()
+  module <module> line 24
+    self.capa_do_jogo.vai()
+AttributeError: 'Jogo' object has no attribute 'capa_do_jogo'
+'''},
+{'date': 'Wed Jul 15 2020 18:04:35.948 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 28
+  self.botao_jogar = Elemento(img=botao_jogar, tit="Jogar", style=dict(left=180, top=50)
+                                                                                                  ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Wed Jul 15 2020 18:05:24.750 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 30
+  self.botao_jogar = Elemento(img=botao_jogar, 
+                                                                                                                              ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Wed Jul 15 2020 18:05:54.715 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 30
+  self.botao_jogar = Elemento (img=botao_jogar, 
+                                                                                                                               ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Wed Jul 15 2020 18:06:20.40 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 30
+  self.botao_jogar = Elemento (img=botao_jogar, 
+                                                                                                                               ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Wed Jul 15 2020 18:06:48.605 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 30
+  self.botao_jogar = Elemento (img=botao_jogar, 
+                                                                                                             ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Wed Jul 15 2020 18:07:21.605 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 30
+  self.botao_jogar = Elemento (img=botao_jogar, 
+                                                                                                              ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Wed Jul 15 2020 18:07:34.463 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 30
+  self.botao_jogar = Elemento (img=botao_jogar,
+                                                                                      ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Wed Jul 15 2020 18:07:44.912 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 30
+  self.botao_jogar = Elemento (img= botao_jogar, tit = "jogar", 
+                                                                                                       ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Wed Jul 15 2020 18:08:04.598 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 30
+  self.botao_jogar = Elemento (img= botao_jogar, tit = "jogar",
+                                                                                                      ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Wed Jul 15 2020 18:08:40.253 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 30
+  self.botao_jogar = Elemento (img= botao_jogar, tit = "jogar",
+                                                                                                                           ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Wed Jul 15 2020 18:09:09.686 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 30
+  self.botao_jogar = Elemento (img= botao_jogar, 
+                                                                                                             ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Wed Jul 15 2020 18:09:28.299 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 30
+  self.botao_jogar = Elemento (img= botao_jogar, style= dict((left=180, top=50,  Width=3, height=20))
+                                                                                                    ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Wed Jul 15 2020 18:12:12.605 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 30
+  self.botao_jogar = Elemento (img= botao_jogar,
+                                                                                                                                 ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Wed Jul 15 2020 18:12:45.741 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 34
+  self.botao_sobre = Elemento (img=botao_sobre, 
+                                                                                                                                  ^
+SyntaxError: invalid syntax
+'''},

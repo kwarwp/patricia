@@ -10,20 +10,46 @@ Changelog
         Página inicial do Jogo.
 
 """
-from __spy.vitollino.main import Cena,Elemento,Texto
-
+#importação
+from _spy.vitollino.main import Cena,Elemento,Texto, STYLE
+#formatacao
+STYLE["width"] = 1010
+STYLE["heigth"] = "500px"
+#figuras
 capa_do_jogo = "https://i.imgur.com/0RVnppj.png"
-botao_jogar = "https://i.imgur.com/F3Q0bDv.png"
-botao_sobre = "https://i.imgur.com/pG9wDIz.png"
-
+botao_jogar = "https://i.imgur.com/pG9wDIz.png"
+botao_sobre = "https://i.imgur.com/F3Q0bDv.png"
+#criando classe jogo
 class Jogo:
     def __init__(self):
-        self.capa = Cena (img= capa_do_jogo)
-        self.botao_jogar = Elemento (img = botao_jogar)
-        self.botao_sobre = Elemento (img = botao_sobre)
-
+    #criando cena
+    
+        self.capa =Cena(img= capa_do_jogo)
+        
+        #inserindo elementos na cena
+        self.botao_jogar = Elemento (img=botao_jogar,
+        tit="Jogar",
+        style= dict(left=500, top=400))
+        
+        self.botao_sobre = Elemento (img=botao_sobre, 
+        tit="Sobre", 
+        style= dict(left=400, top=400))
+        
+        #exibindo cena
+        self.capa.vai()
+        
+        #exibindo elementos na cena
         self.botao_sobre.entra(self.capa)
         self.botao_jogar.entra(self.capa)
         
+        #textos
+        self.texto_sobre = Texto (self.capa, "Olá! Volte em breve para saber mais!")
+        self.texto_jogar = Texto (self.capa, "Olá! Volte em breve para Jogar!")
 
+        #ação caso seja clicado
+        self.botao_sobre.vai=self.texto_sobre.vai
+        self.botao_jogar.vai=self.texto_jogar.vai
+        
+if __name__ == "__main__":
+    Jogo()
 
