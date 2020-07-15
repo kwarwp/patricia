@@ -1403,3 +1403,10 @@ TypeError: Embaralha() takes 0 positional argument but more were given
     	while i<3:
 NameError: name 'i' is not defined
 '''},
+{'date': 'Wed Jul 15 2020 02:21:41.262 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 33
+  for i range(0,3):
+         ^
+SyntaxError: invalid syntax
+'''},
