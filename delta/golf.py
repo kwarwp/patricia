@@ -29,7 +29,8 @@ IMG_HEIGHT = 150
 
 
 class Card():
-    def __init__(self, image, position, cena, rule):
+    def __init__(self, name, image, position, cena, rule):
+        self.name = name
         self.rule = rule
         self.cena = cena
         self.image = image
@@ -69,27 +70,34 @@ class Game:
         self.cena = Cena()
         list_cards=self.shuffle_cards()
         
-        self.card1a = Card(IMG_CARD_1, list_cards[0], self.cena, self.rule)
-        self.card1b = Card(IMG_CARD_1, list_cards[1], self.cena, self.rule)
+        self.card1a = Card("Pycharm", IMG_CARD_1, list_cards[0], self.cena, self.rule)
+        self.card1b = Card("PyCharm", IMG_CARD_1, list_cards[1], self.cena, self.rule)
         
-        self.card2a = Card(IMG_CARD_2, list_cards[2], self.cena, self.rule)
-        self.card2b = Card(IMG_CARD_2, list_cards[3], self.cena, self.rule)
+        self.card2a = Card("Linux", IMG_CARD_2, list_cards[2], self.cena, self.rule)
+        self.card2b = Card("Linux", IMG_CARD_2, list_cards[3], self.cena, self.rule)
         
-        self.card3a = Card(IMG_CARD_3, list_cards[4], self.cena, self.rule)
-        self.card3b = Card(IMG_CARD_3, list_cards[5], self.cena, self.rule)
+        self.card3a = Card("GitLab", IMG_CARD_3, list_cards[4], self.cena, self.rule)
+        self.card3b = Card("GitLab", IMG_CARD_3, list_cards[5], self.cena, self.rule)
         
-        self.card4a = Card(IMG_CARD_4, list_cards[6], self.cena, self.rule)
-        self.card4b = Card(IMG_CARD_4, list_cards[7], self.cena, self.rule)
+        self.card4a = Card("GitHub", IMG_CARD_4, list_cards[6], self.cena, self.rule)
+        self.card4b = Card("GitHub", IMG_CARD_4, list_cards[7], self.cena, self.rule)
         
-        self.card5a = Card(IMG_CARD_5, list_cards[8], self.cena, self.rule)
-        self.card5b = Card(IMG_CARD_5, list_cards[9], self.cena, self.rule)
+        self.card5a = Card("Activ", IMG_CARD_5, list_cards[8], self.cena, self.rule)
+        self.card5b = Card("Activ", IMG_CARD_5, list_cards[9], self.cena, self.rule)
         
         self.cena.vai()
         
-    def rule(self, selected_card):
-        if selected_card:
-            self.Texto = Texto(self.card1a.card, "Texto")
-            self.Texto.vai()
+    
+    def rule(self, selected_card):  
+        if selected_card_1 == None:
+            selected_card_1 = selected_card
+        if selected_card_2 == None:
+            selected_card_2 = selected_card
+            if selected_card_1.name != selected_card_2.name:
+                selected_card_1.turnDown()
+                selected_card_2.turnDown()
+                self.Texto = Texto(self.cena, "Errou!!!")
+                self.Texto.vai()
         
     def shuffle_cards(self):   
         list_cards =  [(0,0), (1,0), (2,0), (3,0), (4,0), (0,1), (1,1), (2,1), (3,1), (4,1)]
