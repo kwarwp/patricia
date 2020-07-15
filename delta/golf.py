@@ -35,7 +35,7 @@ class Card():
         self.position = position
         pos_x = 50 + self.position[0]*IMG_WIDTH
         pos_y = 50 + self.position[1]*IMG_HEIGHT
-        if faceDown:
+        if self.faceDown:
             Elemento(IMG_CARD_FACE_DOWN, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
         else: 
             Elemento(self.image, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
