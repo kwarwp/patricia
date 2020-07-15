@@ -1178,3 +1178,10 @@ AttributeError: 'GUI' object has no attribute 'carta'
     Eventos().vai()
 AttributeError: 'Eventos' object has no attribute 'vai'
 '''},
+{'date': 'Wed Jul 15 2020 02:01:39.263 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 35
+  Eventos().vai()
+  ^
+IndentationError: expected an indented block
+'''},
