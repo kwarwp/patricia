@@ -349,3 +349,10 @@ TypeError: 'module' object is not callable
     self.cena = Cena(CENA_CALCADA, direita=Praia())
 TypeError: 'module' object is not callable
 '''},
+{'date': 'Wed Jul 15 2020 13:54:17.49 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 44
+  self.banhista = Elemento(BANHISTA, x=100, y=200, cena=self.cena, Praia())
+                                                                          ^
+SyntaxError: non-keyword arg after keyword arg
+'''},
