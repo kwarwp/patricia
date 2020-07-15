@@ -43,7 +43,7 @@ class Card():
         
     def turn(self, ev=None):
         #self.card =Elemento(self.image, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
-        #self.card.img(self.image)
+        self.card.remover()
         #self.card.vai()
         
         # para teste
