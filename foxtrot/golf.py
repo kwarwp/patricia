@@ -43,8 +43,8 @@ class Jogo:
         self.botao_jogar.entra(self.capa)
         
         #textos
-        self.texto_sobre = Texto (self.capa, "Volte em breve para saber mais")
-        self.texto_jogar = Texto (self.capa, "Volte em breve para Jogar")
+        self.texto_sobre = Texto (self.capa, "Olá! Volte em breve para saber mais!")
+        self.texto_jogar = Texto (self.capa, "Olá! Volte em breve para Jogar!")
 
         #ação caso seja clicado
         self.botao_sobre.vai=self.texto_sobre.vai
