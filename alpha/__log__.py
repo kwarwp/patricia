@@ -289,3 +289,10 @@ IndentationError: expected an indented block
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Jul 15 2020 19:49:32.284 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 87
+  self.ambiente = Cena(self.matrizMapaFase[0][0])
+  ^
+IndentationError: unexpected indent
+'''},
