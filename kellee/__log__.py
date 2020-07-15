@@ -274,3 +274,10 @@ Exception: <TypeError: Cannot read property 'substr' of undefined>
 'error': '''
 Exception: <TypeError: Cannot read property 'substr' of undefined>
 '''},
+{'date': 'Wed Jul 15 2020 13:38:53.171 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 3
+  """
+                                                                                                                                                                                                                                                                               ^
+SyntaxError: invalid syntax
+'''},
