@@ -15,7 +15,7 @@ Changelog
 """
 
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
-import random, time
+import random
 
 __version__ = "20.07"
 __author__ = "Paulo Assumpção"
@@ -71,7 +71,7 @@ class Game:
             1A 1B 2A 2B 3A
             3B 4A 4B 5A 5B
         """
-        list_cards=self.shuffle_cards()
+        list_cards = self.shuffle_cards()
         
         self.card1a = Card("PyCharm", IMG_CARD_1, list_cards[0], Game.cena, Game.rule)
         self.card1b = Card("PyCharm", IMG_CARD_1, list_cards[1], Game.cena, Game.rule)
@@ -104,7 +104,11 @@ class Game:
             # desabilita o clique sobre carta virada
             Game.previous_selected_card.card.elt.unbind("click")
             return
-            
+        
+        #Vamos gastar um tempo aqui
+        while(x<10000):
+            x=x+1
+        
         # Não acertou
         if Game.previous_selected_card.name != selected_card.name:            
             # reabilita a ação o clique e vira a carta 1 para baixo
