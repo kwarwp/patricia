@@ -457,3 +457,10 @@ NameError: name 'teste' is not defined
     print(teste)
 NameError: name 'teste' is not defined
 '''},
+{'date': 'Tue Jul 14 2020 21:24:12.228 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 25
+  def __init__(self):
+  ^
+IndentationError: unexpected indent
+'''},
