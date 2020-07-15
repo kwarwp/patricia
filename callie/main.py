@@ -1,15 +1,16 @@
 # patricia.callie.main.py
 # Rio de Janeiro, 9 de junho de 2020
     
-     ''' Tentativa de implementação do vira e desvira carta
-            para o aplicativo proposto no curso ProgOO.
-            
-                     Grupo Delta
-      '''
+
 from _spy.vitollino.main import Cena, Elemento, STYLE, ESTYLE
 __version__ = "20.07"
 __author__= 'Emanuelle Simas'
 
+''' Tentativa de implementação do vira e desvira carta
+            para o aplicativo proposto no curso ProgOO.
+            
+                     Grupo Delta
+'''
 STYLE["width"] = 600
 
 TABULEIRO = "https://activufrj.nce.ufrj.br/file/ProgOO/TAB_VAZIO.png"
@@ -26,8 +27,16 @@ class Jogo:
         self.carta = Elemento(CARTA, x=2, y=5,w=145,h=190, cena=self.tab)
         self.carta2 = Elemento(CARTA2, x=153, y=5, w=145,h=190,cena=self.tab)
         self.carta3 = Elemento(CARTA3, x=2, y=203,w=145,h=190, cena=self.tab)
-        ''' Sendo o Width da cena 600, o melhor tamanho 
+        ''' Sendo o Width da cena 600px, o melhor tamanho 
                             para a carta é w=145 e h-190'''
+    def verso(self):
+        pass
+        
+    def vira(self):
+        pass
+        
+    def desvira(self):
+        pass
 
     def vai(self):
         """ Mostra a cena do tabuleiro """
