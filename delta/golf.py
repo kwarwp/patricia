@@ -118,6 +118,7 @@ class Game:
             Game.previous_selected_card.card.elt.unbind("click")
             
         # reinicia turno
+        exto(Game.cena, "Vou reiniciar aqui!!!").vai()
         Game.previous_selected_card = None
         Game.current_selected_card = None
         
