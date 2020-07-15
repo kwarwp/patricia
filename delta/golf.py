@@ -53,6 +53,7 @@ class Card():
         self.card = Elemento(IMG_CARD_FACE_DOWN, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.faceDown = True
         self.card.elt.bind("click", self.turnOn)
+        self.rule()
         
         
 class Game:
@@ -84,7 +85,6 @@ class Game:
         
         self.card5a = Card(IMG_CARD_5, list_cards[8], self.cena, self.rule)
         self.card5b = Card(IMG_CARD_5, list_cards[9], self.cena, self.rule)
-        
         
         self.cena.vai()
         
