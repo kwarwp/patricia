@@ -89,15 +89,14 @@ class Game:
         
         self.cena.vai()
 
-    @staticmethod
     def rule(self, selected_card):  
         if Game.previous_selected_card == None:
             Game.previous_selected_card = selected_card
             return
             
         if Game.previous_selected_card.name != selected_card.name:
-            #self.texto = Texto(self.cena, "Errou!!!")
-            #self.texto.mostra()
+            self.texto = Texto(self.cena, "Errou!!!")
+            self.texto.mostra()
             #self.texto.esconde()
             #time.sleep(5)
             Game.previous_selected_card.turnDown()
