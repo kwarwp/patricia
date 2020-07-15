@@ -21,12 +21,7 @@ class Eventos:
 	CARTA_VERSO= "http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline"
 	#= "http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline"
 	CARTA_PYCHARM = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_pycharm.png?disp=inline"
-	#CARTA_1
-	#CARTA_2
-	#CARTA_3
-	#CARTA_4
-	x = [10,120,230]
-	y = [ 150, 290, 430]
+	
 	
     
 	
