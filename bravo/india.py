@@ -32,7 +32,8 @@ def teste():
     cenas.entra(cena)
     elementos.entra(cena)
     txt1.vai()
-    if txt1.vai == true:
+    x = 1
+    if txt1.vai == 1:
         txt2.vai()
     #cenas.vai()
     #elementos.vai()
