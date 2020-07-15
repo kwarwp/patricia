@@ -72,41 +72,44 @@ class Game:
         """
         list_cards=self.shuffle_cards()
         
-        self.card1a = Card("Pycharm", IMG_CARD_1, list_cards[0], Game.cena, self.rule)
-        self.card1b = Card("PyCharm", IMG_CARD_1, list_cards[1], Game.cena, self.rule)
+        self.card1a = Card("Pycharm", IMG_CARD_1, list_cards[0], Game.cena, Game.rule)
+        self.card1b = Card("PyCharm", IMG_CARD_1, list_cards[1], Game.cena, Game.rule)
         
-        self.card2a = Card("Linux", IMG_CARD_2, list_cards[2], Game.cena, self.rule)
-        self.card2b = Card("Linux", IMG_CARD_2, list_cards[3], Game.cena, self.rule)
+        self.card2a = Card("Linux", IMG_CARD_2, list_cards[2], Game.cena, Game.rule)
+        self.card2b = Card("Linux", IMG_CARD_2, list_cards[3], Game.cena, Game.rule)
         
-        self.card3a = Card("GitLab", IMG_CARD_3, list_cards[4], Game.cena, self.rule)
-        self.card3b = Card("GitLab", IMG_CARD_3, list_cards[5], Game.cena, self.rule)
+        self.card3a = Card("GitLab", IMG_CARD_3, list_cards[4], Game.cena, Game.rule)
+        self.card3b = Card("GitLab", IMG_CARD_3, list_cards[5], Game.cena, Game.rule)
         
-        self.card4a = Card("GitHub", IMG_CARD_4, list_cards[6], Game.cena, self.rule)
-        self.card4b = Card("GitHub", IMG_CARD_4, list_cards[7], Game.cena, self.rule)
+        self.card4a = Card("GitHub", IMG_CARD_4, list_cards[6], Game.cena, Game.rule)
+        self.card4b = Card("GitHub", IMG_CARD_4, list_cards[7], Game.cena, Game.rule)
         
-        self.card5a = Card("Activ", IMG_CARD_5, list_cards[8], Game.cena, self.rule)
-        self.card5b = Card("Activ", IMG_CARD_5, list_cards[9], Game.cena, self.rule)
+        self.card5a = Card("Activ", IMG_CARD_5, list_cards[8], Game.cena, Game.rule)
+        self.card5b = Card("Activ", IMG_CARD_5, list_cards[9], Game.cena, Game.rule)
         
         Game.cena.vai()
 
-    def rule(self, selected_card):  
+    @staticmethod
+    def rule(selected_card):
+        # tem um par selecionado?
         if Game.previous_selected_card == None:
             Game.previous_selected_card = selected_card
             return
-            
+        
+        # Não acertou
         if Game.previous_selected_card.name != selected_card.name:
             Texto(Game.cena, "Errou!!!").vai()
             #self.texto.esconde()
             #time.sleep(5)
             Game.previous_selected_card.turnDown()
             selected_card.turnDown()
-        else:
-            Game.previous_selected_card.elt.bind("click", Game.previous_selected_card.turnOn())
-            Game.previous_selected_card.turnOn()
+        else: # acertou
+            #Game.previous_selected_card.turnOn()
+            Game.previous_selected_card.elt.bind("click", None)
             selected_card.elt.bind("click", None)
             Game.previous_selected_card = None
             
-        Game.previous_selected_card = None        
+        Game.previous_selected_card = None
         
               
 
