@@ -24,3 +24,7 @@ IndentationError: expected an indented block
 'error': '''
 Exception: <TypeError: $B.imported['_spy.vitollino.main.'] is undefined>
 '''},
+{'date': 'Wed Jul 15 2020 17:19:43.670 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: $B.imported['__spy.vitollino.main.'] is undefined>
+'''},
