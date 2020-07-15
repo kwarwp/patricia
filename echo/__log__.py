@@ -389,3 +389,10 @@ SyntaxError: invalid syntax
     img.resize(800,600)
 AttributeError: 'str' object has no attribute 'resize'
 '''},
+{'date': 'Wed Jul 15 2020 20:59:43.368 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 9
+  STYLE ["width"]"1150
+                      ^
+SyntaxError: EOL while scanning string literal
+'''},
