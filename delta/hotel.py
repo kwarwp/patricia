@@ -49,7 +49,7 @@ class Jogo:
 		self.card2b = Carta(IMG_LINUX, list_cards[3], self.cena)
 		self.cena.vai()
 	def embaralha(self):   
-		list_cards =  [(0,0), (1,0)]
+		list_cards =  [(0,0), (1,0),(2,0),(3,0)]
 		random.shuffle(list_cards,random.random)
 		return list_cards
 if __name__ == "__main__":
