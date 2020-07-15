@@ -479,3 +479,10 @@ KeyError: leight
     STYLE ["leight"]^"550px"
 KeyError: leight
 '''},
+{'date': 'Wed Jul 15 2020 21:01:47.378 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 8
+  STYLE ["width"]"1150"
+                  ^
+SyntaxError: invalid syntax
+'''},
