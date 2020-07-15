@@ -45,7 +45,7 @@ class Card():
         self.card = Elemento(self.image, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.faceDown = False
         self.card.elt.bind("click", self.turnDown)
-        self.rule()
+        self.rule(this)
         
     def turnDown(self, env=None):
         self.card = Elemento(IMG_CARD_FACE_DOWN, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
@@ -86,11 +86,7 @@ class Game:
         
         self.cena.vai()
         
-    def rule(self) :
-        self.click = self.click+1
-        if self.click > 2:
-            self.click=0
-            
+    def rule(card):
         self.Texto = Texto(self.card1a.card, "Texto")
         self.Texto.vai()
         
