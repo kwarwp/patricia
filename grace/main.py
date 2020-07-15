@@ -11,7 +11,7 @@ Changelog
         * NEW: O jogo original.
 
 """
-from _spy.vitollino.main import cena
+from _spy.vitollino.main import Cena
 __version__ = "20.07"
 __author__ = "Carlo"
 CENA_PRAIA = "https://i.imgur.com/wz5XKcr.jpg"
