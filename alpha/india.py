@@ -24,7 +24,9 @@ Código alterado de Monica Novellino <monicanovellino@gmail.com>
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
 from browser import document # importa o DOM para atribuir o evento de teclado
-cont = 0
+
+cont = 0 #contador index da matriz
+
 class Eventos:
     """ Associa um evento a uma imagem e captura eventos de teclado. """
     CENA_corredor_1 = link1 = "https://i.imgur.com/L71ZV6Z.png"
@@ -35,13 +37,13 @@ class Eventos:
     
     BONECO = "https://i.imgur.com/k63kwfa.png"
     
-    #matrizMapaFase = [[local_imagem_fase, x_inicial, y_inicial]...]
-    matrizMapaFase = [[link2,200,100],
-                      [link3,100,100],
-                      [link4,100,100],
-                      [link5,100,100]]
-    #tamanho da cena
-    STYLE["width"] = 640
+    
+    matrizFase = [[link2,200,100],     #matrizFase = [[local_imagem_fase, x_inicial, y_inicial]...]
+                  [link3,100,100],
+                  [link4,100,100],
+                  [link5,100,100]]
+
+    STYLE["width"] = 640 #tamanho da cena
     
     def __init__(self):
         self.ambiente = Cena(self.CENA_corredor_1)
@@ -66,19 +68,20 @@ class Eventos:
         elif key in [38, 40]:
             key = (key - 39) * 5
             self.boneco.y += key # muda a posição de mais um ou menos um
+        
         #se o elemento atingiu uma porta, muda para a próxima cena
         # FALTA mapear os pontos, criar função para passar parametros ou chamar outra classe
         #ideia de cria uma matriz com os pontos de localização do portal
         if self.boneco.x > 400 and self.boneco.y > 200:
-            global cont
-            self.ambiente = Cena(self.matrizMapaFase[cont][0]) #lê a cena que está descrita na primeira coluna da matriz
+            global cont #contador estanciado fora do def para gerar a linha a ser lida na matrizFase
+            self.ambiente = Cena(self.matrizFase[cont][0]) #lê a cena que está descrita na primeira coluna da matriz
             STYLE["width"] = 640
             self.boneco = Elemento(self.BONECO, , x=int, y=int, cena=self.ambiente)
-            self.boneco.x = int(matrizMapaFase[cont][1]) #posição x da fase, descrita na matriz pela segunda coluna
-            self.boneco.y = int(matrizMapaFase[cont][2]) #posição y da fase descita pela terceira coluna
+            self.boneco.x = int(matrizFase[cont][1]) #posição x_inicial da fase, descrita na matriz pela segunda coluna
+            self.boneco.y = int(matrizFase[cont][2]) #posição y_inicial da fase descita pela terceira coluna
             self.ambiente.vai()
             cont = cont + 1
-            if cont > 3:
+            if cont > 3: #Regulador do contador. Precisa alterar a programação para voltar a fase em um portal de retorno
                 cont = 0
             
         #se atingiu o bau, ganhou o jogo.
