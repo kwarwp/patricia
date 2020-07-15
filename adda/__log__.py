@@ -350,3 +350,10 @@ NameError: name 'Pinos' is not defined
     return Pino.PINOS[nome]
 KeyError: <_spy.vitollino.main.Cena object>
 '''},
+{'date': 'Wed Jul 15 2020 12:11:46.722 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 55
+  , livre=False
+   ^
+SyntaxError: invalid syntax
+'''},
