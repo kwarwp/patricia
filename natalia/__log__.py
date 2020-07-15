@@ -73,3 +73,10 @@ Traceback (most recent call last):
                ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Wed Jul 15 2020 14:42:37.427 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 27
+  # Mar().vai()
+               ^
+IndentationError: expected an indented block
+'''},
