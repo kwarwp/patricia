@@ -1,19 +1,34 @@
 
-{'date': 'Wed Jul 15 2020 15:35:50.493 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+{'date': 'Wed Jul 15 2020 17:18:24.733 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
 'error': '''
- module <string> line 19
-  cena1.vai()
-  ^
-IndentationError: unexpected indent
+ module <string> line 20
+  class Jogo
+             ^
+SyntaxError: invalid syntax
 '''},
-{'date': 'Wed Jul 15 2020 15:36:12.131 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+{'date': 'Wed Jul 15 2020 17:18:34.240 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
 'error': '''
- module <string> line 19
-  cena1.vai()
+ module <string> line 21
+  def __init__(self):
   ^
-IndentationError: unexpected indent
+IndentationError: expected an indented block
 '''},
-{'date': 'Wed Jul 15 2020 15:36:36.717 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+{'date': 'Wed Jul 15 2020 17:18:46.486 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 21
+  def ___init___(self):
+  ^
+IndentationError: expected an indented block
+'''},
+{'date': 'Wed Jul 15 2020 17:19:22.571 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: $B.imported['_spy.vitollino.main.'] is undefined>
+'''},
+{'date': 'Wed Jul 15 2020 17:19:43.670 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: $B.imported['__spy.vitollino.main.'] is undefined>
+'''},
+{'date': 'Wed Jul 15 2020 17:20:37.759 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
 'error': '''Traceback (most recent call last):
   module _core.main line 177
     dialog.action(lambda *_: self.start()
@@ -25,13 +40,11 @@ IndentationError: unexpected indent
     traceback.print_exc(file=sys.stderr)
   module _core.supygirls_factory line 295
     exec(self.code, glob)  # dict(__name__="__main__"))
-  module <module> line 20
-    teste()    
-  module <module> line 18
-    	cena1 = Cena(link_fundo)
-TypeError: 'module' object is not callable
+  module <module> line 14
+    STYLE["width"] = 600
+AttributeError: 'module' object has no attribute '__setitem__'
 '''},
-{'date': 'Wed Jul 15 2020 15:37:55.655 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+{'date': 'Wed Jul 15 2020 17:21:06.885 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
 'error': '''Traceback (most recent call last):
   module _core.main line 177
     dialog.action(lambda *_: self.start()
@@ -43,16 +56,12 @@ TypeError: 'module' object is not callable
     traceback.print_exc(file=sys.stderr)
   module _core.supygirls_factory line 295
     exec(self.code, glob)  # dict(__name__="__main__"))
-  module <module> line 20
-    teste()    
-  module <module> line 18
-    	cena1 = Cena(link_fundo)
-TypeError: 'module' object is not callable
+  module <module> line 14
+    STYLE["width"] = "600px"
+AttributeError: 'module' object has no attribute '__setitem__'
 '''},
-{'date': 'Wed Jul 15 2020 15:42:33.607 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
-'error': '''ok
-ok pt2
-Traceback (most recent call last):
+{'date': 'Wed Jul 15 2020 17:21:26.251 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
   module _core.main line 177
     dialog.action(lambda *_: self.start()
   module _core.supygirls_factory line 135
@@ -63,16 +72,252 @@ Traceback (most recent call last):
     traceback.print_exc(file=sys.stderr)
   module _core.supygirls_factory line 295
     exec(self.code, glob)  # dict(__name__="__main__"))
-  module <module> line 22
-    teste()   
+  module <module> line 14
+    STYLE["width"]=600
+AttributeError: 'module' object has no attribute '__setitem__'
+'''},
+{'date': 'Wed Jul 15 2020 17:21:39.80 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 14
+  STYLE["width"]=600px
+                     ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Wed Jul 15 2020 17:33:15.348 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 20
+  def ___init___(self):
+  ^
+IndentationError: expected an indented block
+'''},
+{'date': 'Wed Jul 15 2020 17:33:23.337 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 23
+  
+  ^
+IndentationError: expected an indented block
+'''},
+{'date': 'Wed Jul 15 2020 17:33:32.102 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 23
+  
+  ^
+IndentationError: expected an indented block
+'''},
+{'date': 'Wed Jul 15 2020 17:39:04.108 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 24
+  
+  ^
+IndentationError: expected an indented block
+'''},
+{'date': 'Wed Jul 15 2020 17:39:14.516 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 23
+  
+  ^
+IndentationError: expected an indented block
+'''},
+{'date': 'Wed Jul 15 2020 17:40:09.342 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 29
+    Jogo().inicia()
+  module <module> line 21
+    self.capa = Cena (img= capa_do_jogo)
+TypeError: 'module' object is not callable
+'''},
+{'date': 'Wed Jul 15 2020 17:40:50.105 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 25
+    Jogo().inicia()
+  module <module> line 17
+    self.capa = Cena (img= "https://i.imgur.com/0RVnppj.png")
+TypeError: 'module' object is not callable
+'''},
+{'date': 'Wed Jul 15 2020 17:41:11.472 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 25
+    Jogo().inicia()
+  module <module> line 17
+    self.capa = Cena(img= "https://i.imgur.com/0RVnppj.png")
+TypeError: 'module' object is not callable
+'''},
+{'date': 'Wed Jul 15 2020 17:41:56.814 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 25
+    Jogo().inicia()
+  module <module> line 17
+    self.capa=Cena(img= "https://i.imgur.com/0RVnppj.png")
+TypeError: 'module' object is not callable
+'''},
+{'date': 'Wed Jul 15 2020 17:42:17.677 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 25
+    Jogo().inicia()
+  module <module> line 17
+    self.capa=Cena(img="https://i.imgur.com/0RVnppj.png")
+TypeError: 'module' object is not callable
+'''},
+{'date': 'Wed Jul 15 2020 17:45:05.388 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 25
+    Jogo().inicia()
+  module <module> line 17
+    self.capa=Cena(img="https://i.imgur.com/0RVnppj.png")
+TypeError: 'module' object is not callable
+'''},
+{'date': 'Wed Jul 15 2020 17:45:33.507 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 25
+    Jogo().inicia()
+  module <module> line 17
+    self.capa=Cena(img="https://i.imgur.com/Kv9q9Nn.jpg")
+TypeError: 'module' object is not callable
+'''},
+{'date': 'Wed Jul 15 2020 17:45:59.371 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 25
+    Jogo().inicia()
+  module <module> line 17
+    self.capa=Cena(img="https://i.imgur.com/0RVnppj.png")
+TypeError: 'module' object is not callable
+'''},
+{'date': 'Wed Jul 15 2020 17:46:27.856 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 25
+    Jogo().inicia()
+  module <module> line 17
+    self.capa=Cena(img="https://i.imgur.com/SI1BO9E.png")
+TypeError: 'module' object is not callable
+'''},
+{'date': 'Wed Jul 15 2020 17:47:29.301 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 25
+    Jogo().inicia()
+  module <module> line 17
+    self.capa=Cena(img="https://i.imgur.com/0RVnppj.png")
+TypeError: 'module' object is not callable
+'''},
+{'date': 'Wed Jul 15 2020 17:48:02.39 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 26
+    Jogo().inicia()
   module <module> line 19
-    	cena1 = Cena(link_fundo)
+    self.botao_jogar=Elemento(img="https://i.imgur.com/F3Q0bDv.png")
 TypeError: 'module' object is not callable
 '''},
-{'date': 'Wed Jul 15 2020 15:44:54.539 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
-'error': '''ok
-ok pt2
-Traceback (most recent call last):
+{'date': 'Wed Jul 15 2020 17:48:35.47 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
   module _core.main line 177
     dialog.action(lambda *_: self.start()
   module _core.supygirls_factory line 135
@@ -83,208 +328,103 @@ Traceback (most recent call last):
     traceback.print_exc(file=sys.stderr)
   module _core.supygirls_factory line 295
     exec(self.code, glob)  # dict(__name__="__main__"))
-  module <module> line 23
-    teste()   
-  module <module> line 20
-    	cena1 = Cena(link)
-TypeError: 'module' object is not callable
-'''},
-{'date': 'Wed Jul 15 2020 15:46:48.224 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
-'error': '''
- module <string> line 16
-  link_fundo = "https://img.elo7.com.br/product/original/1AD3471/painel-1x0-70-salao-de-festa-salao-de-festa.jpg
-                                                                                                                ^
-SyntaxError: EOL while scanning string literal
-'''},
-{'date': 'Wed Jul 15 2020 15:47:24.853 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
-'error': '''ok
-ok pt2
-Traceback (most recent call last):
-  module _core.main line 177
-    dialog.action(lambda *_: self.start()
-  module _core.supygirls_factory line 135
-    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
-  module _core.supygirls_factory line 306
-    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
-  module _core.supygirls_factory line 278
-    traceback.print_exc(file=sys.stderr)
-  module _core.supygirls_factory line 295
-    exec(self.code, glob)  # dict(__name__="__main__"))
-  module <module> line 23
-    teste()   
-  module <module> line 20
-    	cena1 = Cena(link_fundo)
-TypeError: 'module' object is not callable
-'''},
-{'date': 'Wed Jul 15 2020 15:52:14.244 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
-'error': '''ok
-ok pt2
-Traceback (most recent call last):
-  module _core.main line 177
-    dialog.action(lambda *_: self.start()
-  module _core.supygirls_factory line 135
-    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
-  module _core.supygirls_factory line 306
-    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
-  module _core.supygirls_factory line 278
-    traceback.print_exc(file=sys.stderr)
-  module _core.supygirls_factory line 295
-    exec(self.code, glob)  # dict(__name__="__main__"))
-  module <module> line 23
-    teste()   
-  module <module> line 20
-    	cena1 = Cena(img = link_fundo)
-TypeError: 'module' object is not callable
-'''},
-{'date': 'Wed Jul 15 2020 15:53:34.227 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
-'error': '''ok
-ok pt2
-Traceback (most recent call last):
-  module _core.main line 177
-    dialog.action(lambda *_: self.start()
-  module _core.supygirls_factory line 135
-    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
-  module _core.supygirls_factory line 306
-    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
-  module _core.supygirls_factory line 278
-    traceback.print_exc(file=sys.stderr)
-  module _core.supygirls_factory line 295
-    exec(self.code, glob)  # dict(__name__="__main__"))
-  module <module> line 23
-    teste()   
-  module <module> line 20
-    	cena = Cena(img = link_fundo)
-TypeError: 'module' object is not callable
-'''},
-{'date': 'Wed Jul 15 2020 15:53:51.56 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
-'error': '''ok
-ok pt2
-Traceback (most recent call last):
-  module _core.main line 177
-    dialog.action(lambda *_: self.start()
-  module _core.supygirls_factory line 135
-    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
-  module _core.supygirls_factory line 306
-    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
-  module _core.supygirls_factory line 278
-    traceback.print_exc(file=sys.stderr)
-  module _core.supygirls_factory line 295
-    exec(self.code, glob)  # dict(__name__="__main__"))
-  module <module> line 23
-    teste()   
-  module <module> line 20
-    	cena = Cena(img = link)
-TypeError: 'module' object is not callable
-'''},
-{'date': 'Wed Jul 15 2020 15:54:02.381 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
-'error': '''ok
-ok pt2
-Traceback (most recent call last):
-  module _core.main line 177
-    dialog.action(lambda *_: self.start()
-  module _core.supygirls_factory line 135
-    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
-  module _core.supygirls_factory line 306
-    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
-  module _core.supygirls_factory line 278
-    traceback.print_exc(file=sys.stderr)
-  module _core.supygirls_factory line 295
-    exec(self.code, glob)  # dict(__name__="__main__"))
-  module <module> line 23
-    teste()   
-  module <module> line 20
-    	cena = Cena(img=link)
-TypeError: 'module' object is not callable
-'''},
-{'date': 'Wed Jul 15 2020 15:57:20.309 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
-'error': '''ok
-ok pt2
-Traceback (most recent call last):
-  module _core.main line 177
-    dialog.action(lambda *_: self.start()
-  module _core.supygirls_factory line 135
-    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
-  module _core.supygirls_factory line 306
-    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
-  module _core.supygirls_factory line 278
-    traceback.print_exc(file=sys.stderr)
-  module _core.supygirls_factory line 295
-    exec(self.code, glob)  # dict(__name__="__main__"))
-  module <module> line 23
-    teste()
-  module <module> line 20
-    	cena=Cena(img=link)
-TypeError: 'module' object is not callable
-'''},
-{'date': 'Wed Jul 15 2020 15:59:06.918 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
-'error': '''ok
-ok pt2
-Traceback (most recent call last):
-  module _core.main line 177
-    dialog.action(lambda *_: self.start()
-  module _core.supygirls_factory line 135
-    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
-  module _core.supygirls_factory line 306
-    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
-  module _core.supygirls_factory line 278
-    traceback.print_exc(file=sys.stderr)
-  module _core.supygirls_factory line 295
-    exec(self.code, glob)  # dict(__name__="__main__"))
-  module <module> line 23
-    teste()
-  module <module> line 20
-    	cena= Cena(img=link)
-TypeError: 'module' object is not callable
-'''},
-{'date': 'Wed Jul 15 2020 16:00:09.447 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
-'error': '''ok
-ok pt2
-Traceback (most recent call last):
-  module _core.main line 177
-    dialog.action(lambda *_: self.start()
-  module _core.supygirls_factory line 135
-    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
-  module _core.supygirls_factory line 306
-    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
-  module _core.supygirls_factory line 278
-    traceback.print_exc(file=sys.stderr)
-  module _core.supygirls_factory line 295
-    exec(self.code, glob)  # dict(__name__="__main__"))
-  module <module> line 23
-    teste()
-  module <module> line 20
-    	cdd= Cena(img=CDD)
-TypeError: 'module' object is not callable
-'''},
-{'date': 'Wed Jul 15 2020 16:00:50.866 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
-'error': '''ok
-ok pt2
-ok pt3
-Traceback (most recent call last):
-  module _core.main line 177
-    dialog.action(lambda *_: self.start()
-  module _core.supygirls_factory line 135
-    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
-  module _core.supygirls_factory line 306
-    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
-  module _core.supygirls_factory line 278
-    traceback.print_exc(file=sys.stderr)
-  module _core.supygirls_factory line 295
-    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 28
+    Jogo().inicia()
   module <module> line 24
-    teste()
+    self.botao_sobre.entra(self.capa)
+AttributeError: 'module' object has no attribute 'entra'
+'''},
+{'date': 'Wed Jul 15 2020 17:49:25.662 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 28
+    Jogo().inicia()
+  module <module> line 24
+    self.botao_sobre.entra(self.capa)
+AttributeError: 'module' object has no attribute 'entra'
+'''},
+{'date': 'Wed Jul 15 2020 17:49:38.728 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 28
+    Jogo().inicia()
+  module <module> line 24
+    self.botao_sobre.entra(self.capa)
+AttributeError: 'module' object has no attribute 'entra'
+'''},
+{'date': 'Wed Jul 15 2020 17:50:04.849 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 28
+    Jogo().inicia()
+  module <module> line 24
+    self.botao_sobre.entra()
+AttributeError: 'module' object has no attribute 'entra'
+'''},
+{'date': 'Wed Jul 15 2020 17:50:35.836 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 28
+    Jogo().inicia()
+  module <module> line 24
+    self.botao_sobre.entra(self.capa)
+AttributeError: 'module' object has no attribute 'entra'
+'''},
+{'date': 'Wed Jul 15 2020 17:52:58.862 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 28
+    Jogo().inicia()
   module <module> line 23
-    	cena.vai()
-NameError: name 'cena' is not defined
+    self.capa.vai()
+AttributeError: 'module' object has no attribute 'vai'
 '''},
-{'date': 'Wed Jul 15 2020 16:04:43.697 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
-'error': '''
- module <string> line 17
-  def teste()
-              ^
-SyntaxError: invalid syntax
-'''},
-{'date': 'Wed Jul 15 2020 16:13:55.530 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+{'date': 'Wed Jul 15 2020 17:53:49.80 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
 'error': '''Traceback (most recent call last):
   module _core.main line 177
     dialog.action(lambda *_: self.start()
@@ -296,96 +436,9 @@ SyntaxError: invalid syntax
     traceback.print_exc(file=sys.stderr)
   module _core.supygirls_factory line 295
     exec(self.code, glob)  # dict(__name__="__main__"))
-  module <module> line 23
-    teste()
-  module <module> line 19
-    	cena2 = Cena(img = fundo, style=dict(left=135, top=400, width=20, height="20px"))    
-  module _spy.vitollino.main line 1001
-    Cena.c(**kwargs)
-  module _spy.vitollino.main line 1044
-    imagem, kwargs = (imagem, {}) if isinstance(imagem, str) \
-KeyError: img
-'''},
-{'date': 'Wed Jul 15 2020 16:22:23.759 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
-'error': '''
-Exception: <TypeError: Cannot read property 'charAt' of undefined>
-'''},
-{'date': 'Wed Jul 15 2020 16:22:35.372 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
-'error': '''
-Exception: <TypeError: Cannot read property 'charAt' of undefined>
-'''},
-{'date': 'Wed Jul 15 2020 16:23:43.836 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
-'error': '''Traceback (most recent call last):
-  module _core.main line 177
-    dialog.action(lambda *_: self.start()
-  module _core.supygirls_factory line 135
-    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
-  module _core.supygirls_factory line 306
-    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
-  module _core.supygirls_factory line 278
-    traceback.print_exc(file=sys.stderr)
-  module _core.supygirls_factory line 295
-    exec(self.code, glob)  # dict(__name__="__main__"))
-  module <module> line 41
-    _ = Kamui()
-  module <module> line 31
-    def pula_issun(_=0, issun_=self.issun.elt.style):
-AttributeError: 'Kamui' object has no attribute 'issun'
-'''},
-{'date': 'Wed Jul 15 2020 16:25:21.669 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
-'error': '''Traceback (most recent call last):
-  module _core.main line 177
-    dialog.action(lambda *_: self.start()
-  module _core.supygirls_factory line 135
-    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
-  module _core.supygirls_factory line 306
-    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
-  module _core.supygirls_factory line 278
-    traceback.print_exc(file=sys.stderr)
-  module _core.supygirls_factory line 295
-    exec(self.code, glob)  # dict(__name__="__main__"))
-  module <module> line 31
-    _ = Kamui()
-NameError: name 'Kamui' is not defined
-'''},
-{'date': 'Wed Jul 15 2020 16:25:33.510 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
-'error': '''Traceback (most recent call last):
-  module _core.main line 177
-    dialog.action(lambda *_: self.start()
-  module _core.supygirls_factory line 135
-    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
-  module _core.supygirls_factory line 306
-    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
-  module _core.supygirls_factory line 278
-    traceback.print_exc(file=sys.stderr)
-  module _core.supygirls_factory line 295
-    exec(self.code, glob)  # dict(__name__="__main__"))
-  module <module> line 33
-    _ = Kamui()
-NameError: name 'Kamui' is not defined
-'''},
-{'date': 'Wed Jul 15 2020 16:25:44.753 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
-'error': '''Traceback (most recent call last):
-  module _core.main line 177
-    dialog.action(lambda *_: self.start()
-  module _core.supygirls_factory line 135
-    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
-  module _core.supygirls_factory line 306
-    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
-  module _core.supygirls_factory line 278
-    traceback.print_exc(file=sys.stderr)
-  module _core.supygirls_factory line 295
-    exec(self.code, glob)  # dict(__name__="__main__"))
-  module <module> line 41
-    _ = Kamui()
-  module <module> line 31
-    def pula_issun(_=0, issun_=self.issun.elt.style):
-AttributeError: 'Kamui' object has no attribute 'issun'
-'''},
-{'date': 'Wed Jul 15 2020 17:36:05.884 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
-'error': '''
- module <string> line 25
-  elmt = Elemento(img = bal,tit = "teste" style=dict(left=500, top=60, width=200, height= "200px"))
-                                           ^
-SyntaxError: invalid syntax
+  module <module> line 28
+    Jogo().inicia()
+  module <module> line 21
+    self.capa.vai()
+AttributeError: 'module' object has no attribute 'vai'
 '''},

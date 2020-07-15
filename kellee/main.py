@@ -7,23 +7,25 @@
 from _spy.vitollino.main import Cena, Elemento, Labirinto, Texto, Codigo, Sala, STYLE
 from _spy.vittolino.main import INVENTARIO as inv
 #aqui eu importei os cenarios e os elementos
-praia= Cena (img = "https://image.freepik.com/vetores-gratis/cena-praia-com-rede_1308-31618.jpg")
-jardim= Cena (img = "https://upload.wikimedia.org/wikipedia/commons/8/83/Butchardgardens.jpg")
+STYLE["width"] = 1300
+STYLE["leight"]= "550px"
+praia= Cena (img = "https://i.imgur.com/cdMKAka.png")
+erro= Cena (img = "https://i.imgur.com/idqEr5C.png")
 casa= Cena (img = "https://plantasdecasas.com/storage/2017/07/planta-fachada-casa-115-fr-AG.jpg")
-boneca = Elemento (img= "https://i.pinimg.com/originals/05/27/ea/0527ea10d8ef34745e6c808d620c7813.png", tit="Aminoácido", x=20, y=80)
-menino = Elemento (img= "https://cdn.vitaclinica.com.br/wp-content/uploads/2018/06/Wagner1.jpg", tit="Aminoácido", x=140, y=80)
-cachorro = Elemento (img="https://super.abril.com.br/wp-content/uploads/2018/05/filhotes-de-cachorro-alcanc3a7am-o-c3a1pice-de-fofura-com-8-semanas1.png", tit="Aminoácido", x=140, y=80)
-gato = Elemento (imag="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQeeDZ_y9ueUWAbQ7zcWunGjvS7PYeVd-13Jg&usqp=CAU", tit="Aminoácido", x=20, y=80)
+triste = Elemento (img= "https://i.imgur.com/0R5Xo83.png", tit="Aminoácido", x=500, y=100)
+feliz = Elemento (img= "https://i.imgur.com/UaihdhW.png", tit="Aminoácido", x=40, y=80)
+codigo1 = Elemento (img="https://i.imgur.com/mlsszQm.png", tit="Aminoácido", style=dict(left=80, top=80, width=300, height="150px"))
+codigo2 = Elemento (imag="https://i.imgur.com/d6uejyE.png", tit="Aminoácido", x=300, y=100)
 #aqui eu coloquei o elemento para entrar na cena
-boneca.entra(praia)
-menino.entra(praia)
-cachorro.entra(jardim)
-gato.entra(casa)
+codigo1.entra(praia)
+codigo2.entra(praia)
+triste.entra(erro)
+feliz.entra(casa)
 #aqui eu falei para o elemento ir para o jardim, então quando clicar na boca ela vai p jardim
-boneca.vai=jardim.vai
-menino.vai=casa.vai
-cachorro.vai=praia.vai
-gato.vai=praia.vai
+codigo1.vai=erro.vai
+codigo2.vai=casa.vai
+triste.vai=praia.vai
+feliz.vai=praia.vai
 praia.vai()
 
 

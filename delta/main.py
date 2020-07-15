@@ -7,7 +7,7 @@
 .. codeauthor:: Anni Provietti (hotel) <mail@local.tipo>
 
 
-.. codeauthor:: Nome Sobrenome (india) <mail@local.tipo>
+.. codeauthor:: Emanuelle Simas (india) <ellesimas@gmail.com>
 
 .. codeauthor:: Nome Sobrenome (juliet) <mail@local.tipo>
 
