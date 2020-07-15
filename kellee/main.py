@@ -43,7 +43,7 @@ class Calcada:
     """ Representa uma cena da calçada da praia """
     def __init__(self):
         """ Mostra a cena da praia """
-        self.cena = Cena(CENA_CALCADA, X= 1000, Y=200,direita=Praia())
+        self.cena = Cena(CENA_CALCADA,direita=Praia())
         self.banhista = Elemento(BANHISTA, x=100, y=200, cena=self.cena)
         
         self.cena = Cena(CENA_CALCADA, direita=Mar())
