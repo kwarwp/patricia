@@ -33,9 +33,9 @@ class Carta():
 		Elemento(IMG_VERSO, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
 	def cartas():
 		if self.verso:
-            Elemento(IMG_VERSO x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
-        else: 
-            Elemento(self.imageM, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
+			Elemento(IMG_VERSO x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
+		else: 
+			Elemento(self.imageM, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
 class Jogo:
 	def vai(self):
 		self.matriz()
