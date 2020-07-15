@@ -277,3 +277,10 @@ Traceback (most recent call last):
     	cena.vai()
 NameError: name 'cena' is not defined
 '''},
+{'date': 'Wed Jul 15 2020 16:04:43.697 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 17
+  def teste()
+              ^
+SyntaxError: invalid syntax
+'''},
