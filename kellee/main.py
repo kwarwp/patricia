@@ -28,7 +28,7 @@ Changelog
 
 """
 from _spy.vitollino.main import Cena, Elemento, STYLE
-from natalia.main import Praia
+from Natalia.main import Praia
 __version__ = "15.07"
 __author__ = "Rosilane"
 STYLE["width"] = 500
