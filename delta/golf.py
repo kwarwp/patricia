@@ -112,13 +112,12 @@ class Game:
             Game.current_selected_card.card.elt.bind("click", Game.current_selected_card.turnOn)
             Game.current_selected_card.turnDown()
 
-        else: # acertou
-            Texto(Game.cena, "Acertou!!!").vai()
+        else: # acertou        
             Game.current_selected_card.card.elt.unbind("click")
-            #Game.previous_selected_card.card.elt.unbind("click")
-            
+            Game.previous_selected_card.card.elt.unbind("click")
+        
+        Texto(Game.cena, "Acertou!!!").vai()
         # reinicia turno
-        Texto(Game.cena, "Vou reiniciar aqui!!!").vai()
         Game.previous_selected_card = None
         Game.current_selected_card = None
 
