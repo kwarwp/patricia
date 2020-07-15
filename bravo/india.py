@@ -20,18 +20,21 @@ balao2 = "https://i.pinimg.com/236x/14/3a/14/143a14c4535873de51301549ba96e051.jp
 fundo = "https://i.pinimg.com/originals/ca/a8/25/caa8256ded30c7703fadf79651d7833b.jpg"
 frase1 = "https://i.pinimg.com/236x/4c/f8/6c/4cf86c786beb1c6457f31bf4fcd7ec99.jpg"
 frase2 = "https://i.pinimg.com/236x/7a/d6/c2/7ad6c2fdfd198c6903dee4425825ed9a.jpg"
+pr = "https://romanticopornatureza.files.wordpress.com/2012/03/proximo.gif"
 STYLE["width"] , STYLE["height"] = 1200, "600px"
 
 def teste():
     x = 0
     cena = Cena(img = fundo)
     cenas = Elemento(img = balao, style=dict(left=200, top=250, width=200, height="200px"))
+    cena2 = Cena(img = pr)
     elementos = Elemento(img = balao2, style=dict(left=800, top=250, width=200, height="200px"))
     txt1 = Elemento(img = frase1, style=dict(left=500, top=100, width=200, height="200px"))
     txt2 = Elemento(img = frase2, style=dict(left=500, top=100, width=200, height="200px"))
     txt1.entra(cena)
     txt2.entra(cena)
-    txt2.vai=txt2.vai
+    txt1.vai=cena2.vai
+    cena2.vai=txt2.vai
     cena.vai()
     cenas.entra(cena)
     elementos.entra(cena)
