@@ -5,7 +5,7 @@
 
 """
 
-from _spy.vitollino.main import Cena
+from _spy.vitollino.main import Cena, Elemento, STYLE
 _version_="14.07"
 _author_ = "Rosilane"
 
