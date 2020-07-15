@@ -546,3 +546,10 @@ SyntaxError: invalid syntax
     self.card2a = Card(IMG_CARD_2, [2,0], self.cena, faceDown=False)
 TypeError: __init__() got an unexpected keyword argument 'faceDown'
 '''},
+{'date': 'Tue Jul 14 2020 21:26:37.618 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 35
+  s=[(x=100 y=200),'posicao2','posicao3','']
+             ^
+SyntaxError: invalid syntax
+'''},
