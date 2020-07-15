@@ -16,10 +16,18 @@ TAMANHO = 600
 STYLE.update(width=TAMANHO, height=f"{TAMANHO}px")
 
 
-class Tabuleiro:
+class Casa:
     MADEIRA = "https://i.imgur.com/8mPjfYk.jpg"
     TABULEIRO = "https://i.imgur.com/yAeV5D6.jpg"
     MINITAB = "https://i.imgur.com/S3QJlDZ.jpg"
+    def __init__(self):
+        self.lado = TAMANHO // 8
+
+
+class Tabuleiro:
+    MADEIRA = "https://i.imgur.com/8mPjfYk.jpg"
+    TABULEIRO = "https://i.imgur.com/yPFsdKw.png"
+    MINITAB = "https://i.imgur.com/DjKe0KY.png"
     def __init__(self):
         self.lado = TAMANHO // 8
         self.tabuleiro = Cena(self.MADEIRA)
