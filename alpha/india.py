@@ -35,10 +35,12 @@ class Eventos:
     
     BONECO = "https://i.imgur.com/k63kwfa.png"
     
-    matrizMapaFase = [[link2],
-                      [link3],
-                      [link4],
-                      [link5]]
+    #matrizMapaFase contém [[local_imagem_da_fase, x_inicial, y_inicial]...]
+    matrizMapaFase = [[link2,60,240],
+                      [link3,60,240],
+                      [link4,60,240],
+                      [link5,60,240]]        
+    
     #tamanho da cena
     STYLE["width"] = 640
     
@@ -50,16 +52,6 @@ class Eventos:
     def vai(self):
         """ mostra corredor do labirinto """
         self.ambiente.vai()
-    
-#    def portal(self,x,y):
- #       global cont
-  #      self.ambiente = Cena(self.matrizMapaFase[cont][0])
-   #     STYLE["width"] = 640
-    #    self.boneco = Elemento(self.BONECO, , x=int, y=int, cena=self.ambiente)
-     #   self.boneco.x = 60
-      #  self.boneco.y = 240
-       # self.ambiente.vai()
-        #self.portal(self.boneco.x,self.boneco.y)
     
     def anda_boneco(self, ev=None):
         """" Faz o boneco caminhar com a cptura das setas. 
@@ -83,21 +75,12 @@ class Eventos:
             self.ambiente = Cena(self.matrizMapaFase[cont][0])
             STYLE["width"] = 640
             self.boneco = Elemento(self.BONECO, , x=int, y=int, cena=self.ambiente)
-            self.boneco.x = 60
-            self.boneco.y = 240
+            self.boneco.x = matrizMapaFase[cont][1]
+            self.boneco.y = matrizMapaFase[cont][2]
             self.ambiente.vai()
             cont = cont + 1
             if cont > 3:
                 cont = 0
-            #self.portal(self.boneco.x,self.boneco.y)
-#            def portal(self,x,y):
- #               self.ambiente = Cena(self.matrizMapaFase[0][0])
-  #              STYLE["width"] = 640
-   #             self.boneco = Elemento(self.BONECO, , x=int, y=int, cena=self.ambiente)
-    #            self.boneco.x = 60
-     #           self.boneco.y = 240
-      #          self.ambiente.vai()
-       #         self.portal(self.boneco.x,self.boneco.y)
             
         #se atingiu o bau, ganhou o jogo.
         # FALTA se estiver na cena certa e na posição certa, avisa que ganhou o jogo
