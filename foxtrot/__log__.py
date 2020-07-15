@@ -1290,3 +1290,10 @@ AttributeError: 'Jogo' object has no attribute 'cena_sobre'
     self.botao_sobre.vai=self.texto_sobre.vai
 AttributeError: 'Jogo' object has no attribute 'texto_sobre'
 '''},
+{'date': 'Wed Jul 15 2020 19:48:46.45 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 25
+  """criando cena"""
+  ^
+IndentationError: expected an indented block
+'''},
