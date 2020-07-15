@@ -1211,3 +1211,10 @@ AttributeError: 'Jogo' object has no attribute 'cena_sobre'
     self.cena_sobre.esquerda=capa.vai
 NameError: name 'capa' is not defined
 '''},
+{'date': 'Wed Jul 15 2020 19:39:16.527 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 55
+  """cenasobre"""
+  ^
+IndentationError: unexpected indent
+'''},
