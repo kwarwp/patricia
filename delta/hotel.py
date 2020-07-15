@@ -25,6 +25,7 @@ class Eventos:
     def __init__(self):
         self.tabuleiro = Cena(self.CENA_TABULEIRO)
         self.pycharm = Elemento(self.CARTA_PYCHARM, , x=100, y=200, cena=self.tabuleiro)
+        self.verso=Elemento(self.CARTA_VERSO, , X=200, Y=200, cena=self.tabuleiro)
         
        # self.pycharm=Elemento(self.CARTA_PYCHARM,,X=100,y=300,cena=self.tabuleiro)
         
@@ -36,7 +37,10 @@ class Eventos:
         self.tabuleiro.vai()
         
     def linkar (self):
-		self.Carta1="http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline"
+		self.Carta1=self.verso
+		self.Carta2=self.pycharm      	 
+    	 
+           
 
     def embaralhar (self):
 
