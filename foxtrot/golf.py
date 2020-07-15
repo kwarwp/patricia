@@ -10,7 +10,9 @@ Changelog
         Página inicial do Jogo.
 
 """
-from _spy.vitollino.main import Cena,Elemento,Texto
+from _spy.vitollino.main import Cena,Elemento,Texto, STYLE
+STYLE["width"] = 1010
+STYLE["heigth"] = "500px"
 
 capa_do_jogo = "https://i.imgur.com/0RVnppj.png"
 botao_jogar = "https://i.imgur.com/F3Q0bDv.png"
