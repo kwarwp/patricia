@@ -2854,3 +2854,10 @@ NameError: name 'cena' is not defined
                                                                                                   ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Jul 15 2020 12:41:39.716 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 124
+  if Game.previous_selected_card is None
+                                         ^
+SyntaxError: invalid syntax
+'''},
