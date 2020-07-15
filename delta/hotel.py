@@ -36,7 +36,7 @@ def embaralha():
 		i+=1
 		
 		 
-	carta[1].vai()
+	
 
 
 embaralha()
