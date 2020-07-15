@@ -52,7 +52,6 @@ class Eventos:
         self.ambiente.vai()
     
     def portal(self,x,y):
-        cont = cont + 1
         self.ambiente = Cena(self.matrizMapaFase[0][0])
         STYLE["width"] = 640
         self.boneco = Elemento(self.BONECO, , x=int, y=int, cena=self.ambiente)
