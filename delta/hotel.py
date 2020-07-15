@@ -43,10 +43,10 @@ class Jogo():
 		self.card2a = Card(IMG_LINUX, list_cards[2], self.cena)
 		self.card2b = Card(IMG_LINUX, list_cards[3], self.cena)
 		self.cena.vai()
-        
-        random.shuffle(carta,random.random)
-	"""def posicao(self):
-		self.carta1=Elemento(self.carta[0],,x=200,y=400)"""
+	def embaralha(self):   
+		list_cards =  [(0,0), (1,0)]
+		random.shuffle(carta,random.random)
+	
 	carta[2].vai()
 	
 
