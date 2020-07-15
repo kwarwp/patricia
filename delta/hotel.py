@@ -22,33 +22,33 @@ class Eventos:
     CARTA_PYCHARM = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_pycharm.png?disp=inline"
     
     
-    def __init__(self):
+	def __init__(self):
         self.tabuleiro = Cena(self.CENA_TABULEIRO)
-        self.pycharm = Elemento(self.CARTA_PYCHARM, , x=100, y=200, cena=self.tabuleiro)
-        self.verso=Elemento(self.CARTA_VERSO, , X=200, Y=200, cena=self.tabuleiro)
+        self.pycharm = Elemento(self.CARTA_PYCHARM, , posicao1, cena=self.tabuleiro)
+        self.verso=Elemento(self.CARTA_VERSO, , posicao2, cena=self.tabuleiro)
         
        # self.pycharm=Elemento(self.CARTA_PYCHARM,,X=100,y=300,cena=self.tabuleiro)
         
         
-        
-        
-    def vai(self):
-        """ mostra a cena da calçada. """
-        self.tabuleiro.vai()
-        
-    def linkar (self):
-		self.Carta1=self.verso
-		self.Carta2=self.pycharm      	 
-    	 
-           
+	def embaralhar (self):
 
-    def embaralhar (self):
-
-		s=['Carta1','Carta2','Carta3','Carta4']
+		s=[(x=100,y=200),'posicao2','posicao3','']
 
 		self.s=random.shuffle(s,random.random)
       	
-   
+	def linkar (self):
+		posicao1=s[0]
+		posicao2=s[1]          
+        
+	def vai(self):
+        """ mostra a cena da calçada. """
+        self.tabuleiro.vai()
+        
+        	 
+    	 
+           
+
+    
    
     def mostrar_carta(self):
 		self.s.vai()
