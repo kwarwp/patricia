@@ -268,3 +268,10 @@ SyntaxError: invalid syntax
                          ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Jul 15 2020 17:06:44.308 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 54
+  ''''  def portal (self, x, y):
+  ^
+IndentationError: unexpected indent
+'''},
