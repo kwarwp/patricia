@@ -100,6 +100,7 @@ class Game:
         
         # tem um par selecionado?
         if Game.previous_selected_card is None:
+            # primeira carta selecionada
             Game.previous_selected_card = selected_card
             # desabilita o clique sobre carta virada
             Game.previous_selected_card.elt.unbind("click")
