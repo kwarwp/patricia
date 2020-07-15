@@ -38,7 +38,7 @@ class Jogo:
 	"matriz 2x2"
 	def matriz(self):
 		self.cena = Cena()
-		list_cards=self.shuffle_cards()
+		list_cards=self.embaralha()
 		self.card1a = Carta(IMG_PYCHARM, list_cards[0], self.cena)
 		self.card1b = Carta(IMG_PYCHARM, list_cards[1], self.cena)
 		self.card2a = Carta(IMG_LINUX, list_cards[2], self.cena)
