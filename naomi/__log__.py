@@ -269,3 +269,10 @@ AttributeError: 'function' object has no attribute 'shuffle'
     	carta[0].vai()
 AttributeError: 'int' object has no attribute 'vai'
 '''},
+{'date': 'Wed Jul 15 2020 01:52:02.509 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 11
+  carta[0].vai()=carta[0](x=400,y=500)
+                ^
+SyntaxError: can't assign to function call 
+'''},
