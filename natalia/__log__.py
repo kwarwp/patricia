@@ -66,3 +66,10 @@ Traceback (most recent call last):
   module <module> line 13
     from _spy.vitollino.main import cena
 '''},
+{'date': 'Wed Jul 15 2020 14:42:34.453 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 27
+  # Mar().vai()
+               ^
+IndentationError: expected an indented block
+'''},
