@@ -1022,3 +1022,10 @@ NameError: name 'capa' is not defined
     self.cena_sobre.esquerda=capa.vai
 NameError: name 'capa' is not defined
 '''},
+{'date': 'Wed Jul 15 2020 19:23:59.58 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 27
+  """criando cena"""
+  ^
+IndentationError: expected an indented block
+'''},
