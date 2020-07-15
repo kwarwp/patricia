@@ -105,9 +105,6 @@ class Game:
             Game.previous_selected_card.card.elt.unbind("click")
             return
             
-        
-        
-        
         # Não acertou
         if Game.previous_selected_card.name != selected_card.name:            
             # reabilita a ação o clique e vira a carta 1 para baixo
