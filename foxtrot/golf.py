@@ -21,7 +21,7 @@ class Jogo:
         self.capa =Cena(img= capa_do_jogo)
         self.botao_jogar = Elemento(img=botao_jogar)
         self.botao_sobre = Elemento(img=botao_sobre)
-        self.capa_do_jogo.vai()
+        self.capa.vai()
         self.botao_sobre.entra(self.capa)
         self.botao_jogar.entra(self.capa)
         
