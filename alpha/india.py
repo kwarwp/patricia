@@ -77,20 +77,20 @@ class Eventos:
         elif key in [38, 40]:
             key = (key - 39) * 5
             self.boneco.y += key # muda a posição de mais um ou menos um
-        self.portal(self.boneco.x,self.boneco.y)
+        #self.portal(self.boneco.x,self.boneco.y)
         #se o elemento atingiu uma porta, muda para a próxima cena
         # FALTA mapear os pontos, criar função para passar parametros ou chamar outra classe
         #ideia de cria uma matriz com os pontos de localização do portal
 ##    def portal (self, x, y)
-  #      x = self.boneco.x
-   #     y = self.boneco.y
-    #    if x > 400 and y > 200:
-     #       self.ambiente = Cena(self.matrizMapaFase[0][0])
-      #      STYLE["width"] = 640
-       #     self.boneco = Elemento(self.BONECO, , x=int, y=int, cena=self.ambiente)
-        #    x = 60
-         #   y = 240
-          #  self.ambiente.vai()
+        x = self.boneco.x
+        y = self.boneco.y
+        if x > 400 and y > 200:
+            self.ambiente = Cena(self.matrizMapaFase[0][0])
+            STYLE["width"] = 640
+            self.boneco = Elemento(self.BONECO, , x=int, y=int, cena=self.ambiente)
+            x = 60
+            y = 240
+            self.ambiente.vai()
             
         #se atingiu o bau, ganhou o jogo.
         # FALTA se estiver na cena certa e na posição certa, avisa que ganhou o jogo
