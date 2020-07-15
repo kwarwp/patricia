@@ -275,3 +275,10 @@ NameError: name 'static_method' is not defined
     pino, modulo = COR[cor], MOD[cor]
 NameError: name 'COR' is not defined
 '''},
+{'date': 'Wed Jul 15 2020 10:45:59.539 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 26
+  style={"background-position"=f"{-x}px {-y}px"})
+                              ^
+SyntaxError: can't assign to function call 
+'''},
