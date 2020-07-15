@@ -247,3 +247,10 @@ NameError: name 'andaboneco' is not defined
     document.bind("keydown", self.anda_boneco)  # captura o evento de teclado
 AttributeError: 'GUI' object has no attribute 'anda_boneco'
 '''},
+{'date': 'Wed Jul 15 2020 15:56:16.394 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 73
+  if .self.boneco.x > 200 and self.boneco.y > 200:
+      ^
+SyntaxError: invalid syntax
+'''},
