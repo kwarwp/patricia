@@ -40,12 +40,9 @@ class Jogo():
 		self.cena = Cena()
 		self.card1a = Card(IMG_PYCHARM, list_cards[0], self.cena)
 		self.card1b = Card(IMG_PYCHARM, list_cards[1], self.cena)
-        
-        self.card2a = Card(IMG_LINUX, list_cards[2], self.cena)
-        self.card2b = Card(IMG_LINUX, list_cards[3], self.cena)
-        
-       
-        self.cena.vai()
+		self.card2a = Card(IMG_LINUX, list_cards[2], self.cena)
+		self.card2b = Card(IMG_LINUX, list_cards[3], self.cena)
+		self.cena.vai()
         
         random.shuffle(carta,random.random)
 	"""def posicao(self):
