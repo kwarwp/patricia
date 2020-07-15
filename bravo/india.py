@@ -29,15 +29,15 @@ def teste():
     txt1 = Texto(cena,"Vamos aprender a programar?")
     txt2 = Texto(cena,"Escolha entre cenas ou elementos para começar.")
     #txt1.vai=txt2.vai
-    #cena.vai()
+    cena.vai()
     cenas.entra(cena)
     elementos.entra(cena)
     if x == 0:
-        #txt1.vai()
+        txt1.vai()
         print("1")
         x = 1
     if x == 1:
-        #txt2.vai()
+        txt2.vai()
         print("2")
     #cenas.vai()
     #elementos.vai()
