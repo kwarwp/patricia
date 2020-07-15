@@ -17,14 +17,37 @@ from browser import document
 
 
 """ Imagens do Jogo da Memória: verso, pycharm, linux
-"""
 
-def embaralha():
-	carta=[0,0,0]
-	carta[0]=Cena(img="http://activufrj.nce.ufrj.br/file/ProgOO/Card_pycharm.png?disp=inline")
-	carta[1]=Cena(img="http://activufrj.nce.ufrj.br/file/ProgOO/Card_Linux.png?disp=inline")
-	carta[2]=Cena(img="http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline")
-	random.shuffle(carta,random.random)
+"""
+IMG_PYCHARM="http://activufrj.nce.ufrj.br/file/ProgOO/Card_pycharm.png?disp=inline"
+IMG_LINUX="http://activufrj.nce.ufrj.br/file/ProgOO/Card_Linux.png?disp=inline"
+IMG_VERSO="http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline"
+IMG_ALTURA=200
+IMG_LARGURA=200
+class Carta():
+	def _init_(self,imagem,posicao,cena):
+		self.imagem=imagem
+		self.posicao=posicao
+		pos_x = 50 + self.position[0]*IMG_WIDTH
+		pos_y = 50 + self.position[1]*IMG_HEIGHT
+		Elemento(self.imagem, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
+	
+class Jogo():
+	def vai(self):
+		self.matriz()
+"matriz 2x2"
+	def matriz_2x2(self):
+		self.cena = Cena()
+		self.card1a = Card(IMG_PYCHARM, list_cards[0], self.cena)
+		self.card1b = Card(IMG_PYCHARM, list_cards[1], self.cena)
+        
+        self.card2a = Card(IMG_LINUX, list_cards[2], self.cena)
+        self.card2b = Card(IMG_LINUX, list_cards[3], self.cena)
+        
+       
+        self.cena.vai()
+        
+        random.shuffle(carta,random.random)
 	"""def posicao(self):
 		self.carta1=Elemento(self.carta[0],,x=200,y=400)"""
 	carta[2].vai()
