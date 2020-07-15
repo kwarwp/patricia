@@ -22,7 +22,7 @@ IMG_CARD_3 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Gitlab.png?disp=inli
 IMG_CARD_4 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_github.png?disp=inline"
 IMG_CARD_5 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Activ.png?disp=inline"
 
-IMG_WIDTH = 100
+IMG_WIDTH = 150
 IMG_HEIGHT = 150
 
 
