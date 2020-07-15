@@ -11,7 +11,7 @@ Changelog
 
 """
 
-from _spy.vitollino.main import Cena, Elemento, STYLE
+from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
 import random
 
 __version__ = "20.07"
@@ -39,13 +39,15 @@ class Card():
         self.card = Elemento(IMG_CARD_FACE_DOWN, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
         self.card.elt.bind("mouseover", self.turn)
         self.removed = False
+        self.nomeTexto = Texto(self.card, "texto")
+        self.nomeTexto.vai()
         
     def turn(self, ev=None):
         #if self.faceDown:
         #    self.card =Elemento(IMG_CARD_FACE_DOWN, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
         #else: 
         self.card.image = self.image
-        nomeTexto = Texto(nomeCena, "texto")
+
         
         
         
