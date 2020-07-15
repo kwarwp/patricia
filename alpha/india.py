@@ -77,7 +77,7 @@ class Eventos:
             self.boneco.y = 240
             self.ambiente.vai()
             self.portal(self.boneco.x,self.boneco.y)
-            if se cont > 3:
+            if cont > 3:
                 cont = 0
             
         #se atingiu o bau, ganhou o jogo.
