@@ -21,13 +21,13 @@ from browser import document
 
 def embaralha():
 	carta=[0,0,0]
-	carta[0]=Elemento(img="http://activufrj.nce.ufrj.br/file/ProgOO/Card_pycharm.png?disp=inline")
+	carta[0]=Cena(img="http://activufrj.nce.ufrj.br/file/ProgOO/Card_pycharm.png?disp=inline")
 	carta[1]=Cena(img="http://activufrj.nce.ufrj.br/file/ProgOO/Card_Linux.png?disp=inline")
 	carta[2]=Cena(img="http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline")
 	random.shuffle(carta,random.random)
-	def posicao(self):
-		self.carta1=Elemento(self.carta[0],,x=200,y=400)
-		self.carta1.vai()
+	"""def posicao(self):
+		self.carta1=Elemento(self.carta[0],,x=200,y=400)"""
+	carta[2].vai()
 	
 
 embaralha()
