@@ -55,7 +55,7 @@ class Game:
     def create_2x5_cards(self):
     
         """ 
-             matrix 2x5:
+            matrix 2x5:
             1A 1B 2A 2B 3A
             3B 4A 4B 5A 5B
         """
