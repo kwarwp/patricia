@@ -90,11 +90,12 @@ class Game:
         
         self.cena.vai()
 
-    @staticmethod
-    def rule(selected_card):  
+    def rule(self, selected_card):  
         if self.previous_selected_card == None:
             self.previous_selected_card = selected_card
-        elif self.previous_selected_card.name != selected_card.name:
+            return
+            
+        if self.previous_selected_card.name != selected_card.name:
             self.Texto = Texto(self.cena, "Errou!!!")
             self.Texto.mostra()
             self.Texto.esconde()
