@@ -49,11 +49,28 @@ class Pino(Elemento):
         
     @staticmethod
     def pinos(cor, table):
+        """ Cria um conjunto de pinos de uma cor e aloca no dado tabuleiro."""
         casas = enumerate([casa for linha in table for casa in linha])
         return [Pino(indice, cor, casa) for indice, casa in casas]
 
 
 class Casa(Elemento):
+    """ Casa do jogo quarto, podendo ser do tabuleiro central ou adjacentes.
+    
+        Observação: Uma *folha sprite* é uma imagem contendo vários desenhos com peças
+        que serão usados em um jogo.
+    
+        :param base: A cena em que este tabuleiro vai entrar.
+        :param fundo: A imagem que representa esta casa.
+        :param livre: Indica se a casa está livre ou ocupada quando for criada.
+        :param t: Tamanho (altura e largura do desenho da casa, inicia em um oitavo do tabuleiro.
+        :param x: A posição absoluta horizontal em casas que esta casa vai ser colocada.
+        :param y: A posição absoluta vertical em casas que esta casa vai ser colocada.
+        :param dx: O deslocamento horizontal em casas que esta casa tem em relação à esquerda.
+        :param dy: O deslocamento vertical em casas que esta casa tem em relação ao topo.
+        :param mx: Ajuste fino horizontal em pixels do posicionamento da casa.
+        :param my: Ajuste fino vertical em pixels do posicionamento da casa.
+    """
     def __init__(self, base, fundo, x, y, dx=0, dy=3, mx=0, my=0, livre=False, t=TAMANHO // 8):
         x, y = t * (x + dx) + mx, t * (y + dy) - my
         dropper = {f"{nome}{pino}": lambda ev, nome_pino, *_: self.entrar(nome_pino)
