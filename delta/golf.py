@@ -32,8 +32,8 @@ class Card():
         self.image = image
         self.faceDown = True
         self.position = position
-        pos_y = self.position[0]*IMG_WIDTH
-        pos_x = self.position[1]*IMG_HEIGHT
+        pos_x = self.position[0]*IMG_WIDTH
+        pos_y = self.position[1]*IMG_HEIGHT
         self.imageFaceDown = Elemento("http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline", x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
         self.removed = False
         
