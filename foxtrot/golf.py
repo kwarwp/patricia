@@ -26,5 +26,5 @@ class Jogo:
         self.botao_jogar.entra(self.capa)
         
 if __name__ == "__main__":
-    main()
+    Jogo()
 
