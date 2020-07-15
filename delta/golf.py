@@ -102,7 +102,8 @@ class Game:
             self.selected_card.elt.bind("click", None)
             self.previous_selected_card.turnDown()
             selected_card.turnDown()
-            self.previous_selected_card = None
+        
+        self.previous_selected_card = None
               
 
     def shuffle_cards(self):   
