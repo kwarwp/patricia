@@ -846,3 +846,21 @@ AttributeError: 'Jogo' object has no attribute 'cena_sobre'
     self.seta_esquerda.vai=self.capa.vai
 AttributeError: 'Jogo' object has no attribute 'seta_esquerda'
 '''},
+{'date': 'Wed Jul 15 2020 19:10:59.294 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 63
+    Jogo()
+  module <module> line 52
+    self.cena_sobre.esquerda=capa.vai
+NameError: name 'capa' is not defined
+'''},
