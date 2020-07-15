@@ -425,3 +425,25 @@ Traceback (most recent call last):
     from natalia.main import Mar
 ImportError: cannot import name 'Mar'
 '''},
+{'date': 'Wed Jul 15 2020 14:54:10.773 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 59
+    Calcada().vai()
+  module <module> line 46
+    self.cena = Cena(CENA_CALCADA, X= 1000, Y=200,direita=Praia())
+  module _spy.vitollino.main line 1001
+    Cena.c(**kwargs)
+  module _spy.vitollino.main line 1044
+    imagem, kwargs = (imagem, {}) if isinstance(imagem, str) \
+AttributeError: 'int' object has no attribute '__getitem__'
+'''},
