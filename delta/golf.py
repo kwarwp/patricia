@@ -51,7 +51,9 @@ class Game:
             3B 4A 4B 5A 5B
         """
         self.cena = Cena()
-        self.card1a = Card(IMG_CARD_1, [0,0], self.cena)
+        list_cards=self.shuffle_cards()
+        
+        self.card1a = Card(IMG_CARD_1, list_cards[0], self.cena)
         self.card1b = Card(IMG_CARD_1, [1,0], self.cena)
         
         self.card2a = Card(IMG_CARD_2, [2,0], self.cena)
@@ -67,8 +69,12 @@ class Game:
         self.card5b = Card(IMG_CARD_5, [4,1], self.cena)
         self.cena.vai()
         
-    def randomize_cards(self, ):
-        pass
+    def shuffle_cards(self):
+        
+        list_cards =  {[0,0], [1,0], [2,0], [3,0], [4,0], [0,1], [1,1], [2,1], [3,1], [4,1]}
+        random.shuffle(list_cards)
+        return list_cards
+        
     
     def create_grid(self, grid_size):
         for row_num in range(grid_size):
