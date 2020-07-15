@@ -96,11 +96,11 @@ class Game:
             return
         
         if self.previous_selected_card.name != selected_card.name:
-            self.previous_selected_card.turnDown()
-            selected_card.turnDown()
             self.previous_selected_card = None
             self.Texto = Texto(self.cena, "Errou!!!")
             self.Texto.vai()
+            self.previous_selected_card.turnDown()
+            selected_card.turnDown()
               
 
     def shuffle_cards(self):   
