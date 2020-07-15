@@ -27,7 +27,6 @@ IMG_CARD_5 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Activ.png?disp=inlin
 IMG_WIDTH = 150
 IMG_HEIGHT = 150
 
-
 class Card():
     def __init__(self, name, image, position, cena, rule):
         self.rule = rule
@@ -36,8 +35,8 @@ class Card():
         self.image = image
         self.faceDown = True
         self.position = position
-        self.pos_x = 50 + self.position[0]*IMG_WIDTH
-        self.pos_y = 50 + self.position[1]*IMG_HEIGHT
+        self.pos_x = 50 + self.position[0] * IMG_WIDTH
+        self.pos_y = 50 + self.position[1] * IMG_HEIGHT
         self.card = Elemento(IMG_CARD_FACE_DOWN, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.card.elt.bind("click", self.turnOn)
         self.removed = False
@@ -54,9 +53,7 @@ class Card():
         self.card.elt.bind("click", self.turnOn)
 
         
-        
 class Game:
-    
     # referência para o Elemento
     previous_selected_card = None
     current_selected_card = None
@@ -67,7 +64,6 @@ class Game:
         self.create_2x5_cards()
     
     def create_2x5_cards(self):
-    
         """ 
             matrix 2x5:
             1A 1B 2A 2B 3A
@@ -94,6 +90,7 @@ class Game:
 
     @staticmethod
     def rule(selected_card):
+    
         # tem um par selecionado?
         if Game.previous_selected_card == None:
             Game.previous_selected_card = selected_card
@@ -107,20 +104,20 @@ class Game:
         if Game.previous_selected_card.name != Game.current_selected_card.name:
             Texto(Game.cena, "Errou!!!").vai()
             
-            # rehabilita a ação o clique e vira a carta 1 para baixo
+            # reabilita a ação o clique e vira a carta 1 para baixo
             Game.previous_selected_card.card.elt.bind("click", Game.previous_selected_card.turnOn)
             Game.previous_selected_card.turnDown()
             
-            # rehabilita a ação do clique e vira a carta 2 para baixo
+            # reabilita a ação do clique e vira a carta 2 para baixo
             Game.current_selected_card.card.elt.bind("click", Game.current_selected_card.turnOn)
             Game.current_selected_card.turnDown()
-            
 
         else: # acertou
             Texto(Game.cena, "Acertou!!!").vai()
-            Game.previous_selected_card.card.elt.unbind("click")
             Game.current_selected_card.card.elt.unbind("click")
-            
+            Game.previous_selected_card.card.elt.unbind("click")
+        
+        # reinicia turno
         Game.previous_selected_card = None
         Game.current_selected_card = None
 
