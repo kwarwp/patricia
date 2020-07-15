@@ -1410,3 +1410,10 @@ NameError: name 'i' is not defined
          ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Jul 15 2020 02:22:36.56 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 35
+  i++
+      ^
+SyntaxError: invalid syntax
+'''},
