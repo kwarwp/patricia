@@ -42,7 +42,7 @@ class Card():
         self.removed = False
         
     def turnOn(self, ev=None):
-        self.card =Elemento(self.image, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
+        self.card = Elemento(self.image, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.faceDown = False
         self.card.elt.bind("click", self.turnDown)
         
@@ -51,7 +51,7 @@ class Card():
         #self.nomeTexto.vai()
     
     def turnDown(self, env=None):
-        self.card =Elemento(IMG_CARD_FACE_DOWN, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
+        self.card = Elemento(IMG_CARD_FACE_DOWN, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.faceDown = True
         self.card.elt.bind("click", self.turnOn)
         
@@ -89,8 +89,7 @@ class Game:
         
         self.cena.vai()
         
-    def shuffle_cards(self):
-        
+    def shuffle_cards(self):   
         list_cards =  [(0,0), (1,0), (2,0), (3,0), (4,0), (0,1), (1,1), (2,1), (3,1), (4,1)]
         random.shuffle(list_cards)
         return list_cards
