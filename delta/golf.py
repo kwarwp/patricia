@@ -39,19 +39,19 @@ class Card():
         self.pos_x = 50 + self.position[0]*IMG_WIDTH
         self.pos_y = 50 + self.position[1]*IMG_HEIGHT
         self.card = Elemento(IMG_CARD_FACE_DOWN, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
-        self.card.elt.onclick = self.turnOn
+        self.card.elt.bind("click", self.turnOn)
         self.removed = False
         
     def turnOn(self, env=None):
         self.card = Elemento(self.image, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.faceDown = False
-        self.card.elt.onclick = self.turnDown
+        self.card.elt.bind("click", self.turnDown)
         self.rule(self)
         
     def turnDown(self, env=None):
         self.card = Elemento(IMG_CARD_FACE_DOWN, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.faceDown = True
-        self.card.elt.onclick = self.turnOn
+        self.card.elt.bind("click", self.turnOn)
 
         
         
@@ -104,9 +104,9 @@ class Game:
             time.sleep(10)
         else: # acertou
             Texto(Game.cena, "Acertou!!!").vai()
-            #Game.previous_selected_card.card.elt.onclick = None
-            #selected_card.card.elt.onclick = None
-            #Game.previous_selected_card = None
+            Game.previous_selected_card.card.elt.bind("click", None)
+            selected_card.card.elt.bind("click", None)
+            Game.previous_selected_card = None
             
         Game.previous_selected_card = None
 
