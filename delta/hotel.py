@@ -33,7 +33,7 @@ class Carta():
 		Elemento(IMG_VERSO, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
 	def cartas():
 		if self.verso:
-			Elemento(IMG_VERSO, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
+			Elemento(self.imagem, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
 		else: 
 			Elemento(self.imagem, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
 class Jogo:
@@ -43,7 +43,7 @@ class Jogo:
 	def matriz(self):
 		self.cena = Cena()
 		list_cards=self.embaralha()
-           self.verso=False
+          # self.verso=False
 		self.card1a = Carta(IMG_VERSO, list_cards[0], self.cena)
 		self.card1b = Carta(IMG_PYCHARM, list_cards[1], self.cena)
 		self.card2a = Carta(IMG_LINUX, list_cards[2], self.cena)
