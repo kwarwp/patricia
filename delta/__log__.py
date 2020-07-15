@@ -2064,3 +2064,10 @@ NameError: name 'carta' is not defined
     	carta[1].vai()
 NameError: name 'carta' is not defined
 '''},
+{'date': 'Wed Jul 15 2020 03:37:46.365 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 31
+  carta[2].vai()
+  ^
+IndentationError: unexpected indent
+'''},
