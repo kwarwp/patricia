@@ -35,10 +35,11 @@ class Eventos:
     
     BONECO = "https://i.imgur.com/k63kwfa.png"
     
-    matrizMapaFase = [[link2],
-                      [link3],
-                      [link4],
-                      [link5]]
+    #matrizMapaFase = [[local_imagem_fase, x_inicial, y_inicial]...]
+    matrizMapaFase = [[link2,100,100],
+                      [link3,100,100],
+                      [link4,100,100],
+                      [link5,100,100]]
     #tamanho da cena
     STYLE["width"] = 640
     
@@ -73,8 +74,8 @@ class Eventos:
             self.ambiente = Cena(self.matrizMapaFase[cont][0])
             STYLE["width"] = 640
             self.boneco = Elemento(self.BONECO, , x=int, y=int, cena=self.ambiente)
-            self.boneco.x = 60
-            self.boneco.y = 240
+            self.boneco.x = matrizMapaFase[cont][1]
+            self.boneco.y = matrizMapaFase[cont][2]
             self.ambiente.vai()
             cont = cont + 1
             if cont > 3:
