@@ -37,16 +37,16 @@ class Card():
         pos_x = 50 + self.position[0]*IMG_WIDTH
         pos_y = 50 + self.position[1]*IMG_HEIGHT
         self.card = Elemento(IMG_CARD_FACE_DOWN, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
-        self.card.elt.bind("mouseover", self.turn)
+        self.card.elt.bind("mouseclick", self.turn)
         self.removed = False
-        self.nomeTexto = Texto(self.card, "texto")
-        self.nomeTexto.vai()
         
     def turn(self, ev=None):
         #if self.faceDown:
         #    self.card =Elemento(IMG_CARD_FACE_DOWN, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
         #else: 
         self.card.image = self.image
+        self.nomeTexto = Texto(self.card, "texto")
+        self.nomeTexto.vai()
 
         
         
