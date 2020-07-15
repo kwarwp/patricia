@@ -87,7 +87,7 @@ class Game:
         self.card5a = Card("Activ", IMG_CARD_5, list_cards[8], Game.cena, self.rule)
         self.card5b = Card("Activ", IMG_CARD_5, list_cards[9], Game.cena, self.rule)
         
-        cena.vai()
+        Game.cena.vai()
 
     def rule(self, selected_card):  
         if Game.previous_selected_card == None:
@@ -95,17 +95,19 @@ class Game:
             return
             
         if Game.previous_selected_card.name != selected_card.name:
-            self.texto = Texto(self.cena, "Errou!!!")
-            self.texto.mostra()
+            Texto(Game.cena, "Errou!!!").vai()
             #self.texto.esconde()
             #time.sleep(5)
             Game.previous_selected_card.turnDown()
             selected_card.turnDown()
         else:
-            Game.previous_selected_card.elt.bind("click", None)
+            Game.previous_selected_card.elt.bind("click", Game.previous_selected_card.turnOn())
+            Game.previous_selected_card.turnOn()
             selected_card.elt.bind("click", None)
+            Game.previous_selected_card = None
             
-        Game.previous_selected_card = None
+        Game.previous_selected_card = None        
+        
               
 
     def shuffle_cards(self):   
