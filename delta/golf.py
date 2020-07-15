@@ -89,13 +89,15 @@ class Game:
         
     
     def rule(self, selected_card):  
-        if selected_card_1 == None:
-            selected_card_1 = selected_card
-        if selected_card_2 == None:
-            selected_card_2 = selected_card
-            if selected_card_1.name != selected_card_2.name:
-                selected_card_1.turnDown()
-                selected_card_2.turnDown()
+        if self.selected_card_1 == None:
+            self.selected_card_1 = selected_card
+        if self.selected_card_2 == None:
+            self.selected_card_2 = selected_card
+            if self.selected_card_1.name != selected_card_2.name:
+                self.selected_card_1.turnDown()
+                self.selected_card_2.turnDown()
+                self.selected_card_1 = None
+                self.selected_card_2 = None
                 self.Texto = Texto(self.cena, "Errou!!!")
                 self.Texto.vai()
         
