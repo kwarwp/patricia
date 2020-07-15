@@ -13,7 +13,7 @@ Changelog
 
 import random
 from _spy.vitollino.main import Cena, Elemento, Texto
-from browser import document
+
 
 
 """ Imagens do Jogo da Memória: verso, pycharm, linux
@@ -29,9 +29,9 @@ def embaralha():
 		carta1=Elemento(self.carta[0],,x=200,y=400)
 		self.carta2=Cena(self.carta[1],,x=100,y=100)
       """
-def vai():
-	
-	carta[2].vai()
+
+	for i in range(0,2):
+		carta[i].vai()
 
 
 embaralha()
