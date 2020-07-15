@@ -2780,3 +2780,10 @@ IndentationError: unexpected indent
                   ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Jul 15 2020 09:23:20.864 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 96
+  elsif self.previous_selected_card.name != selected_card.name:
+         ^
+SyntaxError: invalid syntax
+'''},
