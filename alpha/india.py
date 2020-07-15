@@ -35,12 +35,10 @@ class Eventos:
     
     BONECO = "https://i.imgur.com/k63kwfa.png"
     
-    #matrizMapaFase contém [[local_imagem_da_fase, x_inicial, y_inicial]...]
-    matrizMapaFase = [[link2,60,240],
-                      [link3,60,240],
-                      [link4,60,240],
-                      [link5,60,240]]        
-    
+    matrizMapaFase = [[link2],
+                      [link3],
+                      [link4],
+                      [link5]]
     #tamanho da cena
     STYLE["width"] = 640
     
@@ -75,11 +73,11 @@ class Eventos:
             self.ambiente = Cena(self.matrizMapaFase[cont][0])
             STYLE["width"] = 640
             self.boneco = Elemento(self.BONECO, , x=int, y=int, cena=self.ambiente)
-            self.boneco.x = matrizMapaFase[cont][1]
-            self.boneco.y = matrizMapaFase[cont][2]
+            self.boneco.x = 60
+            self.boneco.y = 240
             self.ambiente.vai()
-            cont = cont + 1
-            if cont > 3:
+            self.portal(self.boneco.x,self.boneco.y)
+            if se cont > 3:
                 cont = 0
             
         #se atingiu o bau, ganhou o jogo.
