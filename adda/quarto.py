@@ -20,18 +20,31 @@ STYLE.update(width=TAMANHO, height=f"{TAMANHO}px")
 
 
 class Pino(Elemento):
-    PINOS = {}
+    """ Pinos do jogo quarto variando em cor, altura, forma e buraco
+    
+        Observação: Uma *folha sprite* é uma imagem contendo vários desenhos com peças
+        que serão usados em um jogo.
+    
+        :param indice: O índice do pino na *folha sprite* (cada imagem tem 8 pinos).
+        :param cor: Nome da imagem sprite com um conjunto de pinos claros ou escuros.
+        :param casa: Casa original onde o pino vai ser colocado.
+        :param dx: o intervalo horizontal em pixels entre duas figuras de pino na *folha sprite*.
+        :param dy: o intervalo vertical em pixels entre duas figuras de pino na *folha sprite*.
+    """
+    PINOS = {}  # Coleção de todos pinos criados, serve para localizar um pino dado o nome.
+    # COR é o dicionário com duas *folhas sprite* de pinos colocados no topo e no lado.
     COR = dict(topo="https://imgur.com/Wo6skC7.png", lado="https://imgur.com/chvIdvJ.png")
-    MOD = dict(topo=2, lado=4)
+    MOD = dict(topo=2, lado=4)  # Número de figuras por linha em cada *folha sprite*.
     def __init__(self, indice, cor, casa, dx=101, dy=60):
         pino, modulo = self.COR[cor], self.MOD[cor]
         x, y, nome = indice // modulo * dx , (indice % modulo) * dy, f"{cor}{indice}"
         super().__init__(pino, x=8, y=-2, w=dx, h=dy, cena=casa, tipo="auto", tit=nome, drag=True,
         style={"background-position": f"{-x}px {-y}px"})
-        self.PINOS[nome] = self
+        self.PINOS[nome] = self  # adiciona este pino criado aqui (self) no dicionário de pinos.
         
     @staticmethod
     def pino(nome):
+        """ Retorna o pino localizado dado o nome."""
         return Pino.PINOS[nome]
         
     @staticmethod
