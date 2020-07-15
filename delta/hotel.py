@@ -38,10 +38,10 @@ class Jogo:
 	"matriz 2x2"
 	def matriz(self):
 		self.cena = Cena()
-		self.card1a = Card(IMG_PYCHARM, list_cards[0], self.cena)
-		self.card1b = Card(IMG_PYCHARM, list_cards[1], self.cena)
-		self.card2a = Card(IMG_LINUX, list_cards[2], self.cena)
-		self.card2b = Card(IMG_LINUX, list_cards[3], self.cena)
+		self.card1a = Carta(IMG_PYCHARM, list_cards[0], self.cena)
+		self.card1b = Carta(IMG_PYCHARM, list_cards[1], self.cena)
+		self.card2a = Carta(IMG_LINUX, list_cards[2], self.cena)
+		self.card2b = Carta(IMG_LINUX, list_cards[3], self.cena)
 		self.cena.vai()
 	def embaralha(self):   
 		list_cards =  [(0,0), (1,0)]
