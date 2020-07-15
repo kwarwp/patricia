@@ -943,3 +943,10 @@ NameError: name 'capa' is not defined
     self.cena_sobre.esquerda=capa.vai
 NameError: name 'capa' is not defined
 '''},
+{'date': 'Wed Jul 15 2020 19:16:03.759 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 50
+  def sobre(self)
+                  ^
+SyntaxError: invalid syntax
+'''},
