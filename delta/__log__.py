@@ -2637,3 +2637,10 @@ TypeError: object() takes no parameters
     		self.carta1 = Carta(IMG_VERSO, list_cards[0], self.cena)
 NameError: name 'Carta' is not defined
 '''},
+{'date': 'Wed Jul 15 2020 05:01:47.792 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 5
+  codeauthor:: Anni Provietti <anniprovietti@gmail.com>
+  ^
+IndentationError: unexpected indent
+'''},
