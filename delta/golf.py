@@ -29,8 +29,8 @@ IMG_HEIGHT = 150
 
 
 class Card():
-    def __init__(self, image, position, cena):
-    
+    def __init__(self, image, position, cena, rule):
+        self.rule = rule
         self.cena = cena
         self.image = image
         self.faceDown = True
@@ -45,10 +45,9 @@ class Card():
         self.card = Elemento(self.image, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.faceDown = False
         self.card.elt.bind("click", self.turnDown)
+        self.rule()
         
-        # para teste
-        #self.nomeTexto = Texto(self.card, "Texto")
-        #self.nomeTexto.vai()
+        
     
     def turnDown(self, env=None):
         self.card = Elemento(IMG_CARD_FACE_DOWN, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
@@ -71,23 +70,27 @@ class Game:
         self.cena = Cena()
         list_cards=self.shuffle_cards()
         
-        self.card1a = Card(IMG_CARD_1, list_cards[0], self.cena)
-        self.card1b = Card(IMG_CARD_1, list_cards[1], self.cena)
+        self.card1a = Card(IMG_CARD_1, list_cards[0], self.cena, self.rule)
+        self.card1b = Card(IMG_CARD_1, list_cards[1], self.cena, self.rule)
         
-        self.card2a = Card(IMG_CARD_2, list_cards[2], self.cena)
-        self.card2b = Card(IMG_CARD_2, list_cards[3], self.cena)
+        self.card2a = Card(IMG_CARD_2, list_cards[2], self.cena, self.rule)
+        self.card2b = Card(IMG_CARD_2, list_cards[3], self.cena, self.rule)
         
-        self.card3a = Card(IMG_CARD_3, list_cards[4], self.cena)
-        self.card3b = Card(IMG_CARD_3, list_cards[5], self.cena)
+        self.card3a = Card(IMG_CARD_3, list_cards[4], self.cena, self.rule)
+        self.card3b = Card(IMG_CARD_3, list_cards[5], self.cena, self.rule)
         
-        self.card4a = Card(IMG_CARD_4, list_cards[6], self.cena)
-        self.card4b = Card(IMG_CARD_4, list_cards[7], self.cena)
+        self.card4a = Card(IMG_CARD_4, list_cards[6], self.cena, self.rule)
+        self.card4b = Card(IMG_CARD_4, list_cards[7], self.cena, self.rule)
         
-        self.card5a = Card(IMG_CARD_5, list_cards[8], self.cena)
-        self.card5b = Card(IMG_CARD_5, list_cards[9], self.cena)
+        self.card5a = Card(IMG_CARD_5, list_cards[8], self.cena, self.rule)
+        self.card5b = Card(IMG_CARD_5, list_cards[9], self.cena, self.rule)
         
         
         self.cena.vai()
+        
+    def rule(self) :
+        self.Texto = Texto(self.card1a, "Texto")
+        self.Texto.vai()
         
     def shuffle_cards(self):   
         list_cards =  [(0,0), (1,0), (2,0), (3,0), (4,0), (0,1), (1,1), (2,1), (3,1), (4,1)]
