@@ -52,6 +52,7 @@ class Eventos:
         self.ambiente.vai()
         
     def anda_boneco(self, ev=None):
+        contador = 0
         """" Faz o boneco caminhar com a cptura das setas. 
             :param ev: estrutura enviad pelo evento onde se recupera informações.
         """
@@ -69,7 +70,7 @@ class Eventos:
         #se o elemento atingiu uma porta, muda para a próxima cena
         # FALTA mapear os pontos, criar função para passar parametros ou chamar outra classe
         #ideia de cria uma matriz com os pontos de localização do portal
-        contador = 0
+        
         if self.boneco.x > 100 and self.boneco.y > 100:
             self.ambiente = Cena(self.matrizMapaFase[contador][0])
             STYLE["width"] = 640
@@ -77,6 +78,7 @@ class Eventos:
             self.boneco.x = 60
             self.boneco.y = 240
             contador = contador + 1
+            print(contador)
             self.ambiente.vai()
             
         #se atingiu o bau, ganhou o jogo.
