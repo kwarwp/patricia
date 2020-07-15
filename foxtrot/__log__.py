@@ -659,3 +659,10 @@ SyntaxError: invalid syntax
                                                                                                                                  ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Jul 15 2020 18:12:45.741 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 34
+  self.botao_sobre = Elemento (img=botao_sobre, 
+                                                                                                                                  ^
+SyntaxError: invalid syntax
+'''},
