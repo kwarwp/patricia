@@ -2376,3 +2376,10 @@ TypeError: object() takes no parameters
     		self.card1a = Carta(IMG_PYCHARM, list_cards[0], self.cena)
 TypeError: object() takes no parameters
 '''},
+{'date': 'Wed Jul 15 2020 04:28:35.866 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 36
+  Elemento(IMG_VERSO x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
+  ^
+IndentationError: expected an indented block
+'''},
