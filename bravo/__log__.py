@@ -517,3 +517,10 @@ NameError: name 'true' is not defined
     raise NotImplementedError("Blocking functions like time.sleep() are not "
 NotImplementedError: Blocking functions like time.sleep() are not supported in the browser. Use functions in module browser.timer instead.
 '''},
+{'date': 'Wed Jul 15 2020 20:30:10.629 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 32
+  txt1 = Texto(cena,"Vamos aprender a programar?"#Elemento(img = frase1, style=dict(left=500, top=100, width=200, height="200px"))
+                                                                                                                                        ^
+SyntaxError: invalid syntax
+'''},
