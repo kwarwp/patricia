@@ -275,3 +275,10 @@ SyntaxError: invalid syntax
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Jul 15 2020 17:24:46.439 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 90
+  if self.boneco.x > 400 and self.boneco.y > 200:
+  ^
+IndentationError: expected an indented block
+'''},
