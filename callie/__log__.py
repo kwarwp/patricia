@@ -182,3 +182,10 @@ SyntaxError: invalid syntax
                                                     ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Jul 15 2020 02:28:32.826 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 18
+  self.carta = Elemento(CARTA, x=2, y=5,style{width=1000px, height='30px'}, cena=self.tab)
+                                              ^
+SyntaxError: invalid syntax
+'''},
