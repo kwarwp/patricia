@@ -62,7 +62,7 @@ class minipython:
                 self.linha_inicial = 300  # inicia a altura de ontagem da primeira peça
                 return 0, 0  #  retorna uma posição inválida para sinalizar a peça
         return 300, self.linha_inicial
-   class normal():
+class normal():
         def __init__(self):
             def mostra_conteudo_minipyhton(self, *_):        
                 Texto(self.cofre, "Parábens, vc aprendeu como se faça o uso de orientação ao objeto em pyhton ").vai() # mensagem depois de montar o quebra cabeça
