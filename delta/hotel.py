@@ -32,4 +32,4 @@ class Eventos:
 		carta2.vai()
 
 if _name_=="_main_":
-Eventos().vai()
+	Eventos().vai()
