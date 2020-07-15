@@ -46,6 +46,7 @@ class Eventos:
 	def vai(self):
 		""" mostra a cena da calçada. """
 		self.tabuleiro.vai()
+		self.carta1.vai()
         
         	 
     	 
@@ -59,7 +60,7 @@ class Eventos:
     
         
 if __name__ == "__main__":
-    Eventos().vai()
+    Eventos()
 
 
 
