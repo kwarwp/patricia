@@ -56,7 +56,8 @@ class Card():
         
         
 class Game:
-
+    
+    # referência para o Elemento
     previous_selected_card = None
     cena = Cena()
     
@@ -103,11 +104,11 @@ class Game:
             Texto(Game.cena, "Errou!!!").vai()
             
             # habilita novamente o clique e vira a carta 1 para baixo
-            Game.previous_selected_card.card.elt.bind("click", turnOn)
+            Game.previous_selected_card.card.elt.bind("click", Game.previous_selected_card.turnOn)
             Game.previous_selected_card.turnDown()
             
             # habilita novamente o clique e vira a carta 2 para baixo
-            selected_card.card.elt.bind("click", turnOn)
+            selected_card.card.elt.bind("click", selected_card.turnOn)
             selected_card.turnDown()
             
 
