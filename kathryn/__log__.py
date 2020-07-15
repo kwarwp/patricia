@@ -328,3 +328,10 @@ ImportError: cannot import name 'Circus'
     print(matrizInicio[0][2])
 IndexError: list index out of range
 '''},
+{'date': 'Wed Jul 15 2020 01:58:43.906 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 9
+  matrizMapaFase = [['link2'],
+  ^
+IndentationError: unexpected indent
+'''},
