@@ -104,8 +104,6 @@ class Game:
         else: # acertou
             #Texto(Game.cena, "Acertou!!!").vai()
             Game.previous_selected_card.card.elt.bind("click", None)
-            Game.previous_selected_card.turnOn()
-            selected_card.turnOn()
             selected_card.card.elt.bind("click", None)
             Game.previous_selected_card = None
             
