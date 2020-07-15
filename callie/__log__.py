@@ -161,3 +161,10 @@ AttributeError: 'module' object has no attribute '__setitem__'
             ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Jul 15 2020 02:20:10.654 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 18
+  self.carta = Elemento(CARTA, x=10, y=10, width=300, heigth=80px, cena=self.tab)
+                                                                ^
+SyntaxError: invalid syntax
+'''},
