@@ -56,6 +56,9 @@ class Eventos:
             :param ev: estrutura enviad pelo evento onde se recupera informações.
         """
         key = ev.keyCode # recupera o código da tecla enviada no evento
+        # estes dois comandos abaixo evitam que as setinhas sejam enviadas ar a rolagem <carlo>
+        ev.preventDefault()
+        ev.stopPropagation()
         
         # os códigos 37 e 38 são a seta para esquerda e para direita
         # os códigos 39 e 40 são a seta para cima e para baixo
