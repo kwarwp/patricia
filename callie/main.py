@@ -1,5 +1,11 @@
 # patricia.callie.main.py
 # Rio de Janeiro, 9 de junho de 2020
+    
+     ''' Tentativa de implementação do vira e desvira carta
+            para o aplicativo proposto no curso ProgOO.
+            
+                     Grupo Delta
+      '''
 from _spy.vitollino.main import Cena, Elemento, STYLE, ESTYLE
 __version__ = "20.07"
 __author__= 'Emanuelle Simas'
