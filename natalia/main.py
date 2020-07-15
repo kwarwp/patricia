@@ -16,7 +16,7 @@ __author__ = "Rosilane"
 CENA_PRAIA = "https://i.imgur.com/wz5XKcr.jpg"
 
 
-class Praia:
+class Mar:
     """ Representa uma cena da calçada da praia """
     def vai(self):
         """ Mostra a cena da praia """
@@ -24,4 +24,4 @@ class Praia:
     
 
 if __name__ == "__main__":
-    Praia().vai()
+    Mar().vai()
