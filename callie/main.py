@@ -47,10 +47,10 @@ class Jogo:
             #lista_verso = (self.verso, self.verso2, self.verso3, self.verso4)
             #lista_carta=(self.carta, self.carta2,self.carta3, self.carta4)
             
-            self.verso.vai= vira
-            self.verso2.vai=vira2
-            self.verso3.vai=vira3
-            self.verso.vai=vira4
+        self.verso.vai= vira
+        self.verso2.vai=vira2
+        self.verso3.vai=vira3
+        self.verso.vai=vira4
             
     def vai(self):
         """ Mostra a cena do tabuleiro e versos"""
