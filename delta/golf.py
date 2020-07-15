@@ -104,6 +104,8 @@ class Game:
             # desabilita o clique sobre carta virada
             Game.previous_selected_card.card.elt.unbind("click")
             return
+            
+        timer.sleep(1)
         
         # Não acertou
         if Game.previous_selected_card.name != selected_card.name:            
