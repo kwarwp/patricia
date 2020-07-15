@@ -172,3 +172,10 @@ AttributeError: 'GUI' object has no attribute 'link2'
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Wed Jul 15 2020 02:09:49.199 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 55
+  contador = 0
+  ^
+IndentationError: expected an indented block
+'''},
