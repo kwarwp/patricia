@@ -363,3 +363,10 @@ AttributeError: 'Jogo' object has no attribute 'carta'
     self.verso.verso1
 AttributeError: 'Elemento' object has no attribute 'verso1'
 '''},
+{'date': 'Wed Jul 15 2020 16:48:08.465 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 43
+  def desvira(self):
+  ^
+IndentationError: expected an indented block
+'''},
