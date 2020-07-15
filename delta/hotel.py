@@ -25,19 +25,22 @@ class Eventos:
 	#CARTA_2
 	#CARTA_3
 	#CARTA_4
-	x = [10,120,230,10,120,230,10,120,230,10,120,230]
-	y = [10, 10, 10, 150,150, 150, 290, 290,290,430,430, 430]
+	x = [10,120,230]
+	y = [ 150, 290, 430]
 	
+    
 	
 	def embaralhar(self):
 		random.shuffle(x,random.random)
 		random.shuffle(y,random.random)
+		
 	
 	    
 	def __init__(self):
 		self.tabuleiro = Cena(self.CENA_TABULEIRO)
-		self.carta1 = Elemento(self.CARTA_PYCHARM, ,x[i],y[j] , cena=self.tabuleiro)
-		self.carta2=Elemento(self.CARTA_VERSO, , x[i+1], y[j+1], cena=self.tabuleiro)
+		  
+		self.carta1 = Elemento(self.CARTA_PYCHARM, , , cena=self.tabuleiro)
+		self.carta2=Elemento(self.CARTA_VERSO, , x[1], y[1], cena=self.tabuleiro)
 		#self.verso2=Elemento(self.CARTA_VERSO2, , x=200, y=300, cena=self.tabuleiro)
         
        # self.pycharm=Elemento(self.CARTA_PYCHARM,,X=100,y=300,cena=self.tabuleiro)
