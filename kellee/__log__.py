@@ -598,3 +598,10 @@ AttributeError: 'Praia' object has no attribute 'nome'
     self.scorer.update(valor=cena.nome, move=self.xy,
 AttributeError: 'Praia' object has no attribute 'nome'
 '''},
+{'date': 'Wed Jul 15 2020 16:06:05.109 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 13
+  casa = cena(img ="https://plantasdecasas.com/storage/2017/07/planta-fachada-casa-115-fr-AG.jpg"
+                                                                                                   ^
+SyntaxError: invalid syntax
+'''},
