@@ -735,3 +735,10 @@ AttributeError: 'Eventos' object has no attribute 'CARTA_PYCHARM'
     	s=[CARTA_VERSO,CARTA_PYCHARM,CARTA_3,4]
 NameError: name 'CARTA_3' is not defined
 '''},
+{'date': 'Tue Jul 14 2020 21:49:00.57 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 45
+  else: 
+  ^
+IndentationError: unexpected indent
+'''},
