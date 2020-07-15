@@ -87,9 +87,7 @@ class Casa(Elemento):
         :param dy: O deslocamento vertical em casas que esta casa tem em relação ao topo.
         :param mx: Ajuste fino horizontal em pixels do posicionamento da casa.
         :param my: Ajuste fino vertical em pixels do posicionamento da casa.
-        
-        
-        
+               
         .. note::
 
             :folha sprite: é uma imagem contendo vários desenhos com peças
