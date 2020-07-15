@@ -238,3 +238,10 @@ SyntaxError: invalid syntax
                                                                       ^
 SyntaxError: EOL while scanning string literal
 '''},
+{'date': 'Wed Jul 15 2020 02:54:20.547 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 12
+  PosicaoX= 
+             ^
+SyntaxError: invalid syntax
+'''},
