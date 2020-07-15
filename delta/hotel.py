@@ -51,7 +51,7 @@ class Eventos:
 
     
    
-	def mostrar_carta(self):
+	#def mostrar_carta(self):
 		#self.s.vai()
         
     
