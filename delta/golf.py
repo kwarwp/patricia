@@ -40,20 +40,24 @@ class Card():
         self.position = position
         self.pos_x = 50 + self.position[0] * IMG_WIDTH
         self.pos_y = 50 + self.position[1] * IMG_HEIGHT
-        self.card = Elemento(IMG_CARD_FACE_DOWN, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
+        self.card = Elemento(IMG_CARD_FACE_DOWN, tit=self.name, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.card.elt.bind("click", self.turnOn)
         self.removed = False
         
     def turnOn(self, env=None):
-        self.card = Elemento(self.image, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
-        self.faceDown = False
+        self.card = Elemento(self.image, tit=self.name, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
+        self.faceDown = False 
         self.card.elt.bind("click", self.turnDown)
         self.rule(self)
         
     def turnDown(self, env=None):
-        self.card = Elemento(IMG_CARD_FACE_DOWN, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
+        self.card = Elemento(IMG_CARD_FACE_DOWN, tit=self.name, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.faceDown = True
         self.card.elt.bind("click", self.turnOn)
+        
+    def unbind_click(ev):
+        if self.card.elt.events("click"):
+            self.card.elt.unbind("click", myevent)
 
         
 class Game:
@@ -98,6 +102,7 @@ class Game:
         if Game.previous_selected_card is None:
             Game.previous_selected_card = selected_card
             # desabilita o clique sobre carta virada
+            Texto(Game.cena, type(Game.previous_selected_card.card.elt)).vai()
             Game.previous_selected_card.card.elt.unbind("click")
             Texto(Game.cena, "unbind!!!").vai()
             return
