@@ -724,3 +724,10 @@ NameError: name 'cena' is not defined
                                                                                                                                                              ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Jul 15 2020 16:28:14.403 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 15
+  cachorro = Elemento (img="https://super.abril.com.br/wp-content/uploads/2018/05/filhotes-de-cachorro-alcanc3a7am-o-c3a1pice-de-fofura-com-8-semanas1.png" tit="Aminoácido", x=140, y=80)
+                                                                                                                                                             ^
+SyntaxError: invalid syntax
+'''},
