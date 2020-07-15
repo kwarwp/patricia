@@ -382,3 +382,10 @@ NameError: name 'Kamui' is not defined
     def pula_issun(_=0, issun_=self.issun.elt.style):
 AttributeError: 'Kamui' object has no attribute 'issun'
 '''},
+{'date': 'Wed Jul 15 2020 17:36:05.884 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 25
+  elmt = Elemento(img = bal,tit = "teste" style=dict(left=500, top=60, width=200, height= "200px"))
+                                           ^
+SyntaxError: invalid syntax
+'''},
