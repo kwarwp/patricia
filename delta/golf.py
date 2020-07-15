@@ -112,15 +112,15 @@ class Game:
             Game.current_selected_card.card.elt.bind("click", Game.current_selected_card.turnOn)
             Game.current_selected_card.turnDown()
 
-        else: # acertou        
+        else: # acertou       
+            Texto(Game.cena, "Acertou!!!").vai()
             Game.current_selected_card.card.elt.unbind("click")
             Game.previous_selected_card.card.elt.unbind("click")
-        
-        Texto(Game.cena, "Acertou!!!").vai()
+            
         # reinicia turno
         Game.previous_selected_card = None
         Game.current_selected_card = None
-
+        
 
     def shuffle_cards(self):   
         list_cards =  [(0,0), (1,0), (2,0), (3,0), (4,0), (0,1), (1,1), (2,1), (3,1), (4,1)]
