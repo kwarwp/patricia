@@ -352,3 +352,10 @@ SyntaxError: EOL while scanning string literal
                           ^
 SyntaxError: EOL while scanning string literal
 '''},
+{'date': 'Wed Jul 15 2020 20:54:38.360 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 9
+  img.STYLE ["width"]"1150"
+                      ^
+SyntaxError: invalid syntax
+'''},
