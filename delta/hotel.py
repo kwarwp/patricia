@@ -32,15 +32,15 @@ class Eventos:
 		random.shuffle(s,random.random)
       	
 	def linkar (self):
-		CARTA_1=s[0]
-		CARTA_2=s[1]
+		self.CARTA_PYCHARM=s[0]
+		self.CARTA_VERSO=s[1]
 		#CARTA_PYCHARM=s[2]
 		#CARTA_VERSO=s[0]
 		     
 	def __init__(self):
 		self.tabuleiro = Cena(self.CENA_TABULEIRO)
-		self.carta1 = Elemento(self.CARTA_1, ,x=300,y=400 , cena=self.tabuleiro)
-		self.carta2=Elemento(self.CARTA_2, , x=100, y=200, cena=self.tabuleiro)
+		self.carta1 = Elemento(self.CARTA_PYCHARM, ,x=300,y=400 , cena=self.tabuleiro)
+		self.carta2=Elemento(self.CARTA_VERSO, , x=100, y=200, cena=self.tabuleiro)
 		#self.verso2=Elemento(self.CARTA_VERSO2, , x=200, y=300, cena=self.tabuleiro)
         
        # self.pycharm=Elemento(self.CARTA_PYCHARM,,X=100,y=300,cena=self.tabuleiro)
