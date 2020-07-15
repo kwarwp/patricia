@@ -282,3 +282,10 @@ NameError: name 'COR' is not defined
                               ^
 SyntaxError: can't assign to function call 
 '''},
+{'date': 'Wed Jul 15 2020 11:02:10.943 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 53
+  self.pin_lado = Pino.pinos("lado", self.tab_lado, dy=106
+                                                                         ^
+SyntaxError: invalid syntax
+'''},
