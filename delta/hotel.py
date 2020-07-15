@@ -30,7 +30,7 @@ class Carta():
 		self.posicao=posicao
 		pos_x = 50 + self.position[0]*IMG_WIDTH
 		pos_y = 50 + self.position[1]*IMG_HEIGHT
-		Elemento(self.imagem, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
+		Elemento(IMG_VERSO, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
 	
 class Jogo:
 	def vai(self):
