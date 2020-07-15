@@ -29,11 +29,11 @@ class Jogo:
         #inserindo elementos na cena
         self.botao_jogar = Elemento (img=botao_jogar,
         tit="jogar",
-        style= dict(left=180, top=50,  Width=3, height=20))
+        style= dict(left=400, top=400))
         
         self.botao_sobre = Elemento (img=botao_sobre, 
         tit="sobre", 
-        style= dict(left=180, top=50,  Width=3, height=20))
+        style= dict(left=500, top=400))
         
         #exibindo cena
         self.capa.vai()
@@ -41,6 +41,13 @@ class Jogo:
         #exibindo elementos na cena
         self.botao_sobre.entra(self.capa)
         self.botao_jogar.entra(self.capa)
+        
+        #textos
+        self.texto_sobre = Texto (self.capa, "Volte em breve para saber mais")
+        self.texto_jogar = Texto (self.capa, "Volte em breve para Jogar")
+
+        #ação caso seja clicado
+        self.botao_sobre.vai(
         
 if __name__ == "__main__":
     Jogo()
