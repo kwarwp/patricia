@@ -35,14 +35,14 @@ class Card():
         self.image = image
         self.faceDown = True
         self.position = position
-        pos_x = 50 + self.position[0]*IMG_WIDTH
-        pos_y = 50 + self.position[1]*IMG_HEIGHT
-        self.card = Elemento(IMG_CARD_FACE_DOWN, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
+        self.pos_x = 50 + self.position[0]*IMG_WIDTH
+        self.pos_y = 50 + self.position[1]*IMG_HEIGHT
+        self.card = Elemento(IMG_CARD_FACE_DOWN, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.card.elt.bind("click", self.turn)
         self.removed = False
         
     def turn(self, ev=None):
-        self.card =Elemento(self.image, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
+        self.card =Elemento(self.image, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.cena.vai()
         
         # para teste
