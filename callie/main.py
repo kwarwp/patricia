@@ -3,7 +3,8 @@
 from _spy_vittollino.main import Cena, STYLE
 __version__ = "20.07"
 __author__= 'Emanuelle Simas'
-STYLE["width"] = 500
+
+STYLE["Width"] = 500
 
 TABULEIRO = "https://activufrj.nce.ufrj.br/file/ProgOO/TAB_COMPL_5x5.png"
 
