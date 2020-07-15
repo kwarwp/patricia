@@ -24,7 +24,7 @@ Código alterado de Monica Novellino <monicanovellino@gmail.com>
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
 from browser import document # importa o DOM para atribuir o evento de teclado
-
+cont = 0
 class Eventos:
     """ Associa um evento a uma imagem e captura eventos de teclado. """
     CENA_corredor_1 = link1 = "https://i.imgur.com/L71ZV6Z.png"
@@ -35,7 +35,7 @@ class Eventos:
     
     BONECO = "https://i.imgur.com/k63kwfa.png"
     
-    matrizMapaFase = [[link4],
+    matrizMapaFase = [[link2],
                       [link3],
                       [link4],
                       [link5]]
@@ -52,6 +52,7 @@ class Eventos:
         self.ambiente.vai()
     
     def portal(self,x,y):
+        global cont
         self.ambiente = Cena(self.matrizMapaFase[0][0])
         STYLE["width"] = 640
         self.boneco = Elemento(self.BONECO, , x=int, y=int, cena=self.ambiente)
