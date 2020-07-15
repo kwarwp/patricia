@@ -28,25 +28,27 @@ Changelog
 
 """
 from _spy.vitollino.main import Cena, Elemento, Texto,STYLE
+from _spy.vitollino.main import INVENTARIO as inv
 from natalia.main import Mar
 from grace.main import Praia
 __version__ = "15.07"
 __author__ = "Rosilane"
-STYLE["width"] = 1150
-STYLE["leight"]= 550px
+STYLE["width"] = 1000
+STYLE["leight"]= "550px"
 CENA_FUNDO = "https://static.vecteezy.com/system/resources/previews/000/561/495/non_2x/gray-white-polygonal-background-creative-design-templates-vector.jpg"
 BANHISTA = "https://i.imgur.com/CWQ00XG.png"
 class Opcao:
     """ Representa uma cena da calçada da praia """
     def __init__(self):
         """ Mostra a cena da praia """
-        self.cena = Cena(CENA_FUNDO,direita=Praia())
+        self.cena = Cena(CENA_FUNDO)
         self.banhista = Elemento(BANHISTA, x=100, y=200, cena=self.cena)
         
         #Cena(CENA_FUNDO).vai()
     def vai(self):
         """ Mostra a cena da praia """
         self.cena.vai()
+        self.banhista.entra(Praia())
         #Cena(CENA_FUNDO).vai()
     
 if __name__ == "__main__":
