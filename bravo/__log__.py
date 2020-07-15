@@ -89,3 +89,10 @@ Traceback (most recent call last):
     	cena1 = Cena(link)
 TypeError: 'module' object is not callable
 '''},
+{'date': 'Wed Jul 15 2020 15:46:48.224 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 16
+  link_fundo = "https://img.elo7.com.br/product/original/1AD3471/painel-1x0-70-salao-de-festa-salao-de-festa.jpg
+                                                                                                                ^
+SyntaxError: EOL while scanning string literal
+'''},
