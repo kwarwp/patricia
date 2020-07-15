@@ -16,7 +16,7 @@ triste = Elemento (img= "https://i.imgur.com/0R5Xo83.png", tit="CLICK", x=1000, 
 feliz = Elemento (img= "https://i.imgur.com/UaihdhW.png", tit="CLICK", x=40, y=80)
 codigo1 = Elemento (img="https://i.imgur.com/QGEgNAt.png", tit="CLICK", style=dict(left=80, top=280, width=500, height="250px"))
 codigo2 = Elemento (img="https://i.imgur.com/ccJqbMb.png", tit="CLICK", style=dict(left=680, top=280, width=500, height="250px"))
-pergunta = Elemento (img= "https://i.imgur.com/fYmNuBj.png", style=dict(left=540, top=80, width=200, height="150px"))
+pergunta = Elemento (img= "https://i.imgur.com/fYmNuBj.png", style=dict(left=540, top=80, width=250, height="150px"))
 #aqui eu coloquei o elemento para entrar na cena
 codigo1.entra(praia)
 codigo2.entra(praia)
