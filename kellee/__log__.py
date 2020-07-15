@@ -491,3 +491,10 @@ AttributeError: 'int' object has no attribute '__getitem__'
     imagem, kwargs = (imagem, {}) if isinstance(imagem, str) \
 AttributeError: 'int' object has no attribute '__getitem__'
 '''},
+{'date': 'Wed Jul 15 2020 15:38:38.340 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 36
+  STYLE["leight"]= 550px
+                       ^
+SyntaxError: invalid syntax
+'''},
