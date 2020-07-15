@@ -86,8 +86,8 @@ class Game:
         
         self.cena.vai()
         
-    def rule(selected_card):
-        if not selected_card:
+    def rule(self, selected_card):
+        if selected_card:
             self.Texto = Texto(self.card1a.card, "Texto")
             self.Texto.vai()
         
