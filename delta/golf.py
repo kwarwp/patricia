@@ -31,15 +31,16 @@ class Card():
     
         self.image = image
         self.faceDown = True
-        pos_x = (position-1)*IMG_WIDTH
-        pos_y = (position-1)*IMG_HEIGHT
+        self.position = position
+        pos_x = self.position[0]*IMG_WIDTH
+        pos_y = self.position[1]*IMG_HEIGHT
         self.imageFaceDown = Elemento("http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline", x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
         self.removed = False
-        self.position = [0,0]
+        
         
         
 class Game:
-    def crate_4x5_cards(self):
+    def create_4x5_cards(self):
     
         """ matrix 4x5
             1A 1B 2A 2B 3A
@@ -75,5 +76,5 @@ class Game:
 
 
 if __name__ == "__main__":
-    Game().crate_4x5_cards()
+    Game().create_4x5_cards()
     print(teste)
