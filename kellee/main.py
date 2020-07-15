@@ -12,15 +12,17 @@ STYLE["leight"]= "550px"
 praia= Cena (img = "https://i.imgur.com/cdMKAka.png")
 erro= Cena (img = "https://i.imgur.com/idqEr5C.png")
 casa= Cena (img = "https://plantasdecasas.com/storage/2017/07/planta-fachada-casa-115-fr-AG.jpg")
-triste = Elemento (img= "https://i.imgur.com/0R5Xo83.png", tit="Aminoácido", x=1000, y=100)
-feliz = Elemento (img= "https://i.imgur.com/UaihdhW.png", tit="Aminoácido", x=40, y=80)
-codigo1 = Elemento (img="https://i.imgur.com/QGEgNAt.png", tit="Aminoácido", style=dict(left=80, top=80, width=500, height="250px"))
-codigo2 = Elemento (img="https://i.imgur.com/ccJqbMb.png", tit="Aminoácido", style=dict(left=680, top=80, width=500, height="250px"))
+triste = Elemento (img= "https://i.imgur.com/0R5Xo83.png", tit="CLICK", x=1000, y=100)
+feliz = Elemento (img= "https://i.imgur.com/UaihdhW.png", tit="CLICK", x=40, y=80)
+codigo1 = Elemento (img="https://i.imgur.com/QGEgNAt.png", tit="CLICK", style=dict(left=80, top=280, width=500, height="250px"))
+codigo2 = Elemento (img="https://i.imgur.com/ccJqbMb.png", tit="CLICK", style=dict(left=680, top=280, width=500, height="250px"))
+pergunta = Elemento (img= "https://i.imgur.com/fYmNuBj.png", style=dict(left=540, top=80, width=200, height="150px"))
 #aqui eu coloquei o elemento para entrar na cena
 codigo1.entra(praia)
 codigo2.entra(praia)
 triste.entra(erro)
 feliz.entra(casa)
+pergunta.entra(praia)
 #aqui eu falei para o elemento ir para o jardim, então quando clicar na boca ela vai p jardim
 codigo1.vai=erro.vai
 codigo2.vai=casa.vai
