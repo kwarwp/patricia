@@ -86,9 +86,10 @@ class Game:
         
         self.cena.vai()
         
-    def rule(card):
-        self.Texto = Texto(self.card1a.card, "Texto")
-        self.Texto.vai()
+    def rule(selected_card):
+        if not selected_card:
+            self.Texto = Texto(self.card1a.card, "Texto")
+            self.Texto.vai()
         
     def shuffle_cards(self):   
         list_cards =  [(0,0), (1,0), (2,0), (3,0), (4,0), (0,1), (1,1), (2,1), (3,1), (4,1)]
