@@ -322,3 +322,31 @@ SyntaxError: invalid syntax
     Pinos.pino(nome).entra(self)
 NameError: name 'Pinos' is not defined
 '''},
+{'date': 'Wed Jul 15 2020 11:58:45.623 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 78
+    Tabuleiro().vai()
+  module <module> line 63
+    self.tabua = self.table(self.tabuleiro, self.TABULEIRO, mx=margin, my=margin)
+  module <module> line 74
+    return [[Casa(base, fundo, i, j, dx, dy, mx, my) for j in range(linhas)] for i in range(colunas)]
+  module <module> line 48
+    super().__init__(fundo, x=x, y=y, w=t, h=t, cena=base, drop=dropper)
+  module _spy.vitollino.main line 551
+    _ = self.entra(cena) if cena and (cena != INVENTARIO) else None
+  module <module> line 51
+    Pino.pino(nome).entra(self)
+  module <module> line 35
+    return Pino.PINOS[nome]
+KeyError: <_spy.vitollino.main.Cena object>
+'''},
