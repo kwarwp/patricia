@@ -12,23 +12,23 @@ Changelog
 """
 from _spy.vitollino.main import Cena, Elemento, STYLE
 from browser.html import SPAN
-TAMANHO = 600
+TAMANHO = 680
 STYLE.update(width=TAMANHO, height=f"{TAMANHO}px")
 
 
 class Pino(Elemento):
     COR = dict(topo="https://imgur.com/h6JCa7Z.png", lado="https://imgur.com/0YKD7IM.png")
-    MOD = dict(topo=4, lado=2)
-    def __init__(self, indice, cor, casa, dx=90, dy=110):
-        pino, modulo = COR[cor], MOD[cor]
-        x, y = indice // modulo * dx + mx, indice % modulo * dy
-        super().__init__(, w=dx, h=dy, cena=casa, tipo="auto"
-        style=dict(backgroundPosition=f"{-x}px {-y}px"))
+    MOD = dict(topo=2, lado=4)
+    def __init__(self, indice, cor, casa, dx=101, dy=100):
+        pino, modulo = self.COR[cor], self.MOD[cor]
+        x, y = indice // modulo * dx , (indice % modulo) * dy
+        super().__init__(pino, x=2, y=-25, w=dx, h=dy, cena=casa, tipo="auto",
+        style={"background-position": f"{-x}px {-y}px"})
         
-    @static
-    def pinos(cor, table):
+    @staticmethod
+    def pinos(cor, table, dy=100):
         casas = enumerate([casa for linha in table for casa in linha])
-        return [Pino(indice, cor, casa) for indice, casa in casas]
+        return [Pino(indice, cor, casa, dy=dy) for indice, casa in casas]
 
 
 class Casa(Elemento):
@@ -50,6 +50,7 @@ class Tabuleiro:
         self.tab_topo = self.table(self.tabuleiro, self.MINITAB, 2, 4, 0, 1, 50, 50)
         self.tab_lado = self.table(self.tabuleiro, self.MINITAB, 4, 2, 5, 4, 50, 60)
         self.pin_topo = Pino.pinos("topo", self.tab_topo)
+        self.pin_lado = Pino.pinos("lado", self.tab_lado, dy=101.5)
         
     def vai(self):
         self.tabuleiro.vai()
