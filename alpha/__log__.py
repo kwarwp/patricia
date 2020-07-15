@@ -165,3 +165,10 @@ NameError: name 'MA' is not defined
     matrizMapaFase = [[self.link2],
 AttributeError: 'GUI' object has no attribute 'link2'
 '''},
+{'date': 'Wed Jul 15 2020 02:08:14.526 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 88
+  
+  ^
+IndentationError: expected an indented block
+'''},
