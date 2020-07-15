@@ -32,10 +32,11 @@ def embaralha():
 
 	for i in range(0,3):
 		
-		carta[i].vai()
-		i+=1
-		document.bind("keydown")
 		
+		for j in range(0,40):
+			carta[i].vai()
+			j+=1
+		i+=1
 		 
 	
 
