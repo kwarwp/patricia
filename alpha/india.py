@@ -51,7 +51,7 @@ class Eventos:
         """ mostra a cena da planta da casa. """
         self.ambiente.vai()
         
-    def portal (self, x, y):
+    '''  def portal (self, x, y):
         cont = cont + 1    
         x = self.boneco
         y = self.boneco.y
@@ -61,7 +61,7 @@ class Eventos:
             self.boneco = Elemento(self.BONECO, , x=int, y=int, cena=self.ambiente)
             x = 60
             y = 240
-            self.ambiente.vai()
+            self.ambiente.vai()'''''
         
     def anda_boneco(self, ev=None):
         """" Faz o boneco caminhar com a cptura das setas. 
