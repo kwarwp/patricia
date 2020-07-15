@@ -94,21 +94,25 @@ class Game:
         # tem um par selecionado?
         if Game.previous_selected_card == None:
             Game.previous_selected_card = selected_card
+            selected_card.card.elt.unbind("click")
             return
             
-        if Game.previous_selected_card == selected_card:
-            Texto(Game.cena, "Opa!!! Clicou no mesmo!!!").vai()
-            return
+        #if Game.previous_selected_card == selected_card:
+            #Texto(Game.cena, "Opa!!! Clicou no mesmo!!!").vai()
+            #return
         
         # Não acertou
         if Game.previous_selected_card.name != selected_card.name:
             Texto(Game.cena, "Errou!!!").vai()
             Game.previous_selected_card.turnDown()
+            Game.previous_selected_card.card.elt.bind("click", turnOn)
             selected_card.turnDown()
+            selected_card.card.elt.bind("click", turnOn)
+
         else: # acertou
             Texto(Game.cena, "Acertou!!!").vai()
-            Game.previous_selected_card.card.elt.bind("click", None)
-            selected_card.card.elt.bind("click", None)
+            Game.previous_selected_card.card.elt.unbind("click")
+            selected_card.card.elt.unbind("click")
             Game.previous_selected_card = None
             
         Game.previous_selected_card = None
