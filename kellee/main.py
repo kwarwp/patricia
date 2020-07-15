@@ -1,7 +1,7 @@
 # patricia.kellee.main.py
 
 """
- CENA
+ CENAS
 
 """
 from _spy.vitollino.main import Cena, Elemento, Labirinto, Texto, Codigo, Sala, STYLE
