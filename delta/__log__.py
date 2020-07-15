@@ -742,3 +742,10 @@ NameError: name 'CARTA_3' is not defined
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Tue Jul 14 2020 21:49:42.363 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 25
+  def embaralhar(self):    
+  ^
+IndentationError: unexpected indent
+'''},
