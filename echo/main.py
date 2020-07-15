@@ -1,6 +1,7 @@
 # patricia.echo.main.py
 """ Jogo Olimpíadas de Matemática20.07
         * NEW: O jogo original
+        Autor: Grupo Echo
 """
 from _spy.vitollino.main import Cena, Elemento, Labirinto, Texto, Codigo, Sala, STYLE
 from _spy.vittolino.main import INVENTARIO as inv
