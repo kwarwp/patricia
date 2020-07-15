@@ -120,7 +120,9 @@ class Game:
         # reinicia turno
         Game.previous_selected_card = None
         Game.current_selected_card = None
-
+        
+        if Game.previous_selected_card is None
+             Texto(Game.cena, "Nulo!!!").vai()
 
     def shuffle_cards(self):   
         list_cards =  [(0,0), (1,0), (2,0), (3,0), (4,0), (0,1), (1,1), (2,1), (3,1), (4,1)]
