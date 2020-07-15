@@ -71,12 +71,12 @@ class Eventos:
         if self.boneco.x > 400 and self.boneco.y > 200:
             global cont
             self.ambiente = Cena(self.matrizMapaFase[cont][0])
-            cont = cont + 1
             STYLE["width"] = 640
             self.boneco = Elemento(self.BONECO, , x=int, y=int, cena=self.ambiente)
             self.boneco.x = 60
             self.boneco.y = 240
             self.ambiente.vai()
+            cont = cont + 1
             if cont > 3:
                 cont = 0
             
