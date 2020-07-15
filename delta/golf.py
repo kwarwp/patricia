@@ -42,10 +42,8 @@ class Card():
         self.removed = False
         
     def turn(self, ev=None):
-        #if self.faceDown:
-        #    self.card =Elemento(IMG_CARD_FACE_DOWN, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
-        #else: 
-        self.card.img(self.image)
+        self.card =Elemento(self.image, x=pos_x, y=pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
+        #self.card.img(self.image)
         self.card.vai()
         
         # para teste
