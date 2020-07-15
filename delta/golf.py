@@ -55,10 +55,11 @@ class Card():
         self.faceDown = True
         self.card.elt.bind("click", self.turnOn)
         
-    def unbind_click(ev):
-        if self.card.elt.events("click"):
-            self.card.elt.unbind("click", myevent)
-
+    def unbind_click(self, env=None):
+        Texto(Game.cena, "unbind11!!!").vai()
+        self.card.elt.unbind("click", self.turnDown)
+        self.card.elt.unbind("click", self.turnOn)
+        Texto(Game.cena, "unbind22!!!").vai()
         
 class Game:
     # referência para o Elemento
