@@ -32,10 +32,10 @@ def embaralha():
 
 	for i in range(0,3):
 		
-		
-		for j in range(0,4):
+		contador=0
+		while (contador<4):
 			carta[i].vai()
-			j+=1
+			contador+=1
 		i+=1
 		 
 	
