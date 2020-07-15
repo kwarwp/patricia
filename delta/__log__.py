@@ -638,3 +638,10 @@ NameError: name 'x1' is not defined
                                                  ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Jul 14 2020 21:33:44.416 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 28
+  self.verso=Elemento(self.CARTA_VERSO, , x=100 y=200, cena=self.tabuleiro)
+                                                 ^
+SyntaxError: invalid syntax
+'''},
