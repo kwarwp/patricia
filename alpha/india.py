@@ -48,7 +48,7 @@ class Eventos:
         document.bind("keydown", self.anda_boneco)  # captura o evento de teclado
            
     def vai(self):
-        """ mostra a cena da planta da casa. """
+        """ mostra corredor do labirinto """
         self.ambiente.vai()
         
     def portal (self, x, y):
@@ -77,7 +77,7 @@ class Eventos:
         elif key in [38, 40]:
             key = (key - 39) * 5
             self.boneco.y += key # muda a posição de mais um ou menos um
-        self.portal()
+        self.portal(self.boneco.x,self.boneco.y)
         #se o elemento atingiu uma porta, muda para a próxima cena
         # FALTA mapear os pontos, criar função para passar parametros ou chamar outra classe
         #ideia de cria uma matriz com os pontos de localização do portal
