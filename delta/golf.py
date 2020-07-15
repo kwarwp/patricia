@@ -47,13 +47,11 @@ class Card():
         self.card.elt.bind("click", self.turnDown)
         self.rule()
         
-        
-    
     def turnDown(self, env=None):
         self.card = Elemento(IMG_CARD_FACE_DOWN, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.faceDown = True
         self.card.elt.bind("click", self.turnOn)
-        self.rule()
+
         
         
 class Game:
@@ -89,7 +87,11 @@ class Game:
         self.cena.vai()
         
     def rule(self) :
-        self.Texto = Texto(self.card1a, "Texto")
+        self.click = self.click+1
+        if self.click > 2:
+            self.click=0
+            
+        self.Texto = Texto(self.card1a.card, "Texto")
         self.Texto.vai()
         
     def shuffle_cards(self):   
@@ -97,7 +99,6 @@ class Game:
         random.shuffle(list_cards)
         return list_cards
         
-
 
 if __name__ == "__main__":
     Game().vai()
