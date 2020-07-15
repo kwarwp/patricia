@@ -335,3 +335,10 @@ IndexError: list index out of range
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Jul 15 2020 01:59:11.990 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 9
+  matrizMapaFase = [['link2'],
+  ^
+IndentationError: unexpected indent
+'''},
