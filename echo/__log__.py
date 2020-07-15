@@ -138,3 +138,10 @@ NameError: name 'cena' is not defined
     tabuleiro = cena (img = "https://www.ibilce.unesp.br/Home/Departamentos/Matematica/2cejta/avancando-com-o-resto.png")
 NameError: name 'cena' is not defined
 '''},
+{'date': 'Wed Jul 15 2020 20:37:15.647 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 5
+  from _spy.vitollino.main import Cenafrom _spy.vitollino.main import Cena, Elemento, Labirinto, Texto, Codigo, Sala, STYLE
+                                               ^
+SyntaxError: trailing comma not allowed without surrounding parentheses
+'''},
