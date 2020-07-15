@@ -45,13 +45,13 @@ class Card():
     def turnOn(self, ev=None):
         self.card = Elemento(self.image, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.faceDown = False
-        self.card.elt.bind("click", self.turnDown)
+        self.card.elt.onclick = self.turnDown
         self.rule(self)
         
     def turnDown(self, env=None):
         self.card = Elemento(IMG_CARD_FACE_DOWN, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.faceDown = True
-        self.card.elt.bind("click", self.turnOn)
+        self.card.elt.onclick = self.turnOn
 
         
         
