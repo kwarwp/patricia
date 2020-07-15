@@ -121,7 +121,7 @@ class Game:
         Game.previous_selected_card = None
         Game.current_selected_card = None
         
-        if Game.previous_selected_card is None
+        if Game.previous_selected_card is None:
              Texto(Game.cena, "Nulo!!!").vai()
 
     def shuffle_cards(self):   
