@@ -94,7 +94,9 @@ class Casa(Elemento):
             de arrasto do Elemento. Neste caso, para qualquer pino eu quero que ele
             entre na casa corrente, por isso o *self.entrar(nome_pino)* é chamado dentro
             da função anônima.
-    
+
+---
+
         :param base: A cena em que este tabuleiro vai entrar.
         :param fundo: A imagem que representa esta casa.
         :param livre: Indica se a casa está livre ou ocupada quando for criada.
