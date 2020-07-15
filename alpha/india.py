@@ -66,7 +66,7 @@ class Eventos:
         #se o elemento atingiu uma porta, muda para a próxima cena
         # FALTA mapear os pontos, criar função para passar parametros ou chamar outra classe
         #ideia de cria uma matriz com os pontos de localização do portal
-        if self.boneco.x > 500 and self.boneco.y > 500:
+        if self.boneco.x > 250 and self.boneco.y > 250:
             self.ambiente = Cena(self.CENA_corredor_2)
             STYLE["width"] = 640
             self.boneco = Elemento(self.BONECO, , x=100, y=200, cena=self.ambiente)
