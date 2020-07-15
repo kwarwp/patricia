@@ -40,7 +40,7 @@ class Eventos:
     
     def __init__(self):
         self.ambiente = Cena(self.CENA_corredor_1)
-        self.boneco = Elemento(self.BONECO, , x=100, y=100, cena=self.ambiente)
+        self.boneco = Elemento(self.BONECO, , x=120, y=20, cena=self.ambiente)
         document.bind("keydown", self.anda_boneco)  # captura o evento de teclado
            
     def vai(self):
