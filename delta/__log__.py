@@ -560,3 +560,10 @@ SyntaxError: invalid syntax
             ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Jul 14 2020 21:27:05.66 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 35
+  s=[x=100 ,'posicao2','posicao3','']
+                                     ^
+SyntaxError: invalid syntax
+'''},
