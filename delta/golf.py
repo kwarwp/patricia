@@ -95,14 +95,14 @@ class Game:
             return
             
         if Game.previous_selected_card.name != selected_card.name:
-            self.Texto = Texto(self.cena, "Errou!!!")
-            self.Texto.mostra()
-            self.Texto.esconde()
+            Texto = Texto(self.cena, "Errou!!!")
+            Texto.mostra()
+            Texto.esconde()
             Game.previous_selected_card.turnDown()
             selected_card.turnDown()
         else:
             Game.previous_selected_card.elt.bind("click", None)
-            self.selected_card.elt.bind("click", None)
+            selected_card.elt.bind("click", None)
             
         Game.previous_selected_card = None
               
