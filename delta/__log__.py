@@ -553,3 +553,10 @@ TypeError: __init__() got an unexpected keyword argument 'faceDown'
              ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Jul 14 2020 21:26:55.32 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 35
+  s=[x=100 y=200,'posicao2','posicao3','']
+            ^
+SyntaxError: invalid syntax
+'''},
