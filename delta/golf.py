@@ -43,11 +43,11 @@ class Card():
         
     def turn(self, ev=None):
         self.card =Elemento(self.image, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
-        self.cena.vai()
+        #self.cena.vai()
         
         # para teste
-        self.nomeTexto = Texto(self.card, self.image)
-        self.nomeTexto.vai()
+        #self.nomeTexto = Texto(self.card, self.image)
+        #self.nomeTexto.vai()
         
         
 class Game:
