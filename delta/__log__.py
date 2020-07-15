@@ -2773,3 +2773,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Jul 15 2020 09:14:14.796 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 109
+  def fixar_carta
+                  ^
+SyntaxError: invalid syntax
+'''},
