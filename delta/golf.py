@@ -105,10 +105,6 @@ class Game:
             Game.previous_selected_card.card.elt.unbind("click")
             return
         
-        #Vamos gastar um tempo aqui
-        while(x<10000):
-            x=x+1
-        
         # Não acertou
         if Game.previous_selected_card.name != selected_card.name:            
             # reabilita a ação o clique e vira a carta 1 para baixo
@@ -117,6 +113,9 @@ class Game:
             
             # reabilita a ação do clique e vira a carta 2 para baixo
             selected_card.card.elt.bind("click", selected_card.turnUp)
+            
+            # Aqui tem q esteparar pelo menos 3 segundos, como fazer? (sleep, não funciona)
+            
             selected_card.turnDown()
             Texto(Game.cena, "Errou!!!").vai()
             Game.previous_selected_card = None
