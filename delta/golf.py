@@ -87,19 +87,17 @@ class Game:
         
         self.cena.vai()
         
-    
     def rule(self, selected_card):  
-        if self.selected_card_1 == None:
-            self.selected_card_1 = selected_card
-        if self.selected_card_2 == None:
-            self.selected_card_2 = selected_card
-            if self.selected_card_1.name != selected_card_2.name:
-                self.selected_card_1.turnDown()
-                self.selected_card_2.turnDown()
-                self.selected_card_1 = None
-                self.selected_card_2 = None
-                self.Texto = Texto(self.cena, "Errou!!!")
-                self.Texto.vai()
+        if self.previous_selected_card == None:
+            self.previous_selected_card = selected_card
+            return
+
+        if self.previous_selected_card.name != selected_card.name:
+            self.previous_selected_card.turnDown()
+            selected_card.turnDown()
+            self.previous_selected_card = None
+            self.Texto = Texto(self.cena, "Errou!!!")
+            self.Texto.vai()
         
     def shuffle_cards(self):   
         list_cards =  [(0,0), (1,0), (2,0), (3,0), (4,0), (0,1), (1,1), (2,1), (3,1), (4,1)]
