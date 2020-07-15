@@ -120,8 +120,6 @@ class Game:
         # acertou 
         else:
             # desabilita o clique sobre as cartas acertadas
-            #Game.previous_selected_card.card.elt.unbind("click")
-            #Texto(Game.cena, "Acertou!!!").vai()
             Game.previous_selected_card = None
             selected_card.card.elt.unbind("click")
             Texto(Game.cena, "Acertou!!!").vai()
