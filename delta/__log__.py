@@ -1696,3 +1696,10 @@ NameError: name 'document' is not defined
     		document.bind("keydown")
 NameError: name 'document' is not defined
 '''},
+{'date': 'Wed Jul 15 2020 02:43:10.171 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 33
+  carta[0].vai()
+  ^
+IndentationError: unexpected indent
+'''},
