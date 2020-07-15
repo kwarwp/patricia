@@ -12,10 +12,10 @@ STYLE["leight"]= "550px"
 praia= Cena (img = "https://i.imgur.com/cdMKAka.png")
 erro= Cena (img = "https://i.imgur.com/idqEr5C.png")
 casa= Cena (img = "https://plantasdecasas.com/storage/2017/07/planta-fachada-casa-115-fr-AG.jpg")
-triste = Elemento (img= "https://i.imgur.com/0R5Xo83.png", tit="Aminoácido", x=500, y=100)
+triste = Elemento (img= "https://i.imgur.com/0R5Xo83.png", tit="Aminoácido", x=1000, y=100)
 feliz = Elemento (img= "https://i.imgur.com/UaihdhW.png", tit="Aminoácido", x=40, y=80)
-codigo1 = Elemento (img="https://i.imgur.com/mlsszQm.png", tit="Aminoácido", style=dict(left=80, top=80, width=300, height="150px"))
-codigo2 = Elemento (imag="https://i.imgur.com/d6uejyE.png", tit="Aminoácido", x=300, y=100)
+codigo1 = Elemento (img="https://i.imgur.com/mlsszQm.png", tit="Aminoácido", style=dict(left=80, top=100, width=500, height="250px"))
+codigo2 = Elemento (img="https://i.imgur.com/d6uejyE.png", tit="Aminoácido", style=dict(left=80, top=300, width=500, height="250px"))
 #aqui eu coloquei o elemento para entrar na cena
 codigo1.entra(praia)
 codigo2.entra(praia)
