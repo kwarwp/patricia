@@ -15,18 +15,18 @@ from _spy.vitollino.main import Cena,Elemento,Texto, STYLE
 #formatacao
 STYLE["width"] = 1010
 STYLE["heigth"] = "500px"
-#figuras
+"""figuras"""
 capa_do_jogo = "https://i.imgur.com/0RVnppj.png"
 botao_jogar = "https://i.imgur.com/pG9wDIz.png"
 botao_sobre = "https://i.imgur.com/F3Q0bDv.png"
-#criando classe jogo
+"""criando classe jogo"""
 class Jogo:
     def __init__(self):
-    #criando cena
+        """criando cena"""
     
         self.capa =Cena(img= capa_do_jogo)
         
-        #inserindo elementos na cena
+        """inserindo elementos na cena"""
         self.botao_jogar = Elemento (img=botao_jogar,
         tit="Jogar",
         style= dict(left=500, top=400))
@@ -35,18 +35,18 @@ class Jogo:
         tit="Sobre", 
         style= dict(left=400, top=400))
         
-        #exibindo cena
+        """exibindo cena"""
         self.capa.vai()
         
-        #exibindo elementos na cena
+        """exibindo elementos na cena"""
         self.botao_sobre.entra(self.capa)
         self.botao_jogar.entra(self.capa)
         
-        #textos
+        """textos"""
         self.texto_sobre = Texto (self.capa, "Volte em breve para saber mais")
         self.texto_jogar = Texto (self.capa, "Volte em breve para Jogar")
 
-        #ação caso seja clicado
+        """ação caso seja clicado"""
         self.botao_sobre.vai=self.texto_sobre.vai
         self.botao_jogar.vai=self.texto_jogar.vai
         
