@@ -413,3 +413,10 @@ NameError: name 'CARTA4' is not defined
     self.verso.verso1
 AttributeError: 'Elemento' object has no attribute 'verso1'
 '''},
+{'date': 'Wed Jul 15 2020 17:29:13.62 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 6
+  from browser import 
+                      ^
+SyntaxError: trailing comma not allowed without surrounding parentheses
+'''},
