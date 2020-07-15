@@ -6,3 +6,10 @@
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Tue Jul 14 2020 21:29:10.570 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 65
+  class normal():
+  ^
+IndentationError: unexpected indent
+'''},
