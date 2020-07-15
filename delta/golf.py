@@ -102,7 +102,7 @@ class Game:
         if Game.previous_selected_card is None:
             Game.previous_selected_card = selected_card
             # desabilita o clique sobre carta virada
-            Texto(Game.cena, type(Game.previous_selected_card.card.elt)).vai()
+            Texto(Game.cena, Game.previous_selected_card.card.elt.events("click")).vai()
             Game.previous_selected_card.card.elt.unbind("click")
             Texto(Game.cena, "unbind!!!").vai()
             return
