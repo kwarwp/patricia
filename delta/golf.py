@@ -47,7 +47,7 @@ class Card():
         self.card.elt.bind("click", self.turnDown)
         
         # para teste
-        #self.nomeTexto = Texto(self.card, self.image)
+        #self.nomeTexto = Texto(self.card, "Texto")
         #self.nomeTexto.vai()
     
     def turnDown(self, env=None):
@@ -95,14 +95,6 @@ class Game:
         random.shuffle(list_cards)
         return list_cards
         
-    
-    def create_grid(self, grid_size):
-        for row_num in range(grid_size):
-            new_row = self.create_row(row_num, grid_size)
-            self.grid.append(new_row)
-        
-    def rederize_cards(self):
-        pass
 
 
 if __name__ == "__main__":
