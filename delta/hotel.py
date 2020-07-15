@@ -33,4 +33,4 @@ def Embaralha():
 		carta2.vai()
 
 
-Embaralha.vai()
+Embaralha()
