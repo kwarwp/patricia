@@ -24,7 +24,7 @@ Código alterado de Monica Novellino <monicanovellino@gmail.com>
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
 from browser import document # importa o DOM para atribuir o evento de teclado
-
+contador = 0
 class Eventos:
     """ Associa um evento a uma imagem e captura eventos de teclado. """
     CENA_corredor_1 = "https://i.imgur.com/L71ZV6Z.png"
@@ -41,7 +41,7 @@ class Eventos:
     
     def __init__(self):
         self.ambiente = Cena(self.CENA_corredor_1)
-        self.boneco = Elemento(self.BONECO, , x=220, y=220, cena=self.ambiente)
+        self.boneco = Elemento(self.BONECO, , x=100, y=40, cena=self.ambiente)
         document.bind("keydown", self.anda_boneco)  # captura o evento de teclado
            
     def vai(self):
@@ -66,10 +66,11 @@ class Eventos:
         #se o elemento atingiu uma porta, muda para a próxima cena
         # FALTA mapear os pontos, criar função para passar parametros ou chamar outra classe
         #ideia de cria uma matriz com os pontos de localização do portal
+        global contador
         if self.boneco.x > 100 and self.boneco.y > 100:
             self.ambiente = Cena(self.CENA_corredor_2)
-            STYLE["width"] = 500
-            self.boneco = Elemento(self.BONECO, , x=200, y=200, cena=self.ambiente)
+            STYLE["width"] = 640
+            self.boneco = Elemento(self.BONECO, , x=int, y=int, cena=self.ambiente)
             self.boneco.x = 60
             self.boneco.y = 240
             self.ambiente.vai()
