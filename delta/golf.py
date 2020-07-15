@@ -94,16 +94,22 @@ class Game:
         # tem um par selecionado?
         if Game.previous_selected_card == None:
             Game.previous_selected_card = selected_card
+            # desabilita o clique sobre carta virada
             selected_card.card.elt.unbind("click")
             return
         
         # Não acertou
         if Game.previous_selected_card.name != selected_card.name:
             Texto(Game.cena, "Errou!!!").vai()
-            Game.previous_selected_card.turnDown()
+            
+            # habilita novamente o clique e vira a carta 1 para baixo
             Game.previous_selected_card.card.elt.bind("click", turnOn)
-            selected_card.turnDown()
+            Game.previous_selected_card.turnDown()
+            
+            # habilita novamente o clique e vira a carta 2 para baixo
             selected_card.card.elt.bind("click", turnOn)
+            selected_card.turnDown()
+            
 
         else: # acertou
             Texto(Game.cena, "Acertou!!!").vai()
