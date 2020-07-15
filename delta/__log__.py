@@ -2644,3 +2644,10 @@ NameError: name 'Carta' is not defined
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Jul 15 2020 05:02:07.991 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 5
+  ..codeauthor:: Anni Provietti <anniprovietti@gmail.com>
+    ^
+SyntaxError: invalid syntax
+'''},
