@@ -26,12 +26,12 @@ def Embaralha():
 		carta[1]=Cena(img="http://activufrj.nce.ufrj.br/file/ProgOO/Card_Linux.png?disp=inline")
 		carta[2]=Cena(img="http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline")
 		random.shuffle(carta,random.random)
-	def posicao(self):
-		self.carta1=Elemento(self.carta[0],,x=200,y=400)
+	"""def posicao():
+		carta1=Elemento(self.carta[0],,x=200,y=400)
 		self.carta2=Cena(self.carta[1],,x=100,y=100)
+      """
 	def vai():
-		self.carta1.vai()
-		self.carta2.vai()
+		
 		carta[2].vai()
 
 
