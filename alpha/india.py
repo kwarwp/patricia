@@ -70,13 +70,13 @@ class Eventos:
         # FALTA mapear os pontos, criar função para passar parametros ou chamar outra classe
         #ideia de cria uma matriz com os pontos de localização do portal
         
-        #if self.boneco.x > 100 and self.boneco.y > 100:
-    #        self.ambiente = Cena(self.matrizMapaFase[cont][0])
-     #       STYLE["width"] = 640
-      #      self.boneco = Elemento(self.BONECO, , x=int, y=int, cena=self.ambiente)
-       #     self.boneco.x = 60
-        #    self.boneco.y = 240
-         #   self.ambiente.vai()
+        if andaboneco.self.boneco.x > 100 and self.boneco.y > 100:
+            self.ambiente = Cena(self.matrizMapaFase[0][0])
+            STYLE["width"] = 640
+            self.boneco = Elemento(self.BONECO, , x=int, y=int, cena=self.ambiente)
+            self.boneco.x = 60
+            self.boneco.y = 240
+            self.ambiente.vai()
             
         #se atingiu o bau, ganhou o jogo.
         # FALTA se estiver na cena certa e na posição certa, avisa que ganhou o jogo
