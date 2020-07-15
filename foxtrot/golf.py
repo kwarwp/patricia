@@ -29,11 +29,11 @@ class Jogo:
         #inserindo elementos na cena
         self.botao_jogar = Elemento (img=botao_jogar,
         tit="Jogar",
-        style= dict(left=400, top=400))
+        style= dict(left=500, top=400))
         
         self.botao_sobre = Elemento (img=botao_sobre, 
         tit="Sobre", 
-        style= dict(left=500, top=400))
+        style= dict(left=400, top=400))
         
         #exibindo cena
         self.capa.vai()
