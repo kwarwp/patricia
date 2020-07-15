@@ -1235,3 +1235,10 @@ NameError: name 'carta' is not defined
     if _name_=="_main_":
 NameError: name '_name_' is not defined
 '''},
+{'date': 'Wed Jul 15 2020 02:08:53.863 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 35
+  def main:
+           ^
+SyntaxError: invalid syntax
+'''},
