@@ -13,8 +13,7 @@ STYLE["height"] = "550px"
 
 tabuleiro ="http://www.infcross.com.br/mestrado/tabuleiro.jpg"
 botao = "https://imgur.com/oC9lAgW.png"
-
-#img ="http://www.infcross.com.br/mestrado/tabuleiro.jpg"
+img ="http://www.infcross.com.br/mestrado/tabuleiro.jpg"
 #tabuleiro = Cena (img)
 #tabuleiro.vai()
 
