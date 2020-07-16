@@ -17,11 +17,12 @@ class tela:
 	fundo= Cena (img = "https://i.imgur.com/DwSOcuv.png")
 	siga = Elemento (img="https://i.imgur.com/kRmXNkz.png", style=dict(left=180, top=380, width=150, height="150px"))
 	siga2 = Elemento (img="https://i.imgur.com/kRmXNkz.png", style=dict(left=850, top=380, width=150, height="150px"))
-	siga.entra(fundo, direita= cena() )
+	siga.entra(fundo, direita=cena())
 	siga2.entra(fundo)
 	fundo.vai()
 	#siga.vai= cena().vai
 	#siga2.vai= oi().vai
+    
 
 tela()
 
