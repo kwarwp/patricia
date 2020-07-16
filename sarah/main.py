@@ -16,7 +16,7 @@ from grace.main import Praia
 
 __version__ = "1.0"
 __author__ = "ECHO"
-STYLE["width"] = 500
+STYLE["width"] = 1345
 TABULEIRO = "http://www.infcross.com.br/mestrado/tabuleiro.jpg"
 BOTAO = "http://www.infcross.com.br/mestrado/botao.jpg"
 
