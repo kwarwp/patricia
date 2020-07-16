@@ -11,9 +11,6 @@ __author__ = "ECHO"
 STYLE["width"] = 1345
 STYLE["height"] = "620px"
 TABULEIRO = "http://www.infcross.com.br/mestrado/tabuleiro.jpg"
-
-STYLE["width"] = 300
-STYLE["height"] = "200px"
 BOTAO = "http://www.infcross.com.br/mestrado/botao.jpg"
 
 class Tabuleiro:
@@ -27,6 +24,9 @@ class Jogo:
     def __init__(self):
         """ Mostra o tabuleiro com o botão start"""
         self.cena = Cena(TABULEIRO, direita=Tabuleiro())
+        
+        STYLE["width"] = 300
+        STYLE["height"] = "100px"
         self.banhista = Elemento(BOTAO, x=50, y=50, cena=self.cena)
         #Cena(CENA_CALCADA).vai()
     def vai(self):
