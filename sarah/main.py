@@ -24,7 +24,7 @@ class Jogo:
     def __init__(self):
         """ Mostra o tabuleiro com o botão start"""
         self.cena = Cena(TABULEIRO, direita=Tabuleiro())
-        self.banhista = Elemento(BOTAO, x=50, y=400, cena=self.cena)
+        self.banhista = Elemento(BOTAO, x=50, y=50, cena=self.cena)
         #Cena(CENA_CALCADA).vai()
     def vai(self):
         """ Mostra o tabuleiro """
