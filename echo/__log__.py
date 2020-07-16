@@ -684,3 +684,10 @@ NameError: name 'width' is not defined
                         ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Jul 15 2020 23:06:29.317 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 20
+  TABULEIRO = http://www.infcross.com.br/mestrado/tabuleiro.jpg
+                   ^
+SyntaxError: invalid syntax
+'''},
