@@ -1,5 +1,5 @@
 # patricia.bravo.main.py
-
+"""Jogo SupyCode: aprenda a programar com python"""
 __autor__ = "Isabel Hortencia Garnica"
 __autor__ = "Gabriela"
 __autor__ = "Pedro"
@@ -8,6 +8,8 @@ __version__ = "16.07.2020"
 
 from _spy.vitollino.main import Cena, Elemento, INVENTARIO, STYLE, Musica
 from texto.main import Texto
+#from kelle.main import ????
+from alexa.main import oi
 
 CENAINICIO = "https://i.imgur.com/mbt7XHq.png"
 PLAY = "https://i.imgur.com/QiiOf5O.png"
@@ -34,4 +36,5 @@ class gameInicio:
     def q2(self):
         pass
 
-gameInicio()
+if __name__ == "__main__":
+    gameInicio().vai()
