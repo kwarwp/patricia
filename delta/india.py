@@ -147,7 +147,7 @@ class Game2x3:
             if object.faceDown == True:
                 Texto(Game2x3.cena, object.name, object.faceDown).vai()
                 return
-            if object.faceDown == False:
+            else:
                 Game2x4.vai()
         
     def shuffle_cards(self):   
