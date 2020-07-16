@@ -9,6 +9,8 @@ from _spy.vittolino.main import INVENTARIO as inv
 #aqui eu importei os cenarios e os elementos
 STYLE["width"] = 1250
 STYLE["leight"]= "550px"
+
+class Cena
 expli= Cena(img = "https://i.imgur.com/oHAC3Xi.png")
 fundo= Cena (img = "https://i.imgur.com/hexAWk7.png")
 erro= Cena (img = "https://i.imgur.com/idqEr5C.png")
@@ -35,4 +37,5 @@ siga.vai=fundo.vai
 #fundo.vai()
 expli.vai()
 
+Cena()
 
