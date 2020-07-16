@@ -677,3 +677,10 @@ NameError: name 'width' is not defined
     STYLE[width] * 800 
 NameError: name 'width' is not defined
 '''},
+{'date': 'Wed Jul 15 2020 23:05:34.588 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 18
+  STYLE["height"] = 550px
+                        ^
+SyntaxError: invalid syntax
+'''},
