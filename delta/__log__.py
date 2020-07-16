@@ -3364,3 +3364,10 @@ SyntaxError: invalid syntax
                                  ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Jul 16 2020 13:46:18.771 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 136
+  if object.faceDown == False   
+                                 ^
+SyntaxError: invalid syntax
+'''},
