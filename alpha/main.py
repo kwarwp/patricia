@@ -14,6 +14,7 @@ Código alterado de Monica Novellino <monicanovellino@gmail.com>
 
 .. versionadded::    20.07
         Adicionei 5 imagens iniciais do labirinto e alterei o pacman (podem criar outro peronagem)
+        Contador adicionado para gerar cada fase m função da linha da matriz
         
 
 """
@@ -25,6 +26,8 @@ Código alterado de Monica Novellino <monicanovellino@gmail.com>
 from _spy.vitollino.main import Cena, Elemento, STYLE
 from browser import document # importa o DOM para atribuir o evento de teclado
 
+cont = 0 #contador index da matriz
+
 class Eventos:
     """ Associa um evento a uma imagem e captura eventos de teclado. """
     CENA_corredor_1 = link1 = "https://i.imgur.com/L71ZV6Z.png"
@@ -35,12 +38,13 @@ class Eventos:
     
     BONECO = "https://i.imgur.com/k63kwfa.png"
     
-    matrizMapaFase = [[link2],
-                      [link3],
-                      [link4],
-                      [link5]]
-    #tamanho da cena
-    STYLE["width"] = 640
+    
+    matrizFase = [[link2,100,100],
+                  [link3,100,100],
+                  [link4,100,100],
+                  [link5,100,100]]
+
+    STYLE["width"] = 640 #tamanho da cena
     
     def __init__(self):
         self.ambiente = Cena(self.CENA_corredor_1)
@@ -50,15 +54,12 @@ class Eventos:
     def vai(self):
         """ mostra corredor do labirinto """
         self.ambiente.vai()
-        
+    
     def anda_boneco(self, ev=None):
         """" Faz o boneco caminhar com a cptura das setas. 
             :param ev: estrutura enviad pelo evento onde se recupera informações.
         """
         key = ev.keyCode # recupera o código da tecla enviada no evento
-        # estes dois comandos abaixo evitam que as setinhas sejam enviadas ar a rolagem <carlo>
-        ev.preventDefault()
-        ev.stopPropagation()
         
         # os códigos 37 e 38 são a seta para esquerda e para direita
         # os códigos 39 e 40 são a seta para cima e para baixo
@@ -68,17 +69,21 @@ class Eventos:
         elif key in [38, 40]:
             key = (key - 39) * 5
             self.boneco.y += key # muda a posição de mais um ou menos um
+        
         #se o elemento atingiu uma porta, muda para a próxima cena
         # FALTA mapear os pontos, criar função para passar parametros ou chamar outra classe
         #ideia de cria uma matriz com os pontos de localização do portal
         if self.boneco.x > 400 and self.boneco.y > 200:
-            self.ambiente = Cena(self.matrizMapaFase[0][0])
+            global cont #contador estanciado fora do def para gerar a linha a ser lida na matrizFase
+            self.ambiente = Cena(self.matrizFase[cont][0]) #lê a cena que está descrita na primeira coluna da matriz
             STYLE["width"] = 640
             self.boneco = Elemento(self.BONECO, , x=int, y=int, cena=self.ambiente)
-            self.boneco.x = 60
-            self.boneco.y = 240
+            self.boneco.x = 100#int(matrizFase[cont][1]) #posição x_inicial da fase, descrita na matriz pela segunda coluna
+            self.boneco.y = 100#int(matrizFase[cont][2]) #posição y_inicial da fase descita pela terceira coluna
             self.ambiente.vai()
-            self.portal(self.boneco.x,self.boneco.y)
+            cont = cont + 1
+            if cont > 3: #Regulador do contador. Precisa alterar a programação para voltar a fase em um portal de retorno
+                cont = 0
             
         #se atingiu o bau, ganhou o jogo.
         # FALTA se estiver na cena certa e na posição certa, avisa que ganhou o jogo
