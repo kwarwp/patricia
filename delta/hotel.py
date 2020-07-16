@@ -61,13 +61,14 @@ class Game:
     cena = Cena()
     
     def vai(self): 
-        self.create_2x4_cards()
+        self.create_2x2_cards()
     
-    def create_2x4_cards(self):
+    def create_2x2_cards(self):
         """ 
             matrix 2x3:
-            1A 1B 2A 2B
-            3A 3B 4A 4B 
+            1A 1B 
+            2A 2B
+           
         """
         list_cards = self.shuffle_cards()
         
@@ -77,11 +78,11 @@ class Game:
         self.card2a = Card("Linux", IMG_CARD_2, list_cards[2], Game.cena, Game.rule)
         self.card2b = Card("Linux", IMG_CARD_2, list_cards[3], Game.cena, Game.rule)
         
-        self.card3a = Card("GitLab", IMG_CARD_3, list_cards[4], Game.cena, Game.rule)
-        self.card3b = Card("GitLab", IMG_CARD_3, list_cards[5], Game.cena, Game.rule)
+        #self.card3a = Card("GitLab", IMG_CARD_3, list_cards[4], Game.cena, Game.rule)
+        #self.card3b = Card("GitLab", IMG_CARD_3, list_cards[5], Game.cena, Game.rule)
         
-        self.card4a = Card("GitHub", IMG_CARD_4, list_cards[6], Game.cena, Game.rule)
-        self.card4b = Card("GitHub", IMG_CARD_4, list_cards[7], Game.cena, Game.rule)
+        #self.card4a = Card("GitHub", IMG_CARD_4, list_cards[6], Game.cena, Game.rule)
+        #self.card4b = Card("GitHub", IMG_CARD_4, list_cards[7], Game.cena, Game.rule)
         
         #self.card5a = Card("Activ", IMG_CARD_5, list_cards[8], Game.cena, Game.rule)
         #self.card5b = Card("Activ", IMG_CARD_5, list_cards[9], Game.cena, Game.rule)
@@ -128,7 +129,7 @@ class Game:
         
 
     def shuffle_cards(self):   
-        list_cards =  [(0,0), (1,0), (2,0),(3,0), (0,1), (1,1), (2,1),(3,1)]
+        list_cards =  [(0,0), (1,0),(0,1),(1,1)]
         random.shuffle(list_cards)
         return list_cards
         
