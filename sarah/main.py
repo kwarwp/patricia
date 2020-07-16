@@ -20,7 +20,7 @@ STYLE["width"] = 500
 TABULEIRO = "http://www.infcross.com.br/mestrado/tabuleiro.jpg"
 BOTAO = "http://www.infcross.com.br/mestrado/botao.jpg"
 
-class Calcada:
+class Jogo:
     """ Representa uma cena da calçada da praia """
     def __init__(self):
         """ Mostra o tabuleiro com o botão start"""
@@ -33,7 +33,7 @@ class Calcada:
         #Cena(CENA_CALCADA).vai()
     
 if __name__ == "__main__":
-    Calcada().vai()
+    Jogo().vai()
     
     
     
