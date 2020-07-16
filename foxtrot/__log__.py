@@ -1423,3 +1423,10 @@ AttributeError: 'Jogo' object has no attribute 'texto_castelo'
     self.castelo.vai = self.texto_castelo.vai
 AttributeError: 'Jogo' object has no attribute 'texto_castelo'
 '''},
+{'date': 'Thu Jul 16 2020 10:50:23.976 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 68
+  """Cena do Castelo"""
+  ^
+IndentationError: unexpected indent
+'''},
