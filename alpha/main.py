@@ -1,5 +1,3 @@
-# patricia.alpha.india.py
-# SPDX-License-Identifier: GPL-3.0-or-later
 """ 
 Projeto ALPHA - Jogo de Labirinto com cenas. 
 
@@ -15,7 +13,6 @@ Código alterado de Monica Novellino <monicanovellino@gmail.com>
 .. versionadded::    20.07
         Adicionei 5 imagens iniciais do labirinto e alterei o pacman (podem criar outro peronagem)
         Contador adicionado para gerar as seguintes fases e posiçoes iniciais em função da linha da matriz
-        Tirei a matriz do início pq não estava lendo a posição
         
 
 """
@@ -93,6 +90,4 @@ class Eventos:
         
 if __name__ == "__main__":
     Eventos().vai()
-    
-
     
