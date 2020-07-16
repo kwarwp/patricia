@@ -73,21 +73,17 @@ class Game:
         """
         list_cards = self.shuffle_cards()
         
-        self.card1a = Card("PyCharm", IMG_CARD_1, list_cards[0], Game.cena, Game.rule)
-        self.card1b = Card("PyCharm", IMG_CARD_1, list_cards[1], Game.cena, Game.rule)
-        
-        self.card2a = Card("Linux", IMG_CARD_2, list_cards[2], Game.cena, Game.rule)
-        self.card2b = Card("Linux", IMG_CARD_2, (3,0), Game.cena, Game.rule)
-        
-        self.card3a = Card("GitLab", IMG_CARD_3, list_cards[4], Game.cena, Game.rule)
-        self.card3b = Card("GitLab", IMG_CARD_3, list_cards[5], Game.cena, Game.rule)
-        
-        self.card4a = Card("GitHub", IMG_CARD_4, list_cards[6], Game.cena, Game.rule)
-        self.card4b = Card("GitHub", IMG_CARD_4, list_cards[7], Game.cena, Game.rule)
-        
-        self.card5a = Card("Activ", IMG_CARD_5, list_cards[8], Game.cena, Game.rule)
-        self.card5b = Card("Activ", IMG_CARD_5, list_cards[9], Game.cena, Game.rule)
-        
+        self.list_objects = [ Card("PyCharm", IMG_CARD_1, list_cards[0], Game.cena, Game.rule), 
+            Card("PyCharm", IMG_CARD_1, list_cards[1], Game.cena, Game.rule),
+            Card("Linux", IMG_CARD_2, list_cards[2], Game.cena, Game.rule),
+            Card("Linux", IMG_CARD_2, list_cards[3], Game.cena, Game.rule),
+            Card("GitLab", IMG_CARD_3, list_cards[4], Game.cena, Game.rule),
+            Card("GitLab", IMG_CARD_3, list_cards[5], Game.cena, Game.rule),
+            Card("GitHub", IMG_CARD_4, list_cards[6], Game.cena, Game.rule),
+            Card("GitHub", IMG_CARD_4, list_cards[7], Game.cena, Game.rule),
+            Card("Activ", IMG_CARD_5, list_cards[8], Game.cena, Game.rule),
+            Card("Activ", IMG_CARD_5, list_cards[9], Game.cena, Game.rule)]
+       
         Game.cena.vai()
               
 
@@ -132,7 +128,10 @@ class Game:
             
         
     def verifyingGameOver(self):
-        #if self.card1a.faceDown==False and self.card1b.faceDown and ... and self.card5b.faceDown:
+        for object in self.list_objects:
+            if object.faceDown == True:
+                return
+                
         Texto(Game.cena, "GameOver!!!").vai()
         # proxima sala
         
