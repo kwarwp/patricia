@@ -142,7 +142,9 @@ class Game:
         
     def passa_fase():
         if i in list_cards:
-            Game.previous_selected_card = None
+            #Game.previous_selected_card = None
+            #selected_card.card.elt.unbind("click")
+            False 
         Game_.vai()    
         
 
