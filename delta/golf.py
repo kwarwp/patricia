@@ -128,10 +128,8 @@ class Game2x5:
             
     @staticmethod  
     def verifyingGameOver():
-        Texto(Game2x5.cena, 'Chamou').vai()
         for object in list_objects:
             if object.faceDown == True:
-                Texto(Game2x5.cena, object.name, object.faceDown).vai()
                 return
                 
         Texto(Game2x5.cena, "GameOver!!!").vai()
