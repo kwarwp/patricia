@@ -347,3 +347,25 @@ KeyError: img
     imagem, kwargs = (imagem, {}) if isinstance(imagem, str) \
 KeyError: img
 '''},
+{'date': 'Wed Jul 15 2020 23:32:11.8 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 21
+    cena_principal() 
+  module <module> line 12
+    inicio = Cena(img=tabuleiro, style = dict(width=1150, height=550))
+  module _spy.vitollino.main line 1001
+    Cena.c(**kwargs)
+  module _spy.vitollino.main line 1044
+    imagem, kwargs = (imagem, {}) if isinstance(imagem, str) \
+KeyError: img
+'''},
