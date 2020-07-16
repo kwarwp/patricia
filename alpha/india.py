@@ -79,7 +79,7 @@ class Eventos:
             global cont #contador estanciado fora do def para gerar a linha a ser lida na matrizFase
             self.ambiente = Cena(self.matrizFase[cont][0]) #lê a cena que está descrita na primeira coluna da matriz
             STYLE["width"] = 640
-            self.xxx = 200#matrizFase[cont][1]
+            self.xxx = matrizFase[cont][1]
             self.yyy = 200#matrizFase[cont][2]
             self.boneco = Elemento(self.BONECO, x=self.xxx, y=self.yyy, cena=self.ambiente)
 #            self.boneco.x = self.xx#100#int(matrizFase[cont][1]) #posição x_inicial da fase, descrita na matriz pela segunda coluna
