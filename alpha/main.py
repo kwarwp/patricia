@@ -1,4 +1,4 @@
-# patricia.alpha.main.py
+# patricia.alpha.india.py
 # SPDX-License-Identifier: GPL-3.0-or-later
 """ 
 Projeto ALPHA - Jogo de Labirinto com cenas. 
@@ -14,7 +14,8 @@ Código alterado de Monica Novellino <monicanovellino@gmail.com>
 
 .. versionadded::    20.07
         Adicionei 5 imagens iniciais do labirinto e alterei o pacman (podem criar outro peronagem)
-        Contador adicionado para gerar cada fase m função da linha da matriz
+        Contador adicionado para gerar as seguintes fases e posiçoes iniciais em função da linha da matriz
+        Tirei a matriz do início não estava lendo a posição
         
 
 """
@@ -31,23 +32,19 @@ cont = 0 #contador index da matriz
 class Eventos:
     """ Associa um evento a uma imagem e captura eventos de teclado. """
     CENA_corredor_1 = link1 = "https://i.imgur.com/L71ZV6Z.png"
-    CENA_corredor_2 = link2 = "https://i.imgur.com/5Qno2fs.png"
-    CENA_corredor_3 = link3 = "https://i.imgur.com/gZ5wc0h.png"
-    CENA_corredor_4 = link4 = "https://i.imgur.com/xI8i7Nc.png"
-    CENA_corredor_5 = link5 = "https://i.imgur.com/GLVctqb.png"
     
     BONECO = "https://i.imgur.com/k63kwfa.png"
-    
-    matrizFase = [[link2,60,260],     #matrizFase = [[local_imagem_fase, x_inicial, y_inicial]...]
-                  [link3,450,50],
-                  [link4,50,430],
-                  [link5,200,50]]
+
 
     STYLE["width"] = 640 #tamanho da cena
     
     def __init__(self):
+
+        global matrizFase
+        self.x1 = 100
+        self.y1 = 40
         self.ambiente = Cena(self.CENA_corredor_1)
-        self.boneco = Elemento(self.BONECO, x=100, y=40, cena=self.ambiente)
+        self.boneco = Elemento(self.BONECO, x=self.x1, y=self.y1, cena=self.ambiente)
         document.bind("keydown", self.anda_boneco)  # captura o evento de teclado
            
     def vai(self):
@@ -55,6 +52,11 @@ class Eventos:
         self.ambiente.vai()
     
     def anda_boneco(self, ev=None):
+        matrizFase = [["https://i.imgur.com/5Qno2fs.png",60,300],     #matrizFase = [[local_imagem_fase, x_inicial, y_inicial]...]
+                       ["https://i.imgur.com/gZ5wc0h.png",450,50],
+                       ["https://i.imgur.com/xI8i7Nc.png",50,430],
+                       ["https://i.imgur.com/GLVctqb.png",200,50]]
+                       
         """" Faz o boneco caminhar com a cptura das setas. 
             :param ev: estrutura enviad pelo evento onde se recupera informações.
         """
@@ -76,9 +78,11 @@ class Eventos:
             global cont #contador estanciado fora do def para gerar a linha a ser lida na matrizFase
             self.ambiente = Cena(self.matrizFase[cont][0]) #lê a cena que está descrita na primeira coluna da matriz
             STYLE["width"] = 640
-            self.boneco = Elemento(self.BONECO, x=int, y=int, cena=self.ambiente)
-            self.boneco.x = 100#int(matrizFase[cont][1]) #posição x_inicial da fase, descrita na matriz pela segunda coluna
-            self.boneco.y = 100#int(matrizFase[cont][2]) #posição y_inicial da fase descita pela terceira coluna
+            self.x1 = int(matrizFase[cont][1]) #posição x_inicial da fase, descrita na matriz pela segunda coluna
+            self.y1 = int(matrizFase[cont][2]) #posição y_inicial da fase descita pela terceira coluna
+            self.boneco = Elemento(self.BONECO, x=self.x1, y=self.y1, cena=self.ambiente)
+            self.boneco.x = self.x1
+            self.boneco.y = self.y1 
             self.ambiente.vai()
             cont = cont + 1
             if cont > 3: #Regulador do contador. Precisa alterar a programação para voltar a fase em um portal de retorno
@@ -89,4 +93,6 @@ class Eventos:
         
 if __name__ == "__main__":
     Eventos().vai()
+    
+
     
