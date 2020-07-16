@@ -5,13 +5,13 @@ from _spy.vitollino.main import Cena, Elemento, Texto
 from _spy.vittolino.main import INVENTARIO as inv
 
 tabuleiro ="http://www.infcross.com.br/mestrado/tabuleiro.jpg"
-botao = "https://imgur.com/oC9lAgW"
+botao = "https://imgur.com/oC9lAgW.png"
 
    
 def cena_principal():
     inicio = Cena(img=tabuleiro)
-    inicio_e = Elemento (img = botao, tit="Gravidade", style = dict(left= 70,top=170,bottom=100))
+    inicio_e = Elemento(img=botao)
+    inicio_e.entra(inicio)
     inicio.vai()
-    inicio_e.vai()
     
 cena_principal()
