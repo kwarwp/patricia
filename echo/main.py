@@ -1,7 +1,7 @@
 # patricia.echo.main.py
 """ Jogo Olimpíadas de Matemática20.07
         * NEW: O jogo original
-        Autor: Grupo Echo (Aline, Lorena, Renato e Victoria)
+        Autor: Grupo Echo (Aline, Lorena, Renato e Victória)
 """
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
@@ -25,7 +25,7 @@ class Jogo:
     def __init__(self):
         """ Mostra o tabuleiro com o botão start"""
         self.cena = Cena(TABULEIRO, direita=Tabuleiro())
-        self.banhista = Elemento(BOTAO, x=50, y=50, cena=self.cena)
+        self.start = Elemento(BOTAO, x=50, y=50, cena=self.cena)
         #Cena(CENA_JOGO).vai()
     def vai(self):
         """ Mostra o tabuleiro """
