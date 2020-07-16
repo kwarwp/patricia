@@ -31,7 +31,7 @@ cont = 0 #contador index da matriz
 class Eventos:
     """ Associa um evento a uma imagem e captura eventos de teclado. """
     CENA_corredor_1 = link1 = "https://i.imgur.com/L71ZV6Z.png"
-    
+    link2 = "https://i.imgur.com/5Qno2fs.png"
     
     BONECO = "https://i.imgur.com/k63kwfa.png"
 
@@ -50,7 +50,7 @@ class Eventos:
         self.ambiente.vai()
     
     def anda_boneco(self, ev=None):
-        link2 = "https://i.imgur.com/5Qno2fs.png"
+        #link2 = "https://i.imgur.com/5Qno2fs.png"
         matrizFase = [[link2,60,300],     #matrizFase = [[local_imagem_fase, x_inicial, y_inicial]...]
                       ["https://i.imgur.com/gZ5wc0h.png",450,50],
                       ["https://i.imgur.com/xI8i7Nc.png",50,430],
