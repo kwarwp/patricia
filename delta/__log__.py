@@ -2988,3 +2988,10 @@ SyntaxError: EOL while scanning string literal
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Thu Jul 16 2020 11:04:29.534 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 14
+  from juliete.main import 
+                           ^
+SyntaxError: trailing comma not allowed without surrounding parentheses
+'''},
