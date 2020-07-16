@@ -8,15 +8,15 @@
 #PROBLEMA1: em algum momento (ALGUM PROBLEMA COM NÚMERO DE CLICKS? parece que ausencia da linha Texto sobre acertou fez isso) uma das cartas mesmo pareando não fixa
 #PROBLEMA2: as cartas selecionadas não ficam para cima ao mesmo tempo quando não são iguais (a ideia seria
 # virar as 2 e elas fecharem juntas
+__version__ = "20.07"
+__author__ = "Paulo Assumpção"
 
+__version__ = "20.07.01"
+__author__ = "Anni Provietti"
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
-from india.main import Game2x3
 import random
 import time
 
-
-#_version_ = "20.07"
-#_author_ = "Paulo Assumpção"
 
 IMG_CARD_FACE_DOWN = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline"
 IMG_CARD_1 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_pycharm.png?disp=inline"
@@ -55,7 +55,7 @@ class Card():
         self.card.elt.bind("click", self.turnUp)
         
         
-class Game2x2:
+class Game:
     # referência para o Elemento
     previous_selected_card = None
     
@@ -73,11 +73,11 @@ class Game2x2:
         """
         list_cards = self.shuffle_cards()
         
-        self.card1a = Card("PyCharm", IMG_CARD_1, list_cards[0], Game2x2.cena, Game2x2.rule)
-        self.card1b = Card("PyCharm", IMG_CARD_1, list_cards[1], Game2x2.cena, Game2x2.rule)
+        self.card1a = Card("PyCharm", IMG_CARD_1, list_cards[0], Game.cena, Game.rule)
+        self.card1b = Card("PyCharm", IMG_CARD_1, list_cards[1], Game.cena, Game.rule)
         
-        self.card2a = Card("Linux", IMG_CARD_2, list_cards[2], Game2x2.cena, Game2x2.rule)
-        self.card2b = Card("Linux", IMG_CARD_2, list_cards[3], Game2x2.cena, Game2x2.rule)
+        self.card2a = Card("Linux", IMG_CARD_2, list_cards[2], Game.cena, Game.rule)
+        self.card2b = Card("Linux", IMG_CARD_2, list_cards[3], Game.cena, Game.rule)
         
         #self.card3a = Card("GitLab", IMG_CARD_3, list_cards[4], Game.cena, Game.rule)
         #self.card3b = Card("GitLab", IMG_CARD_3, list_cards[5], Game.cena, Game.rule)
@@ -88,43 +88,43 @@ class Game2x2:
         #self.card5a = Card("Activ", IMG_CARD_5, list_cards[8], Game.cena, Game.rule)
         #self.card5b = Card("Activ", IMG_CARD_5, list_cards[9], Game.cena, Game.rule)
         
-        Game2x2.cena.vai()
+        Game.cena.vai()
 
     @staticmethod
     def rule(selected_card):
     
         # abortar se o clique ocorrer sobre a mesma carta
-        if Game2x2.previous_selected_card == selected_card:
+        if Game.previous_selected_card == selected_card:
             return
         
         # tem um par selecionado?
-        if Game2x2.previous_selected_card is None:
+        if Game.previous_selected_card is None:
             # primeira carta selecionada
-            Game2x2.previous_selected_card = selected_card
+            Game.previous_selected_card = selected_card
             # desabilita o clique sobre carta virada
-            Game2x2.previous_selected_card.card.elt.unbind("click")
+            Game.previous_selected_card.card.elt.unbind("click")
             return
         
         # Não acertou
-        if Game2x2.previous_selected_card.name != selected_card.name:            
+        if Game.previous_selected_card.name != selected_card.name:            
             
 
             # Aqui tem q esperar pelo menos 3 segundos, como fazer? (sleep, não funciona)
       
-            #Texto(GameGame2x2.cena, "Opa!", "Errou!!!").vai()
+            #Texto(Game.cena, "Opa!", "Errou!!!").vai()
             
             # reabilita a ação o clique e vira a carta 1 para baixo
-            Game2x2.previous_selected_card.card.elt.bind("click", Game2x2.previous_selected_card.turnUp)
+            Game.previous_selected_card.card.elt.bind("click", Game.previous_selected_card.turnUp)
             # reabilita a ação do clique e vira a carta 2 para baixo
             selected_card.card.elt.bind("click", selected_card.turnUp)
             selected_card.turnDown()
-            Game2x2.previous_selected_card.turnDown()
-            Game2x2.previous_selected_card = None
+            Game.previous_selected_card.turnDown()
+            Game.previous_selected_card = None
             
         # acertou 
         else:
             # desabilita o clique sobre as cartas acertadas
-            Game2x2.previous_selected_card = None
+            Game.previous_selected_card = None
             selected_card.card.elt.unbind("click")
             #Texto(Game.cena, "Acertou!!!").vai()
         
@@ -136,6 +136,6 @@ class Game2x2:
         
 
 if __name__ == "__main__":
-    Game2x2().vai()
+    Game().vai()
 	
 
