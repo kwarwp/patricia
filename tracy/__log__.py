@@ -274,3 +274,10 @@ SyntaxError: keyword argument repeated
     cena_principal() 
 TypeError: cena_principal() missing 2 positional arguments: img,img1
 '''},
+{'date': 'Wed Jul 15 2020 23:21:35.75 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 12
+  inicio = Cena(img=tabuleiro, img=botao)
+                                  ^
+SyntaxError: keyword argument repeated
+'''},
