@@ -14,7 +14,7 @@ Changelog
 from _spy.vitollino.main import Cena, INVENTARIO, STYLE
 from random import choice
 
-STYLE["width"] = 1150
+STYLE["width"] = 840
 STYLE["height"] = 550
 
 TABULEIRO = "http://www.infcross.com.br/mestrado/tabuleiro.jpg"
