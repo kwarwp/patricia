@@ -328,3 +328,10 @@ SyntaxError: invalid syntax
     self.boneco = Elemento(self.BONECO, x=self.x1, y=self.y1, cena=self.ambiente)
 AttributeError: 'Eventos' object has no attribute 'y1'
 '''},
+{'date': 'Thu Jul 16 2020 09:59:41.827 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 50
+  global matrizFase
+  ^
+IndentationError: expected an indented block
+'''},
