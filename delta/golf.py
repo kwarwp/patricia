@@ -122,7 +122,7 @@ class Game:
         else:
             # desabilita o clique sobre as cartas acertadas
             Game.previous_selected_card = None
-            self.verifyingGameOver()
+            verifyingGameOver()
             selected_card.card.elt.unbind("click")
             Texto(Game.cena, "Acertou!!!").vai()
             
