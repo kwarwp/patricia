@@ -9,7 +9,7 @@ from _spy.vittolino.main import INVENTARIO as inv
 #aqui eu importei os cenarios e os elementos
 STYLE["width"] = 1250
 STYLE["leight"]= "550px"
-explicacao = Cena(img = "https://i.imgur.com/oHAC3Xi.png")
+expli= Cena(img = "https://i.imgur.com/oHAC3Xi.png")
 fundo= Cena (img = "https://i.imgur.com/hexAWk7.png")
 erro= Cena (img = "https://i.imgur.com/idqEr5C.png")
 casa= Cena (img = "https://plantasdecasas.com/storage/2017/07/planta-fachada-casa-115-fr-AG.jpg")
@@ -29,8 +29,8 @@ codigo1.vai=erro.vai
 codigo2.vai=casa.vai
 triste.vai=fundo.vai
 feliz.vai=fundo.vai
-explicacao.vai=fundo.vai
+expli.vai=fundo.vai
 #fundo.vai()
-explicacao.vai()
+expli.vai()
 
 
