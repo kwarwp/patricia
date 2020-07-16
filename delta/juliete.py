@@ -133,7 +133,7 @@ class Game2X4:
         for object in list_objects:
             if object.faceDown == True:
                 return
-            if object.facedown == False   
+            else:   
                 Game2x5.vai()
         
     def shuffle_cards(self):   
