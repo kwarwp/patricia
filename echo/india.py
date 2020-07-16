@@ -19,9 +19,13 @@ STYLE["height"] = 550
 
 TABULEIRO = "http://www.infcross.com.br/mestrado/tabuleiro.jpg"
 BOTAO = "https://imgur.com/oC9lAgW"
+DADO_1 = "http://infcross.com.br/mestrado/dado%1.png"
 
 tabuleiro = Cena(TABULEIRO)
 tabuleiro.vai()
+dado_1 = Cena(DADO_1)
+dado_1.vai()
+
 
 """def cena_principal():
     inicio = Cena(img=tabuleiro)
