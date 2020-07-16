@@ -47,6 +47,11 @@ class Eventos:
     STYLE["width"] = 640 #tamanho da cena
     
     def __init__(self):
+        matrizFase2 = [["https://i.imgur.com/5Qno2fs.png",60,300],     #matrizFase = [[local_imagem_fase, x_inicial, y_inicial]...]
+                  ["https://i.imgur.com/gZ5wc0h.png",450,50],
+                  ["https://i.imgur.com/xI8i7Nc.png",50,430],
+                  ["https://i.imgur.com/GLVctqb.png",200,50]]
+
         global matrizFase
         self.x1 = 100
         self.y1 = 40
@@ -81,8 +86,8 @@ class Eventos:
 #            global matrizFase
             self.ambiente = Cena(self.matrizFase[cont][0]) #lê a cena que está descrita na primeira coluna da matriz
             STYLE["width"] = 640
-            self.x1 = int(matrizFase[0][1])
-            self.y1 = int(matrizFase[0][2])
+            self.x1 = int(matrizFase2[0][1])
+            self.y1 = int(matrizFase2[0][2])
             self.boneco = Elemento(self.BONECO, x=self.x1, y=self.y1, cena=self.ambiente)
             self.boneco.x = self.x1#100#int(matrizFase[cont][1]) #posição x_inicial da fase, descrita na matriz pela segunda coluna
             self.boneco.y = self.y1#100#int(matrizFase[cont][2]) #posição y_inicial da fase descita pela terceira coluna
