@@ -1430,3 +1430,10 @@ AttributeError: 'Jogo' object has no attribute 'texto_castelo'
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Thu Jul 16 2020 10:50:32.653 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 80
+  """ação após escolha do Avatar"""
+  ^
+IndentationError: unexpected indent
+'''},
