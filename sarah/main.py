@@ -18,7 +18,7 @@ class Jogo:
     def __init__(self):
         """ Mostra o tabuleiro """
         self.cena = Cena(TABULEIRO, direita=Praia())
-        self.banhista = Elemento(BANHISTA, x=100, y=200, cena=self.cena)
+        self.banhista = Elemento(botap, x=100, y=200, cena=self.cena)
         #Cena(CENA_CALCADA).vai()
     def vai(self):
         """ Mostra o tabuleiro """
