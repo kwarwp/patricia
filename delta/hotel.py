@@ -5,7 +5,7 @@
 #Testes feitos na sala Naomi
 #Código do Paulo adaptado para matriz 2x3
 #Algumas tentativas, minhas, anteriores foram frustradas com relação a posicionamento
-#PROBLEMA1: em algum momento (NA PRIMEIRA DUPLA ENCONTRADA, UMA DAS CARTAS VIRA PRA BAIXO) uma das cartas mesmo pareando não fixa
+#PROBLEMA1: em algum momento (ALGUM PROBLEMA COM NÚMERO DE CLICKS?) uma das cartas mesmo pareando não fixa
 #PROBLEMA2: as cartas selecionadas não ficam para cima ao mesmo tempo quando não são iguais (a ideia seria
 # virar as 2 e elas fecharem juntas
 
