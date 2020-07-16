@@ -11,4 +11,14 @@ from texto.main import Texto
 CENAINICIO = "https://i.imgur.com/mbt7XHq.png"
 PLAY = "https://i.imgur.com/QiiOf5O.png"
 
+STYLE ["width"] = 1320
 
+class gameInicio:
+# start da classe, é aqui que o jogo se inicia
+    def __init__(self):
+        gameInicio = Cena(CENAINICIO)
+        gameInicio.vai()
+        dark = Elemento("",style=dict(width="1345px",height="600px",backgroundColor="black",opacity=0.7),cena=gameInicio)
+        self.play = Elemento(PLAY, x=570, y=470,w=180,h=120, cena=gameInicio, vai = self.mostradia)
+
+gameInicio()
