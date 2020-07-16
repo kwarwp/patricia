@@ -1,6 +1,6 @@
 # patricia.kristen.main.py
 
-from _spy.vitollino.main import Cena, Elemento, STYLE
+from _spy.vitollino.main import Cena, Elemento, STYLE, Text
 from browser import document # importa o DOM para atribuir o evento de teclado
 
 cont = 0 #contador index da matriz
