@@ -3191,3 +3191,10 @@ SyntaxError: keyword can't be an expression
                                                ^
 SyntaxError: keyword can't be an expression
 '''},
+{'date': 'Thu Jul 16 2020 13:22:28.974 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 138
+  def verifyingGameOver():
+  ^
+IndentationError: unexpected indent
+'''},
