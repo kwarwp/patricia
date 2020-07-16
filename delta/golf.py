@@ -128,6 +128,7 @@ class Game:
             
     @staticmethod  
     def verifyingGameOver():
+        Texto(Game.cena, 'Chamou').vai()
         for object in list_objects:
             if object.faceDown == True:
                 Texto(Game.cena, object.name, object.faceDown).vai()
