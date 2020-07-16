@@ -3177,3 +3177,10 @@ TypeError: 'module' object is not callable
     self.inicio = Cena(TELA_INICIAL, meio= Game())
 TypeError: 'module' object is not callable
 '''},
+{'date': 'Thu Jul 16 2020 13:02:23.99 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 33
+  self.inicio = Cena(TELA_INICIAL, meio.direita.esquerda= TELA_MEIO)
+                                                        ^
+SyntaxError: keyword can't be an expression
+'''},
