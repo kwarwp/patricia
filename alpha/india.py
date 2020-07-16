@@ -45,7 +45,7 @@ class Eventos:
 
     STYLE["width"] = 640 #tamanho da cena
     
-    def __init__(self):
+    def __init__(self):       
         self.x1 = 100
         self.y1 = 40
         self.ambiente = Cena(self.CENA_corredor_1)
@@ -56,7 +56,7 @@ class Eventos:
         """ mostra corredor do labirinto """
         self.ambiente.vai()
     
-    def anda_boneco(self, ev=None):
+    def anda_boneco(self, ev=None):  
         matrizPosicaoInicial = [[60,280],     #matrizPosicaoInicial = [[x_inicial, y_inicial]...]
                                 [450,50],
                                 [50,430],
@@ -75,7 +75,10 @@ class Eventos:
         elif key in [38, 40]:
             key = (key - 39) * 5
             self.boneco.y += key # muda a posição de mais um ou menos um
-        
+            
+        #estudo da parede
+            #if self.boneco.x <= 80
+            
         #se o elemento atingiu uma porta, muda para a próxima cena
         # FALTA mapear os pontos, criar função para passar parametros ou chamar outra classe
         #ideia de cria uma matriz com os pontos de localização do portal
