@@ -17,11 +17,14 @@ Changelog
         Descreva o que você adicionou no código.
 
 """
-from _spy.vitollino.main import Cena
+from _spy.vitollino.main import Cena, STYLE
 from hotel.main import Game
 from golf.main import Game
 
 TELA_INICIAL = "https://i.pinimg.com/originals/ff/7c/78/ff7c780990c7f867de2061645d9eff86.gif"
+
+STYLE["width"] = 1000
+
 
 class start:
 
