@@ -73,7 +73,7 @@ class Eventos:
         #se o elemento atingiu uma porta, muda para a próxima cena
         # FALTA mapear os pontos, criar função para passar parametros ou chamar outra classe
         #ideia de cria uma matriz com os pontos de localização do portal
-        if self.boneco.x > 400 and self.boneco.y > 200:
+        if self.boneco.x > 400 and self.boneco.y > 400:
             global cont #contador estanciado fora do def para gerar a linha a ser lida na matrizFase
             self.ambiente = Cena(self.matrizFase[cont][0]) #lê a cena que está descrita na primeira coluna da matriz
             STYLE["width"] = 640
