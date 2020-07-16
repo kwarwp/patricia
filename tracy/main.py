@@ -10,7 +10,7 @@ botao = "https://imgur.com/oC9lAgW.png"
    
 def cena_principal():
     inicio = Cena(img=tabuleiro)
-    inicio_e = Elemento (img = botao)
+    inicio_e = Elemento(img=botao)
     inicio.vai()
     inicio_e.vai()
     
