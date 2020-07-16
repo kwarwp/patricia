@@ -57,7 +57,7 @@ class Card():
         self.card.elt.bind("click", self.turnUp)
         
         
-class Game2X4:
+class Game2x4:
     # referência para o Elemento
     previous_selected_card = None
     
@@ -76,55 +76,55 @@ class Game2X4:
         """
         list_cards = self.shuffle_cards()
         
-        list_objects = [ Card("PyCharm", IMG_CARD_1, list_cards[0], Game2x5.cena, Game2x5.rule), 
-            Card("PyCharm", IMG_CARD_1, list_cards[1], Game2x5.cena, Game2x5.rule),
-            Card("Linux", IMG_CARD_2, list_cards[2], Game2x5.cena, Game2x5.rule),
-            Card("Linux", IMG_CARD_2, list_cards[3], Game2x5.cena, Game2x5.rule),
-            Card("GitLab", IMG_CARD_3, list_cards[4], Game2x5.cena, Game2x5.rule),
-            Card("GitLab", IMG_CARD_3, list_cards[5], Game2x5.cena, Game2x5.rule),
-            Card("GitHub", IMG_CARD_4, list_cards[6], Game2x5.cena, Game2x5.rule),
-            Card("GitHub", IMG_CARD_4, list_cards[7], Game2x5.cena, Game2x5.rule),
+        list_objects = [ Card("PyCharm", IMG_CARD_1, list_cards[0], Game2x4.cena, Game2x4.rule), 
+            Card("PyCharm", IMG_CARD_1, list_cards[1], Game2x4.cena, Game2x4.rule),
+            Card("Linux", IMG_CARD_2, list_cards[2], Game2x4.cena, Game2x4.rule),
+            Card("Linux", IMG_CARD_2, list_cards[3], Game2x4.cena, Game2x4.rule),
+            Card("GitLab", IMG_CARD_3, list_cards[4], Game2x4.cena, Game2x4.rule),
+            Card("GitLab", IMG_CARD_3, list_cards[5], Game2x4.cena, Game2x4.rule),
+            Card("GitHub", IMG_CARD_4, list_cards[6], Game2x4.cena, Game2x4.rule),
+            Card("GitHub", IMG_CARD_4, list_cards[7], Game2x4.cena, Game2x4.rule),
             ]
         
-        Game2X4.cena.vai()
+        Game2x4.cena.vai()
 
     @staticmethod
     def rule(selected_card):
     
         # abortar se o clique ocorrer sobre a mesma carta
-        if Game2X4.previous_selected_card == selected_card:
+        if Game2x4.previous_selected_card == selected_card:
             return
         
         # tem um par selecionado?
-        if Game2X4.previous_selected_card is None:
+        if Game2x4.previous_selected_card is None:
             # primeira carta selecionada
-            Game2X4.previous_selected_card = selected_card
+            Game2x4.previous_selected_card = selected_card
             # desabilita o clique sobre carta virada
-            Game2X4.previous_selected_card.card.elt.unbind("click")
+            Game2x4.previous_selected_card.card.elt.unbind("click")
             return
         
         # Não acertou
-        if Game2X4.previous_selected_card.name != selected_card.name:            
+        if Game2x4.previous_selected_card.name != selected_card.name:            
             # reabilita a ação o clique e vira a carta 1 para baixo
-            Game2X4.previous_selected_card.card.elt.bind("click", Game2X4.previous_selected_card.turnUp)
-            Game2X4.previous_selected_card.turnDown()
+            Game2x4.previous_selected_card.card.elt.bind("click", Game2x4.previous_selected_card.turnUp)
+            Game2x4.previous_selected_card.turnDown()
             
             # reabilita a ação do clique e vira a carta 2 para baixo
             selected_card.card.elt.bind("click", selected_card.turnUp)
             
-            Texto(Game2X4.cena, "Opa!", "Errou!!!").vai()
+            Texto(Game2x4.cena, "Opa!", "Errou!!!").vai()
             
             # Aqui tem q esperar pelo menos 3 segundos, como fazer? (sleep, não funciona)
             
             selected_card.turnDown()
-            Game2X4.previous_selected_card = None
+            Game2x4.previous_selected_card = None
             
         # acertou 
         else:
             # desabilita o clique sobre as cartas acertadas
-            Game2X4.previous_selected_card = None
+            Game2x4.previous_selected_card = None
             selected_card.card.elt.unbind("click")
-            Texto(Game2X4.cena, "Acertou!!!").vai()
+            Texto(Game2x4.cena, "Acertou!!!").vai()
         
 
     @staticmethod  
@@ -144,4 +144,4 @@ class Game2X4:
         
 
 if __name__ == "__main__":
-    Game().vai()
+    Game2x4().vai()
