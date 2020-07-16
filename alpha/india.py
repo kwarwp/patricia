@@ -27,7 +27,10 @@ from _spy.vitollino.main import Cena, Elemento, STYLE
 from browser import document # importa o DOM para atribuir o evento de teclado
 
 cont = 0 #contador index da matriz
-
+matrizFase = [[link2,60,260],     #matrizFase = [[local_imagem_fase, x_inicial, y_inicial]...]
+              [link3,450,50],
+              [link4,50,430],
+              [link5,200,50]]
 class Eventos:
     """ Associa um evento a uma imagem e captura eventos de teclado. """
     CENA_corredor_1 = link1 = "https://i.imgur.com/L71ZV6Z.png"
@@ -39,16 +42,13 @@ class Eventos:
     BONECO = "https://i.imgur.com/k63kwfa.png"
     
     
-    matrizFase = [[link2,60,260],     #matrizFase = [[local_imagem_fase, x_inicial, y_inicial]...]
-                  [link3,450,50],
-                  [link4,50,430],
-                  [link5,200,50]]
+
 
     STYLE["width"] = 640 #tamanho da cena
     
     def __init__(self):
         global matrizFase
-        self.x1 = matrizFase[0][0]
+        self.x1 = matrizFase[0][1]
         self.y1 = 40
         self.ambiente = Cena(self.CENA_corredor_1)
         self.boneco = Elemento(self.BONECO, x=self.x1, y=self.y1, cena=self.ambiente)
