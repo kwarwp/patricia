@@ -2981,3 +2981,10 @@ NameError: name 'Game' is not defined
                            ^
 SyntaxError: EOL while scanning string literal
 '''},
+{'date': 'Thu Jul 16 2020 00:43:54.414 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 144
+  alert("tu venceu, rapá!")
+  ^
+IndentationError: unexpected indent
+'''},
