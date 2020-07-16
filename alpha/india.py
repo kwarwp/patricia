@@ -31,15 +31,15 @@ cont = 0 #contador index da matriz
 class Eventos:
     """ Associa um evento a uma imagem e captura eventos de teclado. """
     CENA_corredor_1 = "https://i.imgur.com/L71ZV6Z.png"
-    link2 = "https://i.imgur.com/5Qno2fs.png"
-    link3 = "https://i.imgur.com/gZ5wc0h.png"
-    link4 = "https://i.imgur.com/xI8i7Nc.png"
-    link5 = "https://i.imgur.com/GLVctqb.png"
+    CENA_corredor_2 = "https://i.imgur.com/5Qno2fs.png"
+    CENA_corredor_3 = "https://i.imgur.com/gZ5wc0h.png"
+    CENA_corredor_4 = "https://i.imgur.com/xI8i7Nc.png"
+    CENA_corredor_5 = "https://i.imgur.com/GLVctqb.png"
     
-    matrizFase = [[link2,60,300],     #matrizFase = [[local_imagem_fase, x_inicial, y_inicial]...]
-                  [link3,450,50],
-                  [link4,50,430],
-                  [link5,200,50]]
+    listaFase = [CENA_corredor_2,    #listaFase = [local_imagem_fase,...]
+                 CENA_corredor_3,
+                 CENA_corredor_4,
+                 CENA_corredor_5,]
               
     BONECO = "https://i.imgur.com/k63kwfa.png"
 
