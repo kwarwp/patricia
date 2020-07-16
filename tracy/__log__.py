@@ -244,3 +244,10 @@ NameError: name 'inicio_e' is not defined
     botaostart = Elemento(botao, cena=self.kamui, tit="Comece aqui")    
 AttributeError: 'GUI' object has no attribute 'kamui'
 '''},
+{'date': 'Wed Jul 15 2020 23:19:55.799 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 12
+  inicio = Cena(img=tabuleiro, imgbotao)
+                                       ^
+SyntaxError: non-keyword arg after keyword arg
+'''},
