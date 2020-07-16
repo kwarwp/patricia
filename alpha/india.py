@@ -74,7 +74,7 @@ class Eventos:
         
         if self.boneco.x > 400 and self.boneco.y > 400:
             global cont #contador estanciado fora do def para gerar a linha a ser lida na matrizFase
-            self.ambiente = Cena(self.matrizFase[0][0]) #lê a cena que está descrita na primeira coluna da matriz
+            self.ambiente = Cena(self."https://i.imgur.com/5Qno2fs.png")#(self.matrizFase[0][0]) #lê a cena que está descrita na primeira coluna da matriz
             STYLE["width"] = 640
             #self.x2 = 100#int(matrizFase[cont][1]) #posição x_inicial da fase, descrita na matriz pela segunda coluna
             #self.y2 = 100#int(matrizFase[cont][2]) #posição y_inicial da fase descita pela terceira coluna
