@@ -13,12 +13,12 @@ Changelog
 """
 from _spy.vitollino.main import Cena, Elemento, STYLE
 from grace.main import Praia
-__version__ = "20.07"
-__author__ = "Carlo"
+
+__version__ = "1.0"
+__author__ = "ECHO"
 STYLE["width"] = 500
 CENA_CALCADA = "http://www.infcross.com.br/mestrado/tabuleiro.jpg"
 BANHISTA = "http://www.infcross.com.br/mestrado/botao.jpg"
-
 
 class Calcada:
     """ Representa uma cena da calçada da praia """
