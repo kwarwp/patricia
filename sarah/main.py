@@ -5,7 +5,7 @@ from _spy.vitollino.main import Cena, Elemento, Texto
 from _spy.vittolino.main import INVENTARIO as inv
 
 tabuleiro ="http://www.infcross.com.br/mestrado/tabuleiro.jpg"
-botao = "https://imgur.com/oC9lAgW.png"
+botao = "http://www.infcross.com.br/mestrado/botao.jpg"
 
    
 def cena_principal():
