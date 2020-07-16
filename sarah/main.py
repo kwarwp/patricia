@@ -17,14 +17,14 @@ from grace.main import Praia
 __version__ = "1.0"
 __author__ = "ECHO"
 STYLE["width"] = 500
-CENA_CALCADA = "http://www.infcross.com.br/mestrado/tabuleiro.jpg"
+TABULEIRO = "http://www.infcross.com.br/mestrado/tabuleiro.jpg"
 BOTAO = "http://www.infcross.com.br/mestrado/botao.jpg"
 
 class Calcada:
     """ Representa uma cena da calçada da praia """
     def __init__(self):
         """ Mostra o tabuleiro com o botão start"""
-        self.cena = Cena(CENA_CALCADA, direita=Praia())
+        self.cena = Cena(TABULEIRO, direita=Praia())
         self.banhista = Elemento(BOTAO, x=100, y=200, cena=self.cena)
         #Cena(CENA_CALCADA).vai()
     def vai(self):
