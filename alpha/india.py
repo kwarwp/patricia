@@ -47,7 +47,7 @@ class Eventos:
     STYLE["width"] = 640 #tamanho da cena
     
     def __init__(self):
-        self.xx = 100
+        self.xx = 200
         self.yy = 40
         self.ambiente = Cena(self.CENA_corredor_1)
         self.boneco = Elemento(self.BONECO, x=self.xx, y=40, cena=self.ambiente)
