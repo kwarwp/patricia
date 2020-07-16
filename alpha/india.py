@@ -38,10 +38,10 @@ class Eventos:
     STYLE["width"] = 640 #tamanho da cena
     
     def __init__(self):
-        self.x1 = 100
-        self.y1 = 40
+        #self.x1 = 100
+        #self.y1 = 40
         self.ambiente = Cena(self.CENA_corredor_1)
-        self.boneco = Elemento(self.BONECO, x=self.x1, y=self.y1, cena=self.ambiente)
+        self.boneco = Elemento(self.BONECO, x=100, y=200, cena=self.ambiente)
         document.bind("keydown", self.anda_boneco)  # captura o evento de teclado
            
     def vai(self):
@@ -79,7 +79,7 @@ class Eventos:
             #self.x2 = 100#int(matrizFase[cont][1]) #posição x_inicial da fase, descrita na matriz pela segunda coluna
             #self.y2 = 100#int(matrizFase[cont][2]) #posição y_inicial da fase descita pela terceira coluna
             
-            self.boneco = Elemento(self.BONECO, x=100, y=100, cena=self.ambiente)
+            self.boneco = Elemento(self.BONECO, x=100, y=200, cena=self.ambiente)
             self.boneco.x = 100
             self.boneco.y = 100
             self.ambiente.vai()
