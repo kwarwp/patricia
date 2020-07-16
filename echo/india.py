@@ -17,3 +17,4 @@ from random import choice
 STYLE["width"] = 1150
 STYLE["height"] = 550px
 
+TABULEIRO = "http://www.infcross.com.br/mestrado/tabuleiro.jpg"
