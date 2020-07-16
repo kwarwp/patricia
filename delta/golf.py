@@ -134,7 +134,7 @@ class Game2x5:
                 Texto(Game2x5.cena, object.name, object.faceDown).vai()
                 return
                 
-        Texto(Game.cena, "GameOver!!!").vai()
+        Texto(Game2x5.cena, "GameOver!!!").vai()
         # proxima sala
         
     
