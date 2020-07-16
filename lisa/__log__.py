@@ -85,3 +85,10 @@ ValueError: invalid literal for int() with base 10: ''
                                                                                              ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Jul 16 2020 15:04:02.214 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 13
+  """from _spy.vitollino.main import Cena, Elemento, STYLE
+                                                                                                                                                                                                                                                                                                                                       ^
+SyntaxError: invalid syntax
+'''},
