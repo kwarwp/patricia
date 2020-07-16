@@ -11,7 +11,7 @@ Changelog
 
 """
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
-from juliet.main import Game2x4  
+from juliet.main import Game  
 import random
 import time
 
