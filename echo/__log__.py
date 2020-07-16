@@ -486,3 +486,107 @@ KeyError: leight
                   ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Jul 15 2020 22:15:21.543 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 9
+  """STYLE ["leight"]^"550px""""
+                                ^
+SyntaxError: EOL while scanning string literal
+'''},
+{'date': 'Wed Jul 15 2020 22:15:35.457 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 8
+  STYLE ["width"]"1150
+                      ^
+SyntaxError: EOL while scanning string literal
+'''},
+{'date': 'Wed Jul 15 2020 22:15:51.421 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 8
+  STYLE ["width"]"1150"
+                  ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Wed Jul 15 2020 22:41:34.214 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 8
+  """STYLE ["width"]"1150""""
+                             ^
+SyntaxError: EOL while scanning string literal
+'''},
+{'date': 'Wed Jul 15 2020 22:41:42.870 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 8
+  """STYLE ["width"]"1150""""
+                             ^
+SyntaxError: EOL while scanning string literal
+'''},
+{'date': 'Wed Jul 15 2020 22:41:55.226 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 9
+  """STYLE ["leight"]"550px""""
+                               ^
+SyntaxError: EOL while scanning string literal
+'''},
+{'date': 'Wed Jul 15 2020 22:44:12.35 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 10
+    STYLE ["leight"] * "550px"
+KeyError: leight
+'''},
+{'date': 'Wed Jul 15 2020 22:44:58.88 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 10
+    STYLE ["leight"] * "550px"
+KeyError: leight
+'''},
+{'date': 'Wed Jul 15 2020 22:48:27.202 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 8
+  STYLE ["width"]"1150"
+                  ^
+SyntaxError: invalid syntax
+'''},
+{'date': 'Wed Jul 15 2020 22:49:08.940 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 10
+    STYLE ["leight"] * "550px"
+KeyError: leight
+'''},
+{'date': 'Wed Jul 15 2020 22:49:01.523 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 10
+  STYLE ["leight"] * 550px
+                         ^
+SyntaxError: invalid syntax
+'''},
