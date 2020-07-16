@@ -2909,3 +2909,10 @@ NameError: name 'IMG_CARD_3' is not defined
                     ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Jul 15 2020 21:14:13.316 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 27
+  IMG_CARD_4 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Activ.png?disp=inline""
+                                                                                     ^
+SyntaxError: EOL while scanning string literal
+'''},
