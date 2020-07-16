@@ -59,6 +59,7 @@ class Card():
 class Game:
     # referência para o Elemento
     previous_selected_card = None
+    list_objects = None
     
     cena = Cena()
     
@@ -73,7 +74,7 @@ class Game:
         """
         list_cards = self.shuffle_cards()
         
-        self.list_objects = [ Card("PyCharm", IMG_CARD_1, list_cards[0], Game.cena, Game.rule), 
+        list_objects = [ Card("PyCharm", IMG_CARD_1, list_cards[0], Game.cena, Game.rule), 
             Card("PyCharm", IMG_CARD_1, list_cards[1], Game.cena, Game.rule),
             Card("Linux", IMG_CARD_2, list_cards[2], Game.cena, Game.rule),
             Card("Linux", IMG_CARD_2, list_cards[3], Game.cena, Game.rule),
@@ -83,7 +84,6 @@ class Game:
             Card("GitHub", IMG_CARD_4, list_cards[7], Game.cena, Game.rule),
             Card("Activ", IMG_CARD_5, list_cards[8], Game.cena, Game.rule),
             Card("Activ", IMG_CARD_5, list_cards[9], Game.cena, Game.rule)]
-       
         Game.cena.vai()
               
 
@@ -126,9 +126,9 @@ class Game:
             selected_card.card.elt.unbind("click")
             Texto(Game.cena, "Acertou!!!").vai()
             
-        
-    def verifyingGameOver(self):
-        for object in self.list_objects:
+    @staticmethod  
+    def verifyingGameOver():
+        for object in list_objects:
             if object.faceDown == True:
                 return
                 
