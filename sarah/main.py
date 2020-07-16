@@ -8,8 +8,6 @@ tabuleiro ="http://www.infcross.com.br/mestrado/tabuleiro.jpg"
 
 botao = "http://www.infcross.com.br/mestrado/botao.jpg"
 
-STYLE["width"] = 1150
-STYLE["height"] = "550px"   
 def cena_principal():
 
     inicio = Cena(img=tabuleiro)
