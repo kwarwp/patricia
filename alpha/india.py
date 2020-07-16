@@ -14,6 +14,7 @@ Código alterado de Monica Novellino <monicanovellino@gmail.com>
 
 .. versionadded::    20.07
         Adicionei 5 imagens iniciais do labirinto e alterei o pacman (podem criar outro peronagem)
+        Contador adicionado para gerar cada fase m função da linha da matriz
         
 
 """
@@ -38,10 +39,10 @@ class Eventos:
     BONECO = "https://i.imgur.com/k63kwfa.png"
     
     
-    matrizFase = [[link2,100,100],
-                  [link3,100,100],
-                  [link4,100,100],
-                  [link5,100,100]]
+    matrizFase = [[link2,60,260],     #matrizFase = [[local_imagem_fase, x_inicial, y_inicial]...]
+                  [link3,450,50],
+                  [link4,50,430],
+                  [link5,200,50]]
 
     STYLE["width"] = 640 #tamanho da cena
     
