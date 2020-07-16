@@ -439,3 +439,10 @@ NameError: name 'link2' is not defined
     matrizFase = [[link2,60,260],     #matrizFase = [[local_imagem_fase, x_inicial, y_inicial]...]
 NameError: name 'link2' is not defined
 '''},
+{'date': 'Thu Jul 16 2020 11:50:21.126 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 87
+  if cont = 2: #Regulador do contador. Precisa alterar a programação para voltar a fase em um portal de retorno
+           ^
+SyntaxError: invalid syntax
+'''},
