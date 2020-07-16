@@ -27,6 +27,7 @@ dado_1 = Cena(DADO_1)
 dado_1.vai()
 
 
+
 """def cena_principal():
     inicio = Cena(img=tabuleiro)
     inicio_e = Elemento (img = botao, tit="Gravidade", style = dict(left= 70,top=170, width=1150, height=550,bottom=100))
