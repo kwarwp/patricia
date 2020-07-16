@@ -14,7 +14,7 @@ Código alterado de Monica Novellino <monicanovellino@gmail.com>
 
 .. versionadded::    20.07
         Adicionei 5 imagens iniciais do labirinto e alterei o pacman (podem criar outro peronagem)
-        Contador adicionado para gerar cada fase m função da linha da matriz
+        Contador adicionado para gerar as seguintes fases e posiçoes iniciais em função da linha da matriz
         
 
 """
