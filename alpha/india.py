@@ -38,10 +38,10 @@ class Eventos:
     BONECO = "https://i.imgur.com/k63kwfa.png"
     
     
-    matrizFase = [[link2,60,260],     #matrizFase = [[local_imagem_fase, x_inicial, y_inicial]...]
-                  [link3,450,50],
-                  [link4,50,430],
-                  [link5,200,50]]
+    matrizMapaFase = [[link2,100,100],
+                     [link3,100,100],
+                     [link4,100,100],
+                     [link5,100,100]]
 
     STYLE["width"] = 640 #tamanho da cena
     
