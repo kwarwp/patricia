@@ -22,6 +22,7 @@ class gameInicio:
         dark = Elemento("",style=dict(width="1345px",height="600px"),cena=gameInicio)
         self.play = Elemento(PLAY, x=570, y=470,w=100,h=100, cena=gameInicio, vai = self.redimensiona)
     
-    def redimensiona():
+    def redimensiona(self):
+        pass
 
 gameInicio()
