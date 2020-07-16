@@ -1,7 +1,7 @@
 # patricia.echo.main.py
 """ Jogo Olimpíadas de Matemática20.07
         * NEW: O jogo original
-        Autor: Grupo Echo (Aline, Lorena, Renato e Victoria)
+        Autor: Grupo Echo (Aline, Lorena, Renato e Victória)
 """
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
