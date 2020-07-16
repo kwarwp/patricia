@@ -90,8 +90,8 @@ class Eventos:
             self.y2 = 50#int(matrizFase[cont][2]) #posição y_inicial da fase descita pela terceira coluna
             
             self.boneco = Elemento(self.BONECO, x=self.x2, y=self.y2, cena=self.ambiente)
-            self.boneco.x = 100
-            self.boneco.y = 100
+            self.boneco.x = self.x2
+            self.boneco.y = self.y2
             self.ambiente.vai()
             cont = cont + 1
             if cont > 3: #Regulador do contador. Precisa alterar a programação para voltar a fase em um portal de retorno
