@@ -16,8 +16,8 @@ from grace.main import Praia
 __version__ = "20.07"
 __author__ = "Carlo"
 STYLE["width"] = 500
-CENA_CALCADA = "https://i.imgur.com/zOxshRh.jpg"
-BANHISTA = "https://i.imgur.com/CWQ00XG.png"
+CENA_CALCADA = "http://www.infcross.com.br/mestrado/tabuleiro.jpg"
+BANHISTA = "http://www.infcross.com.br/mestrado/botao.jpg"
 
 
 class Calcada:
