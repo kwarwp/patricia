@@ -11,7 +11,7 @@ Changelog
 
 """
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
-#from juliete.main import Game 
+from juliete.main import Game 
 import random
 import time
 
@@ -37,6 +37,7 @@ class Card():
         self.name = name
         self.cena = cena
         self.image = image
+        Game_india = Game
         self.faceDown = True
         self.position = position
         self.pos_x = 50 + self.position[0] * IMG_WIDTH
@@ -129,7 +130,8 @@ class Game:
             # desabilita o clique sobre as cartas acertadas
             Game.previous_selected_card = None
             selected_card.card.elt.unbind("click")
-            Texto(Game.cena, "Acertou!!!").vai()
+            passa_fase()
+            #Texto(Game.cena, "Acertou!!!").vai()
         
 
     def shuffle_cards(self):   
@@ -137,6 +139,11 @@ class Game:
                                                  
         random.shuffle(list_cards)
         return list_cards
+        
+    def passa_fase():
+        if i in list_cards:
+            Game.previous_selected_card = None
+        Game_.vai()    
         
 
 if __name__ == "__main__":
