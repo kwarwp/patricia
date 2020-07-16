@@ -133,8 +133,8 @@ class Game2x4:
         for object in list_objects:
             if object.faceDown == True:
                 return
-            else:   
-                Game2x5.vai()
+              
+        Game2x5.vai()
         
     def shuffle_cards(self):   
         list_cards =  [(0,0), (1,0), (2,0),(3,0),(0,1), (1,1), (2,1),(3,1)] #organiza as cartas em [coluna][linha]
