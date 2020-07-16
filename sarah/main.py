@@ -16,11 +16,11 @@ BOTAO = "http://www.infcross.com.br/mestrado/botao.jpg"
 class Tabuleiro:
     """ Representa uma cena da calçada da praia """
     def vai(self):
-        """ Mostra a cena da praia """
+        """ Mostra a cena do tabuleiro """
         Cena(TABULEIRO).vai()
 
 class Jogo:
-    """ Representa uma cena da calçada da praia """
+    """ Representa uma cena de tabuleiro com o botão """
     def __init__(self):
         """ Mostra o tabuleiro com o botão start"""
         self.cena = Cena(TABULEIRO, direita=Tabuleiro())
