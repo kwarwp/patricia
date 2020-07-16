@@ -78,3 +78,10 @@ ValueError: invalid literal for int() with base 10: ''
     lins = int(input("10"))
 ValueError: invalid literal for int() with base 10: ''
 '''},
+{'date': 'Thu Jul 16 2020 15:03:34.869 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 13
+  """from _spy.vitollino.main import Cena, Elemento, STYLE
+                                                                                             ^
+SyntaxError: invalid syntax
+'''},
