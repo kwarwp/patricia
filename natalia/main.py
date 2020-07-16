@@ -1,5 +1,5 @@
 # patricia.tracy.main.py
-_autor_ = "Aline_Moisinho"
+autor = "Lorena Pires Griõn"
 
 from _spy.vitollino.main import Cena, Elemento, Texto
 from _spy.vittolino.main import INVENTARIO as inv
@@ -10,12 +10,8 @@ botao = "https://imgur.com/oC9lAgW"
    
 def cena_principal():
     inicio = Cena(img=tabuleiro)
-    inicio_e = Elemento (img = botao, tit="Gravidade", style = dict(left= 70,top=170, width=1150, height=550,bottom=100))
-    lado1 = Cena(img=tabuleiro, direita =inicio)
-
-    
-    inicio_e.entra(inicio)
-
+    inicio_e = Elemento (img = botao, tit="Gravidade", style = dict(left= 70,top=170,bottom=100))
     inicio.vai()
+    inicio_e.vai()
     
 cena_principal()
