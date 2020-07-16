@@ -514,3 +514,10 @@ SyntaxError: invalid syntax
                              ^
 SyntaxError: EOL while scanning string literal
 '''},
+{'date': 'Wed Jul 15 2020 22:41:42.870 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 8
+  """STYLE ["width"]"1150""""
+                             ^
+SyntaxError: EOL while scanning string literal
+'''},
