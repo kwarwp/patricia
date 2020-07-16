@@ -4,7 +4,7 @@
 """
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
-from grace.main import Praia
+""" from grace.main import Praia """
 
 __version__ = "1.0"
 __author__ = "ECHO"
@@ -22,8 +22,6 @@ class Tabuleiro_Ini:
 
 if __name__ == "__main__":
     Tabuleiro_Ini().vai()
-
-
 
 class Jogo:
     """ Representa uma cena da calçada da praia """
