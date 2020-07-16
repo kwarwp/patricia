@@ -8,14 +8,15 @@
 #PROBLEMA1: em algum momento (ALGUM PROBLEMA COM NÚMERO DE CLICKS? parece que ausencia da linha Texto sobre acertou fez isso) uma das cartas mesmo pareando não fixa
 #PROBLEMA2: as cartas selecionadas não ficam para cima ao mesmo tempo quando não são iguais (a ideia seria
 # virar as 2 e elas fecharem juntas
+__version__ = "20.07"
+__author__ = "Paulo Assumpção"
 
+__version__ = "20.07.01"
+__author__ = "Anni Provietti"
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
 import random
 import time
 
-
-#_version_ = "20.07"
-#_author_ = "Paulo Assumpção"
 
 IMG_CARD_FACE_DOWN = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline"
 IMG_CARD_1 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_pycharm.png?disp=inline"
