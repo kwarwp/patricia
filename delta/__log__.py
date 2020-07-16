@@ -3184,3 +3184,10 @@ TypeError: 'module' object is not callable
                                                         ^
 SyntaxError: keyword can't be an expression
 '''},
+{'date': 'Thu Jul 16 2020 13:06:57.578 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 34
+  self.inicio = Cena(TELA_INICIAL, self.direita= TELA_MEIO)
+                                               ^
+SyntaxError: keyword can't be an expression
+'''},
