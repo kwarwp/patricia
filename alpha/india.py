@@ -27,11 +27,6 @@ from _spy.vitollino.main import Cena, Elemento, STYLE
 from browser import document # importa o DOM para atribuir o evento de teclado
 
 cont = 0 #contador index da matriz
-CENA_corredor_1 = link1 = "https://i.imgur.com/L71ZV6Z.png"
-CENA_corredor_2 = link2 = "https://i.imgur.com/5Qno2fs.png"
-CENA_corredor_3 = link3 = "https://i.imgur.com/gZ5wc0h.png"
-CENA_corredor_4 = link4 = "https://i.imgur.com/xI8i7Nc.png"
-CENA_corredor_5 = link5 = "https://i.imgur.com/GLVctqb.png"
 matrizFase = [[link2,60,260],     #matrizFase = [[local_imagem_fase, x_inicial, y_inicial]...]
               [link3,450,50],
               [link4,50,430],
@@ -86,8 +81,8 @@ class Eventos:
             global matrizFase
             self.ambiente = Cena(self.matrizFase[cont][0]) #lê a cena que está descrita na primeira coluna da matriz
             STYLE["width"] = 640
-            self.x1 = matrizFase[cont][1]
-            self.y1 = matrizFase[cont][2]
+            self.x1 = matrizFase[0][1]
+            self.y1 = matrizFase[0][2]
             self.boneco = Elemento(self.BONECO, x=self.x1, y=self.y1, cena=self.ambiente)
 #            self.boneco.x = self.xx#100#int(matrizFase[cont][1]) #posição x_inicial da fase, descrita na matriz pela segunda coluna
 #            self.boneco.y = self.yy#100#int(matrizFase[cont][2]) #posição y_inicial da fase descita pela terceira coluna
