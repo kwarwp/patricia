@@ -1,12 +1,17 @@
-# patricia.sarah.main.py
-""" Jogo Olimpíadas de Matemática20.07
-        * NEW: O jogo original
-"""
-from _spy.vitollino.main import Cena, Elemento, Labirinto, Texto, Codigo, Sala, STYLE
+# patricia.tracy.main.py
+_autor_ = "Lorena Pires Griõn"
+
+from _spy.vitollino.main import Cena, Elemento, Texto
 from _spy.vittolino.main import INVENTARIO as inv
-""" tabuleiro = Cena (img ="https://www.ibilce.unesp.br/Home/Departamentos/Matematica/2cejta/avancando-com-o-resto.png") """
-STYLE["width"] = 1345
-STYLE["height"] = "600px"
-img ="http://www.infcross.com.br/mestrado/tabuleiro.jpg"
-tabuleiro = Cena (img)
-tabuleiro.vai()
+
+tabuleiro ="http://www.infcross.com.br/mestrado/tabuleiro.jpg"
+botao = "https://imgur.com/oC9lAgW.png"
+
+   
+def cena_principal():
+    inicio = Cena(img=tabuleiro)
+    inicio_e = Elemento(img=botao)
+    inicio.vai()
+    inicio_e.vai()
+    
+cena_principal() 
