@@ -113,16 +113,16 @@ class Game:
         if Game.previous_selected_card.name != selected_card.name:            
             # reabilita a ação o clique e vira a carta 1 para baixo
             Game.previous_selected_card.card.elt.bind("click", Game.previous_selected_card.turnUp)
-            #Game.previous_selected_card.turnDown()
+            Game.previous_selected_card.turnDown()
             
             # reabilita a ação do clique e vira a carta 2 para baixo
             selected_card.card.elt.bind("click", selected_card.turnUp)
-            selected_card.turndown()
-            #Texto(Game.cena, "Opa!", "Errou!!!").vai()
+            
+            Texto(Game.cena, "Opa!", "Errou!!!").vai()
             
             # Aqui tem q esperar pelo menos 3 segundos, como fazer? (sleep, não funciona)
             
-            Game.previous_selected_card.turnDown()
+            selected_card.turnDown()
             Game.previous_selected_card = None
             
         # acertou 
@@ -130,8 +130,9 @@ class Game:
             # desabilita o clique sobre as cartas acertadas
             Game.previous_selected_card = None
             selected_card.card.elt.unbind("click")
-            #Texto(Game.cena, "Acertou!!!").vai()
+            Texto(Game.cena, "Acertou!!!").vai()
         
+
 
     def shuffle_cards(self):   
         list_cards =  [(0,0), (1,0), (2,0),(0,1), (1,1), (2,1)] #organiza as cartas em [coluna][linha]
