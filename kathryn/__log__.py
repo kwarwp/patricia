@@ -372,3 +372,10 @@ IndentationError: unexpected indent
     for i in rande (0,3):
 NameError: name 'rande' is not defined
 '''},
+{'date': 'Wed Jul 15 2020 21:31:18.238 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 19
+  matrizFase = [[link2,60,260],     #matrizFase = [[local_imagem_fase, x_inicial, y_inicial]...]
+  ^
+IndentationError: unexpected indent
+'''},
