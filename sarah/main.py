@@ -11,6 +11,9 @@ __author__ = "ECHO"
 STYLE["width"] = 1345
 STYLE["height"] = "620px"
 TABULEIRO = "http://www.infcross.com.br/mestrado/tabuleiro.jpg"
+
+STYLE["width"] = 300
+STYLE["height"] = "200px"
 BOTAO = "http://www.infcross.com.br/mestrado/botao.jpg"
 
 class Tabuleiro:
