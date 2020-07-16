@@ -85,3 +85,10 @@ Traceback (most recent call last):
     STYLE ["leight"] * "550px"
 KeyError: leight
 '''},
+{'date': 'Wed Jul 15 2020 22:50:39.649 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 4
+  """
+                                                                                                                                                   ^
+SyntaxError: invalid syntax
+'''},
