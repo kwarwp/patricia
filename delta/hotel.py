@@ -62,7 +62,7 @@ class Game:
     def vai(self): 
         self.create_2x4_cards()
     
-    def create_2x3_cards(self):
+    def create_2x4_cards(self):
         """ 
             matrix 2x3:
             1A 1B 2A 2B
