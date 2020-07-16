@@ -14,15 +14,14 @@ STYLE["height"] = "550px"
 
 tabuleiro ="http://www.infcross.com.br/mestrado/tabuleiro.jpg"
 botao = "https://imgur.com/oC9lAgW.jpg"
-img ="http://www.infcross.com.br/mestrado/tabuleiro.jpg"
 #tabuleiro = Cena (img)
 #tabuleiro.vai()
 
 
 def cena_principal():
     inicio = Cena(img=tabuleiro)
-    inicio_e = Elemento(img=botao)
     inicio.vai()
+    inicio_e = Elemento(img=botao)
     inicio_e.vai()
     
 cena_principal() 
