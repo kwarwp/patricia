@@ -15,11 +15,13 @@ STYLE ["width"] = 1340
 STYLE ["height"] = "600px"
 
 class gameInicio:
-# start da classe, é aqui que o jogo se inicia
+    # O jogo começa aqui
     def __init__(self):
         gameInicio = Cena(CENAINICIO)
         gameInicio.vai()
         dark = Elemento("",style=dict(width="1345px",height="600px"),cena=gameInicio)
-        self.play = Elemento(PLAY, x=570, y=470,w=100,h=100, cena=gameInicio)
+        self.play = Elemento(PLAY, x=570, y=470,w=100,h=100, cena=gameInicio, vai = self.redimensiona)
+    
+    def redimensiona():
 
 gameInicio()
