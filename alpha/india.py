@@ -38,8 +38,6 @@ class Eventos:
     STYLE["width"] = 640 #tamanho da cena
     
     def __init__(self):
-
-        global matrizFase
         self.x1 = 100
         self.y1 = 40
         self.ambiente = Cena(self.CENA_corredor_1)
@@ -52,9 +50,9 @@ class Eventos:
     
     def anda_boneco(self, ev=None):
         matrizFase = [["https://i.imgur.com/5Qno2fs.png",60,300],     #matrizFase = [[local_imagem_fase, x_inicial, y_inicial]...]
-                       ["https://i.imgur.com/gZ5wc0h.png",450,50],
-                       ["https://i.imgur.com/xI8i7Nc.png",50,430],
-                       ["https://i.imgur.com/GLVctqb.png",200,50]]
+                      ["https://i.imgur.com/gZ5wc0h.png",450,50],
+                      ["https://i.imgur.com/xI8i7Nc.png",50,430],
+                      ["https://i.imgur.com/GLVctqb.png",200,50]]
                        
         """" Faz o boneco caminhar com a cptura das setas. 
             :param ev: estrutura enviad pelo evento onde se recupera informações.
