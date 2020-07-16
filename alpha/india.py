@@ -47,7 +47,7 @@ class Eventos:
     STYLE["width"] = 640 #tamanho da cena
     
     def __init__(self):
-    global matrizFase
+        global matrizFase
         self.x1 = matrizFase[0][0]
         self.y1 = 40
         self.ambiente = Cena(self.CENA_corredor_1)
