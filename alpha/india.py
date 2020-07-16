@@ -38,7 +38,7 @@ class Eventos:
     
     BONECO = "https://i.imgur.com/k63kwfa.png"
     
-    matrizFase = [["https://i.imgur.com/5Qno2fs.png",60,260],     #matrizFase = [[local_imagem_fase, x_inicial, y_inicial]...]
+    matrizFase = [["https://i.imgur.com/5Qno2fs.png",60,300],     #matrizFase = [[local_imagem_fase, x_inicial, y_inicial]...]
                  ["https://i.imgur.com/gZ5wc0h.png",450,50],
                  ["https://i.imgur.com/xI8i7Nc.png",50,430],
                  ["https://i.imgur.com/GLVctqb.png",200,50]]
