@@ -122,7 +122,7 @@ class Game2x5:
         else:
             # desabilita o clique sobre as cartas acertadas
             Game2x5.previous_selected_card = None
-            verifyingGameOver()
+            Game2x5.verifyingGameOver()
             selected_card.card.elt.unbind("click")
             Texto(Game2x5.cena, "Acertou!!!").vai()
             
