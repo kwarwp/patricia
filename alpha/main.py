@@ -18,13 +18,12 @@ Código alterado de Monica Novellino <monicanovellino@gmail.com>
 """
 
 #FALTA - melhorar o código: criar as classes, funções, passar parametros
-#FALTA - Mapear os pontos dos ambientes (x e Y) para mudar para a cena correta
 #FALTA - VErifica se esta na cena correta e se chegou no baú do tesouro
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
 from browser import document # importa o DOM para atribuir o evento de teclado
 
-cont = 0 #contador index da matriz
+cont = 0 #contador index da Matriz/Lista
 
 class Eventos:
     """ Associa um evento a uma imagem e captura eventos de teclado. """
@@ -56,6 +55,7 @@ class Eventos:
         self.ambiente.vai()
     
     def anda_boneco(self, ev=None):
+    
         matrizPosicaoInicial = [[60,280],     #matrizPosicaoInicial = [[x_inicial, y_inicial]...]
                                 [450,50],
                                 [50,430],
