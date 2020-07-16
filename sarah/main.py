@@ -18,10 +18,6 @@ class Tabuleiro_Ini:
     def vai(self):
         """ Mostra a cena da praia """
         Cena(TABULEIRO).vai()
-    
-
-if __name__ == "__main__":
-    Tabuleiro_Ini().vai()
 
 class Jogo:
     """ Representa uma cena da calçada da praia """
