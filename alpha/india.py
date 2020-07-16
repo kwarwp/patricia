@@ -58,11 +58,10 @@ class Eventos:
         self.ambiente.vai()
     
     def anda_boneco(self, ev=None):
-        #link2 = "https://i.imgur.com/5Qno2fs.png"
-#        matrizFase = [[link2,60,300],     #matrizFase = [[local_imagem_fase, x_inicial, y_inicial]...]
- #                     ["https://i.imgur.com/gZ5wc0h.png",450,50],
-  #                    ["https://i.imgur.com/xI8i7Nc.png",50,430],
-   #                   ["https://i.imgur.com/GLVctqb.png",200,50]]
+        matrizPosicaoInicial = [[60,300],     #matrizPosicaoInicial = [[x_inicial, y_inicial]...]
+                                [450,50],
+                                [50,430],
+                                [200,50]]
                        
         """" Faz o boneco caminhar com a cptura das setas. 
             :param ev: estrutura enviad pelo evento onde se recupera informações.
@@ -86,8 +85,8 @@ class Eventos:
             global cont #contador estanciado fora do def para gerar a linha a ser lida na matrizFase
             self.ambiente = Cena(self.matrizFase[cont][0]) #lê a cena que está descrita na primeira coluna da matriz
             STYLE["width"] = 640
-            self.x2 = 50#int(matrizFase[cont][1]) #posição x_inicial da fase, descrita na matriz pela segunda coluna
-            self.y2 = 50#int(matrizFase[cont][2]) #posição y_inicial da fase descita pela terceira coluna
+            self.x2 = int(matrizPosicaoInicial[0][0]) #posição x_inicial da fase, descrita na matriz pela segunda coluna
+            self.y2 = int(matrizPosicaoInicial[0][1]) #posição y_inicial da fase descita pela terceira coluna
             
             self.boneco = Elemento(self.BONECO, x=self.x2, y=self.y2, cena=self.ambiente)
             self.boneco.x = self.x2
