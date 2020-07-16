@@ -55,7 +55,7 @@ class Card():
         self.card.elt.bind("click", self.turnUp)
         
         
-class Game:
+class Game2x2:
     # referência para o Elemento
     previous_selected_card = None
     
