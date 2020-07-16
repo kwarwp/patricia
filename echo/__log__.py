@@ -583,3 +583,10 @@ SyntaxError: invalid syntax
     STYLE ["leight"] * "550px"
 KeyError: leight
 '''},
+{'date': 'Wed Jul 15 2020 22:49:01.523 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 10
+  STYLE ["leight"] * 550px
+                         ^
+SyntaxError: invalid syntax
+'''},
