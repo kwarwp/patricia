@@ -11,7 +11,7 @@ Changelog
 
 """
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
-from golf.main import ____
+from golf.main import Game2x5
 import random
 import time
 
@@ -37,7 +37,6 @@ class Card():
         self.name = name
         self.cena = cena
         self.image = image
-        Game_=Game
         self.faceDown = True
         self.position = position
         self.pos_x = 50 + self.position[0] * IMG_WIDTH
@@ -58,7 +57,7 @@ class Card():
         self.card.elt.bind("click", self.turnUp)
         
         
-class Game:
+class Game2X4:
     # referência para o Elemento
     previous_selected_card = None
     
@@ -77,65 +76,68 @@ class Game:
         """
         list_cards = self.shuffle_cards()
         
-        self.card1a = Card("PyCharm", IMG_CARD_1, list_cards[0], Game.cena, Game.rule)
-        self.card1b = Card("PyCharm", IMG_CARD_1, list_cards[1], Game.cena, Game.rule)
+        list_objects = [ Card("PyCharm", IMG_CARD_1, list_cards[0], Game2x5.cena, Game2x5.rule), 
+            Card("PyCharm", IMG_CARD_1, list_cards[1], Game2x5.cena, Game2x5.rule),
+            Card("Linux", IMG_CARD_2, list_cards[2], Game2x5.cena, Game2x5.rule),
+            Card("Linux", IMG_CARD_2, list_cards[3], Game2x5.cena, Game2x5.rule),
+            Card("GitLab", IMG_CARD_3, list_cards[4], Game2x5.cena, Game2x5.rule),
+            Card("GitLab", IMG_CARD_3, list_cards[5], Game2x5.cena, Game2x5.rule),
+            Card("GitHub", IMG_CARD_4, list_cards[6], Game2x5.cena, Game2x5.rule),
+            Card("GitHub", IMG_CARD_4, list_cards[7], Game2x5.cena, Game2x5.rule),
+            ]
         
-        self.card2a = Card("Linux", IMG_CARD_2, list_cards[2], Game.cena, Game.rule)
-        self.card2b = Card("Linux", IMG_CARD_2, list_cards[3], Game.cena, Game.rule)
-        
-        self.card3a = Card("GitLab", IMG_CARD_3, list_cards[4], Game.cena, Game.rule)
-        self.card3b = Card("GitLab", IMG_CARD_3, list_cards[5], Game.cena, Game.rule)
-        
-        #self.card4a = Card("Activ", IMG_CARD_4, list_cards[6], Game.cena, Game.rule)
-        #self.card4b = Card("Activ", IMG_CARD_4, list_cards[7], Game.cena, Game.rule)
-        
-        #self.card5a = Card("Activ", IMG_CARD_5, list_cards[8], Game.cena, Game.rule)
-        #self.card5b = Card("Activ", IMG_CARD_5, list_cards[9], Game.cena, Game.rule)
-        
-        Game.cena.vai()
+        Game2X4.cena.vai()
 
     @staticmethod
     def rule(selected_card):
     
         # abortar se o clique ocorrer sobre a mesma carta
-        if Game.previous_selected_card == selected_card:
+        if Game2X4.previous_selected_card == selected_card:
             return
         
         # tem um par selecionado?
-        if Game.previous_selected_card is None:
+        if Game2X4.previous_selected_card is None:
             # primeira carta selecionada
-            Game.previous_selected_card = selected_card
+            Game2X4.previous_selected_card = selected_card
             # desabilita o clique sobre carta virada
-            Game.previous_selected_card.card.elt.unbind("click")
+            Game2X4.previous_selected_card.card.elt.unbind("click")
             return
         
         # Não acertou
-        if Game.previous_selected_card.name != selected_card.name:            
+        if Game2X4.previous_selected_card.name != selected_card.name:            
             # reabilita a ação o clique e vira a carta 1 para baixo
-            Game.previous_selected_card.card.elt.bind("click", Game.previous_selected_card.turnUp)
-            Game.previous_selected_card.turnDown()
+            Game2X4.previous_selected_card.card.elt.bind("click", Game2X4.previous_selected_card.turnUp)
+            Game2X4.previous_selected_card.turnDown()
             
             # reabilita a ação do clique e vira a carta 2 para baixo
             selected_card.card.elt.bind("click", selected_card.turnUp)
             
-            Texto(Game.cena, "Opa!", "Errou!!!").vai()
+            Texto(Game2X4.cena, "Opa!", "Errou!!!").vai()
             
             # Aqui tem q esperar pelo menos 3 segundos, como fazer? (sleep, não funciona)
             
             selected_card.turnDown()
-            Game.previous_selected_card = None
+            Game2X4.previous_selected_card = None
             
         # acertou 
         else:
             # desabilita o clique sobre as cartas acertadas
-            Game.previous_selected_card = None
+            Game2X4.previous_selected_card = None
             selected_card.card.elt.unbind("click")
-            Texto(Game.cena, "Acertou!!!").vai()
+            Texto(Game2X4.cena, "Acertou!!!").vai()
         
 
-
+    @staticmethod  
+    def verifyingGameOver():
+        Texto(Game2x4.cena, 'Chamou').vai()
+        for object in list_objects:
+            if object.faceDown == True:
+                return
+            if object.facedown == False   
+                Game2x5.vai()
+        
     def shuffle_cards(self):   
-        list_cards =  [(0,0), (1,0), (2,0),(0,1), (1,1), (2,1)] #organiza as cartas em [coluna][linha]
+        list_cards =  [(0,0), (1,0), (2,0),(3,0),(0,1), (1,1), (2,1),(3,1)] #organiza as cartas em [coluna][linha]
                                                  
         random.shuffle(list_cards)
         return list_cards
