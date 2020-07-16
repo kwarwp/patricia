@@ -3,25 +3,33 @@
         * NEW: O jogo original
         Autor: Grupo Echo (Aline, Lorena, Renato e Victoria)
 """
-from _spy.vitollino.main import Cena, Elemento, Labirinto, Texto, Codigo, Sala, STYLE
-from _spy.vittolino.main import INVENTARIO as inv
+from _spy.vitollino.main import Cena, Elemento, STYLE
+""" from grace.main import Praia """
 
-""" tabuleiro = Cena (img ="https://www.ibilce.unesp.br/Home/Departamentos/Matematica/2cejta/avancando-com-o-resto.png") """
+__version__ = "1.0"
+__author__ = "ECHO"
+STYLE["width"] = 1345
+STYLE["height"] = "620px"
+TABULEIRO = "http://www.infcross.com.br/mestrado/tabuleiro.jpg"
+BOTAO = "http://www.infcross.com.br/mestrado/botao.jpg"
 
-STYLE["width"] = 1150
-STYLE["height"] = "550px"
+class Tabuleiro:
+    """ Representa uma cena da calçada da praia """
+    def vai(self):
+        """ Mostra a cena do tabuleiro """
+        Cena(TABULEIRO).vai()
 
-tabuleiro ="http://www.infcross.com.br/mestrado/tabuleiro.jpg"
-botao = "https://imgur.com/oC9lAgW.jpg"
-img ="http://www.infcross.com.br/mestrado/tabuleiro.jpg"
-#tabuleiro = Cena (img)
-#tabuleiro.vai()
-
-
-def cena_principal():
-    inicio = Cena(img=tabuleiro)
-    inicio_e = Elemento(img=botao)
-    inicio.vai()
-    inicio_e.vai()
+class Jogo:
+    """ Representa uma cena de tabuleiro com o botão """
+    def __init__(self):
+        """ Mostra o tabuleiro com o botão start"""
+        self.cena = Cena(TABULEIRO, direita=Tabuleiro())
+        self.banhista = Elemento(BOTAO, x=50, y=50, cena=self.cena)
+        #Cena(CENA_CALCADA).vai()
+    def vai(self):
+        """ Mostra o tabuleiro """
+        self.cena.vai()
+        #Cena(CENA_CALCADA).vai()
     
-cena_principal() 
+if __name__ == "__main__":
+    Jogo().vai()
