@@ -28,16 +28,23 @@ cont = 0 #contador index da matriz
 
 class Eventos:
     """ Associa um evento a uma imagem e captura eventos de teclado. """
-    CENA_corredor_1 = link1 = "https://i.imgur.com/L71ZV6Z.png"
+    CENA_corredor_1 = "https://i.imgur.com/L71ZV6Z.png"
+    CENA_corredor_2 = "https://i.imgur.com/5Qno2fs.png"
+    CENA_corredor_3 = "https://i.imgur.com/gZ5wc0h.png"
+    CENA_corredor_4 = "https://i.imgur.com/xI8i7Nc.png"
+    CENA_corredor_5 = "https://i.imgur.com/GLVctqb.png"
     
+    listaFase = [CENA_corredor_2,    #listaFase = [local_imagem_fase,...]
+                 CENA_corredor_3,
+                 CENA_corredor_4,
+                 CENA_corredor_5,]
+              
     BONECO = "https://i.imgur.com/k63kwfa.png"
 
 
     STYLE["width"] = 640 #tamanho da cena
     
     def __init__(self):
-
-        global matrizFase
         self.x1 = 100
         self.y1 = 40
         self.ambiente = Cena(self.CENA_corredor_1)
@@ -49,10 +56,10 @@ class Eventos:
         self.ambiente.vai()
     
     def anda_boneco(self, ev=None):
-        matrizFase = [["https://i.imgur.com/5Qno2fs.png",60,300],     #matrizFase = [[local_imagem_fase, x_inicial, y_inicial]...]
-                       ["https://i.imgur.com/gZ5wc0h.png",450,50],
-                       ["https://i.imgur.com/xI8i7Nc.png",50,430],
-                       ["https://i.imgur.com/GLVctqb.png",200,50]]
+        matrizPosicaoInicial = [[60,300],     #matrizPosicaoInicial = [[x_inicial, y_inicial]...]
+                                [450,50],
+                                [50,430],
+                                [200,50]]
                        
         """" Faz o boneco caminhar com a cptura das setas. 
             :param ev: estrutura enviad pelo evento onde se recupera informações.
@@ -71,15 +78,17 @@ class Eventos:
         #se o elemento atingiu uma porta, muda para a próxima cena
         # FALTA mapear os pontos, criar função para passar parametros ou chamar outra classe
         #ideia de cria uma matriz com os pontos de localização do portal
+        
         if self.boneco.x > 400 and self.boneco.y > 200:
             global cont #contador estanciado fora do def para gerar a linha a ser lida na matrizFase
-            self.ambiente = Cena(self.matrizFase[cont][0]) #lê a cena que está descrita na primeira coluna da matriz
+            self.ambiente = Cena(self.listaFase[cont]) #lê a cena que está descrita na primeira coluna da matriz
             STYLE["width"] = 640
-            self.x1 = int(matrizFase[cont][1]) #posição x_inicial da fase, descrita na matriz pela segunda coluna
-            self.y1 = int(matrizFase[cont][2]) #posição y_inicial da fase descita pela terceira coluna
-            self.boneco = Elemento(self.BONECO, x=self.x1, y=self.y1, cena=self.ambiente)
-            self.boneco.x = self.x1
-            self.boneco.y = self.y1 
+            self.x2 = int(matrizPosicaoInicial[cont][0]) #posição x_inicial da fase, descrita na matriz pela segunda coluna
+            self.y2 = int(matrizPosicaoInicial[cont][1]) #posição y_inicial da fase descita pela terceira coluna
+            
+            self.boneco = Elemento(self.BONECO, x=self.x2, y=self.y2, cena=self.ambiente)
+            self.boneco.x = self.x2
+            self.boneco.y = self.y2
             self.ambiente.vai()
             cont = cont + 1
             if cont > 3: #Regulador do contador. Precisa alterar a programação para voltar a fase em um portal de retorno
