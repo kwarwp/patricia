@@ -9,7 +9,7 @@ from _spy.vitollino.main import Cena, Elemento, STYLE
 
 __version__ = "1.0"
 __author__ = "ECHO"
-STYLE["width"] = 1345
+STYLE["width"] = 1150
 STYLE["height"] = "620px"
 TABULEIRO = "http://www.infcross.com.br/mestrado/tabuleiro.jpg"
 BOTAO = "http://www.infcross.com.br/mestrado/botao2.png"
