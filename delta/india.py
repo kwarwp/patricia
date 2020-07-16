@@ -69,9 +69,9 @@ class Game:
     def create_2x4_cards(self):
         """ 
             matrix 2x4:
-            1A 1B 2A 2B | [0][0] [0][1] [0][2] [0][3] [0][4]|
-            3A 3B 4A 4B | [1][0] [1][1] [1][2] [1][3] [1][4]|
-            list_cards =  [(0,0), (1,0), (2,0), (3,0), (4,0), (0,1), (1,1), (2,1),(3,1),(4,1)]
+            1A 1B 2A 2B | [0][0] [0][1] [0][2] [0][3]|
+            3A 3B 4A 4B | [1][0] [1][1] [1][2] [1][3]|
+            list_cards =  [(coluna,linha)]
         """
         list_cards = self.shuffle_cards()
         
@@ -111,16 +111,16 @@ class Game:
         if Game.previous_selected_card.name != selected_card.name:            
             # reabilita a ação o clique e vira a carta 1 para baixo
             Game.previous_selected_card.card.elt.bind("click", Game.previous_selected_card.turnUp)
-            #Game.previous_selected_card.turnDown()
+            Game.previous_selected_card.turnDown()
             
             # reabilita a ação do clique e vira a carta 2 para baixo
             selected_card.card.elt.bind("click", selected_card.turnUp)
-            selected_card.turndown()
+            
             #Texto(Game.cena, "Opa!", "Errou!!!").vai()
             
             # Aqui tem q esperar pelo menos 3 segundos, como fazer? (sleep, não funciona)
             
-            Game.previous_selected_card.turnDown()
+            selected_card.turnDown()
             Game.previous_selected_card = None
             
         # acertou 
@@ -130,7 +130,6 @@ class Game:
             selected_card.card.elt.unbind("click")
             #Texto(Game.cena, "Acertou!!!").vai()
         
-
     def shuffle_cards(self):   
         list_cards =  [(0,0), (1,0), (2,0),(0,1), (1,1), (2,1)] #organiza as cartas em [coluna][linha]
                                                  
