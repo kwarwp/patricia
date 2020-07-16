@@ -8,4 +8,12 @@ Changelog
 ---------
 .. versionadded::    20.07
         Descreva o que você adicionou no código.
+
 """
+
+from _spy.vitollino.main import Cena, INVENTARIO, STYLE
+from random import choice
+
+STYLE["width"] = 1150
+STYLE["height"] = 550px
+
