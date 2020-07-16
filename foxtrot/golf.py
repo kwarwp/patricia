@@ -24,6 +24,8 @@ escolhajogador = "https://i.imgur.com/IsUXeNV.png"
 avatar1 = "https://i.imgur.com/fSrc1Ab.png"
 avatar2 ="https://i.imgur.com/JQKcmov.png"
 portadocastelo="https://i.imgur.com/zyfCCo0.png"
+author = "https://i.imgur.com/ZWKxnAx.png"
+FOCO = "https://i.imgur.com/6e096Va.png"
 
 """criando classe jogo"""
 class Jogo:
@@ -61,16 +63,20 @@ class Jogo:
         """exibindo elementos na cena sobre"""
         self.botao_sobre.entra(self.capa)
         self.botao_jogar.entra(self.capa)   
-        
-        
+             
         
         
         """Cena do Castelo"""
-        self.castelo = Cena (img=portadocastelo)      
-                
+        self.castelo = Cena (img=portadocastelo)
+        """texto castelo"""
+        self.texto_castelo = Texto (self.castelo, "Parado aí! Identifique-se!")
+        self.porta = Elemento(FOCO, x=600, y=180, w=300, h=300, cena=self.castelo, style={"opacity": 0.0}, vai=self.texto_castelo.vai)
+                   
         """textos"""
         self.texto_jogar = Texto (self.capa, "Volte em breve para jogar. Enquanto isso, aproveite uma demonstração.")
-                
+        
+        
+        
         """ação caso seja clicado"""
         self.botao_sobre.vai=self.cena_sobre.vai
         self.botao_jogar.vai=self.texto_jogar.vai
@@ -78,11 +84,15 @@ class Jogo:
         self.texto_jogar.foi = self.escolha_jogador.vai
         self.avatar1.entra(self.escolha_jogador)
         self.avatar2.entra(self.escolha_jogador)
+        
+        """Cena de identificacao"""
+        self.cenaauthor = Cena (img=author)
+        
         """ação após escolha do Avatar"""
         self.avatar1.vai = self.castelo.vai
         self.avatar2.vai = self.castelo.vai
-        self.texto_castelo = Texto (self.castelo, "Parado aí! Identifique-se!")
-        self.castelo.foi = self.texto_castelo.vai()
+        self.castelo.vai = self.texto_castelo.vai
+        self.texto_castelo.foi = self.cenauthor.vai
 
         
 if __name__ == "__main__":
