@@ -303,3 +303,10 @@ IndentationError: unexpected indent
          ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Jul 16 2020 09:41:07.496 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 53
+  self.boneco = Elemento(self.BONECO, x=self.xx, y=self.yy = 40, cena=self.ambiente)
+                                                                                    ^
+SyntaxError: invalid syntax
+'''},
