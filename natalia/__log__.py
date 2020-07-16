@@ -98,3 +98,10 @@ IndentationError: expected an indented block
     STYLE["width"] = 1150
 NameError: name 'STYLE' is not defined
 '''},
+{'date': 'Wed Jul 15 2020 23:29:20.511 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 12
+  inicio = Cena(img=tabuleiro, style ["width"] = 1150, STYLE["height"] = "550px")
+                                               ^
+SyntaxError: keyword can't be an expression
+'''},
