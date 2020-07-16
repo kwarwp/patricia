@@ -20,6 +20,11 @@ capa_do_jogo = "https://i.imgur.com/0RVnppj.png"
 botao_jogar = "https://i.imgur.com/pG9wDIz.png"
 botao_sobre = "https://i.imgur.com/F3Q0bDv.png"
 sobre = "https://i.imgur.com/ZN0slvj.png"
+escolhajogador = "https://i.imgur.com/IsUXeNV.png"
+avatar1 = "https://i.imgur.com/fSrc1Ab.png"
+avatar2 ="https://i.imgur.com/JQKcmov.png"
+portadocastelo="https://i.imgur.com/zyfCCo0.png"
+
 """criando classe jogo"""
 class Jogo:
     def __init__(self):
@@ -42,17 +47,43 @@ class Jogo:
         """Cena sobre"""
         self.cena_sobre = Cena (img=sobre)
         
-        """exibindo elementos na cena"""
+        """Cena sobre"""
+        self.escolha_jogador = Cena (img=escolhajogador)
+        
+        self.avatar1 = Elemento (img=avatar1, 
+        tit="Personagem 1", 
+        style= dict(left=400, top=400))
+        
+        self.avatar2 = Elemento (img=avatar2, 
+        tit="Personagem 2", 
+        style= dict(left=500, top=400))
+        
+        """exibindo elementos na cena sobre"""
         self.botao_sobre.entra(self.capa)
-        self.botao_jogar.entra(self.capa)
+        self.botao_jogar.entra(self.capa)   
         
+        
+        
+        
+        """Cena do Castelo"""
+        self.castelo = Cena (img=portadocastelo)      
+                
         """textos"""
-        self.texto_jogar = Texto (self.capa, "Volte em breve para jogar")
-        
+        self.texto_jogar = Texto (self.capa, "Volte em breve para jogar. Enquanto isso, aproveite uma demonstração.")
+                
         """ação caso seja clicado"""
         self.botao_sobre.vai=self.cena_sobre.vai
         self.botao_jogar.vai=self.texto_jogar.vai
         self.cena_sobre.esquerda = self.capa.vai()
+        self.texto_jogar.foi = self.escolha_jogador.vai
+        self.avatar1.entra(self.escolha_jogador)
+        self.avatar2.entra(self.escolha_jogador)
+        """ação após escolha do Avatar"""
+        self.avatar1.vai = self.castelo.vai
+        self.avatar2.vai = self.castelo.vai
+        self.texto_castelo = Texto (self.castelo, "Parado aí! Identifique-se!")
+        self.castelo.foi = self.texto_castelo.vai()
+
         
 if __name__ == "__main__":
     Jogo()
