@@ -84,9 +84,7 @@ class Eventos:
             self.boneco.y = self.y1 
             self.ambiente.vai()
             cont = cont + 1
-            if cont == 2: #Regulador do contador. Precisa alterar a programação para voltar a fase em um portal de retorno
-                cont = 0
-            if cont > 3:
+            if cont > 3: #Regulador do contador. Precisa alterar a programação para voltar a fase em um portal de retorno
                 cont = 0
             
         #se atingiu o bau, ganhou o jogo.
