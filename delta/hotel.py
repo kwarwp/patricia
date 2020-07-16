@@ -1,5 +1,6 @@
 # patricia.delta.hotel.py
 # SPDX-License-Identifier: GPL-3.0-or-later
+# _author_= "Anni Provietti"
 #Código do Paulo adaptado para matriz 2x3
 #Algumas tentativas, minhas, anteriores foram frustradas com relação a posicionamento
 #PROBLEMA1: em algum momento uma das cartas mesmo pareando não fixa
