@@ -23,7 +23,7 @@ Código alterado de Monica Novellino <monicanovellino@gmail.com>
 from _spy.vitollino.main import Cena, Elemento, STYLE
 from browser import document # importa o DOM para atribuir o evento de teclado
 
-cont = 0 #contador index da Matriz/Lista
+cont = 0 #contador índice da Matriz/Lista
 
 class Eventos:
     """ Associa um evento a uma imagem e captura eventos de teclado. """
