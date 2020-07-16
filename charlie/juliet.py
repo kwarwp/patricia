@@ -10,9 +10,11 @@ Changelog
         Descreva o que você adicionou no código.
 
 """
-HERDO1 = " "#IMAGENS QUE FICAM NO QUEBRA CABEÇA, TEM QUE SER ONLINE(PNG OU JPG) 
-HERDO2 = " "
-HERDO3 = " "
+from _spy.vittolino.main import Cena, Texto, Elemento
+
+HERDO1 = "https://upload.wikimedia.org/wikipedia/commons/e/ea/Rocky_Landscape.jpg"#IMAGENS QUE FICAM NO QUEBRA CABEÇA, TEM QUE SER ONLINE(PNG OU JPG) 
+HERDO2 = "https://upload.wikimedia.org/wikipedia/commons/e/ea/Rocky_Landscape.jpg"
+HERDO3 = "https://upload.wikimedia.org/wikipedia/commons/e/ea/Rocky_Landscape.jpg"
 class minipython:
     """Usa um editor de imagem ( /) e recorta o Herdograma em linhas geracionais.
        No game, o jogador terá que clicar nas linhas em ordem certa para montar o herdograma corretamente.
