@@ -92,3 +92,10 @@ KeyError: leight
                                                                                                                                                    ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Jul 15 2020 22:50:46.667 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 4
+  """
+                                                                                                                                                   ^
+SyntaxError: invalid syntax
+'''},
