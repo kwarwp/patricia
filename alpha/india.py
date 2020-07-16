@@ -39,9 +39,9 @@ class Eventos:
     
     
     matrizMapaFase = [[link2,100,100],
-                     [link3,100,100],
-                     [link4,100,100],
-                     [link5,100,100]]
+                      [link3,100,100],
+                      [link4,100,100],
+                      [link5,100,100]]
 
     STYLE["width"] = 640 #tamanho da cena
     
