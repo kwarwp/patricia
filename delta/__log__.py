@@ -2995,3 +2995,10 @@ IndentationError: unexpected indent
                            ^
 SyntaxError: trailing comma not allowed without surrounding parentheses
 '''},
+{'date': 'Thu Jul 16 2020 11:43:07.343 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 38
+  if __name__=="__main__"
+  ^
+IndentationError: expected an indented block
+'''},
