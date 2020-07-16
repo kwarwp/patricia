@@ -92,7 +92,7 @@ class Jogo:
         self.avatar1.vai = self.castelo.vai
         self.avatar2.vai = self.castelo.vai
         self.castelo.vai = self.texto_castelo.vai
-        self.texto_castelo.foi = self.cenauthor.vai
+        self.texto_castelo.foi = self.cenaauthor.vai
 
         
 if __name__ == "__main__":
