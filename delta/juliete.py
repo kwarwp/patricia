@@ -123,17 +123,16 @@ class Game2x4:
         else:
             # desabilita o clique sobre as cartas acertadas
             Game2x4.previous_selected_card = None
+            Game2x4.verifyingGameOver()
             selected_card.card.elt.unbind("click")
             Texto(Game2x4.cena, "Acertou!!!").vai()
         
 
     @staticmethod  
     def verifyingGameOver():
-        Texto(Game2x4.cena, 'Chamou').vai()
         for object in list_objects:
             if object.faceDown == True:
-                return
-              
+                return     
         Game2x5.vai()
         
     def shuffle_cards(self):   
