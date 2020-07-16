@@ -27,17 +27,17 @@ from _spy.vitollino.main import Cena, Elemento, STYLE
 from browser import document # importa o DOM para atribuir o evento de teclado
 
 cont = 0 #contador index da matriz
-matrizFase = [[link2,60,260],     #matrizFase = [[local_imagem_fase, x_inicial, y_inicial]...]
-              [link3,450,50],
-              [link4,50,430],
-              [link5,200,50]]
+matrizFase = [["https://i.imgur.com/5Qno2fs.png",60,260],     #matrizFase = [[local_imagem_fase, x_inicial, y_inicial]...]
+              ["https://i.imgur.com/gZ5wc0h.png",450,50],
+              ["https://i.imgur.com/xI8i7Nc.png",50,430],
+              ["https://i.imgur.com/GLVctqb.png",200,50]]
 class Eventos:
     """ Associa um evento a uma imagem e captura eventos de teclado. """
     CENA_corredor_1 = link1 = "https://i.imgur.com/L71ZV6Z.png"
-    CENA_corredor_2 = link2 = "https://i.imgur.com/5Qno2fs.png"
-    CENA_corredor_3 = link3 = "https://i.imgur.com/gZ5wc0h.png"
-    CENA_corredor_4 = link4 = "https://i.imgur.com/xI8i7Nc.png"
-    CENA_corredor_5 = link5 = "https://i.imgur.com/GLVctqb.png"
+#    CENA_corredor_2 = link2 = "https://i.imgur.com/5Qno2fs.png"
+#    CENA_corredor_3 = link3 = "https://i.imgur.com/gZ5wc0h.png"
+ #   CENA_corredor_4 = link4 = "https://i.imgur.com/xI8i7Nc.png"
+  #  CENA_corredor_5 = link5 = "https://i.imgur.com/GLVctqb.png"
     
     BONECO = "https://i.imgur.com/k63kwfa.png"
     
