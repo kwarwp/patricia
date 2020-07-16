@@ -18,17 +18,20 @@ feliz = Elemento (img= "https://i.imgur.com/UaihdhW.png", tit="CLICK", x=40, y=8
 codigo1 = Elemento (img="https://i.imgur.com/QGEgNAt.png", tit="CLICK", style=dict(left=80, top=350, width=500, height="250px"))
 codigo2 = Elemento (img="https://i.imgur.com/ccJqbMb.png", tit="CLICK", style=dict(left=680, top=350, width=500, height="250px"))
 pergunta = Elemento (img= "https://i.imgur.com/fYmNuBj.png", style=dict(left=540, top=180, width=250, height="150px"))
+siga = Elemento (img="https://i.imgur.com/kRmXNkz.png", style=dict(left=540, top=480, width=150, height="150px"))
 #aqui eu coloquei o elemento para entrar na cena
 codigo1.entra(fundo)
 codigo2.entra(fundo)
 triste.entra(erro)
 feliz.entra(casa)
 pergunta.entra(fundo)
+siga.entra(expli)
 #aqui eu falei para o elemento ir para o jardim, então quando clicar na boca ela vai p jardim
 codigo1.vai=erro.vai
 codigo2.vai=casa.vai
 triste.vai=fundo.vai
 feliz.vai=fundo.vai
+siga.vai=fundo.vai
 #fundo.vai()
 expli.vai()
 
