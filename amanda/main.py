@@ -8,7 +8,7 @@ SEGUNDA TELA
 from _spy.vitollino.main import Cena, Elemento, Labirinto, Texto, Codigo, Sala, STYLE
 from _spy.vittolino.main import INVENTARIO as inv
 from kelle.main import cena
-from alexa.main import oi
+#from alexa.main import oi
 
 STYLE["width"] = 1250
 STYLE["leight"]= "550px"
