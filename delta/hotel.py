@@ -2,10 +2,13 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 #Código do Paulo adaptado para matriz 2x3
 #Algumas tentativas, minhas, anteriores foram frustradas com relação a posicionamento
-#
+#PROBLEMA1: em algum momento uma das cartas mesmo pareando não fixa
+#PROBLEMA2: as cartas selecionadas não ficam para cima ao mesmo tempo quando não são iguais (a ideia seria
+# virar as 2 e elas fecharem juntas
+
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
 import random
-import time
+
 
 #_version_ = "20.07"
 #_author_ = "Paulo Assumpção"
