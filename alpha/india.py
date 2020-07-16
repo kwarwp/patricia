@@ -79,11 +79,11 @@ class Eventos:
             global cont #contador estanciado fora do def para gerar a linha a ser lida na matrizFase
             self.ambiente = Cena(self.matrizFase[cont][0]) #lê a cena que está descrita na primeira coluna da matriz
             STYLE["width"] = 640
-            self.xx = matrizFase[cont][1]
-            self.yy = matrizFase[cont][2]
-            self.boneco = Elemento(self.BONECO, x=self.xx, y=self.yy, cena=self.ambiente)
-            self.boneco.x = self.xx#100#int(matrizFase[cont][1]) #posição x_inicial da fase, descrita na matriz pela segunda coluna
-            self.boneco.y = self.yy#100#int(matrizFase[cont][2]) #posição y_inicial da fase descita pela terceira coluna
+            self.xxx = 200#matrizFase[cont][1]
+            self.yyy = 200#matrizFase[cont][2]
+            self.boneco = Elemento(self.BONECO, x=self.xxx, y=self.yyy, cena=self.ambiente)
+#            self.boneco.x = self.xx#100#int(matrizFase[cont][1]) #posição x_inicial da fase, descrita na matriz pela segunda coluna
+#            self.boneco.y = self.yy#100#int(matrizFase[cont][2]) #posição y_inicial da fase descita pela terceira coluna
             self.ambiente.vai()
             cont = cont + 1
             if cont > 3: #Regulador do contador. Precisa alterar a programação para voltar a fase em um portal de retorno
