@@ -5,7 +5,7 @@
 #Testes feitos na sala Naomi
 #Código do Paulo adaptado para matriz 2x3
 #Algumas tentativas, minhas, anteriores foram frustradas com relação a posicionamento
-#PROBLEMA1: em algum momento (ALGUM PROBLEMA COM NÚMERO DE CLICKS?) uma das cartas mesmo pareando não fixa
+#PROBLEMA1: em algum momento (ALGUM PROBLEMA COM NÚMERO DE CLICKS? parece que ausencia da linha Texto sobre acertou fez isso) uma das cartas mesmo pareando não fixa
 #PROBLEMA2: as cartas selecionadas não ficam para cima ao mesmo tempo quando não são iguais (a ideia seria
 # virar as 2 e elas fecharem juntas
 
@@ -123,7 +123,7 @@ class Game:
             # desabilita o clique sobre as cartas acertadas
             Game.previous_selected_card = None
             selected_card.card.elt.unbind("click")
-            #Texto(Game.cena, "Acertou!!!").vai()
+            Texto(Game.cena, "Acertou!!!").vai()
         
 
     def shuffle_cards(self):   
