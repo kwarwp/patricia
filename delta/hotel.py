@@ -36,13 +36,13 @@ class Card():
         self.removed = False
         
     def turnUp(self, env=None):
-        self.card = Elemento(self.image, tit=self.name, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
+        self.card = Elemento(self.image, , x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.faceDown = False 
         self.card.elt.bind("click", self.turnDown)
         self.rule(self)
         
     def turnDown(self, env=None):
-        self.card = Elemento(IMG_CARD_FACE_DOWN, tit=self.name, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
+        self.card = Elemento(IMG_CARD_FACE_DOWN, , x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.faceDown = True
         self.card.elt.bind("click", self.turnUp)
         
@@ -99,12 +99,9 @@ class Game:
         # Não acertou
         if Game.previous_selected_card.name != selected_card.name:            
             
-            
-           
-            
+
             # Aqui tem q esperar pelo menos 3 segundos, como fazer? (sleep, não funciona)
-            
-            
+      
             #Texto(Game.cena, "Opa!", "Errou!!!").vai()
             selected_card.turnDown()
             # reabilita a ação o clique e vira a carta 1 para baixo
@@ -120,7 +117,7 @@ class Game:
             # desabilita o clique sobre as cartas acertadas
             Game.previous_selected_card = None
             selected_card.card.elt.unbind("click")
-            Texto(Game.cena, "Acertou!!!").vai()
+            #Texto(Game.cena, "Acertou!!!").vai()
         
 
     def shuffle_cards(self):   
