@@ -79,7 +79,7 @@ class Eventos:
             STYLE["width"] = 640
             x1 = matrizFase[cont][1]
             y1 = matrizFase[cont][2]
-            self.boneco = Elemento(self.BONECO, , x=int, y=int, cena=self.ambiente)
+            self.boneco = Elemento(self.BONECO, , x1=int, y1=int, cena=self.ambiente)
             self.boneco.x = x1#int(matrizFase[cont][1]) #posição x_inicial da fase, descrita na matriz pela segunda coluna
             self.boneco.y = y1#int(matrizFase[cont][2]) #posição y_inicial da fase descita pela terceira coluna
             self.ambiente.vai()
