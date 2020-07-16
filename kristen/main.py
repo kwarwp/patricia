@@ -25,8 +25,8 @@ class Eventos:
     
     def __init__(self, posicao):
         self.posicao = posicao
-        #self.pos_x = self.posicao[0]
-        #self.pos_x = self.posicao[1]
+        self.pos_x = self.posicao[0]
+        self.pos_x = self.posicao[1]
         self.ambiente = Cena(self.CENA_corredor_1)
         self.pos_x = 100
         self.pos_y = 40
