@@ -24,7 +24,7 @@ IMG_CARD_FACE_DOWN = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?di
 IMG_CARD_1 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_pycharm.png?disp=inline"
 IMG_CARD_2 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Linux.png?disp=inline"
 IMG_CARD_3 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Gitlab.png?disp=inline"
-IMG_CARD_4 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Activ.png?disp=inline""
+IMG_CARD_4 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Activ.png?disp=inline"
 #IMG_CARD_5 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_github.png?disp=inline"
 
 IMG_WIDTH = 150
@@ -69,8 +69,9 @@ class Game:
     def create_2x4_cards(self):
         """ 
             matrix 2x4:
-            1A 1B 2A 2B | [0][0] [0][1] [0][2] [0][3]
-            3A 3B 4A 4B | [1][0] [1][1] [1][2] [1][3]
+            1A 1B 2A 2B | [0][0] [0][1] [0][2] [0][3] [0][4]|
+            3A 3B 4A 4B | [1][0] [1][1] [1][2] [1][3] [1][4]|
+            list_cards =  [(0,0), (1,0), (2,0), (3,0), (4,0), (0,1), (1,1), (2,1),(3,1),(4,1)]
         """
         list_cards = self.shuffle_cards()
         
@@ -131,7 +132,8 @@ class Game:
         
 
     def shuffle_cards(self):   
-        list_cards =  [(0,0), (1,0), (2,0), (3,0), (4,0), (0,1), (1,1), (2,1)]
+        list_cards =  [(0,0), (1,0), (2,0), (3,0),(0,1), (1,1), (2,1),(3,1)] #organiza as cartas em [coluna][linha]
+                                                 
         random.shuffle(list_cards)
         return list_cards
         
