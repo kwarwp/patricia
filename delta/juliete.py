@@ -1,49 +1,32 @@
 # patricia.delta.juliete.py
 # SPDX-License-Identifier: GPL-3.0-or-later
-""" Jogo da Memória, Curso ProgOO.
+"""Jogo da memória, 
+        projeto Delta
 
-.. codeauthor:: Emanuelle Simas <ellesimas@gmail.com>
 
 Changelog
 ---------
 .. versionadded::    20.07
-        Jogo da memória 2x4
+       Grid 2x4.
 
 """
-
-""" 
-Changelog
----------
-.. versionadded::    20.07
-        Grid 2x5 de cartões do jogo da memória
-        shuffle das cartas
-        bind do click sobre o botão
-        regra do jogo
-Changelog
----------
-.. versionadded::    20.07.02
-        Grid 2x4
-        alert do browser
-       
-"""
-
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
+from golf.main import ____
 import random
 import time
 
 __version__ = "20.07"
 __author__ = "Paulo Assumpção"
 
-__version__ = "20.07.02"
+__version__ = "20.07.01"
 __author__ = "Emanuelle Simas"
-
 
 IMG_CARD_FACE_DOWN = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline"
 IMG_CARD_1 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_pycharm.png?disp=inline"
 IMG_CARD_2 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Linux.png?disp=inline"
 IMG_CARD_3 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Gitlab.png?disp=inline"
-IMG_CARD_4 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_github.png?disp=inline"
-
+IMG_CARD_4 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Activ.png?disp=inline"
+#IMG_CARD_5 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_github.png?disp=inline"
 
 IMG_WIDTH = 150
 IMG_HEIGHT = 150
@@ -54,6 +37,7 @@ class Card():
         self.name = name
         self.cena = cena
         self.image = image
+        Game_=Game
         self.faceDown = True
         self.position = position
         self.pos_x = 50 + self.position[0] * IMG_WIDTH
@@ -81,13 +65,15 @@ class Game:
     cena = Cena()
     
     def vai(self): 
-        self.create_2x5_cards()
+        self.create_2x4_cards()
+        
     
-    def create_2x5_cards(self):
+    def create_2x4_cards(self):
         """ 
-            matrix 2x5:
-            1A 1B 2A 2B 3A
-            3B 4A 4B 5A 5B
+            matrix 2x4:
+            1A 1B 2A 2B | [0][0] [0][1] [0][2] [0][3] [0][4]|
+            3A 3B 4A 4B | [1][0] [1][1] [1][2] [1][3] [1][4]|
+            list_cards =  [(0,0), (1,0), (2,0), (3,0), (4,0), (0,1), (1,1), (2,1),(3,1),(4,1)]
         """
         list_cards = self.shuffle_cards()
         
@@ -100,8 +86,11 @@ class Game:
         self.card3a = Card("GitLab", IMG_CARD_3, list_cards[4], Game.cena, Game.rule)
         self.card3b = Card("GitLab", IMG_CARD_3, list_cards[5], Game.cena, Game.rule)
         
-        self.card4a = Card("GitHub", IMG_CARD_4, list_cards[6], Game.cena, Game.rule)
-        self.card4b = Card("GitHub", IMG_CARD_4, list_cards[7], Game.cena, Game.rule)
+        #self.card4a = Card("Activ", IMG_CARD_4, list_cards[6], Game.cena, Game.rule)
+        #self.card4b = Card("Activ", IMG_CARD_4, list_cards[7], Game.cena, Game.rule)
+        
+        #self.card5a = Card("Activ", IMG_CARD_5, list_cards[8], Game.cena, Game.rule)
+        #self.card5b = Card("Activ", IMG_CARD_5, list_cards[9], Game.cena, Game.rule)
         
         Game.cena.vai()
 
@@ -124,16 +113,16 @@ class Game:
         if Game.previous_selected_card.name != selected_card.name:            
             # reabilita a ação o clique e vira a carta 1 para baixo
             Game.previous_selected_card.card.elt.bind("click", Game.previous_selected_card.turnUp)
-            Game.previous_selected_card.turnDown()
+            #Game.previous_selected_card.turnDown()
             
             # reabilita a ação do clique e vira a carta 2 para baixo
             selected_card.card.elt.bind("click", selected_card.turnUp)
-            
-            Texto(Game.cena, "Opa!", "Errou!!!").vai()
+            selected_card.turndown()
+            #Texto(Game.cena, "Opa!", "Errou!!!").vai()
             
             # Aqui tem q esperar pelo menos 3 segundos, como fazer? (sleep, não funciona)
             
-            selected_card.turnDown()
+            Game.previous_selected_card.turnDown()
             Game.previous_selected_card = None
             
         # acertou 
@@ -141,11 +130,12 @@ class Game:
             # desabilita o clique sobre as cartas acertadas
             Game.previous_selected_card = None
             selected_card.card.elt.unbind("click")
-            Texto(Game.cena, "Acertou!!!").vai()
+            #Texto(Game.cena, "Acertou!!!").vai()
         
 
     def shuffle_cards(self):   
-        list_cards =  [(0,0), (1,0), (2,0), (3,0), (0,1), (1,1), (2,1), (3,1)]
+        list_cards =  [(0,0), (1,0), (2,0),(0,1), (1,1), (2,1)] #organiza as cartas em [coluna][linha]
+                                                 
         random.shuffle(list_cards)
         return list_cards
         
