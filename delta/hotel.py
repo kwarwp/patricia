@@ -48,9 +48,11 @@ class Jogo:
 		self.card1b = Carta(IMG_PYCHARM, list_cards[1], self.cena)
 		self.card2a = Carta(IMG_LINUX, list_cards[2], self.cena)
 		self.card2b = Carta(IMG_LINUX, list_cards[3], self.cena)
+		self.card2a = Carta(IMG_LINUX, list_cards[4], self.cena)
+		self.card2b = Carta(IMG_LINUX, list_cards[5], self.cena)        
 		self.cena.vai()
 	def embaralha(self):   
-		list_cards =  [(0,0), (1,0),(0,1),(1,1)]
+		list_cards =  [(0,0), (1,0),(0,1),(1,1),(2,0),(2,1)]
 		random.shuffle(list_cards,random.random)
 		return list_cards
 if __name__ == "__main__":
