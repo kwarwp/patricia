@@ -12,7 +12,7 @@ Changelog
 
 """
 from _spy.vitollino.main import Cena, Elemento, STYLE
-from grace.main import Praia
+""" from grace.main import Praia """
 
 __version__ = "1.0"
 __author__ = "ECHO"
@@ -25,7 +25,7 @@ class Jogo:
     """ Representa uma cena da calçada da praia """
     def __init__(self):
         """ Mostra o tabuleiro com o botão start"""
-        self.cena = Cena(TABULEIRO, direita=Praia())
+        self.cena = Cena(TABULEIRO, direita=TABULEIRO())
         self.banhista = Elemento(BOTAO, x=100, y=200, cena=self.cena)
         #Cena(CENA_CALCADA).vai()
     def vai(self):
