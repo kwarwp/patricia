@@ -16,17 +16,14 @@ class Eventos:
     BONECO = "https://i.imgur.com/k63kwfa.png"
     
     
-    matrizFase = [[link2,60,260],     #matrizFase = [[local_imagem_fase, x_inicial, y_inicial]...]
+    matrizFase = [[link,(60,260),],     #matrizFase = [[local_imagem_fase, x_inicial, y_inicial]...]
                   [link3,450,50],
                   [link4,50,430],
                   [link5,200,50]]
 
     STYLE["width"] = 640 #tamanho da cena
     
-    def __init__(self, posicao):
-        self.posicao = posicao
-        self.pos_x = self.posicao[0]
-        self.pos_x = self.posicao[1]
+    def __init__(self):
         self.ambiente = Cena(self.CENA_corredor_1)
         self.pos_x = 100
         self.pos_y = 40
