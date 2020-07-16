@@ -1,13 +1,13 @@
 # patricia.delta.india.py
 # SPDX-License-Identifier: GPL-3.0-or-later
-""" Projeto sem descrição, (mude esta linha).
+""" Jogo da Memória, 3x4.
 
-.. codeauthor:: Nome Sobrenome <mail@local.tipo>
+.. codeauthor:: Emanuelle Simas <ellesimas@gmail.com>
 
 Changelog
 ---------
 .. versionadded::    20.07
-        Descreva o que você adicionou no código.
+        Transformei o tabuleiro 2x5 em 2x4
 
 """
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
@@ -24,8 +24,8 @@ IMG_CARD_FACE_DOWN = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?di
 IMG_CARD_1 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_pycharm.png?disp=inline"
 IMG_CARD_2 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Linux.png?disp=inline"
 IMG_CARD_3 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Gitlab.png?disp=inline"
-IMG_CARD_4 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_github.png?disp=inline"
-IMG_CARD_5 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Activ.png?disp=inline"
+IMG_CARD_4 = http://activufrj.nce.ufrj.br/file/ProgOO/Card_Activ.png?disp=inline""
+#IMG_CARD_5 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_github.png?disp=inline"
 
 IMG_WIDTH = 150
 IMG_HEIGHT = 150
@@ -63,13 +63,14 @@ class Game:
     cena = Cena()
     
     def vai(self): 
-        self.create_2x5_cards()
+        self.create_2x4_cards()
+        
     
-    def create_2x5_cards(self):
+    def create_2x4_cards(self):
         """ 
-            matrix 2x5:
-            1A 1B 2A 2B 3A
-            3B 4A 4B 5A 5B
+            matrix 2x4:
+            1A 1B 2A 2B | [0][0] [0][1] [0][2] [0][3]
+            3A 3B 4A 4B | [1][0] [1][1] [1][2] [1][3]
         """
         list_cards = self.shuffle_cards()
         
@@ -82,11 +83,11 @@ class Game:
         self.card3a = Card("GitLab", IMG_CARD_3, list_cards[4], Game.cena, Game.rule)
         self.card3b = Card("GitLab", IMG_CARD_3, list_cards[5], Game.cena, Game.rule)
         
-        self.card4a = Card("GitHub", IMG_CARD_4, list_cards[6], Game.cena, Game.rule)
-        self.card4b = Card("GitHub", IMG_CARD_4, list_cards[7], Game.cena, Game.rule)
+        self.card4a = Card("Activ", IMG_CARD_4, list_cards[6], Game.cena, Game.rule)
+        self.card4b = Card("Activ", IMG_CARD_4, list_cards[7], Game.cena, Game.rule)
         
-        self.card5a = Card("Activ", IMG_CARD_5, list_cards[8], Game.cena, Game.rule)
-        self.card5b = Card("Activ", IMG_CARD_5, list_cards[9], Game.cena, Game.rule)
+        #self.card5a = Card("Activ", IMG_CARD_5, list_cards[8], Game.cena, Game.rule)
+        #self.card5b = Card("Activ", IMG_CARD_5, list_cards[9], Game.cena, Game.rule)
         
         Game.cena.vai()
 
@@ -130,7 +131,7 @@ class Game:
         
 
     def shuffle_cards(self):   
-        list_cards =  [(0,0), (1,0), (2,0), (3,0), (4,0), (0,1), (1,1), (2,1), (3,1), (4,1)]
+        list_cards =  [(0,0), (1,0), (2,0), (3,0), (4,0), (0,1), (1,1), (2,1)]
         random.shuffle(list_cards)
         return list_cards
         
