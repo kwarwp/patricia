@@ -12,7 +12,7 @@ __author__ = "ECHO"
 STYLE["width"] = 1345
 STYLE["height"] = "620px"
 TABULEIRO = "http://www.infcross.com.br/mestrado/tabuleiro.jpg"
-BOTAO = "http://www.infcross.com.br/mestrado/botao.jpg"
+BOTAO = "http://www.infcross.com.br/mestrado/botao 2.png"
 
 class Tabuleiro:
     """ Representa uma cena da calçada da praia """
