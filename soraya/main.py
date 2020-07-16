@@ -11,7 +11,7 @@ from texto.main import Texto
 CENAINICIO = "https://i.imgur.com/mbt7XHq.png"
 PLAY = "https://i.imgur.com/QiiOf5O.png"
 
-STYLE ["width"] = 1320
+STYLE ["width"] = 1340
 STYLE ["height"] = "600px"
 
 class gameInicio:
