@@ -58,7 +58,7 @@ class Eventos:
         self.ambiente.vai()
     
     def anda_boneco(self, ev=None):
-        matrizPosicaoInicial = [[60,300],     #matrizPosicaoInicial = [[x_inicial, y_inicial]...]
+        matrizPosicaoInicial = [[60,280],     #matrizPosicaoInicial = [[x_inicial, y_inicial]...]
                                 [450,50],
                                 [50,430],
                                 [200,50]]
