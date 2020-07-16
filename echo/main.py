@@ -3,6 +3,7 @@
         * NEW: O jogo original
         Autor: Grupo Echo (Aline, Lorena, Renato e Victoria)
 """
+
 from _spy.vitollino.main import Cena, Elemento, STYLE
 """ from grace.main import Praia """
 
@@ -25,11 +26,14 @@ class Jogo:
         """ Mostra o tabuleiro com o botão start"""
         self.cena = Cena(TABULEIRO, direita=Tabuleiro())
         self.banhista = Elemento(BOTAO, x=50, y=50, cena=self.cena)
-        #Cena(CENA_CALCADA).vai()
+        #Cena(CENA_JOGO).vai()
     def vai(self):
         """ Mostra o tabuleiro """
         self.cena.vai()
-        #Cena(CENA_CALCADA).vai()
+        #Cena(CENA_JOGO).vai()
     
 if __name__ == "__main__":
     Jogo().vai()
+    
+    
+    
