@@ -446,3 +446,10 @@ NameError: name 'link2' is not defined
            ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Jul 16 2020 12:39:32.800 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 77
+  self.ambiente = Cena(self."https://i.imgur.com/5Qno2fs.png")#(self.matrizFase[0][0]) #lê a cena que está descrita na primeira coluna da matriz
+                             ^
+SyntaxError: invalid syntax
+'''},
