@@ -2974,3 +2974,10 @@ AttributeError: 'Game' object has no attribute 'create_2x4_cards'
     self.card1a = Card("PyCharm", IMG_CARD_1, list_cards[0], Game_.cena, Game.rule)
 NameError: name 'Game' is not defined
 '''},
+{'date': 'Thu Jul 16 2020 00:42:40.58 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 144
+  alert('tu venceu, rapá!")
+                           ^
+SyntaxError: EOL while scanning string literal
+'''},
