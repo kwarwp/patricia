@@ -56,7 +56,7 @@ class Card():
         self.card.elt.bind("click", self.turnUp)
         
         
-class Game:
+class Game2x5:
     # referência para o Elemento
     previous_selected_card = None
     list_objects = None
@@ -145,4 +145,4 @@ class Game:
         
 
 if __name__ == "__main__":
-    Game().vai()
+    Game2x5().vai()
