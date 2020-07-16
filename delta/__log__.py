@@ -3677,3 +3677,10 @@ AttributeError: 'module' object has no attribute 'vai'
     self.game2x2=Game()
 TypeError: 'module' object is not callable
 '''},
+{'date': 'Thu Jul 16 2020 14:08:56.383 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 34
+  self.inicio = Cena(TELA_INICIAL,self.game2x2=Game())
+                                              ^
+SyntaxError: keyword can't be an expression
+'''},
