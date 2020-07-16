@@ -251,3 +251,10 @@ AttributeError: 'GUI' object has no attribute 'kamui'
                                        ^
 SyntaxError: non-keyword arg after keyword arg
 '''},
+{'date': 'Wed Jul 15 2020 23:20:03.623 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 12
+  inicio = Cena(img=tabuleiro, img=botao)
+                                  ^
+SyntaxError: keyword argument repeated
+'''},
