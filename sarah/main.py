@@ -9,7 +9,7 @@ from _spy.vittolino.main import INVENTARIO as inv
 
 """ tabuleiro = Cena (img ="https://www.ibilce.unesp.br/Home/Departamentos/Matematica/2cejta/avancando-com-o-resto.png") """
 
-STYLE["width"] = 1350
+STYLE["width"] = 1345
 STYLE["height"] = "550px"
 
 tabuleiro ="http://www.infcross.com.br/mestrado/tabuleiro.jpg"
