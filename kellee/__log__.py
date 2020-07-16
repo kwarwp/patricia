@@ -847,3 +847,10 @@ AttributeError: 'int' object has no attribute '__getitem__'
     expli.entra(fundo)
 AttributeError: 'Cena' object has no attribute 'entra'
 '''},
+{'date': 'Thu Jul 16 2020 10:30:46.433 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 13
+  class Cena
+             ^
+SyntaxError: invalid syntax
+'''},
