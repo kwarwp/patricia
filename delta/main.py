@@ -31,7 +31,8 @@ STYLE["width"] = 600
 class start:
 
     def __init__(self):
-        self.inicio = Cena(TELA_INICIAL, direita= Game())
+        self.inicio = Cena(TELA_INICIAL,direita= Game)
+        
           
     def vai(self):
         self.inicio.vai()
