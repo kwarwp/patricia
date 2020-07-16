@@ -19,7 +19,7 @@ STYLE["heigth"] = "500px"
 capa_do_jogo = "https://i.imgur.com/0RVnppj.png"
 botao_jogar = "https://i.imgur.com/pG9wDIz.png"
 botao_sobre = "https://i.imgur.com/F3Q0bDv.png"
-sobre = "https://i.imgur.com/lear9Bn.png"
+sobre = "https://i.imgur.com/ZN0slvj.png"
 """criando classe jogo"""
 class Jogo:
     def __init__(self):
