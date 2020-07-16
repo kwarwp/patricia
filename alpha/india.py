@@ -20,7 +20,6 @@ Código alterado de Monica Novellino <monicanovellino@gmail.com>
 """
 
 #FALTA - melhorar o código: criar as classes, funções, passar parametros
-#FALTA - Mapear os pontos dos ambientes (x e Y) para mudar para a cena correta
 #FALTA - VErifica se esta na cena correta e se chegou no baú do tesouro
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
