@@ -19,8 +19,8 @@ class tela:
 	siga2 = Elemento (img="https://i.imgur.com/kRmXNkz.png", style=dict(left=850, top=380, width=150, height="150px"))
 	siga.entra(fundo)
 	siga2.entra(fundo)
-	#siga.vai=cena().vai
-	siga2.vai= oi().vai
 	fundo.vai()
+    #siga.vai=cena().vai
+	siga2.vai= oi().vai
 
 tela()
