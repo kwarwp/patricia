@@ -17,4 +17,26 @@ Changelog
         Descreva o que você adicionou no código.
 
 """
+from _spy.vitollino.main import Cena
+from hotel.main import Game
+from golf.main import game
 
+TELA_INICIAL = "https://i.pinimg.com/originals/ff/7c/78/ff7c780990c7f867de2061645d9eff86.gif"
+START
+
+class start:
+
+    def inicia(self):
+        start = Cena(TELA_INICIAL)
+        
+        
+    def vai(self):
+        self.start.vai()
+    
+class end:
+    pass
+    
+    
+if __name__=="__main__":
+    
+    start().vai()
