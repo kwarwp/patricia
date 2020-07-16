@@ -13,7 +13,7 @@ STYLE["height"] = "620px"
 TABULEIRO = "http://www.infcross.com.br/mestrado/tabuleiro.jpg"
 BOTAO = "http://www.infcross.com.br/mestrado/botao.jpg"
 
-class Tabuleiro_Ini:
+class Tabuleiro:
     """ Representa uma cena da calçada da praia """
     def vai(self):
         """ Mostra a cena da praia """
@@ -23,7 +23,7 @@ class Jogo:
     """ Representa uma cena da calçada da praia """
     def __init__(self):
         """ Mostra o tabuleiro com o botão start"""
-        self.cena = Cena(TABULEIRO, direita=Tabuleiro_Ini())
+        self.cena = Cena(TABULEIRO, direita=Tabuleiro())
         self.banhista = Elemento(BOTAO, x=100, y=200, cena=self.cena)
         #Cena(CENA_CALCADA).vai()
     def vai(self):
