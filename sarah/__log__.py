@@ -15,3 +15,10 @@
     STYLE["width"] = 1150
 NameError: name 'STYLE' is not defined
 '''},
+{'date': 'Thu Jul 16 2020 11:58:11.91 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 13
+  STYLE["width"] = 1150
+  ^
+IndentationError: expected an indented block
+'''},
