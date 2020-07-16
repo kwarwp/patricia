@@ -18,20 +18,21 @@ Changelog
 
 """
 from _spy.vitollino.main import Cena, STYLE
-from hotel.main import Game
-from golf.main import Game
+from hotel.main import Game2x2
+
 
 TELA_INICIAL = "https://i.pinimg.com/originals/ff/7c/78/ff7c780990c7f867de2061645d9eff86.gif"
+TELA_MEIO = "https://i.imgur.com/FTkbaSW.jpg"
 
-STYLE["width"] = 1000
+
+STYLE["width"] = 600
 
 
 class start:
 
     def __init__(self):
-        self.inicio = Cena(TELA_INICIAL)
-        
-        
+        self.inicio = Cena(TELA_INICIAL, direita= Game2x2())
+          
     def vai(self):
         self.inicio.vai()
     
@@ -40,5 +41,4 @@ class end:
     
     
 if __name__=="__main__":
-    
     start().vai()
