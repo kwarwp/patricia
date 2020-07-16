@@ -85,7 +85,7 @@ class Eventos:
             self.ambiente.vai()
             cont = cont + 1
             if cont == 2: #Regulador do contador. Precisa alterar a programação para voltar a fase em um portal de retorno
-                cont = 1
+                cont = 0
             if cont > 3:
                 cont = 0
             
