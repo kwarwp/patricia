@@ -39,7 +39,7 @@ class Carta():
 class Jogo:
 	def vai(self):
 		self.matriz()
-	"matriz 2x2"
+	"matriz 2x3"
 	def matriz(self):
 		self.cena = Cena()
 		list_cards=self.embaralha()
