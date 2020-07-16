@@ -23,7 +23,7 @@ class Jogo:
     """ Representa uma cena de tabuleiro com o botão """
     def __init__(self):
         """ Mostra o tabuleiro com o botão start"""
-        self.cena = Cena(TABULEIRO)
+        self.cena = Cena(TABULEIRO, direita=Tabuleiro())
         self.banhista = Elemento(BOTAO, x=50, y=50, cena=self.cena)
         #Cena(CENA_CALCADA).vai()
     def vai(self):
