@@ -29,7 +29,6 @@ codigo1.vai=erro.vai
 codigo2.vai=casa.vai
 triste.vai=fundo.vai
 feliz.vai=fundo.vai
-expli.vai=fundo.vai
 #fundo.vai()
 expli.vai()
 
