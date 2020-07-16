@@ -43,7 +43,6 @@ class Card():
         self.pos_y = 50 + self.position[1] * IMG_HEIGHT
         self.card = Elemento(IMG_CARD_FACE_DOWN, tit=self.name, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.card.elt.bind("click", self.turnUp)
-        self.removed = False
         
     def turnUp(self, env=None):
         self.card = Elemento(self.image, tit=self.name, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
@@ -78,7 +77,7 @@ class Game:
         self.card1b = Card("PyCharm", IMG_CARD_1, list_cards[1], Game.cena, Game.rule)
         
         self.card2a = Card("Linux", IMG_CARD_2, list_cards[2], Game.cena, Game.rule)
-        self.card2b = Card("Linux", IMG_CARD_2, list_cards[3], Game.cena, Game.rule)
+        self.card2b = Card("Linux", IMG_CARD_2, (3,0), Game.cena, Game.rule)
         
         self.card3a = Card("GitLab", IMG_CARD_3, list_cards[4], Game.cena, Game.rule)
         self.card3b = Card("GitLab", IMG_CARD_3, list_cards[5], Game.cena, Game.rule)
@@ -90,6 +89,7 @@ class Game:
         self.card5b = Card("Activ", IMG_CARD_5, list_cards[9], Game.cena, Game.rule)
         
         Game.cena.vai()
+              
 
     @staticmethod
     def rule(selected_card):
@@ -126,10 +126,17 @@ class Game:
         else:
             # desabilita o clique sobre as cartas acertadas
             Game.previous_selected_card = None
+            self.verifyingGameOver()
             selected_card.card.elt.unbind("click")
             Texto(Game.cena, "Acertou!!!").vai()
+            
         
-
+    def verifyingGameOver(self):
+        #if self.card1a.faceDown==False and self.card1b.faceDown and ... and self.card5b.faceDown:
+        Texto(Game.cena, "GameOver!!!").vai()
+        # proxima sala
+        
+    
     def shuffle_cards(self):   
         list_cards =  [(0,0), (1,0), (2,0), (3,0), (4,0), (0,1), (1,1), (2,1), (3,1), (4,1)]
         random.shuffle(list_cards)
