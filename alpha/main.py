@@ -47,7 +47,7 @@ class Eventos:
     
     def __init__(self):
         self.ambiente = Cena(self.CENA_corredor_1)
-        self.boneco = Elemento(self.BONECO, , x=100, y=40, cena=self.ambiente)
+        self.boneco = Elemento(self.BONECO, x=100, y=40, cena=self.ambiente)
         document.bind("keydown", self.anda_boneco)  # captura o evento de teclado
            
     def vai(self):
@@ -76,7 +76,7 @@ class Eventos:
             global cont #contador estanciado fora do def para gerar a linha a ser lida na matrizFase
             self.ambiente = Cena(self.matrizFase[cont][0]) #lê a cena que está descrita na primeira coluna da matriz
             STYLE["width"] = 640
-            self.boneco = Elemento(self.BONECO, , x=int, y=int, cena=self.ambiente)
+            self.boneco = Elemento(self.BONECO, x=int, y=int, cena=self.ambiente)
             self.boneco.x = 100#int(matrizFase[cont][1]) #posição x_inicial da fase, descrita na matriz pela segunda coluna
             self.boneco.y = 100#int(matrizFase[cont][2]) #posição y_inicial da fase descita pela terceira coluna
             self.ambiente.vai()

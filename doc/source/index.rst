@@ -13,6 +13,12 @@ Bem Vindo à documentação do Desenvolvimento Ágil PPGI 2020!
 
    intro.rst
    quarto.rst
+   alpha.rst
+   bravo.rst
+   charlie.rst
+   delta.rst
+   echo.rst
+   foxtrot.rst
    tutorial1.rst
    changelog.rst
 

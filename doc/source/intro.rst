@@ -35,7 +35,13 @@ Desenvolvimento das equipes de programação
 
 Projetos das Equipes:
 
-* Em Construção
+
+Projeto Alpha
+---------------------
+
+* Um pequeno labirinto com várias câmaras.
+
+    :ref:`dev2020_alpha`
 
 .. include:: footer.rst
 
