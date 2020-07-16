@@ -2902,3 +2902,10 @@ SyntaxError: invalid syntax
     self.card3a = Card("GitLab", IMG_CARD_3, list_cards[4], Game.cena, Game.rule)
 NameError: name 'IMG_CARD_3' is not defined
 '''},
+{'date': 'Wed Jul 15 2020 21:13:11.997 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 27
+  IMG_CARD_4 = http://activufrj.nce.ufrj.br/file/ProgOO/Card_Activ.png?disp=inline""
+                    ^
+SyntaxError: invalid syntax
+'''},
