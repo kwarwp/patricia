@@ -47,6 +47,7 @@ class Eventos:
     STYLE["width"] = 640 #tamanho da cena
     
     def __init__(self):
+        self.xx = 100
         self.ambiente = Cena(self.CENA_corredor_1)
         self.boneco = Elemento(self.BONECO, x=100, y=40, cena=self.ambiente)
         document.bind("keydown", self.anda_boneco)  # captura o evento de teclado
