@@ -3357,3 +3357,10 @@ TypeError: 'module' object is not callable
                                  ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Jul 16 2020 13:46:12.110 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 136
+  if object.faceDown == False   
+                                 ^
+SyntaxError: invalid syntax
+'''},
