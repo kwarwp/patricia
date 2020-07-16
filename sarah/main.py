@@ -19,8 +19,8 @@ botao = "http://www.infcross.com.br/mestrado/botao.jpg"
 
 
 def cena_principal():
-    inicio = Elemento(img=botao)
-    inicio.vai()
     inicio = Cena(img=tabuleiro)
-    inicio.vai()    
+    inicio_e = Elemento(img=botao)
+    inicio.vai()
+    inicio_e.vai()
 cena_principal() 
