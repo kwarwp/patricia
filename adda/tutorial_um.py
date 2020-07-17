@@ -22,7 +22,7 @@ from _spy.vitollino.main import Cena, Elemento
 from browser import document # importa o DOM para atribuir o evento de teclado
 #from adda.praia import cena
 #print(cena)
-from adda.main import Calcada
+#from adda.main import Calcada
 #print(cena)
 from grace.main import Praia
 
