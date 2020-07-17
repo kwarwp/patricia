@@ -76,22 +76,25 @@ class Game2x5:
             3B 4A 4B 5A 5B
         """
         list_cards = self.shuffle_cards()
-        
-        list_objects = [ Card("PyCharm", IMG_CARD_1, list_cards[0], Game2x5.cena, Game2x5.rule), 
-            Card("PyCharm", IMG_CARD_1, list_cards[1], Game2x5.cena, Game2x5.rule),
-            Card("Linux", IMG_CARD_2, list_cards[2], Game2x5.cena, Game2x5.rule),
-            Card("Linux", IMG_CARD_2, list_cards[3], Game2x5.cena, Game2x5.rule),
-            Card("GitLab", IMG_CARD_3, list_cards[4], Game2x5.cena, Game2x5.rule),
-            Card("GitLab", IMG_CARD_3, list_cards[5], Game2x5.cena, Game2x5.rule),
-            Card("GitHub", IMG_CARD_4, list_cards[6], Game2x5.cena, Game2x5.rule),
-            Card("GitHub", IMG_CARD_4, list_cards[7], Game2x5.cena, Game2x5.rule),
-            Card("Activ", IMG_CARD_5, list_cards[8], Game2x5.cena, Game2x5.rule),
-            Card("Activ", IMG_CARD_5, list_cards[9], Game2x5.cena, Game2x5.rule)]
+        # aqui, list_objects tem que ser atributo de instância da classe Game2x5
+        # pois ele vai ser usado no método verifyingGameOver():
+        # rule também não pode ser estático pois vai usar o método verifyingGameOver()
+        self.list_objects = [
+            Card("PyCharm", IMG_CARD_1, list_cards[0], Game2x5.cena, self.rule), 
+            Card("PyCharm", IMG_CARD_1, list_cards[1], Game2x5.cena, self.rule),
+            Card("Linux", IMG_CARD_2, list_cards[2], Game2x5.cena, self.rule),
+            Card("Linux", IMG_CARD_2, list_cards[3], Game2x5.cena, self.rule),
+            Card("GitLab", IMG_CARD_3, list_cards[4], Game2x5.cena, self.rule),
+            Card("GitLab", IMG_CARD_3, list_cards[5], Game2x5.cena, self.rule),
+            Card("GitHub", IMG_CARD_4, list_cards[6], Game2x5.cena, self.rule),
+            Card("GitHub", IMG_CARD_4, list_cards[7], Game2x5.cena, self.rule),
+            Card("Activ", IMG_CARD_5, list_cards[8], Game2x5.cena, self.rule),
+            Card("Activ", IMG_CARD_5, list_cards[9], Game2x5.cena, self.rule)]
         Game2x5.cena.vai()
               
 
-    @staticmethod
-    def rule(selected_card):
+    # @staticmethod
+    def rule(self, selected_card):
     
         # abortar se o clique ocorrer sobre a mesma carta
         if Game2x5.previous_selected_card == selected_card:
@@ -122,22 +125,28 @@ class Game2x5:
             
             # Aqui tem q esperar pelo menos 3 segundos, como fazer? (sleep, não funciona)
             # outra é usar o set_timeout do timer
-            timer.set_timeout(turn, 3000)
+            # timer.set_timeout(turn, 3000)
         # acertou 
         else:
             # desabilita o clique sobre as cartas acertadas
             Game2x5.previous_selected_card = None
-            Game2x5.verifyingGameOver()
+            # aqui não pode ser verifyingGameOver estatico
+            self.verifyingGameOver()
             selected_card.card.elt.unbind("click")
             Texto(Game2x5.cena, "Acertou!!!").vai()
             
-    @staticmethod  
-    def verifyingGameOver():
-        for object in list_objects:
-            if object.faceDown == True:
+    # @staticmethod  
+    def verifyingGameOver(self):
+        # object é palavra reservada, use _object
+        for _object in self.list_objects:
+            if _object.faceDown == True:
                 return
                 
-        Texto(Game2x5.cena, "GameOver!!!").vai()
+        def proximo_jogo(*_):
+            from delta.india import Game2x3
+            Game2x3().vai()
+        # usa o foi do texto para chamar o próximo jogo.        
+        Texto(Game2x5.cena, "GameOver!!!", foi=proximo_jogo).vai()
         # proxima sala
         
     
