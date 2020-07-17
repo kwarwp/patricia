@@ -20,6 +20,7 @@ Changelog
 """
 from _spy.vitollino.main import Cena, Elemento
 from browser import document # importa o DOM para atribuir o evento de teclado
+from adda.praia import cena
 
 class Eventos:
     """ Associa um evento a uma imagem e captura eventos de teclado. """
