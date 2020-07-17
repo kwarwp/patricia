@@ -15,6 +15,9 @@ Changelog
 """
 
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
+# em vez de sleep temos que usar o timer do navegador 
+# https://www.brython.info/static_doc/en/timer.html
+from browser import timer
 import random
 import time
 
@@ -110,14 +113,16 @@ class Game2x5:
             
             # reabilita a ação do clique e vira a carta 2 para baixo
             selected_card.card.elt.bind("click", selected_card.turnUp)
-            
-            Texto(Game2x5.cena, "Opa!", "Errou!!!").vai()
+            def turn(*_):
+                selected_card.turnDown()
+                Game2x5.previous_selected_card = None
+            # uma maneira de esperar é usar o foi do texto
+            # ele é chamado quando se fecha o texto clicando o <x>
+            Texto(Game2x5.cena, "Opa!", "Errou!!!", foi=turn).vai()
             
             # Aqui tem q esperar pelo menos 3 segundos, como fazer? (sleep, não funciona)
-            
-            selected_card.turnDown()
-            Game2x5.previous_selected_card = None
-            
+            # outra é usar o set_timeout do timer
+            timer.set_timeout(turn, 3000)
         # acertou 
         else:
             # desabilita o clique sobre as cartas acertadas
