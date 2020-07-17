@@ -17,14 +17,13 @@ Changelog
 .. versionadded::    20.07
         Documentação do tutorial.
 
+.. versionadded::    20.07.1
+        Inclui um import.
+
 """
 from _spy.vitollino.main import Cena, Elemento
 from browser import document # importa o DOM para atribuir o evento de teclado
-#from adda.praia import cena
-#print(cena)
-#from adda.main import Calcada
-#print(cena)
-from grace.main import Praia
+from adda.praia import cena
 
 class Eventos:
     """ Associa um evento a uma imagem e captura eventos de teclado. """
@@ -33,7 +32,7 @@ class Eventos:
     DARK_SIDE = "https://i.imgur.com/BKitDgi.png"
     
     def __init__(self):
-        self.calcada = Cena(self.CENA_CALCADA, direita=Praia())
+        self.calcada = Cena(self.CENA_CALCADA, direita=cena)
         self.banhista = Elemento(self.BANHISTA, x=100, y=200, cena=self.calcada)
         self.dark_side = Elemento(self.DARK_SIDE, x=100, y=100, cena=self.calcada)
         self.dark_side.o = 0  # faz a opacidade virar zero, não mostra o letreiro
