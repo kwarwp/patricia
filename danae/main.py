@@ -11,14 +11,14 @@ Changelog
 
 """
 from browser import document, html
-from browser.window import __SUPERPYTHON__
+# from browser.window import __SUPERPYTHON__
 from browser import window
 from browser.html import H1 as H, DIV as D, SECTION as S, P, STRONG as B, ARTICLE as R
 __version__ = "20.07"
 __author__ = "Carlo"
 import functools
 
-window.onhashchange = __SUPERPYTHON__._edit
+window.onhashchange = window.__SUPERPYTHON__._edit
 
 class bulma(object):
     """Decorator that caches a function's return value each time it is called.
