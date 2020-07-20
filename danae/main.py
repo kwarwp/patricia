@@ -41,14 +41,14 @@ class section(bulma):
     """Decorator that includes an enclosing SECTION
     """
     def __init__(self, func, clazz="", oid=None, tag=S):
-        super().init(func, clazz=clazz, oid=oid, tag=S)
+        super().__init__(func, clazz=clazz, oid=oid, tag=S)
 
 
 class article(bulma):
     """Decorator that includes an enclosing ARTICLE
     """
     def __init__(self, func, clazz="", oid=None, tag=R):
-        super().init(func, clazz=clazz, oid=oid, tag=R)
+        super().__init__(func, clazz=clazz, oid=oid, tag=R)
 
 class App:
     """ Implementa um painel de controle de admnistrador.
