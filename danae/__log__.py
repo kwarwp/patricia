@@ -280,3 +280,10 @@ NameError: name 'filename' is not defined
     self.filename = filename
 NameError: name 'filename' is not defined
 '''},
+{'date': 'Mon Jul 20 2020 16:56:14.454 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module browser.window line 1
+  <!DOCTYPE html>
+  ^
+SyntaxError: invalid syntax
+'''},
