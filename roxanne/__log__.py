@@ -581,3 +581,19 @@ Exception: Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'http://
   module '$exec_330' line 4
 with urllib.request.urlopen('http://python.org/') as response:
 '''},
+{'date': 'Mon Jul 20 2020 15:23:18.433 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 4
+    with urlopen("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY") as response:
+NameError: name 'urlopen' is not defined
+'''},
