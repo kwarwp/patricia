@@ -73,13 +73,13 @@ class App:
         # ^^^ usa um list comprehension para instalar cada ladrilho no ancestral 'tiles'
 
     def go(self):
-        document.body <= self.topo()
+        document.body <= self.topo()+self.tiles()
 
     @section(h+w+p)
     @bulma(c)
     @bulma(b)
     def topo(self):
-        return H("Hello World", Class=t)+P("My first website with "+B("Bulma"), Class=u)+self.tiles()
+        return H("Hello World", Class=t)+P("My first website with "+B("Bulma"), Class=u)
 
     @section("info-tiles")
     def tiles(self):
@@ -88,8 +88,8 @@ class App:
         [tiles <= self.tile(valor, legenda) for valor, legenda in dados]
         return tiles
 
-    @bulma("tile is-child box")
-    @article("tile is-parent")
+    @bulma("tile is-parent")
+    @article("tile is-child box")
     def tile(self, valor, legenda):
         return P(valor , Class=t)+P(legenda , Class=u)
        
