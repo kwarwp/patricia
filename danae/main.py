@@ -25,7 +25,6 @@ class bulma(object):
     def __init__(self, clazz="", oid=None, tag=D):
         self.tag = tag
         self.clazz, self.oid = clazz, oid
-        self.func = func
         # functools.update_wrapper(self, func)  ## TA-DA! ##
     def __call__(self, fn, *args, **kwargs):
         @functools.wraps(fn)
@@ -76,7 +75,9 @@ class App:
     def go(self):
         document.body <= self.topo()
 
-    @bulma(h)
+    @section(h+w+p)
+    @bulma(c)
+    @bulma(b)
     def topo(self):
         return H("Hello World", Class=t)+P("My first website with "+B("Bulma"), Class=u)
        
