@@ -79,7 +79,19 @@ class App:
     @bulma(c)
     @bulma(b)
     def topo(self):
-        return H("Hello World", Class=t)+P("My first website with "+B("Bulma"), Class=u)
+        return H("Hello World", Class=t)+P("My first website with "+B("Bulma"), Class=u)+self.tiles()
+
+    @section("info-tiles")
+    def tiles(self):
+        dados = [("435k", "Usuários"), ("53k", "Produtos"), ("735k", "Pedidos"), ("23", "Devoluções")]
+        tiles = D(Class="tile is-ancestor has-text-centered")
+        [tiles <= self.tile(valor, legenda) for valor, legenda in dados]
+        return tiles
+
+    @bulma("tile is-child box")
+    @article("tile is-parent")
+    def tile(self, valor, legenda):
+        return P(valor , Class=t)+P(legenda , Class=u)
        
         
 class CONST:
