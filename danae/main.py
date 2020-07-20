@@ -26,10 +26,13 @@ class bulma(object):
         self.tag = tag
         self.clazz, self.oid = clazz, oid
         self.func = func
-        functools.update_wrapper(self, func)  ## TA-DA! ##
+        # functools.update_wrapper(self, func)  ## TA-DA! ##
     def __call__(self, *args, **kwargs):
-        return D(self.func(*args, **kwargs), Class=self.clazz, Id=self.oid) if self.oid else D(
-                self.func(*args, **kwargs), Class=self.clazz)
+        @functools.wraps(fn)
+        def decorated(*args, **kwargs):
+            return D(self.func(*args, **kwargs), Class=self.clazz, Id=self.oid) if self.oid else D(
+                    self.func(*args, **kwargs), Class=self.clazz)
+        return decorated
 
 
 class section(bulma):
@@ -72,9 +75,7 @@ class App:
 
     def go(self):
         document.body <= self.topo()
-        
-    @section(h+w+p)
-    @bulma(c)
+
     @bulma(h)
     def topo(self):
         return H("Hello World", Class=t)+P("My first website with "+B("Bulma"), Class=u)
