@@ -575,3 +575,9 @@ Exception: Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'http://
   module '$exec_322' line 4
 with urllib.request.urlopen('http://python.org/') as response:
 '''},
+{'date': 'Mon Jul 20 2020 15:21:14.323 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'http://python.org/'.
+  module '$exec_330' line 4
+with urllib.request.urlopen('http://python.org/') as response:
+'''},
