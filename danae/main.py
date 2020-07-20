@@ -37,15 +37,15 @@ class bulma(object):
 class section(bulma):
     """Decorator that includes an enclosing SECTION
     """
-    def __init__(self, func, clazz="", oid=None, tag=S):
-        super().__init__(func, clazz=clazz, oid=oid, tag=S)
+    def __init__(self, clazz="", oid=None, tag=S):
+        super().__init__(clazz=clazz, oid=oid, tag=S)
 
 
 class article(bulma):
     """Decorator that includes an enclosing ARTICLE
     """
-    def __init__(self, func, clazz="", oid=None, tag=R):
-        super().__init__(func, clazz=clazz, oid=oid, tag=R)
+    def __init__(self, clazz="", oid=None, tag=R):
+        super().__init__(clazz=clazz, oid=oid, tag=R)
 
 class App:
     """ Implementa um painel de controle de admnistrador.
