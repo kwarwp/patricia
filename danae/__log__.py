@@ -397,3 +397,10 @@ AttributeError: str has no attribute '__dict__'
     getattr(wrapper,attr). update(getattr(wrapped,attr,{}))
 AttributeError: str has no attribute '__dict__'
 '''},
+{'date': 'Mon Jul 20 2020 17:56:53.439 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 80
+  def topo(self):
+  ^
+IndentationError: unexpected indent
+'''},
