@@ -569,3 +569,9 @@ AttributeError: 'str' object has no attribute 'elt'
     self.cena.elt <= Popup.POP.popup
 AttributeError: 'str' object has no attribute 'elt'
 '''},
+{'date': 'Mon Jul 20 2020 15:20:53.991 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'http://python.org/'.
+  module '$exec_322' line 4
+with urllib.request.urlopen('http://python.org/') as response:
+'''},
