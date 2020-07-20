@@ -25,19 +25,30 @@ def if_edit(ev):
 document.onclick = if_edit
 
 class bulma(object):
-    """Decorator that caches a function's return value each time it is called.
-    If called later with the same arguments, the cached value is returned, and
-    not re-evaluated.
+    """Decorator that includes an enclosing DIV
     """
-    def __init__(self, func, clazz):
-        self.tag = D
-        self.clazz = clazz
+    def __init__(self, func, clazz="", oid=None, tag=D):
+        self.tag = tag
+        self.clazz, self.oid = clazz, oid
         self.func = func
-        self.cache = {}
         functools.update_wrapper(self, func)  ## TA-DA! ##
     def __call__(self, *args, **kwargs):
-        return D(self.func(*args, **kwargs), Class=self.clazz)
+        return D(self.func(*args, **kwargs), Class=self.clazz, Id=self.oid) if self.oid else D(
+                self.func(*args, **kwargs), Class=self.clazz)
 
+
+class section(bulma):
+    """Decorator that includes an enclosing SECTION
+    """
+    def __init__(self, func, clazz="", oid=None, tag=S):
+        super().init(func, clazz=clazz, oid=oid, tag=S)
+
+
+class article(bulma):
+    """Decorator that includes an enclosing ARTICLE
+    """
+    def __init__(self, func, clazz="", oid=None, tag=R):
+        super().init(func, clazz=clazz, oid=oid, tag=R)
 
 class App:
     """ Implementa um painel de controle de admnistrador.
@@ -46,7 +57,9 @@ class App:
     def __init__(self):
         s, c, t, u, h, b, p, w = CONST.CLS + [" "]  # alguma constantes para estilo
         document.html = CONST.SITE  # Instala o cabeçalho do documento
-        document.body.html = ""  
+        document.body.html = ""
+        self.go()
+    def _go(self):
         body = S(D(D(
             H("Hello World", Class=t)+P("My first website with "+B("Bulma"), Class=u),
         Class=c), Class=b), Class=h+w+p)+S(D(
@@ -61,6 +74,15 @@ class App:
                 P(valor , Class=t)+P(legenda , Class=u),
             Class="tile is-child box"), Class="tile is-parent") for valor, legenda in dados]
         # ^^^ usa um list comprehension para instalar cada ladrilho no ancestral 'tiles'
+    def go(self):
+        document.body <= self.topo()
+        
+    @section(h+w+p)
+    @bulma(c)
+    @bulma(h)
+    def topo(self):
+        return H("Hello World", Class=t)+P("My first website with "+B("Bulma"), Class=u)
+        
         
 class CONST:
     CLS = "section container title subtitle hero hero-body is-primary".split()
