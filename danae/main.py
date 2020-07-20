@@ -22,16 +22,16 @@ s, c, t, u, h, b, p, w = "section container title subtitle hero hero-body is-pri
 class bulma(object):
     """Decorator that includes an enclosing DIV
     """
-    def __init__(self, func, clazz="", oid=None, tag=D):
+    def __init__(self, clazz="", oid=None, tag=D):
         self.tag = tag
         self.clazz, self.oid = clazz, oid
         self.func = func
         # functools.update_wrapper(self, func)  ## TA-DA! ##
-    def __call__(self, *args, **kwargs):
+    def __call__(self, fn, *args, **kwargs):
         @functools.wraps(fn)
         def decorated(*args, **kwargs):
-            return D(self.func(*args, **kwargs), Class=self.clazz, Id=self.oid) if self.oid else D(
-                    self.func(*args, **kwargs), Class=self.clazz)
+            return D(fn(*args, **kwargs), Class=self.clazz, Id=self.oid) if self.oid else D(
+                    fn(*args, **kwargs), Class=self.clazz)
         return decorated
 
 
