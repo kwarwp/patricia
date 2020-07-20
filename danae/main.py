@@ -69,6 +69,7 @@ class App:
                 P(valor , Class=t)+P(legenda , Class=u),
             Class="tile is-child box"), Class="tile is-parent") for valor, legenda in dados]
         # ^^^ usa um list comprehension para instalar cada ladrilho no ancestral 'tiles'
+'''
     def go(self):
         document.body <= self.topo()
         
@@ -77,7 +78,7 @@ class App:
     @bulma(h)
     def topo(self):
         return H("Hello World", Class=t)+P("My first website with "+B("Bulma"), Class=u)
-        
+'''        
         
 class CONST:
     CLS = "section container title subtitle hero hero-body is-primary".split()
