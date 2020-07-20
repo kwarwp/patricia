@@ -11,9 +11,28 @@ Changelog
 
 """
 from browser import document, html
+from browser.window import __SUPERPYTHON__
+from browser import window
 from browser.html import H1 as H, DIV as D, SECTION as S, P, STRONG as B, ARTICLE as R
 __version__ = "20.07"
 __author__ = "Carlo"
+import functools
+
+window.onhashchange = __SUPERPYTHON__._edit
+
+class bulma(object):
+    """Decorator that caches a function's return value each time it is called.
+    If called later with the same arguments, the cached value is returned, and
+    not re-evaluated.
+    """
+    def __init__(self, func, clazz):
+        self.tag = D
+        self.clazz = clazz
+        self.func = func
+        self.cache = {}
+        functools.update_wrapper(self, func)  ## TA-DA! ##
+    def __call__(self, *args, **kwargs):
+        return D(self.func(*args, **kwargs), Class=self.clazz)
 
 
 class App:
