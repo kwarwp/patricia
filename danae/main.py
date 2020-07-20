@@ -29,8 +29,9 @@ class bulma(object):
     def __call__(self, fn, *args, **kwargs):
         @functools.wraps(fn)
         def decorated(*args, **kwargs):
-            return D(fn(*args, **kwargs), Class=self.clazz, Id=self.oid) if self.oid else D(
-                    fn(*args, **kwargs), Class=self.clazz)
+            return self.tag(fn(*args, **kwargs), Class=self.clazz, Id=self.oid
+                            ) if self.oid else self.tag(
+                                    fn(*args, **kwargs), Class=self.clazz)
         return decorated
 
 
