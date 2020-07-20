@@ -775,3 +775,10 @@ AttributeError: 'str' object has no attribute 'clear'
   ^
 SyntaxError: invalid syntax : triple string end not found
 '''},
+{'date': 'Mon Jul 20 2020 19:04:50.811 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 8
+  <p>This text is normal.</p>
+   ^
+SyntaxError: invalid syntax
+'''},
