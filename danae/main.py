@@ -17,7 +17,7 @@ from browser.html import H1 as H, DIV as D, SECTION as S, P, STRONG as B, ARTICL
 __version__ = "20.07"
 __author__ = "Carlo"
 import functools
-
+s, c, t, u, h, b, p, w = "section container title subtitle hero hero-body is-primary".split()+[" "]
 
 def if_edit(ev):
     if ev.altKey:
