@@ -12,7 +12,7 @@ Changelog
 """
 from browser import document, html
 # from browser.window import __SUPERPYTHON__
-from browser import window, document
+from browser import window
 from browser.html import H1 as H, DIV as D, SECTION as S, P, STRONG as B, ARTICLE as R
 __version__ = "20.07"
 __author__ = "Carlo"
@@ -55,7 +55,7 @@ class App:
         Código original em : https://bulmatemplates.github.io/bulma-templates/templates/admin.html
     """
     def __init__(self):
-        s, c, t, u, h, b, p, w = CONST.CLS + [" "]  # alguma constantes para estilo
+        # s, c, t, u, h, b, p, w = CONST.CLS + [" "]  # alguma constantes para estilo
         document.html = CONST.SITE  # Instala o cabeçalho do documento
         document.body.html = ""
         self.go()
