@@ -768,3 +768,10 @@ NameError: name 'html' is not defined
     doc["pydiv"].html.clear()
 AttributeError: 'str' object has no attribute 'clear'
 '''},
+{'date': 'Mon Jul 20 2020 18:00:24.782 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 7
+  '''
+  ^
+SyntaxError: invalid syntax : triple string end not found
+'''},
