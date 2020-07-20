@@ -713,3 +713,10 @@ AttributeError: 'module' object has no attribute 'random'
     data = requests.get('http://python.org/')
 AttributeError: 'module' object has no attribute 'get'
 '''},
+{'date': 'Mon Jul 20 2020 16:30:08.860 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 4
+  <p>This text is normal.</p>
+   ^
+SyntaxError: invalid syntax
+'''},
