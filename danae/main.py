@@ -18,7 +18,12 @@ __version__ = "20.07"
 __author__ = "Carlo"
 import functools
 
-window.onhashchange = window.__SUPERPYTHON__._edit
+
+def if_edit(*_):
+    s = input("Vai para a edição - digite s")
+    if s:
+        window.__SUPERPYTHON__._edit
+window.onbeforeunload = if_edit
 
 class bulma(object):
     """Decorator that caches a function's return value each time it is called.
