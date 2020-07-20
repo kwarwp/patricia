@@ -613,3 +613,7 @@ NameError: name 'urlopen' is not defined
     with urlopen("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY") as response:
 AttributeError: 'FileIO' object has no attribute '__exit__'
 '''},
+{'date': 'Mon Jul 20 2020 15:24:11.471 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <NetworkError: Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'https://facebook.com/'.>
+'''},
