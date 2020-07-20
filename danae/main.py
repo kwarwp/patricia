@@ -19,11 +19,6 @@ __author__ = "Carlo"
 import functools
 s, c, t, u, h, b, p, w = "section container title subtitle hero hero-body is-primary".split()+[" "]
 
-def if_edit(ev):
-    if ev.altKey:
-        window.__SUPERPYTHON__._edit
-document.onclick = if_edit
-
 class bulma(object):
     """Decorator that includes an enclosing DIV
     """
