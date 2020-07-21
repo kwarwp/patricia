@@ -73,6 +73,7 @@ class minipython:
 class normal():
         def __init__(self):
             self.monitor = Cena( img = MONITOR)
+            self.minipython(cofre, self.mostra_conteudo_minipython)
         def mostra_conteudo_minipyhton(self, *_):        
                 Texto(self.monitor, "Parábens, vc aprendeu como se faça o uso de orientação ao objeto em pyhton ").vai() # mensagem depois de montar o quebra cabeça
             
