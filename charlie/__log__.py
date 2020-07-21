@@ -85,3 +85,10 @@ AttributeError: 'normal' object has no attribute 'minipython'
     minipython(monitor, self.mostra_conteudo_minipython) 
 NameError: name 'monitor' is not defined
 '''},
+{'date': 'Tue Jul 21 2020 12:29:53.571 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 79
+  minipython(monitor, self.mostra_conteudo_minipython)
+  ^
+IndentationError: unexpected indent
+'''},
