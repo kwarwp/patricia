@@ -10,11 +10,17 @@ Changelog
         Descreva o que você adicionou no código.
 
 """
-from _spy.vittolino.main import Cena, Texto, Elemento
+
+from _spy.vitollino.main import Cena,Elemento,Texto,STYLE
+from _spy.vitollino.main import Inventario as inv
+
+STYLE["width"] = 800
+STYLE["height"] = "600px"
 
 HERDO1 = "https://upload.wikimedia.org/wikipedia/commons/e/ea/Rocky_Landscape.jpg"#IMAGENS QUE FICAM NO QUEBRA CABEÇA, TEM QUE SER ONLINE(PNG OU JPG) 
 HERDO2 = "https://upload.wikimedia.org/wikipedia/commons/e/ea/Rocky_Landscape.jpg"
 HERDO3 = "https://upload.wikimedia.org/wikipedia/commons/e/ea/Rocky_Landscape.jpg"
+MONITOR = "https://img2.gratispng.com/20171202/047/monitor-png-file-5a2301f39f9330.4508814915122436996536.jpg"
 class minipython:
     """Usa um editor de imagem ( /) e recorta o Herdograma em linhas geracionais.
        No game, o jogador terá que clicar nas linhas em ordem certa para montar o herdograma corretamente.
@@ -40,12 +46,12 @@ class minipython:
         # coloca cada uma das linhas embaralhadas 
         self.linhas = [
             LinhaGeracional(linha=uma_linha, posicao=uma_posicao)
-            for uma_posicao, uma_linha in enumerate([HERDO1, HERDO3, HERDO2, HERDO0])]# aqui fica as imagens
+            for uma_posicao, uma_linha in enumerate([HERDO1, HERDO3, HERDO2])]# aqui fica as imagens
         self.acertou = chama_quando_acerta
         self.linha_inicial = 300
         self.altura_da_linha = 50  # cada peça do herdograma tem esta altura
         self.posicoes_montadas = []  #l ista das linhas já montadas 
-        self.posicoes_corretas = [3, 0, 2, 1]  # lista das linhas montadas corretamente
+        self.posicoes_corretas = [1, 2, 3]  # lista das linhas montadas corretamente
 
     def posiciona_proxima(self, posicao):
         """Chamdo pelo clique (vai) de cada peça. Atualiza a próxima posição da peça.
@@ -66,6 +72,8 @@ class minipython:
         return 300, self.linha_inicial
 class normal():
         def __init__(self):
-            def mostra_conteudo_minipyhton(self, *_):        
-                Texto(self.cofre, "Parábens, vc aprendeu como se faça o uso de orientação ao objeto em pyhton ").vai() # mensagem depois de montar o quebra cabeça
+            self.monitor = Cena( img = MONITOR)
+        def mostra_conteudo_minipyhton(self, *_):        
+                Texto(self.monitor, "Parábens, vc aprendeu como se faça o uso de orientação ao objeto em pyhton ").vai() # mensagem depois de montar o quebra cabeça
             
+normal()
