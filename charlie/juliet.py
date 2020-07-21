@@ -76,5 +76,6 @@ class normal():
             
         def mostra_conteudo_minipyhton(self, *_):        
                 Texto(self.monitor, "Parábens, vc aprendeu como se faça o uso de orientação ao objeto em pyhton ").vai() # mensagem depois de montar o quebra cabeça
-                self.minipython(cofre, self.mostra_conteudo_minipython)    
+                minipython(cofre, self.mostra_conteudo_minipython) 
+                monitor.vai()
 normal()
