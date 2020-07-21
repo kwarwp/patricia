@@ -1,22 +1,24 @@
 # patricia.alpha.india.py
 # SPDX-License-Identifier: GPL-3.0-or-later
-""" 
-Projeto ALPHA - Jogo de Labirinto com cenas. 
-
-Calabouço de Barro.
+"""Jogo de Labirinto com cenas. 
+   
+   Calabouço de Barro.
 
 .. codeauthor:: Rodrigo Esquinelato <resquinelato@gmail.com>
 
+Classe neste módulo:
+
+    :py:class:`Eventos` Gera a cena, personagem e a movimentação
+
 Changelog
 ---------
-
-Código alterado de Monica Novellino <monicanovellino@gmail.com>
-
 .. versionadded::    20.07
-        Adicionei 5 imagens iniciais do labirinto e alterei o pacman (podem criar outro peronagem)
-        Contador adicionado para gerar as seguintes fases em função da linha da matriz
-        Contador adicionado para gerar as seguintes posições iniciais em função do índice da lista 
 
+   Criando a lógica do jogo e o layout das fases.
+        
+   Contador adicionado para gerar as seguintes fases em função da linha da matriz.
+        
+   Contador adicionado para gerar as seguintes posições iniciais em função do índice da lista.        
 """
 
 #FALTA - melhorar o código: criar as classes, funções, passar parametros
@@ -28,7 +30,8 @@ from browser import document # importa o DOM para atribuir o evento de teclado
 cont = 0 #contador index da matriz
 
 class Eventos:
-    """ Associa um evento a uma imagem e captura eventos de teclado. """
+    """ Associa um evento a uma imagem
+    """
     CENA_corredor_1 = "https://i.imgur.com/L71ZV6Z.png"
     CENA_corredor_2 = "https://i.imgur.com/5Qno2fs.png"
     CENA_corredor_3 = "https://i.imgur.com/gZ5wc0h.png"
@@ -45,7 +48,11 @@ class Eventos:
 
     STYLE["width"] = 640 #tamanho da cena
     
-    def __init__(self):       
+    def __init__(self):        
+        """Gera o início do jogo com a posição do personagem e a primeira cena
+
+           :return: self.boneco com parâmetros (personagem, poisção_x, posição_y, cenário)
+        """
         self.x1 = 100
         self.y1 = 40
         self.ambiente = Cena(self.CENA_corredor_1)
@@ -53,7 +60,8 @@ class Eventos:
         document.bind("keydown", self.anda_boneco)  # captura o evento de teclado
            
     def vai(self):
-        """ mostra corredor do labirinto """
+        """ :return: Cenário do labirinto.
+        """
         self.ambiente.vai()
     
     def anda_boneco(self, ev=None):  
@@ -62,8 +70,10 @@ class Eventos:
                                 [50,430],
                                 [200,50]]
                        
-        """" Faz o boneco caminhar com a cptura das setas. 
-            :param ev: estrutura enviad pelo evento onde se recupera informações.
+        """" Faz o boneco caminhar com a catura das setas. 
+        
+            :param ev: Importa evento de teclado através do browser.
+            :retun: self.boneco.x como a posição x do personagem e self.boneco.y como a posição y
         """
         key = ev.keyCode # recupera o código da tecla enviada no evento
         
@@ -79,7 +89,8 @@ class Eventos:
         #estudo da parede
             #if self.boneco.x <= 80
             
-        #se o elemento atingiu uma porta, muda para a próxima cena
+        """:if: O personagem atingiu uma porta, muda para a próxima cena
+        """
         # FALTA mapear os pontos, criar função para passar parametros ou chamar outra classe
         #ideia de cria uma matriz com os pontos de localização do portal
         
@@ -91,6 +102,11 @@ class Eventos:
             self.y2 = int(matrizPosicaoInicial[cont][1]) #posição y_inicial da fase descita pela segunda coluna
             
             self.boneco = Elemento(self.BONECO, x=self.x2, y=self.y2, cena=self.ambiente)
+            """:Contador: cont: Varia a cada momento que o *if* é satisfeito a ser utilizado em cada cenário e posicição   
+               :param self.ambiente: Novos cenários das seguintes fases.
+               :param self.x2: Posição x inicial das novas fases.
+               :param self.y2: Posição y inicial das novas fases.
+            """
             self.boneco.x = self.x2
             self.boneco.y = self.y2
             self.ambiente.vai()
