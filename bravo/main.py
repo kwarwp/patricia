@@ -33,11 +33,11 @@ class gameInicio:
         gameInicio = Cena(CENAINICIO)
         gameInicio.vai()
         self.dark = Elemento("",style=dict(width="1345px",height="600px"),cena=gameInicio)
-        self.play = Elemento(PLAY, x=570, y=470,w=100,h=100, cena=gameInicio, vai = self.redimensiona, direita = teste)
+        self.play = Elemento(PLAY, x=570, y=470,w=100,h=100, cena=gameInicio, vai = self.redimensiona)
     
     """ criando o módulo para ir para a bravo.india""" 
     def redimensiona(self,ev=0):
-        redi = Cena()
+        redi = Cena(FUNDO)
         redi.vai = self.q2
         #question = Cena(FUNDO, direita = oi())
         #question.vai()
