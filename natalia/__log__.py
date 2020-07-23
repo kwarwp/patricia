@@ -416,3 +416,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Jul 22 2020 23:59:05.928 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 49
+  dados = Elemento(dado1, direita=dado]())
+                                   ^
+SyntaxError: invalid syntax
+'''},
