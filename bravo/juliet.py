@@ -11,7 +11,7 @@ Changelog
 
 """
 from _spy.vitollino.main import Cena, Elemento, Labirinto, Texto, Codigo, Sala, STYLE
-from _spy.vittolino.main import INVENTARIO as inv
+from _spy.vitollino.main import INVENTARIO as inv
 STYLE["width"] = 1150
 STYLE["height"] = "550px"
 
@@ -32,8 +32,7 @@ class oi:
     personagem_mulher_maravilha = Elemento(img = "https://i.imgur.com/fK906ve.png",style=dict(left=40, top=300, width=400, height="200px"))   
     personagem_mulher_maravilha.entra(cena2)
     ok= Elemento (img = "https://i.imgur.com/jR7lluz.png")
-    
-   
+
     
     
     
