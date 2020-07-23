@@ -2,11 +2,8 @@
 """ Bravo - Jogo SupyCode: aprenda a programar com python.
 
 .. codeauthor:: Isabel Hortencia (golf) <hortencia.garnica@nce.urj.br>
-
 .. codeauthor:: Rosilane Lessa da Fonte (hotel) <rosilanefonte@gmail.com>
-
 .. codeauthor:: Pedro Carvalho Ramos (india) <Pedro300501@gmail.com>
-
 .. codeauthor:: Gabrielle Alves (juliet) <gabriellealves.baa@gmail.com>
 
 Changelog
@@ -16,9 +13,7 @@ Changelog
 """
 
 from _spy.vitollino.main import Cena, Elemento, INVENTARIO, STYLE, Musica
-from bravo.india import teste
-from bravo.juliet import oi
-from bravo.hotel import cena
+from bravo.alexa import oi
 
 """ imagens"""
 CENAINICIO = "https://i.imgur.com/mbt7XHq.png"
@@ -37,36 +32,17 @@ class gameInicio:
         dark = Elemento("",style=dict(width="1345px",height="600px"),cena=gameInicio)
         self.play = Elemento(PLAY, x=570, y=470,w=100,h=100, cena=gameInicio, vai = self.redimensiona)
     
-    """ criando o módulo para chamar a classe teste""" 
-    def escolha(self,ev=0):
-        redi = Cena(gameInicio,direita= teste)
-        #question = Cena(FUNDO, direita = oi)
-        #question.vai()
-        #self.valeu = Elemento(PERGUNTA, x=200, y=200,w=250,h=150, cena=question, vai = self.q2)
-        redi.vai = self.q2
-    
-    """ criando o módulo para chamar a classe oi""" 
-    def gelemento(self,ev=0):
+    """ criando o módulo init - inicio do jogo""" 
+    def redimensiona(self,ev=0):
         pass
-        #redi = Cena(self,direita= oi)
-        #question = Cena(FUNDO, direita = oi)
+        #redi = Cena()
+        #redi.vai = self.q2
+        #question = Cena(FUNDO, direita = oi())
         #question.vai()
         #self.valeu = Elemento(PERGUNTA, x=200, y=200,w=250,h=150, cena=question, vai = self.q2)
-        #redi.vai = self.q2
-    
-    """ criando o módulo para chamar a classe cena""" 
-    def gcena(self,ev=0):
-        pass
-        #redi = Cena(self,direita= oi)
-        #question = Cena(FUNDO, direita = oi)
-        #question.vai()
-        #self.valeu = Elemento(PERGUNTA, x=200, y=200,w=250,h=150, cena=question, vai = self.q2)
-        #redi.vai = self.q2
-    
-    """ criando o módulo q2 - final do jogo""" 
+
     def q2(self):
         pass
-        
-    """ criando o módulo init - inicio do jogo""" 
+
 if __name__ == "__main__":
     gameInicio().vai()
