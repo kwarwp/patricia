@@ -147,3 +147,10 @@ NameError: name 'dado1' is not defined
                                                       ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Jul 22 2020 21:36:49.859 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 31
+  """ class Tabuleiro:
+                                                       ^
+SyntaxError: invalid syntax
+'''},
