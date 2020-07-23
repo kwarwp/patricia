@@ -13,7 +13,10 @@ Changelog
 """
 
 from _spy.vitollino.main import Cena, Elemento, INVENTARIO, STYLE, Musica
-from bravo.alexa import oi
+from bravo.india import teste
+from bravo.juliet import oi
+from bravo.hotel import cena
+
 
 """ imagens"""
 CENAINICIO = "https://i.imgur.com/mbt7XHq.png"
