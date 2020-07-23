@@ -43,7 +43,7 @@ class gameInicio:
         #question = Cena(FUNDO, direita = oi)
         #question.vai()
         #self.valeu = Elemento(PERGUNTA, x=200, y=200,w=250,h=150, cena=question, vai = self.q2)
-        #redi.vai = self.q2
+        redi.vai = self.q2
     
     """ criando o módulo para chamar a classe oi""" 
     def gelemento(self,ev=0):
