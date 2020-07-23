@@ -5,6 +5,7 @@
 """
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
+from Tkinter import*
 """ from grace.main import Praia """
 
 __version__ = "1.0"
@@ -35,8 +36,8 @@ class Jogo:
         
     def bt_click(self):
     
-   # print("bt_click")
-  #  lb["text"] = "Ande 1 casa!"
+   print("bt_click")
+   lb["text"] = "Ande 1 casa!"
     janela = TK()
 
     bt = Button(janela, width=20, text="Jogar Dado", command=bt_click)
