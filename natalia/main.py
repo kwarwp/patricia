@@ -40,8 +40,8 @@ class Jogo:
  #  lb["text"] = "Ande 1 casa!"
     	self.janela = Tk()
 
-    bt = Button(janela, width=20, text="Jogar Dado", command=bt_click)
-    bt.place(x=100, y=100)
+    elemento = Button(janela, width=20, text="Jogar Dado", command=bt_click)
+    elemento.place(x=100, y=100)
 
     lb = Label(janela, text="Teste")
     lb.place(x=100, y=150)   
