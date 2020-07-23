@@ -814,3 +814,10 @@ AttributeError: 'gameInicio' object has no attribute 'vai'
     gameInicio().vai()
 AttributeError: 'gameInicio' object has no attribute 'vai'
 '''},
+{'date': 'Thu Jul 23 2020 17:36:16.121 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 57
+  """ criando o módulo para chamar a classe cena""" 
+  ^
+IndentationError: unexpected indent
+'''},
