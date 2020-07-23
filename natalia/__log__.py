@@ -151,3 +151,10 @@ NameError: name 'shuffle' is not defined
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Wed Jul 22 2020 23:06:52.230 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 38
+  print("bt_click")
+  ^
+IndentationError: expected an indented block
+'''},
