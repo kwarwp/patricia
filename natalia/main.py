@@ -33,7 +33,7 @@ class Jogo:
         self.cena.vai()
         #Cena(CENA_JOGO).vai()
         
-    def bt_click():
+    def bt_click(self):
     
     print("bt_click")
     lb["text"] = "Ande 1 casa!"
