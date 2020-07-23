@@ -22,7 +22,7 @@ fr2 = "https://i.pinimg.com/236x/7a/d6/c2/7ad6c2fdfd198c6903dee4425825ed9a.jpg"
 fr1 = "https://i.pinimg.com/236x/4c/f8/6c/4cf86c786beb1c6457f31bf4fcd7ec99.jpg"
 STYLE["width"] , STYLE["height"] = 1200, "600px"
 
-def teste():
+class teste:
     x = 0
     cena = Cena(img = fundo)
     cena1 = Cena(img = fundo)
