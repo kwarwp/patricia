@@ -39,9 +39,9 @@ class Jogo:
         #Cena(CENA_JOGO).vai()
 
 class Dado:
-    dados = [DADO1, DADO2, DADO3, DADO4, DADO5, DADO6]*5
+    dados = ["DADO1", "DADO2", "DADO3", "DADO4", "DADO5", "DADO6"]
     shuffle(dados)
-    print ("Reshuffled list : ",  list)
+    print(dados)
     
     #def __init__(self, outra):
     
