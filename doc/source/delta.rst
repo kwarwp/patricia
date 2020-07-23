@@ -47,7 +47,7 @@ Modulo Juliet
 
 Início :ref:`dev2020_delta`
 
-.. automodule:: delta.juliet
+.. automodule:: delta.juliete
     :members:
     :undoc-members:
     :platform: Web
