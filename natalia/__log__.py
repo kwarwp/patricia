@@ -289,3 +289,10 @@ NameError: name 'Button' is not defined
     elemento = Button(janela, width=20, text="Jogar Dado", command=bt_click)
 NameError: name 'Button' is not defined
 '''},
+{'date': 'Wed Jul 22 2020 23:37:53.536 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 43
+  elemento = Button(janela, width=20, text="Jogar Dado", command=bt_click)
+  ^
+IndentationError: unexpected indent
+'''},
