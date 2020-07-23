@@ -1,7 +1,7 @@
 # patricia.echo.main.py
 """ Jogo Olimpíadas de Matemática20.07
         * NEW: O jogo original
-        Autor: Grupo Echo (Aline, Lorena, Renato e Victória)
+        Autor: Grupo Echo (Aline)
 """
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
@@ -33,10 +33,18 @@ class Jogo:
         self.cena.vai()
         #Cena(CENA_JOGO).vai()
         
-        
-dados = ["dado1"]
-#shuffle(dados)
-print(dados)
+    def bt_click():
+    
+    print("bt_click")
+    lb["text"] = "Ande 1 casa!"
+    janela = TK()
+
+    bt = Button(janela, width=20, text="Jogar Dado", command=bt_click)
+    bt.place(x=100, y=100)
+
+    lb = Label(janela, text="Teste")
+    lb.place(x=100, y=150)   
+
     
     #def __init__(self, outra):
     
