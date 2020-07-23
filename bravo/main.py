@@ -35,13 +35,13 @@ class gameInicio:
         self.dark = Elemento("",style=dict(width="1345px",height="600px"),cena=gameInicio)
         self.play = Elemento(PLAY, x=570, y=470,w=100,h=100, cena=gameInicio, vai = self.redimensiona)
     
-    """ criando o módulo init - inicio do jogo""" 
+    """ criando o módulo para ir para a bravo.india""" 
     def redimensiona(self,ev=0):
-        #redi = Cena(bravo.juliet.oi())
+        pass
+        #redi = Cena()
         #redi.vai = self.q2
-        redi = bravo.juliet.oi()
-        question = Cena(FUNDO, direita = oi())
-        question.vai()
+        #question = Cena(FUNDO, direita = oi())
+        #question.vai()
         #self.valeu = Elemento(PERGUNTA, x=200, y=200,w=250,h=150, cena=question, vai = self.q2)
 
     def q2(self):
