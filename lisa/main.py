@@ -20,6 +20,13 @@ DADO5 = "http://www.infcross.com.br/mestrado/dado5.png"
 DADO6 = "http://www.infcross.com.br/mestrado/dado6.png"
 
 
+DADO1 = Cena(dado1)
+DADO2 = Cena(dado2)
+DADO3 = Cena(dado3)
+DADO4 = Cena(dado4)
+DADO5 = Cena(dado5)
+DADO6 = Cena(dado6)
+
 
 class Tabuleiro:
     def vai(self):
@@ -38,7 +45,7 @@ class Jogo:
         self.cena.vai()
         #Cena(CENA_JOGO).vai()
 
-dados = ["DADO1", "DADO2", "DADO3", "DADO4", "DADO5", "DADO6"]
+dados = ["dado1", "dado2", "dado3", "dado4", "dado5", "dado6"]
 shuffle(dados)
 print(dados)
     
