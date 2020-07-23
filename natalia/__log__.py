@@ -388,3 +388,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Jul 22 2020 23:53:06.647 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 50
+  shuffle(dados)
+  ^
+IndentationError: unexpected indent
+'''},
