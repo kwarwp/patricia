@@ -19,9 +19,7 @@ DADO4 = "http://www.infcross.com.br/mestrado/dado4.png"
 DADO5 = "http://www.infcross.com.br/mestrado/dado5.png"
 DADO6 = "http://www.infcross.com.br/mestrado/dado6.png"
 
-dados = [DADO1, DADO2, DADO3, DADO4, DADO5, DADO6]*5
-shuffle(dados)
-print ("Reshuffled list : ",  list)
+
 
 class Tabuleiro:
     def vai(self):
@@ -40,8 +38,12 @@ class Jogo:
         self.cena.vai()
         #Cena(CENA_JOGO).vai()
 
-"""class Dado:
-    def __init__(self, outra):"""
+class Dado:
+    dados = [DADO1, DADO2, DADO3, DADO4, DADO5, DADO6]*5
+    shuffle(dados)
+    print ("Reshuffled list : ",  list)
+    
+    #def __init__(self, outra):
     
     
     
