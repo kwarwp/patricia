@@ -11,7 +11,7 @@ Changelog
 
 """
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
-from golf.main import Game2x5
+from delta.golf import Game2x5
 import random
 import time
 
