@@ -37,9 +37,9 @@ class gameInicio:
     
     """ criando o módulo para ir para a bravo.india""" 
     def redimensiona(self,ev=0):
-        pass
+        
         #redi = Cena()
-        #redi.vai = self.q2
+        redi.vai = self.q2
         #question = Cena(FUNDO, direita = oi())
         #question.vai()
         #self.valeu = Elemento(PERGUNTA, x=200, y=200,w=250,h=150, cena=question, vai = self.q2)
