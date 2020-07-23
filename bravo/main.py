@@ -30,8 +30,8 @@ STYLE ["height"] = "600px"
 class gameInicio:
     """ criando o módulo init - inicio do jogo""" 
     def __init__(self):
-        gameInicio = Cena(CENAINICIO)
-        gameInicio.vai()
+        self.gameInicio = Cena(CENAINICIO)
+        self.gameInicio.vai()
         self.dark = Elemento("",style=dict(width="1345px",height="600px"),cena=gameInicio)
         self.play = Elemento(PLAY, x=570, y=470,w=100,h=100, cena=gameInicio, vai = self.redimensiona)
     
