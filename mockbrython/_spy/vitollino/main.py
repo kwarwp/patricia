@@ -3,6 +3,7 @@ class BrythonMock(MagicMock):
     def __init__(self, *args, **kwarg):
         super().__init__(*args, **kwarg) 
         self.__le__ = MagicMock()
+        self.vai = MagicMock()
         
 class Elemento(BrythonMock):
     pass
