@@ -179,3 +179,10 @@ IndentationError: expected an indented block
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Wed Jul 22 2020 23:23:42.573 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 39
+  print("bt_click")
+  ^
+IndentationError: expected an indented block
+'''},
