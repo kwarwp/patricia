@@ -45,4 +45,6 @@ class oi:
     op2.vai=cena3.vai
     
     cena.vai()
-oi()
+    
+if __name__ == "__main__":
+    oi()
