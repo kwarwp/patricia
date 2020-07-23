@@ -35,7 +35,7 @@ class Jogo:
         
     def bt_click(self):
     
-    print("bt_click")
+   # print("bt_click")
     lb["text"] = "Ande 1 casa!"
     janela = TK()
 
