@@ -7,7 +7,7 @@
 
 .. codeauthor:: Pedro Carvalho Ramos (india) <Pedro300501@gmail.com>
 
-.. codeauthor:: Gabrielle Alves (juliet) <mail@local.tipo>
+.. codeauthor:: Gabrielle Alves (juliet) <gabriellealves.baa@gmail.com>
 
 Changelog
 ---------
