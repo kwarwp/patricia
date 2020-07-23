@@ -48,3 +48,4 @@ class gameInicio:
 
 if __name__ == "__main__":
     gameInicio().vai()
+    
