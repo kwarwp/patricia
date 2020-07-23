@@ -21,6 +21,7 @@ DADO6 = "http://www.infcross.com.br/mestrado/dado6.png"
 
 dados = [DADO1, DADO2, DADO3, DADO4, DADO5, DADO6]*5
 shuffle(dados)
+print ("Reshuffled list : ",  list)
 
 class Tabuleiro:
     def vai(self):
