@@ -15,11 +15,7 @@ Changelog
 """
 
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
-# em vez de sleep temos que usar o timer do navegador 
-# https://www.brython.info/static_doc/en/timer.html
-from browser import timer
 import random
-import time
 
 __version__ = "20.07"
 __author__ = "Paulo Assumpção"
@@ -34,6 +30,9 @@ IMG_CARD_5 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Activ.png?disp=inlin
 IMG_WIDTH = 150
 IMG_HEIGHT = 150
 
+"""
+Classe responsável pelo desenho da cartas na cena
+"""
 class Card():
     def __init__(self, name, image, position, cena, rule):
         self.rule = rule
@@ -46,23 +45,31 @@ class Card():
         self.pos_y = 50 + self.position[1] * IMG_HEIGHT
         self.card = Elemento(IMG_CARD_FACE_DOWN, tit=self.name, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.card.elt.bind("click", self.turnUp)
+        self.removed = False
         
+    """
+     Desenha a imagem da carta quando ela está virada para cima
+    """
     def turnUp(self, env=None):
         self.card = Elemento(self.image, tit=self.name, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.faceDown = False 
         self.card.elt.bind("click", self.turnDown)
         self.rule(self)
-        
+    
+    """
+     Desenha a imagem da carta quando ela está virada para baixo
+    """
     def turnDown(self, env=None):
         self.card = Elemento(IMG_CARD_FACE_DOWN, tit=self.name, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.faceDown = True
         self.card.elt.bind("click", self.turnUp)
         
-        
-class Game2x5:
+"""
+   Classe que mistura as caras, organiza na forma de matriz, e define as regras do jogo
+"""       
+class Game:
     # referência para o Elemento
     previous_selected_card = None
-    list_objects = None
     
     cena = Cena()
     
@@ -70,86 +77,72 @@ class Game2x5:
         self.create_2x5_cards()
     
     def create_2x5_cards(self):
-        """ 
-            matrix 2x5:
-            1A 1B 2A 2B 3A
-            3B 4A 4B 5A 5B
-        """
+         
+        #    matrix 2x5:
+        #    1A 1B 2A 2B 3A
+        #    3B 4A 4B 5A 5B
         list_cards = self.shuffle_cards()
-        # aqui, list_objects tem que ser atributo de instância da classe Game2x5
-        # pois ele vai ser usado no método verifyingGameOver():
-        # rule também não pode ser estático pois vai usar o método verifyingGameOver()
-        self.list_objects = [
-            Card("PyCharm", IMG_CARD_1, list_cards[0], Game2x5.cena, self.rule), 
-            Card("PyCharm", IMG_CARD_1, list_cards[1], Game2x5.cena, self.rule),
-            Card("Linux", IMG_CARD_2, list_cards[2], Game2x5.cena, self.rule),
-            Card("Linux", IMG_CARD_2, list_cards[3], Game2x5.cena, self.rule),
-            Card("GitLab", IMG_CARD_3, list_cards[4], Game2x5.cena, self.rule),
-            Card("GitLab", IMG_CARD_3, list_cards[5], Game2x5.cena, self.rule),
-            Card("GitHub", IMG_CARD_4, list_cards[6], Game2x5.cena, self.rule),
-            Card("GitHub", IMG_CARD_4, list_cards[7], Game2x5.cena, self.rule),
-            Card("Activ", IMG_CARD_5, list_cards[8], Game2x5.cena, self.rule),
-            Card("Activ", IMG_CARD_5, list_cards[9], Game2x5.cena, self.rule)]
-        Game2x5.cena.vai()
-              
+        
+        self.card1a = Card("PyCharm", IMG_CARD_1, list_cards[0], Game.cena, Game.rule)
+        self.card1b = Card("PyCharm", IMG_CARD_1, list_cards[1], Game.cena, Game.rule)
+        
+        self.card2a = Card("Linux", IMG_CARD_2, list_cards[2], Game.cena, Game.rule)
+        self.card2b = Card("Linux", IMG_CARD_2, list_cards[3], Game.cena, Game.rule)
+        
+        self.card3a = Card("GitLab", IMG_CARD_3, list_cards[4], Game.cena, Game.rule)
+        self.card3b = Card("GitLab", IMG_CARD_3, list_cards[5], Game.cena, Game.rule)
+        
+        self.card4a = Card("GitHub", IMG_CARD_4, list_cards[6], Game.cena, Game.rule)
+        self.card4b = Card("GitHub", IMG_CARD_4, list_cards[7], Game.cena, Game.rule)
+        
+        self.card5a = Card("Activ", IMG_CARD_5, list_cards[8], Game.cena, Game.rule)
+        self.card5b = Card("Activ", IMG_CARD_5, list_cards[9], Game.cena, Game.rule)
+        
+        Game.cena.vai()
 
-    # @staticmethod
-    def rule(self, selected_card):
+    """
+       Estabelecendo as reggras do jogo, ou seja, verificar se as cartas são iguais, virar as cartas,...
+    """
+    # vou criar um método estático para a regrado do Jogo
+    @staticmethod
+    def rule(selected_card):
     
         # abortar se o clique ocorrer sobre a mesma carta
-        if Game2x5.previous_selected_card == selected_card:
+        if Game.previous_selected_card == selected_card:
             return
         
         # tem um par selecionado?
-        if Game2x5.previous_selected_card is None:
+        if Game.previous_selected_card is None:
             # primeira carta selecionada
-            Game2x5.previous_selected_card = selected_card
+            Game.previous_selected_card = selected_card
             # desabilita o clique sobre carta virada
-            Game2x5.previous_selected_card.card.elt.unbind("click")
+            Game.previous_selected_card.card.elt.unbind("click")
             return
         
+        #Vamos gastar um tempo aqui
+        while(x<10000):
+            x=x+1
+        
         # Não acertou
-        if Game2x5.previous_selected_card.name != selected_card.name:            
+        if Game.previous_selected_card.name != selected_card.name:            
             # reabilita a ação o clique e vira a carta 1 para baixo
-            Game2x5.previous_selected_card.card.elt.bind("click", Game2x5.previous_selected_card.turnUp)
-            Game2x5.previous_selected_card.turnDown()
+            Game.previous_selected_card.card.elt.bind("click", Game.previous_selected_card.turnUp)
+            Game.previous_selected_card.turnDown()
             
             # reabilita a ação do clique e vira a carta 2 para baixo
             selected_card.card.elt.bind("click", selected_card.turnUp)
-            def turn(*_):
-                selected_card.turnDown()
-                Game2x5.previous_selected_card = None
-            # uma maneira de esperar é usar o foi do texto
-            # ele é chamado quando se fecha o texto clicando o <x>
-            Texto(Game2x5.cena, "Opa!", "Errou!!!", foi=turn).vai()
+            selected_card.turnDown()
+            Texto(Game.cena, "Errou!!!").vai()
+            Game.previous_selected_card = None
             
-            # Aqui tem q esperar pelo menos 3 segundos, como fazer? (sleep, não funciona)
-            # outra é usar o set_timeout do timer
-            # timer.set_timeout(turn, 3000)
         # acertou 
         else:
             # desabilita o clique sobre as cartas acertadas
-            Game2x5.previous_selected_card = None
-            # aqui não pode ser verifyingGameOver estatico
-            self.verifyingGameOver()
+            Game.previous_selected_card = None
             selected_card.card.elt.unbind("click")
-            Texto(Game2x5.cena, "Acertou!!!").vai()
-            
-    # @staticmethod  
-    def verifyingGameOver(self):
-        # object é palavra reservada, use _object
-        for _object in self.list_objects:
-            if _object.faceDown == True:
-                return
-                
-        def proximo_jogo(*_):
-            from delta.india import Game2x3
-            Game2x3().vai()
-        # usa o foi do texto para chamar o próximo jogo.        
-        Texto(Game2x5.cena, "GameOver!!!", foi=proximo_jogo).vai()
-        # proxima sala
+            Texto(Game.cena, "Acertou!!!").vai()
         
-    
+
     def shuffle_cards(self):   
         list_cards =  [(0,0), (1,0), (2,0), (3,0), (4,0), (0,1), (1,1), (2,1), (3,1), (4,1)]
         random.shuffle(list_cards)
@@ -157,4 +150,4 @@ class Game2x5:
         
 
 if __name__ == "__main__":
-    Game2x5().vai()
+    Game().vai()
