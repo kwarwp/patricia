@@ -144,3 +144,10 @@ NameError: name 'Dados' is not defined
     shuffle(dados)
 NameError: name 'shuffle' is not defined
 '''},
+{'date': 'Wed Jul 22 2020 23:05:39.852 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 38
+  print("bt_click")
+  ^
+IndentationError: expected an indented block
+'''},
