@@ -140,3 +140,10 @@ AttributeError: 'function' object has no attribute 'shuffle'
     DADO1 = Cena(dado1)
 NameError: name 'dado1' is not defined
 '''},
+{'date': 'Wed Jul 22 2020 21:36:36.724 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 31
+  """class Tabuleiro:
+                                                      ^
+SyntaxError: invalid syntax
+'''},
