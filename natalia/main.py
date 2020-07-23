@@ -5,7 +5,7 @@
 """
 
 from _spy.vitollino.main import Cena, Elemento, STYLE
-from Tkinter import*
+from Tkinter import *
 """ from grace.main import Praia """
 
 __version__ = "1.0"
