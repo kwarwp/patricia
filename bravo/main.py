@@ -3,11 +3,11 @@
 
 .. codeauthor:: Isabel Hortencia (golf) <hortencia.garnica@nce.urj.br>
 
-.. codeauthor:: Rosilane Lessa da Fonte (hotel) <mail@local.tipo>
+.. codeauthor:: Rosilane Lessa da Fonte (hotel) <rosilanefonte@gmail.com>
 
-.. codeauthor:: Pedro (india) <mail@gmail.com>
+.. codeauthor:: Pedro Carvalho Ramos (india) <mail@gmail.com>
 
-.. codeauthor:: Gabriela (juliet) <mail@local.tipo>
+.. codeauthor:: Gabrielle Alves (juliet) <mail@local.tipo>
 
 Changelog
 ---------
