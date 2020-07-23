@@ -1405,3 +1405,23 @@ AttributeError: 'gameInicio' object has no attribute 'nome'
     self.style.update(**{'position': 'absolute', 'overflow': 'hidden', 'o': 1,
 TypeError: __format__ missing 1 positional argument: 'spec'
 '''},
+{'date': 'Thu Jul 23 2020 20:10:31.245 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 51
+    gameInicio()
+  module <module> line 35
+    self.dark = Elemento("",style=dict(width="1345px",height="600px"),cena=gameInicio)
+  module _spy.vitollino.main line 541
+    self.scorer = dict(ponto=1, valor=cena.nome, carta=tit or img, casa=self.xy, move=None)
+AttributeError: 'gameInicio' object has no attribute 'nome'
+'''},
