@@ -16,7 +16,9 @@ Changelog
 """
 
 from _spy.vitollino.main import Cena, Elemento, INVENTARIO, STYLE, Musica
-from bravo.alexa import oi
+from bravo.india import teste
+from bravo.juliet import oi
+from bravo.hotel import cena
 
 """ imagens"""
 CENAINICIO = "https://i.imgur.com/mbt7XHq.png"
@@ -37,13 +39,14 @@ class gameInicio:
     
     """ criando o módulo init - inicio do jogo""" 
     def redimensiona(self,ev=0):
-        pass
-        #redi = Cena()
-        #redi.vai = self.q2
-        #question = Cena(FUNDO, direita = oi())
+        redi = Cena(self,direita= oi)
+        #question = Cena(FUNDO, direita = oi)
         #question.vai()
         #self.valeu = Elemento(PERGUNTA, x=200, y=200,w=250,h=150, cena=question, vai = self.q2)
+        #redi.vai = self.q2
 
+class end:
+    pass
     def q2(self):
         pass
 
