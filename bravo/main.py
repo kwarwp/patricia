@@ -5,7 +5,7 @@
 
 .. codeauthor:: Rosilane Lessa da Fonte (hotel) <rosilanefonte@gmail.com>
 
-.. codeauthor:: Pedro Carvalho Ramos (india) <mail@gmail.com>
+.. codeauthor:: Pedro Carvalho Ramos (india) <Pedro300501@gmail.com>
 
 .. codeauthor:: Gabrielle Alves (juliet) <mail@local.tipo>
 
