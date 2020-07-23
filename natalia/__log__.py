@@ -228,3 +228,10 @@ IndentationError: expected an indented block
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Wed Jul 22 2020 23:34:59.669 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 41
+  self.janela = Tk()
+  ^
+IndentationError: expected an indented block
+'''},
