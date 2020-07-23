@@ -38,7 +38,7 @@ class Jogo:
     
 #   print("bt_click")
  #  lb["text"] = "Ande 1 casa!"
-    janela = Tk()
+    self.janela = Tk()
 
     bt = Button(janela, width=20, text="Jogar Dado", command=bt_click)
     bt.place(x=100, y=100)
