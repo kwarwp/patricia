@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 """ Charlie - Projeto sem descrição, (mude esta linha).
 
-.. codeauthor:: Nome Sobrenome (golf) <mail@local.tipo>
+.. codeauthor:: Isaac D'Césares (golf) <mail@local.tipo>
 
 .. codeauthor:: Nome Sobrenome (hotel) <mail@local.tipo>
 
