@@ -35,7 +35,7 @@ class Jogo:
         
         
 dados = ["dado1"]
-shuffle(dados)
+#shuffle(dados)
 print(dados)
     
     #def __init__(self, outra):
