@@ -31,7 +31,7 @@ IMG_WIDTH = 150
 IMG_HEIGHT = 150
 
 """
-Classe responsável pelo desenho da cartas na cena
+Classe responsável pelo desenho das cartas na cena
 """
 class Card():
     def __init__(self, name, image, position, cena, rule):
