@@ -346,3 +346,10 @@ NameError: name 'Button' is not defined
     self.cena = Button(self.janela, width=20, text="Jogar Dado", command=bt_click)
 NameError: name 'Button' is not defined
 '''},
+{'date': 'Wed Jul 22 2020 23:50:29.705 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 49
+  dados = ["dado1", "dado2", "dado3", "dado4", "dado5", "dado6"]
+  ^
+IndentationError: unexpected indent
+'''},
