@@ -6,6 +6,7 @@ Projeto ALPHA - Jogo de Labirinto com cenas.
 Calabouço de Barro.
 
 .. codeauthor:: Rodrigo Esquinelato <resquinelato@gmail.com>
+.. codeauthor:: Charles Soares Pimentel <pimentelufrj@gmail.com>
 
 Changelog
 ---------
