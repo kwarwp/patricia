@@ -13,10 +13,10 @@ Changelog
 
 """
 from _spy.vitollino.main import Cena, Elemento, Labirinto, Texto, Codigo, Sala, STYLE
-from _spy.vittolino.main import INVENTARIO as inv
+from _spy.vitollino.main import INVENTARIO as inv
 
 STYLE["width"] = 1250
-STYLE["leight"]= "550px"
+STYLE["height"]= "550px"
 
 class cena:
 	expli= Cena(img = "https://i.imgur.com/oHAC3Xi.png")
