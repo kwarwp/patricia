@@ -105,3 +105,10 @@ NameError: name 'STYLE' is not defined
                                                ^
 SyntaxError: keyword can't be an expression
 '''},
+{'date': 'Wed Jul 22 2020 22:36:13.943 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 37
+  self.dados = Dados[DADOS, cena=self.cena]
+                                           ^
+SyntaxError: invalid syntax
+'''},
