@@ -16,3 +16,5 @@ Changelog
         Descreva o que você adicionou no código.
 
 """
+
+from _spy.vitollino.main import Cena, Elemento, INVENTARIO, STYLE, Musica
