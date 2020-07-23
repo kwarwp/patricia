@@ -367,3 +367,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Jul 22 2020 23:51:56.520 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 49
+  dados = ["dado1", "dado2", "dado3", "dado4", "dado5", "dado6"]
+  ^
+IndentationError: unexpected indent
+'''},
