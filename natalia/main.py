@@ -13,6 +13,7 @@ STYLE["width"] = 1345
 STYLE["height"] = "620px"
 TABULEIRO = "http://www.infcross.com.br/mestrado/tabuleiro.jpg"
 BOTAO = "http://www.infcross.com.br/mestrado/botao.jpg"
+DADOS = "http://www.infcross.com.br/mestrado/dado1.png"
 
 class Tabuleiro:
     """ Representa uma cena da calçada da praia """
@@ -31,4 +32,16 @@ class Jogo:
         """ Mostra o tabuleiro """
         self.cena.vai()
         #Cena(CENA_JOGO).vai()
+        
+        
+self.dados = Dados[DADOS, cena=self.cena]
+shuffle(dados)
+print(dados)
+    
+    #def __init__(self, outra):
+    
+    
+    
+if __name__ == "__main__":
+    Jogo().vai()
     
