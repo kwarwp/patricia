@@ -7,9 +7,7 @@ __autor__ = "Rosilane Lessa da Fonte"
 __version__ = "16.07.2020"
 
 from _spy.vitollino.main import Cena, Elemento, INVENTARIO, STYLE, Musica
-
-#from kelle.main import ????
-from alexa.main import oi
+from bravo.alexa import oi
 
 CENAINICIO = "https://i.imgur.com/mbt7XHq.png"
 PLAY = "https://i.imgur.com/QiiOf5O.png"
