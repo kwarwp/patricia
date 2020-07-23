@@ -20,12 +20,12 @@ DADO5 = "http://www.infcross.com.br/mestrado/dado5.png"
 DADO6 = "http://www.infcross.com.br/mestrado/dado6.png"
 
 
-DADO1 = Cena(dado1)
-DADO2 = Cena(dado2)
-DADO3 = Cena(dado3)
-DADO4 = Cena(dado4)
-DADO5 = Cena(dado5)
-DADO6 = Cena(dado6)
+dado1 = Cena(DADO1)
+dado2 = Cena(DADO2)
+dado3 = Cena(DADO3)
+dado4 = Cena(DADO4)
+dado5 = Cena(DADO5)
+dado6 = Cena(DADO6)
 
 
 class Tabuleiro:
