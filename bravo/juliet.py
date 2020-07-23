@@ -47,4 +47,4 @@ class oi:
     cena.vai()
     
 if __name__ == "__main__":
-    oi()
+    oi().vai()
