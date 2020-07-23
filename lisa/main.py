@@ -38,10 +38,9 @@ class Jogo:
         self.cena.vai()
         #Cena(CENA_JOGO).vai()
 
-class Dado:
-    dados = ["DADO1", "DADO2", "DADO3", "DADO4", "DADO5", "DADO6"]
-    shuffle(dados)
-    print(dados)
+dados = ["DADO1", "DADO2", "DADO3", "DADO4", "DADO5", "DADO6"]
+shuffle(dados)
+print(dados)
     
     #def __init__(self, outra):
     
