@@ -37,7 +37,7 @@ class gameInicio:
     
     """ criando o módulo init - inicio do jogo""" 
     def redimensiona(self,ev=0):
-        redi = Cena()
+        redi = Cena(oi)
         redi.vai = self.q2
         question = Cena(FUNDO, direita = oi())
         question.vai()
