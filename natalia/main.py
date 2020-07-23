@@ -34,7 +34,7 @@ class Jogo:
         #Cena(CENA_JOGO).vai()
         
         
-self.dados = Dados[DADOS, cena=self.cena]
+self.dados = Dados(DADOS, cena=self.cena)
 shuffle(dados)
 print(dados)
     
