@@ -1381,3 +1381,27 @@ AttributeError: 'gameInicio' object has no attribute 'nome'
     self.scorer = dict(ponto=1, valor=cena.nome, carta=tit or img, casa=self.xy, move=None)
 AttributeError: 'gameInicio' object has no attribute 'nome'
 '''},
+{'date': 'Thu Jul 23 2020 20:05:26.477 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 51
+    gameInicio()
+  module <module> line 36
+    self.play = Elemento(PLAY, x=570, y=470,w=100,h=100, cena=gameInicio, vai = self.redimensiona, direita = teste)
+  module _spy.vitollino.main line 548
+    self.c(**kwargs)
+  module _spy.vitollino.main line 483
+    return [setattr(cls, nome, Elemento(**img) if isinstance(img, dict) else Elemento(img=img))
+  module _spy.vitollino.main line 529
+    self.style.update(**{'position': 'absolute', 'overflow': 'hidden', 'o': 1,
+TypeError: __format__ missing 1 positional argument: 'spec'
+'''},
