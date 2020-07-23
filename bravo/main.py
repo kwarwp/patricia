@@ -37,18 +37,36 @@ class gameInicio:
         dark = Elemento("",style=dict(width="1345px",height="600px"),cena=gameInicio)
         self.play = Elemento(PLAY, x=570, y=470,w=100,h=100, cena=gameInicio, vai = self.redimensiona)
     
-    """ criando o módulo init - inicio do jogo""" 
-    def redimensiona(self,ev=0):
-        redi = Cena(self,direita= oi)
+    """ criando o módulo para chamar a classe teste""" 
+    def escolha(self,ev=0):
+        redi = Cena(self,direita= teste)
         #question = Cena(FUNDO, direita = oi)
         #question.vai()
         #self.valeu = Elemento(PERGUNTA, x=200, y=200,w=250,h=150, cena=question, vai = self.q2)
         #redi.vai = self.q2
-
-class end:
-    pass
+    
+    """ criando o módulo para chamar a classe oi""" 
+    def gelemento(self,ev=0):
+        pass
+        #redi = Cena(self,direita= oi)
+        #question = Cena(FUNDO, direita = oi)
+        #question.vai()
+        #self.valeu = Elemento(PERGUNTA, x=200, y=200,w=250,h=150, cena=question, vai = self.q2)
+        #redi.vai = self.q2
+    
+     """ criando o módulo para chamar a classe cena""" 
+    def gcena(self,ev=0):
+        pass
+        #redi = Cena(self,direita= oi)
+        #question = Cena(FUNDO, direita = oi)
+        #question.vai()
+        #self.valeu = Elemento(PERGUNTA, x=200, y=200,w=250,h=150, cena=question, vai = self.q2)
+        #redi.vai = self.q2
+    
+    """ criando o módulo q2 - final do jogo""" 
     def q2(self):
         pass
-
+        
+    """ criando o módulo init - inicio do jogo""" 
 if __name__ == "__main__":
     gameInicio().vai()
