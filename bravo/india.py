@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 """ Projeto sem descrição, (mude esta linha).
 
-.. codeauthor:: Nome Sobrenome <mail@local.tipo>
+.. codeauthor:: Pedro Carvalho Ramos <mail@local.tipo>
 
 Changelog
 ---------
