@@ -1,10 +1,19 @@
 # patricia.bravo.main.py
-"""Jogo SupyCode: aprenda a programar com python"""
-__autor__ = "Isabel Hortencia Garnica"
-__autor__ = "Gabriela"
-__autor__ = "Pedro"
-__autor__ = "Rosilane Lessa da Fonte"
-__version__ = "16.07.2020"
+""" Bravo - Jogo SupyCode: aprenda a programar com python.
+
+.. codeauthor:: Isabel Hortencia (golf) <hortencia.garnica@nce.urj.br>
+
+.. codeauthor:: Rosilane Lessa da Fonte (hotel) <mail@local.tipo>
+
+.. codeauthor:: Pedro (india) <mail@gmail.com>
+
+.. codeauthor:: Gabriela (juliet) <mail@local.tipo>
+
+Changelog
+---------
+.. versionadded::    16.07
+       
+"""
 
 from _spy.vitollino.main import Cena, Elemento, INVENTARIO, STYLE, Musica
 from bravo.alexa import oi
