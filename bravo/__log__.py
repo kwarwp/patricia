@@ -1827,3 +1827,10 @@ AttributeError: 'teste' object has no attribute 'cena'
                                                                                                      ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Jul 24 2020 19:34:29.74 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 59
+  cenas = Elemento(img = BALAO, style=dict(left=200, top=250, width=200, height="200px", vai = self.import.cena.fundo))
+                                                                                                     ^
+SyntaxError: invalid syntax
+'''},
