@@ -48,7 +48,7 @@ class teste:
         cena = Cena(img = fundo)
         self.cena1 = cena1 = Cena(img = fundo)
         self.cenas = Elemento(img = balao, style=dict(left=200, top=250, width=200, height="200px"), cena = cena, vai = self.redimensiona)
-        elementos = Elemento(img = balao2, style=dict(left=800, top=250, width=200, height="200px"))
+        self.elementos = Elemento(img = balao2, style=dict(left=800, top=250, width=200, height="200px"), cena = cena, vai = self.redimensiona1)
         txt1 = Elemento(img = fr1, style=dict(left=500, top=100, width=200, height="200px")) #Texto(cena,"Vamos aprender a programar?")
         txt2 = Elemento(img = fr2, style=dict(left=500, top=100, width=200, height="200px"))#Texto(cena,"Escolha entre cenas ou elementos para começar.")
         txt1.entra(cena1)
@@ -56,7 +56,7 @@ class teste:
         txt2.entra(cena)
         #txt2.vai()
         #cenas.entra(cena)
-        elementos.entra(cena)
+        #elementos.entra(cena)
         
     def redimensiona(self,ev=0):
         """criando o módulo para ir para a bravo.india"""
@@ -65,6 +65,13 @@ class teste:
         #prox = Cena(BOTAO, direita=teste ) <-- teste aqui tem que ser chamado teste()
         prox = Cena(balao, direita=teste() )
         prox.vai()
+    def redimensiona1(self,ev=0):
+        """criando o módulo para ir para a bravo.india"""
+        redi = Cena()
+        redi.vai = self.q2
+        #prox = Cena(BOTAO, direita=teste ) <-- teste aqui tem que ser chamado teste()
+        prox = Cena(balao2, direita=teste() )
+        prox.vai()        
 
     """criando o módulo para ir para a bravo.india"""
     def q2(self):
