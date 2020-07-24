@@ -1820,3 +1820,10 @@ AttributeError: 'teste' object has no attribute 'expli'
     cenas = Elemento(img = BALAO, style=dict(left=200, top=250, width=200, height="200px", vai = self.cena.expli))
 AttributeError: 'teste' object has no attribute 'cena'
 '''},
+{'date': 'Fri Jul 24 2020 19:34:12.968 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 59
+  cenas = Elemento(img = BALAO, style=dict(left=200, top=250, width=200, height="200px", vai = self.import.cena.expli))
+                                                                                                     ^
+SyntaxError: invalid syntax
+'''},
