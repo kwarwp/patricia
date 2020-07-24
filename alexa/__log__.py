@@ -146,3 +146,10 @@ AttributeError: 'oi' object has no attribute 'vai'
     oi().vai()
 AttributeError: 'oi' object has no attribute 'vai'
 '''},
+{'date': 'Fri Jul 24 2020 16:11:17.815 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 7
+  class oi()
+             ^
+SyntaxError: invalid syntax
+'''},
