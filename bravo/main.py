@@ -45,7 +45,7 @@ class gameInicio:
         prox = Cena(CODAPRENDA, direita=teste() )
         prox.vai()
 
-
+    """criando o módulo para ir para a bravo.india"""
     def q2(self):
         pass
         
