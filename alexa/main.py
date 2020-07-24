@@ -4,14 +4,17 @@ from _spy.vitollino.main import INVENTARIO as inv
 STYLE["width"] = 1150
 STYLE["height"] = "550px"
 
-class oi:
+class oi():
+
+
     #primeira cena (onde está localizado as duas opções
     cena = Cena( img = "https://i.imgur.com/S5tAUe8.png")
-    #opção 1 
-    op1 = Elemento ( img = "https://i.imgur.com/5YTF1VP.png" , x = 700, y=390, tit= "Clique")
+    #opção 1 errada
+    op1 = Elemento ( img = "https://i.imgur.com/XWgfBg1.png" , x = 700, y=390, tit= "Clique")
     #cena que direciona a opção 1
     cena2 = Cena ( img = "https://i.imgur.com/IYekltO.png")
-    #opção 2
+    errado = Elemento (img = "https://i.imgur.com/elvddXi.png", style=dict(left=40, top=300, width=400, height="200px"))
+    #opção 2 certa
     op2 = Elemento ( img = "https://images.vexels.com/media/users/3/139740/isolated/preview/bfecbaa063a84b2e9bbd9f8b9b41d410-bot--o-de-reprodu----o-redondo-azul-by-vexels.png", x = 350, y=390, tit= "Clique")
     #cena que direciona a opção2
     cena3 = Cena ( img = "https://i.imgur.com/nsi5Cwh.jpg")
