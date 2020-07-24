@@ -153,3 +153,10 @@ AttributeError: 'oi' object has no attribute 'vai'
              ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Jul 24 2020 16:11:28.191 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 16
+  errado = Elemento (img = "https://i.imgur.com/elvddXi.png", style=dict(left=40, top=300, width=400, height="200px")
+                                                                                                                                              ^
+SyntaxError: invalid syntax
+'''},
