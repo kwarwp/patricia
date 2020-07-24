@@ -41,7 +41,8 @@ class gameInicio:
         """criando o módulo para ir para a bravo.india"""
         redi = Cena()
         redi.vai = self.q2
-        prox = Cena(BOTAO, direita=teste )
+        #prox = Cena(BOTAO, direita=teste ) <-- teste aqui tem que ser chamado teste()
+        prox = Cena(BOTAO, direita=teste() )
         prox.vai()
 
 
