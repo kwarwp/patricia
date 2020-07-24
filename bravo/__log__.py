@@ -1497,3 +1497,10 @@ AttributeError: 'gameInicio' object has no attribute 'vai'
     gameInicio().vai()
 AttributeError: 'gameInicio' object has no attribute 'vai'
 '''},
+{'date': 'Fri Jul 24 2020 12:42:26.216 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 65
+  """ A chamada de teste tem que estar dentro deste if"""
+  ^
+IndentationError: expected an indented block
+'''},
