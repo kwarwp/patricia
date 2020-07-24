@@ -14,6 +14,8 @@ Changelog
 from _spy.vitollino.main import Cena, Elemento, STYLE, Texto
 from browser import html, alert, timer
 from random import choice, shuffle
+from bravo.juliet import oi
+from bravo.hotel import cena
 
 balao = "https://i.pinimg.com/236x/d2/dd/c4/d2ddc45b2599d5fc60f03ec81c53bb6c.jpg"
 balao2 = "https://i.pinimg.com/236x/14/3a/14/143a14c4535873de51301549ba96e051.jpg"
