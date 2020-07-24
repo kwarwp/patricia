@@ -1888,3 +1888,10 @@ AttributeError: 'teste' object has no attribute 'texto_oeste_um'
     cenas = Elemento(img = BALAO, style=dict(left=200, top=250, width=200, height="200px", vai = self.ola))
 AttributeError: 'teste' object has no attribute 'ola'
 '''},
+{'date': 'Fri Jul 24 2020 20:09:58.183 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 78
+  print('teste
+              ^
+SyntaxError: EOL while scanning string literal
+'''},
