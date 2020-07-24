@@ -29,7 +29,7 @@ class oi():
     #opção 1 errado
     op1 = Elemento ( img = "https://i.imgur.com/lN2umME.png", x = 150, y=390, w = 380, tit= "Clique")
     #cena que direciona a opção1
-    cena3 = Cena ( img = "https://i.imgur.com/nsi5Cwh.jpg")
+    cena3 = Cena ( img = "https://i.imgur.com/aN24UEx.png")
     errado = Elemento (img = "https://i.imgur.com/elvddXi.png")
     errado.entra(cena3)
     errado.vai= cena.vai
