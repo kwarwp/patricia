@@ -1920,3 +1920,10 @@ NameError: name 'cenas' is not defined
                                                                                                                                           ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Jul 24 2020 20:48:09.566 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 52
+  txt1 = Elemento(img = fr1, style=dict(left=500, top=100, width=200, height="200px") #Texto(cena,"Vamos aprender a programar?")
+                                                                                                                                          ^
+SyntaxError: invalid syntax
+'''},
