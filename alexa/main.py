@@ -10,13 +10,16 @@ class oi():
     #primeira cena (onde está localizado as duas opções
     cena = Cena( img = "https://i.imgur.com/S5tAUe8.png")
     #opção 2 certo
-    op2 = Elemento ( img = "https://i.imgur.com/Q4KSQKd.png" , x = 700, y=390, w = 800, tit= "Clique")
-    #cena que direciona a opção 1
+    op2 = Elemento ( img = "https://i.imgur.com/Q4KSQKd.png" , x = 700, y=390, w = 300, tit= "Clique")
+    #cena que direciona a opção 2
     cena2 = Cena ( img = "https://i.imgur.com/IYekltO.png")
+    
+    
+    
     errado = Elemento (img = "https://i.imgur.com/elvddXi.png", style=dict(left=40, top=300, width=00, height="200px"))
     #opção 1 errado
     op1 = Elemento ( img = "https://images.vexels.com/media/users/3/139740/isolated/preview/bfecbaa063a84b2e9bbd9f8b9b41d410-bot--o-de-reprodu----o-redondo-azul-by-vexels.png", x = 350, y=390, tit= "Clique")
-    #cena que direciona a opção2
+    #cena que direciona a opção1
     cena3 = Cena ( img = "https://i.imgur.com/nsi5Cwh.jpg")
     ##elemento que está na cena 3 que foi direcionado pela op2, mas irá direcionar p cena2
     #certo = Elemento ( img = "https://images.vexels.com/media/users/3/139740/isolated/preview/bfecbaa063a84b2e9bbd9f8b9b41d410-bot--o-de-reprodu----o-redondo-azul-by-vexels.png")
@@ -31,6 +34,7 @@ class oi():
     op2.entra(cena)
     op1.entra(cena)
     ok.entra(cena2)
+    errado.entra(cena3)
     #certo.entra(cena3)
     #certo.vai=cena2.vai
     op2.vai=cena2.vai
