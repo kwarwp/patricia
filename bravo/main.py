@@ -48,7 +48,7 @@ class gameInicio:
         #self.valeu = Elemento(PERGUNTA, x=200, y=200,w=250,h=150, cena=question, vai = self.q2)
 
     def q2(self):
-        pass"""
+        pass
         
 if __name__ == "__main__":
     #gameInicio().vai()
