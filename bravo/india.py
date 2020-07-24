@@ -62,6 +62,6 @@ class teste:
 
 
 if __name__ == "__main__":
-""" A chamada de teste tem que estar dentro deste if"""
+    """ A chamada de teste tem que estar dentro deste if"""
     teste().vai()    
     
