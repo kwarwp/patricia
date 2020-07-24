@@ -10,7 +10,7 @@ class oi():
     #primeira cena (onde está localizado as duas opções
     cena = Cena( img = "https://i.imgur.com/S5tAUe8.png")
     #opção 1 errada
-    op1 = Elemento ( img = "https://i.imgur.com/XWgfBg1.png" , x = 700, y=390, w = 800, tit= "Clique")
+    op1 = Elemento ( img = "https://i.imgur.com/Q4KSQKd.png" , x = 700, y=390, w = 800, tit= "Clique")
     #cena que direciona a opção 1
     cena2 = Cena ( img = "https://i.imgur.com/IYekltO.png")
     errado = Elemento (img = "https://i.imgur.com/elvddXi.png", style=dict(left=40, top=300, width=00, height="200px"))
