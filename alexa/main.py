@@ -11,7 +11,7 @@ class oi():
     #primeira cena (onde está localizado as duas opções
     cena = Cena( img = "https://i.imgur.com/S5tAUe8.png")
     #opção 2 certo
-    op2 = Elemento ( img = "https://i.imgur.com/Q4KSQKd.png" , x = 700, y=390, w = 300, tit= "Clique")
+    op2 = Elemento ( img = "https://i.imgur.com/dVn8Gfo.png" , x = 700, y=390, w = 300, tit= "Clique")
     #cena que direciona a opção 2
     cena2 = Cena ( img = "https://i.imgur.com/IYekltO.png")
     #emoji de ok
@@ -26,7 +26,7 @@ class oi():
               E UM EMOJI DE NEGATIVO'''
     
     #opção 1 errado
-    op1 = Elemento ( img = "https://i.imgur.com/lN2umME.png", x = 350, y=390, tit= "Clique")
+    op1 = Elemento ( img = "https://i.imgur.com/lN2umME.png", x = 250, y=390, w = 300 tit= "Clique")
     #cena que direciona a opção1
     cena3 = Cena ( img = "https://i.imgur.com/nsi5Cwh.jpg")
     errado = Elemento (img = "https://i.imgur.com/elvddXi.png", style=dict(left=40, top=300, width=00, height="200px"))
