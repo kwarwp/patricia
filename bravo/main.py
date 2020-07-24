@@ -23,7 +23,7 @@ CENAINICIO = "https://i.imgur.com/mbt7XHq.png"
 PLAY = "https://i.imgur.com/QiiOf5O.png"
 FUNDO= "https://i.imgur.com/cdMKAka.png"
 PERGUNTA = "https://i.imgur.com/fYmNuBj.png"
-BOTAO = "https://i.imgur.com/kTocYiF.png"
+CODAPRENDA = "https://i.imgur.com/hQO8Nkj.png"
 STYLE ["width"] = 1340
 STYLE ["height"] = "600px"
 
@@ -42,7 +42,7 @@ class gameInicio:
         redi = Cena()
         redi.vai = self.q2
         #prox = Cena(BOTAO, direita=teste ) <-- teste aqui tem que ser chamado teste()
-        prox = Cena(BOTAO, direita=teste() )
+        prox = Cena(CODAPRENDA, direita=teste() )
         prox.vai()
 
 
