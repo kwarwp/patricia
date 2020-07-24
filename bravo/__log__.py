@@ -1913,3 +1913,10 @@ SyntaxError: EOL while scanning string literal
     cenas.vai = cenateste.vai
 NameError: name 'cenas' is not defined
 '''},
+{'date': 'Fri Jul 24 2020 20:47:29.64 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 51
+  self.elementos = Elemento(img = balao2, style=dict(left=800, top=250, width=200, height="200px"), cena = cena, vai = self.redimensiona1))
+                                                                                                                                          ^
+SyntaxError: invalid syntax
+'''},
