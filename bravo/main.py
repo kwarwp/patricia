@@ -41,7 +41,7 @@ class gameInicio:
     def redimensiona(self,ev=0):
         redi = Cena()
         redi.vai = self.q2
-        prox = Cena(BOTAO, direita=oi )
+        prox = Cena(BOTAO, direita=teste )
         prox.vai()
 
 
@@ -49,5 +49,5 @@ class gameInicio:
         pass
         
 if __name__ == "__main__":
-    #gameInicio().vai()
-    gameInicio()
+    gameInicio().vai()
+    #gameInicio()
