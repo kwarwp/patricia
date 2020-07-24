@@ -192,3 +192,10 @@ AttributeError: 'oi' object has no attribute 'vai'
     oi().vai()
 AttributeError: 'oi' object has no attribute 'vai'
 '''},
+{'date': 'Fri Jul 24 2020 16:13:55.365 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 13
+  op2 = Elemento ( img = "https://i.imgur.com/XWgfBg1.png" , x = 700, y=390, w= 300 tit= "Clique")
+                                                                                     ^
+SyntaxError: invalid syntax
+'''},
