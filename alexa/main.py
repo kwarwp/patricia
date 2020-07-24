@@ -27,7 +27,7 @@ class oi():
               E UM EMOJI DE NEGATIVO'''
     
     #opção 1 errado
-    op1 = Elemento ( img = "https://i.imgur.com/lN2umME.png", x = 150, y=350, w = 450, h = 200, tit= "Clique")
+    op1 = Elemento ( img = "https://i.imgur.com/lN2umME.png", x = 150, y=350, w = 450, h = 150, tit= "Clique")
     #cena que direciona a opção1
     cena3 = Cena ( img = "https://i.imgur.com/aN24UEx.png")
     errado = Elemento (img = "https://i.imgur.com/elvddXi.png")
