@@ -23,6 +23,9 @@ fr1 = "https://i.pinimg.com/236x/4c/f8/6c/4cf86c786beb1c6457f31bf4fcd7ec99.jpg"
 STYLE["width"] , STYLE["height"] = 1200, "600px"
 
 class teste:
+    """ Documente a classe aqui!"""
+    
+    """ tudo isto tinha que estar no __init__ !!!!!
     x = 0
     cena = Cena(img = fundo)
     cena1 = Cena(img = fundo)
@@ -36,6 +39,29 @@ class teste:
     txt2.entra(cena)
     txt2.vai()
     cenas.entra(cena)
-    elementos.entra(cena)
-teste()    
+    elementos.entra(cena)"""
+
+    def __init__(self):
+        x = 0
+        cena = Cena(img = fundo)
+        self.cena1 = cena1 = Cena(img = fundo)
+        cenas = Elemento(img = balao, style=dict(left=200, top=250, width=200, height="200px"))
+        elementos = Elemento(img = balao2, style=dict(left=800, top=250, width=200, height="200px"))
+        txt1 = Elemento(img = fr1, style=dict(left=500, top=100, width=200, height="200px")) #Texto(cena,"Vamos aprender a programar?")
+        txt2 = Elemento(img = fr2, style=dict(left=500, top=100, width=200, height="200px"))#Texto(cena,"Escolha entre cenas ou elementos para começar.")
+        txt1.entra(cena1)
+        txt1.vai = cena.vai 
+        txt2.entra(cena)
+        txt2.vai()
+        cenas.entra(cena)
+        elementos.entra(cena)
+        
+    def vai(self, *_):
+        """Tem que ter este método vai para ser usado como cena direita ou esquerda"""
+        self.cena1.vai()
+
+
+if __name__ == "__main__":
+""" A chamada de teste tem que estar dentro deste if"""
+    teste().vai()    
     
