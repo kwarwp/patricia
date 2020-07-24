@@ -14,8 +14,8 @@ Changelog
 
 from _spy.vitollino.main import Cena, Elemento, INVENTARIO, STYLE, Musica
 from bravo.india import teste
-from bravo.juliet import oi
-from bravo.hotel import cena
+#from bravo.juliet import oi
+#from bravo.hotel import cena
 
 
 """ imagens"""
@@ -37,8 +37,8 @@ class gameInicio:
         self.play = Elemento(PLAY, x=570, y=470,w=100,h=100, cena=gameInicio, vai = self.redimensiona)
 
     
-    """criando o módulo para ir para a bravo.india"""
     def redimensiona(self,ev=0):
+        """criando o módulo para ir para a bravo.india"""
         redi = Cena()
         redi.vai = self.q2
         prox = Cena(BOTAO, direita=teste )
@@ -49,5 +49,5 @@ class gameInicio:
         pass
         
 if __name__ == "__main__":
-    gameInicio().vai()
+    gameInicio()  # .vai() a classe gameInicio não tem o método vai
     #gameInicio()
