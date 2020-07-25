@@ -41,11 +41,11 @@ class teste:
         txt1.entra(cena1)
         txt1.vai = cena2.vai 
         txt2.entra(cena2)
-        gabi = Cena(elementof, direita=oi() )
+        gabi = Cena(elementof, direita=oi(), esquerda = cena2())
         
         elementos.entra(cena2)
         elementos.vai = gabi.vai
-        rosi = Cena(cenaf, direita=cena() )
+        rosi = Cena(cenaf, direita=cena(),esquerda = cena2() )
         
         cenas.entra(cena2)
         cenas.vai = rosi.vai
