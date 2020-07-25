@@ -2138,3 +2138,10 @@ NameError: name 'direita' is not defined
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Sat Jul 25 2020 11:10:45.125 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 37
+  elif lado == 1:
+  ^
+IndentationError: unexpected indent
+'''},
