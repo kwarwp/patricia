@@ -47,14 +47,15 @@ class teste:
         redi = Cena()
         redi.vai = self.q2
         #prox = Cena(BOTAO, direita=teste ) <-- teste aqui tem que ser chamado teste()
-        prox = Cena(cenaf, direita=teste() )
+        prox = Cena(cenaf, direita=cena() )
         prox.vai()
+        
     def redimensiona1(self,ev=0):
         """criando o módulo para ir para a bravo.oi"""
         redi = Cena()
         redi.vai = self.q2
         #prox = Cena(BOTAO, direita=teste ) <-- teste aqui tem que ser chamado teste()
-        prox = Cena(elementof, direita=teste() )
+        prox = Cena(elementof, direita=oi() )
         prox.vai()        
 
     """criando o módulo para ir para a bravo.india"""
