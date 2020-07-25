@@ -19,7 +19,7 @@ from bravo.hotel import cena
 
 balao = "https://i.imgur.com/fbRhlGV.jpg"#"https://i.pinimg.com/236x/d2/dd/c4/d2ddc45b2599d5fc60f03ec81c53bb6c.jpg"
 balao2 = "https://i.imgur.com/rXfA4RE.jpg"#"https://i.pinimg.com/236x/14/3a/14/143a14c4535873de51301549ba96e051.jpg"
-fundo = "https://i.imgur.com/unJ7CPZ.jpg"#"https://i.pinimg.com/originals/ca/a8/25/caa8256ded30c7703fadf79651d7833b.jpg"
+fundo = "https://i.imgur.com/N8qW02e.jpg"#"https://i.pinimg.com/originals/ca/a8/25/caa8256ded30c7703fadf79651d7833b.jpg"
 fr2 = "https://i.imgur.com/9ZISyvv.jpg"#"https://i.pinimg.com/236x/7a/d6/c2/7ad6c2fdfd198c6903dee4425825ed9a.jpg"
 fr1 = "https://i.imgur.com/7PtVR2E.jpg"#"https://i.pinimg.com/236x/4c/f8/6c/4cf86c786beb1c6457f31bf4fcd7ec99.jpg"
 f= "https://i.imgur.com/S5tAUe8.png"
