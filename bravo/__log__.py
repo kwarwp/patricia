@@ -2671,3 +2671,10 @@ AttributeError: 'oi' object has no attribute 'cena'
                                                                                                                                                                                                                    ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Sat Jul 25 2020 19:09:06.523 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 19
+  ''' NESSA PARTE O JOGADOR TERÁ QUE ESCOLHER DUAS OPÇÕES DE COMO SE DECLARA UM ELEMENTO
+  ^
+IndentationError: unexpected indent
+'''},
