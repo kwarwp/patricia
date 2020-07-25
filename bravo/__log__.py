@@ -2724,3 +2724,10 @@ AttributeError: 'oi' object has no attribute 'vai'
     oi().vai()
 AttributeError: 'oi' object has no attribute 'vai'
 '''},
+{'date': 'Sat Jul 25 2020 19:24:30.581 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 37
+  cenas = Elemento(img = balao, style=dict(left=200, top=250, width=200, height="200px")))
+                                                                                         ^
+SyntaxError: invalid syntax
+'''},
