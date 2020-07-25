@@ -2664,3 +2664,10 @@ AttributeError: 'oi' object has no attribute 'cena'
     self.cena.vai()
 AttributeError: 'oi' object has no attribute 'cena'
 '''},
+{'date': 'Sat Jul 25 2020 19:07:35.28 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 13
+  '''from _spy.vitollino.main import Cena, Elemento, Labirinto, Texto, Codigo, Sala, STYLE
+                                                                                                                                                                                                                   ^
+SyntaxError: invalid syntax
+'''},
