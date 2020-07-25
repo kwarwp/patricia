@@ -2448,3 +2448,10 @@ Exception: <RangeError: Maximum call stack size exceeded>
     gabi = Cena(elementof, direita=self.CENA, esquerda = cena2())
 AttributeError: 'teste' object has no attribute 'CENA'
 '''},
+{'date': 'Sat Jul 25 2020 14:07:01.65 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 45
+  expli.vai()
+  ^
+IndentationError: unexpected indent
+'''},
