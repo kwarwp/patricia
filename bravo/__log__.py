@@ -2216,3 +2216,7 @@ TypeError: q2() missing 1 positional argument: self
 'error': '''
 Exception: <RangeError: Maximum call stack size exceeded>
 '''},
+{'date': 'Sat Jul 25 2020 11:19:39.387 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <RangeError: Maximum call stack size exceeded>
+'''},
