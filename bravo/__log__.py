@@ -2131,3 +2131,10 @@ NameError: name 'prox' is not defined
     passando = prox(cenaf,direita, teste)
 NameError: name 'direita' is not defined
 '''},
+{'date': 'Sat Jul 25 2020 11:10:21.595 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 36
+  lado = esquerda
+  ^
+IndentationError: expected an indented block
+'''},
