@@ -1999,3 +1999,10 @@ AttributeError: 'cena' object has no attribute 'nome'
     self.scorer = dict(ponto=1, valor=cena.nome, carta=tit or img, casa=self.xy, move=None)
 AttributeError: 'cena' object has no attribute 'nome'
 '''},
+{'date': 'Sat Jul 25 2020 10:45:21.921 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 37
+  self.cenas = Elemento(img = balao, style=dict(left=200, top=250, width=200, height="200px"), cena = cena, vai = prox(cenaf,direita,teste())#self.redimensiona)
+                                                                                                                                                                          ^
+SyntaxError: invalid syntax
+'''},
