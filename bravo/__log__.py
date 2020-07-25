@@ -1959,3 +1959,23 @@ AttributeError: 'oi' object has no attribute 'vai'
     oi().vai()
 AttributeError: 'oi' object has no attribute 'vai'
 '''},
+{'date': 'Sat Jul 25 2020 10:11:25.934 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 72
+    teste().vai()    
+  module <module> line 37
+    self.cenas = Elemento(img = balao, style=dict(left=200, top=250, width=200, height="200px"), cena = cena, vai = self.redimensiona)
+  module _spy.vitollino.main line 541
+    self.scorer = dict(ponto=1, valor=cena.nome, carta=tit or img, casa=self.xy, move=None)
+AttributeError: 'cena' object has no attribute 'nome'
+'''},
