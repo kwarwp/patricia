@@ -2685,3 +2685,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Sat Jul 25 2020 19:11:42.964 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 23
+  '''cena = Cena( img = "https://i.imgur.com/S5tAUe8.png")
+  ^
+IndentationError: unexpected indent
+'''},
