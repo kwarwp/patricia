@@ -2224,3 +2224,7 @@ Exception: <RangeError: Maximum call stack size exceeded>
 'error': '''
 Exception: <RangeError: Maximum call stack size exceeded>
 '''},
+{'date': 'Sat Jul 25 2020 11:20:24.739 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <RangeError: Maximum call stack size exceeded>
+'''},
