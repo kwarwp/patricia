@@ -2546,3 +2546,10 @@ AttributeError: 'oi' object has no attribute 'vai'
                                                                                                                                                                                                                    ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Sat Jul 25 2020 14:33:33.69 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 42
+  op1 = Elemento ( img = "https://i.imgur.com/lN2umME.png", x = 150, y=350, w = 450, h = 150, tit= "Clique")
+  ^
+IndentationError: unexpected indent
+'''},
