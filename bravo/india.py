@@ -22,7 +22,8 @@ balao2 = "https://i.imgur.com/rXfA4RE.jpg"#"https://i.pinimg.com/236x/14/3a/14/1
 fundo = "https://i.imgur.com/N8qW02e.jpg"#"https://i.pinimg.com/originals/ca/a8/25/caa8256ded30c7703fadf79651d7833b.jpg"
 fr2 = "https://i.imgur.com/9ZISyvv.jpg"#"https://i.pinimg.com/236x/7a/d6/c2/7ad6c2fdfd198c6903dee4425825ed9a.jpg"
 fr1 = "https://i.imgur.com/7PtVR2E.jpg"#"https://i.pinimg.com/236x/4c/f8/6c/4cf86c786beb1c6457f31bf4fcd7ec99.jpg"
-f= "https://i.imgur.com/S5tAUe8.png"
+cenaf = "https://i.imgur.com/KDOzJhl.jpg"#"https://i.imgur.com/S5tAUe8.png"
+elementof = "https://i.imgur.com/8so9Azk.jpg"
 STYLE["width"] , STYLE["height"] = 1200, "600px"
 
 class teste:
@@ -64,14 +65,14 @@ class teste:
         redi = Cena()
         redi.vai = self.q2
         #prox = Cena(BOTAO, direita=teste ) <-- teste aqui tem que ser chamado teste()
-        prox = Cena(balao, direita=teste() )
+        prox = Cena(cenaf, direita=teste() )
         prox.vai()
     def redimensiona1(self,ev=0):
         """criando o módulo para ir para a bravo.india"""
         redi = Cena()
         redi.vai = self.q2
         #prox = Cena(BOTAO, direita=teste ) <-- teste aqui tem que ser chamado teste()
-        prox = Cena(balao2, direita=teste() )
+        prox = Cena(elementof, direita=teste() )
         prox.vai()        
 
     """criando o módulo para ir para a bravo.india"""
