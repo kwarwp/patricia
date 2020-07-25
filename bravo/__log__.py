@@ -2264,3 +2264,7 @@ NameError: name 'redimensiona' is not defined
     passando = prox(0,cenaf,1, teste)
 TypeError: prox() missing 1 positional argument: classe
 '''},
+{'date': 'Sat Jul 25 2020 11:28:01.962 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <RangeError: Maximum call stack size exceeded>
+'''},
