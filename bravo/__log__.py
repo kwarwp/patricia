@@ -2088,3 +2088,10 @@ NameError: name 'prox' is not defined
     passando = prox(cenaf,direita, teste)
 NameError: name 'prox' is not defined
 '''},
+{'date': 'Sat Jul 25 2020 10:55:56.442 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 38
+  self.cenas = Elemento(img = balao, style=dict(left=200, top=250, width=200, height="200px"), cena = cena, vai = passando#self.redimensiona)
+                                                                                                                                                       ^
+SyntaxError: invalid syntax
+'''},
