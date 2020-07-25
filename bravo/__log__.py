@@ -2516,3 +2516,10 @@ AttributeError: 'cena' object has no attribute 'expliq'
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Sat Jul 25 2020 14:28:50.320 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 44
+  cena3 = Cena ( img = "https://i.imgur.com/aN24UEx.png")
+  ^
+IndentationError: unexpected indent
+'''},
