@@ -2418,3 +2418,7 @@ NameError: name 'cenas' is not defined
     cenas.vai = prox.vai
 NameError: name 'cenas' is not defined
 '''},
+{'date': 'Sat Jul 25 2020 12:27:31.169 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <RangeError: Maximum call stack size exceeded>
+'''},
