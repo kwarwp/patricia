@@ -2013,3 +2013,10 @@ SyntaxError: invalid syntax
                                                                                                                                                                           ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Sat Jul 25 2020 10:47:15.697 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 37
+  self.cenas = Elemento(img = balao, style=dict(left=200, top=250, width=200, height="200px"), cena = cena, vai = prox(cenaf,direita,teste)#self.redimensiona)
+                                                                                                                                                                        ^
+SyntaxError: invalid syntax
+'''},
