@@ -2539,3 +2539,10 @@ IndentationError: unexpected indent
     oi().vai()
 AttributeError: 'oi' object has no attribute 'vai'
 '''},
+{'date': 'Sat Jul 25 2020 14:30:19.342 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 13
+  '''from _spy.vitollino.main import Cena, Elemento, Labirinto, Texto, Codigo, Sala, STYLE
+                                                                                                                                                                                                                   ^
+SyntaxError: invalid syntax
+'''},
