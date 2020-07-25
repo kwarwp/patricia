@@ -2212,3 +2212,7 @@ NameError: name 'q2' is not defined
     teste.vai= q2()
 TypeError: q2() missing 1 positional argument: self
 '''},
+{'date': 'Sat Jul 25 2020 11:17:57.238 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <RangeError: Maximum call stack size exceeded>
+'''},
