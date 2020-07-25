@@ -45,7 +45,7 @@ class teste:
     def redimensiona(self,ev=0):
         """criando o módulo para ir para a bravo.cena"""
         redi = Cena()
-        redi.vai = self.q2
+        redi.vai = self.redimensiona1
         #prox = Cena(BOTAO, direita=teste ) <-- teste aqui tem que ser chamado teste()
         prox = Cena(cenaf, direita=cena() )
         prox.vai()
