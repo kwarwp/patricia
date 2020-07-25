@@ -2045,3 +2045,10 @@ SyntaxError: invalid syntax
     passando = prox(cenaf,direita, teste())
 NameError: name 'prox' is not defined
 '''},
+{'date': 'Sat Jul 25 2020 10:55:10.565 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 45
+  def prox(fundo,lado,classe()):    
+                             ^
+SyntaxError: invalid syntax
+'''},
