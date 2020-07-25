@@ -2614,3 +2614,10 @@ AttributeError: 'oi' object has no attribute 'cena'
     self.cena.vai()   
 AttributeError: 'oi' object has no attribute 'cena'
 '''},
+{'date': 'Sat Jul 25 2020 19:05:31.785 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 41
+  op1 = Elemento ( img = "https://i.imgur.com/lN2umME.png", x = 150, y=350, w = 450, h = 150, tit= "Clique")
+  ^
+IndentationError: unexpected indent
+'''},
