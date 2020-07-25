@@ -28,7 +28,7 @@ STYLE["width"] , STYLE["height"] = 1200, "600px"
 
 class teste:
     """ Classe responsavel por permitir a escolha
-    entre o que sera aprendido."""
+    entre o que sera aprendido,e ira chamar os outros codigos"""
     
     def __init__(self):
         
