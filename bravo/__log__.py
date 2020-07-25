@@ -2422,3 +2422,7 @@ NameError: name 'cenas' is not defined
 'error': '''
 Exception: <RangeError: Maximum call stack size exceeded>
 '''},
+{'date': 'Sat Jul 25 2020 12:28:11.805 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <RangeError: Maximum call stack size exceeded>
+'''},
