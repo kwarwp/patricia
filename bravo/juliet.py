@@ -24,7 +24,7 @@ from _spy.vitollino.main import INVENTARIO as inv
 STYLE["width"] = 1150
 STYLE["height"] = "550px"
 
-class oi():
+class oi:
      def __init__(self):
     #primeira cena (onde está localizado as duas opções
         self.cena = cena =Cena( img = "https://i.imgur.com/S5tAUe8.png")
