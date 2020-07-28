@@ -2731,3 +2731,10 @@ AttributeError: 'oi' object has no attribute 'vai'
                                                                                          ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Jul 28 2020 19:17:14.596 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 19
+  def __init __(self):
+  ^
+IndentationError: expected an indented block
+'''},
