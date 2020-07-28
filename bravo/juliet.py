@@ -27,7 +27,7 @@ STYLE["height"] = "550px"
 class oi():
      def __init__(self):
     #primeira cena (onde está localizado as duas opções
-        self.cena = Cena( img = "https://i.imgur.com/S5tAUe8.png")
+        self.cena = cena =Cena( img = "https://i.imgur.com/S5tAUe8.png")
     #opção 2 certo
         op2 = Elemento ( img = "https://i.imgur.com/dVn8Gfo.png" , x = 700, y=350, w = 450, h = 150 , tit= "Clique")
     #cena que direciona a opção 2
