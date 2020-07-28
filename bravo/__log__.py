@@ -2794,3 +2794,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Tue Jul 28 2020 19:34:50.386 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 67
+  def foi(self, *_): 
+  ^
+IndentationError: unexpected indent
+'''},
