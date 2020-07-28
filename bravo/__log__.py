@@ -2870,3 +2870,10 @@ ImportError: cannot import name 'oi'
     from bravo.juliet import oi
 ImportError: cannot import name 'oi'
 '''},
+{'date': 'Tue Jul 28 2020 19:45:13.223 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 67
+  def vai(self, *_): 
+  ^
+IndentationError: unexpected indent
+'''},
