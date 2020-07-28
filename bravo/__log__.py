@@ -2766,3 +2766,10 @@ SyntaxError: invalid syntax
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Tue Jul 28 2020 19:29:12.533 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 67
+  def vai(self, *_): 
+  ^
+IndentationError: unexpected indent
+'''},
