@@ -2738,3 +2738,10 @@ SyntaxError: invalid syntax
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Tue Jul 28 2020 19:17:27.528 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 17
+  def __init __(self):
+              ^
+SyntaxError: invalid syntax
+'''},
