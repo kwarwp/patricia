@@ -39,11 +39,11 @@ class start:
         self.pegadinha = Elemento(PEGADINHA, tit="PLAY", texto = "Não é TOUCH", x=260, y=170, w=50, h=50, cena =self.inicio)
         self.pegadinha = Elemento(PEGADINHA, tit="MOUSE", x=380, y=285, w=60, h=60, vai=Game(), cena =self.inicio)
         
-    def chama(self):
-        return Game()
-          
     def vai(self):
         self.inicio.vai()
+        
+    def chama():
+        return Game()   
         
 class end:
     pass
