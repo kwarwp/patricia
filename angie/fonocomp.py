@@ -20,8 +20,10 @@ def historia():
     cena_historia.vai()
 
 historia()
+
 def __init__(self):
-       print ("Projeto Fonocomp")
+    print ("Projeto Fonocomp")
+    cena_historia.vai()
 
 if __name__ == "__main__":
     print ("Projeto Fonocomp")
