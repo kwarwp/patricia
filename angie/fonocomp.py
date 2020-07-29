@@ -17,6 +17,7 @@ link_balao2 = "https://image.freepik.com/vetores-gratis/conjunto-de-historia-em-
 
 def __init__(self):
     self.ambiente = Cena(img = self.link_balao)
+    self.ambiente.vai()
     
 #def vai(self):
 #    """ mostra a cena da planta da casa. """
