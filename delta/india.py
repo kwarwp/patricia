@@ -136,14 +136,13 @@ class Game2x3:
         else:
             # desabilita o clique sobre as cartas acertadas
             Game2x3.previous_selected_card = None
-            Game2x3.verifyingGameOver()
             selected_card.card.elt.unbind("click")
-            Texto(Game.cena, "Acertou!!!").vai()
+            Game2x3.verify()
             passa_fase()
             
         
     @staticmethod  
-    def verifyingGameOver():
+    def verify():
         for object in list_objects:
             if object.faceDown == False:
                 return Game().vai()
