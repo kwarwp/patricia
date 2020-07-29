@@ -16,12 +16,11 @@ link_balao = "https://www.google.com/imgres?imgurl=https%3A%2F%2Fstatic.vecteezy
 link_balao2 = "https://image.freepik.com/vetores-gratis/conjunto-de-historia-em-quadrinhos-com-bolhas-de-bate-papo_1017-13655.jpg"
 
 def __init__(self):
-    self.ambiente = Cena(self.link_balao)
+    self.ambiente = Cena(img = self.link_balao)
     
 def vai(self):
     """ mostra a cena da planta da casa. """
     self.ambiente.vai()
     
 if __name__ == "__main__":
-    self.vai()
-    
+    Eventos().vai()
