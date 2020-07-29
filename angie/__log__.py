@@ -321,3 +321,21 @@ NameError: name 'cena' is not defined
                           ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Jul 29 2020 17:21:25.923 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 22
+    historia()
+  module <module> line 19
+    cena_historia = cena("https://www.google.com/imgres?imgurl=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fthumbnails%2F000%2F235%2F346%2Foriginal%2Fspeech-bubble-pop-art-comic-book-background.jpg&imgrefurl=https%3A%2F%2Fpt.vecteezy.com%2Farte-vetorial%2F235346-fundo-de-quadrinhos-do-discurso-bolha-pop-art&tbnid=a4iHDHXihmIeBM&vet=12ahUKEwiEpeXhovPqAhWDCLkGHTYCCdYQMygcegUIARDPAQ..i&docid=d0bWFVVCq0leWM&w=3601&h=3601&q=historia%20em%20quadrinhos%20vazia%20desenho&safe=active&ved=2ahUKEwiEpeXhovPqAhWDCLkGHTYCCdYQMygcegUIARDPAQ")
+NameError: name 'cena' is not defined
+'''},
