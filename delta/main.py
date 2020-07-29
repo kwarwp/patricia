@@ -45,9 +45,10 @@ class start:
            
            .. code-block:: python
               widget.bind(event, handler)
+              
         '''
         
-        self.solucao.bind("click", self.chama)
+        self.solucao.elt.bind("click", self.chama)
         
     def vai(self):
         self.inicio.vai()
