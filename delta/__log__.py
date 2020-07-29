@@ -3790,3 +3790,10 @@ SyntaxError: invalid syntax
                                                                                                   ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Jul 29 2020 13:47:24.728 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 35
+  self.pegadinha = (PEGADINHA, tit="PLAY", x=100, y=0, width=60, cena = self.inicio())
+                                                                                      ^
+SyntaxError: invalid syntax
+'''},
