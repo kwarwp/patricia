@@ -15,4 +15,4 @@ def __init__(self):
        print ("Projeto Fonocomp")
 
 if __name__ == "__main__":
-    print ("teste")
+    print ("Projeto Fonocomp")
