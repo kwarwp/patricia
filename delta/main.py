@@ -38,7 +38,7 @@ class start:
         #self.chama = Game()
         self.inicio = Cena(TELA_INICIAL)
         self.pegadinha = Elemento(PEGADINHA, tit="PLAY", texto = "Não é TOUCH", x=260, y=170, w=50, h=50, cena =self.inicio)
-        self.solucao = Elemento(PEGADINHA, tit="MOUSE", x=380, y=285, w=60, h=60, cena =self.inicio)
+        self.solucao = Elemento(CLIQUE, tit="MOUSE", x=380, y=285, w=60, h=60, cena =self.inicio)
         
         self.solucao.elt.bind("click", self.chama)
         
