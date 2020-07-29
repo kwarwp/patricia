@@ -25,3 +25,4 @@ def vai(self):
     
 #if __name__ == "__main__":
 #    Eventos().vai()
+vai()
