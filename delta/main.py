@@ -42,7 +42,7 @@ class start:
     def vai(self):
         self.inicio.vai()
         
-    def chama():
+    def chama(self):
         return Game()   
         
 class end:
