@@ -37,7 +37,7 @@ class start:
     def __init__(self):
         self.inicio = Cena(TELA_INICIAL, direita= Game())
         self.pegadinha = Elemento(PEGADINHA, tit="PLAY", texto = "Não é TOUCH", x=260, y=170, w=50, h=50, cena =self.inicio)
-        self.pegadinha = Elemento(CLIQUE, tit="MOUSE", x=260, y=320, w=50, h=50, cena =self.inicio)
+        self.pegadinha = Elemento(CLIQUE, tit="MOUSE", x=280, y=320, w=50, h=50, cena =self.inicio)
           
     def vai(self):
         self.inicio.vai()
