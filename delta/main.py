@@ -17,26 +17,29 @@ Changelog
         Descreva o que você adicionou no código.
 
 """
-from _spy.vitollino.main import Cena, STYLE
+from _spy.vitollino.main import Cena, Elemento, STYLE
 from delta.hotel import Game
 
 
 TELA_INICIAL = "https://i.pinimg.com/originals/ff/7c/78/ff7c780990c7f867de2061645d9eff86.gif"
-TELA_MEIO = "https://i.imgur.com/FTkbaSW.jpg"
+PEGADINHA = "https://i.imgur.com/JuvyDuW.png"
 
 
 STYLE["width"] = 600
 
 
 class start:
+    ''' Gera uma classe onde há tela inicial e dois elementos.
+    
+    '''
 
     def __init__(self):
-        self.inicio = Cena(TELA_INICIAL,direita= Game())
-        
+        self.inicio = Cena(TELA_INICIAL, direita= Game())
+        self.pegadinha = Elemento(PEGADINHA, tit="PLAY", style=dict(x=200, y=300, width=50), cena =self.inicio)
           
     def vai(self):
         self.inicio.vai()
-    
+        
 class end:
     pass
     
