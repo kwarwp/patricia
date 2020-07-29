@@ -23,5 +23,5 @@ def vai(self):
     """ mostra a cena da planta da casa. """
     self.ambiente.vai()
     
-#if __name__ == "__main__":
-#    Eventos().vai()
+if __name__ == "__main__":
+    Eventos().vai()
