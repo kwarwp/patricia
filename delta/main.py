@@ -44,7 +44,7 @@ class start:
     def vai(self):
         self.inicio.vai()
         
-    def chama(self):
+    def chama(self, env=None):
         return Game()   
         
 class end:
