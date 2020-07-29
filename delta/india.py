@@ -145,11 +145,11 @@ class Game2x3:
     @staticmethod  
     def verifyingGameOver():
         for object in list_objects:
-            if object.faceDown == True:
-                Texto("ainda não").vai()
-                return
+            if object.faceDown == False:
+                return Game().vai()
+                  
             else:
-                Game().vai()
+                pass
         
     def shuffle_cards(self):  
         '''Organiza as cartas em uma matriz [coluna][linha], 
