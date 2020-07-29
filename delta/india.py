@@ -138,8 +138,9 @@ class Game2x3:
             Game2x3.previous_selected_card = None
             Game2x3.verifyingGameOver()
             selected_card.card.elt.unbind("click")
+            Texto(Game.cena, "Acertou!!!").vai()
             passa_fase()
-            #Texto(Game.cena, "Acertou!!!").vai()
+            
         
     @staticmethod  
     def verifyingGameOver():
