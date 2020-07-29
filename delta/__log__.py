@@ -3894,3 +3894,10 @@ AttributeError: 'start' object has no attribute 'inicio'
     self.pegadinha = Elemento(PEGADINHA, tit="PLAY", style=dict(x=100, y=550, width=60), cena =self.inicio)
 AttributeError: 'start' object has no attribute 'inicio'
 '''},
+{'date': 'Wed Jul 29 2020 13:57:41.506 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 38
+  self.pegadinha = Elemento(PEGADINHA, tit="PLAY", STYLE=dict{x=500, y=500, width=10, height=20}, cena =self.inicio)
+                                                              ^
+SyntaxError: invalid syntax
+'''},
