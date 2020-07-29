@@ -11,7 +11,7 @@ Changelog
 
 """
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
-from delta.juliete import Game2x4  
+from delta.hotel import Game  
 import random
 import time
 
@@ -145,13 +145,16 @@ class Game2x3:
     def verifyingGameOver():
         for object in list_objects:
             if object.faceDown == True:
-                Texto(Game2x3.cena, object.name, object.faceDown).vai()
+                Texto("ainda não").vai()
                 return
             else:
-                Game2x4.vai()
+                Game().vai()
         
-    def shuffle_cards(self):   
-        list_cards =  [(0,0), (1,0), (2,0),(0,1), (1,1), (2,1)] #organiza as cartas em [coluna][linha]
+    def shuffle_cards(self):  
+        '''Organiza as cartas em uma matriz [coluna][linha], 
+           embraralha e retorna resultado.
+        '''
+        list_cards =  [(0,0), (1,0), (2,0),(0,1), (1,1), (2,1)] 
                                                  
         random.shuffle(list_cards)
         return list_cards     
