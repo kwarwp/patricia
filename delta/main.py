@@ -40,12 +40,12 @@ class start:
         self.pegadinha = Elemento(PEGADINHA, tit="PLAY", texto = "Não é TOUCH", x=260, y=170, w=50, h=50, cena =self.inicio)
         self.solucao = Elemento(PEGADINHA, tit="MOUSE", x=380, y=285, w=60, h=60, cena =self.inicio)
         
-        self.solucao.elt.bind("<Button-1>", chama())
+        self.solucao.elt.bind("<Button-1>", chama)
         
     def vai(self):
         self.inicio.vai()
         
-    def chama(event=None):
+    def chama(selfevent):
         return Game()   
         
 class end:
