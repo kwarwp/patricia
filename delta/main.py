@@ -35,7 +35,7 @@ class start:
 
     def __init__(self):
         self.inicio = Cena(TELA_INICIAL, direita= Game())
-        self.pegadinha = Elemento(PEGADINHA, tit="PLAY", style=dict(x=200, y=300, width=50), cena =self.inicio)
+        self.pegadinha = Elemento(PEGADINHA, tit="PLAY", STYLE=dict(x=500, y=500, width=10), cena =self.inicio)
           
     def vai(self):
         self.inicio.vai()
