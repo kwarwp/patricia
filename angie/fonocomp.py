@@ -12,7 +12,7 @@ Changelog
 """
 
 def __init__(self):
-       print ("teste")
+       print ("Projeto Fonocomp")
 
 if __name__ == "__main__":
     print ("teste")
