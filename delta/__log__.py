@@ -3915,3 +3915,10 @@ SyntaxError: invalid syntax
                                                               ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Jul 29 2020 13:59:51.820 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 38
+  self.pegadinha = Elemento(PEGADINHA, tit="PLAY", STYLE=dict(x :500, y : 500, w : 10, h : 20), cena =self.inicio)
+                                                                 ^
+SyntaxError: invalid syntax
+'''},
