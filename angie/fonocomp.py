@@ -23,5 +23,5 @@ def vai(self):
     self.ambiente.vai()
     
 if __name__ == "__main__":
-    Eventos().vai()
+    self.vai()
     
