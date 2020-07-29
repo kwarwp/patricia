@@ -145,6 +145,7 @@ class Game2x3:
     def verify():
         for object in list_objects:
             if object.faceDown == False:
+                Texto = (Game2x3.cena, "Você passou de nível!").vai()
                 return Game().vai()
                   
             else:
