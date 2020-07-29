@@ -3776,3 +3776,10 @@ Traceback (most recent call last):
   module <module> line 14
     from delta.juliete import Game  
 '''},
+{'date': 'Wed Jul 29 2020 13:44:00.299 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 35
+  self.pegadinha = (PEGADINHA, tit="PLAY", style=dict(left=350, top=550, width=60), cena = self.inicio())
+                                                                                                         ^
+SyntaxError: invalid syntax
+'''},
