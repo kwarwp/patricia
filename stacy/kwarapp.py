@@ -86,6 +86,8 @@ class Kwarwp():
         cerca = self.v.a(self.CERCA, w=100, h=100, x=0, y=400, cena=cena)
         cerca = self.v.a(self.CERCA, w=100, h=100, x=0, y=500, cena=cena)
         cerca = self.v.a(self.CERCA, w=100, h=100, x=300, y=200, cena=cena)
+        cerca = self.v.a(self.CERCA, w=100, h=100, x=300, y=100, cena=cena)
+        
         cena.vai()
         return cena
         
