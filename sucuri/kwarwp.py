@@ -1,6 +1,8 @@
 # patricia.sucuri.kwarwp.py
 # SPDX-License-Identifier: GPL-3.0-or-later
-""" Projeto sem descrição, (mude esta linha).
+""" Implementação Kwarwp.
+
+.. version:: 20.0.0
 
 .. codeauthor:: Emanuelle Simas <ellesimas>
 
@@ -10,6 +12,10 @@ Changelog
         Tentativa de ação sobre o kwarwp 
 
 """
+from _spy.vitollino.main import Elemento, Cena, STYLE
+
+['WIDTH'] = 600
+
 class Kwarwp():
     """ Jogo para ensino de programação.
 
