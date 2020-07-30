@@ -65,5 +65,5 @@ class Kwarwp():
     
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
-    STYLE.update(width=600, height="500px")
+    STYLE.update(width=500, height="400px")
     Kwarwp(Jogo, medidas=STYLE)
