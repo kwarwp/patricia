@@ -10,6 +10,9 @@ Changelog
         Descreva o que você adicionou no código.
 
 """
+
+from vitollino import jogo
+
 class Kwarwp():
     """ Jogo para ensino de programação.
 
