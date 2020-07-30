@@ -339,3 +339,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Thu Jul 30 2020 17:00:00.361 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 55
+  """Cria um matriz com os elementos descritos em cada linha de texto"""
+  ^
+IndentationError: unexpected indent
+'''},
