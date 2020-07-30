@@ -76,3 +76,10 @@ TypeError: 'NoneType' object is not callable
                        ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Jul 30 2020 15:49:28.406 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 14
+  from _spy.vitollino.main as v
+                            ^
+SyntaxError: invalid syntax
+'''},
