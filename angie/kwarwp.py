@@ -10,6 +10,8 @@ Changelog
         Montando o jogo pela primeira vez
 
 """
+from _spy.vitollino.main import Jogo
+
 class Kwarwp():
     """ Jogo para ensino de programação.
 
@@ -38,3 +40,6 @@ class Kwarwp():
         sol = self.v.a(self.SOL, w=60, h=60, x=0, y=40, cena=cena)
         cena.vai()
         return cena
+        
+if __name__ == "__main__":
+    Kwarwp()
