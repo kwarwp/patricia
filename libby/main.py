@@ -35,3 +35,17 @@ class Kwarwp():
         sol = self.v.a(self.SOL, w=60, h=60, x=0, y=40, cena=cena)
         cena.vai()
         return cena
+        
+        def cria_elemento(self, x, y, cena):
+        
+        lado = self.lado
+        return self.v.a(self.GLIFOS[imagem], w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena)
+
+def main(vitollino):
+    Kwarwp(vitollino)
+        
+    
+if __name__ == "__main__":
+    from _spy.vitollino.main import Jogo, STYLE
+    STYLE.update(width=600, height="500px")
+    main(Jogo)
