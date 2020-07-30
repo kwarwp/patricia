@@ -229,3 +229,10 @@ TypeError: 'NoneType' object is not callable
     self.v = vitollino()
 TypeError: 'NoneType' object is not callable
 '''},
+{'date': 'Thu Jul 30 2020 16:03:40.422 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 50
+  Kwarwp(Jogo).cria(
+                   ^
+SyntaxError: Unbalanced bracket (
+'''},
