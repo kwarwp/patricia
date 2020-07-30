@@ -1,3 +1,12 @@
+""" 
+Meu Kwarwp
+.. codeauthor:: Isaac D'Césares <isaac.dcesares@gmail.com>
+Changelog
+---------
+.. versionadded::    30.07
+        Criando novo Kwarwp!
+"""
+
 MAPA_INICIO = """
 %%%%%%%
 %..%..&
@@ -5,7 +14,6 @@ MAPA_INICIO = """
 %^.%..%
 %%%%%%%
 """
-
 
 class Kwarwp():
     """ Arena onde os desafios ocorrem.
