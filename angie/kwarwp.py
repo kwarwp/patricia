@@ -10,6 +10,9 @@ Changelog
         Montando o jogo pela primeira vez
 
 """
+
+from Vitollino import Jogo
+
 class Kwarwp():
     """ Jogo para ensino de programação.
 
