@@ -6,12 +6,10 @@
 
 Changelog
 ---------
-.. versionadded::    20.07
+.. versionadded::    30.07
         Parte_1.
 
 """
-
-# SPDX-License-Identifier: GPL-3.0-or-later
 
 MAPA_INICIO = """
 @....&
@@ -33,7 +31,7 @@ class Kwarwp():
     "@": "https://imgur.com/tLLVjfN.png", # PICHE
     "~": "https://i.imgur.com/UAETaiP.gif", # CEU
     "*": "https://i.imgur.com/PfodQmT.gif", # SOL
-    "%": "https://i.imgur.com/uwYPNlz.png" # CERCA
+    "%": "https://i.imgur.com/uwYPNlz.png", # CERCA
     }
 
     def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
@@ -64,6 +62,7 @@ class Kwarwp():
 def main(vitollino):
     Kwarwp(vitollino)
         
+
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
     STYLE.update(width=600, height="500px")
