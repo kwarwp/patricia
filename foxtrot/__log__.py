@@ -1964,3 +1964,10 @@ IndentationError: expected an indented block
       ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Jul 30 2020 15:52:24.750 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 19
+  "&": "https://i.imgur.com/dZQ8liT.jpg",  # OCA 
+      ^
+SyntaxError: invalid syntax
+'''},
