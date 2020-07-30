@@ -44,5 +44,8 @@ class Kwarwp():
         return cena
 
 if __name__ == "__main__":
-    Kwarwp().cria()
+    from _spy.vitollino.main import Jogo, STYLE
+    Kwarwp(Jogo).cria()
+    
+
 
