@@ -40,5 +40,6 @@ class Kwarwp():
         lado = self.lado
         return self.v.a(self.GLIFOS[imagem], w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena)
 
-Kwarwp(vitollino)
+def main(vitollino):
+    Kwarwp(vitollino)
         
