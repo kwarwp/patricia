@@ -269,3 +269,10 @@ AttributeError: 'Kwarwp' object has no attribute 'solo'
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Thu Jul 30 2020 16:47:11.637 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 55
+  mapa = mapa.split()
+  ^
+IndentationError: unexpected indent
+'''},
