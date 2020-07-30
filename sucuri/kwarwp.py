@@ -16,6 +16,7 @@ from _spy.vitollino.main import Jogo, STYLE
 
 ['WIDTH'] = 600
 
+
 class Kwarwp():
     """ Jogo para ensino de programação.
 
