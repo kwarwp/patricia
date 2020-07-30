@@ -105,3 +105,10 @@ IndentationError: expected an indented block
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Thu Jul 30 2020 15:16:50.967 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 15
+  GLIFOS = {
+                                                              ^
+SyntaxError: invalid syntax
+'''},
