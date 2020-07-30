@@ -25,21 +25,6 @@ class Kwarwp():
     PICHE = "https://imgur.com/tLLVjfN.png"
     CEU = "https://i.imgur.com/UAETaiP.gif"
     SOL = "https://i.imgur.com/PfodQmT.gif"
-    
-from _spy.vitollino.main import Cena, Elemento, jogo
-class Kwarwp():
-
-    """ Jogo para ensino de programação.
-
-        :param vitollino: Empacota o engenho de jogo Vitollino.
-    """
-    OCA = "https://i.imgur.com/dZQ8liT.jpg"
-    INDIO = "https://imgur.com/8jMuupz.png"
-    SOLO = "https://i.imgur.com/sGoKfvs.jpg"
-    TORA = "https://imgur.com/ldI7IbK.png"
-    PICHE = "https://imgur.com/tLLVjfN.png"
-    CEU = "https://i.imgur.com/UAETaiP.gif"
-    SOL = "https://i.imgur.com/PfodQmT.gif"
 
     def __init__(self, vitollino=None, cenario="default"):
         self.v = vitollino()
