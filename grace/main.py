@@ -1,17 +1,5 @@
 # patricia.grace.main.py
 # SPDX-License-Identifier: GPL-3.0-or-later
-
-""" Projeto KWARWP, (aprendendo através do exemplo do KWARWP - etapa do piche).
-
-.. codeauthor:: Claudia Motta <claudiam@nce.ufrj.br> 
-"""
-"""
-Changelog
----------
-.. versionadded::    20.07
-        Descreva o que você adicionou no código.
-    """
-
 class Kwarwp():
     """ Jogo para ensino de programação.
 
@@ -24,7 +12,6 @@ class Kwarwp():
     PICHE = "https://imgur.com/tLLVjfN.png"
     CEU = "https://i.imgur.com/UAETaiP.gif"
     SOL = "https://i.imgur.com/PfodQmT.gif"
-    CERCA = "https://i.imgur.com/uwYPNlz.png"
 
     def __init__(self, vitollino=None, cenario="default"):
         self.v = vitollino()
@@ -41,4 +28,3 @@ class Kwarwp():
         sol = self.v.a(self.SOL, w=60, h=60, x=0, y=40, cena=cena)
         cena.vai()
         return cena
-
