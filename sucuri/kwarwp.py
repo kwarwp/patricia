@@ -12,7 +12,7 @@ Changelog
         Tentativa de ação sobre o kwarwp 
 
 """
-from _spy.vitollino.main import Jogo, STYLE
+#from _spy.vitollino.main import Jogo, STYLE
 
 ['WIDTH'] = 600
 
@@ -50,4 +50,5 @@ class Kwarwp():
         return cena
         
 if __name__ == "__main__":
-    Kwarwp().vai()
+    from _spy.vitollino.main import Jogo
+    Kwarwp(Jogo)
