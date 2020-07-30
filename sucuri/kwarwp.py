@@ -12,8 +12,8 @@ Changelog
 """
 from _spy.vitollino.main import Jogo
 from _spy.vitollino.main import STYLE
-["WIDHT"] = 600
-["HEIGHT"] = "500px"
+STYLE["WIDHT"] = 600
+STYLE["HEIGHT"] = "500px"
 
 
 class Kwarwp():
@@ -46,5 +46,5 @@ class Kwarwp():
         return cena
         
 if __name__ == "__main__":
-    from _spy.vitollino.main import Jogo, STYLE
+    #from _spy.vitollino.main import Jogo, STYLE
     Kwarwp(Jogo)
