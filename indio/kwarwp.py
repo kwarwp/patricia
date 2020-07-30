@@ -11,7 +11,6 @@ Changelog
 
 """
 
-from _spy.vitollino.main import Jogo, STYLE
 
 class Kwarwp():
     """ Jogo para ensino de programação.
@@ -42,7 +41,8 @@ class Kwarwp():
         cena.vai()
         return cena
         
-if __name__ == __main__:
+if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
-
-    
+    STYLE["width"] = 600
+    STYLE["height"] = "500px"
+    Kwarwp(Jogo)
