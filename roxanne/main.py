@@ -26,7 +26,7 @@ class Kwarwp():
         self.lado, self.col = 100, len(mapa[0]) 
         self.cena = self.cria(mapa=mapa) if vitollino else None
         
-    def cria(self, mapa=MAPA_INICIO):
+    def cria(self, mapa="  "):
         lado = self.lado
         cena = self.v.c(self.GLIFOS["_"])
         ceu = self.v.a(self.GLIFOS["~"], w=lado*self.col, h=lado, x=0, y=0, cena=cena)
