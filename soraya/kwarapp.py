@@ -34,6 +34,13 @@ GLIFOS = {
 "*": "https://i.imgur.com/PfodQmT.gif"  # SOL ☀
 }
 
+def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
+    self.v = vitollino()
+    """Cria um matriz com os elementos descritos em cada linha de texto"""
+    mapa = mapa.split()
+    """Largura da casa da arena dos desafios, número de colunas no mapa"""
+    self.lado, self.col = 100, len(mapa[0])
+    self.cena = self.cria(mapa=mapa) if vitollino else None
     
     def __init__(self, vitollino=None, cenario="default"):
         self.v = vitollino()
