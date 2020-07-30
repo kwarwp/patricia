@@ -287,3 +287,10 @@ Traceback (most recent call last):
     self.v = vitollino()
 TypeError: 'NoneType' object is not callable
 '''},
+{'date': 'Thu Jul 30 2020 16:21:45.132 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 29
+  GLIFOS = {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ^
+SyntaxError: invalid syntax
+'''},
