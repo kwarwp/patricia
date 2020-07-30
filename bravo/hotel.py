@@ -22,8 +22,7 @@ STYLE["height"]= "550px"
 """ Iniciando a Classe Cena."""
 class cena:
     def __init__(self):
- 
-        """ Imagem de explicação"""
+ 	""" Imagem de explicação"""
         self.expli= expli= Cena(img = "https://i.imgur.com/oHAC3Xi.png")
         """ Imagem de fundo"""
         fundo= Cena (img = "https://i.imgur.com/hexAWk7.png")
@@ -37,9 +36,7 @@ class cena:
         feliz = Elemento (img= "https://i.imgur.com/UaihdhW.png", tit="CLICK", x=40, y=80)
         """ Imagem que direciona para o erro"""
         codigo1 = Elemento (img="https://i.imgur.com/QGEgNAt.png", tit="CLICK", style=dict(left=40, top=350, width=500, height="200px"))
-        """ Imagem que direciona para casa"""
         codigo2 = Elemento (img="https://i.imgur.com/ccJqbMb.png", tit="CLICK", style=dict(left=620, top=350, width=500, height="200px"))
-        """ Imagem que faz a pergunta"""
         pergunta = Elemento (img= "https://i.imgur.com/fYmNuBj.png", style=dict(left=450, top=180, width=250, height="150px"))
         siga = Elemento (img="https://i.imgur.com/kRmXNkz.png", style=dict(left=540, top=480, width=150, height="150px"))
         codigo1.entra(fundo)
