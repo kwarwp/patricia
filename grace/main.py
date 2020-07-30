@@ -1,14 +1,14 @@
 # patricia.grace.main.py
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-""" coloque algo aqui.
+""" Projeto KWARWP, (mude esta linha).
 
-    coloque algo aqui.
+.. codeauthor:: Nome Sobrenome <mail@local.tipo>
 
 Changelog
 ---------
-    20.07
-        * NEW: coloque algo aqui.
+.. versionadded::    20.07
+        Descreva o que você adicionou no código.
 
 """
 class Kwarwp():
