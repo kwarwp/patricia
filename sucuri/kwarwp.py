@@ -12,7 +12,7 @@ Changelog
         Tentativa de ação sobre o kwarwp 
 
 """
-from _spy.vitollino.main import Jogo.a, Jogo.c, STYLE
+from _spy.vitollino.main import Jogo, STYLE
 
 ['WIDTH'] = 600
 
