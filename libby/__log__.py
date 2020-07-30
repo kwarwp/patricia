@@ -119,3 +119,10 @@ SyntaxError: invalid syntax
                                                               ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Jul 30 2020 15:17:32.805 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 11
+  GLIFOS = {
+                                                              ^
+SyntaxError: invalid syntax
+'''},
