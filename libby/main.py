@@ -1,19 +1,6 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-MAPA_INICIO = """
-@.%..&
-.....%
-.....%
-.#.^.%
-"""
-OCA = "&"
-INDIO = "^"
-SOLO = "_"
-TORA = "#"
-PICHE = "@"
-CEU = "~"
-SOL = "*"
-CERCA = "%"
+
 
 class Kwarwp():
     """ Jogo para ensino de programação.
