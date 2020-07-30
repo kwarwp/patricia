@@ -25,11 +25,11 @@ MAPA_CERCA = """
 ++++++
 """
 MAPA_ROCHA = """
-++++++
-+....&
-+....#
-+^...#
-++++++
++++++++
++..+..&
++..#..+
++^.+..+
++++++++
 """
 
 class Kwarwp():
@@ -76,6 +76,6 @@ class Kwarwp():
     
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
-    STYLE["width"] = 600
-    STYLE["heigth"] = "600px"
+    STYLE["width"] = 700
+    STYLE["heigth"] = "450px"
     Kwarwp(Jogo)
