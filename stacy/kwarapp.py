@@ -95,5 +95,5 @@ if __name__== "__main__":
     from _spy.vitollino.main import Jogo, STYLE
     STYLE["width"] = 600
     STYLE["height"] = "600px"
-    Kwarwp(Jogo)
+    Kwarwp(Jogo, mapa=MAPA_ROCHA)
         
