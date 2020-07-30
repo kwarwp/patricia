@@ -26,8 +26,7 @@ class Kwarwp():
     
     def __init__(self, vitollino=Nome, cenario="default"):
         self.V = vitollino()
-        self.cena = self.cria(cenario=cenario) 
-        if vitollino else None
+        self.cena = self.cria(cenario=cenario) if vitollino else None
     def cria(self, cenario="default"):
         """ criação do ambiente de programação Kwarwp"""
         cena = self.V.c(self.SOLO)
