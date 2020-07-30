@@ -39,7 +39,6 @@ class Kwarwp():
         cena.vai()
         return cena
         
-if _name_ == "_main_":
-    from _spy.vitollino.main import Jogo, STYLE
-    STYLE.update(width=600, height="500px")
+if __name__ == "__main__":
+    from _spy.vitollino.main import Jogo
     Kwarwp(Jogo).cria()
