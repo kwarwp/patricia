@@ -1,6 +1,3 @@
-from _spy.vitollino.main import Jogo, STYLE
-STYLE.update(width=600, height="500px")
-
 MAPA_INICIO = """
 @....&
 ......
@@ -42,4 +39,10 @@ class Kwarwp():
 
 def main(vitollino):
     Kwarwp(vitollino)
+        
+    
+if __name__ == "__main__":
+    from _spy.vitollino.main import Jogo, STYLE
+    STYLE.update(width=600, height="500px")
+    main(Jogo)
         
