@@ -1957,3 +1957,10 @@ AttributeError: 'Jogo' object has no attribute 'cenauthor'
                  ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Thu Jul 30 2020 15:51:55.500 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 19
+  "&": "https://i.imgur.com/dZQ8liT.jpg",  # OCA ⛺
+      ^
+SyntaxError: invalid syntax
+'''},
