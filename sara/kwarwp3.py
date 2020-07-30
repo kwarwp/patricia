@@ -14,7 +14,7 @@ Changelog
 
 MAPA_INICIO = """
 +++++++
-+..+..+
++..+..&
 +..#..+
 +^.+..+
 +++++++
@@ -44,7 +44,7 @@ class Kwarwp():
         """Cria um matriz com os elementos descritos em cada linha de texto"""
         mapa = mapa.split()
         """Largura da casa da arena dos desafios, número de colunas no mapa"""
-        self.lado, self.col = 100, len(mapa[0]) 
+        self.lado, self.col = 600//8, len(mapa[0]) 
         self.cena = self.cria(mapa=mapa) if vitollino else None
         
     def cria(self, mapa="  "):
@@ -65,5 +65,5 @@ class Kwarwp():
     
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
-    STYLE.update(width=700, height="600px")
+    STYLE.update(width=600, height="600px")
     Kwarwp(Jogo)
