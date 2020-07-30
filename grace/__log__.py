@@ -30,3 +30,10 @@ Traceback (most recent call last):
   module <module> line 14
     from _spy.vitollino.main import cena
 '''},
+{'date': 'Thu Jul 30 2020 15:32:31.480 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 4
+  """ Projeto KWARWP, (aprendendo através do exemplo do KWARWP - etapa do piche).
+                                                                                                                                                                                                                                                                   ^
+SyntaxError: invalid syntax
+'''},
