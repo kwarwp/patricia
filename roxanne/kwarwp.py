@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 """ 
-Meu Kwarwp
+Meu Kwarwp Isaac
 .. codeauthor:: Isaac D'Césares <isaac.dcesares@gmail.com>
 Changelog
 ---------
