@@ -27,7 +27,7 @@ MAPA_CERCA = """
 MAPA_ROCHA = """
 +++++++
 +..+..&
-+..#..+
++..%..+
 +^.+..+
 +++++++
 """
@@ -47,10 +47,11 @@ class Kwarwp():
         "@": "https://imgur.com/tLLVjfN.png",  # PICHE 
         "~": "https://i.imgur.com/UAETaiP.gif",  # CEU 
         "*": "https://i.imgur.com/PfodQmT.gif",  # SOL ☀
-        "+": "https://i.imgur.com/uwYPNlz.png" # CERCA 
+        "+": "https://i.imgur.com/uwYPNlz.png", # CERCA 
+        "%": "https://i.imgur.com/Ry3Vmsn.png" #ROCHA
     }
     
-    def __init__(self, vitollino=None, mapa=MAPA_ROCHA, medidas={}):
+    def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
         self.v = vitollino()
         """Cria um matriz com os elementos descritos em cada linha de texto"""
         mapa = mapa.split()
@@ -77,5 +78,5 @@ class Kwarwp():
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
     STYLE["width"] = 700
-    STYLE["heigth"] = "450px"
-    Kwarwp(Jogo)
+    STYLE["height"] = "600px"
+    Kwarwp(Jogo, mapa=MAPA_ROCHA)
