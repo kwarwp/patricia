@@ -924,3 +924,10 @@ TypeError: 'NoneType' object is not callable
     self.v = vitollino()
 TypeError: 'NoneType' object is not callable
 '''},
+{'date': 'Thu Jul 30 2020 16:25:59.222 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 52
+  STYLE["heigth"] = 600px
+                        ^
+SyntaxError: invalid syntax
+'''},
