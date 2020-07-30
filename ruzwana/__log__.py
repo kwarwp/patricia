@@ -262,3 +262,10 @@ class Kwarwp():
     cena = self.v.c(self.solo)
 AttributeError: 'Kwarwp' object has no attribute 'solo'
 '''},
+{'date': 'Thu Jul 30 2020 16:46:39.411 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 55
+  mapa = mapa.split()
+  ^
+IndentationError: unexpected indent
+'''},
