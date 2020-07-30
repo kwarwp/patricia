@@ -7,7 +7,7 @@
 Changelog
 ---------
 .. versionadded::    20.07
-        Descreva o que você adicionou no código.
+        Criando a cena do jogo Kwarwp usando o Vitollino.
 
 """
 
