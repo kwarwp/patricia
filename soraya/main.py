@@ -1,36 +1,43 @@
-# patricia.soraya.main.py
-__autor__ = "Isabel Hortencia Garnica"
-__autor__ = "Gabriela"
-__autor__ = "Pedro"
-__autor__ = "Rosilene"
-__version__ = "16.07.2020"
+# patricia.bravo.main.py
+""" Construir tela Kwarwwp
 
-from _spy.vitollino.main import Cena, Elemento, INVENTARIO, STYLE, Musica
-from texto.main import Texto
+.. codeauthor:: Isabel Hortencia  <hortencia.garnica@nce.urj.br>
 
-CENAINICIO = "https://i.imgur.com/mbt7XHq.png"
-PLAY = "https://i.imgur.com/QiiOf5O.png"
-FUNDO= "https://i.imgur.com/cdMKAka.png"
-PERGUNTA = "https://i.imgur.com/fYmNuBj.png"
-STYLE ["width"] = 1340
-STYLE ["height"] = "600px"
+Changelog
+---------
+.. versionadded::    16.07
+       Pagina inicial do Game
+"""
+class Kwarwp():
+    """ Jogo para ensino de programação.
 
-class gameInicio:
-    # O jogo começa aqui
-    def __init__(self):
-        gameInicio = Cena(CENAINICIO)
-        gameInicio.vai()
-        dark = Elemento("",style=dict(width="1345px",height="600px"),cena=gameInicio)
-        self.play = Elemento(PLAY, x=570, y=470,w=100,h=100, cena=gameInicio, vai = self.redimensiona)
-    
-    def redimensiona(self,ev=0):
-        redi = Cena()
-        redi.vai = self.q2
-        question = Cena(FUNDO, direita = redi)
-        question.vai()
-        self.valeu = Elemento(PERGUNTA, x=200, y=200,w=250,h=150, cena=question, vai = self.q2)
+        :param vitollino: Empacota o engenho de jogo Vitollino.
+    """
+    OCA = "https://i.imgur.com/dZQ8liT.jpg"
+    INDIO = "https://imgur.com/8jMuupz.png"
+    SOLO = "https://i.imgur.com/sGoKfvs.jpg"
+    TORA = "https://imgur.com/ldI7IbK.png"
+    PICHE = "https://imgur.com/tLLVjfN.png"
+    CEU = "https://i.imgur.com/UAETaiP.gif"
+    SOL = "https://i.imgur.com/PfodQmT.gif"
+    #CERCA =  "https://i.imgur.com/uwYPNlz.png"
 
-    def q2(self):
-        pass
+    def __init__(self, vitollino=None, cenario="default"):
+        self.v = vitollino()
+        self.cena = self.cria(cenario=cenario) if vitollino else None
 
-gameInicio()
+    def cria(self, cenario="default"):
+        """ Cria o ambiente de programação Kwarwp."""
+        cena = self.v.c(self.SOLO)
+        indio = self.v.a(self.INDIO, w=100, h=100, x=300, y=400, cena=cena)
+        oca = self.v.a(self.OCA, w=100, h=100, x=500, y=100, cena=cena)
+        tora = self.v.a(self.TORA, w=100, h=100, x=100, y=400, cena=cena)
+        piche = self.v.a(self.PICHE, w=100, h=100, x=100, y=100, cena=cena)
+        piche = self.v.a(self.CEU, w=600, h=100, x=0, y=0, cena=cena)
+        sol = self.v.a(self.SOL, w=60, h=60, x=0, y=40, cena=cena)
+        cena.vai()
+        return cena
+        
+if __name__ == "__main__":
+    Kwarwp()  # .vai() a classe gameInicio não tem o método vai
+    #gameInicio()
