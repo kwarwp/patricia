@@ -34,3 +34,7 @@ Exception: <TypeError: Cannot read property 'charAt' of undefined>
                            ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Jul 30 2020 16:48:25.568 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: Cannot read property 'charAt' of undefined>
+'''},
