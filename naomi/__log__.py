@@ -375,3 +375,10 @@ AttributeError: 'Card' object has no attribute 'Game'
                 ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Jul 30 2020 15:45:07.94 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 35
+  tora = self.v.a(self.TORA, w=100, h=100, x=100, y=400, cena=cena)
+  ^
+IndentationError: unexpected indent
+'''},
