@@ -24,7 +24,7 @@ class Kwarwp():
     CEU = "https://i.imgur.com/UAETaiP.gif"
     SOL = "https://i.imgur.com/PfodQmT.gif"
     
-    def __init__(self, vitollino=Nome, cenario="default"):
+    def __init__(self, vitollino=None, cenario="default"):
         self.V = vitollino()
         self.cena = self.cria(cenario=cenario) if vitollino else None
     def cria(self, cenario="default"):
