@@ -11,7 +11,7 @@ Changelog
 
 """
 
-from _spy.vitollino.main import Cena, Elemento
+from _spy.vitollino.main import Jogo, Style
 
 class Kwarwp():
     """ Jogo para ensino de programação.
@@ -26,7 +26,7 @@ class Kwarwp():
     CEU = "https://i.imgur.com/UAETaiP.gif"
     SOL = "https://i.imgur.com/PfodQmT.gif"
     
-from _spy.vitollino.main import Cena, Elemento, STYLE
+from _spy.vitollino.main import Cena, Elemento, jogo
 class Kwarwp():
 
     """ Jogo para ensino de programação.
