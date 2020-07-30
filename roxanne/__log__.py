@@ -798,3 +798,10 @@ SyntaxError: invalid syntax
     Kwarwp(vitollino)
 NameError: name 'vitollino' is not defined
 '''},
+{'date': 'Thu Jul 30 2020 15:31:44.360 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 9
+  GLIFOS = {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ^
+SyntaxError: invalid syntax
+'''},
