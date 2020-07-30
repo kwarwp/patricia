@@ -45,5 +45,5 @@ class Kwarwp():
         cena.vai()
         return cena
         
-if __name__ : "__main__":
+if __name__ == "__main__":
     Kwarwp(Jogo)
