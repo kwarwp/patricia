@@ -3,12 +3,13 @@
 
 """ Projeto KWARWP, (aprendendo através do exemplo do KWARWP - etapa do piche).
 
-.. codeauthor:: Claudia Motta <claudiam@nce.ufrj.br> """
-
+.. codeauthor:: Claudia Motta <claudiam@nce.ufrj.br> 
+"""
 Changelog
 ---------
 .. versionadded::    20.07
         Descreva o que você adicionou no código.
+    """
 
 class Kwarwp():
     """ Jogo para ensino de programação.
