@@ -1950,3 +1950,10 @@ AttributeError: 'Jogo' object has no attribute 'cenauthor'
     self.texto_castelo.foi = self.cenauthor.vai
 AttributeError: 'Jogo' object has no attribute 'cenauthor'
 '''},
+{'date': 'Thu Jul 30 2020 15:48:07.568 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 24
+  class Kwarwp():
+                 ^
+IndentationError: expected an indented block
+'''},
