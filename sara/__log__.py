@@ -231,3 +231,10 @@ SyntaxError: invalid syntax
     self.v = vitollino()
 TypeError: 'NoneType' object is not callable
 '''},
+{'date': 'Thu Jul 30 2020 15:57:28.55 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 14
+  from _spy.vitollino.main
+                          ^
+SyntaxError: invalid syntax
+'''},
