@@ -629,3 +629,10 @@ TypeError: 'module' object is not callable
     self.cena = self.cria(mapa=mapa) if vitollino else None
 TypeError: cria() got an unexpected keyword argument 'mapa'
 '''},
+{'date': 'Thu Jul 30 2020 17:17:48.412 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 36
+  GLIFOS = {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ^
+SyntaxError: invalid syntax
+'''},
