@@ -12,7 +12,7 @@ Changelog
         Tentativa de ação sobre o kwarwp 
 
 """
-from _spy.vitollino.main import Elemento, Cena, STYLE
+from _spy.vitollino.main import Jogo.a, Jogo.c, STYLE
 
 ['WIDTH'] = 600
 
@@ -34,7 +34,10 @@ class Kwarwp():
         self.cena = self.cria(cenario=cenario) if vitollino else None
 
     def cria(self, cenario="default"):
-        """ Cria o ambiente de programação Kwarwp."""
+        """ Cria o ambiente de programação Kwarwp.
+            Jogo.c: Equivale a chamar uma Cena importada do Vitollino
+            Jogo.a: Equivale a chamar um Elemento importado do Vitollino
+        """
         cena = self.v.c(self.SOLO)
         indio = self.v.a(self.INDIO, w=100, h=100, x=300, y=400, cena=cena)
         oca = self.v.a(self.OCA, w=100, h=100, x=500, y=100, cena=cena)
