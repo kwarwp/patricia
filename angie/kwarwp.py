@@ -1,18 +1,15 @@
 # patricia.angie.kwarwp.py
 # SPDX-License-Identifier: GPL-3.0-or-later
-""" Projeto sem descrição, (mude esta linha).
+""" Projeto Kwarwp
 
-.. codeauthor:: Nome Sobrenome <mail@local.tipo>
+.. codeauthor:: Monica Novellino <monicanovellino@gmail.com>
 
 Changelog
 ---------
 .. versionadded::    20.07
-        Descreva o que você adicionou no código.
+        Montando o jogo pela primeira vez
 
 """
-
-from vitollino import jogo
-
 class Kwarwp():
     """ Jogo para ensino de programação.
 
