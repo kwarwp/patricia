@@ -199,3 +199,10 @@ TypeError: __init__() takes 0 positional argument but more were given
     Calcada().vai()
 TypeError: __init__() takes 0 positional argument but more were given
 '''},
+{'date': 'Thu Jul 30 2020 15:52:23.135 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 14
+  from _spy.vitollino as v
+                       ^
+SyntaxError: invalid syntax
+'''},
