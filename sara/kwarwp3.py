@@ -8,6 +8,7 @@ Changelog
 ---------
 .. versionadded::    20.07
         Criando o jogo Kwarwp 3 usando o Vitolino.
+        Desafio da definição do Mapa
 
 """
 
