@@ -368,3 +368,10 @@ TypeError: object() takes no parameters
     self.Game.previous_selected_card("click",self.turnUp)
 AttributeError: 'Card' object has no attribute 'Game'
 '''},
+{'date': 'Thu Jul 30 2020 15:44:50.424 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 30
+  if vitollino else None
+                ^
+SyntaxError: invalid syntax
+'''},
