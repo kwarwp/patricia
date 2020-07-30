@@ -297,3 +297,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Thu Jul 30 2020 16:48:29.515 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 57
+  self.lado, self.col = 100, len(mapa[0])
+  ^
+IndentationError: unexpected indent
+'''},
