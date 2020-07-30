@@ -10,6 +10,11 @@ Changelog
         Descreva o que você adicionou no código.
 
 """
+from _spy.vitollino.main import Cena,Elemento,Texto, STYLE
+
+STYLE["width"] = 1010
+STYLE["heigth"] = "500px"
+
 MAPA_INICIO ="""
 @....&
 ......
