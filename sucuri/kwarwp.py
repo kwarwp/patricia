@@ -1,17 +1,19 @@
 # patricia.sucuri.kwarwp.py
 # SPDX-License-Identifier: GPL-3.0-or-later
-""" Implementação Kwarwp.
+""" IMplementação Kwarwp.
 
-.. version:: 20.0.0
-
-.. codeauthor:: Emanuelle Simas <ellesimas>
+.. codeauthor:: Emanuelle Simas <ellesimas@gmail.com>
 
 Changelog
 ---------
 .. versionadded::    20.07
-        Tentativa de ação sobre o kwarwp 
+        Cria classe Kwarwp
 
 """
+from _spy.vitollino.main import Jogo
+from _spy.vitollino.main import STYLE
+["WIDHT"] = 600
+["HEIGHT"] = "500px"
 
 
 class Kwarwp():
@@ -32,10 +34,7 @@ class Kwarwp():
         self.cena = self.cria(cenario=cenario) if vitollino else None
 
     def cria(self, cenario="default"):
-        """ Cria o ambiente de programação Kwarwp.
-            Jogo.c: Equivale a chamar uma Cena importada do Vitollino
-            Jogo.a: Equivale a chamar um Elemento importado do Vitollino
-        """
+        """ Cria o ambiente de programação Kwarwp."""
         cena = self.v.c(self.SOLO)
         indio = self.v.a(self.INDIO, w=100, h=100, x=300, y=400, cena=cena)
         oca = self.v.a(self.OCA, w=100, h=100, x=500, y=100, cena=cena)
@@ -46,8 +45,5 @@ class Kwarwp():
         cena.vai()
         return cena
         
-if __name__ == "__main__":
-    from _spy.vitollino.main import Jogo, STYLE
-    STYLE["width"] = 600
-    style["heigth"] = 500
+if __name__ : "__main__":
     Kwarwp(Jogo)
