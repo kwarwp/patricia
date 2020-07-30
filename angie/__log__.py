@@ -482,3 +482,10 @@ AttributeError: 'GUI' object has no attribute 'link_balao2'
     vai()
 TypeError: vai() missing 1 positional argument: self
 '''},
+{'date': 'Thu Jul 30 2020 14:59:09.244 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 42
+  self.v = vitollino()
+  ^
+IndentationError: expected an indented block
+'''},
