@@ -1,7 +1,4 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
-
-
-
 class Kwarwp():
     """ Jogo para ensino de programação.
 
@@ -25,17 +22,36 @@ class Kwarwp():
         cena = self.v.c(self.SOLO)
         indio = self.v.a(self.INDIO, w=100, h=100, x=300, y=400, cena=cena)
         oca = self.v.a(self.OCA, w=100, h=100, x=500, y=100, cena=cena)
-        tora = self.v.a(self.TORA, w=100, h=100, x=250, y=250, cena=cena)
+        tora = self.v.a(self.TORA, w=100, h=100, x=100, y=250, cena=cena)
         piche = self.v.a(self.PICHE, w=100, h=100, x=0, y=100, cena=cena)
         ceu = self.v.a(self.CEU, w=600, h=100, x=0, y=0, cena=cena)
         sol = self.v.a(self.SOL, w=60, h=60, x=0, y=40, cena=cena)
-        cerca = self.v.a(self.CERCA, w=100, h=100, x=250, y=50, cena=cena)
-        cerca = self.v.a(self.CERCA, w=100, h=100, x=250, y=150, cena=cena)
-        cerca = self.v.a(self.CERCA, w=100, h=100, x=250, y=300, cena=cena)
-        cerca = self.v.a(self.CERCA, w=100, h=100, x=250, y=400, cena=cena)
-        cerca = self.v.a(self.CERCA, w=100, h=100, x=150, y=500, cena=cena)
-        cerca = self.v.a(self.CERCA, w=100, h=100, x=150, y=500, cena=cena)
+        cerca = self.v.a(self.CERCA, w=100, h=100, x=300, y=100, cena=cena)
+        cerca = self.v.a(self.CERCA, w=100, h=100, x=300, y=200, cena=cena)
+        cerca = self.v.a(self.CERCA, w=100, h=100, x=300, y=300, cena=cena)
+        cerca = self.v.a(self.CERCA, w=100, h=100, x=300, y=400, cena=cena)
+        
+        cerca = self.v.a(self.CERCA, w=100, h=100, x=500, y=500, cena=cena)
+        cerca = self.v.a(self.CERCA, w=100, h=100, x=400, y=500, cena=cena)
+        cerca = self.v.a(self.CERCA, w=100, h=100, x=300, y=500, cena=cena)
+        cerca = self.v.a(self.CERCA, w=100, h=100, x=200, y=500, cena=cena)
+        cerca = self.v.a(self.CERCA, w=100, h=100, x=100, y=500, cena=cena)
+        
         cerca = self.v.a(self.CERCA, w=100, h=100, x=0, y=500, cena=cena)
+        cerca = self.v.a(self.CERCA, w=100, h=100, x=0, y=400, cena=cena)
+        cerca = self.v.a(self.CERCA, w=100, h=100, x=0, y=300, cena=cena)
+        cerca = self.v.a(self.CERCA, w=100, h=100, x=0, y=200, cena=cena)
+        cerca = self.v.a(self.CERCA, w=100, h=100, x=0, y=100, cena=cena)
+        
+        cerca = self.v.a(self.CERCA, w=100, h=100, x=100, y=100, cena=cena)
+        cerca = self.v.a(self.CERCA, w=100, h=100, x=200, y=100, cena=cena)
+        cerca = self.v.a(self.CERCA, w=100, h=100, x=400, y=100, cena=cena)
+        cerca = self.v.a(self.CERCA, w=100, h=100, x=500, y=100, cena=cena)
+        
+        cerca = self.v.a(self.CERCA, w=100, h=100, x=500, y=200, cena=cena)
+        cerca = self.v.a(self.CERCA, w=100, h=100, x=500, y=300, cena=cena)
+        cerca = self.v.a(self.CERCA, w=100, h=100, x=500, y=400, cena=cena)
+        cerca = self.v.a(self.CERCA, w=100, h=100, x=500, y=500, cena=cena)
         
         cena.vai()
         return cena
