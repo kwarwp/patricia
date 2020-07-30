@@ -382,3 +382,10 @@ SyntaxError: invalid syntax
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Thu Jul 30 2020 15:45:34.72 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 35
+  tora = self.V.a(self.TORA, w=100, h=100, x=100, y=400, cena=cena)
+  ^
+IndentationError: unexpected indent
+'''},
