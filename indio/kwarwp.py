@@ -37,7 +37,7 @@ class Kwarwp():
         piche = self.v.a(self.PICHE, w=100, h=100, x=100, y=100, cena=cena)
         piche = self.v.a(self.CEU, w=600, h=100, x=0, y=0, cena=cena)
         sol = self.v.a(self.SOL, w=60, h=60, x=0, y=40, cena=cena)
-        cerca = self.v.a(self.CERCA, w=60, h=60, x=0, y=40, cena=cena)
+        cerca = self.v.a(self.CERCA, w=60, h=60, x=0, y=500, cena=cena)
         cena.vai()
         return cena
         
