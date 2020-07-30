@@ -1,5 +1,6 @@
 # patricia.roxanne.kwarwp.py
 # SPDX-License-Identifier: GPL-3.0-or-later
+
 """ 
 Meu Kwarwp
 .. codeauthor:: Isaac D'Césares <isaac.dcesares@gmail.com>
@@ -16,6 +17,7 @@ MAPA_INICIO = """
 %^.%..%
 %%%%%%%
 """
+
 
 class Kwarwp():
     """ Arena onde os desafios ocorrem.
