@@ -11,7 +11,6 @@ Changelog
 
 """
 
-from _spy.vitollino as v
 
 class Kwarwp():
     """ Jogo para ensino de programação.
@@ -42,5 +41,6 @@ class Kwarwp():
         cena.vai()
         return cena
 
-Kwarwp().cria()
+if __name__ == "__main__":
+    Kwarwp().cria()
 
