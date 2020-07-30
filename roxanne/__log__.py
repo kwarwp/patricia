@@ -805,3 +805,10 @@ NameError: name 'vitollino' is not defined
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Jul 30 2020 15:32:14.640 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 9
+  GLIFOS = {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ^
+SyntaxError: invalid syntax
+'''},
