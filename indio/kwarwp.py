@@ -10,13 +10,29 @@ Changelog
         Descreva o que você adicionou no código.
 
 """
+
+from _spy.vitollino.main import Cena, Elemento
+
+class Kwarwp():
     """ Jogo para ensino de programação.
 
         :param vitollino: Empacota o engenho de jogo Vitollino.
     """
-from _spy.vitollino.main import Cena, Elemento
-
+    OCA = "https://i.imgur.com/dZQ8liT.jpg"
+    INDIO = "https://imgur.com/8jMuupz.png"
+    SOLO = "https://i.imgur.com/sGoKfvs.jpg"
+    TORA = "https://imgur.com/ldI7IbK.png"
+    PICHE = "https://imgur.com/tLLVjfN.png"
+    CEU = "https://i.imgur.com/UAETaiP.gif"
+    SOL = "https://i.imgur.com/PfodQmT.gif"
+    
+from _spy.vitollino.main import Cena, Elemento, STYLE
 class Kwarwp():
+
+    """ Jogo para ensino de programação.
+
+        :param vitollino: Empacota o engenho de jogo Vitollino.
+    """
     OCA = "https://i.imgur.com/dZQ8liT.jpg"
     INDIO = "https://imgur.com/8jMuupz.png"
     SOLO = "https://i.imgur.com/sGoKfvs.jpg"
