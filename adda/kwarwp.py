@@ -18,12 +18,11 @@ MAPA_INICIO = """
 .#.^..
 """
 MAPA_ROCHA = """
-++++++++
-+@....&+
-+......+
-+......+
-+.#.^..+
-++++++++
++++++++
++..+..&
++..#..+
++^.+..+
++++++++
 """
 
 
@@ -40,17 +39,18 @@ class Kwarwp():
     "#": "https://imgur.com/ldI7IbK.png",  # TORA 
     "@": "https://imgur.com/tLLVjfN.png",  # PICHE 
     "~": "https://i.imgur.com/UAETaiP.gif",  # CEU 
-    "*": "https://i.imgur.com/PfodQmT.gif"  # SOL 
+    "*": "https://i.imgur.com/PfodQmT.gif",  # SOL 
+    "+": "https://i.imgur.com/uwYPNlz.png"  # CERCA 
     }
     def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
         self.v = vitollino()
         """Cria um matriz com os elementos descritos em cada linha de texto"""
         mapa = mapa.split()
         """Largura da casa da arena dos desafios, número de colunas no mapa"""
-        self.lado, self.col = 100, len(mapa[0])
+        self.lado, self.col = 600//8, len(mapa[0])
         self.cena = self.cria(mapa=mapa) if vitollino else None
 
-    def cria(self, cenario="default"):
+    def cria(self, mapa="default"):
         """ Cria o ambiente de programação Kwarwp."""
         """Cria um cenário com imagem de terra de chão batido, céu e sol"""
         lado = self.lado
@@ -71,4 +71,4 @@ if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
     STYLE["width"] = 600
     STYLE["height"] = "600px"
-    Kwarwp(Jogo)
+    Kwarwp(Jogo, mapa=MAPA_ROCHA, medidas=STYLE)
