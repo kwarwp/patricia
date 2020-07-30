@@ -1,8 +1,9 @@
 MAPA_INICIO = """
-@....&
-%.....
-%.....
-%#.^..
+%%%%%%%
+%..%..&
+%.....%
+%^.%..%
+%%%%%%%
 """
 
 
@@ -20,8 +21,8 @@ class Kwarwp():
     "#": "https://imgur.com/ldI7IbK.png",  # TORA
     "@": "https://imgur.com/tLLVjfN.png",  # PICHE
     "~": "https://i.imgur.com/UAETaiP.gif",  # CEU
-    "*": "https://i.imgur.com/PfodQmT.gif",  # SOL
-    "%": "https://i.imgur.com/uwYPNlz.png"  # CERCA
+    "*": "https://i.imgur.com/PfodQmT.gif"  # SOL
+	"%": "https://i.imgur.com/uwYPNlz.png"  # CERCA
     }
     
     def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
