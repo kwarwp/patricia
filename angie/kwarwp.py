@@ -11,25 +11,11 @@ Changelog
 
 """
 
-from _spy.vitollino.main import Cena, Elemento, STYLE, Jogo
-
 class Kwarwp():
     """ Jogo para ensino de programação.
 
         :param vitollino: Empacota o engenho de jogo Vitollino.
     """
-    
-    GLIFOS = {
-"&": "https://i.imgur.com/dZQ8liT.jpg",  # OCA ⛺
-"^": "https://imgur.com/8jMuupz.png",  # INDIO 
-".": "https://i.imgur.com/npb9Oej.png",  # VAZIO 
-"_": "https://i.imgur.com/sGoKfvs.jpg",  # SOLO 
-"#": "https://imgur.com/ldI7IbK.png",  # TORA 
-"@": "https://imgur.com/tLLVjfN.png",  # PICHE 
-"~": "https://i.imgur.com/UAETaiP.gif",  # CEU 
-"*": "https://i.imgur.com/PfodQmT.gif"  # SOL ☀
-}
-
     OCA = "https://i.imgur.com/dZQ8liT.jpg"
     INDIO = "https://imgur.com/8jMuupz.png"
     SOLO = "https://i.imgur.com/sGoKfvs.jpg"
@@ -53,3 +39,4 @@ class Kwarwp():
         sol = self.v.a(self.SOL, w=60, h=60, x=0, y=40, cena=cena)
         cena.vai()
         return cena
+        
