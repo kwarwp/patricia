@@ -236,3 +236,9 @@ TypeError: 'NoneType' object is not callable
                    ^
 SyntaxError: Unbalanced bracket (
 '''},
+{'date': 'Thu Jul 30 2020 16:13:56.325 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: Cannot read property '__class__' of undefined
+  module '$exec_2048' line 16
+class Kwarwp():
+'''},
