@@ -59,7 +59,7 @@ class Kwarwp():
     def cria(self, cenario="default"):
         """ Cria o ambiente de programação Kwarwp."""
         cena = self.v.c(self.SOLO)
-        indio = self.v.a(self.INDIO, w=100, h=100, x=50, y=400, cena=cena)
+        indio = self.v.a(self.INDIO, w=100, h=100, x=100, y=400, cena=cena)
         oca = self.v.a(self.OCA, w=100, h=100, x=500, y=100, cena=cena)
         tora = self.v.a(self.TORA, w=100, h=100, x=300, y=300, cena=cena)
         piche = self.v.a(self.PICHE, w=100, h=100, x=100, y=100, cena=cena)
