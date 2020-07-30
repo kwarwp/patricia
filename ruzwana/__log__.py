@@ -358,3 +358,10 @@ Exception: <SyntaxError: Unexpected token )>
 'error': '''
 Exception: <SyntaxError: Unexpected token )>
 '''},
+{'date': 'Thu Jul 30 2020 17:05:14.290 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 72
+  return self.v.a(self.GLIFOS[imagem], w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena
+                                                                                                                                   ^
+SyntaxError: invalid syntax
+'''},
