@@ -11,6 +11,7 @@ Changelog
 
 """
 
+from _spy.vitollino.main
 
 class Kwarwp():
     """ Jogo para ensino de programação.
