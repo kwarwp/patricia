@@ -5,6 +5,7 @@
 
 .. codeauthor:: Claudia Motta <claudiam@nce.ufrj.br> 
 """
+"""
 Changelog
 ---------
 .. versionadded::    20.07
