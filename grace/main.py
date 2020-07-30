@@ -11,10 +11,19 @@ Changelog
         Descreva o que você adicionou no código.
 """
 
+from _spy.vitollino.main import Cena, Elemento, INVENTARIO, STYLE, Musica
+from bravo.india import teste
+#from bravo.juliet import oi
+#from bravo.hotel import cena
+
+
 class Kwarwp():
     """ Jogo para ensino de programação.
 
         :param vitollino: Empacota o engenho de jogo Vitollino.
+    """
+    """
+    IMAGENS
     """
     OCA = "https://i.imgur.com/dZQ8liT.jpg"
     INDIO = "https://imgur.com/8jMuupz.png"
