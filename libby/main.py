@@ -8,10 +8,6 @@ MAPA_INICIO = """
 """
 
 class Kwarwp():
-    """ Jogo para ensino de programação.
-
-        :param vitollino: Empacota o engenho de jogo Vitollino.
-    """
     GLIFOS = {
     OCA = "https://i.imgur.com/dZQ8liT.jpg"
     INDIO = "https://imgur.com/8jMuupz.png"
