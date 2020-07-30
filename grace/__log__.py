@@ -37,3 +37,10 @@ Traceback (most recent call last):
                                                                                                                                                                                                                                                                    ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Jul 30 2020 15:33:06.809 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 9
+  ---------
+            ^
+SyntaxError: invalid syntax
+'''},
