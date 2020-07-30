@@ -11,7 +11,7 @@ Changelog
 
 """
 
-from Vitollino import Jogo
+from _spy.vitollino.main import Cena, Elemento, STYLE, Jogo
 
 class Kwarwp():
     """ Jogo para ensino de programação.
