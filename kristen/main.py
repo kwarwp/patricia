@@ -27,7 +27,7 @@ class Eventos:
         self.ambiente = Cena(self.CENA_corredor_1)
         self.pos_x = 100
         self.pos_y = 40
-        self.boneco = Elemento(self.BONECO, x=self.pos_x, y=self.pos_y, width, height, cena=self.ambiente)
+        self.boneco = Elemento(self.BONECO, x = self.pos_x, y = self.pos_y, width, height, cena = self.ambiente)
         
         document.bind("keydown", self.anda_boneco)  # captura o evento de teclado
            
