@@ -10,8 +10,6 @@ Changelog
         Descreva o que você adicionou no código.
 
 """
-
-
 class Kwarwp():
     """ Jogo para ensino de programação.
 
