@@ -155,3 +155,10 @@ AttributeError: 'Kwarwp' object has no attribute 'SOLO'
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Thu Jul 30 2020 15:23:34.868 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 39
+  def cria_elemento(self, x, y, cena):
+  ^
+IndentationError: unexpected indent
+'''},
