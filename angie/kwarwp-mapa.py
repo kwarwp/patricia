@@ -17,14 +17,20 @@ MAPA_INICIO = """
 .#.^..
 """
     
-MAPA_ROCHA = """
+MAPA_CERCA = """
 ++++++
 .....&
 ......
-.#.^..
+...^..
 ++++++
 """
-
+MAPA_ROCHA = """
+++++++
++....&
++....#
++^...#
+++++++
+"""
 
 class Kwarwp():
     """ Jogo para ensino de programação.
