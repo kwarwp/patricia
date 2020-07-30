@@ -141,3 +141,10 @@ TypeError: object() takes no parameters
     Kwarwp(Jogo)
 TypeError: object() takes no parameters
 '''},
+{'date': 'Thu Jul 30 2020 17:06:35.647 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 45
+  def cria(self, mapa="  "):
+  ^
+IndentationError: unexpected indent
+'''},
