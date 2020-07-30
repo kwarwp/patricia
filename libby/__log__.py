@@ -148,3 +148,10 @@ SyntaxError: invalid syntax
     cena = self.v.c(self.SOLO)
 AttributeError: 'Kwarwp' object has no attribute 'SOLO'
 '''},
+{'date': 'Thu Jul 30 2020 15:23:14.219 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 41
+  lado = self.lado
+  ^
+IndentationError: expected an indented block
+'''},
