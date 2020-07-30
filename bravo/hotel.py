@@ -41,7 +41,7 @@ class cena:
         codigo2 = Elemento (img="https://i.imgur.com/ccJqbMb.png", tit="CLICK", style=dict(left=620, top=350, width=500, height="200px"))
         """ Imagem que faz a pergunta"""
         pergunta = Elemento (img= "https://i.imgur.com/fYmNuBj.png", style=dict(left=450, top=180, width=250, height="150px"))
-	  """ Imagem que direciona para outra imagem"""
+""" Imagem que direciona para outra imagem"""
         siga = Elemento (img="https://i.imgur.com/kRmXNkz.png", style=dict(left=540, top=480, width=150, height="150px"))
         codigo1.entra(fundo)
         codigo2.entra(fundo)
