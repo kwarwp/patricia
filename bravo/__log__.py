@@ -2957,3 +2957,10 @@ ImportError: cannot import name 'oi'
     oi.vai()
 TypeError: vai missing 1 positional argument: 'self'
 '''},
+{'date': 'Thu Jul 30 2020 11:18:10.801 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 44
+  """ Imagem que direciona para outra imagem"""
+  ^
+IndentationError: unexpected indent
+'''},
