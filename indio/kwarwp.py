@@ -70,6 +70,8 @@ if __name__ == "__main__":
         self.window = win
         self.timer = timer
         pass
+        
+        STYLE["width"/"height"]-> Altera a resolução do cenário do jogo  
     """
     STYLE["width"] = 600
     STYLE["height"] = "500px"
