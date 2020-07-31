@@ -24,12 +24,12 @@ class Kwarwp():
     CEU = "https://i.imgur.com/UAETaiP.gif"
     SOL = "https://i.imgur.com/PfodQmT.gif"
     CERCA = "https://i.imgur.com/uwYPNlz.png"
-    def __init__(self, vitollino=None, acenario="default"):
+    def __init__(self, vitollino=None, cenario_padrao="default"):
         """
         Contrutor da classe que permite a declaração dos parâmetros iniciais.
         """
         self.v = vitollino()
-        self.cena = self.cria(cenario=acenario) if vitollino else None
+        self.cena = self.cria(cenario=cenario_padrao) if vitollino else None
 
     def cria(self, cenario="default"):
         """
