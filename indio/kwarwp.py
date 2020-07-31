@@ -48,6 +48,29 @@ class Kwarwp():
         
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
+    """
+    class Jogo:
+    def __init__(self):
+        self.c = Cena
+        self.d = self.codigo = Codigo
+        self.q = Sala
+        self.salao = self.s = Salao
+        self.a = Elemento
+        self.texto = self.t = Popup
+        self.n = Texto
+        self.labirinto = self.l = Labirinto
+        self.inventario = self.i = INVENTARIO
+        self.portal = self.p = Portal
+        self.dropper = self.d = Dropper
+        self.droppable = self.r = Droppable
+        self.musica = self.m = Musica
+        self.codigo = Codigo
+        self.document = document
+        self.html = html
+        self.window = win
+        self.timer = timer
+        pass
+    """
     STYLE["width"] = 600
     STYLE["height"] = "500px"
     Kwarwp(Jogo)
