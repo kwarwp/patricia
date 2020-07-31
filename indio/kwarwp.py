@@ -74,6 +74,6 @@ if __name__ == "__main__":
         STYLE["width"/"height"] -> Altera a resolução do cenário do jogo
         STYLE["height"] = "500px"
     """
-    STYLE["width"] = 600
+    STYLE["width"] = "600px"
     STYLE["height"] = "500px"
     Kwarwp(Jogo)
