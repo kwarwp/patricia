@@ -16,6 +16,7 @@ class Kwarwp():
 
         :param vitollino: Empacota o engenho de jogo Vitollino.
     """
+    
     OCA = "https://i.imgur.com/dZQ8liT.jpg"
     INDIO = "https://imgur.com/8jMuupz.png"
     SOLO = "https://i.imgur.com/sGoKfvs.jpg"
@@ -24,12 +25,15 @@ class Kwarwp():
     CEU = "https://i.imgur.com/UAETaiP.gif"
     SOL = "https://i.imgur.com/PfodQmT.gif"
     CERCA = "https://i.imgur.com/uwYPNlz.png"
+    
     def __init__(self, vitollino=None, cenario="default"):
         self.v = vitollino()
         self.cena = self.cria(cenario=cenario) if vitollino else None
 
     def cria(self, cenario="default"):
-        """ Cria o ambiente de programação Kwarwp."""
+        """
+        Cria o ambiente de programação Kwarwp.
+        """
         cena = self.v.c(self.SOLO)
         indio = self.v.a(self.INDIO, w=100, h=100, x=300, y=400, cena=cena)
         oca = self.v.a(self.OCA, w=100, h=100, x=500, y=100, cena=cena)
