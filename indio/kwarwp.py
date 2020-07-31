@@ -29,7 +29,7 @@ class Kwarwp():
         Contrutor da classe que permite a declaração dos parâmetros iniciais.
         """
         self.v = vitollino()
-        self.cena = self.cria(cenario=cenario) if vitollino else None
+        #self.cena = self.cria(cenario=cenario) if vitollino else None
 
     def cria(self, cenario="default"):
         """
