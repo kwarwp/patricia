@@ -75,5 +75,5 @@ if __name__ == "__main__":
         STYLE["height"] = "500px"
     """
     STYLE["width"] = 600
-    STYLE["height"] = "300px"
+    STYLE["height"] = "100px"
     Kwarwp(Jogo)
