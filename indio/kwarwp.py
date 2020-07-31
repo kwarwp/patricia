@@ -8,7 +8,6 @@ Montagem orientada do Kwarwp do zero!
 Changelog
 ---------
 .. versionadded::    20.07
-        Descreva o que você adicionou no código.
 
 """
 
@@ -25,12 +24,17 @@ class Kwarwp():
     CEU = "https://i.imgur.com/UAETaiP.gif"
     SOL = "https://i.imgur.com/PfodQmT.gif"
     CERCA = "https://i.imgur.com/uwYPNlz.png"
-    def __init__(self, vitollino=None, cenario="default"):
+    def __init__(self, vitollino=None, acenario="default"):
+        """
+        Contrutor da classe que permite a declaração dos parâmetros iniciais.
+        """
         self.v = vitollino()
-        self.cena = self.cria(cenario=cenario) if vitollino else None
+        self.cena = self.cria(cenario=acenario) if vitollino else None
 
     def cria(self, cenario="default"):
-        """ Cria o ambiente de programação Kwarwp."""
+        """
+        Cria o ambiente de programação Kwarwp.
+        """
         cena = self.v.c(self.SOLO)
         indio = self.v.a(self.INDIO, w=100, h=100, x=300, y=400, cena=cena)
         oca = self.v.a(self.OCA, w=100, h=100, x=500, y=100, cena=cena)
@@ -43,35 +47,36 @@ class Kwarwp():
         return cena
         
 if __name__ == "__main__":
-    from _spy.vitollino.main import Jogo, STYLE
     """
-        class Jogo:
-            def __init__(self):
-                self.c = Cena
-                self.d = self.codigo = Codigo
-                self.q = Sala
-                self.salao = self.s = Salao
-                self.a = Elemento
-                self.texto = self.t = Popup
-                self.n = Texto
-                self.labirinto = self.l = Labirinto
-                self.inventario = self.i = INVENTARIO
-                self.portal = self.p = Portal
-                self.dropper = self.d = Dropper
-                self.droppable = self.r = Droppable
-                self.musica = self.m = Musica
-                self.codigo = Codigo
-                self.document = document
-                self.html = html
-                self.window = win
-                self.timer = timer
-                pass
+    class Jogo:
+        def __init__(self):
+            self.c = Cena
+            self.d = self.codigo = Codigo
+            self.q = Sala
+            self.salao = self.s = Salao
+            self.a = Elemento
+            self.texto = self.t = Popup
+            self.n = Texto
+            self.labirinto = self.l = Labirinto
+            self.inventario = self.i = INVENTARIO
+            self.portal = self.p = Portal
+            self.dropper = self.d = Dropper
+            self.droppable = self.r = Droppable
+            self.musica = self.m = Musica
+            self.codigo = Codigo
+            self.document = document
+            self.html = html
+            self.window = win
+            self.timer = timer
+            pass
         
     STYLE["width"] = 600 -> Altera o canvas do jogo largura da tela. Recebe int.
     STYLE["height"] = "500px" -> Altera o canvas do jogo altura da tela. Recebe str.
         
     Kwarwp(Jogo) -> Chama a Classe Kwarwp com o método Jogo da biblioteca Vitollino
     """
+    from _spy.vitollino.main import Jogo, STYLE
+
     STYLE["width"] = 600
     STYLE["height"] = "500px"
     Kwarwp(Jogo)
