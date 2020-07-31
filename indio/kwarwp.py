@@ -44,5 +44,5 @@ class Kwarwp():
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
     STYLE["width"] = 600
-    STYLE["height"] = "100px"
+    STYLE["height"] = "1px"
     Kwarwp(Jogo)
