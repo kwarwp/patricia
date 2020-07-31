@@ -146,3 +146,10 @@ NameError: name '__main__' is not defined
     divesq.style.width = width // 3  # 100
 TypeError: unsupported operand type(s) for //: 'str' and 'int'
 '''},
+{'date': 'Fri Jul 31 2020 18:46:45.359 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 47
+  STYLE["height"] = "300
+                        ^
+SyntaxError: EOL while scanning string literal
+'''},
