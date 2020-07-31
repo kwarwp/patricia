@@ -1,6 +1,7 @@
 # patricia.indio.kwarwp.py
 # SPDX-License-Identifier: GPL-3.0-or-later
-""" Projeto sem descrição, (mude esta linha).
+""" 
+Montagem orientada do Kwarwp do zero!
 
 .. codeauthor:: Rodrigo Esquinelato <resquinelato@gmail.com>
 
@@ -43,6 +44,34 @@ class Kwarwp():
         
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
+    """
+        class Jogo:
+            def __init__(self):
+                self.c = Cena
+                self.d = self.codigo = Codigo
+                self.q = Sala
+                self.salao = self.s = Salao
+                self.a = Elemento
+                self.texto = self.t = Popup
+                self.n = Texto
+                self.labirinto = self.l = Labirinto
+                self.inventario = self.i = INVENTARIO
+                self.portal = self.p = Portal
+                self.dropper = self.d = Dropper
+                self.droppable = self.r = Droppable
+                self.musica = self.m = Musica
+                self.codigo = Codigo
+                self.document = document
+                self.html = html
+                self.window = win
+                self.timer = timer
+                pass
+        
+    STYLE["width"] = 600 -> Altera o canvas do jogo largura da tela. Recebe int.
+    STYLE["height"] = "500px" -> Altera o canvas do jogo altura da tela. Recebe str.
+        
+    Kwarwp(Jogo) -> Chama a Classe Kwarwp com o método Jogo da biblioteca Vitollino
+    """
     STYLE["width"] = 600
     STYLE["height"] = "500px"
     Kwarwp(Jogo)
