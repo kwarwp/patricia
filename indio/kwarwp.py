@@ -1,6 +1,7 @@
 # patricia.indio.kwarwp.py
 # SPDX-License-Identifier: GPL-3.0-or-later
-""" Projeto sem descrição, (mude esta linha).
+"""
+Projeto sem descrição, (mude esta linha).
 
 .. codeauthor:: Rodrigo Esquinelato <resquinelato@gmail.com>
 
