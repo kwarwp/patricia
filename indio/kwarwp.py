@@ -48,6 +48,10 @@ class Kwarwp():
         Gera um elemento do jogo chamano **self.v.a** chamado pelo módulo do Jogo do Vitollino criando a classe Elemento com os seguintes parâmetros:
         
             >> (self."url", w=largura_img, h=altura_img, x=canvas_x, y=canvas_y, cena="url")
+            .
+            >> cena.vai()
+        
+        Retorna a cena para o canvas com o método .vai do vitollino
         """
         cena = self.v.c(self.SOLO)
         indio = self.v.a(self.INDIO, w=100, h=100, x=300, y=400, cena=cena)
