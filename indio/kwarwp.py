@@ -63,14 +63,14 @@ class Kwarwp():
         Retorna a cena para o canvas com o método .vai do vitollino
         """
         cena = self.v.c(self.SOLO)
-        indio = self.v.a(self.INDIO, w=100, h=100, x=300, y=400, cena=cena)
-        oca = self.v.a(self.OCA, w=100, h=100, x=500, y=100, cena=cena)
-        tora = self.v.a(self.TORA, w=100, h=100, x=100, y=400, cena=cena)
-        piche = self.v.a(self.PICHE, w=100, h=100, x=100, y=100, cena=cena)
-        piche = self.v.a(self.CEU, w=600, h=100, x=0, y=0, cena=cena)
-        sol = self.v.a(self.SOL, w=60, h=60, x=0, y=40, cena=cena)
+        indio = self.v.a(self.GLIFOS[""], w=100, h=100, x=300, y=400, cena=cena)
+        oca = self.v.a(self.GLIFOS["&"], w=100, h=100, x=500, y=100, cena=cena)
+        tora = self.v.a(self.GLIFOS[""], w=100, h=100, x=100, y=400, cena=cena)
+        piche = self.v.a(self.GLIFOS[""], w=100, h=100, x=100, y=100, cena=cena)
+        piche = self.v.a(self.GLIFOS[""], w=600, h=100, x=0, y=0, cena=cena)
+        sol = self.v.a(self.GLIFOS[""], w=60, h=60, x=0, y=40, cena=cena)
         for _ in range (4):
-            cerca = self.v.a(self.CERCA, w=100, h=100, x=0, y=(_*100)+100, cena=cena)
+            cerca = self.v.a(self.GLIFOS[""], w=100, h=100, x=0, y=(_*100)+100, cena=cena)
         cena.vai()
         return cena
         
