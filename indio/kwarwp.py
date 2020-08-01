@@ -61,6 +61,8 @@ class Kwarwp():
         piche = self.v.a(self.CEU, w=600, h=100, x=0, y=0, cena=cena)
         sol = self.v.a(self.SOL, w=60, h=60, x=0, y=40, cena=cena)
         cerca = self.v.a(self.CERCA, w=100, h=100, x=0, y=400, cena=cena)
+        for _ in range (3):
+            cerca = self.v.a(self.CERCA, w=100, h=100, x=0, y= (_*100), cena=cena)
         cena.vai()
         return cena
         
