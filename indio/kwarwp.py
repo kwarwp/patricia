@@ -27,12 +27,25 @@ class Kwarwp():
     "*": "https://i.imgur.com/PfodQmT.gif"  # SOL ☀
     }
     
-    def __init__(self, vitollino=None, cenario_padrao="default"):
+    MAPA_INICIO = """
+    @....&
+    ......
+    ......
+    .#.^..
+    """
+    
+    def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
         """
         Contrutor da classe que permite a declaração dos parâmetros iniciais.
         
             >> self.v = vitollino()
+       
+        Cria um matriz com os elementos descritos em cada linha de texto
         """
+        mapa = mapa.split()
+        """Largura da casa da arena dos desafios, número de colunas no mapa"""
+    self.lado, self.col = 100, len(mapa[0])
+    self.cena = self.cria(mapa=mapa) if vitollino else None
         self.v = vitollino()
         self.cena = self.cria(cenario=cenario_padrao) if vitollino else None
 
