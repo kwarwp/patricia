@@ -37,7 +37,7 @@ class Kwarwp():
 
     def cria(self, cenario="default"):
         """
-        Cria o ambiente de programação Kwarwp.
+        *Cria o ambiente de programação Kwarwp.*
                 
             >> cena = self.v.c(self."url")
         
