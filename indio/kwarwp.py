@@ -38,12 +38,12 @@ class Kwarwp():
         """
         Cria o ambiente de programação Kwarwp.
         
-        -laculapython-
-        :cena: = self.v.c(self."url")
+        
+            >> cena = self.v.c(self."url")
         
         - Gera a cena do jogo chamano *self.vitolino.c* referente ao módulo Jogo e *(self."url")* referente a imagem do canvas.
         
-        :elemento: = self.v.a(self.elemento, w=100, h=100, x=300, y=400, cena=cena)
+            >> elemento = self.v.a(self.elemento, w=100, h=100, x=300, y=400, cena=cena)
         """
         cena = self.v.c(self.SOLO)
         indio = self.v.a(self.INDIO, w=100, h=100, x=300, y=400, cena=cena)
