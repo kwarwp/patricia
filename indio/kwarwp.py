@@ -41,9 +41,11 @@ class Kwarwp():
         
             >> cena = self.v.c(self."url")
         
-        - Gera a cena do jogo chamano *self.vitolino.c* referente ao módulo Jogo e *(self."url")* referente a imagem do canvas.
+        Gera a cena do jogo chamano *self.vitolino.c* referente ao módulo Jogo e *(self."url")* referente a imagem do canvas.
         
             >> elemento = self.v.a(self.elemento, w=100, h=100, x=300, y=400, cena=cena)
+            
+        Gera um elemento do jogo chamano *self.vitolino.a* referente ao módulo Jogo e  *(self."url")* referente a imagem do canvas.
         """
         cena = self.v.c(self.SOLO)
         indio = self.v.a(self.INDIO, w=100, h=100, x=300, y=400, cena=cena)
