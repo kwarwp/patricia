@@ -37,15 +37,16 @@ class Kwarwp():
     def cria(self, cenario="default"):
         """
         Cria o ambiente de programação Kwarwp.
-        
-        
+                
             >> cena = self.v.c(self."url")
         
-        Gera a cena do jogo chamano *self.vitolino.c* referente ao módulo Jogo e *(self."url")* referente a imagem do canvas.
+        Gera a cena do jogo chamano *self.v.c* referente ao módulo Jogo do Vitollino e *(self."url")* referente a imagem do canvas.
         
-            >> elemento = self.v.a(self.elemento, w=100, h=100, x=300, y=400, cena=cena)
+            >> elemento = self.v.a(self.elemento, w=int, h=int, x=int, y=int, cena="url")
             
-        Gera um elemento do jogo chamano *self.vitolino.a* referente ao módulo Jogo e  *(self."url")* referente a imagem do canvas.
+        Gera um elemento do jogo chamano *self.v.a* chamado pelo módulo do Jogo do Vitollino criando a classe Elemento com os seguintes parâmetros
+        
+            >> (self."url", w=largura_img, h=altura_img, x=canvas_x, y=canvas_y, cena="url")
         """
         cena = self.v.c(self.SOLO)
         indio = self.v.a(self.INDIO, w=100, h=100, x=300, y=400, cena=cena)
