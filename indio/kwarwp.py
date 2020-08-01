@@ -29,7 +29,8 @@ class Kwarwp():
     def __init__(self, vitollino=None, cenario_padrao="default"):
         """
         Contrutor da classe que permite a declaração dos parâmetros iniciais.
-        self.v = vitollino()
+        
+            >> self.v = vitollino()
         """
         self.v = vitollino()
         self.cena = self.cria(cenario=cenario_padrao) if vitollino else None
