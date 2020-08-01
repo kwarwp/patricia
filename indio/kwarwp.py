@@ -16,24 +16,16 @@ class Kwarwp():
 
         :param vitollino: Empacota o engenho de jogo Vitollino.
     """
-    
     GLIFOS = {
     "&": "https://i.imgur.com/dZQ8liT.jpg",  # OCA ⛺
-    "^": "https://imgur.com/8jMuupz.png",    # INDIO 
+    "^": "https://imgur.com/8jMuupz.png",  # INDIO 
     ".": "https://i.imgur.com/npb9Oej.png",  # VAZIO 
     "_": "https://i.imgur.com/sGoKfvs.jpg",  # SOLO 
-    "#": "https://imgur.com/ldI7IbK.png",    # TORA 
-    "@": "https://imgur.com/tLLVjfN.png",    # PICHE 
+    "#": "https://imgur.com/ldI7IbK.png",  # TORA 
+    "@": "https://imgur.com/tLLVjfN.png",  # PICHE 
     "~": "https://i.imgur.com/UAETaiP.gif",  # CEU 
-    "*": "https://i.imgur.com/PfodQmT.gif"   # SOL ☀
+    "*": "https://i.imgur.com/PfodQmT.gif"  # SOL ☀
     }
-    
-    MAPA_INICIO = """
-    @....&
-    ......
-    ......
-    .#.^..
-    """
     
     def __init__(self, vitollino=None, cenario_padrao="default"):
         """
@@ -58,21 +50,20 @@ class Kwarwp():
         
             >> (self."url", w=largura_img, h=altura_img, x=canvas_x, y=canvas_y, cena="url")
             .
-            >> cena.vai()
+            >> solo.vai()
         
         Retorna a cena para o canvas com o método .vai do vitollino
         """
-        cena = self.v.c(self.SOLO)
-        indio = self.v.a(self.GLIFOS[""], w=100, h=100, x=300, y=400, cena=cena)
+        cena = self.v.c(self.GLIFOS["_"])
+        indio = self.v.a(self.GLIFOS["^"], w=100, h=100, x=300, y=400, cena=cena)
         oca = self.v.a(self.GLIFOS["&"], w=100, h=100, x=500, y=100, cena=cena)
-        tora = self.v.a(self.GLIFOS[""], w=100, h=100, x=100, y=400, cena=cena)
-        piche = self.v.a(self.GLIFOS[""], w=100, h=100, x=100, y=100, cena=cena)
-        piche = self.v.a(self.GLIFOS[""], w=600, h=100, x=0, y=0, cena=cena)
-        sol = self.v.a(self.GLIFOS[""], w=60, h=60, x=0, y=40, cena=cena)
-        for _ in range (4):
-            cerca = self.v.a(self.GLIFOS[""], w=100, h=100, x=0, y=(_*100)+100, cena=cena)
+        tora = self.v.a(self.GLIFOS["#"], w=100, h=100, x=100, y=400, cena=cena)
+        piche = self.v.a(self.GLIFOS["@"], w=100, h=100, x=100, y=100, cena=cena)
+        ceu = self.v.a(self.GLIFOS["~"], w=600, h=100, x=0, y=0, cena=cena)
+        sol = self.v.a(self.GLIFOS["*"], w=60, h=60, x=0, y=40, cena=cena)
+        #cerca = self.v.a(self.GLIFOS["_"], w=50, h=50, x=0, y=450, cena=cena)
         cena.vai()
-        return cena
+        return 
         
 if __name__ == "__main__":
     """
