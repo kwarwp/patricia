@@ -41,15 +41,20 @@ class Kwarwp():
             >> self.v = vitollino()
        
         Cria um matriz com os elementos descritos em cada linha de texto
+        
+            >> self.lado, self.col 
+        
+        Determina a largura da arena dos desafios, número de colunas no mapa
         """
         mapa = mapa.split()
-        """Largura da casa da arena dos desafios, número de colunas no mapa"""
-    self.lado, self.col = 100, len(mapa[0])
-    self.cena = self.cria(mapa=mapa) if vitollino else None
         self.v = vitollino()
-        self.cena = self.cria(cenario=cenario_padrao) if vitollino else None
+        
+        """Largura da casa da arena dos desafios, número de colunas no mapa"""
+        
+        self.lado, self.col = 100, len(mapa[0])
+        self.cena = self.cria(mapa=mapa) if vitollino else None
 
-    def cria(self, cenario="default"):
+    def cria(self, mapa = "  "):
         """
         *Cria o ambiente de programação Kwarwp.*
                 
