@@ -86,7 +86,7 @@ class Kwarwp():
         [self.cria_elemento( x=i*lado, y=j*lado+lado, cena=cena)
             for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)]
         cena.vai()
-            return cena
+        return cena
         
         
         def cria_elemento(self, x, y, cena): 
