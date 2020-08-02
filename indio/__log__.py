@@ -218,3 +218,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Sun Aug 02 2020 00:59:39.549 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 87
+  for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)
+  ^
+IndentationError: unexpected indent
+'''},
