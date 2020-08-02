@@ -177,3 +177,10 @@ SyntaxError: EOL while scanning string literal
     divesq.style.width = width // 3  # 100
 TypeError: unsupported operand type(s) for //: 'str' and 'int'
 '''},
+{'date': 'Sun Aug 02 2020 00:47:39.337 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 89
+  return cena
+  ^
+IndentationError: unexpected indent
+'''},
