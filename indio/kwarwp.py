@@ -58,7 +58,7 @@ class Kwarwp():
             lado = self.lado
             return self.v.a(self.GLIFOS[imagem], w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena)
             
-        def cria(self, mapa = "  "):
+    def cria(self, mapa = "  "):
         """
         *Cria o ambiente de programação Kwarwp.*
                 
