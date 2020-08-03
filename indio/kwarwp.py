@@ -33,7 +33,7 @@ class Kwarwp():
     }
     
     MAPA_INICIO = """
-    .....&
+    ..^..&
     @....@
     .....@
     .#.^..
@@ -78,7 +78,26 @@ class Kwarwp():
             .
             >> solo.vai()
         
-        Retorna a cena para o canvas com o método .vai() do vitollino
+        Retorna a cena para o canvas com o método .vai() do vitollino.
+        
+            >> for j, linha in enumerate(mapa):
+            
+        Enumera e declara cada **linha** da lista matriz recortada.
+        
+            >>     for i, imagem in enumerate(linha):
+            
+        Enumera e declara cada **caractere** da lista matriz recortada. 
+        Sendo i, j respecticamente linha, coluna de cada GLIFO contido na MATRIZ_INICIO.
+        
+        O valor de retorno da combinação de for retorna a invocação do cria_elemento com os parâmetros esncotrados através da ultima contagem
+        
+            >> x=i*lado
+        
+        É a posição x do canvas do jogo gerado através do produto índice da linha e o valor arbitrário lado referente ao temanho do elemento
+        
+            >> y=j*lado+lado
+            
+        É a posição do y do canvas do jogo gerado  através do 
         """
         lado = self.lado
         cena = self.v.c(self.GLIFOS["_"])
@@ -99,8 +118,11 @@ class Kwarwp():
         
     def cria_elemento(self, x, y, cena):
         """
-        Função que retorna o **script do elemento** na posição determinada pela matriz.
+        Função que retorna o **script do elemento** na posição determinada pela matriz(mapa).
         
+        x, y equivalem as posições x, y no canvas do jogo.
+        
+        cena equivale a "url" atual do jogo
         
         """
         lado = self.lado
@@ -131,8 +153,8 @@ if __name__ == "__main__":
             self.timer = timer
             pass
         
-    STYLE["width"] = 600 -> Altera o canvas do jogo largura da tela. Recebe int.
-    STYLE["height"] = "500px" -> Altera o canvas do jogo altura da tela. Recebe str.
+    STYLE["width"] = 600 -> Altera o canvas do jogo em largura da tela. Recebe int.
+    STYLE["height"] = "500px" -> Altera o canvas do jogo em altura da tela. Recebe str.
         
     Kwarwp(Jogo) -> Chama a Classe Kwarwp com o método Jogo da biblioteca Vitollino
     """
