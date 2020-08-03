@@ -50,3 +50,10 @@ Exception: <TypeError: Cannot read property 'charAt' of undefined>
 'error': '''
 Exception: <TypeError: Cannot read property 'charAt' of undefined>
 '''},
+{'date': 'Sun Aug 02 2020 23:34:06.72 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 45
+  def cria(self, cenario="default"):
+  ^
+IndentationError: expected an indented block
+'''},
