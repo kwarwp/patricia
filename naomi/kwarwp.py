@@ -67,16 +67,16 @@ class Kwarwp():
         """
         """Cria um cenário com imagem de terra de chão batido, céu e sol"""
         lado = self.lado
-        cena = self.v.c(self.GLIFOS["_"]) 
-        ceu = self.v.a(self.GLIFOS["~"], w=lado*self.col, h=lado, x=0, y=0, cena=cena)
-        sol = self.v.a(self.GLIFOS["*"], w=60, h=60, x=0, y=40, cena=cena)
+        cena = self.V.c(self.GLIFOS["_"]) 
+        ceu = self.V.a(self.GLIFOS["~"], w=lado*self.col, h=lado, x=0, y=0, cena=cena)
+        sol = self.V.a(self.GLIFOS["*"], w=60, h=60, x=0, y=40, cena=cena)
         [self.cria_elemento( x=i*lado, y=j*lado+lado, cena=cena)
         for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)]
         cena.vai()
         return cena
     def cria_elemento(self, x, y, cena):
-    lado = self.lado
-    return self.v.a(self.GLIFOS[imagem], w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena)
+        lado = self.lado
+        return self.V.a(self.GLIFOS[imagem], w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena)
     
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
