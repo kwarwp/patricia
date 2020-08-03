@@ -14,7 +14,7 @@ from _spy.vitollino.main import Jogo
 from _spy.vitollino.main import STYLE
 
 STYLE["widht"] = 600
-STYLE["height"] = "500px"
+STYLE["height"] = "300px"
 
 
 class Kwarwp():
@@ -41,7 +41,7 @@ class Kwarwp():
         oca = self.v.a(self.OCA, w=100, h=100, x=500, y=100, cena=cena)
         tora = self.v.a(self.TORA, w=100, h=100, x=100, y=400, cena=cena)
         piche = self.v.a(self.PICHE, w=100, h=100, x=100, y=100, cena=cena)
-        piche = self.v.a(self.CEU, w=600, h=100, x=0, y=0, cena=cena)
+        ceu = self.v.a(self.CEU, w=600, h=100, x=0, y=0, cena=cena)
         sol = self.v.a(self.SOL, w=60, h=60, x=0, y=40, cena=cena)
         cena.vai()
         return cena
