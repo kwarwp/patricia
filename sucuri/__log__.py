@@ -77,3 +77,10 @@ IndentationError: expected an indented block
     cerda = cercado()
 NameError: name 'cercado' is not defined
 '''},
+{'date': 'Sun Aug 02 2020 23:48:22.874 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 45
+  modelo = self.v.a(self.CERCA, w=100, h=100, i , y=400, cena=cena)
+                                                ^
+SyntaxError: non-keyword arg after keyword arg
+'''},
