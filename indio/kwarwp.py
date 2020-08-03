@@ -27,8 +27,7 @@ class Kwarwp():
     "*": "https://i.imgur.com/PfodQmT.gif"  # SOL âÂÂ
     }
     
-    MAPA_INICIO = 
-    """
+    MAPA_INICIO = """
     .....&
     .....@
     .....@
