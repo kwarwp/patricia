@@ -13,8 +13,8 @@ Changelog
 from _spy.vitollino.main import Jogo
 from _spy.vitollino.main import STYLE
 
-STYLE["widht"] = 600
-STYLE["height"] = "300px"
+STYLE["width"] = 600
+STYLE["height"] = "500px"
 
 
 class Kwarwp():
