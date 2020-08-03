@@ -38,7 +38,7 @@ class Kwarwp():
         self.v = vitollino()
         self.cena = self.cria(cenario=cenario) if vitollino else None
         
-    def cercado():
+    def cercado(self):
         x = 0
         for i in range(5):
             i = x +100
@@ -56,7 +56,7 @@ class Kwarwp():
         ceu = self.v.a(self.CEU, w=600, h=100, x=0, y=0, cena=cena)
         sol = self.v.a(self.SOL, w=60, h=60, x=0, y=40, cena=cena)
         #cerca = self.v.a(self.CERCA, w=100, h=100, x=0, y=400, cena=cena)
-        cerda = cercado()
+        cerda = self.cercado()
         cena.vai()
         return cena
         
