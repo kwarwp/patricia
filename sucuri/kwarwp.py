@@ -13,8 +13,11 @@ Changelog
 from _spy.vitollino.main import Jogo
 from _spy.vitollino.main import STYLE
 
+#comprimento
 STYLE["width"] = 600
+#largura
 STYLE["height"] = "500px"
+
 
 
 class Kwarwp():
@@ -34,6 +37,10 @@ class Kwarwp():
     def __init__(self, vitollino=None, cenario="default"):
         self.v = vitollino()
         self.cena = self.cria(cenario=cenario) if vitollino else None
+        
+    def cercado():
+        pass
+    
 
     def cria(self, cenario="default"):
         """ Cria o ambiente de programação Kwarwp."""
