@@ -54,9 +54,9 @@ class Kwarwp():
         self.lado, self.col = 100, len(mapa[0])
         self.cena = self.cria(mapa=mapa) if vitollino else None
 
-        def cria_elemento(self, x, y, cena):
-            lado = self.lado
-            return self.v.a(self.GLIFOS[imagem], w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena)
+    def cria_elemento(self, x, y, cena):
+        lado = self.lado
+        return self.v.a(self.GLIFOS[imagem], w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena)
             
     def cria(self, mapa = "  "):
         """
