@@ -11,11 +11,18 @@ Changelog
 
 """
 
+MAPA_INICIO = """
+@....&
+......
+......
+.#.^..
+"""
+
 class Kwarwp():
     """ Jogo Kwarwp para ensino de programação.
        
        
-    """
+    
     OCA = "https://i.imgur.com/dZQ8liT.jpg"
     INDIO = "https://imgur.com/8jMuupz.png"
     SOLO = "https://i.imgur.com/sGoKfvs.jpg"
@@ -23,6 +30,17 @@ class Kwarwp():
     PICHE = "https://imgur.com/tLLVjfN.png"
     CEU = "https://i.imgur.com/UAETaiP.gif"
     SOL = "https://i.imgur.com/PfodQmT.gif"
+    """
+    GLIFOS = {
+    "&": "https://i.imgur.com/dZQ8liT.jpg",  # OCA ⛺
+    "^": "https://imgur.com/8jMuupz.png",  # INDIO 
+    ".": "https://i.imgur.com/npb9Oej.png",  # VAZIO 
+    "_": "https://i.imgur.com/sGoKfvs.jpg",  # SOLO 
+    "#": "https://imgur.com/ldI7IbK.png",  # TORA 
+    "@": "https://imgur.com/tLLVjfN.png",  # PICHE 
+    "~": "https://i.imgur.com/UAETaiP.gif",  # CEU 
+    "*": "https://i.imgur.com/PfodQmT.gif"  # SOL ☀
+    }
     
     def __init__(self, vitollino=None, cenario="default"):
         self.V = vitollino()
