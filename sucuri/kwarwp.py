@@ -42,7 +42,7 @@ class Kwarwp():
         x = 0
         for i in range(5):
             i = x +100
-            modelo = self.v.a(self.CERCA, w=100, h=100, x=i, y=400, cena=cena)
+            modelo = self.v.a(self.CERCA,w=100, h=100, i , y=400, cena=cena)
             return(modelo)
     
 
