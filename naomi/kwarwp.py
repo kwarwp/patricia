@@ -33,14 +33,14 @@ class Kwarwp():
     SOL = "https://i.imgur.com/PfodQmT.gif"
     """
     GLIFOS = {
-    "&": "https://i.imgur.com/dZQ8liT.jpg",  # OCA âÂÂÂÂÂÂÂÂº
+    "&": "https://i.imgur.com/dZQ8liT.jpg",  # OCA âÂÂÂÂÂÂÂÂÂÂº
     "^": "https://imgur.com/8jMuupz.png",  # INDIO 
     ".": "https://i.imgur.com/npb9Oej.png",  # VAZIO 
     "_": "https://i.imgur.com/sGoKfvs.jpg",  # SOLO 
     "#": "https://imgur.com/ldI7IbK.png",  # TORA 
     "@": "https://imgur.com/tLLVjfN.png",  # PICHE 
     "~": "https://i.imgur.com/UAETaiP.gif",  # CEU 
-    "*": "https://i.imgur.com/PfodQmT.gif"  # SOL âÂÂÂÂÂÂÂÂ
+    "*": "https://i.imgur.com/PfodQmT.gif"  # SOL âÂÂÂÂÂÂÂÂÂÂ
     }
     
     def __init__(self, vitollino=None,mapa=MAPA_INICIO, medida={}):
@@ -81,5 +81,5 @@ class Kwarwp():
     
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
-    STYLE.update(width=800, height="500px")
+    STYLE.update(width=700, height="600px")
     Kwarwp(Jogo).cria()
