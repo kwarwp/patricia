@@ -61,15 +61,6 @@ class Kwarwp():
         #Largura da casa da arena dos desafios, número de colunas no mapa
         self.lado, self.col = 100, len(mapa[0])
         self.cena = self.cria(mapa=mapa) if vitollino else None
-
-    def cria_elemento(self, x, y, cena):
-        """
-        Função que retorna o **script do elemento** na posição determinada pela matriz.
-        
-        
-        """
-        lado = self.lado
-        return self.v.a(self.GLIFOS[imagem], w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena)
             
     def cria(self, mapa = "  "):
         """
@@ -105,6 +96,15 @@ class Kwarwp():
                 self.cria_elemento( x=i*lado, y=j*lado+lado, cena=cena)
         cena.vai()
         return cena
+        
+    def cria_elemento(self, x, y, cena):
+        """
+        Função que retorna o **script do elemento** na posição determinada pela matriz.
+        
+        
+        """
+        lado = self.lado
+        return self.v.a(self.GLIFOS[imagem], w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena)
 
 
 if __name__ == "__main__":
