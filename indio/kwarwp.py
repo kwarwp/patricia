@@ -13,6 +13,11 @@ Changelog
 
 class Kwarwp():
     """ Jogo para ensino de programação.
+        
+        Declara o dicionário GLIFOS que possui a str símbolo do elemento e o correspodente link de imagem
+        
+        Declara a string MAPA_INICIO que possui a posição dos elementos (GLIFOS) no mapa através da matriz linha x coluna. 
+        As linha separadas pela tecla <Enter>, a coluna determinada pelos caracteres colineares em linha singulares.
 
         :param vitollino: Empacota o engenho de jogo Vitollino.
     """
@@ -40,21 +45,29 @@ class Kwarwp():
         
             >> self.v = vitollino()
        
-        Cria um matriz com os elementos descritos em cada linha de texto
+        Cria um matriz com os elementos descritos em cada linha de texto.
         
             >> self.lado, self.col 
         
-        Determina a largura da arena dos desafios, número de colunas no mapa
+        Determina a largura da arena dos desafios, número de colunas no mapa.
+        
+            >>len(mapa[0]) 
+            
+        Retorna o número de colunas que existem no mapa.
         """
         mapa = mapa.split()
         self.v = vitollino()
         
-        """Largura da casa da arena dos desafios, número de colunas no mapa"""
-        
+        #Largura da casa da arena dos desafios, número de colunas no mapa
         self.lado, self.col = 100, len(mapa[0])
         self.cena = self.cria(mapa=mapa) if vitollino else None
 
     def cria_elemento(self, x, y, cena):
+        """
+        Função que retorna o **script do elemento** na posição determinada pela matriz.
+        
+        
+        """
         lado = self.lado
         return self.v.a(self.GLIFOS[imagem], w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena)
             
@@ -78,24 +91,22 @@ class Kwarwp():
         """
         lado = self.lado
         cena = self.v.c(self.GLIFOS["_"])
-#        indio = self.v.a(self.GLIFOS["^"], w=100, h=100, x=300, y=400, cena=cena)
-#        oca = self.v.a(self.GLIFOS["&"], w=100, h=100, x=500, y=100, cena=cena)
-#        tora = self.v.a(self.GLIFOS["#"], w=100, h=100, x=100, y=400, cena=cena)
-#        piche = self.v.a(self.GLIFOS["@"], w=100, h=100, x=100, y=100, cena=cena)
         ceu = self.v.a(self.GLIFOS["~"], w=lado*self.col, h=lado, x=0, y=0, cena=cena)
-       # ceu = self.v.a(self.GLIFOS["~"], w=600, h=100, x=0, y=0, cena=cena)
         sol = self.v.a(self.GLIFOS["*"], w=60, h=60, x=0, y=40, cena=cena)
+        #indio = self.v.a(self.GLIFOS["^"], w=100, h=100, x=300, y=400, cena=cena)
+        #oca = self.v.a(self.GLIFOS["&"], w=100, h=100, x=500, y=100, cena=cena)
+        #tora = self.v.a(self.GLIFOS["#"], w=100, h=100, x=100, y=400, cena=cena)
+        #piche = self.v.a(self.GLIFOS["@"], w=100, h=100, x=100, y=100, cena=cena)        
+        #ceu = self.v.a(self.GLIFOS["~"], w=600, h=100, x=0, y=0, cena=cena)        
         #cerca = self.v.a(self.GLIFOS["_"], w=50, h=50, x=0, y=450, cena=cena)
-        #cena.vai()
-        
+        #cena.vai()       
         for j, linha in enumerate(mapa):
             for i, imagem in enumerate(linha):
                 self.cria_elemento( x=i*lado, y=j*lado+lado, cena=cena)
         cena.vai()
         return cena
 
-        
-        
+
 if __name__ == "__main__":
     """
     class Jogo:
