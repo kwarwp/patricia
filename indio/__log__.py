@@ -259,3 +259,10 @@ IndentationError: expected an indented block
     self.cria_elemento( x=i*lado, y=j*lado+lado, cena=cena)
 AttributeError: 'Kwarwp' object has no attribute 'cria_elemento'
 '''},
+{'date': 'Mon Aug 03 2020 15:32:26.986 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 30
+  MAPA_INICIO = 
+                 ^
+SyntaxError: invalid syntax
+'''},
