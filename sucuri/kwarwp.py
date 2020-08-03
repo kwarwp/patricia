@@ -39,7 +39,7 @@ class Kwarwp():
         self.cena = self.cria(cenario=cenario) if vitollino else None
         
     def cercado():
-        
+        pass
     
 
     def cria(self, cenario="default"):
