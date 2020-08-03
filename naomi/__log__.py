@@ -543,3 +543,10 @@ NameError: name '_name_' is not defined
     cena = self.V.c(self.SOLO)
 AttributeError: 'Kwarwp' object has no attribute 'SOLO'
 '''},
+{'date': 'Sun Aug 02 2020 23:32:10.636 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 78
+  lado = self.lado
+  ^
+IndentationError: expected an indented block
+'''},
