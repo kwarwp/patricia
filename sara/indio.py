@@ -98,7 +98,15 @@ class Kwarwp():
     def piche(self, imagem, x, y, cena):
         lado = self.lado
         return Piche(imagem, x=x, y=y, cena=cena)
-        
+
+    def ceu(self, imagem, x, y, cena):
+        lado = self.lado
+        return Ceu(imagem, x=x, y=y, cena=cena)
+    
+    def sol(self, imagem, x, y, cena):
+        lado = self.lado
+        return Sol(imagem, x=x, y=y, cena=cena)
+
     def coisa(self, imagem, x, y, cena):
         lado = self.lado
         return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
