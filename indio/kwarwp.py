@@ -61,7 +61,7 @@ class Kwarwp():
         self.v = vitollino()
         
         #Largura da casa da arena dos desafios, número de colunas no mapa
-        self.lado, self.linha, self.col = 100, len(mapa), len(mapa[0])
+        self.lado, self.linha, self.col = 100, len(mapa) + 1, len(mapa[0])
         
         STYLE["width"] = self.lado*self.col
         STYLE["height"] = "{}px".format(self.lado*self.linha)
