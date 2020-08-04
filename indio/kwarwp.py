@@ -22,20 +22,20 @@ class Kwarwp():
         :param vitollino: Empacota o engenho de jogo Vitollino.
     """
     GLIFOS = {
-    "&": "https://i.imgur.com/dZQ8liT.jpg",  # OCA âÂÂº
+    "&": "https://i.imgur.com/dZQ8liT.jpg",  # OCA âÂÂÂÂº
     "^": "https://imgur.com/8jMuupz.png",  # INDIO 
     ".": "https://i.imgur.com/npb9Oej.png",  # VAZIO 
     "_": "https://i.imgur.com/sGoKfvs.jpg",  # SOLO 
     "#": "https://imgur.com/ldI7IbK.png",  # TORA 
     "@": "https://imgur.com/tLLVjfN.png",  # PICHE 
     "~": "https://i.imgur.com/UAETaiP.gif",  # CEU 
-    "*": "https://i.imgur.com/PfodQmT.gif"  # SOL âÂÂ
+    "*": "https://i.imgur.com/PfodQmT.gif"  # SOL âÂÂÂÂ
     }
     
     MAPA_INICIO = """
-    ..^..&
+    ..^.@&
     @....@
-    .....@
+    ......
     .#.^..
     """
     
@@ -93,11 +93,11 @@ class Kwarwp():
         
             >> x=i*lado
         
-        É a posição x do canvas do jogo gerado através do produto índice da linha e o valor arbitrário lado referente ao temanho do elemento
+        É a posição do x (largura) do canvas do jogo gerado através do produto índice da linha e o valor arbitrário lado referente ao temanho do elemento
         
             >> y=j*lado+lado
             
-        É a posição do y do canvas do jogo gerado  através do 
+        É a posição do y (altura) do canvas do jogo gerado através do produto índice lista coluna mais altura do elemento.
         """
         lado = self.lado
         cena = self.v.c(self.GLIFOS["_"])
@@ -122,7 +122,7 @@ class Kwarwp():
         
         x, y equivalem as posições x, y no canvas do jogo.
         
-        cena equivale a "url" atual do jogo
+        cena equivale a "url" atual do jogo.
         
         """
         lado = self.lado
