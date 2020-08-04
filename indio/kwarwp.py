@@ -31,6 +31,10 @@ MAPA_INICIO = """
 +^.+.&+
 +++++++
 """
+
+#STYLE["width"] = self.lado*self.col
+#STYLE["height"] = "{}px".format(self.lado*(len(MAPA_INICIO.split()[0])))
+
 class Kwarwp():
     """ Jogo para ensino de programação.
         
@@ -43,6 +47,8 @@ class Kwarwp():
     """
     
     def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
+        STYLE["width"] = 700
+        STYLE["height"] = "600px"
         """
         Contrutor da classe que permite a declaração dos parâmetros iniciais.
         
@@ -164,7 +170,7 @@ if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
 
     #STYLE["width"] = 700
-    STYLE["height"] = "600px"
+    #STYLE["height"] = "600px"
     Kwarwp(Jogo)
-    STYLE["width"] = self.lado*self.col
+    #STYLE["width"] = self.lado*self.col
     #STYLE["height"] = str("{}px".format(self.lado*(len(MAPA_INICIO.split()[0]))))
