@@ -266,3 +266,10 @@ AttributeError: 'Kwarwp' object has no attribute 'cria_elemento'
                  ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Mon Aug 03 2020 22:06:07.303 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 24
+  GLIFOS = {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+SyntaxError: invalid syntax
+'''},
