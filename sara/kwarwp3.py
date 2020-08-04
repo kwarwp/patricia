@@ -1,4 +1,4 @@
-# patricia.sara.kwarwp2.py
+# patricia.sara.kwarwp3.py
 # SPDX-License-Identifier: GPL-3.0-or-later
 """ Projeto Kwarwp 3.
 
