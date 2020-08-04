@@ -163,8 +163,8 @@ if __name__ == "__main__":
     """
     from _spy.vitollino.main import Jogo, STYLE
 
-    STYLE["width"] = 700
+    #STYLE["width"] = 700
     STYLE["height"] = "600px"
     Kwarwp(Jogo)
-    #STYLE["width"] = self.lado*self.col
+    STYLE["width"] = self.lado*self.col
     #STYLE["height"] = str("{}px".format(self.lado*(len(MAPA_INICIO.split()[0]))))
