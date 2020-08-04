@@ -107,6 +107,10 @@ class Kwarwp():
         lado = self.lado
         return Sol(imagem, x=x, y=y, cena=cena)
 
+    def cerca(self, imagem, x, y, cena):
+        lado = self.lado
+        return Cerca(imagem, x=x, y=y, cena=cena)
+        
     def coisa(self, imagem, x, y, cena):
         lado = self.lado
         return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
