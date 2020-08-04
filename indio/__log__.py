@@ -488,3 +488,10 @@ AttributeError: 'GUI' object has no attribute 'lado'
     STYLE["width"] = self.lado*self.col
 AttributeError: 'GUI' object has no attribute 'lado'
 '''},
+{'date': 'Tue Aug 04 2020 14:35:07.225 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 63
+  ''''    
+          ^
+SyntaxError: EOL while scanning string literal
+'''},
