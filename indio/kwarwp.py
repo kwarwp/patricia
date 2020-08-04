@@ -64,8 +64,8 @@ class Kwarwp():
         self.lado, self.linha, self.col = 100, len(mapa) + 1, len(mapa[0])
         
         STYLE["width"] = self.lado*self.col
-        STYLE["height"] = "{}px".format(self.lado*self.linha)
-        
+        #STYLE["height"] = "{}px".format(self.lado*self.linha)
+        STYLE["height"] = "600px"
         self.cena = self.cria(mapa=mapa) if vitollino else None
             
     def cria(self, mapa = "  "):
