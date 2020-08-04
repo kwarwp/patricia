@@ -47,6 +47,7 @@ class Kwarwp():
         self.cena = self.cria(mapa=self.mapa) if vitollino else None
         
     def cria(self, mapa=""):
+    
         from collections import namedtuple as nt
         Fab = nt("Fab", "objeto imagem")
         
