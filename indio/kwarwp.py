@@ -63,7 +63,7 @@ class Kwarwp():
         #Largura da casa da arena dos desafios, número de colunas no mapa
         self.lado, self.col = 100, len(mapa[0])
         STYLE["width"] =700
-        STYLE["heigth"] = "600px"
+        STYLE["heigth"] = 600
         self.cena = self.cria(mapa=mapa) if vitollino else None
             
     def cria(self, mapa = "  "):
