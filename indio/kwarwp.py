@@ -36,6 +36,7 @@ class Kwarwp():
     MAPA_INICIO = """
     +++++++
     +..+.@+
+    +.....+
     +^.+.&+
     +++++++
     """
@@ -162,5 +163,5 @@ if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
 
     STYLE["width"] = 700
-    STYLE["height"] = "500px"
+    STYLE["height"] = "600px"
     Kwarwp(Jogo)
