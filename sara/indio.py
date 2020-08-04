@@ -111,7 +111,8 @@ class Kwarwp():
         
     def coisa(self, imagem, x, y, cena):
         lado = self.lado
-        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        #return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        return Coisa(imagem, x=x, y=y, cena=cena)
         
     def indio(self, imagem, x, y, cena):
         lado = self.lado
