@@ -106,9 +106,9 @@ class Kwarwp():
         É a posição do y (altura) do canvas do jogo gerado através do produto índice lista coluna mais altura do elemento.
         """
         lado = self.lado
-        cena = self.v.c(GLIFOS["_"])
-        ceu = self.v.a(GLIFOS["~"], w=lado*self.col, h=lado, x=0, y=0, cena=cena)
-        sol = self.v.a(GLIFOS["*"], w=60, h=60, x=0, y=40, cena=cena)
+        cena = self.v.c(self.GLIFOS["_"])
+        ceu = self.v.a(self.GLIFOS["~"], w=lado*self.col, h=lado, x=0, y=0, cena=cena)
+        sol = self.v.a(self.GLIFOS["*"], w=60, h=60, x=0, y=40, cena=cena)
         #indio = self.v.a(self.GLIFOS["^"], w=100, h=100, x=300, y=400, cena=cena)
         #oca = self.v.a(self.GLIFOS["&"], w=100, h=100, x=500, y=100, cena=cena)
         #tora = self.v.a(self.GLIFOS["#"], w=100, h=100, x=100, y=400, cena=cena)
@@ -132,7 +132,7 @@ class Kwarwp():
         
         """
         lado = self.lado
-        return self.v.a(GLIFOS[imagem], w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena)
+        return self.v.a(self.GLIFOS[imagem], w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena)
 
 
 if __name__ == "__main__":
