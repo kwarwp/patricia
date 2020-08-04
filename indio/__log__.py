@@ -433,3 +433,10 @@ AttributeError: 'GUI' object has no attribute 'lado'
     STYLE["width"] = self.lado*self.col
 AttributeError: 'GUI' object has no attribute 'lado'
 '''},
+{'date': 'Tue Aug 04 2020 09:15:44.796 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 169
+  STYLE["height"] = "{}px".format(self.lado*(len(MAPA_INICIO.split()[0]))
+                                 ^
+SyntaxError: Unbalanced bracket (
+'''},
