@@ -28,6 +28,9 @@ class Indio():
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
 
 class Kwarwp():
+
+    oca = None
+    
     VITOLLINO = None
     """Referência estática para obter o engenho de jogo."""
     LADO = None
@@ -47,7 +50,7 @@ class Kwarwp():
         self.cena = self.cria(mapa=self.mapa) if vitollino else None
         
     def cria(self, mapa=""):
-    
+
         from collections import namedtuple as nt
         Fab = nt("Fab", "objeto imagem")
         
