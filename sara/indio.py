@@ -49,7 +49,7 @@ class Kwarwp():
     def cria(self, mapa=""):
     
         from collections import namedtuple as nt
-        Fab = nt("Fab. objeto", "imagem")
+        Fab = nt("Fab", "objeto imagem")
         
         fabrica = {
         "&": Fab(self.coisa, f"{IMGUR}dZQ8liT.jpg"), # OCA
