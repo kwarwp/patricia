@@ -35,11 +35,12 @@ class Kwarwp():
     }
 
     MAPA_INICIO = """
-    +++++++
-    +..+.@+
-    +.....+
-    +^.+.&+
-    +++++++
+    +++++++++
+    +...+..@+
+    +.......+
+    +...@###+
+    +^..+.&.+
+    +++++++++
     """
     
     def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
@@ -113,13 +114,7 @@ class Kwarwp():
         cena = self.v.c(self.GLIFOS["_"])
         ceu = self.v.a(self.GLIFOS["~"], w=lado*self.col, h=lado, x=0, y=0, cena=cena)
         sol = self.v.a(self.GLIFOS["*"], w=60, h=60, x=0, y=40, cena=cena)
-        #indio = self.v.a(self.GLIFOS["^"], w=100, h=100, x=300, y=400, cena=cena)
-        #oca = self.v.a(self.GLIFOS["&"], w=100, h=100, x=500, y=100, cena=cena)
-        #tora = self.v.a(self.GLIFOS["#"], w=100, h=100, x=100, y=400, cena=cena)
-        #piche = self.v.a(self.GLIFOS["@"], w=100, h=100, x=100, y=100, cena=cena)        
-        #ceu = self.v.a(self.GLIFOS["~"], w=600, h=100, x=0, y=0, cena=cena)        
-        #cerca = self.v.a(self.GLIFOS["_"], w=50, h=50, x=0, y=450, cena=cena)
-        #cena.vai()       
+        
         for j, linha in enumerate(mapa):
             for i, imagem in enumerate(linha):
                 self.cria_elemento( x=i*lado, y=j*lado+lado, cena=cena)
