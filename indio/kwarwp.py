@@ -165,5 +165,5 @@ if __name__ == "__main__":
     #STYLE["width"] = self.col*self.lado
     #STYLE["height"] = "600px"
     Kwarwp(Jogo)
-    STYLE["width"] = 700
+    STYLE["width"] = self.lado*self.col
     STYLE["height"] = "600px"
