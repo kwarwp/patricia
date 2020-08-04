@@ -22,14 +22,14 @@ class Kwarwp():
         :param vitollino: Empacota o engenho de jogo Vitollino.
     """
     GLIFOS = {
-    "&": "https://i.imgur.com/dZQ8liT.jpg",  # OCA âÂÂÂÂº
+    "&": "https://i.imgur.com/dZQ8liT.jpg",  # OCA âÂÂÂÂÂÂº
     "^": "https://imgur.com/8jMuupz.png",  # INDIO 
     ".": "https://i.imgur.com/npb9Oej.png",  # VAZIO 
     "_": "https://i.imgur.com/sGoKfvs.jpg",  # SOLO 
     "#": "https://imgur.com/ldI7IbK.png",  # TORA 
     "@": "https://imgur.com/tLLVjfN.png",  # PICHE 
     "~": "https://i.imgur.com/UAETaiP.gif",  # CEU 
-    "*": "https://i.imgur.com/PfodQmT.gif",  # SOL âÂÂÂÂ
+    "*": "https://i.imgur.com/PfodQmT.gif",  # SOL âÂÂÂÂÂ
     "+": "https://imgur.com/uwYPNlz.png"   # CERCA
     }
     
@@ -162,6 +162,6 @@ if __name__ == "__main__":
     """
     from _spy.vitollino.main import Jogo, STYLE
 
-    STYLE["width"] = 700
+    STYLE["width"] = self.col*self.lado
     STYLE["height"] = "600px"
     Kwarwp(Jogo)
