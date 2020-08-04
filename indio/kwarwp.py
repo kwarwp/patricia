@@ -60,12 +60,12 @@ class Kwarwp():
         mapa = mapa.split()
         self.v = vitollino()
         
-        #Largura da casa da arena dos desafios, número de colunas no mapa
-        self.lado, self.linha, self.col = 100, len(mapa) + 1, len(mapa[0])
+        #Largura da casa da arena dos desafios, número de linhas e colunas no mapa
+        self.lado, self.linha, self.col = 100, len(mapa), len(mapa[0])
         
         STYLE["width"] = self.lado*self.col
-        #STYLE["height"] = "{}px".format(self.lado*self.linha)
-        STYLE["height"] = "600px"
+        STYLE["height"] = "{}px".format(self.lado*(self.linha + 1))
+
         self.cena = self.cria(mapa=mapa) if vitollino else None
             
     def cria(self, mapa = "  "):
@@ -165,9 +165,4 @@ if __name__ == "__main__":
     Kwarwp(Jogo) -> Chama a Classe Kwarwp com o método Jogo da biblioteca Vitollino
     """
     from _spy.vitollino.main import Jogo, STYLE
-
-    #STYLE["width"] = 700
-    #STYLE["height"] = "600px"
     Kwarwp(Jogo)
-    #STYLE["width"] = self.lado*self.col
-    #STYLE["height"] = str("{}px".format(self.lado*(len(MAPA_INICIO.split()[0]))))
