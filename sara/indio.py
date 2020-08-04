@@ -30,6 +30,7 @@ class Indio():
 class Kwarwp():
 
     oca = None
+    vazio = None
     
     VITOLLINO = None
     """Referência estática para obter o engenho de jogo."""
