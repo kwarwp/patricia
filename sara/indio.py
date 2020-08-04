@@ -82,6 +82,22 @@ class Kwarwp():
     def oca(self, imagem, x, y, cena):
         lado = self.lado
         return Oca(imagem, x=x, y=y, cena=cena)
+
+    def vazio(self, imagem, x, y, cena):
+        lado = self.lado
+        return Vazio(imagem, x=x, y=y, cena=cena)
+
+    def solo(self, imagem, x, y, cena):
+        lado = self.lado
+        return Solo(imagem, x=x, y=y, cena=cena)
+        
+    def tora(self, imagem, x, y, cena):
+        lado = self.lado
+        return Tora(imagem, x=x, y=y, cena=cena)
+
+    def piche(self, imagem, x, y, cena):
+        lado = self.lado
+        return Piche(imagem, x=x, y=y, cena=cena)
         
     def coisa(self, imagem, x, y, cena):
         lado = self.lado
