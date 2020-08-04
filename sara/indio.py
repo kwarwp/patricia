@@ -28,9 +28,6 @@ class Indio():
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
 
 class Kwarwp():
-
-    oca = None
-    vazio = None
     
     VITOLLINO = None
     """Referência estática para obter o engenho de jogo."""
@@ -81,6 +78,10 @@ class Kwarwp():
         cena.vai()
         return cena
         
+        
+    def oca(self, imagem, x, y, cena):
+        lado = self.lado
+        return Oca(imagem, x=x, y=y, cena=cena)
         
     def coisa(self, imagem, x, y, cena):
         lado = self.lado
