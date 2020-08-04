@@ -148,3 +148,10 @@ TypeError: object() takes no parameters
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Tue Aug 04 2020 20:45:51.351 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 45
+  def cria(self, mapa="  "):
+  ^
+IndentationError: unexpected indent
+'''},
