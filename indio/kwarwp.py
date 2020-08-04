@@ -41,7 +41,7 @@ class Kwarwp():
 
         :param vitollino: Empacota o engenho de jogo Vitollino.
     """
-''''    GLIFOS = {
+'''    GLIFOS = {
     "&": "https://i.imgur.com/dZQ8liT.jpg",  # OCA 
     "^": "https://imgur.com/8jMuupz.png",  # INDIO 
     ".": "https://i.imgur.com/npb9Oej.png",  # VAZIO 
@@ -60,7 +60,7 @@ class Kwarwp():
     +^.+.&+
     +++++++
     """
-''''    
+'''    
     def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
         """
         Contrutor da classe que permite a declaração dos parâmetros iniciais.
