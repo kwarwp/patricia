@@ -29,7 +29,7 @@ class Kwarwp():
     "#": "https://imgur.com/ldI7IbK.png",  # TORA 
     "@": "https://imgur.com/tLLVjfN.png",  # PICHE 
     "~": "https://i.imgur.com/UAETaiP.gif",  # CEU 
-    "*": "https://i.imgur.com/PfodQmT.gif"  # SOL âÂÂÂÂ
+    "*": "https://i.imgur.com/PfodQmT.gif",  # SOL âÂÂÂÂ
     "+": "https://imgur.com/uwYPNlz.png"   # CERCA
     }
     
