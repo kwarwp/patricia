@@ -19,6 +19,8 @@ MAPA_INICIO = """
 +++++++
 """
 
+IMGUR = 'https://i.imgur.com/'
+
 class Indio():
 
     def __init__(self, imagem, x, y, cena):
