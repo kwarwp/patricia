@@ -502,3 +502,10 @@ SyntaxError: EOL while scanning string literal
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Tue Aug 04 2020 14:37:37.198 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 64
+  def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
+  ^
+IndentationError: unexpected indent
+'''},
