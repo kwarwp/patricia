@@ -11,30 +11,6 @@ Changelog
 
 """
 
-
-GLIFOS = {
-"&": "https://i.imgur.com/dZQ8liT.jpg",  # OCA 
-"^": "https://imgur.com/8jMuupz.png",  # INDIO 
-".": "https://i.imgur.com/npb9Oej.png",  # VAZIO 
-"_": "https://i.imgur.com/sGoKfvs.jpg",  # SOLO 
-"#": "https://imgur.com/ldI7IbK.png",  # TORA 
-"@": "https://imgur.com/tLLVjfN.png",  # PICHE 
-"~": "https://i.imgur.com/UAETaiP.gif",  # CEU 
-"*": "https://i.imgur.com/PfodQmT.gif",  # SOL 
-"+": "https://imgur.com/uwYPNlz.png"   # CERCA
-}
-
-MAPA_INICIO = """
-+++++++
-+..+.@+
-+.....+
-+^.+.&+
-+++++++
-"""
-
-#STYLE["width"] = self.lado*self.col
-#STYLE["height"] = "{}px".format(self.lado*(len(MAPA_INICIO.split()[0])))
-
 class Kwarwp():
     """ Jogo para ensino de programação.
         
@@ -45,10 +21,27 @@ class Kwarwp():
 
         :param vitollino: Empacota o engenho de jogo Vitollino.
     """
+    GLIFOS = {
+    "&": "https://i.imgur.com/dZQ8liT.jpg",  # OCA 
+    "^": "https://imgur.com/8jMuupz.png",  # INDIO 
+    ".": "https://i.imgur.com/npb9Oej.png",  # VAZIO 
+    "_": "https://i.imgur.com/sGoKfvs.jpg",  # SOLO 
+    "#": "https://imgur.com/ldI7IbK.png",  # TORA 
+    "@": "https://imgur.com/tLLVjfN.png",  # PICHE 
+    "~": "https://i.imgur.com/UAETaiP.gif",  # CEU 
+    "*": "https://i.imgur.com/PfodQmT.gif",  # SOL 
+    "+": "https://imgur.com/uwYPNlz.png"   # CERCA
+    }
+
+    MAPA_INICIO = """
+    +++++++
+    +..+.@+
+    +.....+
+    +^.+.&+
+    +++++++
+    """
     
     def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
-        STYLE["width"] = 700
-        STYLE["height"] = "600px"
         """
         Contrutor da classe que permite a declaração dos parâmetros iniciais.
         
@@ -69,6 +62,10 @@ class Kwarwp():
         
         #Largura da casa da arena dos desafios, número de colunas no mapa
         self.lado, self.col = 100, len(mapa[0])
+        
+        STYLE["width"] = self.lado*self.col
+        STYLE["height"] = "{}px".format(self.lado*(self.col))
+        
         self.cena = self.cria(mapa=mapa) if vitollino else None
             
     def cria(self, mapa = "  "):
