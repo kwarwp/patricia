@@ -21,16 +21,17 @@ class Kwarwp():
 
         :param vitollino: Empacota o engenho de jogo Vitollino.
     """
+    # Verificar pq o código do link está diferente (https://github.com/carlotolla/kwarwp/blob/548774d4dc2d437d5a60c38a5e3bacae9b9228f5/kwarwp/kwarapp.py)
     GLIFOS = {
     "&": "https://i.imgur.com/dZQ8liT.jpg",  # OCA 
-    "^": "https://imgur.com/8jMuupz.png",  # INDIO 
+    "^": "https://imgur.com/8jMuupz.png",    # INDIO 
     ".": "https://i.imgur.com/npb9Oej.png",  # VAZIO 
-    "_": "https://i.imgur.com/sGoKfvs.jpg",  # SOLO 
-    "#": "https://imgur.com/ldI7IbK.png",  # TORA 
-    "@": "https://imgur.com/tLLVjfN.png",  # PICHE 
+    "_": "https://i.imgur.com/sGoKfvs.jpg",  # SOLO   
+    "#": "https://imgur.com/ldI7IbK.png",    # TORA 
+    "@": "https://imgur.com/tLLVjfN.png",    # PICHE 
     "~": "https://i.imgur.com/UAETaiP.gif",  # CEU 
     "*": "https://i.imgur.com/PfodQmT.gif",  # SOL 
-    "+": "https://imgur.com/uwYPNlz.png"   # CERCA
+    "+": "https://imgur.com/uwYPNlz.png"     # CERCA
     }
 
     MAPA_INICIO = """
@@ -56,6 +57,9 @@ class Kwarwp():
             >>len(mapa[0]) 
             
         Retorna o número de colunas que existem no mapa.
+                       
+        STYLE["width"] = 700 -> Altera o canvas do jogo em largura da tela. Recebe int.
+        STYLE["height"] = "600px" -> Altera o canvas do jogo em altura da tela. Recebe str.
         """
         mapa = mapa.split()
         self.v = vitollino()
@@ -158,10 +162,7 @@ if __name__ == "__main__":
             self.window = win
             self.timer = timer
             pass
-        
-    STYLE["width"] = 600 -> Altera o canvas do jogo em largura da tela. Recebe int.
-    STYLE["height"] = "500px" -> Altera o canvas do jogo em altura da tela. Recebe str.
-        
+      
     Kwarwp(Jogo) -> Chama a Classe Kwarwp com o método Jogo da biblioteca Vitollino
     """
     from _spy.vitollino.main import Jogo, STYLE
