@@ -34,10 +34,10 @@ class Kwarwp():
     }
     
     MAPA_INICIO = """
-    ..^.@&
-    @....@
-    ......
-    .#.^.+
+    +++++++
+    +..+.@+
+    +^.+.&+
+    +++++++
     """
     
     def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
