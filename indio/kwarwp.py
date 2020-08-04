@@ -11,6 +11,26 @@ Changelog
 
 """
 
+
+GLIFOS = {
+"&": "https://i.imgur.com/dZQ8liT.jpg",  # OCA 
+"^": "https://imgur.com/8jMuupz.png",  # INDIO 
+".": "https://i.imgur.com/npb9Oej.png",  # VAZIO 
+"_": "https://i.imgur.com/sGoKfvs.jpg",  # SOLO 
+"#": "https://imgur.com/ldI7IbK.png",  # TORA 
+"@": "https://imgur.com/tLLVjfN.png",  # PICHE 
+"~": "https://i.imgur.com/UAETaiP.gif",  # CEU 
+"*": "https://i.imgur.com/PfodQmT.gif",  # SOL 
+"+": "https://imgur.com/uwYPNlz.png"   # CERCA
+}
+
+MAPA_INICIO = """
++++++++
++..+.@+
++.....+
++^.+.&+
++++++++
+"""
 class Kwarwp():
     """ Jogo para ensino de programação.
         
@@ -21,15 +41,15 @@ class Kwarwp():
 
         :param vitollino: Empacota o engenho de jogo Vitollino.
     """
-    GLIFOS = {
-    "&": "https://i.imgur.com/dZQ8liT.jpg",  # OCA âÂÂÂÂÂÂÂÂÂÂÂÂº
+''''    GLIFOS = {
+    "&": "https://i.imgur.com/dZQ8liT.jpg",  # OCA 
     "^": "https://imgur.com/8jMuupz.png",  # INDIO 
     ".": "https://i.imgur.com/npb9Oej.png",  # VAZIO 
     "_": "https://i.imgur.com/sGoKfvs.jpg",  # SOLO 
     "#": "https://imgur.com/ldI7IbK.png",  # TORA 
     "@": "https://imgur.com/tLLVjfN.png",  # PICHE 
     "~": "https://i.imgur.com/UAETaiP.gif",  # CEU 
-    "*": "https://i.imgur.com/PfodQmT.gif",  # SOL âÂÂÂÂÂÂÂÂ
+    "*": "https://i.imgur.com/PfodQmT.gif",  # SOL 
     "+": "https://imgur.com/uwYPNlz.png"   # CERCA
     }
     
@@ -40,7 +60,7 @@ class Kwarwp():
     +^.+.&+
     +++++++
     """
-    
+''''    
     def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
         """
         Contrutor da classe que permite a declaração dos parâmetros iniciais.
@@ -162,8 +182,8 @@ if __name__ == "__main__":
     """
     from _spy.vitollino.main import Jogo, STYLE
 
-    #STYLE["width"] = self.col*self.lado
-    #STYLE["height"] = "600px"
+    STYLE["width"] = 700
+    STYLE["height"] = "600px"
     Kwarwp(Jogo)
-    STYLE["width"] = self.lado*self.col
-    STYLE["height"] = str("{}px".format(self.lado*(len(MAPA_INICIO.split()[0]))))
+    #STYLE["width"] = self.lado*self.col
+    #STYLE["height"] = str("{}px".format(self.lado*(len(MAPA_INICIO.split()[0]))))
