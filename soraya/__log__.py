@@ -466,3 +466,10 @@ AttributeError: 'Kwarwp' object has no attribute 'indio'
     fabrica = {
 AttributeError: 'Kwarwp' object has no attribute 'vazio'
 '''},
+{'date': 'Wed Aug 05 2020 14:12:17.1 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 106
+  Class Indio():
+         ^
+SyntaxError: invalid syntax
+'''},
