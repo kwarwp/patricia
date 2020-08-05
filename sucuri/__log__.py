@@ -111,3 +111,10 @@ SyntaxError: invalid syntax
     [self.cria_elemento( x=i*lado, y=j*lado+lado, cena=cena)
 AttributeError: 'Kwarwp' object has no attribute 'cria_elemento'
 '''},
+{'date': 'Wed Aug 05 2020 19:35:06.303 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 76
+  objetos = self.v.a([self.cria_elemento( x=i*lado, y=j*lado+lado, cena=cena)
+                                                                                                                                                                        ^
+SyntaxError: invalid syntax
+'''},
