@@ -39,6 +39,7 @@ class Indio():
         """ Roteiro do índio. Conjunto de comandos para ele executar.
         """
         self.anda()
+        self.o_indio.executa()
 
 class Kwarwp():
     
@@ -136,8 +137,8 @@ class Kwarwp():
         return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         
     def indio(self, imagem, x, y, cena):
-        lado = self.lado
-        return Indio(imagem, x=x, y=y, cena=cena)
+        self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
+        return self.o_indio
         
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
