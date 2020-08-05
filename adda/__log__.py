@@ -835,3 +835,7 @@ Exception: <SyntaxError: unexpected token: '.'>
     self.banhista.img('https://i.imgur.com/chvIdvJ.png')
 TypeError: 'str' object is not callable
 '''},
+{'date': 'Wed Aug 05 2020 11:37:06.362 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <SyntaxError: unexpected token: '.'>
+'''},
