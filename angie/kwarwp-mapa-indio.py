@@ -78,7 +78,8 @@ class Kwarwp():
         "@": Fab(self.coisa, f"{IIMGUR}tLLVjfN.png"), # PICHE
         "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), # CEU
         "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), # SOL
-        "+": Fab(self.coisa, f"{IMGUR}uwYPNlz.png")  # CERCA
+        "+": Fab(self.coisa, f"{IMGUR}uwYPNlz.png"),  # CERCA
+        "%": Fab(self.coisa, f"{IMGUR}Ry3Vmsn.png") #ROCHA
         }
 
         mapa = mapa if mapa != "" else self.mapa
@@ -102,14 +103,7 @@ class Kwarwp():
     def indio(self, imagem, x, y, cena):
         lado = self.lado
         return Indio(imagem, x=x, y=y, cena=cena)
-        
-    #ver se precisa remover para baixo
-    #def cria_elemento(self, x, y, cena):
-    #    lado = self.lado
-    #    return self.v.a(self.GLIFOS[imagem], w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena)
-    
+
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
-    STYLE["width"] = 700
-    STYLE["height"] = "600px"
     Kwarwp(Jogo, mapa=MAPA_ROCHA)
