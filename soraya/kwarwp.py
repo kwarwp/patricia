@@ -10,7 +10,8 @@ Changelog
 .. versionadded::    20.07
        Criar um Mapa de inicio
 """
-
+IMGUR = "https://imgur.com/"
+IIMGUR = "https://i.imgur.com/"
 
 MAPA_INICIO = """
 @....&
