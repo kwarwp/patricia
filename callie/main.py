@@ -33,6 +33,8 @@ class Kwarwp():
         self.cena = self.cria(cenario=cenario) if vitollino else None
         
     def cercado(self):
+        ''' Gera a cerca da cena
+        '''
         cerca_baixo = (self.v.a(self.CERCA, w=100, h=100, x=0, y=400, cena=cena), 
                       self.v.a(self.CERCA, w=100, h=100, x=100, y=400, cena=cena),
                       self.v.a(self.CERCA, w=100, h=100, x=200, y=400, cena=cena),
