@@ -66,12 +66,12 @@ class Kwarwp():
         """
         lado = self.lado #lado = 100
         """ self.col acima pode ser chamado col agora"""
-        col = self.col
+        #col = self.col
         cena = self.v.c(self.GLIFOS["_"])
         """ O céu recebe como índices de largura o lado * nÂ° colunas, logo, se o mapa for alterado, o comprimento
             do céu também será.
         """
-        ceu = self.v.a(self.GLIFOS["~"], W=lado*col, h=lado, x=0,y=0, cena=cena)
+        ceu = self.v.a(self.GLIFOS["~"], W=lado*self.col, h=lado, x=0,y=0, cena=cena)
         """Adiciona sol na posição e tamanho abaixo"""
         sol = self.v.a(self.GLIFOS["*"], w=60, h=60, x=0, y=40,cena=cena)
         """ Enumerate() é uma função que retorna uma tupla (w,r) onde w é o índice do elemento original e r é o elemento"""
