@@ -98,8 +98,8 @@ class Kwarwp():
                fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
                for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
 
-        cena.vai()
-        return cena   
+    cena.vai()
+    return cena   
 
 
 
