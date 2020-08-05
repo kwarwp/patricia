@@ -74,7 +74,7 @@ class Kwarwp():
         sol = self.v.a(self.GLIFOS["*"], w=60, h=60, x=0, y=40,cena=cena)
         
         [self.cria_elemento( x=i*lado, y=j*lado+lado, cena=cena)
-                  for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)]
+            for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)]
         cena.vai()
         return cena
         
