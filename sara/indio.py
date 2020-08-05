@@ -98,6 +98,8 @@ class Kwarwp():
         cena.vai()
         return cena
 
+    def executa(self):
+        self.o_indio.executa()
         
     def oca(self, imagem, x, y, cena):
         lado = self.lado
