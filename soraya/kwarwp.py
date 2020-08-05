@@ -73,18 +73,6 @@ class Kwarwp():
         medidas.update(width=w, height=f"{h}px")
         self.cena = self.cria(mapa=self.mapa) if vitollino else None
 
-    """def cria(self, mapa="default"):
-        Cria o ambiente de programação Kwarwp.
-        Cria um cenário com imagem de terra de chão batido, céu e sol
-        lado = self.lado
-        cena = self.v.c(self.GLIFOS["_"])
-        ceu = self.v.a(self.GLIFOS["~"], w=lado*self.col, h=lado, x=0, y=0, cena=cena)
-        sol = self.v.a(self.GLIFOS["*"], w=60, h=60, x=0, y=40, cena=cena)
-        [self.cria_elemento( x=i*lado, y=j*lado+lado, cena=cena)
-            for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)]
-        cena.vai()
-        return cena"""
-
         mapa = mapa if mapa != "" else self.mapa
 
         mapa = self.mapa
