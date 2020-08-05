@@ -147,26 +147,43 @@ class Kwarwp():
         cena.vai()
         return cena
         '''
-        Tentar cirar mesmo código com a descrição de dependência a baixo
+        Tentar criar mesmo código com a descrição de dependência a baixo
         for j, linha in enumerate(mapa):
             for i, imagem in enumerate(linha):
                 self.cria_elemento( x=i*lado, y=j*lado+lado, cena=cena)
+                
+        def cria_elemento(self, x, y, cena):
+        """
+        Função que retorna o **script do elemento** na posição determinada pela matriz(mapa).        
+        x, y equivalem as posições x, y no canvas do jogo.        
+        cena equivale a "url" atual do jogo."""
+            lado = self.lado
+            return self.v.a(self.GLIFOS[imagem], w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena)
         '''
     def coisa(self, imagem, x, y, cena):
+        """
+        Este método define uma fábrica para coisas que estão no cenário.
+        Cria um elemento na arena do Kwarwp na posição definida.
+        
+        :param imagem: imagem que representa o elemento que será posicionado.
+        :param x: coluna em que o elemento será posicionado.
+        :param y: linha em que o elemento será posicionado.
+        :param cena: cena em que o elemento será posicionado.
+        """
         lado = self.lado
         return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         
-    def cria_elemento(self, x, y, cena):
+    def indio(self, imagem, x, y, cena):
         """
-        Função que retorna o **script do elemento** na posição determinada pela matriz(mapa).
-        
-        x, y equivalem as posições x, y no canvas do jogo.
-        
-        cena equivale a "url" atual do jogo.
-        
+        Este método define uma fábrica criando o índio o personagem principal.
+
+        :param imagem: imagem que representa o elemento que será posicionado.
+        :param x: coluna em que o elemento será posicionado.
+        :param y: linha em que o elemento será posicionado.
+        :param cena: cena em que o elemento será posicionado.
         """
         lado = self.lado
-        return self.v.a(self.GLIFOS[imagem], w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena)
+        return Indio(imagem, x=x, y=y, cena=cena)
 
 class Indio():
     '''
