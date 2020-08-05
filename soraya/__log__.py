@@ -473,3 +473,10 @@ AttributeError: 'Kwarwp' object has no attribute 'vazio'
          ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Aug 05 2020 14:12:42.387 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 109
+  self.lado = lado = Kwarwp.LADO
+  ^
+IndentationError: expected an indented block
+'''},
