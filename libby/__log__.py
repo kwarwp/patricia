@@ -450,3 +450,10 @@ KeyError: .
     return self.v.a(self.GLIFOS[imagem], w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena)
 KeyError: .
 '''},
+{'date': 'Wed Aug 05 2020 16:52:35.991 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 54
+  def cria(self, mapa="  "):
+  ^
+IndentationError: unexpected indent
+'''},
