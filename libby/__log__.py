@@ -500,3 +500,10 @@ AttributeError: 'Kwarwp' object has no attribute 'GLIFOS'
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Aug 05 2020 16:55:53.177 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 61
+  lado = self.lado
+  ^
+IndentationError: unexpected indent
+'''},
