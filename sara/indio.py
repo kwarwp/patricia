@@ -13,9 +13,9 @@ Changelog
 
 MAPA_INICIO = """
 |||||||
-|..|..&
+|^.|..&
 |..#..|
-|^.|..|
+|..|..|
 |||||||
 """
 
@@ -38,8 +38,6 @@ class Indio():
     def executa(self):
         """ Roteiro do índio. Conjunto de comandos para ele executar.
         """
-        self.anda()
-        self.anda()
         self.anda()
 
 class Kwarwp():
