@@ -251,3 +251,10 @@ IndentationError: unexpected indent
     fabrica = {
 AttributeError: 'GUI' object has no attribute 'coisa'
 '''},
+{'date': 'Wed Aug 05 2020 13:35:48.851 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 101
+  cena.vai()
+  ^
+IndentationError: unexpected indent
+'''},
