@@ -36,7 +36,9 @@ class Kwarwp():
         cerca = (self.v.a(self.CERCA, w=100, h=100, x=0, y=400, cena=cena), 
                  self.v.a(self.CERCA, w=100, h=100, x=100, y=400, cena=cena),
                  self.v.a(self.CERCA, w=100, h=100, x=200, y=400, cena=cena),
-                 self.v.a(self.CERCA, w=100, h=100, x=300, y=400, cena=cena))
+                 self.v.a(self.CERCA, w=100, h=100, x=300, y=400, cena=cena),
+                 self.v.a(self.CERCA, w=100, h=100, x=400, y=400, cena=cena),
+                 self.v.a(self.CERCA, w=100, h=100, x=500, y=400, cena=cena))
 
     def cria(self, cenario="default"):
         """ Cria o ambiente de programação Kwarwp."""
