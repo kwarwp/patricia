@@ -35,7 +35,7 @@ class Kwarwp():
         :param mapa: Um texto representando o mapa do desafio.
         :param medidas: Um dicionário usado para redimensionar a tela.
     """
-     VITOLLINO = None
+    VITOLLINO = None
     """Referência estática para obter o engenho de jogo."""
     LADO = None
     """Referência estática para definir o lado do piso da casa."""
