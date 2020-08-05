@@ -40,6 +40,12 @@ class Kwarwp():
         :param vitollino: Empacota o engenho de jogo Vitollino.
         :param mapa: Um texto representando o mapa do desafio.
     """
+    
+    def coisa(self, imagem, x, y, cena):
+        lado = self.lado
+        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+    
+    
     fabrica = {
     "&": Fab(self.coisa, f"{IMGUR}dZQ8liT.jpg"), # OCA
     "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
@@ -89,10 +95,7 @@ class Kwarwp():
     cena.vai()
     return cena
     
-    def coisa(self, imagem, x, y, cena):
-        lado = self.lado
-        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
-
+    
     def indio(self, imagem, x, y, cena):
         lado = self.lado
         return Indio(imagem, x=x, y=y, cena=cena)
