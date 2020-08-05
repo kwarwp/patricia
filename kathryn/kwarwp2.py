@@ -119,7 +119,7 @@ class Kwarwp():
         É a posição do y (altura) do canvas do jogo gerado através do produto índice lista coluna mais altura do elemento.
         
         """
-        Fab = nt("Fab", "objeto imagem")
+        Fab = nt("Fab", "objeto url_imagem")
         fabrica = {
         "&": Fab(self.coisa, f"{IMGUR}dZQ8liT.jpg"), # OCA
         "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
@@ -136,20 +136,22 @@ class Kwarwp():
 
         mapa = self.mapa
         lado = self.lado
-        cena = self.v.c(fabrica["_"].imagem)
-        ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena)
-        sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena)
+        cena = self.v.c(fabrica["_"].url_imagem)
+        ceu = self.v.a(fabrica["~"].url_imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena)
+        sol = self.v.a(fabrica["*"].url_imagem, w=60, h=60, x=0, y=40, cena=cena)
         
-        self.taba = {(i, j): fabrica[imagem].objeto(
-            fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
-            for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
+        self.taba = {(i, j): fabrica[glifo].objeto(
+            fabrica[glifo].url_imagem, x=i*lado, y=j*lado+lado, cena=cena)
+            for j, linha in enumerate(mapa) for i, glifo in enumerate(linha)}
 
         cena.vai()
         return cena
-
+        '''
+        Tentar cirar mesmo código com a descrição de dependência a baixo
         for j, linha in enumerate(mapa):
-            for i, imagem in enumerate(linha):
+            for i, glifo in enumerate(linha):
                 self.cria_elemento( x=i*lado, y=j*lado+lado, cena=cena)
+        '''
 
         
     def cria_elemento(self, x, y, cena):
