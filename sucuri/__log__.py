@@ -125,3 +125,10 @@ SyntaxError: invalid syntax
                                                                               ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Aug 05 2020 20:41:19.327 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 80
+  objetos = [self.cria_elemento( x=i*lado,y=j*lado+lado, cena=cena)
+                                                                             ^
+SyntaxError: invalid syntax
+'''},
