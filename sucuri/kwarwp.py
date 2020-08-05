@@ -48,7 +48,7 @@ class Kwarwp():
               > y = x.split() > z = len(y[0])  > print(x,y,z)   
         """
         self.lado, self.col = 100, len(mapa[0])
-        """ Chama cena em cria se há a importação do vitollino"""
+        """ Chama cena em cria() se há a importação do vitollino"""
         self.cena = self.cria(mapa=mapa) if vitollino else None
         
     
