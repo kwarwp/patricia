@@ -10,6 +10,10 @@ Changelog
 .. versionadded::    20.07
 
 """
+from collections import namedtuple as nt
+
+IMAGUR = "https://imgur.com/"
+
 MAPA_INICIO = """
 +++++++++
 +...+..@+
@@ -30,26 +34,17 @@ class Kwarwp():
         :param mapa: Um texto representando o mapa do desafio.
         :param medidas: Um dicionário usado para redimensionar a tela.
     """
-    # Verificar pq o código do link está diferente (https://github.com/carlotolla/kwarwp/blob/548774d4dc2d437d5a60c38a5e3bacae9b9228f5/kwarwp/kwarapp.py)
-    GLIFOS = {
-    "&": "https://i.imgur.com/dZQ8liT.jpg",  # OCA 
-    "^": "https://imgur.com/8jMuupz.png",    # INDIO 
-    ".": "https://i.imgur.com/npb9Oej.png",  # VAZIO 
-    "_": "https://i.imgur.com/sGoKfvs.jpg",  # SOLO   
-    "#": "https://imgur.com/ldI7IbK.png",    # TORA 
-    "@": "https://imgur.com/tLLVjfN.png",    # PICHE 
-    "~": "https://i.imgur.com/UAETaiP.gif",  # CEU 
-    "*": "https://i.imgur.com/PfodQmT.gif",  # SOL 
-    "+": "https://imgur.com/uwYPNlz.png"     # CERCA
-    }
-
-
     
+    VITOLLINO = None
+    """Referência estática para obter o engenho de jogo."""
+    LADO = None
+    """Referência estática para definir o lado do piso da casa."""
+
     def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
         """
         Contrutor da classe que permite a declaração dos parâmetros iniciais.
         
-            >> self.v = vitollino()
+            >> Kwarwp.VITOLLINO = self.v = vitollino()
        
         Cria um matriz com os elementos descritos em cada linha de texto.
         
@@ -57,27 +52,38 @@ class Kwarwp():
         
         Determina a largura da arena dos desafios, número de colunas no mapa.
         
-            >>len(mapa[0]) 
+            >>len(self.mapa[0]), len(self.mapa)+1 
             
-        Retorna o número de colunas que existem no mapa.
+        Retorna o número de colunas e linhas que existem no mapa.
                        
         STYLE["width"] = 700 -> Altera o canvas do jogo em largura da tela. Recebe int.
         STYLE["height"] = "600px" -> Altera o canvas do jogo em altura da tela. Recebe str.
         """
-        mapa = mapa.split()
-        self.v = vitollino()
         
-        #Largura da casa da arena dos desafios, número de linhas e colunas no mapa
-        self.lado, self.lin, self.col = 100, len(mapa)+1, len(mapa[0])
-        
-        STYLE["width"] = self.lado*self.col
-        STYLE["height"] = "{}px".format(self.lado*(self.lin))
-
-        self.cena = self.cria(mapa=mapa) if vitollino else None
+        Kwarwp.VITOLLINO = self.v = vitollino()
+        """Cria um matriz com os elementos descritos em cada linha de texto"""
+        self.mapa = mapa.split()
+        """Largura da casa da arena dos desafios, número de colunas e linhas no mapa"""
+        self.lado, self.col, self.lin = 100, len(self.mapa[0]), len(self.mapa)+1
+        Kwarwp.LADO = self.lado
+        w, h = self.col*self.lado, self.lin*self.lado
+        self.taba = {}
+        """Dicionário que a partir de coordenada (i,J) localiza um piso da taba"""
+        medidas.update(width=w, height=f"{h}px")
+        self.cena = self.cria(mapa=self.mapa) if vitollino else None
+                       
+        STYLE["width"] = w
+        STYLE["height"] = "{}px".format(h)
             
-    def cria(self, mapa = "  "):
+    def cria(self, mapa = ""):
         """
-        *Cria o ambiente de programação Kwarwp.*
+        *Este método define uma fábrica de componentes.*
+
+        :param mapa: Um texto representando o mapa do desafio.
+        
+        :nome Fab: O nome da tupla que descreve a fábrica.
+        :campo objeto: O tipo de objeto que vai ser criado.
+        :campo imagem: A imagem que representa o objeto que vai ser criado.
                 
             >> cena = self.v.c(self."url")
         
@@ -111,17 +117,40 @@ class Kwarwp():
             >> y=j*lado+lado
             
         É a posição do y (altura) do canvas do jogo gerado através do produto índice lista coluna mais altura do elemento.
-        """
-        lado = self.lado
-        cena = self.v.c(self.GLIFOS["_"])
-        ceu = self.v.a(self.GLIFOS["~"], w=lado*self.col, h=lado, x=0, y=0, cena=cena)
-        sol = self.v.a(self.GLIFOS["*"], w=60, h=60, x=0, y=40, cena=cena)
         
+        """
+        Fab = nt("Fab", "objeto imagem")
+        fabrica = {
+        "&": Fab(self.coisa, f"{IMGUR}dZQ8liT.jpg"), # OCA
+        "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
+        ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), # VAZIO
+        "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), # SOLO
+        "#": Fab(self.coisa, f"{IMGUR}ldI7IbK.png"), # TORA
+        "@": Fab(self.coisa, f"{IMGUR}tLLVjfN.png"), # PICHE
+        "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), # CEU
+        "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), # SOL
+        "|": Fab(self.coisa, f"{IMGUR}uwYPNlz.png")  # CERCA
+        }
+        
+        mapa = mapa if mapa != "" else self.mapa
+
+        mapa = self.mapa
+        lado = self.lado
+        cena = self.v.c(fabrica["_"].imagem)
+        ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena)
+        sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena)
+        
+        self.taba = {(i, j): fabrica[imagem].objeto(
+            fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
+            for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
+
+        cena.vai()
+        return cena
+
         for j, linha in enumerate(mapa):
             for i, imagem in enumerate(linha):
                 self.cria_elemento( x=i*lado, y=j*lado+lado, cena=cena)
-        cena.vai()
-        return cena
+
         
     def cria_elemento(self, x, y, cena):
         """
