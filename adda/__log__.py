@@ -839,3 +839,7 @@ TypeError: 'str' object is not callable
 'error': '''
 Exception: <SyntaxError: unexpected token: '.'>
 '''},
+{'date': 'Wed Aug 05 2020 11:38:20.870 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <SyntaxError: unexpected token: '.'>
+'''},
