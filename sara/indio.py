@@ -39,6 +39,8 @@ class Indio():
         """ Roteiro do índio. Conjunto de comandos para ele executar.
         """
         self.anda()
+        self.anda()
+        self.anda()
 
 class Kwarwp():
     
@@ -52,7 +54,7 @@ class Kwarwp():
         """Cria um matriz com os elementos descritos em cada linha de texto"""
         self.mapa = mapa.split()
         """Largura da casa da arena dos desafios, número de colunas no mapa"""
-        self.lado, self.col, self.lin = 50, len(self.mapa[0]), len(self.mapa)+1
+        self.lado, self.col, self.lin = 100, len(self.mapa[0]), len(self.mapa)+1
         Kwarwp.LADO = self.lado
         w, h = self.col *self.lado, self.lin *self.lado
         self.taba = {}
