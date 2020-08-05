@@ -67,6 +67,8 @@ class Kwarwp():
         from collections import namedtuple as nt
         Fab = nt("Fab", "objeto imagem")
 
+        IMGUR = "https://i.imgur.com/"
+
         fabrica = {
         "&": Fab(self.coisa, f"{IMGUR}dZQ8liT.jpg"), # OCA
         "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
