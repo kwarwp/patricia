@@ -1238,3 +1238,10 @@ KeyError: +
     self.taba = { (i, j): fabrica[imagem].objeto(
 KeyError: +
 '''},
+{'date': 'Tue Aug 04 2020 22:37:37.605 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 75
+  self.taba = { (i, j): fabrica[imagem].objeto( +
+                                                                                                                                         ^
+SyntaxError: invalid syntax
+'''},
