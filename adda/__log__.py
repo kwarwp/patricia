@@ -755,3 +755,7 @@ SyntaxError: invalid syntax
     e.banhista.pos = dict(x=-100,y=-100)
 TypeError: pos() missing 1 positional argument: y
 '''},
+{'date': 'Wed Aug 05 2020 09:35:52.729 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <SyntaxError: unexpected token: '.'>
+'''},
