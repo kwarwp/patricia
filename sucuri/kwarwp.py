@@ -12,10 +12,10 @@ STYLE["width"] = 600
 STYLE["height"] = "500px"
 
 MAPA_INICIO = """
-@....&
-......
-......
-.#.^..
+              @....&
+              ......
+              ......
+              .#.^..
 """
 
 
@@ -26,7 +26,7 @@ class Kwarwp():
     """
     
     """O GLIFOS corresponde ao dicionário que guarda a imagem dos elementos"""
-    GLIFOS = {"&": "https://i.imgur.com/dZQ8liT.jpg",  # OCA ⛺
+    GLIFOS = {"&": "https://i.imgur.com/dZQ8liT.jpg",  # OCA âº
              "^": "https://imgur.com/8jMuupz.png",  # INDIO 
              "%" : "https://i.imgur.com/uwYPNlz.png", #CERCA 
              ".": "https://i.imgur.com/npb9Oej.png",  # VAZIO 
@@ -34,7 +34,7 @@ class Kwarwp():
              "#": "https://imgur.com/ldI7IbK.png",  # TORA 
              "@": "https://imgur.com/tLLVjfN.png",  # PICHE 
              "~": "https://i.imgur.com/UAETaiP.gif",  # CEU 
-             "*": "https://i.imgur.com/PfodQmT.gif"  # SOL ☀
+             "*": "https://i.imgur.com/PfodQmT.gif"  # SOL â
                }
 
     def __init__(self, vitollino=None, mapa = MAPA_INICIO, medidas = {}):
@@ -67,12 +67,13 @@ class Kwarwp():
         """ self.col acima pode ser chamado col agora"""
         col = self.col
         cena = self.v.c(self.GLIFOS["_"])
-        """ O céu recebe como índices de largura o lado * n° colunas, logo, se o mapa for alterado, o comprimento
+        """ O céu recebe como índices de largura o lado * nÂ° colunas, logo, se o mapa for alterado, o comprimento
             do céu também será.
         """
         ceu = self.v.a(self.GLIFOS["~"], W=lado*col, h=lado, x=0,y=0, cena=cena)
+        """Adiciona sol na posição e tamanho abaixo"""
         sol = self.v.a(self.GLIFOS["*"], w=60, h=60, x=0, y=40,cena=cena)
-        
+        """ Enumerate() é uma função que retorna uma tupla (w,r) onde w é o índice do elemento original e r é o elemento"""
         [self.cria_elemento( x=i*lado, y=j*lado+lado, cena=cena)
             for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)]
         cena.vai()
