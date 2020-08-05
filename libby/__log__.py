@@ -586,3 +586,10 @@ AttributeError: 'Kwarwp' object has no attribute 'GLIFOS'
     cena = self.v.c(self.GLIFOS["_"])
 AttributeError: 'Kwarwp' object has no attribute 'GLIFOS'
 '''},
+{'date': 'Wed Aug 05 2020 17:12:30.305 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 89
+  cena.vai()
+  ^
+IndentationError: unexpected indent
+'''},
