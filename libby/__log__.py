@@ -751,3 +751,10 @@ NameError: name 'mapa' is not defined
                                                                ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Aug 05 2020 20:59:16.815 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 130
+  """   
+                                                               ^
+SyntaxError: invalid syntax
+'''},
