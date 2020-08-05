@@ -71,48 +71,48 @@ class Kwarwp():
         cena = self.v.c(fabrica["_"].imagem)
         ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena)
         sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena)
-        self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
+        self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
+            for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
 
         cena.vai()
         return cena
-        
+
         
     def oca(self, imagem, x, y, cena):
         lado = self.lado
-        return Oca(imagem, x=x, y=y, cena=cena)
+        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
 
     def vazio(self, imagem, x, y, cena):
         lado = self.lado
-        return Vazio(imagem, x=x, y=y, cena=cena)
+        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
 
     def solo(self, imagem, x, y, cena):
         lado = self.lado
-        return Solo(imagem, x=x, y=y, cena=cena)
+        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         
     def tora(self, imagem, x, y, cena):
         lado = self.lado
-        return Tora(imagem, x=x, y=y, cena=cena)
+        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
 
     def piche(self, imagem, x, y, cena):
         lado = self.lado
-        return Piche(imagem, x=x, y=y, cena=cena)
+        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
 
     def ceu(self, imagem, x, y, cena):
         lado = self.lado
-        return Ceu(imagem, x=x, y=y, cena=cena)
+        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
     
     def sol(self, imagem, x, y, cena):
         lado = self.lado
-        return Sol(imagem, x=x, y=y, cena=cena)
+        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
 
     def cerca(self, imagem, x, y, cena):
         lado = self.lado
-        return Cerca(imagem, x=x, y=y, cena=cena)
+        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         
     def coisa(self, imagem, x, y, cena):
         lado = self.lado
-        #return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
-        return Coisa(imagem, x=x, y=y, cena=cena)
+        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         
     def indio(self, imagem, x, y, cena):
         lado = self.lado
