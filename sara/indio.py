@@ -26,6 +26,19 @@ class Indio():
     def __init__(self, imagem, x, y, cena):
         self.lado = lado = Kwarwp.LADO
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        
+    def anda(self):
+        """ Faz o índio caminhar na direção em que está olhando.
+        """
+        self.posicao = (self.posicao[0], self.posicao[1]-1)
+        """Assumimos que o índio está olhando para cima, decrementamos a posição **y**"""
+        self.indio.y = self.posicao[1]*self.lado
+        self.indio.x = self.posicao[0]*self.lado
+        
+    def executa(self):
+        """ Roteiro do índio. Conjunto de comandos para ele executar.
+        """
+        self.anda()
 
 class Kwarwp():
     
@@ -47,7 +60,9 @@ class Kwarwp():
         medidas.update(width=w, height=f"{h}px")
         self.cena = self.cria(mapa=self.mapa) if vitollino else None
         
-        
+        self.o_indio = None
+        """Instância do personagem principal, o índio, vai ser atribuído pela fábrica do índio"""
+
     def cria(self, mapa=""):
 
         from collections import namedtuple as nt
@@ -70,8 +85,10 @@ class Kwarwp():
         #mapa = self.mapa
         lado = self.lado
         cena = self.v.c(fabrica["_"].imagem)
-        ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena)
+        ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena, vai= self.executa)
+        """No argumento *vai*, associamos o clique no céu com o método **executa ()** desta classe"""
         sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena)
+
 
         self.taba = { (i, j): fabrica[imagem].objeto(
             fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena) 
