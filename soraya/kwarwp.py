@@ -42,23 +42,20 @@ class Kwarwp():
     
     
 
-    def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
-        """ self.v = vitollino()
-        Cria um matriz com os elementos descritos em cada linha de texto
-        mapa = mapa.split()
-        Largura da casa da arena dos desafios, número de colunas no mapa
-        self.lado, self.col = 600//8, len(mapa[0])
-        self.cena = self.cria(mapa=mapa) if vitollino else None"""
+    def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):       
         
         Kwarwp.VITOLLINO = self.v = vitollino()
         """Cria um matriz com os elementos descritos em cada linha de texto"""
         self.mapa = mapa.split()
+        
         """Largura da casa da arena dos desafios, número de colunas no mapa"""
         self.lado, self.col, self.lin = 100, len(self.mapa[0]), len(self.mapa)+1
         Kwarwp.LADO = self.lado
         w, h = self.col *self.lado, self.lin *self.lado
-        self.taba = {}
+        
         """Dicionário que a partir de coordenada (i,J) localiza um piso da taba"""
+        self.taba = {}
+        
         medidas.update(width=w, height=f"{h}px")
         self.cena = self.cria(mapa=self.mapa) if vitollino else None
 
@@ -71,15 +68,15 @@ class Kwarwp():
         Fab = nt("Fab", "objeto imagem")
         
         fabrica = {
-        "&": Fab(self.coisa, f"dZQ8liT.jpg"), # OCA
-        "^": Fab(self.indio, f"8jMuupz.png"), # INDIO
-        ".": Fab(self.vazio, f"npb9Oej.png"), # VAZIO
-        "_": Fab(self.coisa, f"sGoKfvs.jpg"), # SOLO
-        "#": Fab(self.coisa, f"ldI7IbK.png"), # TORA
-        "@": Fab(self.coisa, f"tLLVjfN.png"), # PICHE
-        "~": Fab(self.coisa, f"UAETaiP.gif"), # CEU
-        "*": Fab(self.coisa, f"PfodQmT.gif"), # SOL
-        "|": Fab(self.coisa, f"uwYPNlz.png")  # CERCA
+        "&": Fab(self.coisa, f"{IMGUR}dZQ8liT.jpg"), # OCA
+        "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
+        ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), # VAZIO
+        "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), # SOLO
+        "#": Fab(self.coisa, f"{IMGUR}ldI7IbK.png"), # TORA
+        "@": Fab(self.coisa, f"{IMGUR}tLLVjfN.png"), # PICHE
+        "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), # CEU
+        "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), # SOL
+        "|": Fab(self.coisa, f"{IMGUR}uwYPNlz.png")  # CERCA
         }
         
         mapa = mapa if mapa != "" else self.mapa
@@ -119,4 +116,4 @@ if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
     STYLE["width"] = 600
     STYLE["height"] = "600px"
-    Kwarwp(Jogo, mapa=MAPA_ROCHA, medidas=STYLE)
+    Kwarwp(vitollino = Jogo, mapa=MAPA_ROCHA, medidas=STYLE)
