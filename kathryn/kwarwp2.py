@@ -71,9 +71,6 @@ class Kwarwp():
         """Dicionário que a partir de coordenada (i,J) localiza um piso da taba"""
         medidas.update(width=w, height=f"{h}px")
         self.cena = self.cria(mapa=self.mapa) if vitollino else None
-                       
-        STYLE["width"] = w
-        STYLE["height"] = "{}px".format(h)
             
     def cria(self, mapa = ""):
         """
