@@ -12,10 +12,6 @@ Changelog
 .. versionadded::    20.07
         Criando novo Kwarwp!
 """
-from collections import namedtuple as nt
-
-IMGUR = "https://imgur.com/"
-"""Prefixo do site imgur."""
 
 MAPA_INICIO = """
 @....&
