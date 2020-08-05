@@ -24,9 +24,7 @@ MAPA_INICIO = """
 """
 class Kwarwp():
     """ Jogo para ensino de programação.
-        
-        Declara o dicionário GLIFOS que possui a str símbolo do elemento e o correspodente link de imagem
-        
+    
         Declara a string MAPA_INICIO que possui a posição dos elementos (GLIFOS) no mapa através da matriz linha x coluna. 
         As linha separadas pela tecla <Enter>, a coluna determinada pelos caracteres colineares em linha singulares.
 
@@ -81,7 +79,10 @@ class Kwarwp():
         :nome Fab: O nome da tupla que descreve a fábrica.
         :campo objeto: O tipo de objeto que vai ser criado.
         :campo imagem: A imagem que representa o objeto que vai ser criado.
-                
+        
+        Define uma fábrica de tuplas gerada pela biblioteca collections.namedpuple("nome", "orientação objeto")
+        Declara o dicionário para fabricar as tuplas com as características de objeto em função do glifo.
+        
             >> cena = self.v.c(self."url")
         
         Gera a cena do jogo chamano **self.v.c** referente ao módulo Jogo do Vitollino e **(self."url")** referente a imagem do canvas.
@@ -128,7 +129,6 @@ class Kwarwp():
         "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), # SOL
         "+": Fab(self.coisa, f"{IMGUR}uwYPNlz.png")}  # CERCA
 
-        
         mapa = mapa if mapa != "" else self.mapa
 
         mapa = self.mapa
@@ -143,6 +143,7 @@ class Kwarwp():
             for i, imagem in enumerate(linha)}
         cena.vai()
         return cena
+        
         '''
         Tentar criar mesmo código com a descrição de dependência a baixo
         for j, linha in enumerate(mapa):
