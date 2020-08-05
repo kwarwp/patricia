@@ -493,3 +493,10 @@ IndentationError: unexpected indent
     cena = self.v.c(self.GLIFOS["_"])
 AttributeError: 'Kwarwp' object has no attribute 'GLIFOS'
 '''},
+{'date': 'Wed Aug 05 2020 16:55:35.504 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 61
+  lado = self.lado
+  ^
+IndentationError: unexpected indent
+'''},
