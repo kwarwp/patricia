@@ -1,4 +1,4 @@
-# patricia.angie.kwarwp-mapa.py
+# patricia.angie.kwarwp-mapa-indio.py
 # SPDX-License-Identifier: GPL-3.0-or-later
 """ Projeto Kwarwp
 
