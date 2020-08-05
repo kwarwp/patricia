@@ -6,9 +6,16 @@ Meu Kwarwp Isaac
 .. codeauthor:: Isaac D'Césares <isaac.dcesares@gmail.com>
 Changelog
 ---------
-.. versionadded::    30.07
+.. versionadded::    20.08
+        Classe Índio
+        
+.. versionadded::    20.07
         Criando novo Kwarwp!
 """
+from collections import namedtuple as nt
+
+IMGUR = "https://imgur.com/"
+"""Prefixo do site imgur."""
 
 MAPA_INICIO = """
 @....&
