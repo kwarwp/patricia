@@ -226,3 +226,10 @@ AttributeError: 'GUI' object has no attribute 'coisa'
     fabrica = {
 AttributeError: 'GUI' object has no attribute 'coisa'
 '''},
+{'date': 'Tue Aug 04 2020 22:53:39.790 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 88
+  mapa = mapa if mapa != "" else self.mapa
+  ^
+IndentationError: unexpected indent
+'''},
