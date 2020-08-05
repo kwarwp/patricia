@@ -402,3 +402,10 @@ TypeError: cria() got an unexpected keyword argument 'mapa'
                                                                                                  ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Aug 05 2020 19:25:10.219 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 60
+  return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena
+                                                                                                           ^
+SyntaxError: invalid syntax
+'''},
