@@ -77,7 +77,7 @@ class Kwarwp():
         """ Enumerate() é uma função que retorna uma tupla (w,r) onde w é o índice do elemento original e r é o elemento.
             
         """
-        objetos = [self.cria_elemento( x=i*lado, y=j*lado+lado, cena=cena)
+        objetos = [self.cria_elemento( x=i*lado,y=j*lado+lado, cena=cena)
         """ O primeiro for retorna tupla(índice,linha). mapa = [(0, @....&),(1,......),(2,......),(3,.#.^..)]
             O segundo for retorna tupla(índice,glifo). glifo = [[(0,@),(1,.),(2,.),(3,.),(4,.),(5,&)],[...]]
         """
