@@ -21,10 +21,10 @@ Changelog
         Inclui um import.
 
 """
-from _spy.vitollino.main import Cena, Elemento as Elt
+from _spy.vitollino.main import Cena, Elemento
 from browser import document # importa o DOM para atribuir o evento de teclado
 from adda.praia import cena
-class Elemento(Elt):
+class Elemento__:
                          
     @property
     def siz(self):
