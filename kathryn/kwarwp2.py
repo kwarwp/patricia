@@ -121,16 +121,16 @@ class Kwarwp():
         """
         Fab = nt("Fab", "objeto url_imagem")
         fabrica = {
-        "&": Fab(self.coisa, f"{IMGUR}dZQ8liT.jpg"), # OCA
-        "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
-        ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), # VAZIO
-        "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), # SOLO
-        "#": Fab(self.coisa, f"{IMGUR}ldI7IbK.png"), # TORA
-        "@": Fab(self.coisa, f"{IMGUR}tLLVjfN.png"), # PICHE
-        "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), # CEU
-        "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), # SOL
-        "|": Fab(self.coisa, f"{IMGUR}uwYPNlz.png")  # CERCA
-        }
+            "&": Fab(self.coisa, f"{IMGUR}dZQ8liT.jpg"), # OCA
+            "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
+            ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), # VAZIO
+            "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), # SOLO
+            "#": Fab(self.coisa, f"{IMGUR}ldI7IbK.png"), # TORA  
+            "@": Fab(self.coisa, f"{IMGUR}tLLVjfN.png"), # PICHE
+            "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), # CEU
+            "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), # SOL
+            "|": Fab(self.coisa, f"{IMGUR}uwYPNlz.png")  # CERCA
+            }
         
         mapa = mapa if mapa != "" else self.mapa
 
@@ -140,18 +140,21 @@ class Kwarwp():
         ceu = self.v.a(fabrica["~"].url_imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena)
         sol = self.v.a(fabrica["*"].url_imagem, w=60, h=60, x=0, y=40, cena=cena)
         
-        self.taba = {(i, j): fabrica[glifo].objeto(
-            fabrica[glifo].url_imagem, x=i*lado, y=j*lado+lado, cena=cena)
-            for j, linha in enumerate(mapa) for i, glifo in enumerate(linha)
+        self.taba = {(i, j): fabrica[imagem].objeto(
+            fabrica[imagem].url_imagem, x=i*lado, y=j*lado+lado, cena=cena)
+            for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)
             }
         cena.vai()
         return cena
         '''
         Tentar cirar mesmo código com a descrição de dependência a baixo
         for j, linha in enumerate(mapa):
-            for i, glifo in enumerate(linha):
+            for i, imagem in enumerate(linha):
                 self.cria_elemento( x=i*lado, y=j*lado+lado, cena=cena)
         '''
+    def coisa(self, imagem, x, y, cena):
+        lado = self.lado
+        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         
     def cria_elemento(self, x, y, cena):
         """
