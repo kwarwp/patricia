@@ -27,6 +27,8 @@ class Kwarwp():
         As linha separadas pela tecla <Enter>, a coluna determinada pelos caracteres colineares em linha singulares.
 
         :param vitollino: Empacota o engenho de jogo Vitollino.
+        :param mapa: Um texto representando o mapa do desafio.
+        :param medidas: Um dicionário usado para redimensionar a tela.
     """
     # Verificar pq o código do link está diferente (https://github.com/carlotolla/kwarwp/blob/548774d4dc2d437d5a60c38a5e3bacae9b9228f5/kwarwp/kwarapp.py)
     GLIFOS = {
@@ -133,30 +135,25 @@ class Kwarwp():
         lado = self.lado
         return self.v.a(self.GLIFOS[imagem], w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena)
 
+class Indio():
+    '''
+    Cria o personagem principal na arena do Kwarwp na posição definida.
 
+    :param imagem: A figura representando o índio na posição indicada.
+    :param x: Coluna em que o elemento será posicionado.
+    :param y: Linha em que o elemento será posicionado.
+    :param cena: Cena em que o elemento será posicionado.
+    '''
+    def __init__(self, imagem, x, y, cena):
+        self.lado = lado = Kwarwp.LADO
+        self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        
 if __name__ == "__main__":
     """
     class Jogo:
         def __init__(self):
             self.c = Cena
-            self.d = self.codigo = Codigo
-            self.q = Sala
-            self.salao = self.s = Salao
             self.a = Elemento
-            self.texto = self.t = Popup
-            self.n = Texto
-            self.labirinto = self.l = Labirinto
-            self.inventario = self.i = INVENTARIO
-            self.portal = self.p = Portal
-            self.dropper = self.d = Dropper
-            self.droppable = self.r = Droppable
-            self.musica = self.m = Musica
-            self.codigo = Codigo
-            self.document = document
-            self.html = html
-            self.window = win
-            self.timer = timer
-            pass
       
     Kwarwp(Jogo) -> Chama a Classe Kwarwp com o método Jogo da biblioteca Vitollino
     """
