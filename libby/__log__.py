@@ -464,3 +464,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Aug 05 2020 16:53:50.958 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 41
+  def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
+  ^
+IndentationError: unexpected indent
+'''},
