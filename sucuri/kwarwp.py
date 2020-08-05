@@ -78,6 +78,9 @@ class Kwarwp():
             
         """
         objetos = [self.cria_elemento( x=i*lado, y=j*lado+lado, cena=cena)
+        """ O primeiro for retorna tupla(índice,linha). mapa = [(0, @....&),(1,......),(2,......),(3,.#.^..)]
+            O segundo for retorna tupla(índice,glifo). glifo = [[(0,@),(1,.),(2,.),(3,.),(4,.),(5,&)],[...]]
+        """
             for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)]
         cena.vai()
         return cena
