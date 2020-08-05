@@ -173,6 +173,10 @@ class Kwarwp():
         lado = self.lado
         return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         
+    def vazio(self, imagem, x, y, cena):
+        lado = self.lado
+        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        
     def indio(self, imagem, x, y, cena):
         """
         Este método define uma fábrica criando o índio o personagem principal.
