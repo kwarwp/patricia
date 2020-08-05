@@ -46,7 +46,8 @@ class Kwarwp():
           
            .. note::
               Tente aplicar o seguinte script: > MAPA_INICIO = X 
-              > y = x.split() > z = len(y[0])  > print(x,y,z)   
+              > y = x.split() > z = len(y[0])  > print(x,y,z) 
+              LEN(MAPA[0]) acessa o primeiro item indexado em zero, retornando sua 'quantidade'
         """
         self.lado, self.col = 100, len(mapa[0])
         """ Chama cena em cria() se há a importação do vitollino"""
@@ -74,8 +75,10 @@ class Kwarwp():
         ceu = self.v.a(self.GLIFOS["~"], w=lado*col, h=lado, x=0,y=0, cena=cena)
         """Adiciona sol na posição e tamanho abaixo"""
         sol = self.v.a(self.GLIFOS["*"], w=60, h=60, x=0, y=40,cena=cena)
-        """ Enumerate() é uma função que retorna uma tupla (w,r) onde w é o índice do elemento original e r é o elemento"""
-        [self.cria_elemento( x=i*lado, y=j*lado+lado, cena=cena)
+        """ Enumerate() é uma função que retorna uma tupla (w,r) onde w é o índice do elemento original e r é o elemento.
+            
+        """
+        objetos = [self.cria_elemento( x=i*lado, y=j*lado+lado, cena=cena)
             for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)]
         cena.vai()
         return cena
