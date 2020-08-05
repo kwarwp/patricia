@@ -744,3 +744,10 @@ NameError: name 'mapa' is not defined
     self.taba = {(i, j): fabrica[imagem].objeto(
 NameError: name 'mapa' is not defined
 '''},
+{'date': 'Wed Aug 05 2020 20:58:46.545 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 130
+  """   
+                                                               ^
+SyntaxError: invalid syntax
+'''},
