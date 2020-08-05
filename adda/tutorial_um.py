@@ -21,9 +21,57 @@ Changelog
         Inclui um import.
 
 """
-from _spy.vitollino.main import Cena, Elemento
+from _spy.vitollino.main import Cena, Elemento as Elt
 from browser import document # importa o DOM para atribuir o evento de teclado
 from adda.praia import cena
+class Elemento(Elt):
+                         
+    @property
+    def si(self):
+        """Recupera uma tupla de inteiros reportando o tamanho da imagem do elemento"""
+        siz = self.elt.style.backgroundSize
+        siz = [int("".join(i for i in c if i.isdigit())) for c in siz.split()]
+        return siz
+                         
+    @si.setter
+    def si(self, wh):
+        """Recebe uma tupla de inteiros definindo o tamanho da imagem do elemento
+        
+            :param wh: w - tamanho da imagem na horizontal a partir da esquerda
+            :param hh: h - tamanho da imagem na vertical a partir do topo
+        """
+        self.elt.style.backgroundSize = f'{}px {}px'.format(*wh)
+                         
+    @property
+    def po(self):
+        """Recupera uma tupla de inteiros reportando a posição da imagem do elemento"""
+        pos = self.elt.style.backgroundPosition
+        pos = [int("".join(i for i in c if i.isdigit())) for c in pos.split()]
+        return pos
+                         
+    @po.setter
+    def po(self, xy):
+        """Recebe uma tupla de inteiros definindo a posição da imagem do elemento
+        
+            :param xy: x - posição da imagem na horizontal a partir da esquerda
+            :param xy: y - posição da imagem na vertical a partir do topo
+        """
+        self.elt.style.backgroundPosition = f'{}px {}px'.format(*xy)
+                         
+    @property
+    def im(self):
+        """Recupera a URI da imagem do elemento"""
+        img = self.elt.style.backgroundImage
+        img = img.split('"')[1] if '"' in img else ""
+        return img
+                         
+    @im.setter
+    def im(self, value):
+        """Recupera a URI da imagem do elemento
+            :param value: URI da imagem
+        """
+        self.elt.style.backgroundImage = f'url({value})'
+
 
 class Eventos:
     """ Associa um evento a uma imagem e captura eventos de teclado. """
@@ -75,7 +123,7 @@ if __name__ == "__main__":
     #e.banhista.elt.style.backgroundImage = 'url({})'.format('https://i.imgur.com/chvIdvJ.png')
     #.banhista.elt.style.backgroundPosition = '{}px {}px'.format(-100,-100)
     #e.banhista.elt.style.backgroundSize = '{}px {}px'.format(200,400)
-    #e.banhista.i = 'https://i.imgur.com/chvIdvJ.png'
+    e.banhista.im = 'https://i.imgur.com/chvIdvJ.png'
     e.banhista.pos = (-100,-100)
-    e.banhista.siz = (200,400)
+    #e.banhista.siz = (200,400)
     e.vai()
