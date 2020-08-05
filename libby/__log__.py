@@ -665,3 +665,10 @@ AttributeError: 'GUI' object has no attribute 'coisa'
     fabrica = {
 AttributeError: 'GUI' object has no attribute 'coisa'
 '''},
+{'date': 'Wed Aug 05 2020 17:19:23.567 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 71
+  """ Arena onde os desafios ocorrem.
+  ^
+IndentationError: unexpected indent
+'''},
