@@ -712,3 +712,7 @@ AttributeError: 'Elemento' object has no attribute 'elt'
 'error': '''
 Exception: <SyntaxError: unexpected token: '.'>
 '''},
+{'date': 'Wed Aug 05 2020 09:23:27.397 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <SyntaxError: unexpected token: '.'>
+'''},
