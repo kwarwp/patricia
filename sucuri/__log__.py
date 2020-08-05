@@ -84,3 +84,10 @@ NameError: name 'cercado' is not defined
                                                 ^
 SyntaxError: non-keyword arg after keyword arg
 '''},
+{'date': 'Wed Aug 05 2020 19:33:31.772 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 29
+  GLIFOS = {"&": "https://i.imgur.com/dZQ8liT.jpg",  # OCA ⛺
+                                                                                                                                                                                                                                             ^
+SyntaxError: invalid syntax
+'''},
