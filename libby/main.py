@@ -33,31 +33,25 @@ class Indio():
       
       
 class Kwarwp():
-    """ Arena onde os desafios ocorrem.
-    
-        :param vitollino: Empacota o engenho de jogo Vitollino.
-        :param mapa: Um texto representando o mapa do desafio.
-    """
-    GLIFOS = {
-    "&": "https://i.imgur.com/dZQ8liT.jpg",  # OCA
-    "^": "https://imgur.com/8jMuupz.png",  # INDIO
-    ".": "https://i.imgur.com/npb9Oej.png",  # VAZIO
-    "_": "https://i.imgur.com/sGoKfvs.jpg",  # SOLO
-    "#": "https://imgur.com/ldI7IbK.png",  # TORA
-    "@": "https://imgur.com/tLLVjfN.png",  # PICHE
-    "~": "https://i.imgur.com/UAETaiP.gif",  # CEU
-    "*": "https://i.imgur.com/PfodQmT.gif",  # SOL
-    "%": "https://i.imgur.com/uwYPNlz.png"  # CERCA
-    }
-    
-    def __init__(self, vitollino=None, mapa=MAPA_CERCA, medidas={}):
-        self.v = vitollino()
-        """Cria um matriz com os elementos descritos em cada linha de texto"""
-        mapa = mapa.split()
-        """Largura da casa da arena dos desafios, número de colunas no mapa"""
-        self.lado, self.col = 100, len(mapa[0]) 
-        self.cena = self.cria(mapa=mapa) if vitollino else None
+   VITOLLINO = None
+   """Referência estática para obter o engenho de jogo."""
+   LADO = None
+   """Referência estática para definir o lado do piso da casa."""
+
+   def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
+      Kwarwp.VITOLLINO = self.v = vitollino()
+      """Cria um matriz com os elementos descritos em cada linha de texto"""
+      self.mapa = mapa.split()
+      """Largura da casa da arena dos desafios, número de colunas no mapa"""
+      self.lado, self.col, self.lin = 100, len(self.mapa[0]), len(self.mapa)+1
+      Kwarwp.LADO = self.lado
+      w, h = self.col *self.lado, self.lin *self.lado
+      self.taba = {}
+      """Dicionário que a partir de coordenada (i,J) localiza um piso da taba"""
+      medidas.update(width=w, height=f"{h}px")
+      self.cena = self.cria(mapa=self.mapa) if vitollino else None
         
+    
     def cria(self, mapa="  "):
         """ Cria o ambiente de programação Kwarwp.
             :param mapa: Um texto representando o mapa do desafio.
