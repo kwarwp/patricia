@@ -77,7 +77,7 @@ class Kwarwp():
         "@": Fab(self.coisa, f"{IMGUR}tLLVjfN.png"), # PICHE
         "~": Fab(self.coisa, f"{IIMGUR}UAETaiP.gif"), # CEU
         "*": Fab(self.coisa, f"{IIMGUR}PfodQmT.gif"), # SOL
-        "|": Fab(self.coisa, f"{IIMGUR}uwYPNlz.png")  # CERCA
+        "+": Fab(self.coisa, f"{IIMGUR}uwYPNlz.png")  # CERCA
         }
         
         mapa = mapa if mapa != "" else self.mapa
@@ -88,7 +88,7 @@ class Kwarwp():
         ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena)
         sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena)
         
-        self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=(j*lado)+lado, cena=cena)
+        self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
             for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
 
         cena.vai()
