@@ -100,14 +100,14 @@ class Kwarwp():
         return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         
     def indio(self, imagem, x, y, cena):
-            lado = self.lado
-            return Indio(imagem, x=x, y=y, cena=cena)   
+        lado = self.lado
+        return Indio(imagem, x=x, y=y, cena=cena)   
         
 class Indio():
     """cria a classe indio"""
     def __init__(self, imagem, x, y, cena):
-    self.lado = lado = Kwarwp.LADO
-    self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        self.lado = lado = Kwarwp.LADO
+        self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
 
          
         
