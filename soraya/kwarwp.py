@@ -10,8 +10,7 @@ Changelog
 .. versionadded::    20.07
        Criar um Mapa de inicio
 """
-from collections import namedtuple as nt
-Fab = nt("Fab", "objeto imagem")
+
 
 MAPA_INICIO = """
 @....&
@@ -41,17 +40,7 @@ class Kwarwp():
     """Referência estática para definir o lado do piso da casa."""
 
     
-    fabrica = {
-    "&": Fab(self.coisa, f"{IMGUR}dZQ8liT.jpg"), # OCA
-    "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
-    ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), # VAZIO
-    "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), # SOLO
-    "#": Fab(self.coisa, f"{IMGUR}ldI7IbK.png"), # TORA
-    "@": Fab(self.coisa, f"{IMGUR}tLLVjfN.png"), # PICHE
-    "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), # CEU
-    "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), # SOL
-    "|": Fab(self.coisa, f"{IMGUR}uwYPNlz.png")  # CERCA
-    }
+    
 
     def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
         """ self.v = vitollino()
@@ -73,6 +62,26 @@ class Kwarwp():
         medidas.update(width=w, height=f"{h}px")
         self.cena = self.cria(mapa=self.mapa) if vitollino else None
 
+        
+        
+        
+    def cria(self, mapa=""):
+    
+        from collections import namedtuple as nt
+        Fab = nt("Fab", "objeto imagem")
+        
+        fabrica = {
+        "&": Fab(self.coisa, f"{IMGUR}dZQ8liT.jpg"), # OCA
+        "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
+        ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), # VAZIO
+        "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), # SOLO
+        "#": Fab(self.coisa, f"{IMGUR}ldI7IbK.png"), # TORA
+        "@": Fab(self.coisa, f"{IMGUR}tLLVjfN.png"), # PICHE
+        "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), # CEU
+        "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), # SOL
+        "|": Fab(self.coisa, f"{IMGUR}uwYPNlz.png")  # CERCA
+        }
+        
         mapa = mapa if mapa != "" else self.mapa
 
         mapa = self.mapa
@@ -80,17 +89,17 @@ class Kwarwp():
         cena = self.v.c(fabrica["_"].imagem)
         ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena)
         sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena)
-        self.taba = {(i, j): fabrica[imagem].objeto(
-               fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
-               for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
-
-        cena.vai()
-        return cena
-
 
     def coisa(self, imagem, x, y, cena):
         lado = self.lado
         return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        
+    self.taba = {(i, j): fabrica[imagem].objeto(
+               fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
+               for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
+
+        cena.vai()
+        return cena   
 
 
 
