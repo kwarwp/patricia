@@ -169,3 +169,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Tue Aug 04 2020 22:48:25.318 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 58
+  fabrica = {
+  ^
+IndentationError: unexpected indent
+'''},
