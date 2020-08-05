@@ -686,3 +686,25 @@ TypeError: z() missing 1 positional argument: self
     print([int(join(i for i in c if i.isdigit())) for c in e.banhista.elt.style.backgroundPosition.split()])
 NameError: name 'join' is not defined
 '''},
+{'date': 'Wed Aug 05 2020 09:13:45.691 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 71
+    e = Eventos() #.vai()
+  module <module> line 36
+    self.banhista = Elemento(self.BANHISTA, x=100, y=200, cena=self.calcada)
+  module _spy.vitollino.main line 519
+    self.img, self.title, self.dropper, self.alt = img, tit, drop, alt
+  module _spy.vitollino.main line 636
+    self.elt.style.backgroundImage = f'url({value})'
+AttributeError: 'Elemento' object has no attribute 'elt'
+'''},
