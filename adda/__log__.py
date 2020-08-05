@@ -801,3 +801,7 @@ Exception: <SyntaxError: unexpected token: '.'>
 'error': '''
 Exception: <SyntaxError: unexpected token: '.'>
 '''},
+{'date': 'Wed Aug 05 2020 10:03:08.102 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <SyntaxError: unexpected token: '.'>
+'''},
