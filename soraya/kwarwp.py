@@ -103,7 +103,7 @@ class Kwarwp():
             lado = self.lado
             return Indio(imagem, x=x, y=y, cena=cena)   
         
-Class Indio():
+class Indio():
     """cria a classe indio"""
     def __init__(self, imagem, x, y, cena):
     self.lado = lado = Kwarwp.LADO
