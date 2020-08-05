@@ -514,3 +514,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Aug 05 2020 16:56:35.676 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 61
+  lado = self.lado
+  ^
+IndentationError: unexpected indent
+'''},
