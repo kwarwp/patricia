@@ -797,3 +797,7 @@ NameError: name 'im' is not defined
 'error': '''
 Exception: <SyntaxError: unexpected token: '.'>
 '''},
+{'date': 'Wed Aug 05 2020 10:02:28.915 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <SyntaxError: unexpected token: '.'>
+'''},
