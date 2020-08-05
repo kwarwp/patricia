@@ -125,7 +125,7 @@ if __name__ == "__main__":
     #e.banhista.elt.style.backgroundSize = '{}px {}px'.format(200,400)
     #print(e.banhista.im)
     #e.banhista.img = "https://i.imgur.com/chvIdvJ.png"
-    e.banhista.img = ""
+    #e.banhista.img = ""
     e.banhista.pos = (-100,-100)
     e.banhista.siz = (200,400)
     e.vai()
