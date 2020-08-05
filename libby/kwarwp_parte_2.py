@@ -146,15 +146,13 @@ class Kwarwp():
         """
         self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
         return self.o_indio
-
-    
     
 
-
-def main(vitollino):
-    Kwarwp(vitollino)
+def main(vitollino, medidas={}):
+    Kwarwp(vitollino, medidas=medidas)
+        
     
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
     STYLE.update(width=600, height="500px")
-    main(Jogo)
+    main(Jogo, STYLE)
