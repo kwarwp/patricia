@@ -7,7 +7,7 @@
 """
 from _spy.vitollino.main import Jogo, STYLE
 
-#largura e comprimento, respectivamente
+#largura e altura, respectivamente
 STYLE["width"] = 600
 STYLE["height"] = "500px"
 
@@ -24,11 +24,12 @@ class Kwarwp():
 
         :param vitollino: Empacota o engenho de jogo Vitollino.
     """
-    '''O GLIFOS corresponde ao dicionário que guarda a imagem dos elementos
-    '''
+    
+    """O GLIFOS corresponde ao dicionário que guarda a imagem dos elementos"""
     GLIFOS = {"&": "https://i.imgur.com/dZQ8liT.jpg",  # OCA ⛺
              "^": "https://imgur.com/8jMuupz.png",  # INDIO 
-             ".": "https://i.imgur.com/uwYPNlz.png",  # CERCA 
+             "%" : "https://i.imgur.com/uwYPNlz.png" #CERCA 
+             ".": "https://i.imgur.com/npb9Oej.png",  # VAZIO 
              "_": "https://i.imgur.com/sGoKfvs.jpg",  # SOLO 
              "#": "https://imgur.com/ldI7IbK.png",  # TORA 
              "@": "https://imgur.com/tLLVjfN.png",  # PICHE 
@@ -38,47 +39,45 @@ class Kwarwp():
 
     def __init__(self, vitollino=None, mapa = MAPA_INICIO, medidas = {}):
         self.v = vitollino()
-        '''Gera uma matriz de acordo com a quantidade de elementos no dicionário'''
-        self.cena = self.cria(cenario=cenario) if vitollino else None
+        """Gera uma matriz de acordo com a quantidade de elementos no dicionário"""
+        mapa = mapa.split()
+        """ Largura da casa da arena dos desafios, número de colunas no mapa
+          
+           .. note::
+              Tente aplicar o seguinte script: > MAPA_INICIO = X 
+              > y = x.split() > z = len(y[0])  > print(x,y,z)   
+        """
+        self.lado, self.col = 100, len(mapa[0])
+        """ Chama cena em cria se há a importação do vitollino"""
+        self.cena = self.cria(mapa=mapa) if vitollino else None
         
-    def cercado(self):
-        ''' Gera o cercado da cena
-        '''
-        cerca_baixo = (self.v.a(self.CERCA, w=100, h=100, x=0, y=400, cena=cena), 
-                      self.v.a(self.CERCA, w=100, h=100, x=100, y=400, cena=cena),
-                      self.v.a(self.CERCA, w=100, h=100, x=200, y=400, cena=cena),
-                      self.v.a(self.CERCA, w=100, h=100, x=300, y=400, cena=cena),
-                      self.v.a(self.CERCA, w=100, h=100, x=400, y=400, cena=cena),
-                      self.v.a(self.CERCA, w=100, h=100, x=500, y=400, cena=cena))
-                 
-        cerca_esquerda = (self.v.a(self.CERCA, w=100, h=100, x=0, y=100, cena=cena), 
-                         self.v.a(self.CERCA, w=100, h=100, x=0, y=200, cena=cena),
-                         self.v.a(self.CERCA, w=100, h=100, x=0, y=300, cena=cena),
-                         self.v.a(self.CERCA, w=100, h=100, x=0, y=400, cena=cena)) 
-                          
-        cerca_cima = (self.v.a(self.CERCA, w=100, h=100, x=0, y=100, cena=cena), 
-                     self.v.a(self.CERCA, w=100, h=100, x=100, y=100, cena=cena),
-                     self.v.a(self.CERCA, w=100, h=100, x=200, y=100, cena=cena),
-                     self.v.a(self.CERCA, w=100, h=100, x=300, y=100, cena=cena),
-                     self.v.a(self.CERCA, w=100, h=100, x=400, y=100, cena=cena),
-                     self.v.a(self.CERCA, w=100, h=100, x=500, y=100, cena=cena))
-                          
-        cerca_direita = (self.v.a(self.CERCA, w=100, h=100, x=500, y=100, cena=cena), 
-                        self.v.a(self.CERCA, w=100, h=100, x=500, y=300, cena=cena),
-                        self.v.a(self.CERCA, w=100, h=100, x=500, y=400, cena=cena))
-                 
-    def cria(self, cenario="default"):
-        """ Cria o ambiente de programação Kwarwp."""
-        cena = self.v.c(self.SOLO)
-        indio = self.v.a(self.INDIO, w=100, h=100, x=200, y=300, cena=cena)
-        oca = self.v.a(self.OCA, w=100, h=100, x=500, y=200, cena=cena)
-        #tora = self.v.a(self.TORA, w=100, h=100, x=100, y=400, cena=cena)
-        piche = self.v.a(self.PICHE, w=100, h=100, x=100, y=200, cena=cena)
-        ceu = self.v.a(self.CEU, w=600, h=100, x=0, y=0, cena=cena)
-        sol = self.v.a(self.SOL, w=60, h=60, x=0, y=40, cena=cena)
-        cerca = self.cercado()
+    
+    def cria(self, mapa=" "):
+        """ Cria o ambiente de programação Kwarwp.
+            
+            :param mapa: Texto representando o mapa do desafio
+            
+            :class Jogo: Este desafio herda parâmetros da classe Elemento
+            :param w: Largura em pixels do elemento na cena
+            :param h: Altura em pixels do elemento na cena
+            :param x: Posição x, na horizontal a partir da esquerda do elemento na cena
+            :param y: Posição y, na vertical a partir do topo do elemento na cena
+        """
+        lado = self.lado #lado = 100
+        """ self.col acima pode ser chamado col agora"""
+        col = self.col
+        cena = self.v.c(self.GLIFOS["_"])
+        """ O céu recebe como índices de largura o lado * n° colunas, logo, se o mapa for alterado, o comprimento
+            do céu também será.
+        """
+        ceu = self.v.a(self.GLIFOS["~"], W=lado*col, h=lado, x=0,y=0, cena=cena)
+        sol = self.v.a(self.GLIFOS["*"], w=60, h=60, x=0, y=40,cena=cena)
+        
+        [self.cria_elemento( x=i*lado, y=j*lado+lado, cena=cena)
+              for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)]
         cena.vai()
-        #return cena
+        return cena
+       
     
 if __name__ == "__main__":
     Kwarwp(Jogo) 
