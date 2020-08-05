@@ -73,11 +73,14 @@ class Kwarwp():
         ceu = self.v.a(self.GLIFOS["~"], W=lado*col, h=lado, x=0,y=0, cena=cena)
         sol = self.v.a(self.GLIFOS["*"], w=60, h=60, x=0, y=40,cena=cena)
         
-        objetos = self.v.a([self.cria_elemento( x=i*lado, y=j*lado+lado, cena=cena)
-              for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)]
+        [self.cria_elemento( x=i*lado, y=j*lado+lado, cena=cena)
+                  for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)]
         cena.vai()
         return cena
-       
+        
+    def cria_elemento(self, x, y, cena):
+        lado = self.lado
+        return self.v.a(self.GLIFOS[imagem], w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena)
     
 if __name__ == "__main__":
     Kwarwp(Jogo) 
