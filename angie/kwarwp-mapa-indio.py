@@ -104,9 +104,9 @@ class Kwarwp():
         return Indio(imagem, x=x, y=y, cena=cena)
         
     #ver se precisa remover para baixo
-    def cria_elemento(self, x, y, cena):
-        lado = self.lado
-        return self.v.a(self.GLIFOS[imagem], w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena)
+    #def cria_elemento(self, x, y, cena):
+    #    lado = self.lado
+    #    return self.v.a(self.GLIFOS[imagem], w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena)
     
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
