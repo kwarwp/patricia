@@ -71,7 +71,7 @@ class Kwarwp():
         fabrica = {
         "&": Fab(self.coisa, f"{IIMGUR}dZQ8liT.jpg"), # OCA
         "^": Fab(self.Indio.indio, f"{IMGUR}8jMuupz.png"), # INDIO
-        ".": Fab(self.vazio, f"{IIMGUR}npb9Oej.png"), # VAZIO
+        ".": Fab(self.coisa, f"{IIMGUR}npb9Oej.png"), # VAZIO
         "_": Fab(self.coisa, f"{IIMGUR}sGoKfvs.jpg"), # SOLO
         "#": Fab(self.coisa, f"{IMGUR}ldI7IbK.png"), # TORA
         "@": Fab(self.coisa, f"{IMGUR}tLLVjfN.png"), # PICHE
@@ -99,16 +99,17 @@ class Kwarwp():
         lado = self.lado
         return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         
-    
-    class Indio():
-        """cria a classe indio"""
-        def __init__(self, imagem, x, y, cena):
-            self.lado = lado = Kwarwp.LADO
-            self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
-
-        def indio(self, imagem, x, y, cena):
+    def indio(self, imagem, x, y, cena):
             lado = self.lado
-            return Indio(imagem, x=x, y=y, cena=cena)    
+            return Indio(imagem, x=x, y=y, cena=cena)   
+        
+Class Indio():
+    """cria a classe indio"""
+    def __init__(self, imagem, x, y, cena):
+    self.lado = lado = Kwarwp.LADO
+    self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+
+         
         
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
