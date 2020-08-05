@@ -9,7 +9,7 @@ from _spy.vitollino.main import Jogo, STYLE
 
 #largura e altura, respectivamente
 STYLE["width"] = 600
-STYLE["height"] = "500px"
+STYLE["height"] = "600px"
 
 MAPA_INICIO = """
               %%%%%%
