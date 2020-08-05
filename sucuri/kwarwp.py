@@ -74,13 +74,11 @@ class Kwarwp():
         ceu = self.v.a(self.GLIFOS["~"], w=lado*col, h=lado, x=0,y=0, cena=cena)
         """Adiciona sol na posição e tamanho abaixo"""
         sol = self.v.a(self.GLIFOS["*"], w=60, h=60, x=0, y=40,cena=cena)
-        """ Enumerate() é uma função que retorna uma tupla (w,r) onde w é o índice do elemento original e r é o elemento.
-            
-        """
-        objetos = [self.cria_elemento( x=i*lado,y=j*lado+lado, cena=cena)
-        """ O primeiro for retorna tupla(índice,linha). mapa = [(0, @....&),(1,......),(2,......),(3,.#.^..)]
+        """ Enumerate() é uma função que retorna uma tupla (w,r) onde w é o índice e r é o elemento.
+            O primeiro for retorna tupla(índice,linha). mapa = [(0, @....&),(1,......),(2,......),(3,.#.^..)]
             O segundo for retorna tupla(índice,glifo). glifo = [[(0,@),(1,.),(2,.),(3,.),(4,.),(5,&)],[...]]
         """
+        objetos = [self.cria_elemento( x=i*lado, y=j*lado+lado, cena=cena)
             for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)]
         cena.vai()
         return cena
