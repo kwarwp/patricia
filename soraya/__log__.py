@@ -155,3 +155,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Tue Aug 04 2020 22:45:34.158 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 38
+  VITOLLINO = None
+  ^
+IndentationError: unexpected indent
+'''},
