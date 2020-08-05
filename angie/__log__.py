@@ -1163,3 +1163,10 @@ KeyError: +
     self.taba = {(i, j): fabrica[imagem].objeto(
 KeyError: %
 '''},
+{'date': 'Wed Aug 05 2020 16:27:22.106 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 109
+  Kwarwp(Jogo, mapa=MAPA_ROCHA, {w=700, h=600})
+                                  ^
+SyntaxError: can't assign to function call 
+'''},
