@@ -72,7 +72,10 @@ if __name__ == "__main__":
     #print(e.banhista.elt.style.backgroundImage.split('"')[1])
     #print([int("".join(i for i in c if i.isdigit())) for c in e.banhista.elt.style.backgroundPosition.split()])
     #print([int("".join(i for i in c if i.isdigit())) for c in e.banhista.elt.style.backgroundSize.split()])
-    e.banhista.elt.style.backgroundImage = 'url({})'.format('https://i.imgur.com/chvIdvJ.png')
-    e.banhista.elt.style.backgroundPosition = '{}px {}px'.format(-100,-100)
-    e.banhista.elt.style.backgroundSize = '{}px {}px'.format(200,400)
+    #e.banhista.elt.style.backgroundImage = 'url({})'.format('https://i.imgur.com/chvIdvJ.png')
+    #.banhista.elt.style.backgroundPosition = '{}px {}px'.format(-100,-100)
+    #e.banhista.elt.style.backgroundSize = '{}px {}px'.format(200,400)
+    #e.banhista.i = 'https://i.imgur.com/chvIdvJ.png'
+    e.banhista.pos = (-100,-100)
+    e.banhista.siz = (200,400)
     e.vai()
