@@ -457,3 +457,10 @@ KeyError: .
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Aug 05 2020 16:53:26.753 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 55
+  def cria(self, mapa="  "):
+  ^
+IndentationError: unexpected indent
+'''},
