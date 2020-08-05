@@ -33,13 +33,33 @@ class Kwarwp():
         self.cena = self.cria(cenario=cenario) if vitollino else None
         
     def cercado(self):
-        cerca = (self.v.a(self.CERCA, w=100, h=100, x=0, y=400, cena=cena), 
-                 self.v.a(self.CERCA, w=100, h=100, x=100, y=400, cena=cena),
-                 self.v.a(self.CERCA, w=100, h=100, x=200, y=400, cena=cena),
-                 self.v.a(self.CERCA, w=100, h=100, x=300, y=400, cena=cena),
-                 self.v.a(self.CERCA, w=100, h=100, x=400, y=400, cena=cena),
-                 self.v.a(self.CERCA, w=100, h=100, x=500, y=400, cena=cena))
-
+        cerca_baixo = (self.v.a(self.CERCA, w=100, h=100, x=0, y=400, cena=cena), 
+                      self.v.a(self.CERCA, w=100, h=100, x=100, y=400, cena=cena),
+                      self.v.a(self.CERCA, w=100, h=100, x=200, y=400, cena=cena),
+                      self.v.a(self.CERCA, w=100, h=100, x=300, y=400, cena=cena),
+                      self.v.a(self.CERCA, w=100, h=100, x=400, y=400, cena=cena),
+                      self.v.a(self.CERCA, w=100, h=100, x=500, y=400, cena=cena))
+                 
+        cerca_esquerda = (self.v.a(self.CERCA, w=100, h=100, x=0, y=100, cena=cena), 
+                         self.v.a(self.CERCA, w=100, h=100, x=0, y=200, cena=cena),
+                         self.v.a(self.CERCA, w=100, h=100, x=0, y=300, cena=cena),
+                         self.v.a(self.CERCA, w=100, h=100, x=0, y=400, cena=cena),
+                         self.v.a(self.CERCA, w=100, h=100, x=0, y=500, cena=cena)) 
+                          
+        cerca_cima = (self.v.a(self.CERCA, w=100, h=100, x=0, y=100, cena=cena), 
+                     self.v.a(self.CERCA, w=100, h=100, x=100, y=100, cena=cena),
+                     self.v.a(self.CERCA, w=100, h=100, x=200, y=100, cena=cena),
+                     self.v.a(self.CERCA, w=100, h=100, x=300, y=100, cena=cena),
+                     self.v.a(self.CERCA, w=100, h=100, x=400, y=100, cena=cena),
+                     self.v.a(self.CERCA, w=100, h=100, x=500, y=100, cena=cena))
+                          
+        cerca_direita = (self.v.a(self.CERCA, w=100, h=100, x=500, y=100, cena=cena), 
+                        self.v.a(self.CERCA, w=100, h=100, x=500, y=100, cena=cena),
+                        self.v.a(self.CERCA, w=100, h=100, x=500, y=100, cena=cena),
+                        self.v.a(self.CERCA, w=100, h=100, x=500, y=100, cena=cena),
+                        self.v.a(self.CERCA, w=100, h=100, x=500, y=100, cena=cena),
+                        self.v.a(self.CERCA, w=100, h=100, x=500, y=100, cena=cena))
+                 
     def cria(self, cenario="default"):
         """ Cria o ambiente de programação Kwarwp."""
         cena = self.v.c(self.SOLO)
@@ -50,8 +70,8 @@ class Kwarwp():
         ceu = self.v.a(self.CEU, w=600, h=100, x=0, y=0, cena=cena)
         sol = self.v.a(self.SOL, w=60, h=60, x=0, y=40, cena=cena)
         cerca = self.cercado()
-        #cena.vai()
-        return cena
+        cena.vai()
+        #return cena
     
 if __name__ == "__main__":
     Kwarwp(Jogo) 
