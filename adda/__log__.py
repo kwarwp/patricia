@@ -708,3 +708,7 @@ NameError: name 'join' is not defined
     self.elt.style.backgroundImage = f'url({value})'
 AttributeError: 'Elemento' object has no attribute 'elt'
 '''},
+{'date': 'Wed Aug 05 2020 09:22:57.292 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <SyntaxError: unexpected token: '.'>
+'''},
