@@ -68,4 +68,10 @@ class Eventos:
         
         
 if __name__ == "__main__":
-    Eventos().vai()
+    e = Eventos() #.vai()
+    #print(e.banhista.elt.style.backgroundImage.split('"')[1])
+    print([int("".join(i for i in c if i.isdigit())) for c in e.banhista.elt.style.backgroundPosition.split()])
+    print([int("".join(i for i in c if i.isdigit())) for c in e.banhista.elt.style.backgroundSize.split()])
+    e.banhista.elt.style.backgroundImage = 'url({})'.format('https://i.imgur.com/JFgVVBH.jpg')
+    e.banhista.elt.style.backgroundPosition = '{} {}'.format(10,10)
+    e.vai()
