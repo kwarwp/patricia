@@ -136,7 +136,7 @@ class Kwarwp():
         cena = self.v.c(fabrica["_"].url_imagem)
         ceu = self.v.a(fabrica["~"].url_imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena)
         sol = self.v.a(fabrica["*"].url_imagem, w=60, h=60, x=0, y=40, cena=cena)
-        
+        '''
         self.taba = {(i, j): fabrica[imagem].objeto(
             fabrica[imagem].url_imagem, x=i*lado, y=j*lado+lado, cena=cena)
             for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
@@ -144,19 +144,13 @@ class Kwarwp():
         return cena
         
         '''
-        Tentar criar mesmo código com a descrição de dependência a baixo
+        
         for j, linha in enumerate(mapa):
             for i, imagem in enumerate(linha):
-                self.cria_elemento( x=i*lado, y=j*lado+lado, cena=cena)
+                fabrica[imagem].objeto(fabrica[imagem].url_imagem,
+                                       w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena)
                 
-        def cria_elemento(self, x, y, cena):
-        """
-        Função que retorna o **script do elemento** na posição determinada pela matriz(mapa).        
-        x, y equivalem as posições x, y no canvas do jogo.        
-        cena equivale a "url" atual do jogo."""
-            lado = self.lado
-            return self.v.a(self.GLIFOS[imagem], w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena)
-        '''
+        
     def coisa(self, imagem, x, y, cena):
         """
         Este método define uma fábrica para coisas que estão no cenário.
