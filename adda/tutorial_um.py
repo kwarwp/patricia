@@ -85,7 +85,7 @@ class Eventos:
         self.dark_side = Elemento(self.DARK_SIDE, x=100, y=100, cena=self.calcada)
         self.dark_side.o = 0  # faz a opacidade virar zero, não mostra o letreiro
         document.bind("keydown", self.anda_banhista)  # captura o evento de teclado
-        
+        _ = self.banhista.img # ('https://i.imgur.com/chvIdvJ.png')
         self.banhista.elt.bind("mouseover", self.ve_dark)  # usa o evento para mostrar "dark side"
         self.banhista.elt.bind("mouseout", self.ve_dark)  # usa o mesmo evento para ocultar "dark side"
         self.muda = 1
@@ -124,7 +124,8 @@ if __name__ == "__main__":
     #.banhista.elt.style.backgroundPosition = '{}px {}px'.format(-100,-100)
     #e.banhista.elt.style.backgroundSize = '{}px {}px'.format(200,400)
     #print(e.banhista.im)
-    #e.banhista.img = 'https://i.imgur.com/chvIdvJ.png'
-    #e.banhista.pos = (-100,-100)
-    #e.banhista.siz = (200,400)
+    #e.banhista.img = "https://i.imgur.com/chvIdvJ.png"
+    e.banhista.img = ""
+    e.banhista.pos = (-100,-100)
+    e.banhista.siz = (200,400)
     e.vai()
