@@ -1170,3 +1170,10 @@ KeyError: %
                                   ^
 SyntaxError: can't assign to function call 
 '''},
+{'date': 'Wed Aug 05 2020 16:28:45.493 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 109
+  Kwarwp(Jogo, mapa=MAPA_ROCHA, {w=700, h=600})
+                                  ^
+SyntaxError: can't assign to function call 
+'''},
