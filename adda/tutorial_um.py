@@ -67,6 +67,10 @@ class Elemento(Elt):
                          
     @im.setter
     def im(self, value):
+        self.elt.backgroundImage = f"url({value})"
+                         
+    #@im.setter
+    def _im(self, value):
         """Recupera a URI da imagem do elemento
             :param value: URI da imagem
         """
@@ -123,7 +127,8 @@ if __name__ == "__main__":
     #e.banhista.elt.style.backgroundImage = 'url({})'.format('https://i.imgur.com/chvIdvJ.png')
     #.banhista.elt.style.backgroundPosition = '{}px {}px'.format(-100,-100)
     #e.banhista.elt.style.backgroundSize = '{}px {}px'.format(200,400)
+    #print(e.banhista.im)
     e.banhista.im = 'https://i.imgur.com/chvIdvJ.png'
-    e.banhista.pos = (-100,-100)
+    #e.banhista.pos = (-100,-100)
     #e.banhista.siz = (200,400)
     e.vai()
