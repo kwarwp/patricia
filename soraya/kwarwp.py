@@ -70,7 +70,7 @@ class Kwarwp():
         
         fabrica = {
         "&": Fab(self.coisa, f"{IIMGUR}dZQ8liT.jpg"), # OCA
-        "^": Fab(self.Indio.indio, f"{IMGUR}8jMuupz.png"), # INDIO
+        "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
         ".": Fab(self.coisa, f"{IIMGUR}npb9Oej.png"), # VAZIO
         "_": Fab(self.coisa, f"{IIMGUR}sGoKfvs.jpg"), # SOLO
         "#": Fab(self.coisa, f"{IMGUR}ldI7IbK.png"), # TORA
