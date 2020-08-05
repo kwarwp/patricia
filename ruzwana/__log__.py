@@ -395,3 +395,10 @@ Exception: <SyntaxError: Unexpected token )>
     self.cena = self.cria(mapa=mapa) if vitollino else None
 TypeError: cria() got an unexpected keyword argument 'mapa'
 '''},
+{'date': 'Wed Aug 05 2020 19:24:38.609 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 48
+  sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena
+                                                                                                 ^
+SyntaxError: invalid syntax
+'''},
