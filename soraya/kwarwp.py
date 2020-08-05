@@ -70,7 +70,7 @@ class Kwarwp():
         
         fabrica = {
         "&": Fab(self.coisa, f"{IIMGUR}dZQ8liT.jpg"), # OCA
-        "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
+        "^": Fab(self.Indio.indio, f"{IMGUR}8jMuupz.png"), # INDIO
         ".": Fab(self.vazio, f"{IIMGUR}npb9Oej.png"), # VAZIO
         "_": Fab(self.coisa, f"{IIMGUR}sGoKfvs.jpg"), # SOLO
         "#": Fab(self.coisa, f"{IMGUR}ldI7IbK.png"), # TORA
@@ -109,7 +109,7 @@ class Kwarwp():
         def indio(self, imagem, x, y, cena):
             lado = self.lado
             return Indio(imagem, x=x, y=y, cena=cena)    
-
+        
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
     STYLE["width"] = 600
