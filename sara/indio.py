@@ -32,7 +32,7 @@ class Indio():
         """
         self.posicao = (self.posicao[0], self.posicao[1]-1)
         """Assumimos que o índio está olhando para cima, decrementamos a posição **y**"""
-        self.indio.y = self.posicao[3]*self.lado
+        self.indio.y = self.posicao[1]*self.lado
         self.indio.x = self.posicao[0]*self.lado
         
     def executa(self):
@@ -52,7 +52,7 @@ class Kwarwp():
         """Cria um matriz com os elementos descritos em cada linha de texto"""
         self.mapa = mapa.split()
         """Largura da casa da arena dos desafios, número de colunas no mapa"""
-        self.lado, self.col, self.lin = 100, len(self.mapa[0]), len(self.mapa)+1
+        self.lado, self.col, self.lin = 50, len(self.mapa[0]), len(self.mapa)+1
         Kwarwp.LADO = self.lado
         w, h = self.col *self.lado, self.lin *self.lado
         self.taba = {}
