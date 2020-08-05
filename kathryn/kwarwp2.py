@@ -139,8 +139,7 @@ class Kwarwp():
         
         self.taba = {(i, j): fabrica[imagem].objeto(
             fabrica[imagem].url_imagem, x=i*lado, y=j*lado+lado, cena=cena)
-            for j, linha in enumerate(mapa)
-            for i, imagem in enumerate(linha)}
+            for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
         cena.vai()
         return cena
         
