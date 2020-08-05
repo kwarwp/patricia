@@ -732,3 +732,10 @@ Exception: <SyntaxError: unexpected token: '.'>
     e.banhista.pos = (-100,-100)
 TypeError: pos() missing 1 positional argument: y
 '''},
+{'date': 'Wed Aug 05 2020 09:26:33.119 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 79
+  e.banhista.pos = *(-100,-100)
+                     ^
+SyntaxError: invalid syntax
+'''},
