@@ -32,7 +32,7 @@ class Indio():
         """
         self.posicao = (self.posicao[0], self.posicao[1]-1)
         """Assumimos que o índio está olhando para cima, decrementamos a posição **y**"""
-        self.indio.y = self.posicao[1]*self.lado
+        self.indio.y = self.posicao[3]*self.lado
         self.indio.x = self.posicao[0]*self.lado
         
     def executa(self):
