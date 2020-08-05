@@ -53,9 +53,6 @@ class Kwarwp():
             >>len(self.mapa[0]), len(self.mapa)+1 
             
         Retorna o número de colunas e linhas que existem no mapa.
-                       
-        STYLE["width"] = 700 -> Altera o canvas do jogo em largura da tela. Recebe int.
-        STYLE["height"] = "600px" -> Altera o canvas do jogo em altura da tela. Recebe str.
         """
         
         Kwarwp.VITOLLINO = self.v = vitollino()
