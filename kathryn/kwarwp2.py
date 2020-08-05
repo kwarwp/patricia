@@ -12,7 +12,7 @@ Changelog
 """
 from collections import namedtuple as nt
 
-IMAGUR = "https://imgur.com/"
+IMGUR = "https://imgur.com/"
 
 MAPA_INICIO = """
 +++++++++
@@ -142,8 +142,8 @@ class Kwarwp():
         
         self.taba = {(i, j): fabrica[glifo].objeto(
             fabrica[glifo].url_imagem, x=i*lado, y=j*lado+lado, cena=cena)
-            for j, linha in enumerate(mapa) for i, glifo in enumerate(linha)}
-
+            for j, linha in enumerate(mapa) for i, glifo in enumerate(linha)
+            }
         cena.vai()
         return cena
         '''
@@ -152,7 +152,6 @@ class Kwarwp():
             for i, glifo in enumerate(linha):
                 self.cria_elemento( x=i*lado, y=j*lado+lado, cena=cena)
         '''
-
         
     def cria_elemento(self, x, y, cena):
         """
