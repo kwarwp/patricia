@@ -183,3 +183,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Tue Aug 04 2020 22:51:26.280 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 88
+  mapa = mapa if mapa != "" else self.mapa
+  ^
+IndentationError: unexpected indent
+'''},
