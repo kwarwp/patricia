@@ -48,7 +48,7 @@ class Kwarwp():
         """Transforma o texto matriz, explicitando o bloco de strings para cada linha."""
         self.mapa = mapa.split()
         """Largura da casa da arena dos desafios, número de colunas no mapa"""
-        self.lado, self.coluna, self.lin = 100, len(self.mapa[0]), len(self.mapa)+1
+        self.lado, self.coluna, self.lin = 100, len(self.mapa[0]), len(self.mapa)
         Kwarwp.LADO = self.lado
         STYLE["width"]  = w = self.coluna*self.lado
         STYLE["height"] = h = self.lin*self.lado
