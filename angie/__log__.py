@@ -1198,3 +1198,10 @@ SyntaxError: non-keyword arg after keyword arg
                                 ^
 SyntaxError: decorator expects function
 '''},
+{'date': 'Thu Aug 06 2020 14:49:28.398 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 283
+  Kwarwp(Jogo)
+              ^
+SyntaxError: decorator expects function
+'''},
