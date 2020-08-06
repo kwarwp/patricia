@@ -61,8 +61,9 @@ class Kwarwp():
         self.cena = self.cria(mapa=mapa) if vitollino else None
         
     def cria_pecas(self,x,y,cena):
+        "Implementa as peças
         lado = self.lado #trocar posição caso dê problema
-        return self.v.a(self.TABULEIRO[imagem], w=lado, h=lado, x=lado*pp ,y=lado+lado*p, cena=cena)
+        return self.v.a(self.TABULEIRO[pecas], w=lado, h=lado, x=lado*pp ,y=lado+lado*p, cena=cena)
         
           
     def cria(self, mapa=" "):
@@ -75,9 +76,13 @@ class Kwarwp():
         ceu = elemento(self.TABULEIRO["~"], w =lado*coluna, h=lado, x=0, y=0, cena=cena)
         sol = elemento(self.TABULEIRO["*"], w =60, h =60, x=0, y=40, cena=cena)
         #indio =
-        """"""
+        """ List Comprehensions:
+            p retorna os índices da lista mapa.split(), logo os índices das linhas.
+            pp retorna os índices de cada elemento internos aos índices p, logo índices da coluna
+            p,pp = linha,coluna
+            """
         tabuleiro = [self.cria_pecas(x=lado*pp, y=lado+lado*p, cena=cena)
-            for p,linha in enumerate(mapa) for pp, imagem in enumerate(linha)]
+            for p,linha in enumerate(mapa) for pp, pecas in enumerate(linha)]
         cena.vai()
         return cena
 
