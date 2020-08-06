@@ -30,15 +30,129 @@ class Indio():
     def anda(self):
         """ Faz o índio caminhar na direção em que está olhando.
         """
-        self.posicao = (self.posicao[0], self.posicao[1]-1)
+        destino = (self.posicao[0], self.posicao[1]-1)
         """Assumimos que o índio está olhando para cima, decrementamos a posição **y**"""
-        self.indio.y = self.posicao[1]*self.lado
-        self.indio.x = self.posicao[0]*self.lado
-        
+        taba = self.taba.taba
+        if destino in taba:
+            vaga = taba[destino]
+            """Recupera na taba a vaga para a qual o índio irá se transferir"""
+            vaga.acessa(self)
+            """Inicia o protocolo duplo despacho, pedindo para acessar a vaga"""
+
     def executa(self):
         """ Roteiro do índio. Conjunto de comandos para ele executar.
         """
         self.anda()
+        
+    def sai(self):
+        """ Rotina de saída falsa, o objeto Indio é usado como uma vaga nula.
+        """
+        pass
+        
+    @property
+    def elt(self):
+        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
+
+        No caso do índio, retorna o elt do elemento do atributo **self.indio**.
+        """
+        return self.indio.elt
+
+    def ocupa(self, vaga):
+        """ Pedido por uma vaga para que ocupe a posição nela.
+
+        :param vaga: A vaga que será ocupada pelo componente.
+
+        No caso do índio, requisita que a vaga seja ocupada por ele.
+        """
+        self.vaga.sai()
+        self.posicao = vaga.posicao
+        vaga.ocupou(self)
+        self.vaga = vaga
+
+    def acessa(self, ocupante):
+        """ Pedido de acesso a essa posição, delegada ao ocupante pela vaga.
+
+        :param ocupante: O componente candidato a ocupar a vaga já ocupada pelo índio.
+
+        No caso do índio, ele age como um obstáculo e não prossegue com o protocolo.
+        """
+        pass
+
+
+class Vazio():
+    """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
+
+        :param imagem: A figura representando o espaço vazio (normalmente transparente).
+        :param x: Coluna em que o elemento será posicionado.
+        :param y: Cinha em que o elemento será posicionado.
+        :param cena: Cena em que o elemento será posicionado.
+    """
+
+    def __init__(self, imagem, x, y, cena, ocupante=None):
+        self.lado = lado = Kwarwp.LADO
+        self.posicao = (x//lado,y//lado-1)
+        self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        self._nada = Kwarwp.VITOLLINO.a()
+        self.acessa = self._acessa
+        self.ocupante = ocupante or self
+        """O ocupante será definido pelo acessa, por default é o vazio"""
+        self.acessa(ocupante)
+
+    def _valida_acessa(self, ocupante):
+        """ Consulta o ocupante atual se há permissão para substituí-lo pelo novo ocupante.
+
+            :param ocupante: O canditato a ocupar a posição corrente.
+        """
+        self.ocupante.acessa(ocupante)
+
+    def _acessa(self, ocupante):
+        """ Atualmente a posição está vaga e pode ser acessada pelo novo ocupante.
+
+        A responsabilidade de ocupar definitivamente a vaga é do candidato a ocupante
+        Caso ele esteja realmente apto a ocupar a vaga e deve cahamar de volta ao vazio
+        com uma chamada ocupou.
+
+            :param ocupante: O canditato a ocupar a posição corrente.
+        """
+        ocupante.ocupa(self)  
+        
+    def ocupou(self, ocupante):
+        """ O candidato à vaga decidiu ocupá-la e efetivamente entra neste espaço.
+
+        :param ocupante: O canditato a ocupar a posição corrente.
+
+        Este ocupante vai entrar no elemento do Vitollino e definitivamente se tornar
+        o ocupante da vaga. Com isso ele troca o estado do método acessa para primeiro
+        consultar a si mesmo, o ocupante corrente usando o protocolo definido em
+        **_valida_acessa ()**
+
+        """
+        self.vazio.ocupa(ocupante)
+        self.ocupante = ocupante
+        self.acessa = self._valida_acessa
+
+    def ocupa(self, vaga):
+        """ Pedido por uma vaga para que ocupe a posição nela.
+
+        No caso do espaço vazio, não faz nada.
+        """
+        pass
+        
+    def sai(self):
+        """ Pedido por um ocupante para que desocupe a posição nela.
+        """
+        self.ocupante = self
+        self.acessa = self._acessa
+        
+    @property
+    def elt(self):
+        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
+
+        No caso do espaço vazio, vai retornar um elemento que não contém nada.
+        """
+        return self._nada.elt
+        
+    
 
 class Kwarwp():
     
