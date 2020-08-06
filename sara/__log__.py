@@ -2778,3 +2778,10 @@ AttributeError: 'Kwarwp' object has no attribute 'oca'
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Thu Aug 06 2020 17:08:29.798 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 270
+  def ocupa(self, *_):
+  ^
+IndentationError: unexpected indent
+'''},
