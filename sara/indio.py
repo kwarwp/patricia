@@ -18,12 +18,19 @@ from _spy.vitollino.main import Jogo, STYLE
 from collections import namedtuple as nt
     
 
-MAPA_INICIO = """
+MAPA_CERCA = """
 |||||||
 |..|..&
 |..#..|
 |^.|..|
 |||||||
+"""
+
+MAPA_INICIO = """
+@....&
+......
+......
+.#.^..
 """
 
 IMGUR = 'https://i.imgur.com/'
