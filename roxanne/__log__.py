@@ -1161,3 +1161,36 @@ Traceback (most recent call last):
     vaga.ocupou(self)
 TypeError: ocupou() missing 1 positional argument: vazio
 '''},
+{'date': 'Thu Aug 06 2020 15:47:25.89 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''cria(self, mapa=@....&,......,......,.#.^.., col=6
+Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 293
+    main(Jogo, STYLE)
+  module <module> line 287
+    Kwarwp(vitollino, medidas=medidas)
+  module <module> line 199
+    self.cena = self.cria(mapa=self.mapa) if vitollino else None
+  module <module> line 230
+    self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
+  module <module> line 255
+    vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+  module <module> line 57
+    self.acessa(ocupante)
+  module <module> line 73
+    ocupante.ocupa(self)
+  module <module> line 162
+    vaga.ocupou(self)
+  module <module> line 85
+    self.vazio.ocupa(ocupante)
+AttributeError: 'Elemento' object has no attribute 'ocupa'
+'''},
