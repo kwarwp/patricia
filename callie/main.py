@@ -11,8 +11,8 @@ from _spy.vitollino.main import Jogo, STYLE
 from collections import namedtuple as nt
 
 #largura e altura, respectivamente
-#STYLE["width"] = 700
-#STYLE["height"] = "600px"
+STYLE["width"] = 700
+STYLE["height"] = "600px"
 
 
 MAPA_INICIAL= """
