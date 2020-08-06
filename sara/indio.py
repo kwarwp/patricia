@@ -241,19 +241,6 @@ class Kwarwp():
         return vaga
         
         
-    def indio(self, imagem, x, y, cena):
-        """ Cria o personagem principal na arena do Kwarwp na posição definida.
-        :param x: coluna em que o elemento será posicionado.
-        :param y: linha em que o elemento será posicionado.
-        :param cena: cena em que o elemento será posicionado.
-        """
-        # self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
-        self.o_indio = Indio(imagem, x=0, y=0, cena=cena, taba=self)
-        """o índio tem deslocamento zero, pois é relativo à vaga"""
-        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
-        return vaga
-        
-        
     def coisa(self, imagem, x, y, cena):
         """ Cria um elemento na arena do Kwarwp na posição definida.
         :param x: coluna em que o elemento será posicionado.
@@ -264,6 +251,19 @@ class Kwarwp():
         """
         coisa = Indio(imagem, x=0, y=0, cena=cena, taba=self)
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+        return vaga
+
+
+    def indio(self, imagem, x, y, cena):
+        """ Cria o personagem principal na arena do Kwarwp na posição definida.
+        :param x: coluna em que o elemento será posicionado.
+        :param y: linha em que o elemento será posicionado.
+        :param cena: cena em que o elemento será posicionado.
+        """
+        # self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
+        self.o_indio = Indio(imagem, x=0, y=0, cena=cena, taba=self)
+        """o índio tem deslocamento zero, pois é relativo à vaga"""
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
         return vaga
         
         
