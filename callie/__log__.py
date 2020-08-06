@@ -613,3 +613,10 @@ SyntaxError: EOL while scanning string literal
                                           ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Aug 06 2020 13:51:04.245 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 78
+  Fab = nt("Fab, "objeto imagem")
+                   ^
+SyntaxError: invalid syntax
+'''},
