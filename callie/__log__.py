@@ -599,3 +599,10 @@ NameError: name 'col' is not defined
     tabuleiro = [self.cria_pecas(x=lado*pp, y=lado+lado*p)
 TypeError: cria_pecas missing 1 positional argument: 'cena'
 '''},
+{'date': 'Thu Aug 06 2020 11:24:37.740 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 64
+  "Implementa as peças
+                      ^
+SyntaxError: EOL while scanning string literal
+'''},
