@@ -1891,3 +1891,31 @@ AttributeError: 'Indio' object has no attribute 'vaga'
     self.vaga
 AttributeError: 'Indio' object has no attribute 'vaga'
 '''},
+{'date': 'Thu Aug 06 2020 14:59:32.488 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 294
+    Kwarwp(Jogo)
+  module <module> line 175
+    self.cena = self.cria(mapa=self.mapa) if vitollino else None
+  module <module> line 207
+    self.taba = { (i, j): fabrica[imagem].objeto(
+  module <module> line 283
+    vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
+  module <module> line 100
+    self.acessa(ocupante)
+  module <module> line 118
+    ocupante.ocupa(self)  
+  module <module> line 68
+    self.vaga.sai()
+AttributeError: 'NoneType' object has no attribute 'sai'
+'''},
