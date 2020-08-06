@@ -61,7 +61,7 @@ class Kwarwp():
     LADO = None
     """Referência estática para definir o lado do piso da casa."""
 
-    self.o_indio = None
+    #self.o_indio = None XXXX -> etava no lugar errado, mandei para XXX[1]XXXX
     """Instância do personagem principal, o índio, vai ser atribuído pela fábrica do índio"""
     
     def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
@@ -71,13 +71,16 @@ class Kwarwp():
         """Largura da casa da arena dos desafios, número de colunas no mapa"""
         self.lado, self.col, self.lin = 100, len(self.mapa[0]), len(self.mapa)+1
         Kwarwp.LADO = self.lado
+        #XXX[1]XXXX ---> aqui que tinha que estar
+
+        self.o_indio = None
+        """Instância do personagem principal, o índio, vai ser atribuído pela fábrica do índio"""
         w, h = self.col *self.lado, self.lin *self.lado
         self.taba = {}
         """Dicionário que a partir de coordenada (i,J) localiza um piso da taba"""
         medidas.update(width=w, height=f"{h}px")
         self.cena = self.cria(mapa=self.mapa) if vitollino else None
         
-    """método define uma fábrica de componentes."""
     def cria(self, mapa="  "):
         
         from collections import namedtuple as nt
@@ -103,15 +106,16 @@ class Kwarwp():
         mapa = self.mapa
         lado = self.lado
         cena = self.v.c(fabrica["_"].imagem)
-        ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena, vai= self.executa)
-        """No argumento *vai*, associamos o clique no céu com o método **executa ()** desta classe"""
-
+        ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena)
         sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena)
 
         self.taba = {(i, j): fabrica[imagem].objeto(
             fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
             for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
             
+        ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena, vai= self.executa)
+        """No argumento *vai*, associamos o clique no céu com o método **executa ()** desta classe"""
+
         cena.vai()
         return cena
     
@@ -129,5 +133,7 @@ class Kwarwp():
         self.o_indio.executa()
 
 if __name__ == "__main__":
-    from _spy.vitollino.main import Jogo
+    from _spy.vitollino.main import Jogo, STYLE
+    STYLE["width"] = 600
+    STYLE["heigth"] = "500px"
     Kwarwp(Jogo, mapa=MAPA_INICIO)
