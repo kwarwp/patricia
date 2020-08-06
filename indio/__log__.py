@@ -627,3 +627,10 @@ IndentationError: expected an indented block
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Thu Aug 06 2020 13:15:40.62 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 162
+  """ Faz o índio caminhar na direção em que está olhando."""
+  ^
+IndentationError: expected an indented block
+'''},
