@@ -103,7 +103,7 @@ class Kwarwp():
         cena.vai()
         return cena
         
-    def executa(self):
+    def executa(self, *_):
         """
         Ordena a execução do roteiro do índio.
     
@@ -148,6 +148,9 @@ class Kwarwp():
         self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
         return self.o_indio
 
+    def executa(self):
+        """ Roteiro do índio. Conjunto de comandos para ele executar."""
+        self.anda()
 class Indio():
     '''
     Cria o personagem principal na arena do Kwarwp na posição definida.
@@ -169,9 +172,6 @@ class Indio():
         self.indio.y = self.posicao[1]*self.lado
         self.indio.x = self.posicao[0]*self.lado
     
-    def executa(self, *_):
-        """ Roteiro do índio. Conjunto de comandos para ele executar."""
-        self.anda()
         
 if __name__ == "__main__":
     """
