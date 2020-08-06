@@ -320,4 +320,4 @@ class Kwarwp():
         
 if __name__ == "__main__":
     STYLE.update(width=700, height="600px")
-    Kwarwp(Jogo)
+    Kwarwp(Jogo, medidas=STYLE)
