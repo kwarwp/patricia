@@ -127,6 +127,16 @@ class Kwarwp():
         lado = self.lado
         return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         
+    def vazio(self, imagem, x, y, cena):
+        """ Cria um espaço vazio na arena do Kwarwp na posição definida.
+            :param x: coluna em que o elemento será posicionado.
+            :param y: linha em que o elemento será posicionado.
+            :param cena: cena em que o elemento será posicionado.
+        """
+        lado = self.lado
+        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+    
+    
     def indio(self, imagem, x, y, cena):
         """ Cria o personagem principal na arena do Kwarwp na posição definida.
             :param x: coluna em que o elemento será posicionado.
