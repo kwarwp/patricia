@@ -651,3 +651,10 @@ Exception: <SyntaxError: Illegal return statement>
 'error': '''
 Exception: <SyntaxError: Illegal return statement>
 '''},
+{'date': 'Thu Aug 06 2020 16:03:43.131 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 25
+  fabrica ={"#": Fab(self.coisa, f"{IMGUR}uwYPNlz.png"), # CERCA
+  ^
+IndentationError: unexpected indent
+'''},
