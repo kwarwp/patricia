@@ -2595,3 +2595,36 @@ NameError: name 'w' is not defined
     self.vazio.ocupa(ocupante)
 AttributeError: 'Elemento' object has no attribute 'ocupa'
 '''},
+{'date': 'Thu Aug 06 2020 16:16:31.616 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''cria(self, mapa=@....&,......,......,.#.^.., col=6
+Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 288
+    main(Jogo, STYLE)
+  module <module> line 282
+    Kwarwp(vitollino, medidas=medidas)
+  module <module> line 194
+    self.cena = self.cria(mapa=self.mapa) if vitollino else None
+  module <module> line 225
+    self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
+  module <module> line 250
+    vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+  module <module> line 52
+    self.acessa(ocupante)
+  module <module> line 68
+    ocupante.ocupa(self)
+  module <module> line 157
+    vaga.ocupou(self)
+  module <module> line 80
+    self.vazio.ocupa(ocupante)
+AttributeError: 'Elemento' object has no attribute 'ocupa'
+'''},
