@@ -620,3 +620,10 @@ SyntaxError: invalid syntax
                    ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Aug 06 2020 13:51:18.254 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 87
+  self.taba = {(i, j): fabrica[imagem].objeto(
+                                                                                                                                                                                                              ^
+SyntaxError: invalid syntax
+'''},
