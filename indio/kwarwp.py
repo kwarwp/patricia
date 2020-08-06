@@ -45,19 +45,19 @@ class Kwarwp():
         """Largura da casa da arena dos desafios, número de colunas e linhas no mapa"""
         self.lado, self.col, self.lin = 100, len(self.mapa[0]), len(self.mapa)+1
         Kwarwp.LADO = self.lado
-        w, h = self.col*self.lado, self.lin*self.lado
-        """Atuaiza a largura e o comprimento do mapa do jogo"""
-        medidas.update(width=w, height=f"{h}px")
-        
+
         """Instância do personagem principal, o índio, vai ser atribuído pela fábrica do índio"""
         self.o_indio = None  
         
         """Dicionário que a partir de coordenada (i,j) localiza um piso da taba"""
         self.taba = {}
-
+        
+        w, h = self.col*self.lado, self.lin*self.lado
+        """Atuaiza a largura e o comprimento do mapa do jogo"""
+        medidas.update(width=w, height=f"{h}px")
         self.cena = self.cria(mapa=self.mapa) if vitollino else None
             
-    def cria(self, mapa = ""):
+    def cria(self, mapa = "  "):
         """
         *Este método define uma fábrica de componentes.*
 
@@ -171,7 +171,11 @@ class Indio():
         """Assumimos que o índio está olhando para cima, decrementamos a posição **y**"""
         self.indio.y = self.posicao[1]*self.lado
         self.indio.x = self.posicao[0]*self.lado
-    
+        
+    def executa(self):
+        """ Roteiro do índio. Conjunto de comandos para ele executar.
+        """
+        self.anda()
         
 if __name__ == "__main__":
     """
