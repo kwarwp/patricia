@@ -47,9 +47,8 @@ class Kwarwp():
         Kwarwp.LADO = self.lado
         w, h = self.col*self.lado, self.lin*self.lado
         """Atuaiza a largura e o comprimento do mapa do jogo"""
-        medidas.update(width=w, height=f"{h}px")  # XXX[0]XXX agora medidas está disponível
-        #STYLE["width"] = w  XXX[1] --->> STYLE NÃO ESTÁ DISPONÍVEL AQUI!
-        #STYLE["height"] = f"{h}px"#.format(h)
+        medidas.update(width=w, height=f"{h}px")
+        
         """Dicionário que a partir de coordenada (i,j) localiza um piso da taba"""
         self.taba = {}
 
@@ -185,4 +184,4 @@ if __name__ == "__main__":
         >> Kwarwp(Jogo)
     """
     from _spy.vitollino.main import Jogo, STYLE
-    Kwarwp(Jogo, medidas=STYLE)  # XXX[2]XXX faltou passar o STYLE no argumento medidas
+    Kwarwp(Jogo, medidas=STYLE)
