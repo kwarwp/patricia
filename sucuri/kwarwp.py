@@ -27,9 +27,9 @@ class Kwarwp():
     """
     
     """O GLIFOS corresponde ao dicionário que guarda a imagem dos elementos"""
-    GLIFOS = {"&": "https://i.imgur.com/dZQ8liT.jpg",  # OCA âº
+    GLIFOS = {"&": "https://i.imgur.com/dZQ8liT.jpg",  # OCA 
              "^": "https://imgur.com/8jMuupz.png",  # INDIO 
-             "°" : "https://i.imgur.com/uwYPNlz.png", #CERCA 
+             "#": "https://i.imgur.com/uwYPNlz.png", #CERCA 
              ".": "https://i.imgur.com/npb9Oej.png",  # VAZIO 
              "_": "https://i.imgur.com/sGoKfvs.jpg",  # SOLO 
              "|": "https://imgur.com/ldI7IbK.png",  # TORA 
