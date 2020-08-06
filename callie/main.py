@@ -19,13 +19,13 @@ MAPA_INICIAL= """
 ##########
 #....##..#
 #.^@.#&..#
-#..#.##..#
+#..#.##|.#
 #........#
 ##########
 """
 
 class Indio():
-
+    """ Cria estrutura índio que será chamada no"""
     def __init__(self, imagem, x, y, cena):
         self.lado = lado = Kwarwp.LADO
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
@@ -45,7 +45,6 @@ class Kwarwp():
 
     def __init__(self, vitollino=None, mapa = MAPA_INICIAL, medidas = {}):
         Kwarwp.VITOLLINO = self.v = vitollino()
-        # Notação anterior self.v = vitollino()
         """Transforma o texto matriz, explicitando o bloco de strings para cada linha."""
         self.mapa = mapa.split()
         """Largura da casa da arena dos desafios, número de colunas no mapa"""
