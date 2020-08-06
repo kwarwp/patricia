@@ -35,7 +35,7 @@ class Kwarwp():
              "|": "https://imgur.com/ldI7IbK.png",  # TORA 
              "@": "https://imgur.com/tLLVjfN.png",  # PICHE 
              "~": "https://i.imgur.com/UAETaiP.gif",  # CEU 
-             "*": "https://i.imgur.com/PfodQmT.gif"  # SOL âÂÂ
+             "*": "https://i.imgur.com/PfodQmT.gif"  # SOL âÂÂÂÂ
                }
 
     def __init__(self, vitollino=None, mapa = MAPA_INICIO, medidas = {}):
@@ -69,7 +69,7 @@ class Kwarwp():
         """ self.col acima pode ser chamado col agora"""
         col = self.col
         cena = self.v.c(self.GLIFOS["_"])
-        """ O céu recebe como índices de largura o lado * nÂÂ° colunas, logo, se o mapa for alterado, o comprimento
+        """ O céu recebe como índices de largura o lado * nÂÂÂ° colunas, logo, se o mapa for alterado, o comprimento
             do céu também será.
         """
         ceu = self.v.a(self.GLIFOS["~"], w=lado*col, h=lado, x=0,y=0, cena=cena)
@@ -81,6 +81,9 @@ class Kwarwp():
                Sintaxe List Comprehensions: List Comprehensions 
                O primeiro for retorna tupla(índice,linha). mapa = [(0, @....&),(1,......),(2,......),(3,.#.^..)]
                O segundo for retorna tupla(índice,glifo). glifo = [[(0,@),(1,.),(2,.),(3,.),(4,.),(5,&)],[...]]
+               j retorna os índices da lista mapa.split(), logo os índices das linhas.
+               i  retorna os índices de cada elemento internos aos índices p, logo índices da coluna
+               j,i = linha,coluna
         """
         objetos = [self.cria_elemento( x=i*lado, y=j*lado+lado, cena=cena)
             for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)]
