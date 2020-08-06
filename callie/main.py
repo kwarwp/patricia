@@ -76,7 +76,7 @@ class Kwarwp():
         sol = self.v.a(self.TABULEIRO["*"], w =60, h =60, x=0, y=40, cena=cena)
         #indio =
         """"""
-        tabuleiro = [self.cria_pecas(x=lado*pp, y=lado+lado*p)
+        tabuleiro = [self.cria_pecas(x=lado*pp, y=lado+lado*p, cena=cena)
             for p,linha in enumerate(mapa) for pp, imagem in enumerate(linha)]
         cena.vai()
         return cena
