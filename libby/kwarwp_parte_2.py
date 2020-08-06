@@ -39,7 +39,6 @@ class Indio():
 
     def __init__(self, imagem, x, y, cena):
         self.lado = lado = Kwarwp.LADO
-        #self.posicao = (x//lado,y//lado)
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
 
     def anda(self):
@@ -58,6 +57,7 @@ class Indio():
 
 #Ajustando a classe Kwarwp
 class Kwarwp():
+
     VITOLLINO = None
     """Referência estática para obter o engenho de jogo."""
     LADO = None
@@ -77,13 +77,9 @@ class Kwarwp():
         self.cena = self.cria(mapa=self.mapa) if vitollino else None
     
     def cria(self, mapa=""):
-        """ Fábrica de componentes.
         
-            :param mapa: Um texto representando o mapa do desafio.
-        """
         Fab = nt("Fab", "objeto imagem")
-        """Esta tupla nomeada serve para definir o objeto construido e sua imagem."""
-
+        
         fabrica = {
         "&": Fab(self.coisa, f"{IMGUR}dZQ8liT.jpg"), # OCA
         "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
@@ -100,7 +96,6 @@ class Kwarwp():
         
         mapa = self.mapa
         lado = self.lado
-        print(f"cria(self, mapa={mapa}, col={len(self.mapa[0])}")
         cena = self.v.c(fabrica["_"].imagem)
         ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena, vai=self.executa)
         sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena)
@@ -119,30 +114,14 @@ class Kwarwp():
     
     
     def coisa(self, imagem, x, y, cena):
-        """ Cria um elemento na arena do Kwarwp na posição definida.
-            :param x: coluna em que o elemento será posicionado.
-            :param y: linha em que o elemento será posicionado.
-            :param cena: cena em que o elemento será posicionado.
-        """
         lado = self.lado
         return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         
     def vazio(self, imagem, x, y, cena):
-        """ Cria um espaço vazio na arena do Kwarwp na posição definida.
-            :param x: coluna em que o elemento será posicionado.
-            :param y: linha em que o elemento será posicionado.
-            :param cena: cena em que o elemento será posicionado.
-        """
         lado = self.lado
         return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
     
-    
     def indio(self, imagem, x, y, cena):
-        """ Cria o personagem principal na arena do Kwarwp na posição definida.
-            :param x: coluna em que o elemento será posicionado.
-            :param y: linha em que o elemento será posicionado.
-            :param cena: cena em que o elemento será posicionado.
-        """
         self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
         return self.o_indio
     
