@@ -49,7 +49,7 @@ class Kwarwp():
              "@": Fab(self.coisa, f"{IMGUR}tLLVjfN.png"), #PICHE
              "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), #SOL
              "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), #CEU
-             "|": Fab(self.coisa, f"{IMGUR}ldI7IbK.png"),  # TORA 
+             "|": Fab(self.coisa, f"{IMGUR}ldI7IbK.png")  # TORA 
              }
 
     def __init__(self, vitollino=None, mapa = MAPA_INICIAL, medidas = {}):
