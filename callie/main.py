@@ -65,7 +65,7 @@ class Kwarwp():
               LEN(MAPA[0]) acessa o primeiro item indexado em zero, retornando sua 'quantidade'
               
         """
-        self.lado, self.coluna = 100, self.lin len(self.mapa[0]), len(self.mapa)+1
+        self.lado, self.coluna, self.lin = 100, len(self.mapa[0]), len(self.mapa)+1
         Kwarwp.LADO = self.lado
         w,h = self.col*self.lado, lef.lin*self.lado
         self.taba{}
