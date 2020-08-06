@@ -7,7 +7,7 @@
 Changelog
 ---------
 .. versionadded::    20.07
-        Montando o jogo usando mapa e o índio
+        Montando o jogo usando mapa e o índio andando
 
 """
 MAPA_INICIO = """
@@ -149,7 +149,7 @@ class Indio():
 
         No caso do índio, requisita que a vaga seja ocupada por ele.
         """
-        self.vaga.sai()
+        #self.vaga.sai()
         self.posicao = vaga.posicao
         vaga.ocupou(self)
         self.vaga = vaga
@@ -215,7 +215,8 @@ class Kwarwp():
         mapa = self.mapa
         lado = self.lado
         cena = self.v.c(fabrica["_"].imagem)
-        ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena)
+        ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena, vai= self.executa)
+        """No argumento *vai*, associamos o clique no céu com o método **executa ()** desta classe"""
         sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena)
 
         self.taba = {(i, j): fabrica[imagem].objeto(
@@ -262,7 +263,7 @@ class Kwarwp():
         :param cena: cena em que o elemento será posicionado.
         """
         # self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
-        self.o_indio = Indio(imagem, x=0, y=0, cena=cena, taba=self)
+        self.o_indio = Indio(imagem, x=0, y=0, cena=cena)#, taba=self)
         """o índio tem deslocamento zero, pois é relativo à vaga"""
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
         return vaga
@@ -278,6 +279,8 @@ class Kwarwp():
         self.o_indio.executa()
 
 if __name__ == "__main__":
-    from _spy.vitollino.main import Jogo
+    from _spy.vitollino.main import Jogo, STYLE
+    STYLE["width"] = 600
+    STYLE["heigth"] = "500px"
     Kwarwp(Jogo, mapa=MAPA_INICIO)
     
