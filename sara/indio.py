@@ -27,6 +27,7 @@ class Indio():
         self.lado = lado = Kwarwp.LADO
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         
+        
     def anda(self):
         """ Faz o índio caminhar na direção em que está olhando.
         """
@@ -39,15 +40,18 @@ class Indio():
             vaga.acessa(self)
             """Inicia o protocolo duplo despacho, pedindo para acessar a vaga"""
 
+
     def executa(self):
         """ Roteiro do índio. Conjunto de comandos para ele executar.
         """
         self.anda()
         
+        
     def sai(self):
         """ Rotina de saída falsa, o objeto Indio é usado como uma vaga nula.
         """
         pass
+        
         
     @property
     def elt(self):
@@ -56,6 +60,7 @@ class Indio():
         No caso do índio, retorna o elt do elemento do atributo **self.indio**.
         """
         return self.indio.elt
+
 
     def ocupa(self, vaga):
         """ Pedido por uma vaga para que ocupe a posição nela.
@@ -68,6 +73,7 @@ class Indio():
         self.posicao = vaga.posicao
         vaga.ocupou(self)
         self.vaga = vaga
+
 
     def acessa(self, ocupante):
         """ Pedido de acesso a essa posição, delegada ao ocupante pela vaga.
@@ -98,12 +104,14 @@ class Vazio():
         """O ocupante será definido pelo acessa, por default é o vazio"""
         self.acessa(ocupante)
 
+
     def _valida_acessa(self, ocupante):
         """ Consulta o ocupante atual se há permissão para substituí-lo pelo novo ocupante.
 
             :param ocupante: O canditato a ocupar a posição corrente.
         """
         self.ocupante.acessa(ocupante)
+
 
     def _acessa(self, ocupante):
         """ Atualmente a posição está vaga e pode ser acessada pelo novo ocupante.
@@ -116,6 +124,7 @@ class Vazio():
         """
         ocupante.ocupa(self)  
         
+        
     def ocupou(self, ocupante):
         """ O candidato à vaga decidiu ocupá-la e efetivamente entra neste espaço.
 
@@ -127,9 +136,10 @@ class Vazio():
         **_valida_acessa ()**
 
         """
-        self.vazio = ocupa(ocupante)
+        self.vazio.ocupa(ocupante)
         self.ocupante = ocupante
         self.acessa = self._valida_acessa
+
 
     def ocupa(self, vaga):
         """ Pedido por uma vaga para que ocupe a posição nela.
@@ -138,11 +148,13 @@ class Vazio():
         """
         pass
         
+        
     def sai(self):
         """ Pedido por um ocupante para que desocupe a posição nela.
         """
         self.ocupante = self
         self.acessa = self._acessa
+        
         
     @property
     def elt(self):
@@ -176,6 +188,7 @@ class Kwarwp():
         self.o_indio = None
         """Instância do personagem principal, o índio, vai ser atribuído pela fábrica do índio"""
 
+
     def cria(self, mapa=""):
 
         from collections import namedtuple as nt
@@ -202,7 +215,6 @@ class Kwarwp():
         """No argumento *vai*, associamos o clique no céu com o método **executa ()** desta classe"""
         sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena)
 
-
         self.taba = { (i, j): fabrica[imagem].objeto(
             fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena) 
             for j, linha in enumerate(mapa) 
@@ -211,8 +223,10 @@ class Kwarwp():
         cena.vai()
         return cena
 
+
     def executa(self):
         self.o_indio.executa()
+        
         
     def oca(self, imagem, x, y, cena):
         lado = self.lado
@@ -230,29 +244,36 @@ class Kwarwp():
         """ O Kwarwp é aqui usado como um ocupante nulo, que não ocupa uma vaga vazia."""
         return vaga
 
+
     def solo(self, imagem, x, y, cena):
         lado = self.lado
         return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        
         
     def tora(self, imagem, x, y, cena):
         lado = self.lado
         return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
 
+
     def piche(self, imagem, x, y, cena):
         lado = self.lado
         return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+
 
     def ceu(self, imagem, x, y, cena):
         lado = self.lado
         return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
     
+    
     def sol(self, imagem, x, y, cena):
         lado = self.lado
         return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
 
+
     def cerca(self, imagem, x, y, cena):
         lado = self.lado
         return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        
         
     def coisa(self, imagem, x, y, cena):
         """ Cria um elemento na arena do Kwarwp na posição definida.
@@ -269,6 +290,7 @@ class Kwarwp():
         """Aqui o índio está sendo usado para qualquer objeto, enquanto não tem o próprio"""
         return vaga
         
+        
     def indio(self, imagem, x, y, cena):
         """ Cria o personagem principal na arena do Kwarwp na posição definida.
 
@@ -282,10 +304,12 @@ class Kwarwp():
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
         return vaga
         
+        
     def ocupa(self, *_):
         """ O Kwarwp é aqui usado como um ocupante falso, o pedido de ocupar é ignorado.
         """
         pass
+        
         
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
