@@ -108,8 +108,12 @@ class Vazio():
     
 class Indio():
 
+
+        
+        
     def __init__(self, imagem, x, y, cena):
         self.lado = lado = Kwarwp.LADO
+        self.posicao = (x//lado, y//lado)  # XXX[3]XXX faltou definir posição
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
 
     def anda(self):
