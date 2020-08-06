@@ -35,7 +35,7 @@ class Kwarwp():
              "|": "https://imgur.com/ldI7IbK.png",  # TORA 
              "@": "https://imgur.com/tLLVjfN.png",  # PICHE 
              "~": "https://i.imgur.com/UAETaiP.gif",  # CEU 
-             "*": "https://i.imgur.com/PfodQmT.gif"  # SOL â
+             "*": "https://i.imgur.com/PfodQmT.gif"  # SOL âÂÂ
                }
 
     def __init__(self, vitollino=None, mapa = MAPA_INICIO, medidas = {}):
@@ -69,7 +69,7 @@ class Kwarwp():
         """ self.col acima pode ser chamado col agora"""
         col = self.col
         cena = self.v.c(self.GLIFOS["_"])
-        """ O céu recebe como índices de largura o lado * nÂ° colunas, logo, se o mapa for alterado, o comprimento
+        """ O céu recebe como índices de largura o lado * nÂÂ° colunas, logo, se o mapa for alterado, o comprimento
             do céu também será.
         """
         ceu = self.v.a(self.GLIFOS["~"], w=lado*col, h=lado, x=0,y=0, cena=cena)
