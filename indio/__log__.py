@@ -613,3 +613,10 @@ AttributeError: 'GUI' object has no attribute 'lado'
     cena = self.v.c(GLIFOS["_"])
 NameError: name 'GLIFOS' is not defined
 '''},
+{'date': 'Thu Aug 06 2020 13:12:44.272 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 103
+  """
+  ^
+IndentationError: expected an indented block
+'''},
