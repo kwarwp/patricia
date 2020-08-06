@@ -153,7 +153,6 @@ class Vazio():
         return self._nada.elt
         
     
-
 class Kwarwp():
     
     VITOLLINO = None
@@ -219,9 +218,17 @@ class Kwarwp():
         lado = self.lado
         return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
 
+
     def vazio(self, imagem, x, y, cena):
-        lado = self.lado
-        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        """ Cria um espaço vazio na arena do Kwarwp na posição definida.
+
+        :param x: coluna em que o elemento será posicionado.
+        :param y: linha em que o elemento será posicionado.
+        :param cena: cena em que o elemento será posicionado.
+        """
+        vaga = Vazio(imagem, x=x, y=y, cena=cena, ocupante=self)
+        """ O Kwarwp é aqui usado como um ocupante nulo, que não ocupa uma vaga vazia."""
+        return vaga
 
     def solo(self, imagem, x, y, cena):
         lado = self.lado
@@ -248,12 +255,32 @@ class Kwarwp():
         return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         
     def coisa(self, imagem, x, y, cena):
-        lado = self.lado
-        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        """ Cria um elemento na arena do Kwarwp na posição definida.
+
+        :param x: coluna em que o elemento será posicionado.
+        :param y: linha em que o elemento será posicionado.
+        :param cena: cena em que o elemento será posicionado.
+
+        Cria uma vaga vazia e coloca o componente dentro dela.
+        """
+        coisa = Indio(imagem, x=0, y=0, cena=cena, taba=self)
+        """o índio tem deslocamento zero, pois é relativo à vaga"""
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+        """Aqui o índio está sendo usado para qualquer objeto, enquanto não tem o próprio"""
+        return vaga
         
     def indio(self, imagem, x, y, cena):
-        self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
-        return self.o_indio
+        """ Cria o personagem principal na arena do Kwarwp na posição definida.
+
+        :param x: coluna em que o elemento será posicionado.
+        :param y: linha em que o elemento será posicionado.
+        :param cena: cena em que o elemento será posicionado.
+        """
+        # self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
+        self.o_indio = Indio(imagem, x=0, y=0, cena=cena, taba=self)
+        """o índio tem deslocamento zero, pois é relativo à vaga"""
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
+        return vaga
         
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
