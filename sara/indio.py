@@ -35,7 +35,6 @@ class Indio():
         self.lado = lado = Kwarwp.LADO
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         self.taba = taba
-        self.vaga = self
         
     def anda(self):
         """ Faz o índio caminhar na direção em que está olhando.
