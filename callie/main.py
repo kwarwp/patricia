@@ -67,8 +67,8 @@ class Kwarwp():
           
     def cria(self, mapa=" "):
         """ Cria o ambiente de programação Kwarwp."""
-        self.lado = lado
-        self.coluna = col
+        lado = self.lado
+        coluna = self.coluna
         self.v.c = cenario #alterar depois
         self.v.a = elemento #alterar depois
         cena = self.v.c(self.TABULEIRO["_"])
