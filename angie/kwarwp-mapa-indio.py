@@ -131,4 +131,4 @@ class Kwarwp():
 
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
-    Kwarwp(Jogo, mapa=MAPA_ROCHA)
+    Kwarwp(Jogo, mapa=MAPA_INICIO)
