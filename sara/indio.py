@@ -144,7 +144,7 @@ class Vazio():
         **_valida_acessa ()**
 
         """
-        self.ocupa(ocupante)
+        self.vazio.ocupa(ocupante)
         self.ocupante = ocupante
         self.acessa = self._valida_acessa
 
@@ -215,7 +215,7 @@ class Kwarwp():
         
         mapa = mapa if mapa != "" else self.mapa
 
-        #mapa = self.mapa
+        mapa = self.mapa
         lado = self.lado
         cena = self.v.c(fabrica["_"].imagem)
         ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena, vai= self.executa)
