@@ -134,14 +134,13 @@ class Kwarwp():
         ceu = self.v.a(fabrica["~"].url_imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena)
         sol = self.v.a(fabrica["*"].url_imagem, w=60, h=60, x=0, y=40, cena=cena)
         
-        #self.taba = {(i, j): 
-        [fabrica[imagem].objeto(fabrica[imagem].url_imagem, x=i*lado, y=j*lado+lado, cena=cena)
-            for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)]
-            #}
+        self.taba = {(i, j): 
+            fabrica[imagem].objeto(fabrica[imagem].url_imagem, x=i*lado, y=j*lado+lado, cena=cena)
+            for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
         cena.vai()
         return cena
         
- 
+
     def coisa(self, imagem, x, y, cena):
         """
         Este método define uma fábrica para coisas que estão no cenário.
