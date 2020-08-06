@@ -61,8 +61,8 @@ class Kwarwp():
         self.cena = self.cria(mapa=mapa) if vitollino else None
         
     def cria_pecas(self,x,y,cena):
-        "Implementa as peças
-        lado = self.lado #trocar posição caso dê problema
+        """Implementa as peças"""
+        lado = self.lado 
         return self.v.a(self.TABULEIRO[pecas], w=lado, h=lado, x=lado*pp ,y=lado+lado*p, cena=cena)
         
           
