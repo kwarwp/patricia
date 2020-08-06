@@ -1,7 +1,7 @@
 # patricia.indio.kwarwp.py
 # SPDX-License-Identifier: GPL-3.0-or-later
 """ 
-Montagem orientada do Kwarwp do zero!
+Montagem orientada do Kwarwp do zero! Parte 5
 
 .. codeauthor:: Rodrigo Esquinelato <resquinelato@gmail.com>
 
@@ -10,155 +10,175 @@ Changelog
 .. versionadded::    20.07
 
 """
+from collections import namedtuple as nt
 
+IMGUR = "https://imgur.com/"
+
+MAPA_INICIO = """
++++++++++
++...+..@+
++.......+
++...@###+
++^..+.&.+
++++++++++
+"""
 class Kwarwp():
     """ Jogo para ensino de programação.
-        
-        Declara o dicionário GLIFOS que possui a str símbolo do elemento e o correspodente link de imagem
-        
+    
         Declara a string MAPA_INICIO que possui a posição dos elementos (GLIFOS) no mapa através da matriz linha x coluna. 
         As linha separadas pela tecla <Enter>, a coluna determinada pelos caracteres colineares em linha singulares.
 
         :param vitollino: Empacota o engenho de jogo Vitollino.
-    """
-    # Verificar pq o código do link está diferente (https://github.com/carlotolla/kwarwp/blob/548774d4dc2d437d5a60c38a5e3bacae9b9228f5/kwarwp/kwarapp.py)
-    GLIFOS = {
-    "&": "https://i.imgur.com/dZQ8liT.jpg",  # OCA 
-    "^": "https://imgur.com/8jMuupz.png",    # INDIO 
-    ".": "https://i.imgur.com/npb9Oej.png",  # VAZIO 
-    "_": "https://i.imgur.com/sGoKfvs.jpg",  # SOLO   
-    "#": "https://imgur.com/ldI7IbK.png",    # TORA 
-    "@": "https://imgur.com/tLLVjfN.png",    # PICHE 
-    "~": "https://i.imgur.com/UAETaiP.gif",  # CEU 
-    "*": "https://i.imgur.com/PfodQmT.gif",  # SOL 
-    "+": "https://imgur.com/uwYPNlz.png"     # CERCA
-    }
+        :param mapa: Um texto representando o mapa do desafio.
+        :param medidas: Um dicionário usado para redimensionar a tela.
+    """   
+    VITOLLINO = None
+    """Referência estática para obter o engenho de jogo."""
+    LADO = None
+    """Referência estática para definir o lado do piso da casa."""
 
-    MAPA_INICIO = """
-    +++++++++
-    +...+..@+
-    +.......+
-    +...@###+
-    +^..+.&.+
-    +++++++++
-    """
-    
     def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
-        """
-        Contrutor da classe que permite a declaração dos parâmetros iniciais.
+        """Contrutor da classe que permite a declaração dos parâmetros iniciais."""        
+        Kwarwp.VITOLLINO = self.v = vitollino()
+        """Cria um matriz com os elementos descritos em cada linha de texto"""
+        self.mapa = mapa.split()
+        """Largura da casa da arena dos desafios, número de colunas e linhas no mapa"""
+        self.lado, self.col, self.lin = 100, len(self.mapa[0]), len(self.mapa)+1
+        Kwarwp.LADO = self.lado
+        w, h = self.col*self.lado, self.lin*self.lado
+        """Dicionário que a partir de coordenada (i,j) localiza um piso da taba"""
+        self.taba = {}
+        """Atuaiza a largura e o comprimento do mapa do jogo"""
+        medidas.update(width=w, height=f"{h}px")
+        """Instância do personagem principal, o índio, vai ser atribuído pela fábrica do índio"""
+        self.o_indio = None    
         
-            >> self.v = vitollino()
-       
-        Cria um matriz com os elementos descritos em cada linha de texto.
-        
-            >> self.lado, self.col 
-        
-        Determina a largura da arena dos desafios, número de colunas no mapa.
-        
-            >>len(mapa[0]) 
+        self.cena = self.cria(mapa=self.mapa) if vitollino else None
             
-        Retorna o número de colunas que existem no mapa.
-                       
-        STYLE["width"] = 700 -> Altera o canvas do jogo em largura da tela. Recebe int.
-        STYLE["height"] = "600px" -> Altera o canvas do jogo em altura da tela. Recebe str.
+    def cria(self, mapa = ""):
         """
-        mapa = mapa.split()
-        self.v = vitollino()
-        
-        #Largura da casa da arena dos desafios, número de linhas e colunas no mapa
-        self.lado, self.linha, self.col = 100, len(mapa), len(mapa[0])
-        
-        STYLE["width"] = self.lado*self.col
-        STYLE["height"] = "{}px".format(self.lado*(self.linha + 1))
+        *Este método define uma fábrica de componentes.*
 
-        self.cena = self.cria(mapa=mapa) if vitollino else None
-            
-    def cria(self, mapa = "  "):
+        :param mapa: Um texto representando o mapa do desafio.
+        
+        :nome Fab: O nome da tupla que descreve a fábrica.
+        :campo objeto: O tipo de objeto que vai ser criado.
+        :campo url_imagem: A imagem que representa o objeto que vai ser criado.
+        
+        Define uma fábrica de tuplas nomeáveis gerada pela biblioteca collections.namedpuple()
+        Declara o dicionário para fabricar as tuplas com as características de objeto em função do glifo.
+
+        O self.taba é um conjunto que utiliza da funcinalidade de compreensão de conjuntos
+        (list/set compreention) para alteração da lista mapa em um conjunto com mais características.
         """
-        *Cria o ambiente de programação Kwarwp.*
-                
-            >> cena = self.v.c(self."url")
-        
-        Gera a cena do jogo chamano **self.v.c** referente ao módulo Jogo do Vitollino e **(self."url")** referente a imagem do canvas.
-        
-            >> elemento = self.v.a(self.elemento, w=int, h=int, x=int, y=int, cena="url")
-            
-        Gera um elemento do jogo chamano **self.v.a** chamado pelo módulo do Jogo do Vitollino criando a classe Elemento com os seguintes parâmetros:
-        
-            >> (self."url", w=largura_img, h=altura_img, x=canvas_x, y=canvas_y, cena="url")
-            .
-            >> solo.vai()
-        
-        Retorna a cena para o canvas com o método .vai() do vitollino.
-        
-            >> for j, linha in enumerate(mapa):
-            
-        Enumera e declara cada **linha** da lista matriz recortada.
-        
-            >>     for i, imagem in enumerate(linha):
-            
-        Enumera e declara cada **caractere** da lista matriz recortada. 
-        Sendo i, j respecticamente linha, coluna de cada GLIFO contido na MATRIZ_INICIO.
-        
-        O valor de retorno da combinação de for retorna a invocação do cria_elemento com os parâmetros esncotrados através da ultima contagem
-        
-            >> x=i*lado
-        
-        É a posição do x (largura) do canvas do jogo gerado através do produto índice da linha e o valor arbitrário lado referente ao temanho do elemento
-        
-            >> y=j*lado+lado
-            
-        É a posição do y (altura) do canvas do jogo gerado através do produto índice lista coluna mais altura do elemento.
-        """
+        Fab = nt("Fab", "objeto url_imagem")
+        fabrica = {
+        "&": Fab(self.coisa, f"{IMGUR}dZQ8liT.jpg"), # OCA
+        "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
+        ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), # VAZIO
+        "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), # SOLO
+        "#": Fab(self.coisa, f"{IMGUR}ldI7IbK.png"), # TORA  
+        "@": Fab(self.coisa, f"{IMGUR}tLLVjfN.png"), # PICHE
+        "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), # CEU
+        "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), # SOL
+        "+": Fab(self.coisa, f"{IMGUR}uwYPNlz.png")}  # CERCA
+
+        mapa = mapa if mapa != "" else self.mapa
+
+        mapa = self.mapa
         lado = self.lado
-        cena = self.v.c(self.GLIFOS["_"])
-        ceu = self.v.a(self.GLIFOS["~"], w=lado*self.col, h=lado, x=0, y=0, cena=cena)
-        sol = self.v.a(self.GLIFOS["*"], w=60, h=60, x=0, y=40, cena=cena)
+        cena = self.v.c(fabrica["_"].url_imagem)
+        sol = self.v.a(fabrica["*"].url_imagem, w=60, h=60, x=0, y=40, cena=cena)
         
-        for j, linha in enumerate(mapa):
-            for i, imagem in enumerate(linha):
-                self.cria_elemento( x=i*lado, y=j*lado+lado, cena=cena)
+        """No argumento *vai*, associamos o clique no céu com o método **executa ()** desta classe"""
+        ceu = self.v.a(fabrica["~"].url_imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena, vai= self.executa)
+
+        self.taba = {(i, j): 
+            fabrica[imagem].objeto(fabrica[imagem].url_imagem, x=i*lado, y=j*lado+lado, cena=cena)
+            for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
         cena.vai()
         return cena
         
-    def cria_elemento(self, x, y, cena):
+    def executa(self, *_):
+    """
+    Ordena a execução do roteiro do índio.
+    
+    :param _: este argumento recebe a estrutura oriunda do evento, o _ indica que não será usado."""
+    self.o_indio.executa()
+    
+    def coisa(self, imagem, x, y, cena):
         """
-        Função que retorna o **script do elemento** na posição determinada pela matriz(mapa).
+        Este método define uma fábrica para coisas que estão no cenário.
+        Cria um elemento na arena do Kwarwp na posição definida.
         
-        x, y equivalem as posições x, y no canvas do jogo.
-        
-        cena equivale a "url" atual do jogo.
-        
+        :param imagem: imagem que representa o elemento que será posicionado.
+        :param x: coluna em que o elemento será posicionado.
+        :param y: linha em que o elemento será posicionado.
+        :param cena: cena em que o elemento será posicionado.
         """
         lado = self.lado
-        return self.v.a(self.GLIFOS[imagem], w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena)
+        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        
+    def vazio(self, imagem, x, y, cena):
+        """
+        Este método define uma fábrica para espaços vazios que estão no cenário.
+        Cria um elemento na arena do Kwarwp na posição definida.
+        
+        :param imagem: imagem que representa o elemento que será posicionado.
+        :param x: coluna em que o elemento será posicionado.
+        :param y: linha em que o elemento será posicionado.
+        :param cena: cena em que o elemento será posicionado.
+        """
+        lado = self.lado
+        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        
+    def indio(self, imagem, x, y, cena):
+        """
+        Este método define uma fábrica criando o índio o personagem principal.
 
+        :param imagem: imagem que representa o elemento que será posicionado.
+        :param x: coluna em que o elemento será posicionado.
+        :param y: linha em que o elemento será posicionado.
+        :param cena: cena em que o elemento será posicionado.
+        """
+        lado = self.lado
+        self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
+        return self.o_indio
 
+class Indio():
+    '''
+    Cria o personagem principal na arena do Kwarwp na posição definida.
+
+    :param imagem: A figura representando o índio na posição indicada.
+    :param x: Coluna em que o elemento será posicionado.
+    :param y: Linha em que o elemento será posicionado.
+    :param cena: Cena em que o elemento será posicionado.
+    '''
+    def __init__(self, imagem, x, y, cena):
+        self.lado = lado = Kwarwp.LADO
+        self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        
+    def anda(self):
+    """ Faz o índio caminhar na direção em que está olhando."""
+    self.posicao = (self.posicao[0], self.posicao[1]-1)
+    """Assumimos que o índio está olhando para cima, decrementamos a posição **y**"""
+    self.indio.y = self.posicao[1]*self.lado
+    self.indio.x = self.posicao[0]*self.lado
+    
+    def executa(self):
+    """ Roteiro do índio. Conjunto de comandos para ele executar."""
+    self.anda()
+        
 if __name__ == "__main__":
     """
     class Jogo:
         def __init__(self):
             self.c = Cena
-            self.d = self.codigo = Codigo
-            self.q = Sala
-            self.salao = self.s = Salao
             self.a = Elemento
-            self.texto = self.t = Popup
-            self.n = Texto
-            self.labirinto = self.l = Labirinto
-            self.inventario = self.i = INVENTARIO
-            self.portal = self.p = Portal
-            self.dropper = self.d = Dropper
-            self.droppable = self.r = Droppable
-            self.musica = self.m = Musica
-            self.codigo = Codigo
-            self.document = document
-            self.html = html
-            self.window = win
-            self.timer = timer
-            pass
       
-    Kwarwp(Jogo) -> Chama a Classe Kwarwp com o método Jogo da biblioteca Vitollino
+    Chama a Classe Kwarwp com o método Jogo da biblioteca Vitollino.
+    
+        >> Kwarwp(Jogo)
     """
     from _spy.vitollino.main import Jogo, STYLE
     Kwarwp(Jogo)
