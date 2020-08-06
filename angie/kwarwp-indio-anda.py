@@ -121,6 +121,7 @@ class Indio():
         destino = (self.posicao[0], self.posicao[1]-1)
         """Assumimos que o índio está olhando para cima, decrementamos a posição **y**"""
         taba = self.taba #teste .taba
+        
         if destino in taba:
             vaga = taba[destino]
             """Recupera na taba a vaga para a qual o índio irá se transferir"""
@@ -152,7 +153,7 @@ class Indio():
 
         No caso do índio, requisita que a vaga seja ocupada por ele.
         """
-        #self.vaga.sai()
+        self.vaga.sai()
         self.posicao = vaga.posicao
         vaga.ocupou(self)
         self.vaga = vaga
@@ -274,7 +275,7 @@ class Kwarwp():
         """
         pass
         
-    def executa(self, *_):
+    def executa(self, *):
         """ Ordena a execução do roteiro do índio.
         """
         self.o_indio.executa()
