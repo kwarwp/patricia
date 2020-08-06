@@ -75,7 +75,7 @@ class Kwarwp():
 
     def cria(self, mapa=" "):
         from collections import namedTuple as nt
-        Fab = nt("Fab, "objeto imagem")
+        Fab = nt("Fab", "objeto imagem")
         
         mapa = mapa if mapa != "" else self.mapa
 
