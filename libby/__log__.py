@@ -1042,3 +1042,30 @@ Traceback (most recent call last):
     self.vaga.sai()
 AttributeError: 'Indio' object has no attribute 'vaga'
 '''},
+{'date': 'Thu Aug 06 2020 15:36:35.34 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''cria(self, mapa=|||||||,|..|..&,|..#..|,|^.|..|,|||||||, col=7
+Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 281
+    main(Jogo, STYLE)
+  module <module> line 275
+    Kwarwp(vitollino, medidas=medidas)
+  module <module> line 192
+    self.cena = self.cria(mapa=self.mapa) if vitollino else None
+  module <module> line 223
+    self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
+  module <module> line 247
+    coisa = Indio(imagem, x=0, y=0, cena=cena, taba=self)
+  module <module> line 117
+    self.vaga = vaga # Teste
+NameError: name 'vaga' is not defined
+'''},
