@@ -39,21 +39,7 @@ class Kwarwp():
     """Referência estática para definir o lado do piso da casa."""
 
     def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
-        """
-        Contrutor da classe que permite a declaração dos parâmetros iniciais.
-        
-            >> Kwarwp.VITOLLINO = self.v = vitollino()
-       
-        Cria um matriz com os elementos descritos em cada linha de texto.
-        
-            >> self.lado, self.col 
-        
-        Determina a largura da arena dos desafios, número de colunas no mapa.
-        
-            >>len(self.mapa[0]), len(self.mapa)+1 
-            
-        Retorna o número de colunas e linhas que existem no mapa.
-        """
+        """Contrutor da classe que permite a declaração dos parâmetros iniciais."""
         
         Kwarwp.VITOLLINO = self.v = vitollino()
         """Cria um matriz com os elementos descritos em cada linha de texto"""
@@ -62,9 +48,11 @@ class Kwarwp():
         self.lado, self.col, self.lin = 100, len(self.mapa[0]), len(self.mapa)+1
         Kwarwp.LADO = self.lado
         w, h = self.col*self.lado, self.lin*self.lado
+        """Dicionário que a partir de coordenada (i,j) localiza um piso da taba"""
         self.taba = {}
-        """Dicionário que a partir de coordenada (i,J) localiza um piso da taba"""
+        """Atuaiza a largura e o comprimento do mapa do jogo"""
         medidas.update(width=w, height=f"{h}px")
+        
         self.cena = self.cria(mapa=self.mapa) if vitollino else None
             
     def cria(self, mapa = ""):
@@ -75,44 +63,35 @@ class Kwarwp():
         
         :nome Fab: O nome da tupla que descreve a fábrica.
         :campo objeto: O tipo de objeto que vai ser criado.
-        :campo imagem: A imagem que representa o objeto que vai ser criado.
+        :campo url_imagem: A imagem que representa o objeto que vai ser criado.
         
-        Define uma fábrica de tuplas gerada pela biblioteca collections.namedpuple("nome", "orientação objeto")
+        Define uma fábrica de tuplas nomeáveis gerada pela biblioteca collections.namedpuple()
         Declara o dicionário para fabricar as tuplas com as características de objeto em função do glifo.
         
-            >> cena = self.v.c(self."url")
+        .. note::
+           Fab = collections.namedpuple("título", "nome_coluna url_imagem") 
+           faz o parenteses ser uma "nomeadora de colunas" das seguintes tuplas.
+           Dessa forma a tupla a seguir poderá ser separada por vírgulas a cada variável ou str diferente.
+           Exemplo:
+               >>Fab(self.coisa, "https://imgur.com/")
+           Para acessar a coluna desejada basta invocar o nome dela:
+               >>Fab(self.coisa, "https://imgur.com/").nome_coluna
+           Retornará o valor contido na tupla de informação
+               >>self.coisa
+
+        O self.taba é um conjunto que utiliza da funcinalidade de compreensão de conjuntos
+        (list/set compreention) para alteração da lista mapa em um conjunto com mais características.
         
-        Gera a cena do jogo chamano **self.v.c** referente ao módulo Jogo do Vitollino e **(self."url")** referente a imagem do canvas.
-        
-            >> elemento = self.v.a(self.elemento, w=int, h=int, x=int, y=int, cena="url")
-            
-        Gera um elemento do jogo chamano **self.v.a** chamado pelo módulo do Jogo do Vitollino criando a classe Elemento com os seguintes parâmetros:
-        
-            >> (self."url", w=largura_img, h=altura_img, x=canvas_x, y=canvas_y, cena="url")
-            .
-            >> solo.vai()
-        
-        Retorna a cena para o canvas com o método .vai() do vitollino.
-        
-            >> for j, linha in enumerate(mapa):
-            
-        Enumera e declara cada **linha** da lista matriz recortada.
-        
-            >>     for i, imagem in enumerate(linha):
-            
-        Enumera e declara cada **caractere** da lista matriz recortada. 
-        Sendo i, j respecticamente linha, coluna de cada GLIFO contido na MATRIZ_INICIO.
-        
-        O valor de retorno da combinação de for retorna a invocação do cria_elemento com os parâmetros esncotrados através da ultima contagem
-        
-            >> x=i*lado
-        
-        É a posição do x (largura) do canvas do jogo gerado através do produto índice da linha e o valor arbitrário lado referente ao temanho do elemento
-        
-            >> y=j*lado+lado
-            
-        É a posição do y (altura) do canvas do jogo gerado através do produto índice lista coluna mais altura do elemento.
-        
+        .. note::
+           **List/set compreetion** é uma maneira de edição/contrução de listas e conjuntos.
+           A sintáxe básica é:
+               >>[expr for item in lista if cond]
+           Sendo que: 
+              * as chaves podem ser substituídas por colcheias 
+              * expr é a expressão a ser imprimida
+              * item é a variável de contagem
+              * lista é a lista a ser modificada pelo código da expressão
+              * cond são as condições que devem ser satisfeitas para gerar a expressão
         """
         Fab = nt("Fab", "objeto url_imagem")
         fabrica = {
@@ -155,6 +134,15 @@ class Kwarwp():
         return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         
     def vazio(self, imagem, x, y, cena):
+        """
+        Este método define uma fábrica para espaços vazios que estão no cenário.
+        Cria um elemento na arena do Kwarwp na posição definida.
+        
+        :param imagem: imagem que representa o elemento que será posicionado.
+        :param x: coluna em que o elemento será posicionado.
+        :param y: linha em que o elemento será posicionado.
+        :param cena: cena em que o elemento será posicionado.
+        """
         lado = self.lado
         return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         
