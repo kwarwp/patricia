@@ -12,6 +12,7 @@ from collections import namedtuple as nt
 #largura e altura, respectivamente
 #STYLE["width"] = 700
 #STYLE["height"] = "600px"
+IMGUR = "https://i.imgur.com/"
 
 Fab = nt("Fab", "objeto imagem")
         
@@ -33,7 +34,6 @@ MAPA_INICIAL= """
              #..#..#
              #######
 """
-IMGUR = "https://i.imgur.com/"
 
 class Indio():
 
