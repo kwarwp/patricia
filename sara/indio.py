@@ -18,7 +18,7 @@ from _spy.vitollino.main import Jogo, STYLE
 from collections import namedtuple as nt
     
 
-MAPA_CERCA = """
+MAPA_INICIO = """
 |||||||
 |..|..&
 |..#..|
@@ -26,8 +26,8 @@ MAPA_CERCA = """
 |||||||
 """
 
-MAPA_INICIO = """
-@....&
+MAPA_2 = """
+@..&&.
 ......
 ......
 .#.^..
