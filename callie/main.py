@@ -42,7 +42,7 @@ class Kwarwp():
     LADO = None
     """Referência estática para definir o lado do piso da casa"""
 
-    def __init__(self, vitollino=None, mapa = MAPA_INICIAL, medidas = {w,h}):
+    def __init__(self, vitollino=None, mapa = MAPA_INICIAL, medidas = [STYLE]):
         Kwarwp.VITOLLINO = self.v = vitollino()
         # Notação anterior self.v = vitollino()
         """Transforma o texto matriz, explicitando o bloco de strings para cada linha."""
@@ -50,8 +50,8 @@ class Kwarwp():
         """Largura da casa da arena dos desafios, número de colunas no mapa"""
         self.lado, self.coluna, self.lin = 100, len(self.mapa[0]), len(self.mapa)+1
         Kwarwp.LADO = self.lado
-        STYLE["width"] = self.w = self.coluna*self.lado
-        STYLE["height"] = self.h = self.lin*self.lado
+        STYLE["width"]  = self.coluna*self.lado
+        STYLE["height"] = self.lin*self.lado
         
         self.taba = {}
         """Dicionário que a partir de coordenada (i,J) localiza um piso da taba"""
