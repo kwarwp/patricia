@@ -10,7 +10,7 @@ Changelog
         - Criando o indio para o jogo
         - Adicionando índio
         - Movendo indio
-        - Organizando a Tabao
+        - Organizando a Taba
 
 """
 
