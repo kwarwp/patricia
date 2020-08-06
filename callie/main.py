@@ -23,11 +23,11 @@ MAPA_INICIAL= """
 IMGUR = "https://i.imgur.com/"
 
 
-class indio():
-    """Gera o índio com permissões especiais"""
+class Indio():
+
     def __init__(self, imagem, x, y, cena):
-        self.lado =  lado = Kwarwp.LADO 
-        self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y,cena=cena)
+        self.lado = lado = Kwarwp.LADO
+        self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
     
     
 class Kwarwp():
