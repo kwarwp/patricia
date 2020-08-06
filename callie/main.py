@@ -100,6 +100,9 @@ class Kwarwp():
     def indio(self, imagem,x,y,cena):
         lado = self.lado
         return Indio(imagem, x=x, y=y, cena=cena)
+        
+    def vazio(self):
+        pass
 
 
 
