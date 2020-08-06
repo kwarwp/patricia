@@ -20,34 +20,42 @@ MAPA_INICIAL= """
              #..#..#
              #######
 """
+IMGUR = "https://i.imgur.com/"
 
 
 class indio():
     """Gera o índio com permissões especiais"""
-    def __init__(self):
-        pass
+    def __init__(self, imagem, x, y, cena):
+        self.lado =  lado = Kwarwp.LADO 
+        self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y,cena=cena)
     
     
 class Kwarwp():
     """ Jogo para ensino de programação.
 
         :param vitollino: Empacota o engenho de jogo Vitollino.
+        :param mapa: Texto representando o mapa do desafio
+        :param medidas: Dicionário usado para redimensionar a tela
     """
-    
-    TABULEIRO ={"#":"https://i.imgur.com/uwYPNlz.png", # CERCA
-            "^":"https://imgur.com/8jMuupz.png", # INDIO
-            ".":"https://i.imgur.com/npb9Oej.png", #VAZIO
-            "_":"https://i.imgur.com/sGoKfvs.jpg", #SOLO
-            "&":"https://i.imgur.com/dZQ8liT.jpg", #OCA
-            "@":"https://imgur.com/tLLVjfN.png", #PICHE
-            "*":"https://i.imgur.com/PfodQmT.gif", #SOL
-            "~":"https://i.imgur.com/UAETaiP.gif", #CEU
-            "|":"https://imgur.com/ldI7IbK.png",  # TORA 
-            }
+    VITOLLINO = None
+    """Referência estática para obter o engenho de jogo"""
+    LADO = None
+    """Referência estática para definir o lado do piso da casa"""
+    fabrica ={"#": Fab(self.coisa, f"{IMGUR}uwYPNlz.png"), # CERCA
+             "^": Fab(self.coisa, f"{IMGUR}8jMuupz.png"), # INDIO
+             ".": Fab(self.coisa, f"{IMGUR}npb9Oej.png"), #VAZIO
+             "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), #SOLO
+             "&": Fab(self.coisa, f"{IMGUR}dZQ8liT.jpg"), #OCA
+             "@": Fab(self.coisa, f"{IMGUR}tLLVjfN.png"), #PICHE
+             "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), #SOL
+             "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), #CEU
+             "|": Fab(self.coisa, f"{IMGUR}ldI7IbK.png"),  # TORA 
+             }
 
     def __init__(self, vitollino=None, mapa = MAPA_INICIAL, medidas = {}):
-        self.v = vitollino()
-        """Transforma a string em uma lista onde os 'enter' são considerados vírgula."""
+        Kwarwp.VITOLLINO = self.v = vitollino()
+        # Notação anterior self.v = vitollino()
+        """Transforma o texto matriz, explicitando o bloco de strings para cada linha."""
         mapa = mapa.split()
         """Largura da casa da arena dos desafios, número de colunas no mapa
         
@@ -57,35 +65,38 @@ class Kwarwp():
               LEN(MAPA[0]) acessa o primeiro item indexado em zero, retornando sua 'quantidade'
               
         """
-        self.lado, self.coluna = 100, len(mapa[0])
-        self.cena = self.cria(mapa=mapa) if vitollino else None
-        
-    def cria_pecas(self,x,y,cena):
-        """Implementa as peças"""
-        lado = self.lado 
-        return self.v.a(self.TABULEIRO[pecas], w=lado, h=lado, x=lado*pp ,y=lado+lado*p, cena=cena)
-        
-          
-    def cria(self, mapa=" "):
-        """ Cria o ambiente de programação Kwarwp."""
-        lado = self.lado
-        coluna = self.coluna
-        cenario = self.v.c 
-        elemento = self.v.a
-        cena = cenario(self.TABULEIRO["_"])
-        ceu = elemento(self.TABULEIRO["~"], w =lado*coluna, h=lado, x=0, y=0, cena=cena)
-        sol = elemento(self.TABULEIRO["*"], w =60, h =60, x=0, y=40, cena=cena)
-        #indio =
-        """ List Comprehensions:
-            p retorna os índices da lista mapa.split(), logo os índices das linhas.
-            pp retorna os índices de cada elemento internos aos índices p, logo índices da coluna
-            p,pp = linha,coluna
-            """
-        tabuleiro = [self.cria_pecas(x=lado*pp, y=lado+lado*p, cena=cena)
-            for p,linha in enumerate(mapa) for pp, pecas in enumerate(linha)]
-        cena.vai()
-        return cena
+        self.lado, self.coluna = 100, self.lin len(self.mapa[0]), len(self.mapa)+1
+        Kwarwp.LADO = self.lado
+        w,h = self.col*self.lado, lef.lin*self.lado
+        self.taba{}
+        """Dicionário que a partir de coordenada (i,J) localiza um piso da taba"""
+        medidas.update(width=w, height=f"{h}px")
+        self.cena = self.cria(mapa=self.mapa) if vitollino else None
 
+    def cria(self, mapa=" "):
+        from collections import namedTuple as nt
+        Fab = nt("Fab, "objeto imagem")
+        
+        mapa = mapa if mapa != "" else self.mapa
+
+        mapa = self.mapa
+        lado = self.lado
+        cena = self.v.c(fabrica["_"].imagem)
+        ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena)
+        sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena)
+        self.taba = {(i, j): fabrica[imagem].objeto(
+              fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
+              for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)
+    def coisa(self,imagem,x,y,cena):
+        lado = self.lado
+        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        
+    def indio(self, imagem,x,y,cena):
+        lado = self.lado
+        return Indio(imagem, x=x, y=y, cena=cena)
+
+cena.vai()
+return cena
 
 if __name__ == "__main__":
     Kwarwp(Jogo) 
