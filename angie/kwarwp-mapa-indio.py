@@ -134,6 +134,7 @@ class Kwarwp():
 
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
+    #XXX[2]XXX faltou estas duas linhas do STYLE para esticar o solo
     STYLE["width"] = 600
     STYLE["heigth"] = "500px"
     Kwarwp(Jogo, mapa=MAPA_INICIO)
