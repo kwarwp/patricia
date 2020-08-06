@@ -17,9 +17,9 @@ from collections import namedtuple as nt
 
 MAPA_INICIAL= """
 ##########
-#.....#..#
+#....##..#
 #.^@.#&..#
-#..#..#..#
+#..#.##..#
 #........#
 ##########
 """
