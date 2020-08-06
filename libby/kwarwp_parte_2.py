@@ -114,6 +114,7 @@ class Indio():
     def __init__(self, imagem, x, y, cena, taba):
         self.lado = lado = Kwarwp.LADO
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        self.vaga = vaga # Teste
         
     def anda(self):
         """ Faz o índio caminhar na direção em que está olhando.
