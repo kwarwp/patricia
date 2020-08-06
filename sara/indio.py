@@ -239,12 +239,9 @@ class Kwarwp():
 
 
     def executa(self):
+        """ Ordena a execução do roteiro do índio.
+        """
         self.o_indio.executa()
-        
-        
-    def oca(self, imagem, x, y, cena):
-        lado = self.lado
-        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
 
 
     def vazio(self, imagem, x, y, cena):
@@ -257,36 +254,6 @@ class Kwarwp():
         vaga = Vazio(imagem, x=x, y=y, cena=cena, ocupante=self)
         """ O Kwarwp é aqui usado como um ocupante nulo, que não ocupa uma vaga vazia."""
         return vaga
-
-
-    def solo(self, imagem, x, y, cena):
-        lado = self.lado
-        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
-        
-        
-    def tora(self, imagem, x, y, cena):
-        lado = self.lado
-        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
-
-
-    def piche(self, imagem, x, y, cena):
-        lado = self.lado
-        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
-
-
-    def ceu(self, imagem, x, y, cena):
-        lado = self.lado
-        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
-    
-    
-    def sol(self, imagem, x, y, cena):
-        lado = self.lado
-        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
-
-
-    def cerca(self, imagem, x, y, cena):
-        lado = self.lado
-        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         
         
     def coisa(self, imagem, x, y, cena):
