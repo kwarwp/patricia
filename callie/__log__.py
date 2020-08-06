@@ -658,3 +658,7 @@ Exception: <SyntaxError: Illegal return statement>
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Thu Aug 06 2020 16:04:18.183 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <SyntaxError: Illegal return statement>
+'''},
