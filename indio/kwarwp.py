@@ -84,7 +84,7 @@ class Kwarwp():
         "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), # SOL
         "+": Fab(self.coisa, f"{IMGUR}uwYPNlz.png")}  # CERCA
 
-        mapa = mapa if mapa != "" else self.mapa
+        #mapa = mapa if mapa != "" else self.mapa
 
         mapa = self.mapa
         lado = self.lado
