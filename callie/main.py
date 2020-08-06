@@ -45,7 +45,7 @@ class Kwarwp():
             "|":"https://imgur.com/ldI7IbK.png",  # TORA 
             }
 
-    def __init__(self, vitollino=None, mapa = MAPA_INICIAL):
+    def __init__(self, vitollino=None, mapa = MAPA_INICIAL, medidas = {}):
         self.v = vitollino()
         """Transforma a string em uma lista onde os 'enter' são considerados vírgula."""
         mapa = mapa.split()
@@ -61,7 +61,7 @@ class Kwarwp():
         self.cena = self.cria(mapa=mapa) if vitollino else None
         
     def cria_pecas(self,x,y,cena):
-        self.lado = lado #trocar posição caso dê problema
+        lado = self.lado #trocar posição caso dê problema
         return self.v.a(self.TABULEIRO[imagem], w=lado, h=lado, x=lado*pp ,y=lado+lado*p, cena=cena)
         
           
