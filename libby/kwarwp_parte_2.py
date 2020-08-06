@@ -39,8 +39,7 @@ MAPA_CERCA = """
 
 class Vazio():
     """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
-
-        :param imagem: A figura representando o espaço vazio (normalmente transparente).
+        :param imagem: A figura representando o índio na posição indicada.
         :param x: Coluna em que o elemento será posicionado.
         :param y: Cinha em que o elemento será posicionado.
         :param cena: Cena em que o elemento será posicionado.
@@ -52,16 +51,18 @@ class Vazio():
         self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         self._nada = Kwarwp.VITOLLINO.a()
         self.acessa = self._acessa
+        """O **acessa ()** é usado como método dinâmico, variando com o estado da vaga.
+        Inicialmente tem o comportamento de **_acessa ()** que é o estado vago, aceitando ocupantes"""
         self.ocupante = ocupante or self
-        """O ocupante será definido pelo acessa, por default é o vazio"""
+        """O ocupante se não for fornecido é encenado pelo próprio vazio, agindo como nulo"""
         self.acessa(ocupante)
-
+        
     def _valida_acessa(self, ocupante):
         """ Consulta o ocupante atual se há permissão para substituí-lo pelo novo ocupante.
             :param ocupante: O canditato a ocupar a posição corrente.
         """
         self.ocupante.acessa(ocupante)
-
+        
     def _acessa(self, ocupante):
         """ Atualmente a posição está vaga e pode ser acessada pelo novo ocupante.
         
@@ -85,6 +86,13 @@ class Vazio():
         self.vazio.ocupa(ocupante)
         self.ocupante = ocupante
         self.acessa = self._valida_acessa
+
+    @property        
+    def elt(self):
+        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
+        No caso do espaço vazio, vai retornar um elemento que não contém nada.
+        """
+        return self._nada.elt
         
     def ocupa(self, vaga):
         """ Pedido por uma vaga para que ocupe a posição nela.
@@ -97,13 +105,6 @@ class Vazio():
         """
         self.ocupante = self
         self.acessa = self._acessa
-
-    @property        
-    def elt(self):
-        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
-        No caso do espaço vazio, vai retornar um elemento que não contém nada.
-        """
-        return self._nada.elt
 
 
 ### Classe Indio ###
