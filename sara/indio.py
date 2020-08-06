@@ -267,7 +267,7 @@ class Kwarwp():
         return vaga
         
         
-      def ocupa(self, *_):
+    def ocupa(self, *_):
         """ O Kwarwp é aqui usado como um ocupante falso, o pedido de ocupar é ignorado.
         """
         pass
