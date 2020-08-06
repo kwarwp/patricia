@@ -51,7 +51,7 @@ class Kwarwp():
         self.lado, self.coluna, self.lin = 100, len(self.mapa[0]), len(self.mapa)+1
         Kwarwp.LADO = self.lado
         w,h = self.coluna*self.lado, self.lin*self.lado
-        self.medidas.update(width=w, height=f"{h}px")
+        medidas.update(width=w, height=f"{h}px")
         self.taba = {}
         """Dicionário que a partir de coordenada (i,J) localiza um piso da taba"""
         
