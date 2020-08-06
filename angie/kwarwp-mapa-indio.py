@@ -106,16 +106,15 @@ class Kwarwp():
         mapa = self.mapa
         lado = self.lado
         cena = self.v.c(fabrica["_"].imagem)
-        ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena)
+        ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena, vai= self.executa)
+        """No argumento *vai*, associamos o clique no céu com o método **executa ()** desta classe"""
         sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena)
 
         self.taba = {(i, j): fabrica[imagem].objeto(
             fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
             for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
             
-        ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena, vai= self.executa)
-        """No argumento *vai*, associamos o clique no céu com o método **executa ()** desta classe"""
-
+        
         cena.vai()
         return cena
     
