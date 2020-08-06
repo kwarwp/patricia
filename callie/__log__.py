@@ -492,3 +492,10 @@ AttributeError: 'Elemento' object has no attribute 'verso1'
     self.verso.vai= vira
 NameError: name 'vira' is not defined
 '''},
+{'date': 'Thu Aug 06 2020 11:05:30.575 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 77
+  indio =
+          ^
+SyntaxError: invalid syntax
+'''},
