@@ -74,7 +74,7 @@ class Kwarwp():
         cena = self.v.c(self.TABULEIRO["_"])
         ceu = self.v.a(self.TABULEIRO["~"], w =lado*col, h=lado, x=0, y=0, cena=cena)
         sol = self.v.a(self.TABULEIRO["*"], w =60, h =60, x=0, y=40, cena=cena)
-        indio =
+        #indio =
         """"""
         tabuleiro = [self.v.a(self.cria_pecas, x=lado*pp, y=lado+lado*p)
             for p,linha in enumerate(mapa) for pp, imagem in enumerate(linha)]
