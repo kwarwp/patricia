@@ -127,7 +127,7 @@ class Vazio():
         **_valida_acessa ()**
 
         """
-        self.vazio.ocupa(ocupante)
+        self.vazio = ocupa(ocupante)
         self.ocupante = ocupante
         self.acessa = self._valida_acessa
 
