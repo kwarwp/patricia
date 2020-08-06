@@ -288,6 +288,6 @@ def main(vitollino, medidas={}):
         
     
 if __name__ == "__main__":
-    from _spy.vitollino.main import Jogo, STYLE
+    from _spy.vitollino.main import Jogo, STYLE, Elemento
     STYLE.update(width=600, height="500px")
     main(Jogo, STYLE)
