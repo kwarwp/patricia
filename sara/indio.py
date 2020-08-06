@@ -187,6 +187,7 @@ class Kwarwp():
     LADO = None
     """Referência estática para definir o lado do piso da casa."""
     
+    
     def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
         Kwarwp.VITOLLINO = self.v = vitollino()
         self.mapa = mapa.split()
@@ -202,6 +203,7 @@ class Kwarwp():
         """Dicionário que a partir de coordenada (i,J) localiza um piso da taba"""
         medidas.update(width=w, height=f"{h}px")
         self.cena = self.cria(mapa=self.mapa) if vitollino else None
+
 
     def cria(self, mapa=""):
         Fab = nt("Fab", "objeto imagem")
