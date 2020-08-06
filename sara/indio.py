@@ -7,9 +7,16 @@
 Changelog
 ---------
 .. versionadded::    20.07
-        Criando o indio para o jogo
+        - Criando o indio para o jogo
+        - Adicionando índio
+        - Movendo indio
+        - Organizando a Tabao
 
 """
+
+from _spy.vitollino.main import Jogo, STYLE
+from collections import namedtuple as nt
+    
 
 MAPA_INICIO = """
 |||||||
@@ -22,11 +29,13 @@ MAPA_INICIO = """
 IMGUR = 'https://i.imgur.com/'
 
 class Indio():
-
+    """ Cria o personagem do jogo
+    """
     def __init__(self, imagem, x, y, cena, taba):
         self.lado = lado = Kwarwp.LADO
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
-        
+        self.taba = taba
+        self.vaga = self
         
     def anda(self):
         """ Faz o índio caminhar na direção em que está olhando.
@@ -190,8 +199,7 @@ class Kwarwp():
 
 
     def cria(self, mapa=""):
-
-        from collections import namedtuple as nt
+    
         Fab = nt("Fab", "objeto imagem")
         
         fabrica = {
@@ -312,6 +320,5 @@ class Kwarwp():
         
         
 if __name__ == "__main__":
-    from _spy.vitollino.main import Jogo, STYLE
     STYLE.update(width=700, height="600px")
     Kwarwp(Jogo)
