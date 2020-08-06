@@ -1,6 +1,4 @@
-# patricia.roxanne.kwarwp_v2.py
-# SPDX-License-Identifier: GPL-3.0-or-later
-# patricia.roxanne.kwarwp.py
+# patricia.roxanne.kwarwp_v3.py
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 """ 
