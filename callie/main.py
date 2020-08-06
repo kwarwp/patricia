@@ -22,6 +22,17 @@ MAPA_INICIAL= """
 """
 IMGUR = "https://i.imgur.com/"
 
+   fabrica ={"#": Fab(self.coisa, f"{IMGUR}uwYPNlz.png"), # CERCA
+             "^": Fab(self.coisa, f"{IMGUR}8jMuupz.png"), # INDIO
+             ".": Fab(self.coisa, f"{IMGUR}npb9Oej.png"), #VAZIO
+             "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), #SOLO
+             "&": Fab(self.coisa, f"{IMGUR}dZQ8liT.jpg"), #OCA
+             "@": Fab(self.coisa, f"{IMGUR}tLLVjfN.png"), #PICHE
+             "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), #SOL
+             "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), #CEU
+             "|": Fab(self.coisa, f"{IMGUR}ldI7IbK.png")  # TORA 
+             }
+
 
 class Indio():
 
@@ -41,22 +52,12 @@ class Kwarwp():
     """Referência estática para obter o engenho de jogo"""
     LADO = None
     """Referência estática para definir o lado do piso da casa"""
-    fabrica ={"#": Fab(self.coisa, f"{IMGUR}uwYPNlz.png"), # CERCA
-             "^": Fab(self.coisa, f"{IMGUR}8jMuupz.png"), # INDIO
-             ".": Fab(self.coisa, f"{IMGUR}npb9Oej.png"), #VAZIO
-             "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), #SOLO
-             "&": Fab(self.coisa, f"{IMGUR}dZQ8liT.jpg"), #OCA
-             "@": Fab(self.coisa, f"{IMGUR}tLLVjfN.png"), #PICHE
-             "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), #SOL
-             "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), #CEU
-             "|": Fab(self.coisa, f"{IMGUR}ldI7IbK.png")  # TORA 
-             }
 
     def __init__(self, vitollino=None, mapa = MAPA_INICIAL, medidas = {}):
         Kwarwp.VITOLLINO = self.v = vitollino()
         # Notação anterior self.v = vitollino()
         """Transforma o texto matriz, explicitando o bloco de strings para cada linha."""
-        mapa = mapa.split()
+        self.mapa = mapa.split()
         """Largura da casa da arena dos desafios, número de colunas no mapa
         
            .. note::
