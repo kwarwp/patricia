@@ -15,15 +15,15 @@ from collections import namedtuple as nt
 
 Fab = nt("Fab", "objeto imagem")
         
-fabrica ={"#": Fab(self.coisa, f"{IMGUR}uwYPNlz.png"), # CERCA
+fabrica ={"#": Fab(self.cerca, f"{IMGUR}uwYPNlz.png"), # CERCA
          "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
          ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), #VAZIO
-         "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), #SOLO
-         "&": Fab(self.coisa, f"{IMGUR}dZQ8liT.jpg"), #OCA
-         "@": Fab(self.coisa, f"{IMGUR}tLLVjfN.png"), #PICHE
-         "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), #SOL
-         "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), #CEU
-         "|": Fab(self.coisa, f"{IMGUR}ldI7IbK.png")  # TORA 
+         "_": Fab(self.solo, f"{IMGUR}sGoKfvs.jpg"), #SOLO
+         "&": Fab(self.oca, f"{IMGUR}dZQ8liT.jpg"), #OCA
+         "@": Fab(self.piche, f"{IMGUR}tLLVjfN.png"), #PICHE
+         "*": Fab(self.sol, f"{IMGUR}PfodQmT.gif"), #SOL
+         "~": Fab(self.ceu, f"{IMGUR}UAETaiP.gif"), #CEU
+         "|": Fab(self.tora, f"{IMGUR}ldI7IbK.png")  # TORA 
          }
 
 MAPA_INICIAL= """
