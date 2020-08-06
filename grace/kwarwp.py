@@ -42,10 +42,6 @@ class Kwarwp():
     
     
 
-    def __init__(self, vitollino=None, cenario="default"):
-        self.v = vitollino()
-        self.cena = self.cria(cenario=cenario) if vitollino else None
-
     def cria(self, mapa="", cenario="default"):
         """Cria um cenário com imagem de terra de chão batido, céu e sol"""
         lado = self.lado
