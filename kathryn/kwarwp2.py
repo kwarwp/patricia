@@ -178,7 +178,9 @@ if __name__ == "__main__":
             self.c = Cena
             self.a = Elemento
       
-    Kwarwp(Jogo) -> Chama a Classe Kwarwp com o método Jogo da biblioteca Vitollino
+    Chama a Classe Kwarwp com o método Jogo da biblioteca Vitollino.
+    
+        >> Kwarwp(Jogo)
     """
     from _spy.vitollino.main import Jogo, STYLE
     Kwarwp(Jogo)
