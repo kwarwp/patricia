@@ -647,3 +647,7 @@ Exception: <SyntaxError: Unexpected token '{'>
 'error': '''
 Exception: <SyntaxError: Illegal return statement>
 '''},
+{'date': 'Thu Aug 06 2020 16:01:45.220 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <SyntaxError: Illegal return statement>
+'''},
