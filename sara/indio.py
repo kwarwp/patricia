@@ -282,6 +282,11 @@ class Kwarwp():
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
         return vaga
         
+    def ocupa(self, *_):
+        """ O Kwarwp é aqui usado como um ocupante falso, o pedido de ocupar é ignorado.
+        """
+        pass
+        
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
     STYLE.update(width=700, height="600px")
