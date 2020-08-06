@@ -1205,3 +1205,10 @@ SyntaxError: decorator expects function
               ^
 SyntaxError: decorator expects function
 '''},
+{'date': 'Thu Aug 06 2020 14:51:16.634 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 283
+  Kwarwp(Jogo, mapa=MAPA_INICIO)
+                                ^
+SyntaxError: decorator expects function
+'''},
