@@ -114,15 +114,14 @@ class Indio():
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         self.vaga = self # XXX[0]XXX faltou esta linha!
         #teste
-        self.taba = taba # XXX[0]XXX tinha que ser taba.taba
+        self.taba = taba
 
     def anda(self):
         """ Faz o índio caminhar na direção em que está olhando.
         """
         destino = (self.posicao[0], self.posicao[1]-1)
         """Assumimos que o índio está olhando para cima, decrementamos a posição **y**"""
-        taba = self.taba.taba #teste .taba
-        print(self.taba, taba)
+        taba = self.taba.taba  # XXX[0]XXX tinha que ser taba.taba
         if destino in taba:
             vaga = taba[destino]
             """Recupera na taba a vaga para a qual o índio irá se transferir"""
@@ -206,7 +205,7 @@ class Kwarwp():
         fabrica = {
         "&": Fab(self.coisa, f"{IIMGUR}dZQ8liT.jpg"), # OCA
         "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
-        ".": Fab(self.vazio, f"{IIMGUR}npb9Oej.png"), # VAZIO
+        ".": Fab(self.vazio, f"{IIMGUR}npb9Oej.png"), # VAZIO  XXX[]XXX estava coisa, tinha que ser vazio
         "_": Fab(self.coisa, f"{IIMGUR}sGoKfvs.jpg"), # SOLO
         "#": Fab(self.coisa, f"{IMGUR}ldI7IbK.png"), # TORA
         "@": Fab(self.coisa, f"{IIMGUR}tLLVjfN.png"), # PICHE
