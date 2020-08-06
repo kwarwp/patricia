@@ -112,8 +112,9 @@ class Indio():
         self.lado = lado = Kwarwp.LADO
         self.posicao = (x//lado, y//lado)  # XXX[3]XXX faltou definir posição
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        self.vaga = self # XXX[0]XXX faltou esta linha!
         #teste
-        self.taba = taba
+        self.taba = taba.taba # XXX[0]XXX tinha que ser taba.taba
 
     def anda(self):
         """ Faz o índio caminhar na direção em que está olhando.
@@ -275,7 +276,7 @@ class Kwarwp():
         """
         pass
         
-    def executa(self, *):
+    def executa(self, *_): # XXXX faltou o _, estava somente o *
         """ Ordena a execução do roteiro do índio.
         """
         self.o_indio.executa()
