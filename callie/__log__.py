@@ -606,3 +606,10 @@ TypeError: cria_pecas missing 1 positional argument: 'cena'
                       ^
 SyntaxError: EOL while scanning string literal
 '''},
+{'date': 'Thu Aug 06 2020 13:50:34.415 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 68
+  self.lado, self.coluna = 100, self.lin len(self.mapa[0]), len(self.mapa)+1
+                                          ^
+SyntaxError: invalid syntax
+'''},
