@@ -108,9 +108,6 @@ class Vazio():
     
 class Indio():
 
-
-        
-        
     def __init__(self, imagem, x, y, cena):
         self.lado = lado = Kwarwp.LADO
         self.posicao = (x//lado, y//lado)  # XXX[3]XXX faltou definir posição
@@ -177,9 +174,7 @@ class Kwarwp():
     LADO = None
     """Referência estática para definir o lado do piso da casa."""
 
-    self.o_indio = None
-    """Instância do personagem principal, o índio, vai ser atribuído pela fábrica do índio"""
-    
+     
     def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
         Kwarwp.VITOLLINO = self.v = vitollino()
         """Cria um matriz com os elementos descritos em cada linha de texto"""
@@ -187,6 +182,10 @@ class Kwarwp():
         """Largura da casa da arena dos desafios, número de colunas no mapa"""
         self.lado, self.col, self.lin = 100, len(self.mapa[0]), len(self.mapa)+1
         Kwarwp.LADO = self.lado
+        
+        self.o_indio = None
+        """Instância do personagem principal, o índio, vai ser atribuído pela fábrica do índio"""
+
         w, h = self.col *self.lado, self.lin *self.lado
         self.taba = {}
         """Dicionário que a partir de coordenada (i,J) localiza um piso da taba"""
