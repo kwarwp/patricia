@@ -10,8 +10,8 @@
 from _spy.vitollino.main import Jogo, STYLE
 
 #largura e altura, respectivamente
-STYLE["width"] = 700
-STYLE["height"] = "600px"
+#STYLE["width"] = 700
+#STYLE["height"] = "600px"
 
 MAPA_INICIAL= """
              #######
@@ -23,8 +23,8 @@ MAPA_INICIAL= """
 IMGUR = "https://i.imgur.com/"
 
 fabrica ={"#": Fab(self.coisa, f"{IMGUR}uwYPNlz.png"), # CERCA
-         "^": Fab(self.coisa, f"{IMGUR}8jMuupz.png"), # INDIO
-         ".": Fab(self.coisa, f"{IMGUR}npb9Oej.png"), #VAZIO
+         "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
+         ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), #VAZIO
          "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), #SOLO
          "&": Fab(self.coisa, f"{IMGUR}dZQ8liT.jpg"), #OCA
          "@": Fab(self.coisa, f"{IMGUR}tLLVjfN.png"), #PICHE
@@ -74,7 +74,7 @@ class Kwarwp():
         medidas.update(width=w, height=f"{h}px")
         self.cena = self.cria(mapa=self.mapa) if vitollino else None
 
-    def cria(self, mapa=" "):
+    def cria(self, mapa=""):
         from collections import namedTuple as nt
         Fab = nt("Fab", "objeto imagem")
         
@@ -88,6 +88,10 @@ class Kwarwp():
         self.taba = {(i, j): fabrica[imagem].objeto(
               fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
               for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
+              
+        cena.vai()
+        return cena
+    
     def coisa(self,imagem,x,y,cena):
         lado = self.lado
         return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
@@ -96,8 +100,7 @@ class Kwarwp():
         lado = self.lado
         return Indio(imagem, x=x, y=y, cena=cena)
 
-cena.vai()
-return cena
+
 
 if __name__ == "__main__":
     Kwarwp(Jogo) 
