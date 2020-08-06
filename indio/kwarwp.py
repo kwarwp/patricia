@@ -49,7 +49,7 @@ class Kwarwp():
         """Atuaiza a largura e o comprimento do mapa do jogo"""
         #medidas.update(width=w, height=f"{h}px")
         STYLE["width"] = w
-        STYLE["height"] = f"{h}px"
+        STYLE["height"] = "{}px".format(h)
         """Dicionário que a partir de coordenada (i,j) localiza um piso da taba"""
         self.taba = {}
 
