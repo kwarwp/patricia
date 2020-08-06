@@ -104,7 +104,7 @@ class Kwarwp():
         Ordena a execução do roteiro do índio.
     
         :param _: este argumento recebe a estrutura oriunda do evento, o _ indica que não será usado."""
-    self.o_indio.executa()
+    self.indio.o_indio.executa()
     
     def coisa(self, imagem, x, y, cena):
         """
