@@ -942,3 +942,10 @@ AttributeError: 'Kwarwp' object has no attribute 'col'
     self.taba = {(i, j): fabrica[imagem].objeto(
 TypeError: vazio() takes 1 positional arguments but more were given
 '''},
+{'date': 'Thu Aug 06 2020 16:54:54.279 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 45
+  def __init__(self, vitollino=None, mapa = MAPA_INICIAL, medidas.update = {}):
+                                                                  ^
+SyntaxError: invalid syntax
+'''},
