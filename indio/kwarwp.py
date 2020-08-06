@@ -50,6 +50,7 @@ class Kwarwp():
         self.taba = {}
         """Atuaiza a largura e o comprimento do mapa do jogo"""
         medidas.update(width=w, height=f"{h}px")
+        
         """Instância do personagem principal, o índio, vai ser atribuído pela fábrica do índio"""
         self.o_indio = None    
         
@@ -96,6 +97,7 @@ class Kwarwp():
         self.taba = {(i, j): 
             fabrica[imagem].objeto(fabrica[imagem].url_imagem, x=i*lado, y=j*lado+lado, cena=cena)
             for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
+            
         cena.vai()
         return cena
         
@@ -104,7 +106,7 @@ class Kwarwp():
         Ordena a execução do roteiro do índio.
     
         :param _: este argumento recebe a estrutura oriunda do evento, o _ indica que não será usado."""
-    self.o_indio.executa()
+        self.o_indio.executa()
     
     def coisa(self, imagem, x, y, cena):
         """
