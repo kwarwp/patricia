@@ -52,7 +52,7 @@ class Kwarwp():
         Kwarwp.LADO = self.lado
         w,h = self.coluna*self.lado, self.lin*self.lado
         medidas.update(width=w, height=f"{h}px")
-        medidas = STYLE
+        #medidas = STYLE
         
         self.taba = {}
         """Dicionário que a partir de coordenada (i,J) localiza um piso da taba"""
@@ -105,4 +105,4 @@ class Kwarwp():
 
 if __name__ == "__main__":
     
-    Kwarwp(Jogo) 
+    Kwarwp(Jogo, medidas = STYLE) 
