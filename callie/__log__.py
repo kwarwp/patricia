@@ -627,3 +627,7 @@ SyntaxError: invalid syntax
                                                                                                                                                                                                               ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Aug 06 2020 13:51:53.72 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <SyntaxError: Unexpected token '{'>
+'''},
