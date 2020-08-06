@@ -69,8 +69,8 @@ class Kwarwp():
         """ Cria o ambiente de programação Kwarwp."""
         lado = self.lado
         coluna = self.coluna
-        self.v.c = cenario #alterar depois
-        self.v.a = elemento #alterar depois
+        #self.v.c = cenario #alterar depois
+        #self.v.a = elemento #alterar depois
         cena = self.v.c(self.TABULEIRO["_"])
         ceu = self.v.a(self.TABULEIRO["~"], w =lado*col, h=lado, x=0, y=0, cena=cena)
         sol = self.v.a(self.TABULEIRO["*"], w =60, h =60, x=0, y=40, cena=cena)
