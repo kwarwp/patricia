@@ -48,12 +48,14 @@ class Kwarwp():
         w, h = self.col*self.lado, self.lin*self.lado
         """Atuaiza a largura e o comprimento do mapa do jogo"""
         medidas.update(width=w, height=f"{h}px")
+        STYLE["width"] = 700
+        STYLE["height"] = "600px"
         """Dicionário que a partir de coordenada (i,j) localiza um piso da taba"""
         self.taba = {}
 
         """Instância do personagem principal, o índio, vai ser atribuído pela fábrica do índio"""
         self.o_indio = None    
-        
+
         self.cena = self.cria(mapa=self.mapa) if vitollino else None
             
     def cria(self, mapa = ""):
@@ -86,7 +88,7 @@ class Kwarwp():
 
         mapa = mapa if mapa != "" else self.mapa
 
-        #mapa = self.mapa
+        mapa = self.mapa
         lado = self.lado
         cena = self.v.c(fabrica["_"].url_imagem)
         
