@@ -20,12 +20,6 @@ IMGUR = "https://imgur.com/"
 
 # Mapas
 MAPA_INICIO = """
-@....&
-......
-......
-.#.^..
-"""
-MAPA_CERCA = """
 %%%%%%%
 %..%..&
 %..#..%
@@ -33,6 +27,12 @@ MAPA_CERCA = """
 %%%%%%%
 """
 
+MAPA_CERCA = """
+@....&
+......
+......
+.#.^..
+"""
 
 #Inserindo a Classe Indio:
 class Indio():
