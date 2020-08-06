@@ -49,11 +49,11 @@ class Kwarwp():
         """Atuaiza a largura e o comprimento do mapa do jogo"""
         medidas.update(width=w, height=f"{h}px")
         
+        """Instância do personagem principal, o índio, vai ser atribuído pela fábrica do índio"""
+        self.o_indio = None  
+        
         """Dicionário que a partir de coordenada (i,j) localiza um piso da taba"""
         self.taba = {}
-
-        """Instância do personagem principal, o índio, vai ser atribuído pela fábrica do índio"""
-        self.o_indio = None    
 
         self.cena = self.cria(mapa=self.mapa) if vitollino else None
             
@@ -90,14 +90,15 @@ class Kwarwp():
         mapa = self.mapa
         lado = self.lado
         cena = self.v.c(fabrica["_"].url_imagem)
-        
-        """No argumento *vai*, associamos o clique no céu com o método **executa ()** desta classe"""
-        ceu = self.v.a(fabrica["~"].url_imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena, vai= self.executa)
+        ceu = self.v.a(fabrica["~"].url_imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena) 
         sol = self.v.a(fabrica["*"].url_imagem, w=60, h=60, x=0, y=40, cena=cena)
         
         self.taba = {(i, j): 
             fabrica[imagem].objeto(fabrica[imagem].url_imagem, x=i*lado, y=j*lado+lado, cena=cena)
             for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
+            
+        """No argumento *vai*, associamos o clique no céu com o método **executa ()** desta classe"""
+        ceu = self.v.a(fabrica["~"].url_imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena, vai= self.executa)
             
         cena.vai()
         return cena
@@ -144,7 +145,6 @@ class Kwarwp():
         :param y: linha em que o elemento será posicionado.
         :param cena: cena em que o elemento será posicionado.
         """
-        lado = self.lado
         self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
         return self.o_indio
 
