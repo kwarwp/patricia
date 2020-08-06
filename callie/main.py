@@ -9,9 +9,11 @@
 """
 from _spy.vitollino.main import Jogo, STYLE
 from collections import namedtuple as nt
+
 #largura e altura, respectivamente
 #STYLE["width"] = 700
 #STYLE["height"] = "600px"
+
 IMGUR = "https://i.imgur.com/"
 
 Fab = nt("Fab", "objeto imagem")
@@ -40,7 +42,6 @@ class Indio():
     def __init__(self, imagem, x, y, cena):
         self.lado = lado = Kwarwp.LADO
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
-    
     
 class Kwarwp():
     """ Jogo para ensino de programação.
