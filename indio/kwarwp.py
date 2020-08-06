@@ -101,7 +101,7 @@ class Kwarwp():
         cena.vai()
         return cena
         
-    def executa(self, *_):
+    def executa(self):
         """
         Ordena a execução do roteiro do índio.
     
