@@ -7,7 +7,7 @@
 .. version:: 20.01.1
 
 """
-from _spy.vitollino.main import Jogo, STYLE as medidas
+from _spy.vitollino.main import Jogo, STYLE 
 from collections import namedtuple as nt
 
 #largura e altura, respectivamente
@@ -52,7 +52,7 @@ class Kwarwp():
         Kwarwp.LADO = self.lado
         w,h = self.coluna*self.lado, self.lin*self.lado
         medidas.update(width=w, height=f"{h}px")
-        #medidas = STYLE
+        medidas = STYLE
         
         self.taba = {}
         """Dicionário que a partir de coordenada (i,J) localiza um piso da taba"""
