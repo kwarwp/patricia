@@ -8,10 +8,23 @@
 
 """
 from _spy.vitollino.main import Jogo, STYLE
-
+from collections import namedTuple as nt
 #largura e altura, respectivamente
 #STYLE["width"] = 700
 #STYLE["height"] = "600px"
+
+Fab = nt("Fab", "objeto imagem")
+        
+fabrica ={"#": Fab(self.coisa, f"{IMGUR}uwYPNlz.png"), # CERCA
+         "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
+         ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), #VAZIO
+         "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), #SOLO
+         "&": Fab(self.coisa, f"{IMGUR}dZQ8liT.jpg"), #OCA
+         "@": Fab(self.coisa, f"{IMGUR}tLLVjfN.png"), #PICHE
+         "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), #SOL
+         "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), #CEU
+         "|": Fab(self.coisa, f"{IMGUR}ldI7IbK.png")  # TORA 
+         }
 
 MAPA_INICIAL= """
              #######
@@ -63,19 +76,6 @@ class Kwarwp():
         self.cena = self.cria(mapa=self.mapa) if vitollino else None
 
     def cria(self, mapa=""):
-        from collections import namedTuple as nt
-        Fab = nt("Fab", "objeto imagem")
-        
-        fabrica ={"#": Fab(self.coisa, f"{IMGUR}uwYPNlz.png"), # CERCA
-         "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
-         ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), #VAZIO
-         "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), #SOLO
-         "&": Fab(self.coisa, f"{IMGUR}dZQ8liT.jpg"), #OCA
-         "@": Fab(self.coisa, f"{IMGUR}tLLVjfN.png"), #PICHE
-         "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), #SOL
-         "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), #CEU
-         "|": Fab(self.coisa, f"{IMGUR}ldI7IbK.png")  # TORA 
-         }
         
         mapa = mapa if mapa != "" else self.mapa
 
