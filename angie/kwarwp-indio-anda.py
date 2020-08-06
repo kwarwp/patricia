@@ -20,8 +20,8 @@ MAPA_INICIO = """
 MAPA_CERCA = """
 ++++++
 .....&
+..^...
 ......
-...^..
 ++++++
 """
 
@@ -108,17 +108,19 @@ class Vazio():
     
 class Indio():
 
-    def __init__(self, imagem, x, y, cena):
+    def __init__(self, imagem, x, y, cena, taba): #teste colocado param taba
         self.lado = lado = Kwarwp.LADO
         self.posicao = (x//lado, y//lado)  # XXX[3]XXX faltou definir posição
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        #teste
+        self.taba = taba
 
     def anda(self):
         """ Faz o índio caminhar na direção em que está olhando.
         """
         destino = (self.posicao[0], self.posicao[1]-1)
         """Assumimos que o índio está olhando para cima, decrementamos a posição **y**"""
-        taba = self.taba.taba
+        taba = self.taba #teste .taba
         if destino in taba:
             vaga = taba[destino]
             """Recupera na taba a vaga para a qual o índio irá se transferir"""
@@ -174,7 +176,6 @@ class Kwarwp():
     LADO = None
     """Referência estática para definir o lado do piso da casa."""
 
-     
     def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
         Kwarwp.VITOLLINO = self.v = vitollino()
         """Cria um matriz com os elementos descritos em cada linha de texto"""
@@ -226,9 +227,6 @@ class Kwarwp():
             fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
             for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
             
-        ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena, vai= self.executa)
-        """No argumento *vai*, associamos o clique no céu com o método **executa ()** desta classe"""
-
         cena.vai()
         return cena
     
@@ -241,7 +239,7 @@ class Kwarwp():
 
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
-        coisa = Indio(imagem, x=0, y=0, cena=cena)#, taba=self)
+        coisa = Indio(imagem, x=0, y=0, cena=cena, taba=self)
         """o índio tem deslocamento zero, pois é relativo à vaga"""
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
         """Aqui o índio está sendo usado para qualquer objeto, enquanto não tem o próprio"""
@@ -266,7 +264,7 @@ class Kwarwp():
         :param cena: cena em que o elemento será posicionado.
         """
         # self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
-        self.o_indio = Indio(imagem, x=0, y=0, cena=cena)#, taba=self)
+        self.o_indio = Indio(imagem, x=0, y=0, cena=cena, taba=self)
         """o índio tem deslocamento zero, pois é relativo à vaga"""
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
         return vaga
