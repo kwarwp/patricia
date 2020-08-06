@@ -11,8 +11,8 @@ from _spy.vitollino.main import Jogo, STYLE
 from collections import namedtuple as nt
 
 #largura e altura, respectivamente
-STYLE["width"] = 700
-STYLE["height"] = "600px"
+#STYLE["width"] = 700
+#STYLE["height"] = "600px"
 
 
 MAPA_INICIAL= """
@@ -42,19 +42,12 @@ class Kwarwp():
     LADO = None
     """Referência estática para definir o lado do piso da casa"""
 
-    def __init__(self, vitollino=None, mapa = MAPA_INICIAL, medidas = {}):
+    def __init__(self, vitollino=None, mapa = MAPA_INICIAL, medidas.update = {}):
         Kwarwp.VITOLLINO = self.v = vitollino()
         # Notação anterior self.v = vitollino()
         """Transforma o texto matriz, explicitando o bloco de strings para cada linha."""
         self.mapa = mapa.split()
-        """Largura da casa da arena dos desafios, número de colunas no mapa
-        
-           .. note::
-              Tente aplicar o seguinte script: > MAPA_INICIO = X 
-              > y = x.split() > z = len(y[0])  > print(x,y,z) 
-              LEN(MAPA[0]) acessa o primeiro item indexado em zero, retornando sua 'quantidade'
-              
-        """
+        """Largura da casa da arena dos desafios, número de colunas no mapa"""
         self.lado, self.coluna, self.lin = 100, len(self.mapa[0]), len(self.mapa)+1
         Kwarwp.LADO = self.lado
         w,h = self.coluna*self.lado, self.lin*self.lado
