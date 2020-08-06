@@ -620,3 +620,10 @@ NameError: name 'GLIFOS' is not defined
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Thu Aug 06 2020 13:14:28.901 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 103
+  """
+  ^
+IndentationError: expected an indented block
+'''},
