@@ -9,6 +9,8 @@ Changelog
 ---------
 .. versionadded::    20.07
 
+Andar do índio "para cima" com o clique na imagem do céu.
+
 """
 from collections import namedtuple as nt
 
