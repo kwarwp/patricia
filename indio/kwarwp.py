@@ -23,32 +23,6 @@ MAPA_INICIO = """
 
 """
 
-class Indio():
-    '''
-    Cria o personagem principal na arena do Kwarwp na posição definida.
-
-    :param imagem: A figura representando o índio na posição indicada.
-    :param x: Coluna em que o elemento será posicionado.
-    :param y: Linha em que o elemento será posicionado.
-    :param cena: Cena em que o elemento será posicionado.
-    '''
-    def __init__(self, imagem, x, y, cena):
-        self.lado = lado = Kwarwp.LADO
-        self.posicao = (x//lado, y//lado)  # XXX[3]XXX faltou definir posição
-        self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
-        
-    def anda(self):
-        """ Faz o índio caminhar na direção em que está olhando."""
-        self.posicao = (self.posicao[0], self.posicao[1]-1)
-        """Assumimos que o índio está olhando para cima, decrementamos a posição **y**"""
-        self.indio.y = self.posicao[1]*self.lado
-        self.indio.x = self.posicao[0]*self.lado
-        
-    def executa(self):
-        """ Roteiro do índio. Conjunto de comandos para ele executar.
-        """
-        self.anda()
-
 class Kwarwp():
     """ Jogo para ensino de programação.
     
@@ -174,6 +148,32 @@ class Kwarwp():
         """
         self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
         return self.o_indio
+
+class Indio():
+    '''
+    Cria o personagem principal na arena do Kwarwp na posição definida.
+
+    :param imagem: A figura representando o índio na posição indicada.
+    :param x: Coluna em que o elemento será posicionado.
+    :param y: Linha em que o elemento será posicionado.
+    :param cena: Cena em que o elemento será posicionado.
+    '''
+    def __init__(self, imagem, x, y, cena):
+        self.lado = lado = Kwarwp.LADO
+        self.posicao = (x//lado, y//lado)  # XXX[3]XXX faltou definir posição
+        self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        
+    def anda(self):
+        """ Faz o índio caminhar na direção em que está olhando."""
+        self.posicao = (self.posicao[0], self.posicao[1]-1)
+        """Assumimos que o índio está olhando para cima, decrementamos a posição **y**"""
+        self.indio.y = self.posicao[1]*self.lado
+        self.indio.x = self.posicao[0]*self.lado
+        
+    def executa(self):
+        """ Roteiro do índio. Conjunto de comandos para ele executar.
+        """
+        self.anda()
         
 if __name__ == "__main__":
     """
