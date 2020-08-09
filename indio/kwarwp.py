@@ -188,5 +188,6 @@ if __name__ == "__main__":
     
         >> Kwarwp(Jogo)
     """
-    from _spy.vitollino.main import Jogo, STYLE
+    from _spy.vitollino.main import Jogo
+    from _spy.vitollino.main import STYLE
     Kwarwp(Jogo, medidas=STYLE)
