@@ -168,7 +168,7 @@ class Indio():
         
     def anda(self):
         """ Faz o índio caminhar na direção em que está olhando."""
-        self.posicao = (self.posicao[0], self.posicao[1]-1)
+        self.posicao = (self.posicao[0]-1, self.posicao[1]-1)
         """Assumimos que o índio está olhando para cima, decrementamos a posição **y**"""
         self.indio.y = self.posicao[1]*self.lado
         self.indio.x = self.posicao[0]*self.lado
