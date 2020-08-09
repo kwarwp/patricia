@@ -173,8 +173,7 @@ class Indio():
         self.indio.x = self.posicao[0]*self.lado
         
     def executa(self):
-        """ Roteiro do índio. Conjunto de comandos para ele executar.
-        """
+        """ Roteiro do índio. Conjunto de comandos para ele executar."""
         self.anda()
         
 if __name__ == "__main__":
