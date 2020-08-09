@@ -43,18 +43,19 @@ class Kwarwp():
         Kwarwp.VITOLLINO = self.v = vitollino()
         """Cria um matriz com os elementos descritos em cada linha de texto"""
         self.mapa = mapa.split()
+        
         """Largura da casa da arena dos desafios, número de colunas e linhas no mapa"""
         self.lado, self.col, self.lin = 100, len(self.mapa[0]), len(self.mapa)+1
         Kwarwp.LADO = self.lado
-        
-        """Instância do personagem principal, o índio, vai ser atribuído pela fábrica do índio"""
-        self.o_indio = None
         w, h = self.col*self.lado, self.lin*self.lado
         """Atuaiza a largura e o comprimento do mapa do jogo"""
         medidas.update(width=w, height=f"{h}px")
         
         """Dicionário que a partir de coordenada (i,j) localiza um piso da taba"""
         self.taba = {}
+        
+        """Instância do personagem principal, o índio, vai ser atribuído pela fábrica do índio"""
+        self.o_indio = None
         
         self.cena = self.cria(mapa=self.mapa) if vitollino else None
             
