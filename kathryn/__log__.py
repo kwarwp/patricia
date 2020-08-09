@@ -511,3 +511,10 @@ KeyError: +
     fabrica[imagem].objeto(fabrica[imagem].url_imagem,
 TypeError: coisa() got an unexpected keyword argument 'w'
 '''},
+{'date': 'Sun Aug 09 2020 12:40:51.767 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 6
+  http://1.bp.blogspot.com/_j2E5RPBo45s/S1Hi7RGkIMI/AAAAAAAAADI/Xn66c31EJNw/s1600-h/cartoes_memoria.JPG
+       ^
+SyntaxError: invalid syntax
+'''},
