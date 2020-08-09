@@ -163,7 +163,7 @@ class Indio():
     '''
     def __init__(self, imagem, x, y, cena):
         self.lado = lado = Kwarwp.LADO
-        self.posicao = (x//lado, y//lado)  #definir posição (2,4)
+        self.posicao = (x//lado, y//lado)  #definir posição (2,6)
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         
     def anda(self):
