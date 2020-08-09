@@ -9,6 +9,11 @@ Changelog
 ---------
 .. versionadded::    20.07
 
+- Andar do índio "para cima" com o clique na imagem do céu.
+- Restrição do movimento / Organizando a Taba (aldeia)
+
+- Parei no pedindo para sair
+
 """
 from collections import namedtuple as nt
 
@@ -22,6 +27,7 @@ MAPA_INICIO = """
 +^..+.&.+
 +++++++++
 """
+
 class Kwarwp():
     """ Jogo para ensino de programação.
     
@@ -42,6 +48,7 @@ class Kwarwp():
         Kwarwp.VITOLLINO = self.v = vitollino()
         """Cria um matriz com os elementos descritos em cada linha de texto"""
         self.mapa = mapa.split()
+        
         """Largura da casa da arena dos desafios, número de colunas e linhas no mapa"""
         self.lado, self.col, self.lin = 100, len(self.mapa[0]), len(self.mapa)+1
         Kwarwp.LADO = self.lado
@@ -51,13 +58,13 @@ class Kwarwp():
         
         """Dicionário que a partir de coordenada (i,j) localiza um piso da taba"""
         self.taba = {}
-
+        
         """Instância do personagem principal, o índio, vai ser atribuído pela fábrica do índio"""
-        self.o_indio = None    
-
+        self.o_indio = None
+        
         self.cena = self.cria(mapa=self.mapa) if vitollino else None
             
-    def cria(self, mapa = ""):
+    def cria(self, mapa = "  "):
         """
         *Este método define uma fábrica de componentes.*
 
@@ -73,7 +80,7 @@ class Kwarwp():
         O self.taba é um conjunto que utiliza da funcinalidade de compreensão de conjuntos
         (list/set compreention) para alteração da lista mapa em um conjunto com mais características.
         """
-        Fab = nt("Fab", "objeto url_imagem")
+        Fab = nt("Fab", "objeto imagem")
         fabrica = {
         "&": Fab(self.coisa, f"{IMGUR}dZQ8liT.jpg"), # OCA
         "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
@@ -89,20 +96,21 @@ class Kwarwp():
 
         mapa = self.mapa
         lado = self.lado
-        cena = self.v.c(fabrica["_"].url_imagem)
+        cena = self.v.c(fabrica["_"].imagem)
         
         """No argumento *vai*, associamos o clique no céu com o método **executa ()** desta classe"""
-        ceu = self.v.a(fabrica["~"].url_imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena, vai= self.executa)
-        sol = self.v.a(fabrica["*"].url_imagem, w=60, h=60, x=0, y=40, cena=cena)
+        ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena, vai= self.executa) 
+        sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena)
         
         self.taba = {(i, j): 
-            fabrica[imagem].objeto(fabrica[imagem].url_imagem, x=i*lado, y=j*lado+lado, cena=cena)
+            fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
             for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
+            
             
         cena.vai()
         return cena
         
-    def executa(self):
+    def executa(self, *_):
         """
         Ordena a execução do roteiro do índio.
     
@@ -144,9 +152,9 @@ class Kwarwp():
         :param y: linha em que o elemento será posicionado.
         :param cena: cena em que o elemento será posicionado.
         """
-        lado = self.lado
         self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
         return self.o_indio
+
 
 class Indio():
     '''
@@ -159,6 +167,7 @@ class Indio():
     '''
     def __init__(self, imagem, x, y, cena):
         self.lado = lado = Kwarwp.LADO
+        self.posicao = (x//lado, y//lado)  #definir posição (2,6)
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         
     def anda(self):
@@ -167,10 +176,11 @@ class Indio():
         """Assumimos que o índio está olhando para cima, decrementamos a posição **y**"""
         self.indio.y = self.posicao[1]*self.lado
         self.indio.x = self.posicao[0]*self.lado
-    
+        
     def executa(self):
         """ Roteiro do índio. Conjunto de comandos para ele executar."""
         self.anda()
+        
         
 class Vazio():
     """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
@@ -183,13 +193,13 @@ class Vazio():
 
     def __init__(self, imagem, x, y, cena, ocupante=None):
         self.lado = lado = Kwarwp.LADO
-        self.posicao = (x//lado,y//lado-1)
+        self.posicao = (x//lado, y//lado-1)
         self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         self._nada = Kwarwp.VITOLLINO.a()
         self.acessa = self._acessa
         self.ocupante = ocupante or self
         """O ocupante será definido pelo acessa, por default é o vazio"""
-        self.acessa(ocupante) 
+        self.acessa(ocupante)
         
     def _valida_acessa(self, ocupante):
         """ Consulta o ocupante atual se há permissão para substituí-lo pelo novo ocupante.
@@ -199,28 +209,26 @@ class Vazio():
         self.ocupante.acessa(ocupante)
         
     def _acessa(self, ocupante):
-        """
-        Atualmente a posição está vaga e pode ser acessada pelo novo ocupante.
-    
+        """ Atualmente a posição está vaga e pode ser acessada pelo novo ocupante.
+
         A responsabilidade de ocupar definitivamente a vaga é do candidato a ocupante
         Caso ele esteja realmente apto a ocupar a vaga e deve cahamar de volta ao vazio
         com uma chamada ocupou.
-    
-        :param ocupante: O canditato a ocupar a posição corrente.
+
+            :param ocupante: O canditato a ocupar a posição corrente.
         """
         ocupante.ocupa(self)
         
     def ocupou(self, ocupante):
-        """
-        O candidato à vaga decidiu ocupá-la e efetivamente entra neste espaço.
-    
+        """ O candidato à vaga decidiu ocupá-la e efetivamente entra neste espaço.
+
         :param ocupante: O canditato a ocupar a posição corrente.
-    
+
         Este ocupante vai entrar no elemento do Vitollino e definitivamente se tornar
         o ocupante da vaga. Com isso ele troca o estado do método acessa para primeiro
         consultar a si mesmo, o ocupante corrente usando o protocolo definido em
         **_valida_acessa ()**
-    
+
         """
         self.vazio.ocupa(ocupante)
         self.ocupante = ocupante
@@ -228,24 +236,25 @@ class Vazio():
         
     def ocupa(self, vaga):
         """ Pedido por uma vaga para que ocupe a posição nela.
-    
+
         No caso do espaço vazio, não faz nada.
         """
         pass
         
     def sai(self):
-        """ Pedido por um ocupante para que desocupe a posição nela."""
+        """ Pedido por um ocupante para que desocupe a posição nela.
+        """
         self.ocupante = self
         self.acessa = self._acessa
         
     @property
     def elt(self):
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
-    
+
         No caso do espaço vazio, vai retornar um elemento que não contém nada.
         """
-        return self._nada.elt
-        
+        return self._nada.elt    
+    
         
 if __name__ == "__main__":
     """
@@ -258,5 +267,6 @@ if __name__ == "__main__":
     
         >> Kwarwp(Jogo)
     """
-    from _spy.vitollino.main import Jogo, STYLE
+    from _spy.vitollino.main import Jogo
+    from _spy.vitollino.main import STYLE
     Kwarwp(Jogo, medidas=STYLE)
