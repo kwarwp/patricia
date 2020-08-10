@@ -62,7 +62,7 @@ class Kwarwp():
     def cria(self, mapa=""):
     
         IMGUR = "https://i.imgur.com/"
-        Fab = nt("Fab", "objeto imagem")   
+        Fab = nt("Fab", "objeto url")   
         fabrica ={"#": Fab(self.coisa, f"{IMGUR}uwYPNlz.png"), # CERCA
                  "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
                  ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), #VAZIO
@@ -78,12 +78,12 @@ class Kwarwp():
 
         mapa = self.mapa
         lado = self.lado
-        cena = self.v.c(fabrica["_"].imagem)
-        ceu = self.v.a(fabrica["~"].imagem, w=lado*self.coluna, h=lado, x=0, y=0, cena=cena)
-        sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena)
+        cena = self.v.c(fabrica["_"].url)
+        ceu = self.v.a(fabrica["~"].url, w=lado*self.coluna, h=lado, x=0, y=0, cena=cena)
+        sol = self.v.a(fabrica["*"].url, w=60, h=60, x=0, y=40, cena=cena)
         
         self.taba = {(i, j): fabrica[imagem].objeto(
-              fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
+              fabrica[imagem].url, x=i*lado, y=j*lado+lado, cena=cena)
               for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
               
         cena.vai()
