@@ -30,7 +30,7 @@ class Indio():
         self.lado = lado = Kwarwp.LADO
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
     
-class Kwarwp():
+class Kwarwp(Jogo):
 
     """ Jogo para ensino de programação.
 
@@ -105,4 +105,4 @@ class Kwarwp():
 
 if __name__ == "__main__":
     
-    Kwarwp(Jogo, medidas = STYLE) 
+    Kwarwp(medidas = STYLE) 
