@@ -29,7 +29,7 @@ class Indio():
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         self.vaga = self
         self.posicao = (x//lado,y//lado)
-        self.indio = Kwarwp.VIOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena
+        self.indio = Kwarwp.VIOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         
     def anda(self):
         """ Faz o índio caminhar na direção em que está olhando.
@@ -72,24 +72,24 @@ class Indio():
         vaga.ocupou(self)
         self.vaga = vaga
 
-   def acessa(self, ocupante):
-       """ Pedido de acesso a essa posição, delegada ao ocupante pela vaga.
+    def acessa(self, ocupante):
+        """ Pedido de acesso a essa posição, delegada ao ocupante pela vaga.
        :param ocupante: O componente candidato a ocupar a vaga já ocupada pelo índio.
        No caso do índio, ele age como um obstáculo e não prossegue com o protocolo.
        """
-       pass
+        pass
 
 class vazio():
-        """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
+    """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
 
         :param imagem: A figura representando o espaço vazio (normalmente transparente).
         :param x: Coluna em que o elemento será posicionado.
         :param y: Cinha em que o elemento será posicionado.
         :param cena: Cena em que o elemento será posicionado.
         :arg ocupante: Objeto que está ocupando o vazio. Por padrão inicia-se zerado.
-    """
+      """
     
-     def __init__(imagem,x,y,cena,ocupante=None):
+    def __init__(imagem,x,y,cena,ocupante=None): 
         self.lado = lado = Kwarwp.LADO
         self.posicao = (x//lado, y//lado-1)
         self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
@@ -171,7 +171,6 @@ class Kwarwp():
         w,h = self.coluna*self.lado, self.lin*self.lado
         medidas.update(width=w, height=f"{h}px")
         #medidas = STYLE
-        
         self.taba = {}
         """Dicionário que a partir de coordenada (i,J) localiza um piso da taba"""
         
@@ -237,8 +236,8 @@ class Kwarwp():
         :param y: linha em que o elemento será posicionado.
         :param cena: cena em que o elemento será posicionado.
         """
-        # self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
-        self.o_indio = Indio(imagem, x=0, y=0, cena=cena, taba=self)
+        # self.o_indio = Indio(imagem, x=x, y=y, cena=cena) 
+        self.o_indio = Indio(imagem, x=0, y=0, cena=cena, taba=self.indio) #ver se não vai dar problema posteriormente
         """o índio tem deslocamento zero, pois é relativo à vaga"""
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
         return vaga
@@ -255,8 +254,7 @@ class Kwarwp():
         return vaga
         
     def ocupa(self, *_):
-    """ O Kwarwp é aqui usado como um ocupante falso, o pedido de ocupar é ignorado.
-    """
+        """ O Kwarwp é aqui usado como um ocupante falso, o pedido de ocupar é ignorado."""
         pass
         
     def vaga(self):
