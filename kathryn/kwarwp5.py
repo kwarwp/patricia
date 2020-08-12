@@ -122,7 +122,7 @@ class Indio():
         
     def anda(self):
         '''Faz o indio caminhar olhando rpa cima'''
-        destino = (self.posicao[0], self.posicao[1]-1)
+        destino = (self.posicao[0]+1, self.posicao[1]-2)
         """Assumimos que o índio está olhando para cima, decrementamos a posição **y**"""
         taba = self.taba.taba
         if destino in taba:
