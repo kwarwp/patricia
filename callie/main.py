@@ -3,6 +3,10 @@
 .. codeauthor:: Emanuelle Simas <ellesimas@gmail.com>
 
 .. version:: 20.01.1
+     - Mapa altera largura e comprimento automaticamente
+     - Indio tem classe única
+     - função executa 
+     
 
 """
 from _spy.vitollino.main import Jogo, STYLE 
