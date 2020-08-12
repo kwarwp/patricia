@@ -41,3 +41,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Wed Aug 12 2020 19:35:34.785 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 258
+  """ O Kwarwp é aqui usado como um ocupante falso, o pedido de ocupar é ignorado."""
+  ^
+IndentationError: expected an indented block
+'''},
