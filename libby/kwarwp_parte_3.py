@@ -6,7 +6,7 @@
 
 Changelog
 ---------
-.. versionadded::    05.08
+.. versionadded::    12.08
         Parte_2.
 
 """
