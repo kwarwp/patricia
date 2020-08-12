@@ -11,6 +11,10 @@ Changelog
 
 """
 
+from collections import namedtuple as nt
+
+IMGUR = "https://imgur.com/"
+
 MAPA_INICIO = """
 @....&
 ......
@@ -33,6 +37,12 @@ MAPA_ROCHA = """
 +^.+..+
 +++++++
 """
+
+"""Mapa com o posicionamento inicial dos elementos."""
+Ponto = nt("Ponto", "x y")
+"""Par de coordenadas na direção horizontal (x) e vertiacal (y)."""
+Rosa = nt("Rosa", "n l s o")
+"""Rosa dos ventos com as direções norte, leste, sul e oeste."""
 
 class Vazio():
     """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
@@ -108,62 +118,116 @@ class Vazio():
         return self._nada.elt
     
 class Indio():
-
-    def __init__(self, imagem, x, y, cena, taba): #teste colocado param taba
+    """ Cria o personagem principal na arena do Kwarwp na posição definida.
+        :param imagem: A figura representando o índio na posição indicada.
+        :param x: Coluna em que o elemento será posicionado.
+        :param y: Cinha em que o elemento será posicionado.
+        :param cena: Cena em que o elemento será posicionado.
+        :param taba: Representa a taba onde o índio faz o desafio.
+    """
+    AZIMUTE = Rosa(Ponto(0, -1),Ponto(1, 0),Ponto(0, 1),Ponto(-1, 0),)
+    """Constante com os pares ordenados que representam os vetores unitários dos pontos cardeais."""
+    
+    def __init__(self, imagem, x, y, cena, taba):
         self.lado = lado = Kwarwp.LADO
-        self.posicao = (x//lado, y//lado)  # XXX[3]XXX faltou definir posição
-        self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
-        self.vaga = self # XXX[0]XXX faltou esta linha!
-        #teste
+        self.azimute = self.AZIMUTE.n
+        """índio olhando para o norte"""
         self.taba = taba
+        self.vaga = self
+        self.posicao = (x//lado,y//lado)
+        self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        self.x = x
+        """Este x provisoriamente distingue o índio de outras coisas construídas com esta classe"""
+        if x:
+            self.indio.siz = (lado*3, lado*4)
+            """Define as proporções da folha de sprites"""
+            self.mostra()
+       
+    def mostra(self):
+        """ Modifica a figura (Sprite) do índio mostrando para onde está indo.
+        """
+        sprite_col = sum(self.posicao) % 3
+        """Faz com que três casas adjacentes tenha valores diferentes para a coluna do sprite"""
+        sprite_lin = self.AZIMUTE.index(self.azimute)
+        """A linha do sprite depende da direção dque índio está olhando"""
+        self.indio.pos = (-self.lado*sprite_col, -self.lado*sprite_lin)
+       
+    def esquerda(self):
+        """ Faz o índio mudar da direção em que está olhando para a esquerda.
+        """
+        self.azimute = self.AZIMUTE[self.AZIMUTE.index(self.azimute)-1]
+        self.mostra()
+       
+    def direita(self):
+        """ Faz o índio mudar da direção em que está olhando para a direita.
+        """
+        self.azimute = self.AZIMUTE[self.AZIMUTE.index(self.azimute)-3]
+        self.mostra()
+       
+    def fala(self, texto=""):
+        """ O índio fala um texto dado.
+        
+        :param texto: O texto a ser falado.
+        """
+        self.taba.fala(texto)
 
     def anda(self):
+        """Objeto tenta sair, tem que consultar a vaga onde está"""
+        self.vaga.sair()      
+
+    def sair(self):
+        """Objeto de posse do índio tenta sair e é autorizado"""
+        self.vaga.ocupante.siga()      
+
+    def siga(self):
+        """Objeto tentou sair e foi autorizado"""
+        self._anda()       
+
+    def _anda(self):
         """ Faz o índio caminhar na direção em que está olhando.
         """
-        destino = (self.posicao[0], self.posicao[1]-1)
-        """Assumimos que o índio está olhando para cima, decrementamos a posição **y**"""
-        taba = self.taba.taba  # XXX[0]XXX tinha que ser taba.taba
+        destino = (self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
+        """A posição para onde o índio vai depende do vetor de azimute corrente"""
+        taba = self.taba.taba
         if destino in taba:
             vaga = taba[destino]
             """Recupera na taba a vaga para a qual o índio irá se transferir"""
             vaga.acessa(self)
-            """Inicia o protocolo duplo despacho, pedindo para acessar a vaga"""
-
-    def executa(self):
-        """ Roteiro do índio. Conjunto de comandos para ele executar.
-        """
-        self.anda()
-    
+         
     def sai(self):
         """ Rotina de saída falsa, o objeto Indio é usado como uma vaga nula.
         """
         pass
+         
+    def executa(self):
+        """ Roteiro do índio. Conjunto de comandos para ele executar.
+        """
+        self.anda()
 
-    @property
+    @property        
     def elt(self):
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
-
         No caso do índio, retorna o elt do elemento do atributo **self.indio**.
         """
         return self.indio.elt
-
+        
     def ocupa(self, vaga):
         """ Pedido por uma vaga para que ocupe a posição nela.
-
+        
         :param vaga: A vaga que será ocupada pelo componente.
-
         No caso do índio, requisita que a vaga seja ocupada por ele.
         """
         self.vaga.sai()
         self.posicao = vaga.posicao
         vaga.ocupou(self)
         self.vaga = vaga
-
+        if self.x:
+            self.mostra()
+        
     def acessa(self, ocupante):
         """ Pedido de acesso a essa posição, delegada ao ocupante pela vaga.
-
+        
         :param ocupante: O componente candidato a ocupar a vaga já ocupada pelo índio.
-
         No caso do índio, ele age como um obstáculo e não prossegue com o protocolo.
         """
         pass
