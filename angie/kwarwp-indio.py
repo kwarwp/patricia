@@ -1,13 +1,13 @@
 # patricia.angie.kwarwp-indio.py
 # SPDX-License-Identifier: GPL-3.0-or-later
-""" Projeto sem descrição, (mude esta linha).
+""" Projeto Kwarwp
 
-.. codeauthor:: Nome Sobrenome <mail@local.tipo>
+.. codeauthor:: Monica Novellino - monicanovellino@gmail.com
 
 Changelog
 ---------
 .. versionadded::    20.08
-        Descreva o que você adicionou no código.
+        Indio andando em todas as direções com oca e piche
 
 """
 MAPA_INICIO = """
