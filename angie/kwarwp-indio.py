@@ -66,7 +66,7 @@ class Vazio():
         """O **sair ()** é usado como método dinâmico, variando com o estado da vaga.
         Inicialmente tem o comportamento de **_sair ()** que é o estado leniente, aceitando saidas"""
         
-        def _sair(self):
+    def _sair(self):
         """Objeto tenta sair e secebe autorização para seguir"""
         self.ocupante.siga()
 
@@ -233,7 +233,7 @@ class Indio():
         self.mostra()
 
     def direita(self):
-            """ Faz o índio mudar da direção em que está olhando para a direita.
+        """ Faz o índio mudar da direção em que está olhando para a direita.
         """
         self.azimute = self.AZIMUTE[self.AZIMUTE.index(self.azimute)-3]
         self.mostra()
@@ -342,7 +342,7 @@ class Kwarwp():
         """
         Fab = nt("Fab", "objeto imagem")
         """Esta tupla nomeada serve para definir o objeto construido e sua imagem."""
-
+        IMGUR = "https://imgur.com/"
         fabrica = {
         "&": Fab(self.maloc, f"{IMGUR}dZQ8liT.jpg"), # OCA
         "^": Fab(self.indio, f"{IMGUR}UCWGCKR.png"), # INDIO
