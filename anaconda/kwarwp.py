@@ -45,7 +45,24 @@ class Indio():
         self.anda()
 
 class vazio():
-    pass
+    """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
+
+        :param imagem: A figura representando o espaço vazio (normalmente transparente).
+        :param x: Coluna em que o elemento será posicionado.
+        :param y: Cinha em que o elemento será posicionado.
+        :param cena: Cena em que o elemento será posicionado.
+        :arg ocupante: Objeto que está ocupando o vazio. Por padrão inicia-se zerado.
+    """
+    
+     def __init__(imagem,x,y,cena,ocupante=None):
+        self.lado = lado = Kwarwp.LADO
+        self.posicao = (x//lado, y//lado-1)
+        self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        self._nada = Kwarwp.VITOLLINO.a()
+        self.acessa = self._acessa
+        self.ocupante = ocupante or self
+        """O ocupante é definido pelo acessa"""
+        self.acessa(ocupante)
     
 class Kwarwp():
 
