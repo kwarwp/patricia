@@ -3,6 +3,8 @@
 .. codeauthor:: Emanuelle Simas <ellesimas@gmail.com>
 
 .. version:: 20.01.1
+       - String gera mapa do kwarwp
+       - índio é elemento pertencente ao mapa
 
 """
 from _spy.vitollino.main import Jogo, STYLE
@@ -69,7 +71,7 @@ class Kwarwp():
         """ self.col acima pode ser chamado col agora"""
         col = self.col
         cena = self.v.c(self.GLIFOS["_"])
-        """ O céu recebe como índices de largura o lado * nÂÂÂ° colunas, logo, se o mapa for alterado, o comprimento
+        """ O céu recebe como índices de largura o lado * nÂÂÂÂ° colunas, logo, se o mapa for alterado, o comprimento
             do céu também será.
         """
         ceu = self.v.a(self.GLIFOS["~"], w=lado*col, h=lado, x=0,y=0, cena=cena)
