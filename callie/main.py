@@ -121,7 +121,7 @@ class Kwarwp():
         
     def indio(self, imagem,x,y,cena):
         self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
-        return self.o_ndio
+        return self.o_indio
         
     def vazio(self, imagem, x,y ,cena):
         lado = self.lado
