@@ -1,13 +1,8 @@
-# patricia.anaconda.kwarwp.py
-# SPDX-License-Identifier: GPL-3.0-or-later
-""" Implementação do Kwarwp.
+"""   Implementação do mapa no Kwarwp
 
 .. codeauthor:: Emanuelle Simas <ellesimas@gmail.com>
 
-Changelog
----------
-.. versionadded::    20.08
-        Índio se move
+.. version:: 20.01.1
 
 """
 from _spy.vitollino.main import Jogo, STYLE 
@@ -32,16 +27,21 @@ class Indio():
     def __init__(self, imagem, x, y, cena):
         self.lado = lado = Kwarwp.LADO
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
-    
-    def anda():
-        """ Faz o índio caminhar na direção em que está olhando."""
+        self.posicao = (x//lado,y//lado)
+        
+    def anda(self):
+        """ Faz o índio caminhar na direção em que está olhando.
+        """
         self.posicao = (self.posicao[0], self.posicao[1]-1)
         """Assumimos que o índio está olhando para cima, decrementamos a posição **y**"""
         self.indio.y = self.posicao[1]*self.lado
         self.indio.x = self.posicao[0]*self.lado
         
-    def executa():
-        """ Roteiro do índio. Conjunto de comandos para ele executar."""
+    
+        
+    def executa(self):
+        """ Roteiro do índio. Conjunto de comandos para ele executar.
+        """
         self.anda()
     
 class Kwarwp():
@@ -54,10 +54,10 @@ class Kwarwp():
     """
     VITOLLINO = None
     """Referência estática para obter o engenho de jogo"""
+    self.o_indio = None
+    """Instância do personagem principal, o índio, vai ser atribuído pela fábrica do índio"""
     LADO = None
     """Referência estática para definir o lado do piso da casa"""
-    self.o_indio = None
-     """Instância do personagem principal, o índio, vai ser atribuído pela fábrica do índio"""
 
     def __init__(self, vitollino=None, mapa = MAPA_INICIAL, medidas = {}):
         Kwarwp.VITOLLINO = self.v = vitollino()
@@ -95,10 +95,17 @@ class Kwarwp():
         mapa = self.mapa
         lado = self.lado
         cena = self.v.c(fabrica["_"].url)
-        ceu = self.v.a(fabrica["~"].url, w=lado*self.coluna, h=lado, x=0, y=0, cena=cena, vai = self.executa)
-        """No argumento *vai*, associamos o clique no céu com o método **executa ()** desta classe"""
+        ceu = self.v.a(fabrica["~"].url, w=lado*self.coluna, h=lado, x=0, y=0, cena=cena, vai=self.executa)
         sol = self.v.a(fabrica["*"].url, w=60, h=60, x=0, y=40, cena=cena)
-        
+        """Compreensão de Dicionário. 
+           
+           Sintaxe: {keyexpression:valuexpression for key, value in iterable if condition}
+           Sintaxe: {key:value for (key,value) in interable}
+           
+           leitura: Para cada coluna (i), linha (j) : chama caracter específico (acessa atributo) objeto(chama 
+           caracter específico (acessa atributo) url específica, posição x, posição y e cena=solo)
+           para cada segmento de caracteres e número respectivo, para cada caracter específico e número específico
+        """ 
         self.taba = {(i, j): fabrica[imagem].objeto(
               fabrica[imagem].url, x=i*lado, y=j*lado+lado, cena=cena)
               for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
@@ -111,20 +118,21 @@ class Kwarwp():
         return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         
     def indio(self, imagem,x,y,cena):
-        lado = self.lado
-        return Indio(imagem, x=x, y=y, cena=cena)
+        self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
+        return self.o_indio
         
     def vazio(self, imagem, x,y ,cena):
         lado = self.lado
         return Indio(imagem, x=x, y=y, cena=cena)
         
-    def executa():   
-        """ Ordena a execução do roteiro do índio"""
-        sel
-    def executa():f.o_indio.executa()
+    def vaga(self):
+        pass
         
+    def executa(self, *_):
+        """ Ordena a execução do roteiro do índio.
+        """
+        self.o_indio.executa()
 
 
 if __name__ == "__main__":
-    
     Kwarwp(Jogo, medidas = STYLE) 
