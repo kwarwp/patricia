@@ -6,3 +6,10 @@
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Aug 12 2020 19:33:38.10 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 32
+  self.indio = Kwarwp.VIOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena
+                                                                                           ^
+SyntaxError: invalid syntax
+'''},
