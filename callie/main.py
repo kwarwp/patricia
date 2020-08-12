@@ -45,8 +45,6 @@ class Indio():
         """ Roteiro do índio. Conjunto de comandos para ele executar.
         """
         self.anda()
-        self.esquerda()
-        self.direita()
     
 class Kwarwp():
 
