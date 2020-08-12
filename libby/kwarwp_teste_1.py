@@ -58,7 +58,8 @@ class Vazio():
         self.ocupante.sair()      
 
     def ocupou(self, ocupante):
-        alida_acessa ()**
+        
+        **_valida_acessa ()**
         
         self.vazio.ocupa(ocupante)
         self.ocupante = ocupante
