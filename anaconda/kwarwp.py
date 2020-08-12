@@ -161,7 +161,7 @@ class Kwarwp():
     LADO = None
     """Referência estática para definir o lado do piso da casa"""
 
-    def __init__(self, vitollino=None, mapa = MAPA_INICIAL, medidas = {}):
+    def __init__(self, vitollino=None, mapa = MAPA_INICIAL, medidas = {}, taba = None):
         Kwarwp.VITOLLINO = self.v = vitollino()
         """Transforma o texto matriz, explicitando o bloco de strings para cada linha."""
         self.mapa = mapa.split()
@@ -237,7 +237,7 @@ class Kwarwp():
         :param cena: cena em que o elemento será posicionado.
         """
         # self.o_indio = Indio(imagem, x=x, y=y, cena=cena) 
-        self.o_indio = Indio(imagem, x=0, y=0, cena=cena, taba=self.indio) #ver se não vai dar problema posteriormente
+        self.o_indio = Indio(imagem, x=0, y=0, cena=cena, taba=self) 
         """o índio tem deslocamento zero, pois é relativo à vaga"""
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
         return vaga
