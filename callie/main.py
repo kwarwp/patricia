@@ -1,5 +1,3 @@
-# patricia.callie.main.py
-# Rio de Janeiro, 5 de agosto de 2020
 """   Implementação do mapa no Kwarwp
 
 .. codeauthor:: Emanuelle Simas <ellesimas@gmail.com>
