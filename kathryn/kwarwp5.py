@@ -119,7 +119,8 @@ class Kwarwp():
 
 class Indio():
     ''' Cria o personagem principal na arena do Kwarwp na posição definida.'''
-    def __init__(self, imagem, x, y, cena):
+    def __init__(self, imagem, x, y, cena, taba):
+        self.taba = taba
         self.lado = lado = Kwarwp.LADO
         self.posicao = (x//lado, y//lado)  #definir posição (2,6)
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
