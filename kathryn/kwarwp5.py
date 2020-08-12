@@ -108,9 +108,6 @@ class Kwarwp():
         """o índio tem deslocamento zero, pois é relativo à vaga"""
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
         return vaga
-        '''
-        self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
-        return self.o_indio'''
         
     def ocupa(self, *_):
         """ O Kwarwp é aqui usado como um ocupante falso, o pedido de ocupar é ignorado.
@@ -135,11 +132,7 @@ class Indio():
             vaga = taba[destino]
             """Inicia o protocolo duplo despacho, pedindo para acessar a vaga"""
             vaga.acessa(self)
-        '''   
-        self.posicao = (self.posicao[0], self.posicao[1]-1)
-        self.indio.y = self.posicao[1]*self.lado
-        self.indio.x = self.posicao[0]*self.lado
-        '''
+
     def executa(self):
         """ Roteiro do índio. Conjunto de comandos para ele executar."""
         self.anda()
@@ -179,14 +172,6 @@ class Indio():
         pass
         
 class Vazio():
-    """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
-
-        :param imagem: A figura representando o espaço vazio (normalmente transparente).
-        :param x: Coluna em que o elemento será posicionado.
-        :param y: Cinha em que o elemento será posicionado.
-        :param cena: Cena em que o elemento será posicionado.
-    """
-
     def __init__(self, imagem, x, y, cena, ocupante=None):
         self.lado = lado = Kwarwp.LADO
         self.posicao = (x//lado, y//lado-1)
@@ -224,7 +209,6 @@ class Vazio():
         o ocupante da vaga. Com isso ele troca o estado do método acessa para primeiro
         consultar a si mesmo, o ocupante corrente usando o protocolo definido em
         **_valida_acessa ()**
-
         """
         self.vazio.ocupa(ocupante)
         self.ocupante = ocupante
