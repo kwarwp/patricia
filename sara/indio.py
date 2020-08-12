@@ -11,11 +11,14 @@ Changelog
         - Adicionando índio
         - Movendo indio
         - Organizando a Taba
+        - Melhorando o Índio
 
 """
 
 from _spy.vitollino.main import Jogo, STYLE
 from collections import namedtuple as nt
+
+
     
 
 MAPA_INICIO = """
@@ -39,9 +42,20 @@ class Indio():
     """ Cria o personagem do jogo
     """
     def __init__(self, imagem, x, y, cena, taba):
+        
         self.lado = lado = Kwarwp.LADO
-        self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        self.azimute = self.AZIMUTE.n
+        """índio olhando para o norte"""
         self.taba = taba
+        self.vaga = self
+        self.posicao = (x//lado,y//lado)
+        self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        self.x = x
+        """Este x provisoriamente distingue o índio de outras coisas construídas com esta classe"""
+        if x:
+            self.indio.siz = (lado*3, lado*4)
+            """Define as proporções da folha de sprites"""
+            self.mostra()
         
     def anda(self):
         """ Faz o índio caminhar na direção em que está olhando.
@@ -66,6 +80,34 @@ class Indio():
         """ Rotina de saída falsa, o objeto Indio é usado como uma vaga nula.
         """
         pass
+        
+    def mostra(self):
+        """ Modifica a figura (Sprite) do índio mostrando para onde está indo.
+        """
+        sprite_col = sum(self.posicao) % 3
+        """Faz com que três casas adjacentes tenha valores diferentes para a coluna do sprite"""
+        sprite_lin = self.AZIMUTE.index(self.azimute)
+        """A linha do sprite depende da direção dque índio está olhando"""
+        self.indio.pos = (-self.lado*sprite_col, -self.lado*sprite_lin)
+
+    def esquerda(self):
+        """ Faz o índio mudar da direção em que está olhando para a esquerda.
+        """
+        self.azimute = self.AZIMUTE[self.AZIMUTE.index(self.azimute)-1]
+        self.mostra()
+
+    def direita(self):
+        """ Faz o índio mudar da direção em que está olhando para a direita.
+        """
+        self.azimute = self.AZIMUTE[self.AZIMUTE.index(self.azimute)-3]
+        self.mostra()
+
+    def fala(self, texto=""):
+        """ O índio fala um texto dado.
+
+        :param texto: O texto a ser falado.
+        """
+        self.taba.fala(texto)
         
         
     @property
