@@ -1465,3 +1465,10 @@ AttributeError: 'Elemento' object has no attribute 'ocupa'
                     ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Aug 12 2020 16:29:22.358 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 62
+  **_valida_acessa ()**
+   ^
+SyntaxError: invalid syntax
+'''},
