@@ -163,6 +163,7 @@ class Indio():
     
         No caso do índio, requisita que a vaga seja ocupada por ele.
         """
+        self.vaga = vaga
         self.vaga.sai()
         self.posicao = vaga.posicao
         vaga.ocupou(self)
