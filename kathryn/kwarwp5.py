@@ -11,8 +11,6 @@ Changelog
 
 - Andar do índio "para cima" com o clique na imagem do céu.
 - Restrição do movimento / Organizando a Taba (aldeia)
-
-- Parei no pedindo para sair
 """
 from collections import namedtuple as nt
 
