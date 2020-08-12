@@ -13,3 +13,10 @@ IndentationError: unexpected indent
                                                                                            ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Aug 12 2020 19:34:04.395 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 75
+  def acessa(self, ocupante):
+  ^
+IndentationError: unexpected indent
+'''},
