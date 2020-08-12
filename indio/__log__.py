@@ -690,3 +690,10 @@ AttributeError: 'GUI' object has no attribute 'indio'
     self.taba = {(i, j): 
 AttributeError: 'Fab' object has no attribute 'url_imagem'
 '''},
+{'date': 'Wed Aug 12 2020 15:58:41.132 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 115
+  self.None.executa()
+       ^
+SyntaxError: cannot assign to None
+'''},
