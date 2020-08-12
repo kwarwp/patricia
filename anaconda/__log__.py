@@ -136,3 +136,10 @@ TypeError: __init__() got an unexpected keyword argument 'taba'
     coisa = Indio(imagem, x=0, y=0, cena=cena, taba=self)
 TypeError: __init__() got an unexpected keyword argument 'taba'
 '''},
+{'date': 'Wed Aug 12 2020 20:36:11.611 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 42
+  vaga = taba[destino]
+  ^
+IndentationError: expected an indented block
+'''},
