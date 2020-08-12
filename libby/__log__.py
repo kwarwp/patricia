@@ -1458,3 +1458,10 @@ AttributeError: 'Elemento' object has no attribute 'ocupa'
     self.vazio.ocupa(ocupante)
 AttributeError: 'Elemento' object has no attribute 'ocupa'
 '''},
+{'date': 'Wed Aug 12 2020 16:27:57.164 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 61
+  alida_acessa ()**
+                    ^
+SyntaxError: invalid syntax
+'''},
