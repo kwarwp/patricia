@@ -1875,3 +1875,10 @@ AttributeError: 'Indio' object has no attribute 'vaga'
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Wed Aug 12 2020 17:22:37.487 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 238
+  self.azimute = self.AZIMUTE[self.AZIMUTE.index(self.azimute)-3]
+  ^
+IndentationError: unexpected indent
+'''},
