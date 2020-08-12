@@ -143,3 +143,10 @@ TypeError: __init__() got an unexpected keyword argument 'taba'
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Wed Aug 12 2020 20:36:24.334 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 44
+  vaga.acessa(self)
+  ^
+IndentationError: unexpected indent
+'''},
