@@ -13,12 +13,10 @@ Changelog
 - Restrição do movimento / Organizando a Taba (aldeia)
 
 - Parei no pedindo para sair
-
 """
 from collections import namedtuple as nt
 
 IMGUR = "https://imgur.com/"
-
 MAPA_INICIO = """
 +++++++++
 +...+..@+
@@ -29,15 +27,7 @@ MAPA_INICIO = """
 """
 
 class Kwarwp():
-    """ Jogo para ensino de programação.
-    
-        Declara a string MAPA_INICIO que possui a posição dos elementos (GLIFOS) no mapa através da matriz linha x coluna. 
-        As linha separadas pela tecla <Enter>, a coluna determinada pelos caracteres colineares em linha singulares.
-
-        :param vitollino: Empacota o engenho de jogo Vitollino.
-        :param mapa: Um texto representando o mapa do desafio.
-        :param medidas: Um dicionário usado para redimensionar a tela.
-    """   
+    """ Jogo para ensino de programação."""   
     VITOLLINO = None
     """Referência estática para obter o engenho de jogo."""
     LADO = None
@@ -46,40 +36,18 @@ class Kwarwp():
     def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
         """Contrutor da classe que permite a declaração dos parâmetros iniciais."""        
         Kwarwp.VITOLLINO = self.v = vitollino()
-        """Cria um matriz com os elementos descritos em cada linha de texto"""
         self.mapa = mapa.split()
-        
-        """Largura da casa da arena dos desafios, número de colunas e linhas no mapa"""
         self.lado, self.col, self.lin = 100, len(self.mapa[0]), len(self.mapa)+1
         Kwarwp.LADO = self.lado
         w, h = self.col*self.lado, self.lin*self.lado
-        """Atuaiza a largura e o comprimento do mapa do jogo"""
         medidas.update(width=w, height=f"{h}px")
-        
-        """Dicionário que a partir de coordenada (i,j) localiza um piso da taba"""
-        self.taba = {}
-        
+        self.taba = {}       
         """Instância do personagem principal, o índio, vai ser atribuído pela fábrica do índio"""
         self.o_indio = None
-        
         self.cena = self.cria(mapa=self.mapa) if vitollino else None
             
     def cria(self, mapa = "  "):
-        """
-        *Este método define uma fábrica de componentes.*
-
-        :param mapa: Um texto representando o mapa do desafio.
-        
-        :nome Fab: O nome da tupla que descreve a fábrica.
-        :campo objeto: O tipo de objeto que vai ser criado.
-        :campo url_imagem: A imagem que representa o objeto que vai ser criado.
-        
-        Define uma fábrica de tuplas nomeáveis gerada pela biblioteca collections.namedpuple()
-        Declara o dicionário para fabricar as tuplas com as características de objeto em função do glifo.
-
-        O self.taba é um conjunto que utiliza da funcinalidade de compreensão de conjuntos
-        (list/set compreention) para alteração da lista mapa em um conjunto com mais características.
-        """
+        """Este método define uma fábrica de componentes."""
         Fab = nt("Fab", "objeto imagem")
         fabrica = {
         "&": Fab(self.coisa, f"{IMGUR}dZQ8liT.jpg"), # OCA
@@ -106,81 +74,107 @@ class Kwarwp():
             fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
             for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
             
-            
         cena.vai()
         return cena
         
     def executa(self, *_):
-        """
-        Ordena a execução do roteiro do índio.
-    
+        """ Ordena a execução do roteiro do índio.
+        
         :param _: este argumento recebe a estrutura oriunda do evento, o _ indica que não será usado."""
         self.o_indio.executa()
     
     def coisa(self, imagem, x, y, cena):
-        """
-        Este método define uma fábrica para coisas que estão no cenário.
-        Cria um elemento na arena do Kwarwp na posição definida.
-        
-        :param imagem: imagem que representa o elemento que será posicionado.
-        :param x: coluna em que o elemento será posicionado.
-        :param y: linha em que o elemento será posicionado.
-        :param cena: cena em que o elemento será posicionado.
-        """
+        """ Cria uma vaga vazia e coloca o componente dentro dela. 
+            o índio tem deslocamento zero, pois é relativo à vaga"""
+        coisa = Indio(imagem, x=0, y=0, cena=cena, taba=self)
+        """Aqui o índio está sendo usado para qualquer objeto, enquanto não tem o próprio"""
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+        return vaga
+        '''
         lado = self.lado
-        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)'''
         
     def vazio(self, imagem, x, y, cena):
-        """
-        Este método define uma fábrica para espaços vazios que estão no cenário.
-        Cria um elemento na arena do Kwarwp na posição definida.
-        
-        :param imagem: imagem que representa o elemento que será posicionado.
-        :param x: coluna em que o elemento será posicionado.
-        :param y: linha em que o elemento será posicionado.
-        :param cena: cena em que o elemento será posicionado.
-        """
+        """ O Kwarwp é aqui usado como um ocupante nulo, que não ocupa uma vaga vazia."""
+        vaga = Vazio(imagem, x=x, y=y, cena=cena, ocupante=self)
+        return vaga
+        '''
         lado = self.lado
-        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)'''
         
     def indio(self, imagem, x, y, cena):
-        """
-        Este método define uma fábrica criando o índio o personagem principal.
-
-        :param imagem: imagem que representa o elemento que será posicionado.
-        :param x: coluna em que o elemento será posicionado.
-        :param y: linha em que o elemento será posicionado.
-        :param cena: cena em que o elemento será posicionado.
-        """
+        # self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
+        self.o_indio = Indio(imagem, x=0, y=0, cena=cena, taba=self)
+        """o índio tem deslocamento zero, pois é relativo à vaga"""
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
+        return vaga
+        '''
         self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
-        return self.o_indio
-
+        return self.o_indio'''
+        
+    def ocupa(self, *_):
+        """ O Kwarwp é aqui usado como um ocupante falso, o pedido de ocupar é ignorado.
+        """
+        pass
 
 class Indio():
-    '''
-    Cria o personagem principal na arena do Kwarwp na posição definida.
-
-    :param imagem: A figura representando o índio na posição indicada.
-    :param x: Coluna em que o elemento será posicionado.
-    :param y: Linha em que o elemento será posicionado.
-    :param cena: Cena em que o elemento será posicionado.
-    '''
+    ''' Cria o personagem principal na arena do Kwarwp na posição definida.'''
     def __init__(self, imagem, x, y, cena):
         self.lado = lado = Kwarwp.LADO
         self.posicao = (x//lado, y//lado)  #definir posição (2,6)
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         
     def anda(self):
-        """ Faz o índio caminhar na direção em que está olhando."""
-        self.posicao = (self.posicao[0], self.posicao[1]-1)
+        '''Faz o indio caminhar olhando rpa cima'''
+        destino = (self.posicao[0], self.posicao[1]-1)
         """Assumimos que o índio está olhando para cima, decrementamos a posição **y**"""
+        taba = self.taba.taba
+        if destino in taba:
+            """Recupera na taba a vaga para a qual o índio irá se transferir"""
+            vaga = taba[destino]
+            """Inicia o protocolo duplo despacho, pedindo para acessar a vaga"""
+            vaga.acessa(self)
+        '''   
+        self.posicao = (self.posicao[0], self.posicao[1]-1)
         self.indio.y = self.posicao[1]*self.lado
         self.indio.x = self.posicao[0]*self.lado
-        
+        '''
     def executa(self):
         """ Roteiro do índio. Conjunto de comandos para ele executar."""
         self.anda()
+    
+    def sai(self):
+        """ Rotina de saída falsa, o objeto Indio é usado como uma vaga nula."""
+        pass
         
+    @property
+    def elt(self):
+        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
+    
+        No caso do índio, retorna o elt do elemento do atributo **self.indio**.
+        """
+        return self.indio.elt
+    
+    def ocupa(self, vaga):
+        """ Pedido por uma vaga para que ocupe a posição nela.
+    
+        :param vaga: A vaga que será ocupada pelo componente.
+    
+        No caso do índio, requisita que a vaga seja ocupada por ele.
+        """
+        self.vaga.sai()
+        self.posicao = vaga.posicao
+        vaga.ocupou(self)
+        self.vaga = vaga
+    
+    def acessa(self, ocupante):
+        """ Pedido de acesso a essa posição, delegada ao ocupante pela vaga.
+    
+        :param ocupante: O componente candidato a ocupar a vaga já ocupada pelo índio.
+
+        No caso do índio, ele age como um obstáculo e não prossegue com o protocolo.
+        """
+        pass
         
 class Vazio():
     """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
@@ -253,20 +247,11 @@ class Vazio():
 
         No caso do espaço vazio, vai retornar um elemento que não contém nada.
         """
-        return self._nada.elt    
+        return self._nada.elt
+        
     
         
 if __name__ == "__main__":
-    """
-    class Jogo:
-        def __init__(self):
-            self.c = Cena
-            self.a = Elemento
-      
-    Chama a Classe Kwarwp com o método Jogo da biblioteca Vitollino.
-    
-        >> Kwarwp(Jogo)
-    """
     from _spy.vitollino.main import Jogo
     from _spy.vitollino.main import STYLE
     Kwarwp(Jogo, medidas=STYLE)
