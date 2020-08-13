@@ -3,6 +3,9 @@
 .. codeauthor:: Emanuelle Simas <ellesimas@gmail.com>
 
 .. version:: 20.01.1
+      - Mapa tem seu próprio construtor
+      - Indio independente
+      - Implementação do vazio
 
 """
 from _spy.vitollino.main import Jogo, STYLE 
