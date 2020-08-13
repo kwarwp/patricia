@@ -117,7 +117,6 @@ class Indio():
         """
         self.taba.fala(texto)
         
-        
     @property
     def elt(self):
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
