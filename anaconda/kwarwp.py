@@ -6,6 +6,7 @@
      - Mapa altera largura e comprimento automaticamente
      - Indio tem classe única
      - função executa 
+     - Adiciona Limites ao mapa
      
 
 """
@@ -27,15 +28,17 @@ MAPA_INICIAL= """
 """
 
 class Indio():
-    """ Cria estrutura índio que será chamada no"""
+    """ Cria estrutura índio que será chamada no kwarwp"""
     def __init__(self, imagem, x, y, cena):
         self.lado = lado = Kwarwp.LADO
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         self.posicao = (x//lado,y//lado)
+        """ O operador // retorna apenas a parte inteira do da divisão.
+            
+        """ 
         
     def anda(self):
-        """ Faz o índio caminhar na direção em que está olhando.
-        """
+        """ Faz o indio caminhar na direcao em que esta olhando"""
         self.posicao = (self.posicao[0], self.posicao[1]-1)
         """Assumimos que o índio está olhando para cima, decrementamos a posição **y**"""
         self.indio.y = self.posicao[1]*self.lado
@@ -129,8 +132,8 @@ class Kwarwp():
         lado = self.lado
         return Indio(imagem, x=x, y=y, cena=cena)
         
-    def vaga(self):
-        pass
+    #def vaga(self):
+        #pass
         
     def executa(self, *_):
         """ Ordena a execução do roteiro do índio.
