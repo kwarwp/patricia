@@ -304,7 +304,15 @@ class Indio():
         """
         pass
 
-class Tora(Indio)
+class Tora(Indio):
+
+    def __init__(self, imagem, x, y, cena, taba):
+        self.lado = lado = Kwarwp.LADO
+        self.taba = taba
+        self.vaga = self
+        self.posicao = (x//lado,y//lado)
+        self.tora = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        self.mostra()
 
 
 class Kwarwp():
