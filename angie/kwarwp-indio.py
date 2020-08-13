@@ -169,6 +169,14 @@ class Piche(Vazio):
     def _pede_sair(self):
         """Objeto tenta sair mas não é autorizado"""
         self.taba.fala("Você ficou preso no piche")
+        
+    @property
+    def elt(self):
+        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
+        No caso do piche, vai retornar um elemento que tem o seu sprite.
+        """
+        return self.vazio.elt
+
     
 class Oca(Piche):
     """ A Oca é o destino final do índio, não poderá sair se ele entrar nela.
@@ -196,7 +204,13 @@ class Oca(Piche):
         self.taba.fala("Você chegou no seu objetivo")
         ocupante.ocupa(self)    
     
-    
+    @property
+    def elt(self):
+        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
+        No caso da oca, vai retornar um elemento que tem o seu sprite.
+        """
+        return self.vazio.elt
+
 class Indio():
 
     AZIMUTE = Rosa(Ponto(0, -1),Ponto(1, 0),Ponto(0, 1),Ponto(-1, 0),)
