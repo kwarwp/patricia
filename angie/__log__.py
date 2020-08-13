@@ -1918,3 +1918,10 @@ SyntaxError: invalid syntax
                     ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Aug 13 2020 15:56:59.910 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 310
+  class Kwarwp():
+  ^
+IndentationError: expected an indented block
+'''},
