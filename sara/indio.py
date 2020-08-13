@@ -513,9 +513,9 @@ class Kwarwp():
         self.o_indio.executa()
         
         
-    def carrega(self, *_):
+    def pega(self, *_):
         print('*-* CHEGUEI AQUI *-*')
-        self.o_indio.fala("Hummm... vou ter q carregar essa coisa aí.")
+        self.o_indio.pega()
         
         
     def fala(self, texto=""):
