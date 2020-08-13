@@ -170,8 +170,8 @@ class Indio():
         No caso do índio, ele age como um obstáculo e não prossegue com o protocolo.
         """
         pass
-        
-        
+    
+    # Hummm melhor criar um objeto tora e controlar isso dentro dele, farei isso amanhã
     def pega(self):
         """ Carrega um objeto que está a frente do índio
         """
