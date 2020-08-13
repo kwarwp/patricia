@@ -169,6 +169,13 @@ class Indio():
         No caso do índio, ele age como um obstáculo e não prossegue com o protocolo.
         """
         pass
+        
+        
+    def carrega(self, objeto):
+        """ Carrega um objeto que está a frente do índio
+        """
+        
+        pass
 
 
 class Vazio():
