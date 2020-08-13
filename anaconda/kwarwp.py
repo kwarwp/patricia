@@ -89,7 +89,7 @@ class Kwarwp():
            das coordenadas i e j
         """
         self.cena = self.cria(mapa=self.mapa) if vitollino else None
-        """Inicia a cena com condição de o vitollino estar sendo chamado
+        """Tentar entender
         """
         
     def cria(self, mapa=""):
@@ -137,6 +137,7 @@ class Kwarwp():
         return cena
     
     def coisa(self,imagem,x,y,cena):
+        
         lado = self.lado
         return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         
