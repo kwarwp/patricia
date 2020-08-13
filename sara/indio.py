@@ -53,7 +53,7 @@ class Indio():
 
     """ Cria o personagem do jogo
     """
-    def __init__(self, imagem, x, y, cena, taba):
+    def __init__(self, imagem, x, y, cena, taba, vai):
         self.lado = lado = Kwarwp.LADO
         self.azimute = self.AZIMUTE.n
         """índio olhando para o norte"""
@@ -343,8 +343,8 @@ class Kwarwp():
         
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
-        coisa = Indio(imagem, x=0, y=0, cena=cena, taba=self)
-        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa, vai=vai)
+        coisa = Indio(imagem, x=0, y=0, cena=cena, taba=self, vai=vai)
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
         return vaga
 
 
