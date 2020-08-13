@@ -76,7 +76,7 @@ class Kwarwp():
         self.lado, self.coluna, self.linha = 100, len(self.mapa[0]), len(self.mapa)+1
         """Lado, coluna, linha"""
         Kwarwp.LADO = self.lado
-        w,h = self.coluna*self.lado, self.lin*self.lado
+        w,h = self.coluna*self.lado, self.linha*self.lado
         """ (largura) w = len(self.mapa[0] * 100 (Requer a quantidade de itens internos à contagem do 
             primeiro indexado do mapa)
             (altura) h = len(self.mapa)+1 * 100 (esse +1 adiciona o valor do tamanho reservado para o céu)
