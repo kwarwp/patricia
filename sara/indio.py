@@ -104,7 +104,7 @@ class Indio():
     def sai(self):
         """ Rotina de saída falsa, o objeto Indio é usado como uma vaga nula.
         """
-        pass
+        self.fala('hummm... tenho q carregar essa tora. Como vou fazer isso?')
         
         
     def mostra(self):
@@ -316,7 +316,7 @@ class Kwarwp():
         """
         sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena, vai=self.esquerda)
         """No argumento *vai*, associamos o clique no sol com o método **esquerda ()** desta classe."""
-        self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
+        self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena, vai=self.carrega)
             for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
         """Posiciona os elementos segundo suas posições i, j na matriz mapa"""
         cena.vai()
