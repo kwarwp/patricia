@@ -11,7 +11,7 @@ Changelog
 
 """
 MAPA_INICIO = """
-@....&
+..@.&.
 ......
 .....#
 .#.^..
@@ -41,7 +41,6 @@ Rosa = nt("Rosa", "n l s o")
 """Rosa dos ventos com as direções norte, leste, sul e oeste."""
 
 class Vazio():
-
 
     """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
 
@@ -129,7 +128,6 @@ class Vazio():
         return self._nada.elt
     
     
-    
 class Piche(Vazio):
     """ Poça de Piche que gruda o índio se ele cair nela.
 
@@ -170,6 +168,18 @@ class Piche(Vazio):
         """Objeto tenta sair mas não é autorizado"""
         self.taba.fala("Você ficou preso no piche")
         
+    def _acessa(self, ocupante):
+        """ Atualmente a posição está vaga e pode ser acessada pelo novo ocupante.
+
+        A responsabilidade de ocupar definitivamente a vaga é do candidato a ocupante
+        Caso ele esteja realmente apto a ocupar a vaga e deve cahamar de volta ao vazio
+        com uma chamada ocupou.
+
+            :param ocupante: O canditato a ocupar a posição corrente.
+        """
+        self.taba.fala("Você cestá preso no piche")
+        ocupante.ocupa(self)    
+
     @property
     def elt(self):
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
@@ -383,6 +393,7 @@ class Kwarwp():
         self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
             for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
         """Posiciona os elementos segundo suas posições i, j na matriz mapa"""
+        #aqui coloca método para escrever no ceu
         cena.vai()
         return cena
     
@@ -423,22 +434,6 @@ class Kwarwp():
         """o índio tem deslocamento zero, pois é relativo à vaga"""
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
         return vaga
-         
-    def fala(self, texto=""):
-        """ O Kwarwp é aqui usado para falar algo que ficará escrito no céu.
-        """
-        self.ceu.elt.html = texto
-        pass
-
-    def esquerda(self, *_):
-        """ Ordena a execução do roteiro do índio.
-        """
-        self.o_indio.esquerda()
-
-    def executa(self, *_):
-        """ Ordena a execução do roteiro do índio.
-        """
-        self.o_indio.executa()
     
     def maloc(self, imagem, x, y, cena):
         """ Cria uma maloca na arena do Kwarwp na posição definida.
@@ -465,7 +460,23 @@ class Kwarwp():
         coisa = Piche(imagem, x=0, y=0, cena=cena, taba=self)
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
         return vaga
-    
+
+    def fala(self, texto=""):
+        """ O Kwarwp é aqui usado para falar algo que ficará escrito no céu.
+        """
+        self.ceu.elt.html = texto
+        pass
+
+    def esquerda(self, *_):
+        """ Ordena a execução do roteiro do índio.
+        """
+        self.o_indio.esquerda()
+
+    def executa(self, *_):
+        """ Ordena a execução do roteiro do índio.
+        """
+        self.o_indio.executa()
+        
     def sai(self, *_):
         """ O Kwarwp é aqui usado como uma vaga falsa, o pedido de sair é ignorado.
         """
