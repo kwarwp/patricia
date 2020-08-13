@@ -1911,3 +1911,10 @@ NameError: name 'IMGUR' is not defined
                     ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Aug 13 2020 15:56:14.879 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 307
+  class Tora(Indio)
+                    ^
+SyntaxError: invalid syntax
+'''},
