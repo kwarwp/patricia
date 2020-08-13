@@ -20,10 +20,10 @@ from collections import namedtuple as nt
 
 MAPA_INICIAL= """
 #########
-#...##..#
-#.@.#&^.#
-#.#.##|.#
 #.......#
+#.@.....#
+#.#.....#
+#^......#
 #########
 """
 
@@ -39,10 +39,13 @@ class Indio():
         
     def anda(self):
         """ Faz o indio caminhar na direcao em que esta olhando"""
-        self.posicao = (self.posicao[0], self.posicao[1])
+        self.posicao = (self.posicao[0], self.posicao[1]-1)
         """Assumimos que o índio está olhando para cima, decrementamos a posição **y**"""
         self.indio.x = self.posicao[0]*self.lado
         self.indio.y = self.posicao[1]*self.lado
+        """Acumula o valor resultante, aplicando na próxima execução.
+           
+        """
     
         
     def executa(self):
