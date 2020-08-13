@@ -409,7 +409,7 @@ class Kwarwp():
         
         
     def carrega(self, *_):
-        self.o_indio.carrega()
+        self.taba.fala("Você ficou preso no piche")
         
         
     def fala(self, texto=""):
