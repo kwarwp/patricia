@@ -1904,3 +1904,10 @@ IndentationError: unexpected indent
     (IMGUR)
 NameError: name 'IMGUR' is not defined
 '''},
+{'date': 'Thu Aug 13 2020 15:55:57.314 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 307
+  class Tora(Indio)
+                    ^
+SyntaxError: invalid syntax
+'''},
