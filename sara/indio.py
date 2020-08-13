@@ -171,7 +171,7 @@ class Indio():
         """
         pass
     
-    # Hummm melhor criar um objeto tora e controlar isso dentro dele, farei isso amanhã
+    # Hummm melhor criar um objeto Tora e controlar isso dentro dele, farei isso amanhã
     # O professor falou que seria algo semelhante ao método andar
     # vamos ver se é necessário separar essas duas ações (método pega e método larga)
     def pega(self):
