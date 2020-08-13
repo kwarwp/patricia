@@ -176,7 +176,7 @@ class Indio():
         """ Carrega um objeto que está a frente do índio
         """
         
-        pass
+        self.fala('hummmm... tenho q carregar essa tora')
 
 
 class Vazio():
