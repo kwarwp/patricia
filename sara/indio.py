@@ -172,7 +172,7 @@ class Indio():
         pass
         
         
-    def pega(self, objeto):
+    def pega(self):
         """ Carrega um objeto que está a frente do índio
         """
         #Teste
@@ -182,7 +182,7 @@ class Indio():
         
         # e move-lo junto com o índio
         
-    def solta(self, objeto):
+    def solta(self):
         """ Carrega um objeto que está a frente do índio
         """
         #Teste
