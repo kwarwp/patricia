@@ -60,7 +60,7 @@ class Indio():
         self.vaga = self
         self.posicao = (x//lado,y//lado)
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
-        #self.x = x
+        self.x = x
         """Este x provisoriamente distingue o índio de outras coisas construídas com esta classe"""
         if x:
             self.indio.siz = (lado*3, lado*4)
@@ -106,6 +106,7 @@ class Indio():
         """
         pass
         
+        
     def mostra(self):
         """ Modifica a figura (Sprite) do índio mostrando para onde está indo.
         """
@@ -115,11 +116,13 @@ class Indio():
         """A linha do sprite depende da direção dque índio está olhando"""
         self.indio.pos = (-self.lado*sprite_col, -self.lado*sprite_lin)
 
+
     def esquerda(self):
         """ Faz o índio mudar da direção em que está olhando para a esquerda.
         """
         self.azimute = self.AZIMUTE[self.AZIMUTE.index(self.azimute)-1]
         self.mostra()
+
 
     def direita(self):
         """ Faz o índio mudar da direção em que está olhando para a direita.
@@ -127,12 +130,14 @@ class Indio():
         self.azimute = self.AZIMUTE[self.AZIMUTE.index(self.azimute)-3]
         self.mostra()
 
+
     def fala(self, texto=""):
         """ O índio fala um texto dado.
 
         :param texto: O texto a ser falado.
         """
         self.taba.fala(texto)
+        
         
     @property
     def elt(self):
@@ -290,6 +295,7 @@ class Kwarwp():
         "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), # SOL
         "|": Fab(self.coisa, f"{IMGUR}uwYPNlz.png")  # CERCA
         }
+        
         """Dicionário que define o tipo e a imagem do objeto para cada elemento."""
         mapa = mapa if mapa != "" else self.mapa
         """Cria um cenário com imagem de terra de chão batido, céu e sol"""
