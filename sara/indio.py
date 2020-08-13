@@ -171,9 +171,10 @@ class Indio():
         """
         pass
     
-    # Hummm melhor criar um objeto Tora e controlar isso dentro dele, farei isso amanhã
+    # Refactoring
+    # Hummm melhor criar um objeto Tora estendendo a classe Vazio e controlar isso dentro dele, farei isso amanhã
     # O professor falou que seria algo semelhante ao método andar
-    # vamos ver se é necessário separar essas duas ações (método pega e método larga)
+    # vamos mover essas duas ações (método pega e método larga) na nova classe.
     def pega(self):
         """ Carrega um objeto que está a frente do índio
         """
