@@ -3073,3 +3073,31 @@ AttributeError: 'Vazio' object has no attribute '_acessa'
     vaga.sai()
 AttributeError: 'Vazio' object has no attribute 'sai'
 '''},
+{'date': 'Thu Aug 13 2020 09:15:18.501 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 521
+    Kwarwp(Jogo, medidas=STYLE)
+  module <module> line 265
+    self.cena = self.cria(mapa=self.mapa) if vitollino else None
+  module <module> line 300
+    self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
+  module <module> line 326
+    vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+  module <module> line 419
+    self.acessa(ocupante)
+  module <module> line 449
+    ocupante.ocupa(self)  
+  module <module> line 149
+    vaga.ocupou(self)
+AttributeError: 'Vazio' object has no attribute 'ocupou'
+'''},
