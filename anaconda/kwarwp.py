@@ -52,9 +52,6 @@ class Indio():
         """ Roteiro do índio. Conjunto de comandos para ele executar.
         """
         self.anda()
-
-class vazio():
-    pass
     
 class Kwarwp():
 
@@ -76,20 +73,29 @@ class Kwarwp():
         """Transforma o texto matriz, explicitando o bloco de strings para cada linha."""
         self.mapa = mapa.split()
         """Largura da casa da arena dos desafios, número de colunas no mapa"""
-        self.lado, self.coluna, self.lin = 100, len(self.mapa[0]), len(self.mapa)+1
+        self.lado, self.coluna, self.linha = 100, len(self.mapa[0]), len(self.mapa)+1
+        """Lado, coluna, linha"""
         Kwarwp.LADO = self.lado
         w,h = self.coluna*self.lado, self.lin*self.lado
+        """ (largura) w = len(self.mapa[0] * 100 (Requer a quantidade de itens internos à contagem do 
+            primeiro indexado do mapa)
+            (altura) h = len(self.mapa)+1 * 100 (esse +1 adiciona o valor do tamanho reservado para o céu)
+        """
         medidas.update(width=w, height=f"{h}px")
-        #medidas = STYLE
+        """Adiciona variáveis ao dicionário implementado no parêmetro medidas"""
         
         self.taba = {}
-        """Dicionário que a partir de coordenada (i,J) localiza um piso da taba"""
-        
+        """Inicia a existência do dicionário que a partir de coordenada (i,J) localiza um piso da taba a partir 
+           das coordenadas i e j
+        """
         self.cena = self.cria(mapa=self.mapa) if vitollino else None
-
+        """Inicia a cena com condição de o vitollino estar sendo chamado
+        """
+        
     def cria(self, mapa=""):
     
         IMGUR = "https://i.imgur.com/"
+        """ Gera uma global interna usada na formatação do dicionário fabrica"""
         Fab = nt("Fab", "objeto url")   
         fabrica ={"#": Fab(self.coisa, f"{IMGUR}uwYPNlz.png"), # CERCA
                  "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
