@@ -422,6 +422,10 @@ class Vazio():
         Inicialmente tem o comportamento de **_sair ()** que é o estado leniente, aceitando saidas"""
 
 
+    def _valida_acessa(self, ocupante):
+        self.ocupante.acessa(ocupante)
+        
+
     def sai(self):
         """ Rotina de saída falsa, o objeto Indio é usado como uma vaga nula.
         """
@@ -459,7 +463,10 @@ class Vazio():
         **_valida_acessa ()**
 
         """
-        pass
+        self.vazio.ocupa(ocupante)
+        self.ocupante = ocupante
+        self.acessa = self._valida_acessa
+        self.sair = self._pede_sair
 
 class Piche(Vazio):
     """ Poça de Piche que gruda o índio se ele cair nela.
