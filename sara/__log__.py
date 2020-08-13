@@ -3390,3 +3390,10 @@ TypeError: __init__ missing 1 positional argument: 'vai'
     self.o_indio = Indio(imagem, x=1, y=0, cena=cena, taba=self)
 TypeError: __init__ missing 1 positional argument: 'vai'
 '''},
+{'date': 'Thu Aug 13 2020 16:53:20.909 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 358
+  self.o_indio = Indio(imagem, x=1, y=0, cena=cena, taba=self, vai)
+                                                                  ^
+SyntaxError: non-keyword arg after keyword arg
+'''},
