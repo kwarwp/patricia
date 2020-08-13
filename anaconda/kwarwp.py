@@ -96,7 +96,8 @@ class Kwarwp():
     
         IMGUR = "https://i.imgur.com/"
         """ Gera uma global interna usada na formatação do dicionário fabrica"""
-        Fab = nt("Fab", "objeto url")   
+        Fab = nt("Fab", "objeto url")
+        """"""
         fabrica ={"#": Fab(self.coisa, f"{IMGUR}uwYPNlz.png"), # CERCA
                  "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
                  ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), #VAZIO
