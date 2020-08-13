@@ -333,7 +333,7 @@ class Kwarwp():
         return vaga
         
         
-    def coisa(self, imagem, x, y, cena):
+    def coisa(self, imagem, x, y, cena, vai):
         """ Cria um elemento na arena do Kwarwp na posição definida.
         :param x: coluna em que o elemento será posicionado.
         :param y: linha em que o elemento será posicionado.
@@ -342,7 +342,7 @@ class Kwarwp():
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
         coisa = Indio(imagem, x=0, y=0, cena=cena, taba=self)
-        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa, vai=vai)
         return vaga
 
 
