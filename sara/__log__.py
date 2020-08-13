@@ -3191,3 +3191,10 @@ AttributeError: 'Vazio' object has no attribute '_valida_acessa'
     self.elt <= ocupante
 TypeError: can't add 'Oca' object to DOMNode instance
 '''},
+{'date': 'Thu Aug 13 2020 09:28:17.270 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 471
+  @property        
+  ^
+IndentationError: unexpected indent
+'''},
