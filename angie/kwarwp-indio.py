@@ -419,19 +419,11 @@ class Kwarwp():
         :param y: linha em que o elemento será posicionado.
         :param cena: cena em que o elemento será posicionado.
         """
-        # self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
-        self.o_indio = Indio(imagem, x=1, y=0, cena=cena, taba=self)
+        self.o_indio = Indio(imagem, x=1, y=2, cena=cena, taba=self)
         """o índio tem deslocamento zero, pois é relativo à vaga"""
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
         return vaga
-    
-    def ocupa(self, *_):
-        """ O Kwarwp é aqui usado como um ocupante falso, o pedido de ocupar é ignorado.
-        """
-        pass
-        
-        
-        
+         
     def fala(self, texto=""):
         """ O Kwarwp é aqui usado para falar algo que ficará escrito no céu.
         """
@@ -474,7 +466,6 @@ class Kwarwp():
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
         return vaga
     
-    
     def sai(self, *_):
         """ O Kwarwp é aqui usado como uma vaga falsa, o pedido de sair é ignorado.
         """
@@ -484,8 +475,6 @@ class Kwarwp():
         """ O Kwarwp é aqui usado como um ocupante falso, o pedido de ocupar é ignorado.
         """
         pass
-    
-        
 
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
