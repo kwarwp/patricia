@@ -488,7 +488,7 @@ class Vazio():
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
         No caso do espaço vazio, vai retornar um elemento que não contém nada.
         """
-        return self._nada.elt
+        return self.vazio.elt
         
         
     def ocupa(self, vaga):
