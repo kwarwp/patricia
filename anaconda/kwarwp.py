@@ -118,7 +118,7 @@ class Kwarwp():
         lado = self.lado #iguala ao lado do init
         #cena = self.v.c(fabrica["_"].url)
         """Chama elemento da fábrica [solo] agregando ao seu atributo url"""
-        cena = self.v.c(self.solo.url)
+        cena = self.solo
         ceu = self.v.a(fabrica["~"].url, w=lado*self.coluna, h=lado, x=0, y=0, cena=cena, vai=self.executa)
         sol = self.v.a(fabrica["*"].url, w=60, h=60, x=0, y=40, cena=cena)
         """Compreensão de Dicionário. 
@@ -144,6 +144,11 @@ class Kwarwp():
     def indio(self, imagem,x,y,cena):
         self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
         return self.o_indio
+    
+    def solo(self):
+        o_solo = self.v.c(self.solo.url)
+        return o_solo
+        
         
     def vazio(self, imagem, x,y ,cena):
         lado = self.lado
