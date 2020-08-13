@@ -50,7 +50,7 @@ AZIMUTE = Rosa(Ponto(0, -1),Ponto(1, 0),Ponto(0, 1),Ponto(-1, 0),)
 class Indio():
     """ Cria o personagem do jogo
     """
-    def __init__(self, imagem, x, y, cena, taba, azimute):
+    def __init__(self, imagem, x, y, cena, taba):
         self.lado = lado = Kwarwp.LADO
         self.azimute = self.AZIMUTE.n
         """índio olhando para o norte"""
