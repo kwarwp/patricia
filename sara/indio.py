@@ -17,9 +17,8 @@ Changelog
 
 from _spy.vitollino.main import Jogo, STYLE
 from collections import namedtuple as nt
-
-
-    
+from collections import namedtuple as nt
+   
 
 MAPA_INICIO = """
 |||||||
@@ -28,6 +27,7 @@ MAPA_INICIO = """
 |^.|..|
 |||||||
 """
+
 
 MAPA_2 = """
 @..&&.
@@ -38,11 +38,19 @@ MAPA_2 = """
 
 IMGUR = 'https://i.imgur.com/'
 
+Ponto = nt("Ponto", "x y")
+"""Par de coordenadas na direção horizontal (x) e vertiacal (y)."""
+Rosa = nt("Rosa", "n l s o")
+"""Rosa dos ventos com as direções norte, leste, sul e oeste."""
+
+AZIMUTE = Rosa(Ponto(0, -1),Ponto(1, 0),Ponto(0, 1),Ponto(-1, 0),)
+"""Constante com os pares ordenados que representam os vetores unitários dos pontos cardeais."""
+
+
 class Indio():
     """ Cria o personagem do jogo
     """
     def __init__(self, imagem, x, y, cena, taba):
-        
         self.lado = lado = Kwarwp.LADO
         self.azimute = self.AZIMUTE.n
         """índio olhando para o norte"""
