@@ -430,6 +430,17 @@ class Vazio():
     def _pede_sair(self):
         """Objeto tenta sair e consulta o ocupante para seguir"""
         self.ocupante.sair()
+        
+    def _acessa(self, ocupante):
+        """ Atualmente a posição está vaga e pode ser acessada pelo novo ocupante.
+
+        A responsabilidade de ocupar definitivamente a vaga é do candidato a ocupante
+        Caso ele esteja realmente apto a ocupar a vaga e deve cahamar de volta ao vazio
+        com uma chamada ocupou.
+
+            :param ocupante: O canditato a ocupar a posição corrente.
+        """
+        ocupante.ocupa(self)  
 
 
 class Piche(Vazio):
