@@ -52,7 +52,7 @@ class Indio():
     """
     def __init__(self, imagem, x, y, cena, taba):
         self.lado = lado = Kwarwp.LADO
-        self.azimute = self.AZIMUTE.n
+        self.azimute = AZIMUTE.n
         """índio olhando para o norte"""
         self.taba = taba
         self.vaga = self
