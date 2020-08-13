@@ -146,8 +146,8 @@ class Kwarwp():
         return self.o_indio
     
     def solo(self):
-        o_solo = self.v.c(self.solo.url)
-        return o_solo
+        self.o_solo = self.v.c(self.solo.url)
+        return self.o_solo
         
         
     def vazio(self, imagem, x,y ,cena):
