@@ -172,11 +172,21 @@ class Indio():
         pass
         
         
-    def carrega(self, objeto):
+    def pega(self, objeto):
         """ Carrega um objeto que está a frente do índio
         """
         #Teste
         self.fala('hummmm... tenho q carregar essa tora')
+        
+        # Verifica se o objeto está a frente do indio
+        
+        # e move-lo junto com o índio
+        
+    def solta(self, objeto):
+        """ Carrega um objeto que está a frente do índio
+        """
+        #Teste
+        self.fala('hummmm... tenho q largar essa tora')
         
         # Verifica se o objeto está a frente do indio
         
