@@ -242,7 +242,7 @@ class Indio():
         pass
         
 class Piche(Vazio):
-    """ Poça de Piche que gruda o Ådio se ele cair nela.
+    """ Poça de Piche que gruda o ÅÂdio se ele cair nela.
         :param imagem: A figura representando o índio na posição indicada.
         :param x: Coluna em que o elemento será posicionado.
         :param y: Cinha em que o elemento será posicionado.
