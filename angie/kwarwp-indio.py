@@ -245,7 +245,6 @@ class Indio():
         """
         self.taba.fala(texto)
     
-    
     def anda(self):
         """Objeto tenta sair, tem que consultar a vaga onde está"""
         self.vaga.sair()
@@ -407,7 +406,7 @@ class Kwarwp():
         :param cena: cena em que o elemento será posicionado.
         """
         # self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
-        self.o_indio = Indio(imagem, x=0, y=0, cena=cena, taba=self)
+        self.o_indio = Indio(imagem, x=1, y=0, cena=cena, taba=self)
         """o índio tem deslocamento zero, pois é relativo à vaga"""
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
         return vaga
