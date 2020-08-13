@@ -97,11 +97,14 @@ class Kwarwp():
         IMGUR = "https://i.imgur.com/"
         """ Gera uma global interna usada na formatação do dicionário fabrica"""
         Fab = nt("Fab", "objeto url")
-        """"""
+        """ Resgate do colections.nametuple.
+            Criado uma nova coleção de dados, do tipo fab que acolhe informações quanto ao objeto e
+            a url deste 
+        """
         fabrica ={"#": Fab(self.coisa, f"{IMGUR}uwYPNlz.png"), # CERCA
                  "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
                  ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), #VAZIO
-                 "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), #SOLO
+                 "_": Fab(self.solo, f"{IMGUR}sGoKfvs.jpg"), #SOLO
                  "&": Fab(self.coisa, f"{IMGUR}dZQ8liT.jpg"), #OCA
                  "@": Fab(self.coisa, f"{IMGUR}tLLVjfN.png"), #PICHE
                 "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), #SOL
@@ -109,11 +112,13 @@ class Kwarwp():
                 "|": Fab(self.coisa, f"{IMGUR}ldI7IbK.png")  # TORA 
                 }
         
-        mapa = mapa if mapa != "" else self.mapa
-
-        mapa = self.mapa
-        lado = self.lado
-        cena = self.v.c(fabrica["_"].url)
+        mapa = mapa if mapa != "" else self.mapa #descobrir o que isso faz
+        
+        mapa = self.mapa #uguala ao mapa do init
+        lado = self.lado #iguala ao lado do init
+        #cena = self.v.c(fabrica["_"].url)
+        """Chama elemento da fábrica [solo] agregando ao seu atributo url"""
+        cena = self.v.c(self.solo.url)
         ceu = self.v.a(fabrica["~"].url, w=lado*self.coluna, h=lado, x=0, y=0, cena=cena, vai=self.executa)
         sol = self.v.a(fabrica["*"].url, w=60, h=60, x=0, y=40, cena=cena)
         """Compreensão de Dicionário. 
