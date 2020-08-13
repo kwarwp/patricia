@@ -142,7 +142,7 @@ class Kwarwp():
         return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         
     def indio(self, imagem,x,y,cena):
-        self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
+        self.o_indio = Indio(imagem, x=x, y=y, cena=cena) #era para estar funcionando este imagem mesmo?
         return self.o_indio
     
     #def solo(self):
