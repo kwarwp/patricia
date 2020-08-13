@@ -60,24 +60,28 @@ class Indio():
         self.vaga = self
         self.posicao = (x//lado,y//lado)
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
-        self.x = x
+        #self.x = x
         """Este x provisoriamente distingue o índio de outras coisas construídas com esta classe"""
         if x:
             self.indio.siz = (lado*3, lado*4)
             """Define as proporções da folha de sprites"""
             self.mostra()
-        
+
+
     def anda(self):
         """Objeto tenta sair, tem que consultar a vaga onde está"""
         self.vaga.sair()
+
 
     def sair(self):
         """Objeto de posse do índio tenta sair e é autorizado"""
         self.vaga.ocupante.siga()
 
+
     def siga(self):
         """Objeto tentou sair e foi autorizado"""
         self._anda()
+
 
     def _anda(self):
         """ Faz o índio caminhar na direção em que está olhando.
@@ -336,7 +340,7 @@ class Kwarwp():
         :param cena: cena em que o elemento será posicionado.
         """
         # self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
-        self.o_indio = Indio(imagem, x=1, y=0, cena=cena, taba=self)
+        self.o_indio = Indio(imagem, x=0, y=0, cena=cena, taba=self)
         """o índio tem deslocamento zero, pois é relativo à vaga"""
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
         return vaga
