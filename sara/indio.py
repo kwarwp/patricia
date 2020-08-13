@@ -390,7 +390,7 @@ class Kwarwp():
 
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
-        coisa = Oca(imagem, x=0, y=0, cena=cena, taba=self)
+        coisa = Oca(imagem, x=1, y=0, cena=cena, taba=self)
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
         return vaga
         
@@ -453,6 +453,7 @@ class Vazio():
         """Objeto tenta sair e consulta o ocupante para seguir"""
         self.ocupante.sair()
         
+        
     def _acessa(self, ocupante):
         """ Atualmente a posição está vaga e pode ser acessada pelo novo ocupante.
 
@@ -463,6 +464,7 @@ class Vazio():
             :param ocupante: O canditato a ocupar a posição corrente.
         """
         ocupante.ocupa(self)  
+
 
     def ocupou(self, ocupante):
         """ O candidato à vaga decidiu ocupá-la e efetivamente entra neste espaço.
@@ -480,6 +482,7 @@ class Vazio():
         self.acessa = self._valida_acessa
         self.sair = self._pede_sair
         
+        
     @property        
     def elt(self):
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
@@ -487,11 +490,13 @@ class Vazio():
         """
         return self._nada.elt
         
+        
     def ocupa(self, vaga):
         """ Pedido por uma vaga para que ocupe a posição nela.
         No caso do espaço vazio, não faz nada.
         """
         pass
+        
         
     def sai(self):
         """ Pedido por um ocupante para que desocupe a posição nela.
@@ -499,6 +504,7 @@ class Vazio():
         self.ocupante = self
         self.acessa = self._acessa
         self.sair = self._sair
+
 
 class Piche(Vazio):
     """ Poça de Piche que gruda o índio se ele cair nela.
@@ -509,6 +515,7 @@ class Piche(Vazio):
         :param cena: Cena em que o elemento será posicionado.
         :param taba: Representa a taba onde o índio faz o desafio.
     """
+
 
     def __init__(self, imagem, x, y, cena, taba):
         self.taba = taba
@@ -524,6 +531,7 @@ class Piche(Vazio):
         """O **sair ()** é usado como método dinâmico, variando com o estado da vaga.
         Inicialmente tem o comportamento de **_sair ()** que é o estado vago, aceitando ocupantes"""
 
+
     def ocupa(self, vaga):
         """ Pedido por uma vaga para que ocupe a posição nela.
 
@@ -535,6 +543,7 @@ class Piche(Vazio):
         self.posicao = vaga.posicao
         vaga.ocupou(self)
         self.vaga = vaga
+
 
     def _pede_sair(self):
         """Objeto tenta sair mas não é autorizado"""
@@ -551,9 +560,11 @@ class Oca(Piche):
         :param taba: Representa a taba onde o índio faz o desafio.
     """
 
+
     def _pede_sair(self):
         """Objeto tenta sair mas não é autorizado"""
         self.taba.fala("Você chegou no seu objetivo")
+
 
     def _acessa(self, ocupante):
         """ Atualmente a posição está vaga e pode ser acessada pelo novo ocupante.
@@ -566,6 +577,7 @@ class Oca(Piche):
         """
         self.taba.fala("Você chegou no seu objetivo")
         ocupante.ocupa(self)
+
 
 if __name__ == "__main__":
     STYLE.update(width=700, height="600px")
