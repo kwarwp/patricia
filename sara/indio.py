@@ -422,6 +422,12 @@ class Vazio():
         Inicialmente tem o comportamento de **_sair ()** que é o estado leniente, aceitando saidas"""
 
 
+    def sai(self):
+        """ Rotina de saída falsa, o objeto Indio é usado como uma vaga nula.
+        """
+        pass
+        
+        
     def _sair(self):
         """Objeto tenta sair e secebe autorização para seguir"""
         self.ocupante.siga()
