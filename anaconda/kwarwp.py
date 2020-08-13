@@ -34,12 +34,12 @@ class Indio():
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         self.posicao = (x//lado,y//lado)
         """ O operador // retorna apenas a parte inteira do da divisão.
-            Na linha
+            esta linha gera a matiz de posição do indio 
         """ 
         
     def anda(self):
         """ Faz o indio caminhar na direcao em que esta olhando"""
-        self.posicao = (self.posicao[0], self.posicao[1]-1)
+        self.posicao = (self.posicao[1], self.posicao[0])
         """A posição é matrizada em uma tupla onde a primeira posição parte do zero e a segunda posição 
            parte do um pois almeja-se que o índio ande apenas para cima (y).
            Essa posição é a default, ou seja, a decrementação do y em um inteiro é o posicionamento do 
@@ -48,9 +48,10 @@ class Indio():
         self.indio.x = self.posicao[0]*self.lado
         self.indio.y = self.posicao[1]*self.lado
         """Acumula o valor resultante, aplicando na próxima execução.
-           
+           executa():
+           x => posição inicial valor 0 * 100 = 0 (nova posição em x)
+           y => posição inicial valor 1 * 100 = 100 (nova posição em y)
         """
-    
         
     def executa(self):
         """ Roteiro do índio. Conjunto de comandos para ele executar.
