@@ -178,7 +178,8 @@ class Indio():
         #Teste
         self.fala('hummmm... tenho q carregar essa tora')
         
-        # Tenho q localizar qual o objeto está a frente
+        # Verifica se o objeto está a frente do indio
+        
         # e move-lo junto com o índio
 
         
