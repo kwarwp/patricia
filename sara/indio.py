@@ -53,14 +53,14 @@ class Indio():
 
     """ Cria o personagem do jogo
     """
-    def __init__(self, imagem, x, y, cena, taba, vai):
+    def __init__(self, imagem, x, y, cena, taba, vai=None):
         self.lado = lado = Kwarwp.LADO
         self.azimute = self.AZIMUTE.n
         """índio olhando para o norte"""
         self.taba = taba
         self.vaga = self
         self.posicao = (x//lado,y//lado)
-        self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena, vai=vai)
         self.x = x
         """Este x provisoriamente distingue o índio de outras coisas construídas com esta classe"""
         if x:
@@ -323,8 +323,8 @@ class Kwarwp():
         cena.vai()
         return cena
         
-        
-    def vazio(self, imagem, x, y, cena):
+    # TODO remover o parametgro vai desse método
+    def vazio(self, imagem, x, y, cena, vai=None):
         """ Cria um espaço vazio na arena do Kwarwp na posição definida.
         :param x: coluna em que o elemento será posicionado.
         :param y: linha em que o elemento será posicionado.
@@ -348,7 +348,8 @@ class Kwarwp():
         return vaga
 
 
-    def indio(self, imagem, x, y, cena):
+    # TODO remover o parametgro vai desse método
+    def indio(self, imagem, x, y, cena, vai=None):
         """ Cria o personagem principal na arena do Kwarwp na posição definida.
         :param x: coluna em que o elemento será posicionado.
         :param y: linha em que o elemento será posicionado.
@@ -361,7 +362,8 @@ class Kwarwp():
         return vaga
 
 
-    def maloc(self, imagem, x, y, cena):
+    # TODO remover o parametgro vai desse método
+    def maloc(self, imagem, x, y, cena, vai=None):
         """ Cria uma maloca na arena do Kwarwp na posição definida.
 
         :param x: coluna em que o elemento será posicionado.
@@ -375,7 +377,8 @@ class Kwarwp():
         return vaga
         
 
-    def barra(self, imagem, x, y, cena):
+    # TODO remover o parametgro vai desse método
+    def barra(self, imagem, x, y, cena, vai=None):
         """ Cria uma armadilha na arena do Kwarwp na posição definida.
 
         :param x: coluna em que o elemento será posicionado.
