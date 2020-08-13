@@ -448,6 +448,18 @@ class Vazio():
         """
         ocupante.ocupa(self)  
 
+    def ocupou(self, ocupante):
+        """ O candidato à vaga decidiu ocupá-la e efetivamente entra neste espaço.
+
+        :param ocupante: O canditato a ocupar a posição corrente.
+
+        Este ocupante vai entrar no elemento do Vitollino e definitivamente se tornar
+        o ocupante da vaga. Com isso ele troca o estado do método acessa para primeiro
+        consultar a si mesmo, o ocupante corrente usando o protocolo definido em
+        **_valida_acessa ()**
+
+        """
+        pass
 
 class Piche(Vazio):
     """ Poça de Piche que gruda o índio se ele cair nela.
