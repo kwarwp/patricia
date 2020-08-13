@@ -324,7 +324,7 @@ class Kwarwp():
         return cena
         
         
-    def vazio(self, imagem, x, y, cena, vai):
+    def vazio(self, imagem, x, y, cena):
         """ Cria um espaço vazio na arena do Kwarwp na posição definida.
         :param x: coluna em que o elemento será posicionado.
         :param y: linha em que o elemento será posicionado.
@@ -348,7 +348,7 @@ class Kwarwp():
         return vaga
 
 
-    def indio(self, imagem, x, y, cena, vai):
+    def indio(self, imagem, x, y, cena):
         """ Cria o personagem principal na arena do Kwarwp na posição definida.
         :param x: coluna em que o elemento será posicionado.
         :param y: linha em que o elemento será posicionado.
@@ -361,7 +361,7 @@ class Kwarwp():
         return vaga
 
 
-    def maloc(self, imagem, x, y, cena, vai):
+    def maloc(self, imagem, x, y, cena):
         """ Cria uma maloca na arena do Kwarwp na posição definida.
 
         :param x: coluna em que o elemento será posicionado.
@@ -375,7 +375,7 @@ class Kwarwp():
         return vaga
         
 
-    def barra(self, imagem, x, y, cena, vai):
+    def barra(self, imagem, x, y, cena):
         """ Cria uma armadilha na arena do Kwarwp na posição definida.
 
         :param x: coluna em que o elemento será posicionado.
