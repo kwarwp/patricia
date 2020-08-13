@@ -112,13 +112,12 @@ class Vazio():
         return self._nada.elt
     
     
-    
 class Piche(Vazio):
     """ Poça de Piche que gruda o índio se ele cair nela.
 
         :param imagem: A figura representando o índio na posição indicada.
         :param x: Coluna em que o elemento será posicionado.
-        :param y: Cinha em que o elemento será posicionado.
+        :param y: Linha em que o elemento será posicionado.
         :param cena: Cena em que o elemento será posicionado.
         :param taba: Representa a taba onde o índio faz o desafio.
     """
@@ -194,6 +193,41 @@ class Oca(Piche):
         """
         return self.vazio.elt
 
+
+class Tora(Piche):
+
+    """ A tora é um objeto que o índio pode mover.
+
+        :param imagem: A figura representando o índio na posição indicada.
+        :param x: Coluna em que o elemento será posicionado.
+        :param y: Linha em que o elemento será posicionado.
+        :param cena: Cena em que o elemento será posicionado.
+        :param taba: Representa a taba onde o índio faz o desafio.
+    """
+
+    def _pede_sair(self):
+        """Objeto move a tora junto"""
+        self.taba.fala("Você está na tora")
+
+    def _acessa(self, ocupante):
+        """ Atualmente a posição está vaga e pode ser acessada pelo novo ocupante.
+
+        A responsabilidade de ocupar definitivamente a vaga é do candidato a ocupante
+        Caso ele esteja realmente apto a ocupar a vaga e deve cahamar de volta ao vazio
+        com uma chamada ocupou.
+
+            :param ocupante: O canditato a ocupar a posição corrente.
+        """
+        self.taba.fala("Você está na tora")
+        ocupante.ocupa(self)    
+
+    @property
+    def elt(self):
+        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
+        No caso da tora, vai retornar um elemento que tem o seu sprite.
+        """
+        return self.vazio.elt
+
 class Indio():
 
     AZIMUTE = Rosa(Ponto(0, -1),Ponto(1, 0),Ponto(0, 1),Ponto(-1, 0),)
@@ -206,7 +240,7 @@ class Indio():
         self.taba = taba
         self.vaga = self
         self.posicao = (x//lado,y//lado)
-        self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena, vai=self.executa)
         self.x = x
         """Este x provisoriamente distingue o índio de outras coisas construídas com esta classe"""
         if x:
@@ -304,16 +338,6 @@ class Indio():
         """
         pass
 
-class Tora(Indio):
-
-    def __init__(self, imagem, x, y, cena, taba):
-        self.lado = lado = Kwarwp.LADO
-        self.taba = taba
-        self.vaga = self
-        self.posicao = (x//lado,y//lado)
-        self.tora = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
-        self.mostra()
-
 
 class Kwarwp():
     """ Jogo para ensino de programação.
@@ -355,7 +379,7 @@ class Kwarwp():
         "^": Fab(self.indio, f"{IMGUR}UCWGCKR.png"), # INDIO
         ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), # VAZIO
         "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), # SOLO
-        "#": Fab(self.coisa, f"{IMGUR}ldI7IbK.png"), # TORA
+        "#": Fab(self.tora, f"{IMGUR}ldI7IbK.png"), # TORA
         "@": Fab(self.barra, f"{IMGUR}tLLVjfN.png"), # PICHE
         "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), # CEU
         "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), # SOL
@@ -377,10 +401,9 @@ class Kwarwp():
         self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
             for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
         """Posiciona os elementos segundo suas posições i, j na matriz mapa"""
-        #aqui coloca método para escrever no ceu
         cena.vai()
         return cena
-    
+        
     def coisa(self, imagem, x, y, cena):
         """ Cria um elemento na arena do Kwarwp na posição definida.
 
@@ -445,6 +468,7 @@ class Kwarwp():
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
         coisa = Oca(imagem, x=0, y=0, cena=cena, taba=self)
+        
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
         return vaga
 
@@ -460,7 +484,20 @@ class Kwarwp():
         coisa = Piche(imagem, x=0, y=0, cena=cena, taba=self)
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
         return vaga
-    
+
+    def tora(self, imagem, x, y, cena):
+        """ Cria uma armadilha na arena do Kwarwp na posição definida.
+
+        :param x: coluna em que o elemento será posicionado.
+        :param y: linha em que o elemento será posicionado.
+        :param cena: cena em que o elemento será posicionado.
+
+        Cria uma vaga vazia e coloca o componente dentro dela.
+        """
+        coisa = Tora(imagem, x=0, y=0, cena=cena, taba=self)
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+        return vaga
+
     def sai(self, *_):
         """ O Kwarwp é aqui usado como uma vaga falsa, o pedido de sair é ignorado.
         """
