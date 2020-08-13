@@ -3,11 +3,6 @@
 .. codeauthor:: Emanuelle Simas <ellesimas@gmail.com>
 
 .. version:: 20.01.1
-     - Mapa altera largura e comprimento automaticamente
-     - Indio tem classe única
-     - função executa 
-     - Adiciona Limites ao mapa
-     
 
 """
 from _spy.vitollino.main import Jogo, STYLE 
@@ -20,10 +15,10 @@ from collections import namedtuple as nt
 
 MAPA_INICIAL= """
 #########
+#...##..#
+#.@.#&^.#
+#.#.##|.#
 #.......#
-#.@.....#
-#.#.....#
-#.....^.#
 #########
 """
 
@@ -57,6 +52,9 @@ class Indio():
         """ Roteiro do índio. Conjunto de comandos para ele executar.
         """
         self.anda()
+
+class vazio():
+    pass
     
 class Kwarwp():
 
@@ -139,8 +137,8 @@ class Kwarwp():
         lado = self.lado
         return Indio(imagem, x=x, y=y, cena=cena)
         
-    #def vaga(self):
-        #pass
+    def vaga(self):
+        pass
         
     def executa(self, *_):
         """ Ordena a execução do roteiro do índio.
