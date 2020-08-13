@@ -34,14 +34,14 @@ class Indio():
         
     def anda(self):
         """ Faz o indio caminhar na direcao em que esta olhando"""
-        self.posicao = (self.posicao[1]-1, self.posicao[0])
+        self.posicao = (self.posicao[0], self.posicao[1]-1)
         """A posição é matrizada em uma tupla onde a primeira posição parte do zero e a segunda posição 
            parte do um pois almeja-se que o índio ande apenas para cima (y).
            Essa posição é a default, ou seja, a decrementação do y em um inteiro é o posicionamento do 
            índio com alteração incial 0 em y.
         """
-        self.indio.x = self.posicao[]*self.lado
-        self.indio.y = self.posicao[0]*self.lado
+        self.indio.x = self.posicao[0]*self.lado
+        self.indio.y = self.posicao[1]*self.lado
         """Acumula o valor resultante, aplicando na próxima execução.
            executa():
            x => posição inicial valor 0 * 100 = 0 (nova posição em x)
@@ -104,7 +104,7 @@ class Kwarwp():
         fabrica ={"#": Fab(self.coisa, f"{IMGUR}uwYPNlz.png"), # CERCA
                  "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
                  ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), #VAZIO
-                 "_": Fab(self.solo, f"{IMGUR}sGoKfvs.jpg"), #SOLO
+                 "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), #SOLO
                  "&": Fab(self.coisa, f"{IMGUR}dZQ8liT.jpg"), #OCA
                  "@": Fab(self.coisa, f"{IMGUR}tLLVjfN.png"), #PICHE
                 "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), #SOL
@@ -116,24 +116,23 @@ class Kwarwp():
         
         mapa = self.mapa #uguala ao mapa do init
         lado = self.lado #iguala ao lado do init
-        #cena = self.v.c(fabrica["_"].url)
-        """Chama elemento da fábrica [solo] agregando ao seu atributo url"""
-        cena = self.o_solo
+        cena = self.v.c(fabrica["_"].url)
+        """Chama elemento da fábrica [solo] agregando ao seu atributo url para criar a cena"""
         ceu = self.v.a(fabrica["~"].url, w=lado*self.coluna, h=lado, x=0, y=0, cena=cena, vai=self.executa)
+        """ Chama elemento da fábrica [ceu] agregando ao seu atributo url para gerar um elemento na cena"""
         sol = self.v.a(fabrica["*"].url, w=60, h=60, x=0, y=40, cena=cena)
+        """Gera o elemento sol"""
+        self.taba = {(i, j): fabrica[caracter].objeto(fabrica[caracter].url, x=i*lado, y=j*lado+lado, cena=cena)
+              for j, linha in enumerate(mapa) for i, caracter in enumerate(linha)}
         """Compreensão de Dicionário. 
            
-           Sintaxe: {keyexpression:valuexpression for key, value in iterable if condition}
+           Sintaxe: {key:value for key, value in iterable if condition}
            Sintaxe: {key:value for (key,value) in interable}
            
            leitura: Para cada coluna (i), linha (j) : chama caracter específico (acessa atributo) objeto(chama 
            caracter específico (acessa atributo) url específica, posição x, posição y e cena=solo)
            para cada segmento de caracteres e número respectivo, para cada caracter específico e número específico
-        """ 
-        self.taba = {(i, j): fabrica[imagem].objeto(
-              fabrica[imagem].url, x=i*lado, y=j*lado+lado, cena=cena)
-              for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
-              
+        """       
         cena.vai()
         return cena
     
@@ -145,10 +144,10 @@ class Kwarwp():
         self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
         return self.o_indio
     
-    def solo(self):
-        self.o_solo = self.v.c(self.solo.url)
-        return self.o_solo
-        
+    #def solo(self):
+        #self.o_solo = self.v.c(self.solo.url)
+        #return self.o_solo
+    #Tentativa fracassada de chamar a cena de outra forma    
         
     def vazio(self, imagem, x,y ,cena):
         lado = self.lado
