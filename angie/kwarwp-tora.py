@@ -194,7 +194,7 @@ class Oca(Piche):
         return self.vazio.elt
 
 
-class Tora(Piche):
+class Tora(Vazio):
 
     """ A tora é um objeto que o índio pode mover.
 
@@ -204,22 +204,12 @@ class Tora(Piche):
         :param cena: Cena em que o elemento será posicionado.
         :param taba: Representa a taba onde o índio faz o desafio.
     """
-
-    def _pede_sair(self):
-        """Objeto move a tora junto"""
-        self.taba.fala("Você está na tora")
-
-    def _acessa(self, ocupante):
-        """ Atualmente a posição está vaga e pode ser acessada pelo novo ocupante.
-
-        A responsabilidade de ocupar definitivamente a vaga é do candidato a ocupante
-        Caso ele esteja realmente apto a ocupar a vaga e deve cahamar de volta ao vazio
-        com uma chamada ocupou.
-
-            :param ocupante: O canditato a ocupar a posição corrente.
-        """
-        self.taba.fala("Você está na tora")
-        ocupante.ocupa(self)    
+    def __init__(self, imagem, x, y, cena, taba):
+        self.taba = taba
+        self.vaga = self
+        self.lado = lado = Kwarwp.LADO
+        self.posicao = (x//lado,y//lado)
+        self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
 
     @property
     def elt(self):
@@ -494,7 +484,7 @@ class Kwarwp():
 
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
-        coisa = Tora(imagem, x=0, y=0, cena=cena, taba=self)
+        coisa = Tora(imagem, x=x, y=y, cena=cena, taba=self)
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
         return vaga
 
