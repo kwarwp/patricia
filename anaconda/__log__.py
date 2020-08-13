@@ -296,3 +296,25 @@ AttributeError: 'Kwarwp' object has no attribute 'lin'
     fabrica ={"#": Fab(self.coisa, f"{IMGUR}uwYPNlz.png"), # CERCA
 AttributeError: 'Kwarwp' object has no attribute 'solo'
 '''},
+{'date': 'Wed Aug 12 2020 23:08:32.271 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 167
+    Kwarwp(Jogo, medidas = STYLE) 
+  module <module> line 91
+    self.cena = self.cria(mapa=self.mapa) if vitollino else None
+  module <module> line 122
+    ceu = self.v.a(fabrica["~"].url, w=lado*self.coluna, h=lado, x=0, y=0, cena=cena, vai=self.executa)
+  module _spy.vitollino.main line 551
+    self.scorer = dict(ponto=1, valor=cena.nome, carta=tit or img, casa=self.xy, move=None)
+AttributeError: 'method' object has no attribute 'nome'
+'''},
