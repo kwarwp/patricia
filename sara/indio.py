@@ -172,6 +172,7 @@ class Indio():
         pass
     
     # Hummm melhor criar um objeto tora e controlar isso dentro dele, farei isso amanhã
+    # O professor falou que seria algo semelhante ao método andar
     def pega(self):
         """ Carrega um objeto que está a frente do índio
         """
