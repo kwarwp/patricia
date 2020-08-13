@@ -374,6 +374,9 @@ class Kwarwp():
     def executa(self, *_):
         self.o_indio.executa()
         
+    def carrega(self, *_):
+        self.o_indio.carrega()
+        
         
     def fala(self, texto=""):
         """ O Kwarwp é aqui usado para falar algo que ficará escrito no céu.
