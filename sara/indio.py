@@ -43,11 +43,13 @@ Ponto = nt("Ponto", "x y")
 Rosa = nt("Rosa", "n l s o")
 """Rosa dos ventos com as direções norte, leste, sul e oeste."""
 
-AZIMUTE = Rosa(Ponto(0, -1),Ponto(1, 0),Ponto(0, 1),Ponto(-1, 0),)
-"""Constante com os pares ordenados que representam os vetores unitários dos pontos cardeais."""
-
 
 class Indio():
+
+    AZIMUTE = Rosa(Ponto(0, -1),Ponto(1, 0),Ponto(0, 1),Ponto(-1, 0),)
+    """Constante com os pares ordenados que representam os vetores unitários dos pontos cardeais."""
+
+
     """ Cria o personagem do jogo
     """
     def __init__(self, imagem, x, y, cena, taba):
@@ -467,6 +469,26 @@ class Vazio():
         self.ocupante = ocupante
         self.acessa = self._valida_acessa
         self.sair = self._pede_sair
+        
+    @property        
+    def elt(self):
+        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
+        No caso do espaço vazio, vai retornar um elemento que não contém nada.
+        """
+        return self._nada.elt
+        
+    def ocupa(self, vaga):
+        """ Pedido por uma vaga para que ocupe a posição nela.
+        No caso do espaço vazio, não faz nada.
+        """
+        pass
+        
+    def sai(self):
+        """ Pedido por um ocupante para que desocupe a posição nela.
+        """
+        self.ocupante = self
+        self.acessa = self._acessa
+        self.sair = self._sair
 
 class Piche(Vazio):
     """ Poça de Piche que gruda o índio se ele cair nela.
