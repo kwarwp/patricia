@@ -19,7 +19,7 @@ Changelog
 """
 from _spy.vitollino.main import Cena, Elemento, STYLE
 from delta.hotel import Game
-from adda.main import Calcada
+
 
 
 TELA_INICIAL = "https://i.pinimg.com/originals/ff/7c/78/ff7c780990c7f867de2061645d9eff86.gif"
