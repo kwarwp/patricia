@@ -55,7 +55,7 @@ class start:
         self.inicio.vai()
         
     def chama(self, event = None):
-        Calcada().vai()
+        Game().vai()
         
 class end:
     pass
