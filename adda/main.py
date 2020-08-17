@@ -12,7 +12,7 @@ Changelog
 
 """
 from _spy.vitollino.main import Cena, Elemento, STYLE
-from grace.main import Praia
+#from grace.main import Praia
 __version__ = "20.07"
 __author__ = "Carlo"
 STYLE["width"] = 500
@@ -24,7 +24,8 @@ class Calcada:
     """ Representa uma cena da calçada da praia """
     def __init__(self):
         """ Mostra a cena da praia """
-        self.cena = Cena(CENA_CALCADA, direita=Praia())
+        #self.cena = Cena(CENA_CALCADA, direita=Praia())
+        self.cena = Cena(CENA_CALCADA)
         self.banhista = Elemento(BANHISTA, x=100, y=200, cena=self.cena)
         #Cena(CENA_CALCADA).vai()
     def vai(self):
