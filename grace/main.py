@@ -27,10 +27,17 @@ class Introduz():
     
         self.fundo = Cena(FUNDO, direita = start())
         self.comp1 = Elemento(LIVRO, h = 100, w = 100, x = 0, y = 0, cena = self.fundo)
+        
+        self.comp1.elt.bind("click", self.opcao)
     
     def chama(self):
     
        self.fundo.vai()
+
+    def opcao(self, event = None):
+        
+        start().vai()
+        
 
 if __name__ == "__main__":
     Introduz().chama()
