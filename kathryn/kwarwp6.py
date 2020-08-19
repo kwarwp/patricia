@@ -138,12 +138,12 @@ class Indio():
         pass
         
     def mostra(self):
-    """ Modifica a figura (Sprite) do índio mostrando para onde está indo."""
-    sprite_col = sum(self.posicao) % 3
-    """Faz com que três casas adjacentes tenha valores diferentes para a coluna do sprite"""
-    sprite_lin = self.AZIMUTE.index(self.azimute)
-    """A linha do sprite depende da direção dque índio está olhando"""
-    self.indio.pos = (-self.lado*sprite_col, -self.lado*sprite_lin)
+        """ Modifica a figura (Sprite) do índio mostrando para onde está indo."""
+        sprite_col = sum(self.posicao) % 3
+        """Faz com que três casas adjacentes tenha valores diferentes para a coluna do sprite"""
+        sprite_lin = self.AZIMUTE.index(self.azimute)
+        """A linha do sprite depende da direção dque índio está olhando"""
+        self.indio.pos = (-self.lado*sprite_col, -self.lado*sprite_lin)
 
 def esquerda(self):
     """ Faz o índio mudar da direção em que está olhando para a esquerda."""
