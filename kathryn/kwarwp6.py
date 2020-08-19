@@ -94,7 +94,7 @@ Rosa = nt("Rosa", "n l s o")
 AZIMUTE = Rosa(Ponto(0, -1),Ponto(1, 0),Ponto(0, 1),Ponto(-1, 0),)
 
 class Indio():
-    def __init__(self, imagem, x, y, cena, taba):
+    def __init__(self, imagem, x, y, cena, taba,AZIMUTE):
         """índio olhando para o norte"""
         self.azimute = self.AZIMUTE.n
         
