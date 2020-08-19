@@ -140,7 +140,7 @@ class Piche(Vazio):
 
     def __init__(self, imagem, x, y, cena, taba):
         self.taba = taba
-        self.vaga = taba
+        self.vaga = self
         self.lado = lado = Kwarwp.LADO
         self.posicao = (x//lado,y//lado-1)
         self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena)
@@ -166,7 +166,7 @@ class Piche(Vazio):
 
     def _pede_sair(self):
         """Objeto tenta sair mas não é autorizado"""
-        self.taba.fala("Você ficou preso no piche")
+        self.taba.fala("pede sair do piche")
         
     def _acessa(self, ocupante):
         """ Atualmente a posição está vaga e pode ser acessada pelo novo ocupante.
@@ -177,7 +177,7 @@ class Piche(Vazio):
 
             :param ocupante: O canditato a ocupar a posição corrente.
         """
-        self.taba.fala("Você cestá preso no piche")
+        self.taba.fala("Você está preso no piche")
         ocupante.ocupa(self)    
 
     @property
@@ -200,7 +200,7 @@ class Oca(Piche):
 
     def _pede_sair(self):
         """Objeto tenta sair mas não é autorizado"""
-        self.taba.fala("Você chegou no seu objetivo")
+        self.taba.fala("Não precisa mais andar, você chegou no seu objetivo")
 
     def _acessa(self, ocupante):
         """ Atualmente a posição está vaga e pode ser acessada pelo novo ocupante.
@@ -275,6 +275,7 @@ class Indio():
 
     def sair(self):
         """Objeto de posse do índio tenta sair e é autorizado"""
+        self.taba.fala("sair do indio")
         self.vaga.ocupante.siga()
 
     def siga(self):
@@ -302,14 +303,6 @@ class Indio():
         """
         pass
 
-    @property
-    def elt(self):
-        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
-
-        No caso do índio, retorna o elt do elemento do atributo **self.indio**.
-        """
-        return self.indio.elt
-
     def ocupa(self, vaga):
         """ Pedido por uma vaga para que ocupe a posição nela.
 
@@ -330,7 +323,15 @@ class Indio():
         No caso do índio, ele age como um obstáculo e não prossegue com o protocolo.
         """
         pass
+        
+    @property
+    def elt(self):
+        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
 
+        No caso do índio, retorna o elt do elemento do atributo **self.indio**.
+        """
+        return self.indio.elt
+        
 class Kwarwp():
     """ Jogo para ensino de programação.
 
@@ -480,11 +481,13 @@ class Kwarwp():
     def sai(self, *_):
         """ O Kwarwp é aqui usado como uma vaga falsa, o pedido de sair é ignorado.
         """
+        #self.taba.fala("sai do kwarwp")
         pass
 
     def ocupa(self, *_):
         """ O Kwarwp é aqui usado como um ocupante falso, o pedido de ocupar é ignorado.
         """
+        #self.taba.fala("ocupa do kwarwp")
         pass
 
 if __name__ == "__main__":
