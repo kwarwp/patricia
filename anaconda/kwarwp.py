@@ -108,10 +108,13 @@ class vazio():
         self.posicao = (x//lado,y//lado-1) #o retorno será sempre um inteiro
         self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena) # o x e o y são substituiddos pelo mapa
         self._nada = Kwarwp.VITOLLINO.a() # descobrir o pq disso
-        self.acessa = self._acessa #coerente com o default ocupante = None, o estado também inicia vago
+        self.acessa = self._acessa #
+        """É um método dinâmico que varia com o estado da vaga. Inicialmente é _aceesa, ou seja, vago e aceitanto ecupante"""
         self.ocupante = ocupante or self #Importante para o funcionamento dos métodos abaixo
         """O ocupante será definido pelo acessa, por default é o vazio"""
         self.acessa(ocupante)
+        self.sair = self._sair
+        """ """
         
     def _valida_acessa(self, ocupante): 
         """ ESTE É O ESTADO OCUPADO
@@ -293,7 +296,6 @@ class Kwarwp():
         """
         self.o_indio.executa()
         
-
 
 if __name__ == "__main__":
     Kwarwp(Jogo, medidas = STYLE) 
