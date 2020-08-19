@@ -43,16 +43,23 @@ Rosa = nt("Rosa", "n l s o")
 
 class Indio():
     """ Cria estrutura índio que será chamada no kwarwp"""
-    #def __init__(self, imagem, x, y, cena):###01###
-    def __init__(self, imagem, x, y, cena, taba):###01###Adicionei o taba para ser chamado
+    AZIMUTE = Rosa(Ponto(0, -1),Ponto(1, 0),Ponto(0, 1),Ponto(-1, 0),)
+    """Constante com os pares ordenados que representam os vetores unitários dos pontos cardeais."""
+
+    def __init__(self, imagem, x, y, cena, taba):
         self.lado = lado = Kwarwp.LADO
+        self.azimute = self.AZIMUTE.n
+        """índio olhando para o norte"""
+        self.taba = taba
         self.vaga = self
         self.posicao = (x//lado,y//lado)
-        """ O operador // retorna apenas a parte inteira do da divisão.
-            esta linha gera a matiz de posição do indio 
-        """ 
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
-        self.taba = taba
+        self.x = x
+        """Este x provisoriamente distingue o índio de outras coisas construídas com esta classe"""
+        if x:
+            self.indio.siz = (lado*3, lado*4)
+            """Define as proporções da folha de sprites"""
+            self.mostra()
         
     def anda(self):
         """ Faz o indio caminhar na direcao em que esta olhando"""
