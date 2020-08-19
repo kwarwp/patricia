@@ -27,7 +27,7 @@ MAPA_INICIAL= """
 
 class Indio():
     """ Cria estrutura índio que será chamada no kwarwp"""
-    def __init__(self, imagem, x, y, cena):
+    def __init__(self, imagem, x, y, cena, taba):
         self.lado = lado = Kwarwp.LADO
         self.vaga = self
         self.posicao = (x//lado,y//lado)
