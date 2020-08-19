@@ -603,3 +603,10 @@ AttributeError: 'Indio' object has no attribute 'vaga'
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Wed Aug 19 2020 19:09:01.96 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 143
+  """Faz com que três casas adjacentes tenha valores diferentes para a coluna do sprite"""
+  ^
+IndentationError: unexpected indent
+'''},
