@@ -417,3 +417,10 @@ IndentationError: unexpected indent
           ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Aug 19 2020 00:25:14.551 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 285
+  def ocupa(self, *_)
+                      ^
+SyntaxError: invalid syntax
+'''},
