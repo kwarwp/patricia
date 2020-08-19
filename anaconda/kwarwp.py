@@ -62,9 +62,37 @@ class Indio():
     def sai(self):
         """ Rotina de saída falsa, o objeto Indio é usado como uma vaga nula.
         """
-         pass
+        pass
          
-    
+    @property
+    def elt(self):
+        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
+
+        No caso do índio, retorna o elt do elemento do atributo **self.indio**.
+        """
+        return self.indio.elt
+
+    def ocupa(self, vaga):
+        """ Pedido por uma vaga para que ocupe a posição nela.
+
+        :param vaga: A vaga que será ocupada pelo componente.
+
+        No caso do índio, requisita que a vaga seja ocupada por ele.
+        """
+        self.vaga.sai()
+        self.posicao = vaga.posicao
+        vaga.ocupou(self)
+        self.vaga = vaga
+
+    def acessa(self, ocupante):
+        """ Pedido de acesso a essa posição, delegada ao ocupante pela vaga.
+
+        :param ocupante: O componente candidato a ocupar a vaga já ocupada pelo índio.
+
+        No caso do índio, ele age como um obstáculo e não prossegue com o protocolo.
+        """
+        pass
+        
         
 class vazio():
     """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
@@ -85,7 +113,7 @@ class vazio():
         """O ocupante será definido pelo acessa, por default é o vazio"""
         self.acessa(ocupante)
         
-    def _valida_acessa(self, ocupante) 
+    def _valida_acessa(self, ocupante): 
         """ ESTE É O ESTADO OCUPADO
              Consulta o ocupante atual se há permissão para substituí-lo pelo novo ocupante.
 
@@ -94,15 +122,15 @@ class vazio():
         self.ocupante.acessa(ocupante)
         
     def _acessa(self, ocupante):
-    """ESTE É O ESTADO VAGO
-    Atualmente a posição está vaga e pode ser acessada pelo novo ocupante.
+        """ESTE É O ESTADO VAGO
+        Atualmente a posição está vaga e pode ser acessada pelo novo ocupante.
 
-    A responsabilidade de ocupar definitivamente a vaga é do candidato a ocupante
-    Caso ele esteja realmente apto a ocupar a vaga e deve cahamar de volta ao vazio
-    com uma chamada ocupou.
+        A responsabilidade de ocupar definitivamente a vaga é do candidato a ocupante
+        Caso ele esteja realmente apto a ocupar a vaga e deve cahamar de volta ao vazio
+        com uma chamada ocupou.
 
         :param ocupante: O canditato a ocupar a posição corrente.
-    """
+        """
         self.ocupante.ocupa(self)
     
     def ocupou(self, ocupante):
@@ -125,7 +153,7 @@ class vazio():
 
         No caso do espaço vazio, não faz nada.
         """
-         pass
+        pass
          
     def vaga(self):
         """O lugar a ser ocupado """
@@ -231,30 +259,37 @@ class Kwarwp():
         return cena
     
     def coisa(self,imagem,x,y,cena):
-        
-        lado = self.lado
-        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        """ Cria um elemento na arena do Kwarwp na posição definida.
+
+        :param x: coluna em que o elemento será posicionado.
+        :param y: linha em que o elemento será posicionado.
+        :param cena: cena em que o elemento será posicionado.
+
+        Cria uma vaga vazia e coloca o componente dentro dela.
+        """
+        coisa = indio(imagem, x=0, y=0, cena=cena, taba=self)
+        vaga = Vazio(imagem, x=x, y=y, cena=cena, ocupante=self)
+        return vaga
         
     def indio(self, imagem,x,y,cena):
-        self.o_indio = Indio(imagem, x=x, y=y, cena=cena) #era para estar funcionando este imagem mesmo?
-        return self.o_indio
-    
-    #def solo(self):
-        #self.o_solo = self.v.c(self.solo.url)
-        #return self.o_solo
-    #Tentativa fracassada de chamar a cena de outra forma    
+        #self.o_indio = Indio(imagem, x=x, y=y, cena=cena) #era para estar funcionando este imagem mesmo?
+        self.o_indio = Indio(imagem, x=0, y=0, cena=cena, taba=self)
+        """indio tem deslocamento zro pois é relativo à vaga"""
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante = self.o_indio)
+        return self.vaga   
         
     def vazio(self, imagem, x,y ,cena):
-        lado = self.lado
-        return Indio(imagem, x=x, y=y, cena=cena)
+        vaga = Vazio(imagem, x=x, y=y, cena=cena, ocupante=self)
+        return vaga
         
-    def vaga(self):
+    def ocupa(self, *_):
         pass
         
     def executa(self, *_):
         """ Ordena a execução do roteiro do índio.
         """
         self.o_indio.executa()
+        
 
 
 if __name__ == "__main__":
