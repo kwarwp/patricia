@@ -596,3 +596,10 @@ AttributeError: 'Indio' object has no attribute 'vaga'
     self.vaga.sai()
 AttributeError: 'Indio' object has no attribute 'vaga'
 '''},
+{'date': 'Wed Aug 19 2020 19:08:08.776 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 141
+  """ Modifica a figura (Sprite) do índio mostrando para onde está indo."""
+  ^
+IndentationError: expected an indented block
+'''},
