@@ -35,6 +35,11 @@ MAPA_INICIAL2= """
 #########
 """
 
+Ponto = nt("Ponto", "x y")
+"""Par de coordenadas na direção horizontal (x) e vertiacal (y)."""
+Rosa = nt("Rosa", "n l s o")
+"""Rosa dos ventos com as direções norte, leste, sul e oeste."""
+
 
 class Indio():
     """ Cria estrutura índio que será chamada no kwarwp"""
