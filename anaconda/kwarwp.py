@@ -4,8 +4,9 @@
 
 .. version:: 20.01.1
       - Mapa tem seu próprio construtor
-      - Indio independente
-      - Implementação do vazio
+      - Indio como classe independente
+      - Implementação do vazio e limites do mapa
+      
 
 """
 from _spy.vitollino.main import Jogo, STYLE 
@@ -17,13 +18,22 @@ from collections import namedtuple as nt
 
 
 MAPA_INICIAL= """
+.........
+......|.&
+.........
+.........
+.........
+......^..
+"""
+MAPA_INICIAL2= """
 #########
 #...##..#
-#.@.#&^.#
-#.#.##|.#
-#.......#
+#.@.#&.|#
+#.#.##..#
+#.....^.#
 #########
 """
+
 
 class Indio():
     """ Cria estrutura índio que será chamada no kwarwp"""
