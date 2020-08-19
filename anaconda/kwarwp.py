@@ -285,6 +285,9 @@ class Kwarwp():
     def ocupa(self, *_):
         pass
         
+    def sai(self, *_):
+        pass
+        
     def executa(self, *_):
         """ Ordena a execução do roteiro do índio.
         """
