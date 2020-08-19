@@ -92,7 +92,7 @@ class Indio():
         pass
         
         
-class vazio():
+class Vazio():
     """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
 
         :param imagem: A figura representando o espaço vazio (normalmente transparente).
@@ -273,7 +273,7 @@ class Kwarwp():
         self.o_indio = Indio(imagem, x=0, y=0, cena=cena, taba=self)
         """indio tem deslocamento zro pois é relativo à vaga"""
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante = self.o_indio)
-        return self.vaga   
+        return vaga   
         
     def vazio(self, imagem, x,y ,cena):
         vaga = Vazio(imagem, x=x, y=y, cena=cena, ocupante=self)
