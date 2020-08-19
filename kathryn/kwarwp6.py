@@ -7,7 +7,7 @@
 Changelog
 ---------
 .. versionadded::    20.08
-        Descreva o que você adicionou no código.
+        Melhorando a movimentação do índio para a direita e a esquerda
 
 """
 from collections import namedtuple as nt
