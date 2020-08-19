@@ -29,22 +29,19 @@ class Indio():
     """ Cria estrutura índio que será chamada no kwarwp"""
     def __init__(self, imagem, x, y, cena):
         self.lado = lado = Kwarwp.LADO
-        self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         self.vaga = self
         self.posicao = (x//lado,y//lado)
         """ O operador // retorna apenas a parte inteira do da divisão.
             esta linha gera a matiz de posição do indio 
         """ 
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        self.taba = taba
         
     def anda(self):
         """ Faz o indio caminhar na direcao em que esta olhando"""
-        self.posicao = (self.posicao[0], self.posicao[1]-1)
-        """A posição é matrizada em uma tupla onde a primeira posição parte do zero e a segunda posição 
-           parte do um pois almeja-se que o índio ande apenas para cima (y).
-           Essa posição é a default, ou seja, a decrementação do y em um inteiro é o posicionamento do 
-           índio com alteração incial 0 em y.
-        """
+        #self.posicao = (self.posicao[0], self.posicao[1]-1) 
+        destino = (self.posicao[0], self.posicao[1]-1)
+        """Assume-se que o indio está olhando para cima, decrementa-se a posição y"""
         taba = self.taba.taba  #que isso aqui faz?
         if destino in taba:
             vaga = taba[destino]
@@ -113,8 +110,6 @@ class vazio():
         self.ocupante = ocupante or self #Importante para o funcionamento dos métodos abaixo
         """O ocupante será definido pelo acessa, por default é o vazio"""
         self.acessa(ocupante)
-        self.sair = self._sair
-        """ """
         
     def _valida_acessa(self, ocupante): 
         """ ESTE É O ESTADO OCUPADO
@@ -134,7 +129,7 @@ class vazio():
 
         :param ocupante: O canditato a ocupar a posição corrente.
         """
-        self.ocupante.ocupa(self)
+        ocupante.ocupa(self)
     
     def ocupou(self, ocupante):
         """ O candidato à vaga decidiu ocupá-la e efetivamente entra neste espaço.
@@ -157,11 +152,6 @@ class vazio():
         No caso do espaço vazio, não faz nada.
         """
         pass
-         
-    def vaga(self):
-        """O lugar a ser ocupado """
-        pass
-        
         
     def sai(self):
         """ Pedido por um ocupante para que desocupe a posição nela.
@@ -201,6 +191,9 @@ class Kwarwp():
         self.lado, self.coluna, self.linha = 100, len(self.mapa[0]), len(self.mapa)+1
         """Lado, coluna, linha"""
         Kwarwp.LADO = self.lado
+        
+        self.o_indio = None
+        """O personagem principal, o indio, vai ser atribuído pela fábrica do índio"""
         w,h = self.coluna*self.lado, self.linha*self.lado
         """ (largura) w = len(self.mapa[0] * 100 (Requer a quantidade de itens internos à contagem do 
             primeiro indexado do mapa)
@@ -271,7 +264,7 @@ class Kwarwp():
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
         coisa = Indio(imagem, x=0, y=0, cena=cena, taba=self)
-        vaga = Vazio(imagem, x=x, y=y, cena=cena, ocupante=self)
+        vaga = Vazio(imagem, x=x, y=y, cena=cena, ocupante=coisa)
         return vaga
         
     def indio(self, imagem,x,y,cena):
@@ -288,8 +281,6 @@ class Kwarwp():
     def ocupa(self, *_):
         pass
         
-    def sai(self, *_):
-        pass
         
     def executa(self, *_):
         """ Ordena a execução do roteiro do índio.
