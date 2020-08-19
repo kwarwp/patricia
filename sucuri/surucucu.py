@@ -1,13 +1,13 @@
 # patricia.sucuri.surucucu.py
 # SPDX-License-Identifier: GPL-3.0-or-later
-""" Projeto sem descrição, (mude esta linha).
+""" Construção do Kwarwp no vitollino.
 
 .. codeauthor:: Emanuelle Simas <ellesimas@gmail.com>
 
 Changelog
 ---------
 .. versionadded::    20.08
-        -Indio se movimenta para a esquerda e direita
+        -índio anda pelo mapa.
 
 """
 from _spy.vitollino.main import Jogo, STYLE 
@@ -76,16 +76,13 @@ class Indio():
     @property
     def elt(self):
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
-
         No caso do índio, retorna o elt do elemento do atributo **self.indio**.
         """
         return self.indio.elt
 
     def ocupa(self, vaga):
         """ Pedido por uma vaga para que ocupe a posição nela.
-
         :param vaga: A vaga que será ocupada pelo componente.
-
         No caso do índio, requisita que a vaga seja ocupada por ele.
         """
         self.vaga.sai()
@@ -95,9 +92,7 @@ class Indio():
 
     def acessa(self, ocupante):
         """ Pedido de acesso a essa posição, delegada ao ocupante pela vaga.
-
         :param ocupante: O componente candidato a ocupar a vaga já ocupada pelo índio.
-
         No caso do índio, ele age como um obstáculo e não prossegue com o protocolo.
         """
         pass
@@ -105,7 +100,6 @@ class Indio():
         
 class Vazio():
     """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
-
         :param imagem: A figura representando o espaço vazio (normalmente transparente).
         :param x: Coluna em que o elemento será posicionado.
         :param y: linha em que o elemento será posicionado.
@@ -126,7 +120,6 @@ class Vazio():
     def _valida_acessa(self, ocupante): 
         """ ESTE É O ESTADO OCUPADO
              Consulta o ocupante atual se há permissão para substituí-lo pelo novo ocupante.
-
             :param ocupante: O canditato a ocupar a posição corrente.
         """
         self.ocupante.acessa(ocupante)
@@ -134,25 +127,20 @@ class Vazio():
     def _acessa(self, ocupante):
         """ESTE É O ESTADO VAGO
         Atualmente a posição está vaga e pode ser acessada pelo novo ocupante.
-
         A responsabilidade de ocupar definitivamente a vaga é do candidato a ocupante
         Caso ele esteja realmente apto a ocupar a vaga e deve cahamar de volta ao vazio
         com uma chamada ocupou.
-
         :param ocupante: O canditato a ocupar a posição corrente.
         """
         ocupante.ocupa(self)
     
     def ocupou(self, ocupante):
         """ O candidato à vaga decidiu ocupá-la e efetivamente entra neste espaço.
-
         :param ocupante: O canditato a ocupar a posição corrente.
-
         Este ocupante vai entrar no elemento do Vitollino e definitivamente se tornar
         o ocupante da vaga. Com isso ele troca o estado do método acessa para primeiro
         consultar a si mesmo, o ocupante corrente usando o protocolo definido em
         **_valida_acessa ()**
-
         """
         self.vazio.ocupa(ocupante)
         self.ocupante = ocupante
@@ -160,7 +148,6 @@ class Vazio():
     
     def ocupa(self, vaga):
         """ Pedido por uma vaga para que ocupe a posição nela.
-
         No caso do espaço vazio, não faz nada.
         """
         pass
@@ -174,7 +161,6 @@ class Vazio():
     @property
     def elt(self):
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
-
         No caso do espaço vazio, vai retornar um elemento que não contém nada.
         """
         return self._nada.elt
@@ -183,7 +169,6 @@ class Vazio():
 class Kwarwp():
 
     """ Jogo para ensino de programação.
-
         :param vitollino: Empacota o engenho de jogo Vitollino.
         :param mapa: Texto representando o mapa do desafio
         :param medidas: Dicionário usado para redimensionar a tela
@@ -268,11 +253,9 @@ class Kwarwp():
     
     def coisa(self,imagem,x,y,cena):
         """ Cria um elemento na arena do Kwarwp na posição definida.
-
         :param x: coluna em que o elemento será posicionado.
         :param y: linha em que o elemento será posicionado.
         :param cena: cena em que o elemento será posicionado.
-
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
         coisa = Indio(imagem, x=0, y=0, cena=cena, taba=self)
