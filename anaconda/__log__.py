@@ -389,3 +389,10 @@ AttributeError: 'vazio' object has no attribute '_acessa'
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Aug 19 2020 00:24:32.967 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 116
+  def _valida_acessa(self, ocupante) 
+                                      ^
+SyntaxError: invalid syntax
+'''},
