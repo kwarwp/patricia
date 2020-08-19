@@ -396,3 +396,10 @@ IndentationError: unexpected indent
                                       ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Aug 19 2020 00:24:42.619 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 125
+  """ESTE É O ESTADO VAGO
+  ^
+IndentationError: expected an indented block
+'''},
