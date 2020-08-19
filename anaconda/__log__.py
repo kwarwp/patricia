@@ -382,3 +382,10 @@ AttributeError: 'Kwarwp' object has no attribute 'o_solo'
     self.acessa = self._acessa
 AttributeError: 'vazio' object has no attribute '_acessa'
 '''},
+{'date': 'Wed Aug 19 2020 00:24:25.640 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 65
+  pass
+  ^
+IndentationError: unexpected indent
+'''},
