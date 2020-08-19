@@ -139,13 +139,14 @@ class Kwarwp():
         cena.vai()
         return cena
     
-    def coisa(self,caracter,x,y,cena):
+    def coisa(self,imagem,x,y,cena):
         
         lado = self.lado
-        return self.v.a(caracter, w=lado, h=lado, x=x, y=y, cena=cena)
+        return self.v.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         
-    def indio(self, caracter,x,y,cena):
-        self.o_indio = Indio(caracter, x=x, y=y, cena=cena) #era para estar funcionando este imagem mesmo?
+    def indio(self, imagem,x,y,cena):
+        self.o_indio = Indio(imagem, x=x, y=y, cena=cena) #era para estar funcionando este imagem mesmo? Troquei para caracter 
+        #e funcionou normalmente.
         return self.o_indio
     
     #def solo(self):
@@ -153,9 +154,9 @@ class Kwarwp():
         #return self.o_solo
     #Tentativa fracassada de chamar a cena de outra forma    
         
-    def vazio(self, caracter, x,y ,cena):
+    def vazio(self, imagem, x,y ,cena):
         lado = self.lado
-        return Indio(caracter, x=x, y=y, cena=cena)
+        return Indio(imagem, x=x, y=y, cena=cena)
         
     def vaga(self):
         pass
