@@ -267,7 +267,7 @@ class Kwarwp():
 
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
-        coisa = indio(imagem, x=0, y=0, cena=cena, taba=self)
+        coisa = Indio(imagem, x=0, y=0, cena=cena, taba=self)
         vaga = Vazio(imagem, x=x, y=y, cena=cena, ocupante=self)
         return vaga
         
