@@ -410,3 +410,10 @@ IndentationError: expected an indented block
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Aug 19 2020 00:25:04.663 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 272
+  retirn vaga
+          ^
+SyntaxError: invalid syntax
+'''},
