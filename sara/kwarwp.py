@@ -227,7 +227,7 @@ class Kwarwp():
 
     VITOLLINO = None
     """Referência estática para obter o engenho de jogo."""
-    LADO = 1
+    LADO = 100
     """Referência estática para definir o lado do piso da casa."""
     
     self.o_indio = None
