@@ -132,7 +132,7 @@ class Indio():
         """
         destino = (self.posicao[0], self.posicao[1]-1)
         """Assumimos que o índio está olhando para cima, decrementamos a posição **y**"""
-        taba = self.taba.taba  # XXX[0]XXX tinha que ser taba.taba
+        taba = self.taba.taba  
         if destino in taba:
             vaga = taba[destino]
             """Recupera na taba a vaga para a qual o índio irá se transferir"""
