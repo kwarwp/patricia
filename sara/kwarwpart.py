@@ -58,7 +58,8 @@ class Vazio():
         
         
     def _sair(self):
-        """Objeto tenta sair e secebe autorização para seguir"""
+        """Objeto tenta sair e recebe autorização para seguir"""
+        print("Vou chamar o método siga da classe ", type(self.ocupante), ".")
         self.ocupante.siga()
         
 
