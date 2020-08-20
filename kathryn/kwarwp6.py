@@ -47,21 +47,26 @@ class Kwarwp():
         "@": Fab(self.coisa, f"{IMGUR}tLLVjfN.png"), # PICHE
         "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), # CEU
         "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), # SOL
-        "+": Fab(self.coisa, f"{IMGUR}uwYPNlz.png")}  # CERCA
+        "+": Fab(self.coisa, f"{IMGUR}uwYPNlz.png")} # CERCA
 
         mapa = mapa if mapa != "" else self.mapa
-
         mapa = self.mapa
         lado = self.lado
         cena = self.v.c(fabrica["_"].imagem)
         
-        ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena, vai= self.executa) 
-        sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena)
+        #ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena, vai= self.executa) 
+        self.ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado-10, x=0, y=0, cena=cena, vai=self.executa,
+                   style={"padding-top": "10px", "text-align": "center"})
+        """No argumento *vai*, associamos o clique no céu com o método **executa ()** desta classe.
+           O *ceu* agora é um argumento de instância e por isso é referenciado como **self.ceu**.
+        """
+        #sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena)
+        sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena, vai=self.esquerda)
+        """No argumento *vai*, associamos o clique no sol com o método **esquerda ()** desta classe."""
         
         self.taba = {(i, j): 
             fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
-            for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
-            
+            for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}            
         cena.vai()
         return cena
         
