@@ -19,7 +19,7 @@ Changelog
 from _spy.vitollino.main import Jogo, STYLE
 from collections import namedtuple as nt
 from kwarwp.kwarwpart import Vazio, Piche, Oca, Tora, NULO
-   
+
 
 MAPA_INICIO = """
 @....&
