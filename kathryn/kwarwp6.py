@@ -313,7 +313,7 @@ class Piche(Vazio):
         
     @property 
     def elt(self):
-        return self.barra.elt
+        return self.vazio.elt
         
 class Oca(Piche):
     """ A Oca é o destino final do índio, não poderá sair se ele entrar nela.
