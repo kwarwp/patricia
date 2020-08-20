@@ -310,7 +310,7 @@ class Piche(Vazio):
         self.taba.fala("Você ficou preso no piche")
         
     @property
-        def elt(self):
+    def elt(self):
         return self.barra.elt
 
 class Oca(Piche):
