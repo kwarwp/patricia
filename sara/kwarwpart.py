@@ -28,8 +28,8 @@ class Vazio():
         from sara.kwarwp import Kwarwp
         """Importando localmente o Kwarwp para evitar referência circular."""
         from _spy.vitollino.main import Jogo
-        # Isso está ruim...  vou usar somente para teste
         Kwarwp.VITOLLINO = vitollino()
+        # Isso em cima está muito estranho, mas funciona
         
     
         self.lado = lado = Kwarwp.LADO
@@ -134,8 +134,8 @@ class Piche(Vazio):
         from sara.kwarwp import Kwarwp
         """Importando localmente o Kwarwp para evitar referência circular."""
         from _spy.vitollino.main import Jogo
-        # Isso está ruim... vou usar somente para teste
         Kwarwp.VITOLLINO = vitollino()
+        # Isso em cima está muito estranho, mas funciona
         
         self.taba = taba
         self.vaga = taba
