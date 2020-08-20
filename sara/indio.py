@@ -215,7 +215,7 @@ class Indio():
         self.indio.ocupa(ocupante)
         self.ocupante = ocupante
         
-
+# Vamos usar a classe vazio do pacote Kwarwp
 class Vazio():
     """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
 
@@ -312,7 +312,7 @@ class Vazio():
         self.acessa = self._acessa
         self.sair = self._sair
 
-
+# Importando essa classe do Kwarwp
 class Tora(Vazio):
 
     """ A tora é um objeto que o índio pode mover.
