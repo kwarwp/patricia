@@ -203,3 +203,10 @@ NameError: name 'vazio' is not defined
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Aug 19 2020 23:10:54.962 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 343
+  """No argumento *vai*, associamos o clique no sol com o método **esquerda ()** desta classe.""""""Gera o elemento sol"""
+  ^
+IndentationError: unexpected indent
+'''},
