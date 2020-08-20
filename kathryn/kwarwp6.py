@@ -39,12 +39,12 @@ class Kwarwp():
     def cria(self, mapa = "  "):
         Fab = nt("Fab", "objeto imagem")
         fabrica = {
-        "&": Fab(self.coisa, f"{IMGUR}dZQ8liT.jpg"), # OCA
+        "&": Fab(self.maloc, f"{IMGUR}dZQ8liT.jpg"), # OCA
         "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
         ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), # VAZIO
         "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), # SOLO
         "#": Fab(self.coisa, f"{IMGUR}ldI7IbK.png"), # TORA  
-        "@": Fab(self.coisa, f"{IMGUR}tLLVjfN.png"), # PICHE
+        "@": Fab(self.barra, f"{IMGUR}tLLVjfN.png"), # PICHE
         "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), # CEU
         "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), # SOL
         "+": Fab(self.coisa, f"{IMGUR}uwYPNlz.png")} # CERCA
@@ -98,6 +98,34 @@ class Kwarwp():
         
     def ocupa(self, *_):
         pass
+        
+    def maloc(self, imagem, x, y, cena):
+        """ Cria uma maloca na arena do Kwarwp na posição definida.
+    
+        :param x: coluna em que o elemento será posicionado.
+        :param y: linha em que o elemento será posicionado.
+        :param cena: cena em que o elemento será posicionado.
+    
+        Cria uma vaga vazia e coloca o componente dentro dela.
+        """
+        coisa = Oca(imagem, x=0, y=0, cena=cena, taba=self)
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+        return vaga
+    
+    def barra(self, imagem, x, y, cena):
+        """ Cria uma armadilha na arena do Kwarwp na posição definida.
+    
+        :param x: coluna em que o elemento será posicionado.
+        :param y: linha em que o elemento será posicionado.
+        :param cena: cena em que o elemento será posicionado.
+    
+        Cria uma vaga vazia e coloca o componente dentro dela.
+        """
+        coisa = Piche(imagem, x=0, y=0, cena=cena, taba=self)
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+        return vaga    
+        
+        
         
 """Par de coordenadas na direção horizontal (x) e vertiacal (y)."""
 Ponto = nt("Ponto", "x y")
