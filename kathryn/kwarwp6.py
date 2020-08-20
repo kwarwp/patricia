@@ -39,12 +39,12 @@ class Kwarwp():
     def cria(self, mapa = "  "):
         Fab = nt("Fab", "objeto imagem")
         fabrica = {
-        "&": Fab(self.maloc, f"{IMGUR}dZQ8liT.jpg"), # OCA
+        "&": Fab(self.coisa, f"{IMGUR}dZQ8liT.jpg"), # OCA
         "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
         ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), # VAZIO
         "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), # SOLO
         "#": Fab(self.coisa, f"{IMGUR}ldI7IbK.png"), # TORA  
-        "@": Fab(self.barra, f"{IMGUR}tLLVjfN.png"), # PICHE
+        "@": Fab(self.coisa, f"{IMGUR}tLLVjfN.png"), # PICHE
         "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), # CEU
         "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), # SOL
         "+": Fab(self.coisa, f"{IMGUR}uwYPNlz.png")} # CERCA
@@ -95,10 +95,7 @@ class Kwarwp():
         self.o_indio = Indio(imagem, x=0, y=0, cena=cena, taba=self)
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
         return vaga
-        
-    def ocupa(self, *_):
-        pass
-        
+    
     def maloc(self, imagem, x, y, cena):
         """ Cria uma maloca na arena do Kwarwp na posição definida.
     
@@ -123,9 +120,14 @@ class Kwarwp():
         """
         coisa = Piche(imagem, x=0, y=0, cena=cena, taba=self)
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
-        return vaga    
-        
-        
+        return vaga
+    
+    def sai(self, *_):
+        """ O Kwarwp é aqui usado como uma vaga falsa, o pedido de sair é ignorado."""
+        pass
+    
+    def ocupa(self, *_):
+        pass
         
 """Par de coordenadas na direção horizontal (x) e vertiacal (y)."""
 Ponto = nt("Ponto", "x y")
@@ -234,6 +236,9 @@ class Vazio():
         self.acessa = self._acessa
         self.ocupante = ocupante or self
         self.acessa(ocupante)
+        self.sair = self._sair
+        """O **sair ()** é usado como método dinâmico, variando com o estado da vaga.
+        Inicialmente tem o comportamento de **_sair ()** que é o estado leniente, aceitando saidas"""
         
     def _valida_acessa(self, ocupante):
         self.ocupante.acessa(ocupante)
@@ -253,18 +258,28 @@ class Vazio():
         self.ocupante = self
         self.acessa = self._acessa
         
+    def _sair(self):
+        """Objeto tenta sair e secebe autorização para seguir"""
+        self.ocupante.siga()
+
+    def _pede_sair(self):
+        """Objeto tenta sair e consulta o ocupante para seguir"""
+        self.ocupante.sair()  
+        
     @property
     def elt(self):
         return self._nada.elt
-
+        
 class Piche(Vazio):
-            """ Poça de Piche que gruda o índio se ele cair nela.
-    
-            :param imagem: A figura representando o índio na posição indicada.
-            :param x: Coluna em que o elemento será posicionado.
-            :param y: Cinha em que o elemento será posicionado.
-            :param cena: Cena em que o elemento será posicionado.
-            :param taba: Representa a taba onde o índio faz o desafio."""
+    """ Poça de Piche que gruda o índio se ele cair nela.
+
+        :param imagem: A figura representando o índio na posição indicada.
+        :param x: Coluna em que o elemento será posicionado.
+        :param y: Cinha em que o elemento será posicionado.
+        :param cena: Cena em que o elemento será posicionado.
+        :param taba: Representa a taba onde o índio faz o desafio.
+    """
+
     def __init__(self, imagem, x, y, cena, taba):
         self.taba = taba
         self.vaga = taba
@@ -293,7 +308,9 @@ class Piche(Vazio):
     
     def _pede_sair(self):
         """Objeto tenta sair mas não é autorizado"""
-        self.taba.fala("Você ficou preso no piche")
+        self.taba.fala("Você ficou preso no piche")        
+        
+                
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo
     from _spy.vitollino.main import STYLE
