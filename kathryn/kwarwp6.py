@@ -309,7 +309,32 @@ class Piche(Vazio):
     def _pede_sair(self):
         """Objeto tenta sair mas não é autorizado"""
         self.taba.fala("Você ficou preso no piche")        
-        
+
+class Oca(Piche):
+    """ A Oca é o destino final do índio, não poderá sair se ele entrar nela.
+
+        :param imagem: A figura representando o índio na posição indicada.
+        :param x: Coluna em que o elemento será posicionado.
+        :param y: Cinha em que o elemento será posicionado.
+        :param cena: Cena em que o elemento será posicionado.
+        :param taba: Representa a taba onde o índio faz o desafio.
+    """
+
+    def _pede_sair(self):
+        """Objeto tenta sair mas não é autorizado"""
+        self.taba.fala("Você chegou no seu objetivo")
+
+    def _acessa(self, ocupante):
+        """ Atualmente a posição está vaga e pode ser acessada pelo novo ocupante.
+
+        A responsabilidade de ocupar definitivamente a vaga é do candidato a ocupante
+        Caso ele esteja realmente apto a ocupar a vaga e deve cahamar de volta ao vazio
+        com uma chamada ocupou.
+
+            :param ocupante: O canditato a ocupar a posição corrente.
+        """
+        self.taba.fala("Você chegou no seu objetivo")
+        ocupante.ocupa(self)
                 
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo
