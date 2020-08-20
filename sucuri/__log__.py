@@ -563,3 +563,10 @@ TypeError: can't add 'Piche' object to DOMNode instance
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Thu Aug 20 2020 20:08:46.785 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 59
+  """  Define as proporções da folha de sprites 
+  ^
+IndentationError: unexpected indent
+'''},
