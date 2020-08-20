@@ -678,3 +678,10 @@ TypeError: __init__ missing 1 positional argument: 'AZIMUTE'
     coisa = Indio(imagem, x=0, y=0, cena=cena, taba=self)
 TypeError: __init__ missing 1 positional argument: 'AZIMUTE'
 '''},
+{'date': 'Thu Aug 20 2020 14:20:54.59 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 97
+  def __init__(self, imagem, x, y, cena, taba,AZIMUTE):
+  ^
+IndentationError: unexpected indent
+'''},
