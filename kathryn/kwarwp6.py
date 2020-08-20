@@ -267,7 +267,7 @@ class Vazio():
         
     @property
     def elt(self):
-        return self._nada.elt
+        return self.vazio.elt
         
 class Piche(Vazio):
     """ Poça de Piche que gruda o índio se ele cair nela.
