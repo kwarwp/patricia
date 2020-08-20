@@ -61,7 +61,6 @@ class Kwarwp():
         lado = self.lado
         cena = self.v.c(fabrica["_"].imagem)
         
-        #ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado, x=0, y=0, cena=cena, vai= self.executa) 
         self.ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado-10, x=0, y=0, cena=cena, vai=self.executa,
                    style={"padding-top": "10px", "text-align": "center"})
         """No argumento *vai*, associamos o clique no céu com o método **executa ()** desta classe.
@@ -98,7 +97,6 @@ class Kwarwp():
         return vaga
         
     def indio(self, imagem, x, y, cena):
-        # self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
         self.o_indio = Indio(imagem, x=0, y=0, cena=cena, taba=self)
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
         return vaga
@@ -159,22 +157,16 @@ class Indio():
             """Define as proporções da folha de sprites"""
             self.indio.siz = (lado*3, lado*4)
             self.mostra()
-    """    
-    def anda(self):
-        destino = (self.posicao[0]+1, self.posicao[1]-1)
-        taba = self.taba.taba
-        if destino in taba:
-            vaga = taba[destino]
-            vaga.acessa(self)"""
+            
     def executa(self):
         self.anda()
     
     def sai(self):
         pass
-    """    
+        
     @property
     def elt(self):
-        return self.indio.elt"""
+        return self.indio.elt
     
     def ocupa(self, vaga):
         self.vaga = vaga
