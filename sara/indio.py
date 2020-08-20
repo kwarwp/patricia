@@ -328,7 +328,13 @@ class Tora(Vazio):
         self.lado = lado = Kwarwp.LADO
         self.posicao = (x//lado,y//lado)
         self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
-         
+        
+    @property
+    def elt(self):
+        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
+        No caso da tora, vai retornar um elemento que tem o seu sprite.
+        """
+        return self.vazio.elt    
 
 class Piche(Vazio):
     """ Poça de Piche que gruda o índio se ele cair nela.
