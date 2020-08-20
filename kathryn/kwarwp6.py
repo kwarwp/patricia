@@ -309,9 +309,6 @@ class Piche(Vazio):
         """Objeto tenta sair mas não é autorizado"""
         self.taba.fala("Você ficou preso no piche")    
     
-    @property
-    def elt(self):
-        return self._nada.elt
 
 class Oca(Piche):
     """ A Oca é o destino final do índio, não poderá sair se ele entrar nela.
