@@ -20,6 +20,7 @@
 
 """
 
+from _spy.vitollino.main import Jogo
 
 class Nulo:
     """Objeto nulo que responde passivamente a todas as requisições."""
