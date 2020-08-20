@@ -311,6 +311,13 @@ class Vazio():
         self.ocupante = self
         self.acessa = self._acessa
         self.sair = self._sair
+        
+    def pegar(self, requisitante):
+        """ Consulta o ocupante atual se há permissão para pegar e entregar ao requistante.
+            :param requistante: O ator querendo pegar o objeto.
+        """
+        self.ocupante.pegar(requisitante)
+        
 
 # Importando essa classe do Kwarwp
 class Tora(Vazio):
