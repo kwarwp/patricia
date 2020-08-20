@@ -9,7 +9,7 @@
       
 
 """
-from _spy.vitollino.main import Jogo, STYLE 
+from _spy.vitollino.main import Jogo, STYLE, Texto
 from collections import namedtuple as nt
 
 #largura e altura, respectivamente
@@ -20,7 +20,7 @@ from collections import namedtuple as nt
 MAPA_INICIAL= """
 .........
 ......|.&
-.........
+......^..
 .........
 .........
 ......^..
@@ -43,11 +43,11 @@ class Indio():
         para movimentar o índio.
         Nesta versão TABA tem de ser consultada na solicitação de migração pois é necessário um vazio adjacente.
         """
-        self.lado = lado = Kwarwp.LADO
-        self.vaga = self
+        self.lado = lado = Kwarwp.LADO #retorna None
+        self.vaga = self # retorna ele mesmo 
         self.posicao = (x//lado,y//lado)
-        """ O operador // retorna apenas a parte inteira do da divisão.
-            esta linha gera a matiz de posição do indio 
+        """ O operador // retorna apenas a parte inteira da divisão.
+            esta linha gera a matriz de posição do indio. 
         """ 
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         self.taba = taba
@@ -55,26 +55,60 @@ class Indio():
     def anda(self):
         """ Faz o indio caminhar na direcao em que esta olhando"""
         #self.posicao = (self.posicao[0], self.posicao[1]-1) 
-        destino = (self.posicao[0], self.posicao[1]-1)
-        """Assume-se que o indio está olhando para cima, decrementa-se a posição y"""
-        taba = self.taba.taba  #que isso aqui faz?
+        destino = (self.posicao[0], self.posicao[1]-1) 
+        """Assume-se que o indio está olhando para cima, decrementa-se a posição y.
+           Antes o reposicionamento estava linkado ao x e y da tela, agora está linkado 
+           aos x,y destino e permissões da taba.
+        """ 
+        taba = self.taba.taba 
+        """Acessa o atributo de intância do índio, linkando ao taba de Kwarwp.cria(self.taba)
+           
+        """
         if destino in taba:
+            """Se as coordenadas estão em taba:"""
             vaga = taba[destino]
-            """recupera na taba a vaga para o qual o indio irá se tranferir"""
+            """Recupere na taba a vaga para o qual o indio irá se tranferir"""
             vaga.acessa(self)
-            """Inicia protocolo duplo depacho, pedindo para acessar a vaga"""
+            """Inicie o protocolo duplo depacho, pedindo para acessar a vaga"""
         #self.indio.x = self.posicao[0]*self.lado
         #self.indio.y = self.posicao[1]*self.lado
+        
+    def acessa(self, ocupante):
+        """ Pedido de acesso a essa posição, delegada ao ocupante pela vaga.
+
+        :param ocupante: O componente candidato a ocupar a vaga já ocupada pelo índio.
+
+        No caso do índio, ele age como um obstáculo e não prossegue com o protocolo.
+        """
+        pass # Função não executa resposta
+        
+    def sai(self):
+        """ Rotina de saída falsa, o objeto Indio é usado como uma vaga nula.
+        """
+        #teste = Texto("nope", cena=self.cena)
+        pass # Função não executa resposta
+        
+        
+    def ocupa(self, vaga):
+        """ Pedido de ocupação de uma vaga.
+        
+        :param vaga: A vaga que será ocupada pelo componente.
+
+        No caso do índio, requisita que a vaga seja ocupada por ele.
+        """
+        self.vaga.sai() 
+        """self.vaga' é modificado de acordo com o componente presente: vazio, coisa ou índio...
+           Nesta versão, coisa e índio não são transponíveis. Vazios são.
+        """
+        self.posicao = vaga.posicao
+        vaga.ocupou(self)
+        self.vaga = vaga
+        
         
     def executa(self):
         """ Roteiro do índio. Conjunto de comandos para ele executar.
         """
         self.anda()
-        
-    def sai(self):
-        """ Rotina de saída falsa, o objeto Indio é usado como uma vaga nula.
-        """
-        pass
          
     @property
     def elt(self):
@@ -84,27 +118,6 @@ class Indio():
         """
         return self.indio.elt
 
-    def ocupa(self, vaga):
-        """ Pedido por uma vaga para que ocupe a posição nela.
-
-        :param vaga: A vaga que será ocupada pelo componente.
-
-        No caso do índio, requisita que a vaga seja ocupada por ele.
-        """
-        self.vaga.sai()
-        self.posicao = vaga.posicao
-        vaga.ocupou(self)
-        self.vaga = vaga
-
-    def acessa(self, ocupante):
-        """ Pedido de acesso a essa posição, delegada ao ocupante pela vaga.
-
-        :param ocupante: O componente candidato a ocupar a vaga já ocupada pelo índio.
-
-        No caso do índio, ele age como um obstáculo e não prossegue com o protocolo.
-        """
-        pass
-        
         
 class Vazio():
     """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
