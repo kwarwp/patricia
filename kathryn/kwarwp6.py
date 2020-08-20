@@ -242,20 +242,9 @@ class Vazio():
     def _valida_acessa(self, ocupante):
         self.ocupante.acessa(ocupante)
         
-    def _acessa(self, ocupante):
-        ocupante.ocupa(self)
-        
-    def ocupou(self, ocupante):
-        self.vazio.ocupa(ocupante)
-        self.ocupante = ocupante
-        self.acessa = self._valida_acessa
-        
-    def ocupa(self, vaga):
-        pass
-        
     def sai(self):
         self.ocupante = self
-        self.acessa = self._acessa
+        self.acessa = self._acessa    
         
     def _sair(self):
         """Objeto tenta sair e secebe autorização para seguir"""
@@ -263,7 +252,19 @@ class Vazio():
 
     def _pede_sair(self):
         """Objeto tenta sair e consulta o ocupante para seguir"""
-        self.ocupante.sair()  
+        self.ocupante.sair()        
+        
+    def _acessa(self, ocupante):
+        ocupante.ocupa(self)
+        
+    def ocupou(self, ocupante):
+        self.vazio.ocupa(ocupante)
+        self.ocupante = ocupante
+        self.acessa = self._valida_acessa
+        self.sair = self._pede_sair
+        
+    def ocupa(self, vaga):
+        pass
         
     @property
     def elt(self):
