@@ -56,7 +56,6 @@ Ponto = nt("Ponto", "x y")
 Rosa = nt("Rosa", "n l s o")
 """Rosa dos ventos com as direções norte, leste, sul e oeste."""
 
-NULO = Nulo()
 
 class Indio():
 
@@ -638,6 +637,8 @@ class Nulo:
         :return: retorna o próprio objeto nulo.
         """
         return self
+
+NULO = Nulo()
 
 
 if __name__ == "__main__":
