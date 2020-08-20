@@ -134,7 +134,41 @@ class Piche(Vazio):
     """
 
 
+    def __init__(self, imagem, x, y, cena, taba):
+    
+        from kwarwp.kwarapp import Kwarwp
+        """Importando localmente o Kwarwp para evitar referência circular."""
+        
+        self.taba = taba
+        self.vaga = taba
+        self.lado = lado = Kwarwp.LADO
+        self.posicao = (x//lado,y//lado-1)
+        self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena)
+        self._nada = Kwarwp.VITOLLINO.a()
+        self.acessa = self._acessa
+        """O **acessa ()** é usado como método dinâmico, variando com o estado da vaga.
+        Inicialmente tem o comportamento de **_acessa ()** que é o estado vago, aceitando ocupantes"""
+        self.sair = self._sair
+        """O **sair ()** é usado como método dinâmico, variando com o estado da vaga.
+        Inicialmente tem o comportamento de **_sair ()** que é o estado vago, aceitando ocupantes"""
 
+
+    def ocupa(self, vaga):
+        """ Pedido por uma vaga para que ocupe a posição nela.
+
+        :param vaga: A vaga que será ocupada pelo componente.
+
+        No caso do piche, requisita que a vaga seja ocupada por ele.
+        """
+        self.vaga.sai()
+        self.posicao = vaga.posicao
+        vaga.ocupou(self)
+        self.vaga = vaga
+
+
+    def _pede_sair(self):
+        """Objeto tenta sair mas não é autorizado"""
+        self.taba.fala("Você ficou preso no piche")
 
 
 class Tora(Piche):
