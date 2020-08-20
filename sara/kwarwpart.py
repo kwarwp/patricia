@@ -24,6 +24,10 @@ class Vazio():
     """
 
     def __init__(self, imagem, x, y, cena, ocupante=None):
+    
+        from sara.kwarwp import Kwarwp
+        """Importando localmente o Kwarwp para evitar referência circular."""
+    
         self.lado = lado = Kwarwp.LADO
         self.posicao = (x//lado,y//lado-1)
         self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
