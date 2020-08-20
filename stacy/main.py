@@ -111,6 +111,7 @@ class Vazio():
     
 class Indio():
 
+AZIMUTE = Rosa(Ponto(0, -1),Ponto(1, 0),Ponto(0, 1),Ponto(-1, 0),)
     def __init__(self, imagem, x, y, cena, taba): 
         self.lado = lado = Kwarwp.LADO
         self.posicao = (x//3, y//lado)  # XXX[3]XXX faltou definir posição
