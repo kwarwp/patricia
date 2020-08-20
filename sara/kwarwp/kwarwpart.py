@@ -8,7 +8,7 @@ Changelog
 ---------
 .. versionadded::    20.08
         Orgniazação das classes do jogo Kwarwp.
-        As seguintes classes são encontradas:
+        As seguintes classes foram movidas para esse módulo:
         - Vazio, 
         - Piche, 
         - Oca, 
