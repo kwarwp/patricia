@@ -223,7 +223,7 @@ class Kwarwp():
         "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), # SOL
         "+": Fab(self.coisa, f"{IMGUR}uwYPNlz.png"),  # CERCA
         "%": Fab(self.coisa, f"{IMGUR}Ry3Vmsn.png") #ROCHA
-           
+         } 
 
         
 
