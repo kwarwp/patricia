@@ -1006,3 +1006,10 @@ NameError: name 'cena' is not defined
     ocupante.ocupa(self)
 AttributeError: 'NoneType' object has no attribute 'ocupa'
 '''},
+{'date': 'Thu Aug 20 2020 19:26:35.945 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 233
+  self.a_coisa = None  Linha serve como passo para criar a execução do anda pelas coisas
+                        ^
+SyntaxError: invalid syntax
+'''},
