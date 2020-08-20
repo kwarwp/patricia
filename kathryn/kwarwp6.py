@@ -97,7 +97,7 @@ class Kwarwp():
         return vaga
         
     def indio(self, imagem, x, y, cena):
-        self.o_indio = Indio(imagem, x=1, y=0, cena=cena, taba=self)
+        self.o_indio = Indio(imagem, x=0, y=0, cena=cena, taba=self)
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
         return vaga
     
