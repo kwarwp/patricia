@@ -137,3 +137,10 @@ TypeError: cria() got an unexpected keyword argument 'mapa'
     self.cena = self.cria(mapa=mapa) if vitollino else None
 TypeError: cria() got an unexpected keyword argument 'mapa'
 '''},
+{'date': 'Thu Aug 20 2020 16:09:31.187 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 215
+  fabrica = {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ^
+SyntaxError: invalid syntax
+'''},
