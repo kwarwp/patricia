@@ -314,6 +314,22 @@ class Vazio():
         self.sair = self._sair
 
 
+class Tora(Vazio):
+
+    """ A tora é um objeto que o índio pode mover.
+        :param imagem: A figura representando o índio na posição indicada.
+        :param x: Coluna em que o elemento será posicionado.
+        :param y: Linha em que o elemento será posicionado.
+        :param cena: Cena em que o elemento será posicionado.
+        :param taba: Representa a taba onde o índio faz o desafio.
+    """
+    def __init__(self, imagem, x, y, cena, taba):
+        self.taba = taba
+        self.vaga = self
+        self.lado = lado = Kwarwp.LADO
+        self.posicao = (x//lado,y//lado)
+        self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+
 class Piche(Vazio):
     """ Poça de Piche que gruda o índio se ele cair nela.
 
@@ -446,7 +462,7 @@ class Kwarwp():
         """
         sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena)
         """No argumento *vai*, associamos o clique no sol com o método **esquerda ()** desta classe."""
-        self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena, vai=fabrica[imagem].evento)
+        self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
             for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
         """Posiciona os elementos segundo suas posições i, j na matriz mapa"""
         cena.vai()
