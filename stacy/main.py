@@ -31,8 +31,17 @@ MAPA_ROCHA = """
 +^.+..+
 +++++++
 """
+
+MAPA_INICIO = """
+@....&
+......
+......
+.#.^..
+"""
+
 from collections import namedtuple as nt
 from kwarwp.kwarwpart import Vazio, Piche, Oca, Tora, NULO
+
 
 class Vazio():
     """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
