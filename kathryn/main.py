@@ -10,8 +10,8 @@ MAPA_INICIO = """
 |||||||
 """
 MAPA_2 = """
-@..&&.
-......
+...&&.
+.@.@..
 ......
 .#.^..
 """
@@ -188,7 +188,7 @@ class Kwarwp():
     self.o_indio = None
     """Instância do personagem principal, o índio, vai ser atribuído pela fábrica do índio"""
     
-    def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
+    def __init__(self, vitollino=None, mapa=MAPA_2, medidas={}):
         Kwarwp.VITOLLINO = self.v = vitollino()
         self.mapa = mapa.split()
         """Cria um matriz com os elementos descritos em cada linha de texto"""
