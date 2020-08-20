@@ -319,29 +319,6 @@ class Vazio():
         self.ocupante.pegar(requisitante)
         
 
-# Importando essa classe do Kwarwp
-class Tora(Piche):
-
-    """ A tora é um objeto que o índio pode mover.
-        :param imagem: A figura representando o índio na posição indicada.
-        :param x: Coluna em que o elemento será posicionado.
-        :param y: Linha em que o elemento será posicionado.
-        :param cena: Cena em que o elemento será posicionado.
-        :param taba: Representa a taba onde o índio faz o desafio.
-    """
-    def __init__(self, imagem, x, y, cena, taba):
-        self.taba = taba
-        self.vaga = self
-        self.lado = lado = Kwarwp.LADO
-        self.posicao = (x//lado,y//lado)
-        self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
-        
-    @property
-    def elt(self):
-        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
-        No caso da tora, vai retornar um elemento que tem o seu sprite.
-        """
-        return self.vazio.elt    
 
 class Piche(Vazio):
     """ Poça de Piche que gruda o índio se ele cair nela.
@@ -386,6 +363,31 @@ class Piche(Vazio):
         """Objeto tenta sair mas não é autorizado"""
         self.taba.fala("Você ficou preso no piche")
 
+
+class Tora(Piche):
+
+    """ A tora é um objeto que o índio pode mover.
+        :param imagem: A figura representando o índio na posição indicada.
+        :param x: Coluna em que o elemento será posicionado.
+        :param y: Linha em que o elemento será posicionado.
+        :param cena: Cena em que o elemento será posicionado.
+        :param taba: Representa a taba onde o índio faz o desafio.
+    """
+    def __init__(self, imagem, x, y, cena, taba):
+        self.taba = taba
+        self.vaga = self
+        self.lado = lado = Kwarwp.LADO
+        self.posicao = (x//lado,y//lado)
+        self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        
+    @property
+    def elt(self):
+        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
+        No caso da tora, vai retornar um elemento que tem o seu sprite.
+        """
+        return self.vazio.elt
+        
+        
 
 class Oca(Piche):
     """ A Oca é o destino final do índio, não poderá sair se ele entrar nela.
