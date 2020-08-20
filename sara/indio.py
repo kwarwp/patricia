@@ -461,7 +461,7 @@ class Kwarwp():
         mapa = self.mapa
         lado = self.lado
         cena = self.v.c(fabrica["_"].imagem)
-        self.ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado-10, x=0, y=0, cena=cena,
+        self.ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado-10, x=0, y=0, cena=cena, vai=self.executa,
                        style={"padding-top": "10px", "text-align": "center"})
         """No argumento *vai*, associamos o clique no céu com o método **executa ()** desta classe.
            O *ceu* agora é um argumento de instância e por isso é referenciado como **self.ceu**.
