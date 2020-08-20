@@ -10,6 +10,12 @@ Changelog
         ìndio movimenta tora
 
 """
+from collection import namedtuple as nt
+from kwarwp.kwarwppart import Vazio, Piche, Oca, Tora, NULO
+
+"""Prefixo do site IMGUR"""
+IMGUR = "https://imgur.com/"
+        
 MAPA_INICIO = """
 @....&
 ......
@@ -17,7 +23,6 @@ MAPA_INICIO = """
 .#.^..
 """
     
-from collections import namedtuple as nt
 
 Ponto = nt("Ponto", "x y")
 """Par de coordenadas na direção horizontal (x) e vertiacal (y)."""
@@ -363,7 +368,7 @@ class Kwarwp():
         """
         Fab = nt("Fab", "objeto imagem")
         """Esta tupla nomeada serve para definir o objeto construido e sua imagem."""
-        IMGUR = "https://imgur.com/"
+
         fabrica = {
         "&": Fab(self.maloc, f"{IMGUR}dZQ8liT.jpg"), # OCA
         "^": Fab(self.indio, f"{IMGUR}UCWGCKR.png"), # INDIO
