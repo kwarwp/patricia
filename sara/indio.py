@@ -18,10 +18,18 @@ Changelog
 
 from _spy.vitollino.main import Jogo, STYLE
 from collections import namedtuple as nt
-from collections import namedtuple as nt
+from kwarwp.kwarwpart import Vazio, Piche, Oca, Tora, NULO
    
 
 MAPA_INICIO = """
+@....&
+......
+......
+.#.^..
+"""
+
+
+MAPA_INICIO_2 = """
 |@|||||
 |..|..&
 |..#..|
@@ -30,7 +38,7 @@ MAPA_INICIO = """
 """
 
 
-MAPA_2 = """
+MAPA_INICIO_3 = """
 @..&&.
 ......
 ......
@@ -54,13 +62,14 @@ class Indio():
     """ Cria o personagem do jogo
     """
     def __init__(self, imagem, x, y, cena, taba, vai=None):
+    
         self.lado = lado = Kwarwp.LADO
         self.azimute = self.AZIMUTE.n
         """índio olhando para o norte"""
         self.taba = taba
         self.vaga = self
         self.posicao = (x//lado,y//lado)
-        self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena, vai=vai)
+        self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         self.x = x
         """Este x provisoriamente distingue o índio de outras coisas construídas com esta classe"""
         if x:
@@ -171,29 +180,40 @@ class Indio():
         """
         pass
     
-    # Refactoring
-    # Hummm melhor criar um objeto Tora estendendo a classe Vazio e controlar isso dentro dele, farei isso amanhã
-    # O professor falou que seria algo semelhante ao método andar
-    # vamos mover essas duas ações (método pega e método larga) na nova classe.
     def pega(self):
-        """ Carrega um objeto que está a frente do índio
+        """tenta pegar o objeto que está diante dele"""
+        destino = (self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
+        """A posição para onde o índio vai depende do vetor de azimute corrente"""
+        taba = self.taba.taba
+        if destino in taba:
+            vaga = taba[destino]
+            """Recupera na taba a vaga para a qual o índio irá se transferir"""
+            vaga.pegar(self)
+
+    def larga(self):
+        """tenta largar o objeto que está segurando"""
+        destino = (self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
+        """A posição para onde o índio vai depende do vetor de azimute corrente"""
+        taba = self.taba.taba
+        if destino in taba:
+            vaga = taba[destino]
+            """Recupera na taba a vaga para a qual o índio irá se transferir"""
+            # self.ocupante.largar(vaga)
+            vaga.acessa(self.ocupante)
+
+    def ocupou(self, ocupante):
+        """ O candidato à vaga decidiu ocupá-la e efetivamente entra neste espaço.
+
+        :param ocupante: O canditato a ocupar a posição corrente.
+
+        Este ocupante vai entrar no elemento do Vitollino e definitivamente se tornar
+        o ocupante da vaga. Com isso ele troca o estado do método acessa para primeiro
+        consultar a si mesmo, o ocupante corrente usando o protocolo definido em
+        **_valida_acessa ()**
+
         """
-        #Teste
-        self.fala('hummmm... tenho q carregar essa tora')
-        
-        # Verifica se o objeto está a frente do indio
-        
-        # e move-lo junto com o índio
-        
-    def solta(self):
-        """ Carrega um objeto que está a frente do índio
-        """
-        #Teste
-        self.fala('hummmm... tenho q largar essa tora')
-        
-        # Verifica se o objeto está a frente do indio
-        
-        # e move-lo junto com o índio
+        self.indio.ocupa(ocupante)
+        self.ocupante = ocupante
 
         
 
@@ -393,23 +413,24 @@ class Kwarwp():
 
 
     def cria(self, mapa=""):
+    
         """ Fábrica de componentes.
 
         :param mapa: Um texto representando o mapa do desafio.
         """
-        Fab = nt("Fab", "objeto imagem evento")
+        Fab = nt("Fab", "objeto imagem")
         """Esta tupla nomeada serve para definir o objeto construido e sua imagem."""
 
         fabrica = {
-        "&": Fab(self.maloc, f"{IMGUR}dZQ8liT.jpg", None), # OCA
-        "^": Fab(self.indio, f"{IMGUR}UCWGCKR.png", None), # INDIO
-        ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png", None), # VAZIO
-        "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg", None), # SOLO
-        "#": Fab(self.coisa, f"{IMGUR}ldI7IbK.png", self.pega), # TORA
-        "@": Fab(self.barra, f"{IMGUR}tLLVjfN.png", None), # PICHE
-        "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif", self.executa), # CEU
-        "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif", self.esquerda), # SOL
-        "|": Fab(self.coisa, f"{IMGUR}uwYPNlz.png", None)  # CERCA
+        "&": Fab(self.maloc, f"{IMGUR}dZQ8liT.jpg"), # OCA
+        "^": Fab(self.indio, f"{IMGUR}UCWGCKR.png"), # INDIO
+        ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), # VAZIO
+        "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), # SOLO
+        "#": Fab(self.atora, f"{IMGUR}0jSB27g.png"), # TORA
+        "@": Fab(self.barra, f"{IMGUR}tLLVjfN.png"), # PICHE
+        "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), # CEU
+        "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), # SOL
+        "|": Fab(self.coisa, f"{IMGUR}uwYPNlz.png")  # CERCA
         }
         
         """Dicionário que define o tipo e a imagem do objeto para cada elemento."""
@@ -431,8 +452,8 @@ class Kwarwp():
         cena.vai()
         return cena
         
-    # TODO remover o parametgro vai desse método
-    def vazio(self, imagem, x, y, cena, vai=None):
+        
+    def vazio(self, imagem, x, y, cena):
         """ Cria um espaço vazio na arena do Kwarwp na posição definida.
         :param x: coluna em que o elemento será posicionado.
         :param y: linha em que o elemento será posicionado.
@@ -443,7 +464,7 @@ class Kwarwp():
         return vaga
         
         
-    def coisa(self, imagem, x, y, cena, vai):
+    def coisa(self, imagem, x, y, cena):
         """ Cria um elemento na arena do Kwarwp na posição definida.
         :param x: coluna em que o elemento será posicionado.
         :param y: linha em que o elemento será posicionado.
@@ -451,27 +472,12 @@ class Kwarwp():
         
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
-        coisa = Indio(imagem, x=0, y=0, cena=cena, taba=self, vai=vai)
+        coisa = Indio(imagem, x=0, y=0, cena=cena, taba=self)
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
         return vaga
+        
 
-
-    # TODO remover o parametgro vai desse método
-    def indio(self, imagem, x, y, cena, vai=None):
-        """ Cria o personagem principal na arena do Kwarwp na posição definida.
-        :param x: coluna em que o elemento será posicionado.
-        :param y: linha em que o elemento será posicionado.
-        :param cena: cena em que o elemento será posicionado.
-        """
-        # self.o_indio = Indio(imagem, x=x, y=y, cena=cena)
-        self.o_indio = Indio(imagem, x=1, y=0, cena=cena, taba=self)
-        """o índio tem deslocamento zero, pois é relativo à vaga"""
-        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
-        return vaga
-
-
-    # TODO remover o parametgro vai desse método
-    def maloc(self, imagem, x, y, cena, vai=None):
+    def maloc(self, imagem, x, y, cena):
         """ Cria uma maloca na arena do Kwarwp na posição definida.
 
         :param x: coluna em que o elemento será posicionado.
@@ -485,8 +491,7 @@ class Kwarwp():
         return vaga
         
 
-    # TODO remover o parametgro vai desse método
-    def barra(self, imagem, x, y, cena, vai=None):
+    def barra(self, imagem, x, y, cena):
         """ Cria uma armadilha na arena do Kwarwp na posição definida.
 
         :param x: coluna em que o elemento será posicionado.
@@ -531,7 +536,40 @@ class Kwarwp():
     def esquerda(self, *_):
         """ Ordena a execução do roteiro do índio.
         """
-        self.o_indio.esquerda()   
+        self.o_indio.esquerda()
+        
+        
+    def atora(self, imagem, x, y, cena):
+        """ Cria uma tora na arena do Kwarwp na posição definida.
+
+        :param x: coluna em que o elemento será posicionado.
+        :param y: linha em que o elemento será posicionado.
+        :param cena: cena em que o elemento será posicionado.
+
+        Cria uma vaga vazia e coloca o componente dentro dela.
+        """
+        coisa = Tora(imagem, x=0, y=0, cena=cena, taba=self)
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+        coisa.vazio.vai = lambda *_: self.o_indio.larga()
+        """o vazio.vai é associado ao método larga do índio"""
+        return vaga
+
+
+    def indio(self, imagem, x, y, cena):
+        """ Cria o personagem principal na arena do Kwarwp na posição definida.
+
+        :param x: coluna em que o elemento será posicionado.
+        :param y: linha em que o elemento será posicionado.
+        :param cena: cena em que o elemento será posicionado.
+        """
+        self.o_indio = Indio(imagem, x=1, y=0, cena=cena, taba=self)
+        """ O índio tem deslocamento zero, pois é relativo à vaga.
+            O **x=1** serve para distinguir o indio de outros derivados.
+        """
+        self.o_indio.indio.vai = lambda *_: self.o_indio.pega()
+        """o índio.vai é associado ao seu próprio metodo pega"""
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
+        return vaga
 
 
 if __name__ == "__main__":
