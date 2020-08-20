@@ -275,3 +275,6 @@ class Tora(Piche):
         No caso da tora, ela age como um obstáculo e não prossegue com o protocolo.
         """
         pass
+
+if __name__ == "__main__":
+    from _spy.vitollino.main import Jogo
