@@ -364,7 +364,7 @@ class Piche(Vazio):
         self.taba.fala("Você ficou preso no piche")
 
 
-class Tora(Piche):
+class Tora(Vazio):
 
     """ A tora é um objeto que o índio pode mover.
         :param imagem: A figura representando o índio na posição indicada.
