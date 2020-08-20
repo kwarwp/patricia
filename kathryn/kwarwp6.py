@@ -185,6 +185,7 @@ class Indio():
         sprite_lin = self.AZIMUTE.index(self.azimute)
         """A linha do sprite depende da direção dque índio está olhando"""
         self.indio.pos = (-self.lado*sprite_col, -self.lado*sprite_lin)
+        
 
     def esquerda(self):
         """ Faz o índio mudar da direção em que está olhando para a esquerda."""
