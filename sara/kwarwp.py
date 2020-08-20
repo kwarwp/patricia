@@ -91,7 +91,7 @@ class Indio():
 
     def sair(self):
         """Objeto de posse do índio tenta sair e é autorizado"""
-        print("Estou autorizado pela classe", type(self.vaga.ocupante), "a sair")
+        print("Estou autorizado a sair, vou chamar o método siga da classe", type(self.vaga.ocupante))
         self.vaga.ocupante.siga()
 
 
