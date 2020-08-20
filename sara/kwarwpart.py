@@ -122,11 +122,11 @@ class Piche(Vazio):
         :param cena: Cena em que o elemento será posicionado.
         :param taba: Representa a taba onde o índio faz o desafio.
     """
-
-
     def __init__(self, imagem, x, y, cena, taba):
     
         from sara.kwarwp import Kwarwp
+        from _spy.vitollino.main import Jogo
+        Kwarwp.VITOLLINO = Kwarwp.VITOLLINO or Jogo()
         """Importando localmente o Kwarwp para evitar referência circular."""
         
         self.taba = taba
