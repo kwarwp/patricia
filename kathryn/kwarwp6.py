@@ -185,7 +185,7 @@ class Indio():
         sprite_lin = self.AZIMUTE.index(self.azimute)
         """A linha do sprite depende da direção dque índio está olhando"""
         self.indio.pos = (-self.lado*sprite_col, -self.lado*sprite_lin)
-        self.anda()
+        self.anda()#adiciona o comando anda para retonar a imagem para o lado que o indio virou
 
     def esquerda(self):
         """ Faz o índio mudar da direção em que está olhando para a esquerda."""
@@ -310,10 +310,6 @@ class Piche(Vazio):
     def _pede_sair(self):
         """Objeto tenta sair mas não é autorizado"""
         self.taba.fala("Você ficou preso no piche")
-    """
-    @property
-    def elt(self):
-        return self.barra.elt"""
 
 class Oca(Piche):
     """ A Oca é o destino final do índio, não poderá sair se ele entrar nela.
