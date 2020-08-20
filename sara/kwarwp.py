@@ -119,7 +119,7 @@ class Indio():
     def sai(self):
         """ Rotina de saída falsa, o objeto Indio é usado como uma vaga nula.
         """
-        self.fala('hummm... tenho q carregar essa tora. Como vou fazer isso?')
+        pass
         
         
     def mostra(self):
