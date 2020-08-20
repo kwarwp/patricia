@@ -190,7 +190,7 @@ class Indio():
     def esquerda(self):
         """ Faz o índio mudar da direção em que está olhando para a esquerda."""
         self.azimute = self.AZIMUTE[self.AZIMUTE.index(self.azimute)-1]
-        self.mostra()
+        self.executa()
 
     def direita(self):
         """ Faz o índio mudar da direção em que está olhando para a direita."""
