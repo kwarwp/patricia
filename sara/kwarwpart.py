@@ -28,6 +28,8 @@ class Vazio():
         from sara.kwarwp import Kwarwp
         """Importando localmente o Kwarwp para evitar referência circular."""
         from _spy.vitollino.main import Jogo
+        Kwarwp.VITOLLINO = = vitollino()
+        
     
         self.lado = lado = Kwarwp.LADO
         self.posicao = (x//lado,y//lado-1)
