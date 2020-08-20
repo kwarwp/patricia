@@ -360,7 +360,6 @@ class Kwarwp():
         
         
     def pega(self, *_):
-        print('*-* CHEGUEI AQUI *-*')
         self.o_indio.pega()
         
         
