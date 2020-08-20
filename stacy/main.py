@@ -31,6 +31,8 @@ MAPA_ROCHA = """
 +^.+..+
 +++++++
 """
+from collections import namedtuple as nt
+from kwarwp.kwarwpart import Vazio, Piche, Oca, Tora, NULO
 
 class Vazio():
     """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
@@ -278,6 +280,8 @@ class Kwarwp():
         """ Ordena a execução do roteiro do índio.
         """
         self.o_indio.executa()
+        
+
 
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
