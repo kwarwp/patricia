@@ -214,7 +214,6 @@ class Indio():
         """
         self.indio.ocupa(ocupante)
         self.ocupante = ocupante
-
         
 
 class Vazio():
@@ -329,6 +328,7 @@ class Tora(Vazio):
         self.lado = lado = Kwarwp.LADO
         self.posicao = (x//lado,y//lado)
         self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+         
 
 class Piche(Vazio):
     """ Poça de Piche que gruda o índio se ele cair nela.
