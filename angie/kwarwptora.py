@@ -11,7 +11,7 @@ Changelog
 
 """
 from collections import namedtuple as nt
-from kwarwp.kwarwppart import Vazio, Piche, Oca, Tora, NULO
+from angie.kwarwpart import Vazio, Piche, Oca, Tora, NULO
 
 Ponto = nt("Ponto", "x y")
 """Par de coordenadas na direção horizontal (x) e vertiacal (y)."""
@@ -22,7 +22,7 @@ Rosa = nt("Rosa", "n l s o")
 IMGUR = "https://imgur.com/"
         
 MAPA_INICIO = """
-@....&
+.....&
 ......
 .....#
 .#.^..
@@ -246,7 +246,7 @@ class Kwarwp():
         :param x: coluna em que o elemento será posicionado.
         :param y: linha em que o elemento será posicionado.
         :param cena: cena em que o elemento será posicionado.
-
+,
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
         coisa = Indio(imagem, x=0, y=0, cena=cena, taba=self)
