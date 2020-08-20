@@ -589,3 +589,10 @@ AttributeError: 'module' object has no attribute 'VITOLLINO'
     Kwarwp.VITOLLINO = Kwarwp.VITOLLINO or Jogo()
 AttributeError: 'module' object has no attribute 'VITOLLINO'
 '''},
+{'date': 'Thu Aug 20 2020 17:22:33.751 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 127
+  self.indio.siz = (lado*3, lado*4)
+  ^
+IndentationError: expected an indented block
+'''},
