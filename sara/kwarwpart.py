@@ -16,6 +16,7 @@ Changelog
 
 from _spy.vitollino.main import Jogo, STYLE
 
+
 class Vazio():
     """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
         :param imagem: A figura representando o índio na posição indicada.
