@@ -40,7 +40,6 @@ MAPA_ROCHA = """
 |||||||
 """
 
-"""Mapa com o posicionamento inicial dos elementos."""
 Ponto = nt("Ponto", "x y")
 """Par de coordenadas na direção horizontal (x) e vertiacal (y)."""
 Rosa = nt("Rosa", "n l s o")
@@ -48,23 +47,16 @@ Rosa = nt("Rosa", "n l s o")
 
 
 class Indio():
-    """ Cria o personagem principal na arena do Kwarwp na posição definida.
-        :param imagem: A figura representando o índio na posição indicada.
-        :param x: Coluna em que o elemento será posicionado.
-        :param y: Cinha em que o elemento será posicionado.
-        :param cena: Cena em que o elemento será posicionado.
-        :param taba: Representa a taba onde o índio faz o desafio.
-    """
+
     AZIMUTE = Rosa(Ponto(0, -1),Ponto(1, 0),Ponto(0, 1),Ponto(-1, 0),)
     """Constante com os pares ordenados que representam os vetores unitários dos pontos cardeais."""
-    
+
     def __init__(self, imagem, x, y, cena, taba):
         self.lado = lado = Kwarwp.LADO
         self.azimute = self.AZIMUTE.n
         """índio olhando para o norte"""
         self.taba = taba
         self.vaga = self
-        self.ocupante = NULO
         self.posicao = (x//lado,y//lado)
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         self.x = x
@@ -73,7 +65,7 @@ class Indio():
             self.indio.siz = (lado*3, lado*4)
             """Define as proporções da folha de sprites"""
             self.mostra()
-       
+
     def mostra(self):
         """ Modifica a figura (Sprite) do índio mostrando para onde está indo.
         """
@@ -82,29 +74,87 @@ class Indio():
         sprite_lin = self.AZIMUTE.index(self.azimute)
         """A linha do sprite depende da direção dque índio está olhando"""
         self.indio.pos = (-self.lado*sprite_col, -self.lado*sprite_lin)
-       
+
     def esquerda(self):
         """ Faz o índio mudar da direção em que está olhando para a esquerda.
         """
         self.azimute = self.AZIMUTE[self.AZIMUTE.index(self.azimute)-1]
         self.mostra()
-       
+
     def direita(self):
         """ Faz o índio mudar da direção em que está olhando para a direita.
         """
         self.azimute = self.AZIMUTE[self.AZIMUTE.index(self.azimute)-3]
         self.mostra()
-       
+
     def fala(self, texto=""):
         """ O índio fala um texto dado.
-        
+
         :param texto: O texto a ser falado.
         """
         self.taba.fala(texto)
-
+    
     def anda(self):
         """Objeto tenta sair, tem que consultar a vaga onde está"""
-        self.vaga.sair()      
+        self.vaga.sair()
+
+    def sair(self):
+        """Objeto de posse do índio tenta sair e é autorizado"""
+        self.vaga.ocupante.siga()
+
+    def siga(self):
+        """Objeto tentou sair e foi autorizado"""
+        self._anda()
+
+    def _anda(self):
+        """ Faz o índio caminhar na direção em que está olhando.
+        """
+        destino = (self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
+        """A posição para onde o índio vai depende do vetor de azimute corrente"""
+        taba = self.taba.taba
+        if destino in taba:
+            vaga = taba[destino]
+            """Recupera na taba a vaga para a qual o índio irá se transferir"""
+            vaga.acessa(self)
+        
+    def executa(self):
+        """ Roteiro do índio. Conjunto de comandos para ele executar.
+        """
+        self.anda()
+    
+    def sai(self):
+        """ Rotina de saída falsa, o objeto Indio é usado como uma vaga nula.
+        """
+        pass
+
+    @property
+    def elt(self):
+        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
+
+        No caso do índio, retorna o elt do elemento do atributo **self.indio**.
+        """
+        return self.indio.elt
+
+    def ocupa(self, vaga):
+        """ Pedido por uma vaga para que ocupe a posição nela.
+
+        :param vaga: A vaga que será ocupada pelo componente.
+
+        No caso do índio, requisita que a vaga seja ocupada por ele.
+        """
+        self.vaga.sai()
+        self.posicao = vaga.posicao
+        vaga.ocupou(self)
+        self.vaga = vaga
+
+    def acessa(self, ocupante):
+        """ Pedido de acesso a essa posição, delegada ao ocupante pela vaga.
+
+        :param ocupante: O componente candidato a ocupar a vaga já ocupada pelo índio.
+
+        No caso do índio, ele age como um obstáculo e não prossegue com o protocolo.
+        """
+        pass
 
     def pega(self):
         """tenta pegar o objeto que está diante dele"""
@@ -127,76 +177,19 @@ class Indio():
             # self.ocupante.largar(vaga)
             vaga.acessa(self.ocupante)
 
-    def sair(self):
-        """Objeto de posse do índio tenta sair e é autorizado"""
-        self.vaga.ocupante.siga()      
-
-    def siga(self):
-        """Objeto tentou sair e foi autorizado"""
-        self._anda()       
-
-    def _anda(self):
-        """ Faz o índio caminhar na direção em que está olhando.
-        """
-        destino = (self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
-        """A posição para onde o índio vai depende do vetor de azimute corrente"""
-        taba = self.taba.taba
-        if destino in taba:
-            vaga = taba[destino]
-            """Recupera na taba a vaga para a qual o índio irá se transferir"""
-            vaga.acessa(self)
- 
     def ocupou(self, ocupante):
         """ O candidato à vaga decidiu ocupá-la e efetivamente entra neste espaço.
-        
+
         :param ocupante: O canditato a ocupar a posição corrente.
-        
+
         Este ocupante vai entrar no elemento do Vitollino e definitivamente se tornar
         o ocupante da vaga. Com isso ele troca o estado do método acessa para primeiro
         consultar a si mesmo, o ocupante corrente usando o protocolo definido em
         **_valida_acessa ()**
+
         """
         self.indio.ocupa(ocupante)
         self.ocupante = ocupante
-        
-    def sai(self):
-        """ Rotina de saída falsa, o objeto Indio é usado como uma vaga nula.
-        """
-        pass
-         
-    def executa(self):
-        """ Roteiro do índio. Conjunto de comandos para ele executar.
-        """
-        self.anda()
-
-    @property        
-    def elt(self):
-        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
-        No caso do índio, retorna o elt do elemento do atributo **self.indio**.
-        """
-        return self.indio.elt
-        
-    def ocupa(self, vaga):
-        """ Pedido por uma vaga para que ocupe a posição nela.
-        
-        :param vaga: A vaga que será ocupada pelo componente.
-        No caso do índio, requisita que a vaga seja ocupada por ele.
-        """
-        self.vaga.sai()
-        self.posicao = vaga.posicao
-        vaga.ocupou(self)
-        self.vaga = vaga
-        if self.x:
-            self.mostra()
-        
-    def acessa(self, ocupante):
-        """ Pedido de acesso a essa posição, delegada ao ocupante pela vaga.
-        
-        :param ocupante: O componente candidato a ocupar a vaga já ocupada pelo índio.
-        No caso do índio, ele age como um obstáculo e não prossegue com o protocolo.
-        """
-        pass
-
 
 class Kwarwp():
     """ Jogo para ensino de programação.
@@ -362,19 +355,75 @@ class Kwarwp():
         """o índio.vai é associado ao seu próprio metodo pega"""
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
         return vaga
+    def fala(self, texto=""):
+        """ O Kwarwp é aqui usado para falar algo que ficará escrito no céu.
+        """
+        self.ceu.elt.html = texto
+        pass
 
+    def esquerda(self, *_):
+        """ Ordena a execução do roteiro do índio.
+        """
+        self.o_indio.esquerda()
 
-def main(vitollino, medidas={}):
-    """ Rotina principal que invoca a classe Kwarwp.
+    def executa(self, *_):
+        """ Ordena a execução do roteiro do índio.
+        """
+        self.o_indio.executa()
     
-    :param vitollino: Empacota o engenho de jogo Vitollino.
-    :param medidas: Um dicionário usado para redimensionar a tela.
-    """
-    
-    Kwarwp(vitollino, medidas=medidas)
+    def maloc(self, imagem, x, y, cena):
+        """ Cria uma maloca na arena do Kwarwp na posição definida.
+
+        :param x: coluna em que o elemento será posicionado.
+        :param y: linha em que o elemento será posicionado.
+        :param cena: cena em que o elemento será posicionado.
+
+        Cria uma vaga vazia e coloca o componente dentro dela.
+        """
+        coisa = Oca(imagem, x=0, y=0, cena=cena, taba=self)
         
-    
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+        return vaga
+
+    def barra(self, imagem, x, y, cena):
+        """ Cria uma armadilha na arena do Kwarwp na posição definida.
+
+        :param x: coluna em que o elemento será posicionado.
+        :param y: linha em que o elemento será posicionado.
+        :param cena: cena em que o elemento será posicionado.
+
+        Cria uma vaga vazia e coloca o componente dentro dela.
+        """
+        coisa = Piche(imagem, x=0, y=0, cena=cena, taba=self)
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+        return vaga
+
+    def tora(self, imagem, x, y, cena):
+        """ Cria uma armadilha na arena do Kwarwp na posição definida.
+
+        :param x: coluna em que o elemento será posicionado.
+        :param y: linha em que o elemento será posicionado.
+        :param cena: cena em que o elemento será posicionado.
+
+        Cria uma vaga vazia e coloca o componente dentro dela.
+        """
+        coisa = Tora(imagem, x=x, y=y, cena=cena, taba=self)
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+        return vaga
+
+    def sai(self, *_):
+        """ O Kwarwp é aqui usado como uma vaga falsa, o pedido de sair é ignorado.
+        """
+        pass
+
+    def ocupa(self, *_):
+        """ O Kwarwp é aqui usado como um ocupante falso, o pedido de ocupar é ignorado.
+        """
+        pass
+
+
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
-    STYLE.update(width=600, height="500px")
-    main(Jogo, STYLE)
+    STYLE["width"] = 600
+    STYLE["heigth"] = "500px"
+    Kwarwp(Jogo, mapa=MAPA_INICIO)
