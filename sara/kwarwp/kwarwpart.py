@@ -1,9 +1,7 @@
 # patricia/sara.kwarwp.kwarwpart.py
 # SPDX-License-Identifier: GPL-3.0-or-later
 """ Projeto Indio.
-
 .. codeauthor:: Paulo Assumpção <paulo.assump@gmail.com>
-
 Changelog
 ---------
 .. versionadded::    20.08
@@ -14,14 +12,10 @@ Changelog
         - Oca, 
         - Tora, 
         - NULO
-
 """
-
-NULO = Nulo()
 
 class Vazio():
     """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
-
         :param imagem: A figura representando o índio na posição indicada.
         :param x: Coluna em que o elemento será posicionado.
         :param y: Cinha em que o elemento será posicionado.
@@ -66,11 +60,9 @@ class Vazio():
         
     def _acessa(self, ocupante):
         """ Atualmente a posição está vaga e pode ser acessada pelo novo ocupante.
-
         A responsabilidade de ocupar definitivamente a vaga é do candidato a ocupante
         Caso ele esteja realmente apto a ocupar a vaga e deve cahamar de volta ao vazio
         com uma chamada ocupou.
-
             :param ocupante: O canditato a ocupar a posição corrente.
         """
         ocupante.ocupa(self)  
@@ -78,14 +70,11 @@ class Vazio():
 
     def ocupou(self, ocupante):
         """ O candidato à vaga decidiu ocupá-la e efetivamente entra neste espaço.
-
         :param ocupante: O canditato a ocupar a posição corrente.
-
         Este ocupante vai entrar no elemento do Vitollino e definitivamente se tornar
         o ocupante da vaga. Com isso ele troca o estado do método acessa para primeiro
         consultar a si mesmo, o ocupante corrente usando o protocolo definido em
         **_valida_acessa ()**
-
         """
         self.vazio.ocupa(ocupante)
         self.ocupante = ocupante
@@ -125,7 +114,6 @@ class Vazio():
 
 class Piche(Vazio):
     """ Poça de Piche que gruda o índio se ele cair nela.
-
         :param imagem: A figura representando o índio na posição indicada.
         :param x: Coluna em que o elemento será posicionado.
         :param y: Cinha em que o elemento será posicionado.
@@ -155,9 +143,7 @@ class Piche(Vazio):
 
     def ocupa(self, vaga):
         """ Pedido por uma vaga para que ocupe a posição nela.
-
         :param vaga: A vaga que será ocupada pelo componente.
-
         No caso do piche, requisita que a vaga seja ocupada por ele.
         """
         self.vaga.sai()
@@ -173,7 +159,6 @@ class Piche(Vazio):
 
 class Tora(Piche):
     """  A Tora é um pedaço de tronco cortado que o índio pode carregar ou empurrar.
-
         :param imagem: A figura representando o índio na posição indicada.
         :param x: Coluna em que o elemento será posicionado.
         :param y: Linha em que o elemento será posicionado.
@@ -183,7 +168,6 @@ class Tora(Piche):
 
     def pegar(self, requisitante):
         """ Consulta o ocupante atual se há permissão para pegar e entregar ao requistante.
-
             :param requistante: O ator querendo pegar o objeto.
         """
         vaga = requisitante
@@ -195,7 +179,6 @@ class Tora(Piche):
     @property
     def posicao(self):
         """ A propriedade posição faz parte do protocolo do double dispatch com o Indio .
-
         No caso da tora, retorna o a posição do atributo **self.vaga**.
         """
         return self.vaga.posicao
@@ -203,7 +186,6 @@ class Tora(Piche):
     @posicao.setter
     def posicao(self, _):
         """ A propriedade posição faz parte do protocolo do double dispatch com o Indio .
-
         No caso da tora, é uma propriedade de somente leitura, não executa nada.
         """
         pass
@@ -211,16 +193,13 @@ class Tora(Piche):
     @property
     def elt(self):
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
-
         No caso da tora, retorna o elt do elemento do atributo **self.vazio**.
         """
         return self.vazio.elt
 
     def _acessa(self, ocupante):
         """ Pedido de acesso a essa posição, delegada ao ocupante pela vaga.
-
         :param ocupante: O componente candidato a ocupar a vaga já ocupada pelo índio.
-
         No caso da tora, ela age como um obstáculo e não prossegue com o protocolo.
         """
         pass
@@ -229,7 +208,6 @@ class Tora(Piche):
 
 class Oca(Piche):
     """ A Oca é o destino final do índio, não poderá sair se ele entrar nela.
-
         :param imagem: A figura representando o índio na posição indicada.
         :param x: Coluna em que o elemento será posicionado.
         :param y: Cinha em que o elemento será posicionado.
@@ -245,11 +223,9 @@ class Oca(Piche):
 
     def _acessa(self, ocupante):
         """ Atualmente a posição está vaga e pode ser acessada pelo novo ocupante.
-
         A responsabilidade de ocupar definitivamente a vaga é do candidato a ocupante
         Caso ele esteja realmente apto a ocupar a vaga e deve cahamar de volta ao vazio
         com uma chamada ocupou.
-
             :param ocupante: O canditato a ocupar a posição corrente.
         """
         self.taba.fala("Você chegou no seu objetivo")
@@ -262,10 +238,10 @@ class Nulo:
 
     def nulo(self, *_, **__):
         """Método nulo, responde passivamente a todas as chamadas.
-
         :param _: aceita todos os argumentos posicionais.
         :param __: aceita todos os argumentos nomeados.
         :return: retorna o próprio objeto nulo.
         """
         return self
-
+        
+NULO = Nulo()
