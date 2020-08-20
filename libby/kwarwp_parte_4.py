@@ -10,7 +10,7 @@ Changelog
         Descreva o que você adicionou no código.
 
 """
-"""
+
 from collections import namedtuple as nt
 from kwarwp.kwarwpart import Vazio, Piche, Oca, Tora, NULO
 
@@ -370,7 +370,7 @@ def main(vitollino, medidas={}):
     :param vitollino: Empacota o engenho de jogo Vitollino.
     :param medidas: Um dicionário usado para redimensionar a tela.
     """
-    # print(f"main(vitollino={vitollino} medidas={medidas}")
+    
     Kwarwp(vitollino, medidas=medidas)
         
     
