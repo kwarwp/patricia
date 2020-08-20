@@ -103,7 +103,7 @@ class Indio():
     def _anda(self):
         """ Faz o índio caminhar na direção em que está olhando.
         """
-        print("Estou me preparando para andar")
+        print("Estou me preparando para andar. Estou em ", self.posicao[0]+self, self.posicao[1], " e vou para: ", self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
         destino = (self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
         """A posição para onde o índio vai depende do vetor de azimute corrente"""
         taba = self.taba.taba
