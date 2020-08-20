@@ -120,7 +120,7 @@ class Indio():
 
         No caso do índio, retorna o elt do elemento do atributo **self.indio**.
         
-        Anexa um div html à outro div.
+        Anexa um div html a outro div.
         elt é usado pelo duplo despacho para procurar o correspondente.
         Os div's (compornentes) da taba estão trocando de lugar no browser a todo tempo.
         O elt tem de apontar para o div que tem o personagem.
