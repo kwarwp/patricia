@@ -32,7 +32,7 @@ MAPA_INICIAL2= """
 """
 
 Ponto = nt("Ponto", "x y")
-"""Par de coordenadas na direção horizontal (x) e vertiacal (y)."""
+"""Par de coordenadas na direção horizontal (x) e vertical (y)."""
 Rosa = nt("Rosa", "n l s o")
 """Rosa dos ventos com as direções norte, leste, sul e oeste."""
 
@@ -345,7 +345,7 @@ class Kwarwp():
             a url deste 
         """
         fabrica ={"#": Fab(self.coisa, f"{IMGUR}uwYPNlz.png"), # CERCA
-                 "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
+                 "^": Fab(self.indio, f"{IMGUR}UCWGCKR.png"), # INDIO
                  ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), #VAZIO
                  "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), #SOLO
                  "&": Fab(self.maloc, f"{IMGUR}dZQ8liT.jpg"), #OCA
