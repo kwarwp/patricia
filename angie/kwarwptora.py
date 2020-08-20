@@ -22,7 +22,7 @@ Rosa = nt("Rosa", "n l s o")
 IMGUR = "https://imgur.com/"
         
 MAPA_INICIO = """
-.....&
+@....&
 ......
 .....#
 .#.^..
