@@ -196,3 +196,10 @@ AttributeError: 'Kwarwp' object has no attribute 'vazio'
     return vazio(imagem, x=x, y=y, cena=cena)
 NameError: name 'vazio' is not defined
 '''},
+{'date': 'Wed Aug 19 2020 23:10:48.303 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 329
+  """Dicionário que define o tipo e a imagem do objeto para cada elemento"""
+  ^
+IndentationError: unexpected indent
+'''},
