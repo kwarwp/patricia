@@ -508,7 +508,7 @@ class Kwarwp():
 
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
-        coisa = Oca(imagem, x=1, y=0, cena=cena, taba=self)
+        coisa = Oca(imagem, x=0, y=0, cena=cena, taba=self)
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
         return vaga
         
@@ -584,7 +584,7 @@ class Kwarwp():
         :param y: linha em que o elemento será posicionado.
         :param cena: cena em que o elemento será posicionado.
         """
-        self.o_indio = Indio(imagem, x=1, y=0, cena=cena, taba=self)
+        self.o_indio = Indio(imagem, x=1, y=2, cena=cena, taba=self)
         """ O índio tem deslocamento zero, pois é relativo à vaga.
             O **x=1** serve para distinguir o indio de outros derivados.
         """
