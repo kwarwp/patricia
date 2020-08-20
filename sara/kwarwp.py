@@ -354,12 +354,13 @@ class Kwarwp():
         pass
 
         
-    def anda(self, *_):
+    def executa(self, *_):
         self.o_indio.executa()
-        print("Andando... ")
+        print("Andando...")
         
         
     def pega(self, *_):
+        print('*-* CHEGUEI AQUI *-*')
         self.o_indio.pega()
         
         
