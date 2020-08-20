@@ -115,7 +115,6 @@ class Vazio():
         self.acessa = self._valida_acessa
         self.sair = self._pede_sair
 
-
     @property        
     def elt(self):
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
