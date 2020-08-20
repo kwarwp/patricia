@@ -61,7 +61,7 @@ class Kwarwp():
            O *ceu* agora é um argumento de instância e por isso é referenciado como **self.ceu**.
         """
         #sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena)
-        sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena, vai=self.esquerda)
+        sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena, vai=self.executa)
         """No argumento *vai*, associamos o clique no sol com o método **esquerda ()** desta classe."""
         
         self.taba = {(i, j): 
