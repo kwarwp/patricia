@@ -341,9 +341,7 @@ class Oca(Piche):
         self.taba.fala("Você chegou no seu objetivo")
         ocupante.ocupa(self)
         
-    @property
-    def elt(self):
-        return self.maloc.elt
+
         
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo
