@@ -133,7 +133,7 @@ class Vazio():
     """
 
     def __init__(self, imagem, x, y, cena, ocupante=None):
-        self.lado = lado = Kwarwp.LADO # Retorna None
+        self.lado = lado = Kwarwp.LADO # Retorna None ou 100 de Kwarwp
         self.posicao = (x//lado,y//lado-1) # Pq o -1?
         self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena) 
         """ X e Y serão susbstiuídos pela taba."""
@@ -199,7 +199,7 @@ class Vazio():
         No caso do espaço vazio, vai retornar um elemento que não contém nada.
         """
         #return self._nada.elt
-        return self.vazio.elt
+        return self.vazio.elt # A princípio funciona. Investigar.
     
     
 class Kwarwp():
@@ -225,6 +225,7 @@ class Kwarwp():
         self.lado, self.coluna, self.linha = 100, len(self.mapa[0]), len(self.mapa)+1
         """Lado, coluna, linha"""
         Kwarwp.LADO = self.lado
+        """Kwarwp.None = 100 """
         
         self.o_indio = None
         """O personagem principal, o indio, vai ser atribuído pela fábrica do índio"""
@@ -247,7 +248,7 @@ class Kwarwp():
     def cria(self, mapa=""):
     
         IMGUR = "https://i.imgur.com/"
-        """ Gera uma global interna usada na formatação do dicionário fabrica"""
+        """ Gera uma global local usada na formatação do dicionário fabrica"""
         Fab = nt("Fab", "objeto url")
         """ Resgate do colections.nametuple.
             Criado uma nova coleção de dados, do tipo fab que acolhe informações quanto ao objeto e
@@ -266,7 +267,7 @@ class Kwarwp():
         
         mapa = mapa if mapa != "" else self.mapa #descobrir o que isso faz
         
-        mapa = self.mapa #uguala ao mapa do init
+        mapa = self.mapa #iguala ao mapa do init
         lado = self.lado #iguala ao lado do init
         cena = self.v.c(fabrica["_"].url)
         """Chama elemento da fábrica [solo] agregando ao seu atributo url para criar a cena"""
@@ -298,6 +299,7 @@ class Kwarwp():
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
         coisa = Indio(imagem, x=0, y=0, cena=cena, taba=self)
+        """ """
         vaga = Vazio(imagem, x=x, y=y, cena=cena, ocupante=coisa)
         return vaga
         
