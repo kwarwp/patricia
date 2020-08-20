@@ -13,14 +13,10 @@ Changelog
 from _spy.vitollino.main import Jogo, STYLE 
 from collections import namedtuple as nt
 
-#largura e altura, respectivamente
-#STYLE["width"] = 700
-#STYLE["height"] = "600px"
-
 
 MAPA_INICIAL= """
 .........
-......|.&
+...@..&.&
 .........
 .........
 .........
@@ -94,6 +90,9 @@ class Indio():
         """ Roteiro do índio. Conjunto de comandos para ele executar.
         """
         self.anda()
+        self.anda()
+        self.esquerda()
+        self.direita()
         
     def _anda(self):
         """ Faz o indio caminhar na direcao em que esta olhando"""
@@ -248,6 +247,13 @@ class Piche(Vazio):
         
     def _pede_sair(self):
         self.taba.fala("Você ficou preso MUAHAHAHA")
+        
+    @property
+    def elt(self):
+        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
+        No caso do espaço vazio, vai retornar um elemento que não contém nada.
+        """
+        return self.vazio.elt
 
 class Oca(Piche):
 
@@ -280,7 +286,13 @@ class Oca(Piche):
         """
         self.taba.fala("Você chegou no seu objetivo")
         ocupante.ocupa(self)        
-    
+
+    @property
+    def elt(self):
+        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
+        No caso do espaço vazio, vai retornar um elemento que não contém nada.
+        """
+        return self.vazio.elt
     
 class Kwarwp():
 
@@ -392,7 +404,7 @@ class Kwarwp():
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
         coisa = Oca(imagem, x=0, y=0, cena=cena, taba=self)
-        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante= coisa)
         return vaga
         
     def barra(self, imagem, x, y, cena):
@@ -418,6 +430,11 @@ class Kwarwp():
         """ Ordena a execução do roteiro do índio.
         """
         self.o_indio.esquerda()
+        
+    def direita(self, *_):
+        """ Ordena a execução do roteiro do índio.
+        """
+        self.o_indio.direita()
         
     def vazio(self, imagem, x,y ,cena):
         vaga = Vazio(imagem, x=x, y=y, cena=cena, ocupante=self)
