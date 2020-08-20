@@ -320,7 +320,7 @@ class Vazio():
         
 
 # Importando essa classe do Kwarwp
-class Tora(Vazio):
+class Tora(Piche):
 
     """ A tora é um objeto que o índio pode mover.
         :param imagem: A figura representando o índio na posição indicada.
