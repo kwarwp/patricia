@@ -111,14 +111,22 @@ class Vazio():
     
 class Indio():
 
-    def __init__(self, imagem, x, y, cena, taba): #teste colocado param taba
+    def __init__(self, imagem, x, y, cena, taba): 
         self.lado = lado = Kwarwp.LADO
-        self.posicao = (x//lado, y//lado)  # XXX[3]XXX faltou definir posição
+        self.posicao = (x//3, y//lado)  # XXX[3]XXX faltou definir posição
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         self.vaga = self # XXX[0]XXX faltou esta linha!
         #teste
         self.taba = taba
-
+        self.vaga = self
+        self.posicao = (x//lado,y//lado)
+        self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        self.x = x
+        if x:
+        self.indio.siz = (lado*3, lado*4)
+        """Define as proporções da folha de sprites"""
+        self.mostra()
+        
     def anda(self):
         """ Faz o índio caminhar na direção em que está olhando.
         """
