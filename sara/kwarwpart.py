@@ -25,12 +25,9 @@ class Vazio():
         :param cena: Cena em que o elemento será posicionado.
     """
 
-    def __init__(self, imagem, x, y, cena, ocupante=None):
+    def __init__(self, imagem, x, y, cena, ocupante=None, lado):
     
-        from sara.kwarwp import Kwarwp
-        """Importando localmente o Kwarwp para evitar referência circular."""
-    
-        self.lado = lado = Kwarwp.LADO
+        self.lado = lado
         self.posicao = (x//lado,y//lado-1)
         self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         self._nada = Kwarwp.VITOLLINO.a()
@@ -127,14 +124,11 @@ class Piche(Vazio):
         :param cena: Cena em que o elemento será posicionado.
         :param taba: Representa a taba onde o índio faz o desafio.
     """
-    def __init__(self, imagem, x, y, cena, taba):
-    
-        from sara.kwarwp import Kwarwp
-        """Importando localmente o Kwarwp para evitar referência circular."""
+    def __init__(self, imagem, x, y, cena, taba, lado):
         
         self.taba = taba
         self.vaga = taba
-        self.lado = lado = Kwarwp.LADO
+        self.lado = lado
         self.posicao = (x//lado,y//lado-1)
         self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena)
         self._nada = Kwarwp.VITOLLINO.a()
