@@ -570,3 +570,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Thu Aug 20 2020 20:08:57.238 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 69
+  self.mostra()
+  ^
+IndentationError: unexpected indent
+'''},
