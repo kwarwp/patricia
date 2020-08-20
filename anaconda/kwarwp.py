@@ -37,8 +37,12 @@ MAPA_INICIAL2= """
 
 class Indio():
     """ Cria estrutura índio que será chamada no kwarwp"""
-    #def __init__(self, imagem, x, y, cena):###01###
-    def __init__(self, imagem, x, y, cena, taba):###01###Adicionei o taba para ser chamado
+    def __init__(self, imagem, x, y, cena, taba): 
+        """ Anteriormente a 'taba' não era solicitada em Índio() pois kwarwp.índio() não o solicitava.
+        Embora Índio() já fosse uma classe, a versão anterior da construção alterava os valores de x,y
+        para movimentar o índio.
+        Nesta versão TABA tem de ser consultada na solicitação de migração pois é necessário um vazio adjacente.
+        """
         self.lado = lado = Kwarwp.LADO
         self.vaga = self
         self.posicao = (x//lado,y//lado)
