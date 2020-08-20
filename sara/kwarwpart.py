@@ -65,6 +65,7 @@ class Vazio():
 
     def _pede_sair(self):
         """Objeto tenta sair e consulta o ocupante para seguir"""
+        print("Vou chamar o método sair da classe ", type(self.ocupante))
         self.ocupante.sair()
         
         
