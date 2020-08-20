@@ -5114,3 +5114,10 @@ AttributeError: 'NoneType' object has no attribute 'a'
     self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena)
 AttributeError: 'NoneType' object has no attribute 'a'
 '''},
+{'date': 'Thu Aug 20 2020 17:22:05.750 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 105
+  print ("posicao", self.posicao[0], "+", self.azimute.x, "=", self.posicao[0]+self.azimute.x, self.posicao[1], "+" ,self.azimute.y, "=" self.posicao[1]+self.azimute.y)
+                                                                                                                                          ^
+SyntaxError: invalid syntax
+'''},
