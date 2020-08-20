@@ -168,3 +168,10 @@ SyntaxError: invalid syntax
     self.azimute = self.AZIMUTE.n
 AttributeError: 'Indio' object has no attribute 'AZIMUTE'
 '''},
+{'date': 'Thu Aug 20 2020 17:01:06.792 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 126
+  self.indio.siz = (lado*3, lado*4)
+  ^
+IndentationError: expected an indented block
+'''},
