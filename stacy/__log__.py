@@ -175,3 +175,10 @@ AttributeError: 'Indio' object has no attribute 'AZIMUTE'
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Thu Aug 20 2020 17:02:53.503 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 127
+  self.indio.siz = (lado*3, lado*4)
+  ^
+IndentationError: expected an indented block
+'''},
