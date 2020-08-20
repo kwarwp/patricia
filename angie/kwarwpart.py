@@ -277,5 +277,4 @@ class Tora(Piche):
         """
         pass
 
-if __name__ == "__main__":
-    from _spy.vitollino.main import Jogo
+
