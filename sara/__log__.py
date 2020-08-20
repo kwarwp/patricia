@@ -3638,3 +3638,7 @@ TypeError: 'module' object is not callable
 'error': '''
 Exception: <TypeError: Cannot read property '$methods' of undefined>
 '''},
+{'date': 'Thu Aug 20 2020 10:01:20.125 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: Cannot read property '$methods' of undefined>
+'''},
