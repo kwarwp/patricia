@@ -93,7 +93,7 @@ Rosa = nt("Rosa", "n l s o")
 
 class Indio():
     """Constante com os pares ordenados que representam os vetores unitários dos pontos cardeais."""
-AZIMUTE = Rosa(Ponto(0, -1),Ponto(1, 0),Ponto(0, 1),Ponto(-1, 0),)
+    AZIMUTE = Rosa(Ponto(0, -1),Ponto(1, 0),Ponto(0, 1),Ponto(-1, 0),)
     def __init__(self, imagem, x, y, cena, taba):
         """índio olhando para o norte"""
         self.azimute = self.AZIMUTE.n
