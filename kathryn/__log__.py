@@ -734,3 +734,10 @@ AttributeError: 'Kwarwp' object has no attribute 'esquerda'
     coisa = Piche(imagem, x=0, y=0, cena=cena, taba=self)
 NameError: name 'Piche' is not defined
 '''},
+{'date': 'Thu Aug 20 2020 14:46:31.389 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 268
+  def __init__(self, imagem, x, y, cena, taba):
+  ^
+IndentationError: unexpected indent
+'''},
