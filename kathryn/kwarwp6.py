@@ -47,7 +47,7 @@ class Kwarwp():
         Fab = nt("Fab", "objeto imagem")
         fabrica = {
         "&": Fab(self.maloc, f"{IMGUR}dZQ8liT.jpg"), # OCA
-        "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
+        "^": Fab(self.indio, f"{IMGUR}UCWGCKR.png"), # INDIO
         ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), # VAZIO
         "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), # SOLO
         "#": Fab(self.coisa, f"{IMGUR}ldI7IbK.png"), # TORA  
