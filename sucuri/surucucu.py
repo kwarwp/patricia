@@ -51,9 +51,11 @@ class Indio():
         self.posicao = (x//lado,y//lado)
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         self.x = x
-        """Este x provisoriamente distingue o índio de outras coisas construídas com esta classe"""
+        """Este x provisoriamente distingue o índio de outras coisas construídas com esta classe
+           Antes o que o distinguia era o 'o_indio'
+        """
         if x:
-            self.indio.siz = (lado*3, lado*4) #q é esse sis?
+            self.indio.size = (lado*3, lado*4) #alterei siz para size para ver o que acontece
             """Define as proporções da folha de sprites"""
             self.mostra()
             
