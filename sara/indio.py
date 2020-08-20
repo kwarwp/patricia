@@ -242,7 +242,6 @@ class Kwarwp():
         self.lado, self.col, self.lin = 100, len(self.mapa[0]), len(self.mapa)+1
         """Largura da casa da arena dos desafios, número de colunas e linhas no mapa"""
         Kwarwp.LADO = self.lado
-        print(self.lado)
         w, h = self.col *self.lado, self.lin *self.lado
         """Dicionário que a partir de coordenada (i,J) localiza um piso da taba"""
         medidas.update(width=w, height=f"{h}px")
