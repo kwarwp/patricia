@@ -261,7 +261,7 @@ class Vazio():
         self.vazio.ocupa(ocupante)
         self.ocupante = ocupante
         self.acessa = self._valida_acessa
-        self.sair = self._pede_sair
+        self.sair = self._pede_sair#chamar o pede_sair assim como o acessa chama o valida_acessa
         
     def ocupa(self, vaga):
         pass
