@@ -21,11 +21,18 @@ MAPA_INICIO = """
 +^..+.&.+
 +++++++++
 """
+mapa_2 = """
+......
+......
+..@...
+......
+..^...
+"""
 class Kwarwp():
     VITOLLINO = None
     LADO = None
 
-    def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):    
+    def __init__(self, vitollino=None, mapa=mapa_2, medidas={}):    
         Kwarwp.VITOLLINO = self.v = vitollino()
         self.mapa = mapa.split()
         self.lado, self.col, self.lin = 100, len(self.mapa[0]), len(self.mapa)+1
