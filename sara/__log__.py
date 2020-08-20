@@ -3836,3 +3836,19 @@ SystemError: Parent module '' not loaded, cannot perform relative import
     NULO = Nulo()
 NameError: name 'Nulo' is not defined
 '''},
+{'date': 'Thu Aug 20 2020 14:27:58.899 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 21
+    from sara.kwarwp.kwarwpart import Vazio, Piche, Oca, Tora, NULO
+ImportError: cannot import name 'Vazio'
+'''},
