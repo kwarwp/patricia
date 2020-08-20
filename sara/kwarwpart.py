@@ -59,7 +59,7 @@ class Vazio():
         
     def _sair(self):
         """Objeto tenta sair e recebe autorização para seguir"""
-        #print("Vou chamar o método siga da classe ", type(self.ocupante))
+        print("Vou chamar o método siga da classe ", type(self.ocupante))
         self.ocupante.siga()
         
 
@@ -97,7 +97,7 @@ class Vazio():
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
         No caso do espaço vazio, vai retornar um elemento que não contém nada.
         """
-        return self._nada.elt
+        return self.vazio.elt
         
         
     def ocupa(self, vaga):
