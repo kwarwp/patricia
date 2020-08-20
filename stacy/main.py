@@ -11,7 +11,7 @@ Changelog
 """
 MAPA_INICIO = """
 @....&
-......
+.#.#.#...
 .....#
 .#.^..
 """
@@ -30,14 +30,6 @@ MAPA_ROCHA = """
 +..%..+
 +^.+..+
 +++++++
-"""
-
-MAPA_INICIO = """
-@#..#.&
-.#..#..
-.#..#..
-.#..#..
-.#.^..
 """
 
 from collections import namedtuple as nt
