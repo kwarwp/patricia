@@ -105,6 +105,7 @@ class Vazio():
         self.vazio.ocupa(ocupante)
         self.ocupante = ocupante
         self.acessa = self._valida_acessa       
+        self.sair = self._pede_sair
         
     def ocupa(self, vaga):
         """ Pedido por uma vaga para que ocupe a posição nela.
@@ -144,7 +145,7 @@ class Piche(Vazio):
         self.lado = lado = Kwarwp.LADO
         self.posicao = (x//lado,y//lado-1)
         self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena)
-        self._nada = Kwarwp.VITOLLINO.a()
+        #self._nada = Kwarwp.VITOLLINO.a()
         self.acessa = self._acessa
         """O **acessa ()** é usado como método dinâmico, variando com o estado da vaga.
         Inicialmente tem o comportamento de **_acessa ()** que é o estado vago, aceitando ocupantes"""
@@ -152,6 +153,13 @@ class Piche(Vazio):
         """O **sair ()** é usado como método dinâmico, variando com o estado da vaga.
         Inicialmente tem o comportamento de **_sair ()** que é o estado vago, aceitando ocupantes"""
 
+    @property
+    def elt(self):
+        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
+        No caso do piche, vai retornar um elemento que tem o seu sprite.
+        """
+        return self.vazio.elt
+        
     def ocupa(self, vaga):
         """ Pedido por uma vaga para que ocupe a posição nela.
 
@@ -166,28 +174,9 @@ class Piche(Vazio):
 
     def _pede_sair(self):
         """Objeto tenta sair mas não é autorizado"""
-        self.taba.fala("pede sair do piche")
+        self.taba.fala("Você ficou preso no piche") 
         
-    def _acessa(self, ocupante):
-        """ Atualmente a posição está vaga e pode ser acessada pelo novo ocupante.
 
-        A responsabilidade de ocupar definitivamente a vaga é do candidato a ocupante
-        Caso ele esteja realmente apto a ocupar a vaga e deve cahamar de volta ao vazio
-        com uma chamada ocupou.
-
-            :param ocupante: O canditato a ocupar a posição corrente.
-        """
-        self.taba.fala("Você está preso no piche")
-        ocupante.ocupa(self)    
-
-    @property
-    def elt(self):
-        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
-        No caso do piche, vai retornar um elemento que tem o seu sprite.
-        """
-        return self.vazio.elt
-
-    
 class Oca(Piche):
     """ A Oca é o destino final do índio, não poderá sair se ele entrar nela.
 
@@ -214,12 +203,6 @@ class Oca(Piche):
         self.taba.fala("Você chegou no seu objetivo")
         ocupante.ocupa(self)    
     
-    @property
-    def elt(self):
-        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
-        No caso da oca, vai retornar um elemento que tem o seu sprite.
-        """
-        return self.vazio.elt
 
 class Indio():
 
