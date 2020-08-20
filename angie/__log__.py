@@ -2346,3 +2346,25 @@ NameError: name 'Rosa' is not defined
     Ponto = nt("Ponto", "x y")
 TypeError: 'module' object is not callable
 '''},
+{'date': 'Thu Aug 20 2020 14:42:19.138 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 371
+    Kwarwp(Jogo, mapa=MAPA_INICIO)
+  module <module> line 203
+    self.cena = self.cria(mapa=self.mapa) if vitollino else None
+  module <module> line 237
+    self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
+  module <module> line 339
+    coisa = Piche(imagem, x=0, y=0, cena=cena, taba=self)
+TypeError: 'module' object is not callable
+'''},
