@@ -42,6 +42,9 @@ MAPA_INICIO = """
 from collections import namedtuple as nt
 from kwarwp.kwarwpart import Vazio, Piche, Oca, Tora, NULO
 
+IMGUR = "https://imgur.com/"
+"""Prefixo do site imgur."""
+
 
 class Vazio():
     """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
@@ -223,7 +226,9 @@ class Kwarwp():
         "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), # SOL
         "+": Fab(self.coisa, f"{IMGUR}uwYPNlz.png"),  # CERCA
         "%": Fab(self.coisa, f"{IMGUR}Ry3Vmsn.png") #ROCHA
-        }
+           : Fab(self.coisa, F"{IMGUR} = "https://imgur.com/")
+
+        
 
         mapa = mapa if mapa != "" else self.mapa
 
