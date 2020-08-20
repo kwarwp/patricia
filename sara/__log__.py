@@ -3583,3 +3583,10 @@ AttributeError: 'Kwarwp' object has no attribute 'tora'
     fabrica = {
 AttributeError: 'Kwarwp' object has no attribute 'tora'
 '''},
+{'date': 'Thu Aug 20 2020 09:30:59.973 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 471
+  self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
+  ^
+IndentationError: unexpected indent
+'''},
