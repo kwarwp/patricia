@@ -6,6 +6,7 @@
       - Mapa tem seu próprio construtor
       - Indio como classe independente
       - Implementação do vazio e limites do mapa
+      ? Investigar o pq 
       
 
 """
@@ -19,7 +20,7 @@ MAPA_INICIAL= """
 .........
 .........
 .........
-.^...&...
+.^.^.^...
 """
 MAPA_INICIAL2= """
 #########
