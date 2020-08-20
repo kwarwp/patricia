@@ -147,63 +147,6 @@ class Indio():
         pass
         
         
-class Oca(Piche):
-
-    def __init__(self, imagem, x, y, cena, taba):
-        self.taba = taba
-        self.vaga = taba
-        self.lado = lado = Kwarwp.LADO
-        self.posicao = (x//lado,y//lado-1)
-        self.maloc = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena) #ACHO QUE DEVE TROCAR POR PICHE AQUI
-        self._nada = Kwarwp.VITOLLINO.a()
-        self.acessa = self._acessa
-        """O **acessa ()** é usado como método dinâmico, variando com o estado da vaga.
-        Inicialmente tem o comportamento de **_acessa ()** que é o estado vago, aceitando ocupantes"""
-        self.sair = self._sair
-        """O **sair ()** é usado como método dinâmico, variando com o estado da vaga.
-        Inicialmente tem o comportamento de **_sair ()** que é o estado vago, aceitando ocupantes"""
-    
-    def _pede_sair(self):
-        """Objeto tenta sair mas não é autorizado"""
-        self.taba.fala("Você chegou no seu objetivo")
-        
-    def _acessa(self, ocupante):
-        """ Atualmente a posição está vaga e pode ser acessada pelo novo ocupante.
-
-        A responsabilidade de ocupar definitivamente a vaga é do candidato a ocupante
-        Caso ele esteja realmente apto a ocupar a vaga e deve cahamar de volta ao vazio
-        com uma chamada ocupou.
-
-            :param ocupante: O canditato a ocupar a posição corrente.
-        """
-        self.taba.fala("Você chegou no seu objetivo")
-        ocupante.ocupa(self)
-    
-    
-class Piche(Vazio):
-    def __init__(self, imagem, x, y, cena, taba):
-        self.taba = taba
-        self.vaga = taba
-        self.lado = lado = Kwarwp.LADO
-        self.posicao = (x//lado,y//lado-1)
-        self.barra = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena) #ACHO QUE DEVE TROCAR POR PICHE AQUI
-        self._nada = Kwarwp.VITOLLINO.a()
-        self.acessa = self._acessa
-        """O **acessa ()** é usado como método dinâmico, variando com o estado da vaga.
-        Inicialmente tem o comportamento de **_acessa ()** que é o estado vago, aceitando ocupantes"""
-        self.sair = self._sair
-        """O **sair ()** é usado como método dinâmico, variando com o estado da vaga.
-        Inicialmente tem o comportamento de **_sair ()** que é o estado vago, aceitando ocupantes"""
-
-    def ocupa(self, vaga):
-        self.vaga.sai()
-        self.posicao = vaga.posicao
-        vaga.ocupou(self)
-        self.vaga = vaga
-        
-    def _pede_sair(self):
-        self.taba.fala("Você ficou preso MUAHAHAHA")
-        
 class Vazio():
     """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
         :param imagem: A figura representando o espaço vazio (normalmente transparente).
@@ -226,7 +169,7 @@ class Vazio():
         """O **sair ()** é usado como método dinâmico, variando com o estado da vaga.
         Inicialmente tem o comportamento de **_sair ()** que é o estado leniente, aceitando saidas"""
         
-    def sair(self):
+    def _sair(self):
         self.ocupante.siga()
 
     def _pede_sair(self):
@@ -279,6 +222,64 @@ class Vazio():
         No caso do espaço vazio, vai retornar um elemento que não contém nada.
         """
         return self._nada.elt
+
+
+
+class Piche(Vazio):
+    def __init__(self, imagem, x, y, cena, taba):
+        self.taba = taba
+        self.vaga = taba
+        self.lado = lado = Kwarwp.LADO
+        self.posicao = (x//lado,y//lado-1)
+        self.barra = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena) #ACHO QUE DEVE TROCAR POR PICHE AQUI
+        self._nada = Kwarwp.VITOLLINO.a()
+        self.acessa = self._acessa
+        """O **acessa ()** é usado como método dinâmico, variando com o estado da vaga.
+        Inicialmente tem o comportamento de **_acessa ()** que é o estado vago, aceitando ocupantes"""
+        self.sair = self._sair
+        """O **sair ()** é usado como método dinâmico, variando com o estado da vaga.
+        Inicialmente tem o comportamento de **_sair ()** que é o estado vago, aceitando ocupantes"""
+
+    def ocupa(self, vaga):
+        self.vaga.sai()
+        self.posicao = vaga.posicao
+        vaga.ocupou(self)
+        self.vaga = vaga
+        
+    def _pede_sair(self):
+        self.taba.fala("Você ficou preso MUAHAHAHA")
+
+class Oca(Piche):
+
+    def __init__(self, imagem, x, y, cena, taba):
+        self.taba = taba
+        self.vaga = taba
+        self.lado = lado = Kwarwp.LADO
+        self.posicao = (x//lado,y//lado-1)
+        self.maloc = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena) #ACHO QUE DEVE TROCAR POR PICHE AQUI
+        self._nada = Kwarwp.VITOLLINO.a()
+        self.acessa = self._acessa
+        """O **acessa ()** é usado como método dinâmico, variando com o estado da vaga.
+        Inicialmente tem o comportamento de **_acessa ()** que é o estado vago, aceitando ocupantes"""
+        self.sair = self._sair
+        """O **sair ()** é usado como método dinâmico, variando com o estado da vaga.
+        Inicialmente tem o comportamento de **_sair ()** que é o estado vago, aceitando ocupantes"""
+    
+    def _pede_sair(self):
+        """Objeto tenta sair mas não é autorizado"""
+        self.taba.fala("Você chegou no seu objetivo")
+        
+    def _acessa(self, ocupante):
+        """ Atualmente a posição está vaga e pode ser acessada pelo novo ocupante.
+
+        A responsabilidade de ocupar definitivamente a vaga é do candidato a ocupante
+        Caso ele esteja realmente apto a ocupar a vaga e deve cahamar de volta ao vazio
+        com uma chamada ocupou.
+
+            :param ocupante: O canditato a ocupar a posição corrente.
+        """
+        self.taba.fala("Você chegou no seu objetivo")
+        ocupante.ocupa(self)        
     
     
 class Kwarwp():
@@ -348,7 +349,7 @@ class Kwarwp():
         lado = self.lado 
         cena = self.v.c(fabrica["_"].url)
         """Chama elemento da fábrica [solo] agregando ao seu atributo url para criar a cena"""
-        self.ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado-10, x=0, y=0, cena=cena, vai=self.executa,
+        self.ceu = self.v.a(fabrica["~"].url, w=lado*self.coluna, h=lado-10, x=0, y=0, cena=cena, vai=self.executa,
                    style={"padding-top": "10px", "text-align": "center"})
         """No argumento *vai*, associamos o clique no céu com o método **executa ()** desta classe.
            O *ceu* agora é um argumento de instância e por isso é referenciado como **self.ceu**.
