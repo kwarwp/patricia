@@ -5,8 +5,7 @@
 .. version:: 20.01.1
        - Mapa 
        - Indio Independente
-       - Implementação do vazio
-       - Tentativa de demarcação dos limites (construção)
+      
 """
 from _spy.vitollino.main import Jogo, STYLE 
 from collections import namedtuple as nt
