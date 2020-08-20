@@ -232,3 +232,10 @@ IndentationError: expected an indented block
     AZIMUTE = Rosa(Ponto(0, -1),Ponto(1, 0),Ponto(0, 1),Ponto(-1, 0),)
 NameError: name 'Rosa' is not defined
 '''},
+{'date': 'Thu Aug 20 2020 17:59:17.28 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 127
+  self.indio.siz = (lado*3, lado*4)
+  ^
+IndentationError: expected an indented block
+'''},
