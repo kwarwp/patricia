@@ -102,7 +102,6 @@ class Indio():
         """ Faz o índio caminhar na direção em que está olhando.
         """
         destino = (self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
-        print ("posicao", self.posicao[0], "+", self.azimute.x, "=", (self.posicao[0]+self.azimute.x), self.posicao[1], "+", self.azimute.y, "=", (self.posicao[1]+self.azimute.y))
         """A posição para onde o índio vai depende do vetor de azimute corrente"""
         taba = self.taba.taba
         if destino in taba:
@@ -137,6 +136,7 @@ class Indio():
         """ Faz o índio mudar da direção em que está olhando para a esquerda.
         """
         self.azimute = self.AZIMUTE[self.AZIMUTE.index(self.azimute)-1]
+        print(self.azimute)
         self.mostra()
 
 
