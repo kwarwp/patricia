@@ -534,3 +534,10 @@ TypeError: can't add 'Piche' object to DOMNode instance
     self.elt <= ocupante
 TypeError: can't add 'Oca' object to DOMNode instance
 '''},
+{'date': 'Thu Aug 20 2020 16:12:37.701 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 230
+  fabrica = {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+SyntaxError: invalid syntax
+'''},
