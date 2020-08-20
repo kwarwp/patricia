@@ -309,9 +309,6 @@ class Piche(Vazio):
         """Objeto tenta sair mas não é autorizado"""
         self.taba.fala("Você ficou preso no piche")
         
-    @property
-    def elt(self):
-        return self.barra.elt
 
 class Oca(Piche):
     """ A Oca é o destino final do índio, não poderá sair se ele entrar nela.
@@ -338,7 +335,7 @@ class Oca(Piche):
         """
         self.taba.fala("Você chegou no seu objetivo")
         ocupante.ocupa(self)
-                
+        
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo
     from _spy.vitollino.main import STYLE
