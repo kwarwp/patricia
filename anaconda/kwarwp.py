@@ -98,9 +98,13 @@ class Indio():
         """
         self.vaga.sai() 
         """self.vaga' é modificado de acordo com o componente presente: vazio, coisa ou índio...
+           Logo, o vazio 'sai()' e dá lugar ao índio, porém índio e coisa não saem (pass)
            Nesta versão, coisa e índio não são transponíveis. Vazios são.
         """
         self.posicao = vaga.posicao
+        """ linha 48: self.posicao = (x//lado,y//lado)
+            Pega as coordenadas do ocupante anterior substituindo-o
+        """
         vaga.ocupou(self)
         self.vaga = vaga
         
@@ -129,14 +133,15 @@ class Vazio():
     """
 
     def __init__(self, imagem, x, y, cena, ocupante=None):
-        self.lado = lado = Kwarwp.LADO # o lado previsto no tabuleiro
-        self.posicao = (x//lado,y//lado-1) #o retorno será sempre um inteiro
-        self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena) # o x e o y são substituiddos pelo mapa
-        self._nada = Kwarwp.VITOLLINO.a() # descobrir o pq disso
-        self.acessa = self._acessa #
-        """É um método dinâmico que varia com o estado da vaga. Inicialmente é _aceesa, ou seja, vago e aceitanto ecupante"""
+        self.lado = lado = Kwarwp.LADO # Retorna None
+        self.posicao = (x//lado,y//lado-1) # Pq o -1?
+        self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena) 
+        """ X e Y serão susbstiuídos pela taba."""
+        self._nada = Kwarwp.VITOLLINO.a() # Comparando com a linha 196, este é o elemento que não contém nada
+        self.acessa = self._acessa
+        """É um método dinâmico que varia com o estado da vaga. Inicialmente é _acessa, ou seja, vago e aceitanto ecupante"""
         self.ocupante = ocupante or self #Importante para o funcionamento dos métodos abaixo
-        """O ocupante será definido pelo acessa, por default é o vazio"""
+        """O ocupante será definido pelo acessa, por default é o None, ou seja, vazio"""
         self.acessa(ocupante)
         
     def _valida_acessa(self, ocupante): 
@@ -151,8 +156,8 @@ class Vazio():
         """ESTE É O ESTADO VAGO
         Atualmente a posição está vaga e pode ser acessada pelo novo ocupante.
 
-        A responsabilidade de ocupar definitivamente a vaga é do candidato a ocupante
-        Caso ele esteja realmente apto a ocupar a vaga e deve cahamar de volta ao vazio
+        A responsabilidade de ocupar definitivamente a vaga é do candidato a ocupante.
+        Caso ele esteja realmente apto a ocupar a vaga e deve chamar de volta o vazio
         com uma chamada ocupou.
 
         :param ocupante: O canditato a ocupar a posição corrente.
@@ -185,7 +190,7 @@ class Vazio():
         """ Pedido por um ocupante para que desocupe a posição nela.
         """
         self.ocupante = self
-        self.acessa = self._acessa
+        self.acessa = self._acessa # Volta para o estado default 
     
     @property
     def elt(self):
@@ -193,7 +198,8 @@ class Vazio():
 
         No caso do espaço vazio, vai retornar um elemento que não contém nada.
         """
-        return self._nada.elt
+        #return self._nada.elt
+        return self.vazio.elt
     
     
 class Kwarwp():
