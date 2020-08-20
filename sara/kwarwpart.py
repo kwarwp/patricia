@@ -14,8 +14,6 @@ Changelog
         - NULO
 """
 
-from _spy.vitollino.main import Jogo
-
 
 class Vazio():
     """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
@@ -27,10 +25,10 @@ class Vazio():
 
     def __init__(self, imagem, x, y, cena, ocupante=None):
     
-        #from sara.kwarwp import Kwarwp
+        from sara.kwarwp import Kwarwp
         """Importando localmente o Kwarwp para evitar referência circular."""
     
-        self.lado = lado = sara.kwarwp.Kwarwp.LADO
+        self.lado = lado = Kwarwp.LADO
         self.posicao = (x//lado,y//lado-1)
         self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         self._nada = Kwarwp.VITOLLINO.a()
@@ -129,12 +127,12 @@ class Piche(Vazio):
     """
     def __init__(self, imagem, x, y, cena, taba):
     
-        #from sara.kwarwp import Kwarwp
+        from sara.kwarwp import Kwarwp
         """Importando localmente o Kwarwp para evitar referência circular."""
         
         self.taba = taba
         self.vaga = taba
-        self.lado = lado = sara.kwarwp.Kwarwp.LADO
+        self.lado = lado = Kwarwp.LADO
         self.posicao = (x//lado,y//lado-1)
         self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena)
         self._nada = Kwarwp.VITOLLINO.a()
