@@ -85,8 +85,7 @@ class Indio():
 
     def anda(self):
         """Objeto tenta sair, tem que consultar a vaga onde está"""
-        print("Deixa eu ver se posso andar")
-        print(type(self.vaga))
+        print("Deixa eu consultar a classe ", type(self.vaga), " para ver se posso andar")
         self.vaga.sair()
 
 
