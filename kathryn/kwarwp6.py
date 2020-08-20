@@ -308,7 +308,8 @@ class Piche(Vazio):
     def _pede_sair(self):
         """Objeto tenta sair mas não é autorizado"""
         self.taba.fala("Você ficou preso no piche")    
-        
+    
+    @property
     def elt(self):
         return self._nada.elt
 
