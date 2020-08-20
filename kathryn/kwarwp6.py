@@ -46,12 +46,12 @@ class Kwarwp():
     def cria(self, mapa = "  "):
         Fab = nt("Fab", "objeto imagem")
         fabrica = {
-        "&": Fab(self.coisa, f"{IMGUR}dZQ8liT.jpg"), # OCA
+        "&": Fab(self.maloc, f"{IMGUR}dZQ8liT.jpg"), # OCA
         "^": Fab(self.indio, f"{IMGUR}8jMuupz.png"), # INDIO
         ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), # VAZIO
         "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), # SOLO
         "#": Fab(self.coisa, f"{IMGUR}ldI7IbK.png"), # TORA  
-        "@": Fab(self.coisa, f"{IMGUR}tLLVjfN.png"), # PICHE
+        "@": Fab(self.barra, f"{IMGUR}tLLVjfN.png"), # PICHE
         "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), # CEU
         "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), # SOL
         "+": Fab(self.coisa, f"{IMGUR}uwYPNlz.png")} # CERCA
