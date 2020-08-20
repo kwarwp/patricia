@@ -116,7 +116,6 @@ class Indio():
         if destino in taba:
             vaga = taba[destino]
             vaga.acessa(self)"""
-
     def executa(self):
         self.anda()
     
@@ -145,22 +144,45 @@ class Indio():
         """A linha do sprite depende da direção dque índio está olhando"""
         self.indio.pos = (-self.lado*sprite_col, -self.lado*sprite_lin)
 
-def esquerda(self):
-    """ Faz o índio mudar da direção em que está olhando para a esquerda."""
-    self.azimute = self.AZIMUTE[self.AZIMUTE.index(self.azimute)-1]
-    self.mostra()
+    def esquerda(self):
+        """ Faz o índio mudar da direção em que está olhando para a esquerda."""
+        self.azimute = self.AZIMUTE[self.AZIMUTE.index(self.azimute)-1]
+        self.mostra()
 
-def direita(self):
-    """ Faz o índio mudar da direção em que está olhando para a direita."""
-    self.azimute = self.AZIMUTE[self.AZIMUTE.index(self.azimute)-3]
-    self.mostra()
+    def direita(self):
+        """ Faz o índio mudar da direção em que está olhando para a direita."""
+        self.azimute = self.AZIMUTE[self.AZIMUTE.index(self.azimute)-3]
+        self.mostra()
 
-def fala(self, texto=""):
-    """ O índio fala um texto dado.
+    def fala(self, texto=""):
+        """ O índio fala um texto dado.
+    
+        :param texto: O texto a ser falado.
+        """
+        self.taba.fala(texto)
+        
+    def anda(self):
+        """Objeto tenta sair, tem que consultar a vaga onde está"""
+        self.vaga.sair()
 
-    :param texto: O texto a ser falado.
-    """
-    self.taba.fala(texto)
+    def sair(self):
+        """Objeto de posse do índio tenta sair e é autorizado"""
+        self.vaga.ocupante.siga()
+
+    def siga(self):
+        """Objeto tentou sair e foi autorizado"""
+        self._anda()
+
+    def _anda(self):
+        """ Faz o índio caminhar na direção em que está olhando.
+        """
+        destino = (self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
+        """A posição para onde o índio vai depende do vetor de azimute corrente"""
+        taba = self.taba.taba
+        if destino in taba:
+            vaga = taba[destino]
+            """Recupera na taba a vaga para a qual o índio irá se transferir"""
+        vaga.acessa(self)  
         
 class Vazio():
     def __init__(self, imagem, x, y, cena, ocupante=None):
