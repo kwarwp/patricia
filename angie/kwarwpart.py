@@ -20,6 +20,7 @@
 
 """
 
+from kwarwp.kwarapp import Kwarwp
 from _spy.vitollino.main import Jogo
 
 class Nulo:
@@ -50,8 +51,7 @@ class Vazio():
     """
     
     def __init__(self, imagem, x, y, cena, ocupante=None):
-        from kwarwp.kwarapp import Kwarwp
-        from _spy.vitollino.main import Jogo
+
         Kwarwp.VITOLLINO = Kwarwp.VITOLLINO or Jogo()
         self.lado = lado = Kwarwp.LADO or 100
         self.posicao = (x//lado,y//lado-1)
