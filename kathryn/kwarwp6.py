@@ -171,10 +171,10 @@ class Indio():
     
     def sai(self):
         pass
-        
+    """    
     @property
     def elt(self):
-        return self.indio.elt
+        return self.indio.elt"""
     
     def ocupa(self, vaga):
         self.vaga = vaga
