@@ -281,7 +281,7 @@ class Kwarwp():
         """No argumento *vai*, associamos o clique no céu com o método **executa ()** desta classe.
            O *ceu* agora é um argumento de instância e por isso é referenciado como **self.ceu**.
         """
-        sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena, vai=self.esquerda)
+        sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena, vai=self.vira_esquerda)
         """No argumento *vai*, associamos o clique no sol com o método **esquerda ()** desta classe."""
         self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
             for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
@@ -370,11 +370,11 @@ class Kwarwp():
         pass
         
 
-    def esquerda(self, *_):
+    def vira_esquerda(self, *_):
         """ Ordena a execução do roteiro do índio.
         """
         self.o_indio.esquerda()
-        print("andando para a esquerda")
+
         
         
     def atora(self, imagem, x, y, cena):
