@@ -354,8 +354,9 @@ class Kwarwp():
         pass
 
         
-    def executa(self, *_):
+    def anda(self, *_):
         self.o_indio.executa()
+        print("Andando... ")
         
         
     def pega(self, *_):
@@ -376,7 +377,6 @@ class Kwarwp():
         self.o_indio.esquerda()
         print("virando para a esquerda")
 
-        
         
     def atora(self, imagem, x, y, cena):
         """ Cria uma tora na arena do Kwarwp na posição definida.
