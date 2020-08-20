@@ -6,24 +6,21 @@
       - Mapa tem seu próprio construtor
       - Indio como classe independente
       - Implementação do vazio e limites do mapa
+      - Coisas executam anda() como índio.
       
 
 """
 from _spy.vitollino.main import Jogo, STYLE, Texto
 from collections import namedtuple as nt
 
-#largura e altura, respectivamente
-#STYLE["width"] = 700
-#STYLE["height"] = "600px"
-
 
 MAPA_INICIAL= """
 .........
-......|.&
-......^..
 .........
 .........
+......@..
 ......^..
+.........
 """
 MAPA_INICIAL2= """
 #########
@@ -119,6 +116,11 @@ class Indio():
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
 
         No caso do índio, retorna o elt do elemento do atributo **self.indio**.
+        
+        Anexa um div html a outro div.
+        elt é usado pelo duplo despacho para procurar o correspondente.
+        Os div's (compornentes) da taba estão trocando de lugar no browser a todo tempo.
+        O elt tem de apontar para o div que tem o personagem.
         """
         return self.indio.elt
 
@@ -228,6 +230,7 @@ class Kwarwp():
         """Kwarwp.None = 100 """
         
         self.o_indio = None
+        #self.a_coisa = None  Linha serve como passo para criar a execução do anda pelas coisas
         """O personagem principal, o indio, vai ser atribuído pela fábrica do índio"""
         w,h = self.coluna*self.lado, self.linha*self.lado
         """ (largura) w = len(self.mapa[0] * 100 (Requer a quantidade de itens internos à contagem do 
@@ -299,14 +302,16 @@ class Kwarwp():
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
         coisa = Indio(imagem, x=0, y=0, cena=cena, taba=self)
-        """ """
-        vaga = Vazio(imagem, x=x, y=y, cena=cena, ocupante=coisa)
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+        
+        #self.a_coisa = Indio(imagem, x=0, y=0, cena=cena, taba=self)
+        #vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.a_coisa)
         return vaga
         
     def indio(self, imagem,x,y,cena):
         #self.o_indio = Indio(imagem, x=x, y=y, cena=cena) #era para estar funcionando este imagem mesmo?
         self.o_indio = Indio(imagem, x=0, y=0, cena=cena, taba=self)
-        """indio tem deslocamento zro pois é relativo à vaga"""
+        """ Esse o_indio foi criado para dissociar o índio das coisas no executa"""
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante = self.o_indio)
         return vaga   
         
@@ -320,9 +325,15 @@ class Kwarwp():
         
     def executa(self, *_):
         """ Ordena a execução do roteiro do índio.
+            Os comandos abaixo escolhem o 'último' objeto colocado na taba.
+            Logo, para criar vários elementos "andantes" é necessário desmembrá-los para que
+            tenham nomes diferentes.
         """
         self.o_indio.executa()
-        
+        #self.o_indio.executa()
+        #self.o_indio.executa() aparenta o índio andar  duas vezes mais rápido.
+        #self.a_coisa.executa()
+              
 
 if __name__ == "__main__":
     Kwarwp(Jogo, medidas = STYLE) 
