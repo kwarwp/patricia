@@ -364,28 +364,59 @@ class Piche(Vazio):
         self.taba.fala("Você ficou preso no piche")
 
 
-class Tora(Vazio):
+class Tora(Piche):
+    """  A Tora é um pedaço de tronco cortado que o índio pode carregar ou empurrar.
 
-    """ A tora é um objeto que o índio pode mover.
         :param imagem: A figura representando o índio na posição indicada.
         :param x: Coluna em que o elemento será posicionado.
         :param y: Linha em que o elemento será posicionado.
         :param cena: Cena em que o elemento será posicionado.
         :param taba: Representa a taba onde o índio faz o desafio.
     """
-    def __init__(self, imagem, x, y, cena, taba):
-        self.taba = taba
-        self.vaga = self
-        self.lado = lado = Kwarwp.LADO
-        self.posicao = (x//lado,y//lado)
-        self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
-        
+
+    def pegar(self, requisitante):
+        """ Consulta o ocupante atual se há permissão para pegar e entregar ao requistante.
+
+            :param requistante: O ator querendo pegar o objeto.
+        """
+        vaga = requisitante
+        self.vaga.sai()
+        # self.posicao = vaga.posicao
+        vaga.ocupou(self)
+        self.vaga = vaga
+
+    @property
+    def posicao(self):
+        """ A propriedade posição faz parte do protocolo do double dispatch com o Indio .
+
+        No caso da tora, retorna o a posição do atributo **self.vaga**.
+        """
+        return self.vaga.posicao
+
+    @posicao.setter
+    def posicao(self, _):
+        """ A propriedade posição faz parte do protocolo do double dispatch com o Indio .
+
+        No caso da tora, é uma propriedade de somente leitura, não executa nada.
+        """
+        pass
+
     @property
     def elt(self):
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
-        No caso da tora, vai retornar um elemento que tem o seu sprite.
+
+        No caso da tora, retorna o elt do elemento do atributo **self.vazio**.
         """
         return self.vazio.elt
+
+    def _acessa(self, ocupante):
+        """ Pedido de acesso a essa posição, delegada ao ocupante pela vaga.
+
+        :param ocupante: O componente candidato a ocupar a vaga já ocupada pelo índio.
+
+        No caso da tora, ela age como um obstáculo e não prossegue com o protocolo.
+        """
+        pass
         
         
 
@@ -601,6 +632,23 @@ class Kwarwp():
         """o índio.vai é associado ao seu próprio metodo pega"""
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
         return vaga
+
+
+class Nulo:
+    """Objeto nulo que responde passivamente a todas as requisições."""
+    def __init__(self):
+        self.pegar = self.ocupa = self.nulo
+
+    def nulo(self, *_, **__):
+        """Método nulo, responde passivamente a todas as chamadas.
+
+        :param _: aceita todos os argumentos posicionais.
+        :param __: aceita todos os argumentos nomeados.
+        :return: retorna o próprio objeto nulo.
+        """
+        return self
+
+NULO = Nulo()
 
 
 if __name__ == "__main__":
