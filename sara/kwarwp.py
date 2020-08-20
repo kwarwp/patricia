@@ -374,6 +374,7 @@ class Kwarwp():
         """ Ordena a execução do roteiro do índio.
         """
         self.o_indio.esquerda()
+        print("virando para a esquerda")
 
         
         
