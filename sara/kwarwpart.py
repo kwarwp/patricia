@@ -14,6 +14,7 @@ Changelog
         - NULO
 """
 
+from _spy.vitollino.main import Jogo, STYLE
 
 class Vazio():
     """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
