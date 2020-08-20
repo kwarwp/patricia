@@ -215,7 +215,6 @@ class Tora(Piche):
         """
         pass
         
-        
 
 class Oca(Piche):
     """ A Oca é o destino final do índio, não poderá sair se ele entrar nela.
