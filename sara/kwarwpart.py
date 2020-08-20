@@ -127,6 +127,7 @@ class Piche(Vazio):
     
         from sara.kwarwp import Kwarwp
         """Importando localmente o Kwarwp para evitar referência circular."""
+        Kwarwp.VITOLLINO = self.v = vitollino()
         
         self.taba = taba
         self.vaga = taba
