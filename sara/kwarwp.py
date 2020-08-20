@@ -374,6 +374,7 @@ class Kwarwp():
         """ Ordena a execução do roteiro do índio.
         """
         self.o_indio.esquerda()
+        print("andando para a esquerda")
         
         
     def atora(self, imagem, x, y, cena):
