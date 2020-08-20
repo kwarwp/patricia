@@ -136,7 +136,7 @@ class Piche(Vazio):
 
     def __init__(self, imagem, x, y, cena, taba):
     
-        from kwarwp.kwarapp import Kwarwp
+        from kwarwp.indio import Kwarwp
         """Importando localmente o Kwarwp para evitar referência circular."""
         
         self.taba = taba
