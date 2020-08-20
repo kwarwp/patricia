@@ -119,6 +119,11 @@ class Indio():
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
 
         No caso do índio, retorna o elt do elemento do atributo **self.indio**.
+        
+        Anexa um div html à outro div.
+        elt é usado pelo duplo despacho para procurar o correspondente.
+        Os div's (compornentes) da taba estão trocando de lugar no browser a todo tempo.
+        O elt tem de apontar para o div que tem o personagem.
         """
         return self.indio.elt
 
