@@ -19,7 +19,7 @@ MAPA_INICIAL= """
 .........
 .........
 .........
-.&..@.^..
+.^..@.^..
 .........
 """
 MAPA_INICIAL2= """
@@ -328,8 +328,9 @@ class Kwarwp():
         """ Ordena a execução do roteiro do índio.
         """
         self.o_indio.executa()
+        self.o_indio.executa()
         self.a_coisa.executa()
-        self.a_coisa.executa()       
+              
 
 if __name__ == "__main__":
     Kwarwp(Jogo, medidas = STYLE) 
