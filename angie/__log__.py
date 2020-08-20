@@ -2199,3 +2199,10 @@ AttributeError: 'dict' object has no attribute 'fala'
     self.taba.fala("sai do kwarwp")
 AttributeError: 'dict' object has no attribute 'fala'
 '''},
+{'date': 'Thu Aug 20 2020 14:17:31.847 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 63
+  """tenta largar o objeto que está segurando"""
+  ^
+IndentationError: expected an indented block
+'''},
