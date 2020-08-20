@@ -10,12 +10,8 @@
 from _spy.vitollino.main import Jogo, STYLE 
 from collections import namedtuple as nt
 
-#largura e altura, respectivamente
-#STYLE["width"] = 700
-#STYLE["height"] = "600px"
 
-
-MAPA_INICIAL= """
+MAPA_INICIAL2= """
 #########
 #...##..#
 #.@.#&^.#
@@ -23,6 +19,15 @@ MAPA_INICIAL= """
 #.......#
 #########
 """
+MAPA_INICIAL= """
+......@..
+.........
+......^..
+.......
+.........
+
+"""
+
 
 class Indio():
     """ Cria estrutura índio que será chamada no kwarwp"""
