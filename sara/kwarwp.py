@@ -187,6 +187,7 @@ class Indio():
         """
         pass
     
+    
     def pega(self):
         print("Pegando objeto")
         """tenta pegar o objeto que está diante dele"""
@@ -198,6 +199,7 @@ class Indio():
             """Recupera na taba a vaga para a qual o índio irá se transferir"""
             vaga.pegar(self)
 
+
     def larga(self):
         """tenta largar o objeto que está segurando"""
         destino = (self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
@@ -208,6 +210,7 @@ class Indio():
             """Recupera na taba a vaga para a qual o índio irá se transferir"""
             # self.ocupante.largar(vaga)
             vaga.acessa(self.ocupante)
+
 
     def ocupou(self, ocupante):
         """ O candidato à vaga decidiu ocupá-la e efetivamente entra neste espaço.
@@ -222,7 +225,6 @@ class Indio():
         """
         self.indio.ocupa(ocupante)
         self.ocupante = ocupante
-        
 
 
 class Kwarwp():
