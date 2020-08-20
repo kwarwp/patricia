@@ -3634,3 +3634,7 @@ TypeError: 'module' object is not callable
     coisa = Tora(imagem, x=x, y=y, cena=cena, taba=self)
 TypeError: 'module' object is not callable
 '''},
+{'date': 'Thu Aug 20 2020 10:01:03.737 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: Cannot read property '$methods' of undefined>
+'''},
