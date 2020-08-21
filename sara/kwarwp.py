@@ -189,6 +189,7 @@ class Indio():
 
         No caso do índio, ele age como um obstáculo e não prossegue com o protocolo.
         """
+        print("Ocupante (Indio.acessa): ", ocupante)
         pass
     
     
