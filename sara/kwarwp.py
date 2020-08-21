@@ -74,7 +74,7 @@ class Indio():
         self.taba = taba
         self.vaga = self
         self.posicao = (x//lado,y//lado)
-        self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        self.indio = Vazio.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         self.x = x
         """Este x provisoriamente distingue o índio de outras coisas construídas com esta classe"""
         if x:
@@ -176,10 +176,12 @@ class Indio():
 
         No caso do índio, requisita que a vaga seja ocupada por ele.
         """
-        vaga.sai()
+        self.vaga.sai()
         self.posicao = vaga.posicao
         vaga.ocupou(self)
         self.vaga = vaga
+        if self.x:
+            self.mostra()
 
 
     def acessa(self, ocupante):
