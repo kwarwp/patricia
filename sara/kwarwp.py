@@ -109,7 +109,6 @@ class Indio():
         taba = self.taba.taba
         if destino in taba:
             vaga = taba[destino]
-            print(vaga)
             """Recupera na taba a vaga para a qual o índio irá se transferir"""
             vaga.acessa(self)
 
