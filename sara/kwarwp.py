@@ -369,11 +369,6 @@ class Kwarwp():
         print("Andando...")
         
         
-    def pega(self, *_):
-        print('*-* CHEGUEI AQUI *-*')
-        self.o_indio.pega()
-        
-        
     def fala(self, texto=""):
         """ O Kwarwp é aqui usado para falar algo que ficará escrito no céu.
         """
