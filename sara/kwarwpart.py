@@ -48,6 +48,7 @@ class Vazio():
 
 
     def _valida_acessa(self, ocupante):
+        print("Ocupante da vaga: ", ocupante)
         self.ocupante.acessa(ocupante)
         
 
