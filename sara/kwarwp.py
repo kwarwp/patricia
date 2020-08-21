@@ -111,6 +111,7 @@ class Indio():
             vaga = taba[destino]
             """Recupera na taba a vaga para a qual o índio irá se transferir"""
             vaga.acessa(self)
+            print(vaga)
 
 
     def executa(self):
