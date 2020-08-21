@@ -76,6 +76,7 @@ class Vazio():
         com uma chamada ocupou.
             :param ocupante: O canditato a ocupar a posição corrente.
         """
+        print("Area vazia)
         ocupante.ocupa(self)  
 
 
