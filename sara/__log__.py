@@ -5161,3 +5161,10 @@ AttributeError: 'Kwarwp' object has no attribute 'esquerda'
     self.ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado-10, x=0, y=0, cena=cena, vai=self.executa,
 AttributeError: 'Kwarwp' object has no attribute 'executa'
 '''},
+{'date': 'Fri Aug 21 2020 08:53:40.152 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module sara.kwarwpart line 79
+  print("Area vazia)
+                    ^
+SyntaxError: EOL while scanning string literal
+'''},
