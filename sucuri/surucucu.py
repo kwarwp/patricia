@@ -37,7 +37,6 @@ Rosa = nt("Rosa", "n l s o")
 """Rosa dos ventos com as direções norte, leste, sul e oeste."""
 
 
-===============================================================================
 class Indio():
     """ Cria estrutura índio que será chamada no kwarwp"""
     AZIMUTE = Rosa(Ponto(0, -1),Ponto(1, 0),Ponto(0, 1),Ponto(-1, 0),)
@@ -173,7 +172,6 @@ class Indio():
         return self.indio.elt
         
 
-===============================================================================
 class Vazio():
     """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
         :param imagem: A figura representando o espaço vazio (normalmente transparente).
@@ -251,7 +249,6 @@ class Vazio():
         return self._nada.elt
 
 
-===============================================================================
 class Piche(Vazio):
     def __init__(self, imagem, x, y, cena, taba):
         self.taba = taba
@@ -284,7 +281,6 @@ class Piche(Vazio):
         return self.barra.elt
 
 
-===============================================================================
 class Oca(Piche):
 
     def __init__(self, imagem, x, y, cena, taba):
@@ -324,8 +320,7 @@ class Oca(Piche):
         """
         return self.maloc.elt
         
-        
-===============================================================================    
+         
 class Kwarwp():
 
     """ Jogo para ensino de programação.
