@@ -39,7 +39,7 @@ Rosa = nt("Rosa", "n l s o")
 
 class Indio():
     """ Cria estrutura índio que será chamada no kwarwp"""
-    AZIMUTE = Rosa(Ponto(0, -1),Ponto(1, 0),Ponto(0, 1),Ponto(-1, 0),)
+    AZIMUTE = Rosa(Ponto(0, -1),Ponto(1, 0),Ponto(0, 1),Ponto(-1, 0))
     """ Norte, leste, sul, oeste; 
         
         Constante com os pares ordenados que representam os vetores unitários dos pontos cardeais.
@@ -144,7 +144,7 @@ class Indio():
         :param vaga: A vaga que será ocupada pelo componente.
         No caso do índio, requisita que a vaga seja ocupada por ele.
         """
-        self.vaga.sai()
+        vaga.sai()
         self.posicao = vaga.posicao
         vaga.ocupou(self)
         self.vaga = vaga
@@ -159,9 +159,6 @@ class Indio():
     def executa(self):
         """ Roteiro do índio. Conjunto de comandos para ele executar.
         """
-        self.anda()
-        self.anda()
-        self.direita()
         self.anda()
             
     @property
@@ -407,7 +404,7 @@ class Kwarwp():
            O *ceu* agora é um argumento de instância e por isso é referenciado como **self.ceu**.
         """
         
-        sol = self.v.a(fabrica["*"].url, w=60, h=60, x=0, y=40, vai = self.esquerda)
+        sol = self.v.a(fabrica["*"].url, w=60, h=60, x=0, y=20, cena=cena, vai = self.esquerda)
         """No argumento *vai*, associamos o clique no sol com o método **esquerda ()** desta classe.""""""Gera o elemento sol"""
 
         self.taba = {(i, j): fabrica[caracter].objeto(fabrica[caracter].url, x=i*lado, y=j*lado+lado, cena=cena)
@@ -424,7 +421,7 @@ class Kwarwp():
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
         coisa = Indio(imagem, x=0, y=0, cena=cena, taba=self)
-        vaga = Vazio(imagem, x=x, y=y, cena=cena, ocupante=coisa)
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
         return vaga
         
     def indio(self, imagem,x,y,cena):
