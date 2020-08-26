@@ -18,7 +18,7 @@ MAPA_INICIAL= """
 .........
 ...@.....
 .........
-.........
+......&..
 .........
 ......^..
 """
@@ -161,8 +161,6 @@ class Indio():
         """
         self.anda()
         self.anda()
-        self.esquerda()
-        self.direita()
             
     @property
     def elt(self):
