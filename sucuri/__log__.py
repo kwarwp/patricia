@@ -672,3 +672,10 @@ TypeError: can't add 'Piche' object to DOMNode instance
     self.elt <= ocupante
 TypeError: can't add 'Piche' object to DOMNode instance
 '''},
+{'date': 'Wed Aug 26 2020 00:01:45.670 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 264
+  """      
+                                                          ^
+SyntaxError: invalid syntax
+'''},
