@@ -224,7 +224,7 @@ class Vazio():
         """
         pass
         
-    def sai(self):
+    def sai(self): #
         """ Pedido por um ocupante para que desocupe a posição nela.
         """
         self.ocupante = self
@@ -232,12 +232,12 @@ class Vazio():
         self.sair = self._sair
     
     @property
-    def elt(self):
+    def elt(self): 
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
         No caso do espaço vazio, vai retornar um elemento que não contém nada.
         """
         return self.vazio.elt
-
+        #return self._nada.elt essa linha antes fazia com que o piche "colasse" no sol
 
 class Piche(Vazio):
     def __init__(self, imagem, x, y, cena, taba):
