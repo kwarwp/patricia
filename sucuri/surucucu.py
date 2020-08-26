@@ -396,7 +396,7 @@ class Kwarwp():
         
     def indio(self, imagem,x,y,cena):
         #self.o_indio = Indio(imagem, x=x, y=y, cena=cena) #era para estar funcionando este imagem mesmo?
-        self.o_indio = Indio(imagem, x=1, y=2, cena=cena, taba=self)
+        self.o_indio = Indio(imagem, x=0, y=0, cena=cena, taba=self)
         """indio tem deslocamento zro pois é relativo à vaga"""
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante = self.o_indio)
         return vaga 
