@@ -50,7 +50,6 @@ class Indio():
         self.lado = lado = Kwarwp.LADO
         self.azimute = self.AZIMUTE.n
         """índio olhando para o norte"""
-        self.ocupante = NULO
         self.taba = taba
         self.vaga = self
         self.posicao = (x//lado,y//lado)
