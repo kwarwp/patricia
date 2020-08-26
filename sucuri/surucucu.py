@@ -216,6 +216,7 @@ class Vazio():
         self.vazio.ocupa(ocupante)
         self.ocupante = ocupante
         self.acessa = self._valida_acessa
+        self.sair = self._pede_sair    
     
     def ocupa(self, vaga):
         """ Pedido por uma vaga para que ocupe a posição nela.
@@ -226,8 +227,7 @@ class Vazio():
     def sai(self):
         """ Pedido por um ocupante para que desocupe a posição nela.
         """
-        self.ocupante = self
-        self.acessa = self._acessa
+        pass
     
     @property
     def elt(self):
@@ -243,7 +243,8 @@ class Piche(Vazio):
         self.vaga = taba
         self.lado = lado = Kwarwp.LADO
         self.posicao = (x//lado,y//lado-1)
-        self.barra = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena) #ACHO QUE DEVE TROCAR POR PICHE AQUI
+        self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena)
+        self._nada = Kwarwp.VITOLLINO.a()
         self._nada = Kwarwp.VITOLLINO.a()
         self.acessa = self._acessa
         """O **acessa ()** é usado como método dinâmico, variando com o estado da vaga.
@@ -417,7 +418,7 @@ class Kwarwp():
         
     def indio(self, imagem,x,y,cena):
         #self.o_indio = Indio(imagem, x=x, y=y, cena=cena) #era para estar funcionando este imagem mesmo?
-        self.o_indio = Indio(imagem, x=0, y=0, cena=cena, taba=self)
+        self.o_indio = Indio(imagem, x=1, y=2, cena=cena, taba=self)
         """indio tem deslocamento zro pois é relativo à vaga"""
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante = self.o_indio)
         return vaga 
