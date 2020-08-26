@@ -135,7 +135,6 @@ class Indio():
             """Recupera na taba a vaga para a qual o índio irá se transferir"""
             vaga.acessa(self)   
 
-
     def sai(self):
         """ Rotina de saída falsa, o objeto Indio é usado como uma vaga nula.
         """
@@ -280,7 +279,7 @@ class Piche(Vazio):
     @property
     def elt(self):
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
-        No caso do espaço vazio, vai retornar um elemento que não contém nada.
+        No caso do piche, vai retornar o elemento barra.
         """
         return self.barra.elt
 
@@ -321,7 +320,7 @@ class Oca(Piche):
     @property
     def elt(self):
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
-        No caso do espaço vazio, vai retornar um elemento que não contém nada.
+        No caso da oca, vai retornar o maloc.
         """
         return self.maloc.elt
         
