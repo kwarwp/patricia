@@ -18,7 +18,7 @@ MAPA_INICIAL= """
 .........
 ...@.....
 .........
-......&..
+......@..
 .........
 ......^..
 """
@@ -161,6 +161,8 @@ class Indio():
         """
         self.anda()
         self.anda()
+        self.direita()
+        self.anda()
             
     @property
     def elt(self):
@@ -281,7 +283,7 @@ class Piche(Vazio):
 
             :param ocupante: O canditato a ocupar a posição corrente.
         """
-        self.taba.fala("Você chegou no seu objetivo")
+        self.taba.fala("Hmmmm, piche hein!")
         ocupante.ocupa(self)   
         
     @property
