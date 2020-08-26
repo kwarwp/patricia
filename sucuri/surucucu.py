@@ -271,6 +271,19 @@ class Piche(Vazio):
     def _pede_sair(self):
         self.taba.fala("Você ficou preso MUAHAHAHA")
         
+        
+    def _acessa(self, ocupante):
+        """ Atualmente a posição está vaga e pode ser acessada pelo novo ocupante.
+
+        A responsabilidade de ocupar definitivamente a vaga é do candidato a ocupante
+        Caso ele esteja realmente apto a ocupar a vaga e deve cahamar de volta ao vazio
+        com uma chamada ocupou.
+
+            :param ocupante: O canditato a ocupar a posição corrente.
+        """
+        self.taba.fala("Você chegou no seu objetivo")
+        ocupante.ocupa(self)   
+        
     @property
     def elt(self):
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
