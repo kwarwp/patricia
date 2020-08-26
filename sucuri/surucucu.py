@@ -71,6 +71,7 @@ class Indio():
                       self.elt.style.backgroundSize = "{}px {}px".format(*wh)
            """
             self.mostra()
+            
     def mostra(self):
         """ Modifica a figura (Sprite) do índio mostrando para onde está indo.
         """
@@ -132,7 +133,30 @@ class Indio():
         if destino in taba:
             vaga = taba[destino]
             """Recupera na taba a vaga para a qual o índio irá se transferir"""
-            vaga.acessa(self)    
+            vaga.acessa(self)   
+
+
+    def sai(self):
+        """ Rotina de saída falsa, o objeto Indio é usado como uma vaga nula.
+        """
+        pass
+
+    def ocupa(self, vaga):
+        """ Pedido por uma vaga para que ocupe a posição nela.
+        :param vaga: A vaga que será ocupada pelo componente.
+        No caso do índio, requisita que a vaga seja ocupada por ele.
+        """
+        self.vaga.sai()
+        self.posicao = vaga.posicao
+        vaga.ocupou(self)
+        self.vaga = vaga
+
+    def acessa(self, ocupante):
+        """ Pedido de acesso a essa posição, delegada ao ocupante pela vaga.
+        :param ocupante: O componente candidato a ocupar a vaga já ocupada pelo índio.
+        No caso do índio, ele age como um obstáculo e não prossegue com o protocolo.
+        """
+        pass
     
     def executa(self):
         """ Roteiro do índio. Conjunto de comandos para ele executar.
