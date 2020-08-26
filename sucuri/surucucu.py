@@ -32,7 +32,7 @@ MAPA_INICIAL2= """
 """
 
 Ponto = nt("Ponto", "x y")
-"""Par de coordenadas na direção horizontal (x) e vertical (y)."""
+"""Par de coordenadas na direção horizontal (x) e vertiacal (y)."""
 Rosa = nt("Rosa", "n l s o")
 """Rosa dos ventos com as direções norte, leste, sul e oeste."""
 
@@ -45,36 +45,28 @@ class Indio():
         Constante com os pares ordenados que representam os vetores unitários dos pontos cardeais.
     """
 
-    def __init__(self, imagem, x, y, cena, taba):
+    def __init__(self, imagem, x, y, cena, taba, vai=None):
+    
         self.lado = lado = Kwarwp.LADO
         self.azimute = self.AZIMUTE.n
-        """índio começa olhando para o norte"""
+        """índio olhando para o norte"""
+        self.ocupante = NULO
         self.taba = taba
         self.vaga = self
         self.posicao = (x//lado,y//lado)
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         self.x = x
-        """Este x provisoriamente distingue o índio de outras coisas construídas com esta classe
-           Antes o que o distinguia era o 'o_indio'
-        """
+        """Este x provisoriamente distingue o índio de outras coisas construídas com esta classe"""
         if x:
-            self.indio.siz = (lado*3, lado*4) 
-            """  Define as proporções da folha de sprites 
-                      @siz.setter
-                      def siz(self, wh):
-                      Recebe uma tupla de inteiros definindo o tamanho da imagem do elemento
-        
-                      :param wh: w - tamanho da imagem na horizontal a partir da esquerda
-                      :param hh: h - tamanho da imagem na vertical a partir do topo
- 
-                      self.elt.style.backgroundSize = "{}px {}px".format(*wh)
-           """
+            self.indio.siz = (lado*3, lado*4)
+            """Define as proporções da folha de sprites"""
             self.mostra()
-            
+
+
     def mostra(self):
         """ Modifica a figura (Sprite) do índio mostrando para onde está indo.
         """
-        sprite_col = sum(self.posicao) % 3 
+        sprite_col = sum(self.posicao) % 3
         """ Soma o conteúdo da tupla e pede o resto da divisão por 3.
             Faz com que três casas adjacentes tenha valores diferentes para a coluna do sprite
         """
