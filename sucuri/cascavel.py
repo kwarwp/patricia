@@ -201,7 +201,10 @@ class Kwarwp():
     """
     self.o_indio = None
     """Instância do personagem principal, o índio, vai ser atribuído pela fábrica do índio"""
-
+    VITOLLINO = None
+    """Referência estática para obter o engenho de jogo."""
+    LADO = None
+    """Referência estática para definir o lado do piso da casa."""
     def __init__(self, vitollino=None, mapa = MAPA_INICIAL, medidas = {}):
         Vazio.VITOLLINO = self.v = vitollino()
         """Transforma o texto matriz, explicitando o bloco de strings para cada linha."""
@@ -352,14 +355,6 @@ class Kwarwp():
         """ Ordena a execução do roteiro do índio.
         """
         self.o_indio.direita()
-
-    def pega(self, *_):
-        self.o_indio.pega()
-        
-    def larga(self, *_):
-
-        self.o_indio.larga()
-    
         
     def ocupa(self, *_):
         """ O Kwarwp é aqui usado como um ocupante falso, o pedido de ocupar é ignorado."""
