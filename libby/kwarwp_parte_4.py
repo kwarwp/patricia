@@ -9,40 +9,6 @@ Changelog
 .. versionadded::    20.08
         Descreva o que você adicionou no código.
 
-
-from collections import namedtuple as nt
-from libby.kwarwpart import Vazio, Piche, Oca, Tora, NULO
-
-Ponto = nt("Ponto", "x y")
-"""Par de coordenadas na direção horizontal (x) e vertiacal (y)."""
-Rosa = nt("Rosa", "n l s o")
-"""Rosa dos ventos com as direções norte, leste, sul e oeste."""
-
-IMGUR = "https://imgur.com/"
-"""Prefixo do site imgur."""
-
-MAPA_INICIO = """
-@....&
-......
-.....#
-.#.^..
-"""
-    
-MAPA_CERCA = """
-||||||
-.....&
-..^...
-......
-||||||
-"""
-
-MAPA_ROCHA = """
-|||||||
-+..+..&
-+..%..+
-+^.+..+
-|||||||
-"""
 """
 from collections import namedtuple as nt
 from angie.kwarwpart import Vazio, Piche, Oca, Tora, Nulo
