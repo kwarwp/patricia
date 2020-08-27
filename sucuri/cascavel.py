@@ -172,6 +172,8 @@ class Indio():
         self.posicao = vaga.posicao
         vaga.ocupou(self)
         self.vaga = vaga
+        if self.x:
+            self.mostra()
 
     def acessa(self, ocupante):
         """ Pedido de acesso a essa posição, delegada ao ocupante pela vaga.
