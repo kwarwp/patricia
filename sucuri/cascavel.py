@@ -357,7 +357,7 @@ class Kwarwp():
         self.o_indio.pega()
         
     def larga(self, *_):
-        print('*-* CHEGUEI AQUI *-*')
+
         self.o_indio.larga()
     
         
