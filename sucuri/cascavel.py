@@ -13,7 +13,7 @@ Changelog
 """
 from _spy.vitollino.main import Jogo, STYLE 
 from collections import namedtuple as nt
-from sucuri.cascavelpart import Vazio, Oca, Tora, Nulo, Piche
+from sucuri.cascavelpart import Vazio, Oca, Tora, NULO, Piche
 
 MAPA_INICIAL= """
 .........
@@ -46,16 +46,15 @@ class Indio():
         Constante com os pares ordenados que representam os vetores unitários dos pontos cardeais.
     """
 
-    def __init__(self, imagem, x, y, cena, taba, vai=None):
-    
-        self.lado = lado = Vazio.LADO # antes self.lado = lado = Kwarwp.LADO
+    def __init__(self, imagem, x, y, cena, taba):
+        self.lado = lado = Vazio.LADO
         self.azimute = self.AZIMUTE.n
         """índio olhando para o norte"""
-        self.ocupante = Nulo 
         self.taba = taba
         self.vaga = self
+        self.ocupante = NULO
         self.posicao = (x//lado,y//lado)
-        self.indio = Vazio.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena) # antes self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        self.indio = Vazio.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         self.x = x
         """Este x provisoriamente distingue o índio de outras coisas construídas com esta classe"""
         if x:
@@ -68,33 +67,22 @@ class Indio():
         """ Modifica a figura (Sprite) do índio mostrando para onde está indo.
         """
         sprite_col = sum(self.posicao) % 3
-        """ Soma o conteúdo da tupla e pede o resto da divisão por 3.
-            Faz com que três casas adjacentes tenha valores diferentes para a coluna do sprite
-        """
+        """Faz com que três casas adjacentes tenha valores diferentes para a coluna do sprite"""
         sprite_lin = self.AZIMUTE.index(self.azimute)
-        """A linha do sprite depende da direção que índio está olhando"""
+        """A linha do sprite depende da direção dque índio está olhando"""
         self.indio.pos = (-self.lado*sprite_col, -self.lado*sprite_lin)
-        """@pos.setter
-           def pos(self, xy):
-           Recebe uma tupla de inteiros definindo a posição da imagem do elemento
         
-            :param xy: x - posição da imagem na horizontal a partir da esquerda
-            :param xy: y - posição da imagem na vertical a partir do topo
         
-           self.elt.style.backgroundPosition = '{}px {}px'.format(*xy)
-        """
     def esquerda(self):
         """ Faz o índio mudar da direção em que está olhando para a esquerda.
         """
         self.azimute = self.AZIMUTE[self.AZIMUTE.index(self.azimute)-1]
-        """ -1 referencia à leitura da lista."""
         self.mostra()
-    
+
     def direita(self):
         """ Faz o índio mudar da direção em que está olhando para a direita.
         """
         self.azimute = self.AZIMUTE[self.AZIMUTE.index(self.azimute)-3]
-        """ -3 referencia à leitura da lista."""
         self.mostra()
 
     def fala(self, texto=""):
