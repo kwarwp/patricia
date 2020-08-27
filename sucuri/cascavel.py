@@ -8,7 +8,7 @@ Changelog
 ---------
 .. versionadded::    20.08
         - Elemento Tora sobre o Piche
-        - Oca vazia após
+        - Oca vazia após tora sair
 
 """
 from _spy.vitollino.main import Jogo, STYLE 
@@ -182,8 +182,6 @@ class Indio():
         """ Roteiro do índio. Conjunto de comandos para ele executar.
         """
         self.anda()
-        self.pega()
-        self.larga()
             
     @property
     def elt(self):
