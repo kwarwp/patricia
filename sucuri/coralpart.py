@@ -21,7 +21,7 @@ class Vazio():
 
     def __init__(self, imagem, x, y, cena, ocupante=None):
         from sucuri.coral import Kwarwp
-        self.lado = lado = Kwarwp.LADO # o lado previsto no tabuleiro
+        self.lado = lado = Kwarwp.LADO or 100 # o lado previsto no tabuleiro
         self.posicao = (x//lado,y//lado-1) #o retorno será sempre um inteiro
         self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena) # o x e o y são substituiddos pelo mapa
         self._nada = Kwarwp.VITOLLINO.a() # descobrir o pq disso
@@ -98,7 +98,7 @@ class Piche(Vazio):
         from sucuri.coral import Kwarwp
         self.taba = taba
         self.vaga = taba
-        self.lado = lado = Kwarwp.LADO
+        self.lado = lado = Kwarwp.LADO or 100
         self.posicao = (x//lado,y//lado-1)
         self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena)
         self._nada = Kwarwp.VITOLLINO.a()
@@ -180,7 +180,7 @@ class Oca(Piche):
         from sucuri.coral import Kwarwp
         self.taba = taba
         self.vaga = taba
-        self.lado = lado = Kwarwp.LADO
+        self.lado = lado = Kwarwp.LADO or 100
         self.posicao = (x//lado,y//lado-1)
         self.maloc = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena) #ACHO QUE DEVE TROCAR POR PICHE AQUI
         self._nada = Kwarwp.VITOLLINO.a()
