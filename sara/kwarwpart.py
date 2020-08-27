@@ -129,7 +129,9 @@ class Vazio():
         """
         self._nada.ocupa(self.ocupante)
         """a figura do ocupante vai ser anexada ao elemento nada, que não é apresentado"""
-
+        self.ocupante = self
+        self.acessa = self._acessa
+        self.sair = self._sair
 
 class Piche(Vazio):
     """ Poça de Piche que gruda o índio se ele cair nela.
