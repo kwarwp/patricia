@@ -265,6 +265,7 @@ class Oca(Piche):
         ocupante.ocupa(self)
         
     def sai(self):
+        print(self.ocupante)
         self.vaga.limpa()
         
     def limpa(self):
