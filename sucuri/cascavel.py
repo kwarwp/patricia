@@ -243,7 +243,7 @@ class Kwarwp():
                  "@": Fab(self.barra, f"{IMGUR}tLLVjfN.png"), #PICHE
                 "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), #SOL
                 "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), #CEU
-                "|": Fab(self.coisa, f"{IMGUR}ldI7IbK.png")  # TORA 
+                "|": Fab(self.atora, f"{IMGUR}ldI7IbK.png")  # TORA 
                 }
         """Dicionário que define o tipo e a imagem do objeto para cada elemento"""
         mapa = mapa if mapa != "" else self.mapa #descobrir o que isso faz
