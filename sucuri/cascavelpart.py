@@ -86,6 +86,9 @@ class Vazio():
         self.ocupante = self
         self.acessa = self._acessa
         self.sair = self._sair
+    
+    def pegar(self): 
+        self.ocupante.pegar(requisitante)
         
     def limpa(self):
         """ Pedido por um ocupante para ele seja eliminado do jogo.
