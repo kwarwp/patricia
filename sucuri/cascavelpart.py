@@ -87,7 +87,7 @@ class Vazio():
         self.acessa = self._acessa
         self.sair = self._sair
     
-    def pegar(self): 
+    def pegar(self, requisitante): 
         self.ocupante.pegar(requisitante)
         
     def limpa(self):
