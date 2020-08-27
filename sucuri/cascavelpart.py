@@ -200,21 +200,6 @@ class Tora(Piche):
 
 
 class Oca(Piche):
-
-    def __init__(self, imagem, x, y, cena, taba):
-        # from sucuri.coral import Kwarwp
-        self.taba = taba
-        self.vaga = taba
-        self.lado = lado = Vazio.LADO or 100
-        self.posicao = (x//lado,y//lado-1)
-        self.maloc = Vazio.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena) #ACHO QUE DEVE TROCAR POR PICHE AQUI
-        self._nada = Vazio.VITOLLINO.a()
-        self.acessa = self._acessa
-        """O **acessa ()** é usado como método dinâmico, variando com o estado da vaga.
-        Inicialmente tem o comportamento de **_acessa ()** que é o estado vago, aceitando ocupantes"""
-        self.sair = self._sair
-        """O **sair ()** é usado como método dinâmico, variando com o estado da vaga.
-        Inicialmente tem o comportamento de **_sair ()** que é o estado vago, aceitando ocupantes"""
     
     def _pede_sair(self):
         """Objeto tenta sair mas não é autorizado"""
