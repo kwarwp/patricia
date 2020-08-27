@@ -89,13 +89,13 @@ class Indio():
 
     def anda(self):
         """Objeto tenta sair, tem que consultar a vaga onde está"""
-        print("Deixa eu consultar a classe ", type(self.vaga), " para ver se posso andar")
+        #print("Deixa eu consultar a classe ", type(self.vaga), " para ver se posso andar")
         self.vaga.sair()
 
 
     def sair(self):
         """Objeto de posse do índio tenta sair e é autorizado"""
-        print("Estou autorizado a sair, vou chamar o método siga da classe", type(self.vaga.ocupante))
+        #print("Estou autorizado a sair, vou chamar o método siga da classe", type(self.vaga.ocupante))
         self.vaga.ocupante.siga()
 
 
@@ -107,7 +107,7 @@ class Indio():
     def _anda(self):
         """ Faz o índio caminhar na direção em que está olhando.
         """
-        print("Estou me preparando para andar. Estou em ", str(self.posicao[0]), ",", str(self.posicao[1]), " e vou para: ", str(self.posicao[0]+self.azimute.x), ",", str(self.posicao[1]+self.azimute.y))
+        #print("Estou me preparando para andar. Estou em ", str(self.posicao[0]), ",", str(self.posicao[1]), " e vou para: ", str(self.posicao[0]+self.azimute.x), ",", str(self.posicao[1]+self.azimute.y))
         destino = (self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
         """A posição para onde o índio vai depende do vetor de azimute corrente"""
         taba = self.taba.taba
@@ -145,7 +145,7 @@ class Indio():
         """ Faz o índio mudar da direção em que está olhando para a esquerda.
         """
         self.azimute = self.AZIMUTE[self.AZIMUTE.index(self.azimute)-1]
-        print(self.azimute)
+        #print(self.azimute)
         self.mostra()
 
 
@@ -195,12 +195,12 @@ class Indio():
 
         No caso do índio, ele age como um obstáculo e não prossegue com o protocolo.
         """
-        print("Ocupante (Indio.acessa): ", ocupante)
+        #print("Ocupante (Indio.acessa): ", ocupante)
         pass
     
     
     def pega(self):
-        print("Pegando objeto")
+        #print("Pegando objeto")
         """tenta pegar o objeto que está diante dele"""
         destino = (self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
         """A posição para onde o índio vai depende do vetor de azimute corrente"""
@@ -370,7 +370,7 @@ class Kwarwp():
         
     def executa(self, *_):
         self.o_indio.executa()
-        print("Andando...")
+        #print("Andando...")
         
         
     def fala(self, texto=""):
@@ -384,7 +384,7 @@ class Kwarwp():
         """ Ordena a execução do roteiro do índio.
         """
         self.o_indio.esquerda()
-        print("virando para a esquerda")
+        #print("virando para a esquerda")
 
         
     def atora(self, imagem, x, y, cena):
