@@ -1,6 +1,6 @@
 # patricia/sara.kwarwp.kwarwpart.py
 # SPDX-License-Identifier: GPL-3.0-or-later
-""" Projeto Kwarwp.
+""" Projeto Kwarwp Part.
 .. codeauthor:: Paulo Assumpção <paulo.assump@gmail.com>
 Changelog
 ---------
