@@ -7,7 +7,9 @@
 Changelog
 ---------
 .. versionadded::    20.08
-        -índio anda pelo mapa.
+        - índio anda pelo mapa.
+        - Armadilha Piche
+        - Destino Oca
 
 """
 from _spy.vitollino.main import Jogo, STYLE 
