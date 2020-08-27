@@ -13,7 +13,7 @@ Changelog
 """
 from _spy.vitollino.main import Jogo, STYLE 
 from collections import namedtuple as nt
-from sucuri.coralpart import Vazio, Oca, Tora, Nulo
+from sucuri.coralpart import Vazio, Oca, Tora, Nulo, Piche
 
 MAPA_INICIAL= """
 .........
@@ -48,13 +48,13 @@ class Indio():
 
     def __init__(self, imagem, x, y, cena, taba, vai=None):
     
-        self.lado = lado = Kwarwp.LADO
+        self.lado = lado = Vazio.LADO
         self.azimute = self.AZIMUTE.n
         """índio olhando para o norte"""
         self.taba = taba
         self.vaga = self
         self.posicao = (x//lado,y//lado)
-        self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        self.indio = Vazio.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         self.x = x
         """Este x provisoriamente distingue o índio de outras coisas construídas com esta classe"""
         if x:
