@@ -139,6 +139,13 @@ class Piche(Vazio):
         
     def _pede_sair(self):
         self.taba.fala("Você ficou preso MUAHAHAHA")
+        
+    @property        
+    def elt(self):
+        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
+        No caso do espaço vazio, vai retornar um elemento que não contém nada.
+        """
+        return self.vazio.elt
 
 
 class Tora(Piche):
