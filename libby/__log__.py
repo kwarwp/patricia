@@ -1686,3 +1686,10 @@ TypeError: 'module' object is not callable
                                                                                                                                                                                                                                                                                                                                                         ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Aug 27 2020 12:59:39.927 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 3
+  """ Projeto sem descrição, (mude esta linha).
+                                                                                                                                                                                                                                                                                                                                                        ^
+SyntaxError: invalid syntax
+'''},
