@@ -13,7 +13,7 @@ Changelog
 """
 from _spy.vitollino.main import Jogo, STYLE 
 from collections import namedtuple as nt
-from sucuri.coralpart import Vazio, Oca, Tora, Nulo, Piche
+from sucuri.cascavelpart import Vazio, Oca, Tora, Nulo, Piche
 
 MAPA_INICIAL= """
 .........
