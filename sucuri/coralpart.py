@@ -18,13 +18,17 @@ class Vazio():
         :param y: linha em que o elemento será posicionado.
         :param cena: Cena em que o elemento será posicionado.
     """
+    VITOLLINO = None
+    """Referência estática para obter o engenho de jogo"""
+    LADO = None
+    """Referência estática para definir o lado do piso da casa"""
 
     def __init__(self, imagem, x, y, cena, ocupante=None):
-        from sucuri.coral import Kwarwp
-        self.lado = lado = Kwarwp.LADO or 100 # o lado previsto no tabuleiro
+        # from sucuri.coral import Kwarwp
+        self.lado = lado = Vazio.LADO or 100 # o lado previsto no tabuleiro
         self.posicao = (x//lado,y//lado-1) #o retorno será sempre um inteiro
-        self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena) # o x e o y são substituiddos pelo mapa
-        self._nada = Kwarwp.VITOLLINO.a() # descobrir o pq disso
+        self.vazio = Vazio.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena) # o x e o y são substituiddos pelo mapa
+        self._nada = Vazio.VITOLLINO.a() # descobrir o pq disso
         self.acessa = self._acessa #
         """É um método dinâmico que varia com o estado da vaga. Inicialmente é _aceesa, ou seja, vago e aceitanto ecupante"""
         self.ocupante = ocupante or self #Importante para o funcionamento dos métodos abaixo
@@ -95,13 +99,13 @@ class Vazio():
 class Piche(Vazio):
 
     def __init__(self, imagem, x, y, cena, taba):
-        from sucuri.coral import Kwarwp
+        # from sucuri.coral import Kwarwp
         self.taba = taba
         self.vaga = taba
-        self.lado = lado = Kwarwp.LADO or 100
+        self.lado = lado = Vazio.LADO or 100
         self.posicao = (x//lado,y//lado-1)
-        self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena)
-        self._nada = Kwarwp.VITOLLINO.a()
+        self.vazio = Vazio.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena)
+        self._nada = Vazio.VITOLLINO.a()
         self.acessa = self._acessa
         """O **acessa ()** é usado como método dinâmico, variando com o estado da vaga.
         Inicialmente tem o comportamento de **_acessa ()** que é o estado vago, aceitando ocupantes"""
@@ -177,13 +181,13 @@ class Tora(Piche):
 class Oca(Piche):
 
     def __init__(self, imagem, x, y, cena, taba):
-        from sucuri.coral import Kwarwp
+        # from sucuri.coral import Kwarwp
         self.taba = taba
         self.vaga = taba
-        self.lado = lado = Kwarwp.LADO or 100
+        self.lado = lado = Vazio.LADO or 100
         self.posicao = (x//lado,y//lado-1)
-        self.maloc = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena) #ACHO QUE DEVE TROCAR POR PICHE AQUI
-        self._nada = Kwarwp.VITOLLINO.a()
+        self.maloc = Vazio.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena) #ACHO QUE DEVE TROCAR POR PICHE AQUI
+        self._nada = Vazio.VITOLLINO.a()
         self.acessa = self._acessa
         """O **acessa ()** é usado como método dinâmico, variando com o estado da vaga.
         Inicialmente tem o comportamento de **_acessa ()** que é o estado vago, aceitando ocupantes"""
