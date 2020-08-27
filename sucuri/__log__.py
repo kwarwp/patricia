@@ -771,3 +771,10 @@ ImportError: cannot import name 'Vazio'
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Thu Aug 27 2020 12:06:29.673 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 234
+  if __name__ == "__main__":
+                            ^
+IndentationError: expected an indented block
+'''},
