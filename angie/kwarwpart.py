@@ -46,6 +46,7 @@ class Vazio():
         :param y: Cinha em que o elemento será posicionado.
         :param cena: Cena em que o elemento será posicionado.
     """
+    VITOLLINO, LADO = None, None
     
     def __init__(self, imagem, x, y, cena, ocupante=None):
         from angie.kwarwptora import Kwarwp
@@ -114,14 +115,6 @@ class Vazio():
         self.ocupante = ocupante
         self.acessa = self._valida_acessa
         self.sair = self._pede_sair
-
-    @property        
-    def elt(self):
-        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
-
-        No caso do espaço vazio, vai retornar um elemento que não contém nada.
-        """
-        return self._nada.elt
         
     def ocupa(self, vaga):
         """ Pedido por uma vaga para que ocupe a posição nela.
@@ -136,6 +129,22 @@ class Vazio():
         self.ocupante = self
         self.acessa = self._acessa
         self.sair = self._sair
+
+    # Agora tem este método limpa, para eliminar o elemento ocupante do jogo.
+    def limpa(self):
+        """ Pedido por um ocupante para ele seja eliminado do jogo.
+        """
+        self._nada.ocupa(self.ocupante)
+        """a figura do ocupante vai ser anexada ao elemento nada, que não é apresentado"""
+        # faz as coisas normais que o método sai faz
+
+    @property        
+    def elt(self):
+        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
+
+        No caso do espaço vazio, vai retornar um elemento que não contém nada.
+        """
+        return self._nada.elt
 
 
 class Piche(Vazio):
@@ -191,6 +200,12 @@ class Piche(Vazio):
         """Objeto tenta sair mas não é autorizado"""
         self.taba.fala("Você ficou preso no piche")       
 
+    # Agora Piche implementa sai:
+    def sai(self):
+        """ Pedido por um ocupante para que desocupe a posição nela.
+        """
+        # faz as coisas normais que fazia quando usava o sai do Vazio
+        self.vaga.limpa()
 
 class Oca(Piche):
     """  A Oca é o destino final do índio, não poderá sair se ele entrar nela.
@@ -218,7 +233,9 @@ class Oca(Piche):
         self.taba.fala("Você chegou no seu objetivo")       
         ocupante.ocupa(self)
 
-
+    def sai(self):
+        self.vaga.limpa()    
+    
 class Tora(Piche):
     """  A Tora é um pedaço de tronco cortado que o índio pode carregar ou empurrar.
     
