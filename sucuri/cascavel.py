@@ -355,7 +355,6 @@ class Kwarwp():
         self.o_indio.direita()
 
     def pega(self, *_):
-        print("Tô tentando")
         self.o_indio.pega()
         
     def larga(self, *_):
