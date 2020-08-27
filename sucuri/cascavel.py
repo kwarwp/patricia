@@ -313,7 +313,8 @@ class Kwarwp():
         
     def atora(self, imagem, x, y, cena):
         
-        coisa = Tora(imagem, x=0, y=0, cena=cena, ocupante=coisa)
+        coisa = Tora(imagem, x=x, y=y, cena=cena, taba=self)
+        vaga = Vazio("", x=x, y=y,cena=cena, ocupante=coisa)
         coisa.vazio.vai = lambda*_: self.o_indio.larga()
         """O vazio.vai é associado ao método larga do índio"""
         return vaga
