@@ -229,7 +229,7 @@ class Oca(Piche):
         self.taba.fala("Você chegou no seu objetivo")
         ocupante.ocupa(self)        
         
-    def sai():
+    def sai(self):
         """ Conserta os desvios de herança do Piche. A Oca não deve sair quando a tora sai."""
         pass
         
