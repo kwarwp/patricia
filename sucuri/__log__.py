@@ -741,3 +741,10 @@ IndentationError: expected an indented block
     from sucuri.coralpart import Vazio, Oca, Tora, Nulo
 ImportError: cannot import name 'Vazio'
 '''},
+{'date': 'Thu Aug 27 2020 12:02:13.997 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 233
+  
+  ^
+IndentationError: expected an indented block
+'''},
