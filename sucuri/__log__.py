@@ -718,3 +718,10 @@ ImportError: cannot import name 'Vazio'
     class Tora(Piche):
 NameError: name 'Piche' is not defined
 '''},
+{'date': 'Thu Aug 27 2020 12:00:44.896 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module sucuri.coralpart line 233
+  
+  ^
+IndentationError: expected an indented block
+'''},
