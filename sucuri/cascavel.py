@@ -114,6 +114,7 @@ class Indio():
             vaga.pegar(self)
             
     def larga(self):
+        destino = (self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
         taba = self.taba.taba
         if destino in taba:
             vaga = taba[destino]
