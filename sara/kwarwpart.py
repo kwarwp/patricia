@@ -271,6 +271,7 @@ class Oca(Piche):
         """
         return self.vazio.elt
         
+        
     def sai(self):
         """ Pedido por um ocupante para que desocupe a posição nela.
         """
