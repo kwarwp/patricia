@@ -274,6 +274,13 @@ class Oca(Piche):
         No caso da tora, retorna o elt do elemento do atributo **self.vazio**.
         """
         return self.vazio.elt
+        
+    def sai(self):
+        """ Pedido por um ocupante para que desocupe a posição nela.
+        """
+        self.ocupante = self
+        self.acessa = self._acessa
+        
 
 
 class Nulo:
