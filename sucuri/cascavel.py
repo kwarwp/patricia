@@ -351,6 +351,15 @@ class Kwarwp():
         """ Ordena a execução do roteiro do índio.
         """
         self.o_indio.direita()
+
+    def pega(self, *_):
+        
+        self.o_indio.pega()
+        
+    def larga(self, *_):
+        print('*-* CHEGUEI AQUI *-*')
+        self.o_indio.larga()
+    
         
     def ocupa(self, *_):
         """ O Kwarwp é aqui usado como um ocupante falso, o pedido de ocupar é ignorado."""
