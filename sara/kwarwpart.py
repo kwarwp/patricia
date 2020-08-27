@@ -261,6 +261,9 @@ class Oca(Piche):
         """
         self.taba.fala("Você chegou no seu objetivo")
         ocupante.ocupa(self)
+        
+    def sai(self):
+        pass
 
 class Nulo:
     """Objeto nulo que responde passivamente a todas as requisições."""
