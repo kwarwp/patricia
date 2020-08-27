@@ -213,7 +213,7 @@ class Kwarwp():
         self.lado, self.coluna, self.linha = 100, len(self.mapa[0]), len(self.mapa)+1
         """Lado, coluna, linha"""
         Kwarwp.LADO = self.lado
-        
+        #self.lado = lado = Kwarwp.LADO or 100
         self.o_indio = None
         """O personagem principal, o indio, vai ser atribuído pela fábrica do índio"""
         w,h = self.coluna*self.lado, self.linha*self.lado
