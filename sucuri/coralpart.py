@@ -20,6 +20,7 @@ class Vazio():
     """
 
     def __init__(self, imagem, x, y, cena, ocupante=None):
+        from sucuri.coral import Kwarwp
         self.lado = lado = Kwarwp.LADO # o lado previsto no tabuleiro
         self.posicao = (x//lado,y//lado-1) #o retorno será sempre um inteiro
         self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena) # o x e o y são substituiddos pelo mapa
@@ -93,6 +94,7 @@ class Vazio():
 
 class Tora(Piche):
 
+class Tora(Piche):
     """  A Tora é um pedaço de tronco cortado que o índio pode carregar ou empurrar.
 
         :param imagem: A figura representando o índio na posição indicada.
@@ -145,11 +147,12 @@ class Tora(Piche):
         No caso da tora, ela age como um obstáculo e não prossegue com o protocolo.
         """
         pass
-
+        
 
 class Piche(Vazio):
 
     def __init__(self, imagem, x, y, cena, taba):
+        from sucuri.coral import Kwarwp
         self.taba = taba
         self.vaga = taba
         self.lado = lado = Kwarwp.LADO
@@ -175,6 +178,7 @@ class Piche(Vazio):
 class Oca(Piche):
 
     def __init__(self, imagem, x, y, cena, taba):
+        from sucuri.coral import Kwarwp
         self.taba = taba
         self.vaga = taba
         self.lado = lado = Kwarwp.LADO
@@ -230,4 +234,3 @@ NULO = Nulo()
 
 
 if __name__ == "__main__":
-    
