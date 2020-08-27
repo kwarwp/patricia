@@ -13,7 +13,7 @@ Changelog
 """
 from _spy.vitollino.main import Jogo, STYLE 
 from collections import namedtuple as nt
-
+from sucuri.coralpart import Vazio, Oca, Tora, Nulo
 
 MAPA_INICIAL= """
 .........
@@ -172,7 +172,7 @@ class Vazio():
     def __init__(self, imagem, x, y, cena, ocupante=None):
         from sucuri.coralpart import Vazio
 
-class Tora(Vazio):
+class Tora(Piche):
 
     def __init__(self, imagem, x, y, cena, taba):
         from sucuri.coralpart import Tora
@@ -194,7 +194,12 @@ class Piche(Vazio):
 class Oca(Piche):
 
     def __init__(self, imagem, x, y, cena, taba):
-        from sucuri.coralpart import Piche
+        from sucuri.coralpart import Oca
+
+class Nulo():
+    
+    def __init__(self):
+        from sucuri.coral.part import Nulo
 
 class Kwarwp():
 
