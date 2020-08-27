@@ -249,8 +249,7 @@ class Oca(Piche):
 
     def _pede_sair(self):
         """Objeto tenta sair mas não é autorizado"""
-        if type(ocupante) is Indio:
-            self.taba.fala("Você chegou no seu objetivo")
+        self.taba.fala("Você chegou no seu objetivo")
 
 
     def _acessa(self, ocupante):
@@ -266,7 +265,7 @@ class Oca(Piche):
         ocupante.ocupa(self)
         
     def sai(self):
-        pass
+        self.vaga.limpa()
         
     def limpa(self):
         """ Pedido por um ocupante para ele seja eliminado do jogo.
