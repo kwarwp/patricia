@@ -2,8 +2,14 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 """ Projeto Kwarwp Part.
 .. codeauthor:: Paulo Assumpção <paulo.assump@gmail.com>
+
 Changelog
 ---------
+
+.. versionadded::    27.08
+        Remove o Piche
+
+
 .. versionadded::    20.08
         Orgniazação das classes do jogo Kwarwp.
         As seguintes classes foram movidas para esse módulo:
@@ -12,6 +18,7 @@ Changelog
         - Oca, 
         - Tora, 
         - NULO
+
 """
 
 
@@ -117,6 +124,11 @@ class Vazio():
         """
         self.ocupante.pegar(requisitante)
         
+    def limpa(self):
+        """ Pedido por um ocupante para ele seja eliminado do jogo.
+        """
+        self._nada.ocupa(self.ocupante)
+        """a figura do ocupante vai ser anexada ao elemento nada, que não é apresentado"""
 
 
 class Piche(Vazio):
@@ -170,6 +182,11 @@ class Piche(Vazio):
         No caso do espaço vazio, vai retornar um elemento que não contém nada.
         """
         return self.vazio.elt
+        
+    def sai(self):
+        """ Pedido por um ocupante para que desocupe a posição nela.
+        """
+        self.vaga.limpa()
 
 
 class Tora(Piche):
