@@ -363,6 +363,27 @@ class Kwarwp():
         """
         pass
 
+class Piche(Vazio):
+    """ Poça de Piche que gruda o índio se ele cair nela.
+
+        :param imagem: A figura representando o índio na posição indicada.
+        :param x: Coluna em que o elemento será posicionado.
+        :param y: Cinha em que o elemento será posicionado.
+        :param cena: Cena em que o elemento será posicionado.
+        :param taba: Representa a taba onde o índio faz o desafio.
+    """
+
+    def __init__(self, imagem, x, y, cena, taba):
+        ...
+        # não muda nada
+
+    # Agora Piche implementa sai:
+    def sai(self):
+        """ Pedido por um ocupante para que desocupe a posição nela.
+        """
+        ... # faz as coisas normais que fazia quando usava o sai do Vazio
+        self.vaga.limpa()
+
 
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
