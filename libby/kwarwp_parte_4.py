@@ -6,12 +6,12 @@
 
 Changelog
 ---------
-.. versionadded::    20.08
+.. versionadded::    27.08
         Descreva o que você adicionou no código.
 
 """
 from collections import namedtuple as nt
-from angie.kwarwpart import Vazio, Piche, Oca, Tora, Nulo
+from libby.kwarwpart import Vazio, Piche, Oca, Tora, Nulo
 
 Ponto = nt("Ponto", "x y")
 """Par de coordenadas na direção horizontal (x) e vertiacal (y)."""
