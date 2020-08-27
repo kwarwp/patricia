@@ -198,21 +198,17 @@ class Kwarwp():
         :param mapa: Texto representando o mapa do desafio
         :param medidas: Dicionário usado para redimensionar a tela
     """
-    VITOLLINO = None
-    """Referência estática para obter o engenho de jogo"""
     self.o_indio = None
     """Instância do personagem principal, o índio, vai ser atribuído pela fábrica do índio"""
-    LADO = None
-    """Referência estática para definir o lado do piso da casa"""
 
     def __init__(self, vitollino=None, mapa = MAPA_INICIAL, medidas = {}):
-        Kwarwp.VITOLLINO = self.v = vitollino()
+        Vazio.VITOLLINO = self.v = vitollino()
         """Transforma o texto matriz, explicitando o bloco de strings para cada linha."""
         self.mapa = mapa.split()
         """Largura da casa da arena dos desafios, número de colunas no mapa"""
         self.lado, self.coluna, self.linha = 100, len(self.mapa[0]), len(self.mapa)+1
         """Lado, coluna, linha"""
-        Kwarwp.LADO = self.lado
+        Vazio.LADO = self.lado
         #self.lado = lado = Kwarwp.LADO or 100
         self.o_indio = None
         """O personagem principal, o indio, vai ser atribuído pela fábrica do índio"""
