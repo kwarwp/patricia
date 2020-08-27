@@ -270,6 +270,13 @@ class Oca(Piche):
         """ Pedido por um ocupante para ele seja eliminado do jogo.
         """
         self._nada.ocupa(self.ocupante)
+        
+    @property
+    def elt(self):
+        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
+        No caso da tora, retorna o elt do elemento do atributo **self.vazio**.
+        """
+        return self.vazio.elt
 
 
 class Nulo:
