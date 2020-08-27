@@ -263,7 +263,13 @@ class Oca(Piche):
         ocupante.ocupa(self)
         
     def sai(self):
-        limpa()
+        pass
+        
+    def limpa(self):
+        """ Pedido por um ocupante para ele seja eliminado do jogo.
+        """
+        self._nada.ocupa(self.ocupante)
+
 
 class Nulo:
     """Objeto nulo que responde passivamente a todas as requisições."""
