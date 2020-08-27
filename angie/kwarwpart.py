@@ -233,9 +233,11 @@ class Oca(Piche):
         self.taba.fala("Você chegou no seu objetivo")       
         ocupante.ocupa(self)
 
-    def sai(self):
-        self.vaga.limpa()    
-    
+#    def sai(self):
+#        self.ocupante = self
+#        self.acessa = self._acessa
+#        self.sair = self._sair   
+
 class Tora(Piche):
     """  A Tora é um pedaço de tronco cortado que o índio pode carregar ou empurrar.
     
