@@ -6,6 +6,9 @@
 
 Changelog
 ---------
+.. versionadded::    27.07
+        - Remove o Piche
+
 .. versionadded::    20.07
         - Criando o indio para o jogo
         - Adicionando índio
@@ -13,6 +16,7 @@ Changelog
         - Organizando a Taba
         - Melhorando o Índio
         - Carregando a Tora
+
 
 """
 
