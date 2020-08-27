@@ -1,7 +1,7 @@
 # patricia.libby.kwarwp_parte_4.py
 # SPDX-License-Identifier: GPL-3.0-or-later
-""" Projeto sem descrição, (mude esta linha).
 
+""" 
 .. codeauthor:: Charles Soares Pimentel <pimentelufrj@gmail.com>
 
 Changelog
