@@ -19,7 +19,7 @@ MAPA_INICIAL= """
 .........
 .....@...
 ...&.....
-.........
+......|..
 .........
 ......^..
 """
@@ -182,6 +182,8 @@ class Indio():
         """ Roteiro do índio. Conjunto de comandos para ele executar.
         """
         self.anda()
+        self.pega()
+        self.larga()
             
     @property
     def elt(self):
