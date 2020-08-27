@@ -282,6 +282,8 @@ class Kwarwp():
         #self.o_indio = Indio(imagem, x=x, y=y, cena=cena) #era para estar funcionando este imagem mesmo?
         self.o_indio = Indio(imagem, x=1, y=2, cena=cena, taba=self)
         """indio tem deslocamento zro pois é relativo à vaga"""
+        self.o_indio.indio.vai = lambda *_: self.o_indio.pega()
+        """o índio.vai é associado ao seu próprio metodo pega"""        
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante = self.o_indio)
         return vaga 
         
