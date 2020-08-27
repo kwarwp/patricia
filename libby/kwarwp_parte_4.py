@@ -384,6 +384,41 @@ class Piche(Vazio):
         ... # faz as coisas normais que fazia quando usava o sai do Vazio
         self.vaga.limpa()
 
+class Vazio():
+    """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
+
+        :param imagem: A figura representando o índio na posição indicada.
+        :param x: Coluna em que o elemento será posicionado.
+        :param y: Cinha em que o elemento será posicionado.
+        :param cena: Cena em que o elemento será posicionado.
+    """
+    VITOLLINO, LADO = None, None
+
+    def __init__(self, imagem, x, y, cena, ocupante=None):
+        ...
+        # não muda nada
+
+    # Agora tem este método limpa, para eliminar o elemento ocupante do jogo.
+    def limpa(self):
+        """ Pedido por um ocupante para ele seja eliminado do jogo.
+        """
+        self._nada.ocupa(self.ocupante)
+        """a figura do ocupante vai ser anexada ao elemento nada, que não é apresentado"""
+        ... # faz as coisas normais que o método sai faz
+
+
+class Oca(Piche):
+    """  A Oca é o destino final do índio, não poderá sair se ele entrar nela.
+
+        :param imagem: A figura representando o índio na posição indicada.
+        :param x: Coluna em que o elemento será posicionado.
+        :param y: Cinha em que o elemento será posicionado.
+        :param cena: Cena em que o elemento será posicionado.
+        :param taba: Representa a taba onde o índio faz o desafio.
+    """
+    def sai(self):
+        ... # O que devemos fazer aqui para que a oca não seja removida?
+
 
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
