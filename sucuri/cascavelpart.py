@@ -86,7 +86,16 @@ class Vazio():
         self.ocupante = self
         self.acessa = self._acessa
         self.sair = self._sair
-    
+        
+    def limpa(self):
+        """ Pedido por um ocupante para ele seja eliminado do jogo.
+        """    
+        self._nada.ocupa(self.ocupante)
+        """a figura do ocupante vai ser anexada ao elemento nada, que não é apresentado"""
+        self.ocupante = self
+        self.acessa = self._acessa
+        self.sair = self._sair
+        
     @property
     def elt(self): 
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
@@ -113,8 +122,11 @@ class Piche(Vazio):
         """O **sair ()** é usado como método dinâmico, variando com o estado da vaga.
         Inicialmente tem o comportamento de **_sair ()** que é o estado vago, aceitando ocupantes"""
 
-    def limpa(self):
-        pass
+    def sai(self):
+        self.ocupante = self
+        self.acessa = self._acessa
+        self.sair = self._sair        
+        self.vaga.limpa()
     
     def ocupa(self, vaga):
         self.vaga.sai()
@@ -219,7 +231,8 @@ class Oca(Piche):
         
     def sai():
         """ Conserta os desvios de herança do Piche. A Oca não deve sair quando a tora sai."""
-
+        pass
+        
     @property
     def elt(self):
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
