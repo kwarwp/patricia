@@ -1174,3 +1174,35 @@ TypeError: can't add 'Oca' object to DOMNode instance
     self.elt <= ocupante
 TypeError: can't add 'Oca' object to DOMNode instance
 '''},
+{'date': 'Thu Aug 27 2020 17:43:02.186 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 375
+    Kwarwp(Jogo, medidas = STYLE) 
+  module <module> line 232
+    self.cena = self.cria(mapa=self.mapa) if vitollino else None #tentar entender
+  module <module> line 269
+    self.taba = {(i, j): fabrica[caracter].objeto(fabrica[caracter].url, x=i*lado, y=j*lado+lado, cena=cena)
+  module <module> line 305
+    vaga = Vazio("", x=x, y=y, cena=cena, ocupante= coisa)
+  module sucuri.cascavelpart line 36
+    self.acessa(ocupante)
+  module sucuri.cascavelpart line 62
+    ocupante.ocupa(self)
+  module sucuri.cascavelpart line 137
+    vaga.ocupou(self)
+  module sucuri.cascavelpart line 72
+    self.vazio.ocupa(ocupante)
+  module _spy.vitollino.main line 586
+    self.elt <= ocupante
+TypeError: can't add 'Oca' object to DOMNode instance
+'''},
