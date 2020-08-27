@@ -264,11 +264,6 @@ class Oca(Piche):
         ocupante.ocupa(self)
 
         
-    def limpa(self):
-        """ Pedido por um ocupante para ele seja eliminado do jogo.
-        """
-        self._nada.ocupa(self.ocupante)
-        
     @property
     def elt(self):
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
