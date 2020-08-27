@@ -188,6 +188,9 @@ class Piche(Vazio):
     def sai(self):
         """ Pedido por um ocupante para que desocupe a posição nela.
         """
+        self.ocupante = self
+        self.acessa = self._acessa
+        self.sair = self._sair
         self.vaga.limpa()
 
 
