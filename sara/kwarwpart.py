@@ -249,7 +249,7 @@ class Oca(Piche):
 
     def _pede_sair(self):
         """Objeto tenta sair mas não é autorizado"""
-        self.taba.fala("Você chegou no seu objetivo", type(ocupante))
+        self.taba.fala("Você chegou no seu objetivo", type(self.ocupante))
 
 
     def _acessa(self, ocupante):
@@ -259,7 +259,7 @@ class Oca(Piche):
         com uma chamada ocupou.
             :param ocupante: O canditato a ocupar a posição corrente.
         """
-        self.taba.fala("Você chegou no seu objetivo", type(ocupante))    
+        self.taba.fala("Você chegou no seu objetivo", type(self.ocupante))    
         ocupante.ocupa(self)
         
     def sai(self):
