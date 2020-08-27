@@ -88,8 +88,8 @@ class Vazio():
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
         No caso do espaço vazio, vai retornar um elemento que não contém nada.
         """
-        return self.vazio.elt
-        #return self._nada.elt essa linha antes fazia com que o piche "colasse" no sol
+        #return self.vazio.elt
+        return self._nada.elt #essa linha antes fazia com que o piche "colasse" no sol
 
 
 class Piche(Vazio):
