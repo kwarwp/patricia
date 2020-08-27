@@ -6,8 +6,8 @@
 
 Changelog
 ---------
-.. versionadded::    20.08
-        Descreva o que você adicionou no código.
+.. versionadded::    20.09
+        Indio joga tora no piche
 
 """
 from collections import namedtuple as nt
