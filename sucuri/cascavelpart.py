@@ -113,6 +113,9 @@ class Piche(Vazio):
         """O **sair ()** é usado como método dinâmico, variando com o estado da vaga.
         Inicialmente tem o comportamento de **_sair ()** que é o estado vago, aceitando ocupantes"""
 
+    def limpa(self):
+        pass
+    
     def ocupa(self, vaga):
         self.vaga.sai()
         self.posicao = vaga.posicao
@@ -132,6 +135,9 @@ class Tora(Piche):
         :param cena: Cena em que o elemento será posicionado.
         :param taba: Representa a taba onde o índio faz o desafio.
     """
+
+    def sai():
+        pass
 
     def pegar(self, requisitante):
         """ Consulta o ocupante atual se há permissão para pegar e entregar ao requistante.
@@ -210,6 +216,9 @@ class Oca(Piche):
         """
         self.taba.fala("Você chegou no seu objetivo")
         ocupante.ocupa(self)        
+        
+    def sai():
+        """ Conserta os desvios de herança do Piche. A Oca não deve sair quando a tora sai."""
 
     @property
     def elt(self):
