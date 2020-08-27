@@ -1,6 +1,6 @@
 # patricia.sara.kwarwp.py
 # SPDX-License-Identifier: GPL-3.0-or-later
-""" Projeto Indio.
+""" Projeto Kwarwp Part.
 
 .. codeauthor:: Paulo Assumpcao <paulo.assump@gmail.com>
 
