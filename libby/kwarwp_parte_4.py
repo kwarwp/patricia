@@ -12,7 +12,12 @@ Changelog
 """
 
 from collections import namedtuple as nt
-from kwarwp.kwarwpart import Vazio, Piche, Oca, Tora, NULO
+from libby.kwarwpart import Vazio, Piche, Oca, Tora, NULO
+
+Ponto = nt("Ponto", "x y")
+"""Par de coordenadas na direção horizontal (x) e vertiacal (y)."""
+Rosa = nt("Rosa", "n l s o")
+"""Rosa dos ventos com as direções norte, leste, sul e oeste."""
 
 IMGUR = "https://imgur.com/"
 """Prefixo do site imgur."""
@@ -39,12 +44,6 @@ MAPA_ROCHA = """
 +^.+..+
 |||||||
 """
-
-Ponto = nt("Ponto", "x y")
-"""Par de coordenadas na direção horizontal (x) e vertiacal (y)."""
-Rosa = nt("Rosa", "n l s o")
-"""Rosa dos ventos com as direções norte, leste, sul e oeste."""
-
 
 class Indio():
 
@@ -190,37 +189,38 @@ class Indio():
         """
         self.indio.ocupa(ocupante)
         self.ocupante = ocupante
-
+    
+    
 class Kwarwp():
     """ Jogo para ensino de programação.
-    
+
         :param vitollino: Empacota o engenho de jogo Vitollino.
-        :param mapa: Um texto representando o mapa do desafio.
-        :param medidas: Um dicionário usado para redimensionar a tela.
     """
     VITOLLINO = None
     """Referência estática para obter o engenho de jogo."""
     LADO = None
     """Referência estática para definir o lado do piso da casa."""
-    
+
     def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
         Kwarwp.VITOLLINO = self.v = vitollino()
-        self.mapa = mapa.split()
         """Cria um matriz com os elementos descritos em cada linha de texto"""
-        self.taba = {}
-        """Cria um dicionário com os elementos traduzidos a partir da interpretação do mapa"""
-        self.o_indio = NULO
-        """Instância do personagem principal, o índio, vai ser atribuído pela fábrica do índio"""
+        self.mapa = mapa.split()
+        """Largura da casa da arena dos desafios, número de colunas no mapa"""
         self.lado, self.col, self.lin = 100, len(self.mapa[0]), len(self.mapa)+1
-        """Largura da casa da arena dos desafios, número de colunas e linhas no mapa"""
         Kwarwp.LADO = self.lado
+        
+        self.o_indio = None
+        """Instância do personagem principal, o índio, vai ser atribuído pela fábrica do índio"""
+
         w, h = self.col *self.lado, self.lin *self.lado
+        self.taba = {}
+        """Dicionário que a partir de coordenada (i,J) localiza um piso da taba"""
         medidas.update(width=w, height=f"{h}px")
         self.cena = self.cria(mapa=self.mapa) if vitollino else None
-
+        
     def cria(self, mapa=""):
         """ Fábrica de componentes.
-        
+
         :param mapa: Um texto representando o mapa do desafio.
         """
         Fab = nt("Fab", "objeto imagem")
@@ -231,11 +231,11 @@ class Kwarwp():
         "^": Fab(self.indio, f"{IMGUR}UCWGCKR.png"), # INDIO
         ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), # VAZIO
         "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), # SOLO
-        "#": Fab(self.atora, f"{IMGUR}0jSB27g.png"), # TORA
+        "#": Fab(self.tora, f"{IMGUR}0jSB27g.png"), # TORA
         "@": Fab(self.barra, f"{IMGUR}tLLVjfN.png"), # PICHE
         "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), # CEU
         "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), # SOL
-        "|": Fab(self.coisa, f"{IMGUR}uwYPNlz.png")  # CERCA       
+        "|": Fab(self.coisa, f"{IMGUR}uwYPNlz.png")  # CERCA
         }
         """Dicionário que define o tipo e a imagem do objeto para cada elemento."""
         mapa = mapa if mapa != "" else self.mapa
@@ -256,93 +256,50 @@ class Kwarwp():
         cena.vai()
         return cena
         
-    def fala(self, texto=""):
-        """ O Kwarwp é aqui usado para falar algo que ficará escrito no céu.
-        """
-        self.ceu.elt.html = texto
-        pass
-        
-    def sai(self, *_):
-        """ O Kwarwp é aqui usado como uma vaga falsa, o pedido de sair é ignorado.
-        """
-        pass
-        
-    def ocupa(self, *_):
-        """ O Kwarwp é aqui usado como um ocupante falso, o pedido de ocupar é ignorado.
-        """
-        pass
-        
-    def esquerda(self, *_):
-        """ Ordena a execução do roteiro do índio.
-        """
-        self.o_indio.esquerda()
-        
-    def executa(self, *_):
-        """ Ordena a execução do roteiro do índio.
-        """
-        self.o_indio.executa()
-        
-    def atora(self, imagem, x, y, cena):
-        """ Cria uma tora na arena do Kwarwp na posição definida.
+    def coisa(self, imagem, x, y, cena):
+        """ Cria um elemento na arena do Kwarwp na posição definida.
+
         :param x: coluna em que o elemento será posicionado.
         :param y: linha em que o elemento será posicionado.
         :param cena: cena em que o elemento será posicionado.
+,
+        Cria uma vaga vazia e coloca o componente dentro dela.
+        """
+        coisa = Indio(imagem, x=0, y=0, cena=cena, taba=self)
+        """o índio tem deslocamento zero, pois é relativo à vaga"""
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+        """Aqui o índio está sendo usado para qualquer objeto, enquanto não tem o próprio"""
+        return vaga
+
+    def vazio(self, imagem, x, y, cena):
+        """ Cria um espaço vazio na arena do Kwarwp na posição definida.
+
+        :param x: coluna em que o elemento será posicionado.
+        :param y: linha em que o elemento será posicionado.
+        :param cena: cena em que o elemento será posicionado.
+        """
+        vaga = Vazio(imagem, x=x, y=y, cena=cena, ocupante=self)
+        """ O Kwarwp é aqui usado como um ocupante nulo, que não ocupa uma vaga vazia."""
+        return vaga
         
+    def atora(self, imagem, x, y, cena):
+        """ Cria uma tora na arena do Kwarwp na posição definida.
+
+        :param x: coluna em que o elemento será posicionado.
+        :param y: linha em que o elemento será posicionado.
+        :param cena: cena em que o elemento será posicionado.
+
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
         coisa = Tora(imagem, x=0, y=0, cena=cena, taba=self)
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
         coisa.vazio.vai = lambda *_: self.o_indio.larga()
+        """o vazio.vai é associado ao método larga do índio"""
         return vaga
-        
-    def maloc(self, imagem, x, y, cena):
-        """ Cria uma maloca na arena do Kwarwp na posição definida.
-        :param x: coluna em que o elemento será posicionado.
-        :param y: linha em que o elemento será posicionado.
-        :param cena: cena em que o elemento será posicionado.
-        
-        Cria uma vaga vazia e coloca o componente dentro dela.
-        """
-        coisa = Oca(imagem, x=0, y=0, cena=cena, taba=self)
-        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
-        return vaga
-        
-    def barra(self, imagem, x, y, cena):
-        """ Cria uma armadilha na arena do Kwarwp na posição definida.
-        :param x: coluna em que o elemento será posicionado.
-        :param y: linha em que o elemento será posicionado.
-        :param cena: cena em que o elemento será posicionado.
-        
-        Cria uma vaga vazia e coloca o componente dentro dela.
-        """
-        coisa = Piche(imagem, x=0, y=0, cena=cena, taba=self)
-        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
-        return vaga
-        
-    def coisa(self, imagem, x, y, cena):
-        """ Cria um elemento na arena do Kwarwp na posição definida.
-        :param x: coluna em que o elemento será posicionado.
-        :param y: linha em que o elemento será posicionado.
-        :param cena: cena em que o elemento será posicionado.
-        
-        Cria uma vaga vazia e coloca o componente dentro dela.
-        """
-        coisa = Indio(imagem, x=0, y=0, cena=cena, taba=self)
-        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
-        return vaga
-        
-    def vazio(self, imagem, x, y, cena):
-        """ Cria um espaço vazio na arena do Kwarwp na posição definida.
-        :param x: coluna em que o elemento será posicionado.
-        :param y: linha em que o elemento será posicionado.
-        :param cena: cena em que o elemento será posicionado.
-        """
-        vaga = Vazio(imagem, x=x, y=y, cena=cena, ocupante=NULO)
-        """ O Kwarwp é aqui usado como um ocupante nulo, que não ocupa uma vaga vazia."""
-        return vaga
-        
+
     def indio(self, imagem, x, y, cena):
         """ Cria o personagem principal na arena do Kwarwp na posição definida.
+
         :param x: coluna em que o elemento será posicionado.
         :param y: linha em que o elemento será posicionado.
         :param cena: cena em que o elemento será posicionado.
@@ -355,6 +312,7 @@ class Kwarwp():
         """o índio.vai é associado ao seu próprio metodo pega"""
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
         return vaga
+            
     def fala(self, texto=""):
         """ O Kwarwp é aqui usado para falar algo que ficará escrito no céu.
         """
@@ -427,3 +385,4 @@ if __name__ == "__main__":
     STYLE["width"] = 600
     STYLE["heigth"] = "500px"
     Kwarwp(Jogo, mapa=MAPA_INICIO)
+    
