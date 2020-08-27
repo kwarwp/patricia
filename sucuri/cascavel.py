@@ -172,7 +172,9 @@ class Indio():
         self.posicao = vaga.posicao
         vaga.ocupou(self)
         self.vaga = vaga
+        
         if self.x:
+            """mostra apenas de houver valor na variável x"""
             self.mostra()
 
     def acessa(self, ocupante):
