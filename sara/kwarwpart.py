@@ -261,9 +261,7 @@ class Oca(Piche):
         """
         self.taba.fala("Você chegou no seu objetivo")
         ocupante.ocupa(self)
-        
-    def sai(self):
-        pass
+
         
     def limpa(self):
         """ Pedido por um ocupante para ele seja eliminado do jogo.
