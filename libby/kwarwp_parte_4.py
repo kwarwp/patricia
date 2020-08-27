@@ -9,7 +9,6 @@ Changelog
 .. versionadded::    20.08
         Descreva o que você adicionou no código.
 
-"""
 
 from collections import namedtuple as nt
 from libby.kwarwpart import Vazio, Piche, Oca, Tora, NULO
@@ -44,6 +43,25 @@ MAPA_ROCHA = """
 +^.+..+
 |||||||
 """
+"""
+cfrom collections import namedtuple as nt
+from angie.kwarwpart import Vazio, Piche, Oca, Tora, Nulo
+
+Ponto = nt("Ponto", "x y")
+"""Par de coordenadas na direção horizontal (x) e vertiacal (y)."""
+Rosa = nt("Rosa", "n l s o")
+"""Rosa dos ventos com as direções norte, leste, sul e oeste."""
+
+"""Prefixo do site IMGUR"""
+IMGUR = "https://imgur.com/"
+        
+MAPA_INICIO = """
+@....&
+......
+.....#
+.#.^..
+"""
+
 
 class Indio():
 
@@ -352,7 +370,7 @@ class Kwarwp():
 
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
-        #coisa = Piche(imagem, x=0, y=0, cena=cena, taba=self)
+        coisa = Piche(imagem, x=0, y=0, cena=cena, taba=self)
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
         return vaga
 
