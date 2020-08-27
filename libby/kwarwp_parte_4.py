@@ -44,7 +44,7 @@ MAPA_ROCHA = """
 |||||||
 """
 """
-cfrom collections import namedtuple as nt
+from collections import namedtuple as nt
 from angie.kwarwpart import Vazio, Piche, Oca, Tora, Nulo
 
 Ponto = nt("Ponto", "x y")
