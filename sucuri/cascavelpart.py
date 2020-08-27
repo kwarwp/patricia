@@ -227,7 +227,7 @@ class Oca(Piche):
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
         No caso da oca, vai retornar o maloc.
         """
-        return self.maloc.elt
+        return self.vazio.elt
         
 
 class Nulo():
