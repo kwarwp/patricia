@@ -38,47 +38,6 @@ Rosa = nt("Rosa", "n l s o")
 """Rosa dos ventos com as direções norte, leste, sul e oeste."""
 
 
-class Vazio():
-    """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
-        :param imagem: A figura representando o espaço vazio (normalmente transparente).
-        :param x: Coluna em que o elemento será posicionado.
-        :param y: linha em que o elemento será posicionado.
-        :param cena: Cena em que o elemento será posicionado.
-    """
-
-    def __init__(self, imagem, x, y, cena, ocupante=None):
-        from sucuri.coralpart import Vazio
-
-class Tora(Piche):
-
-    def __init__(self, imagem, x, y, cena, taba):
-        from sucuri.coralpart import Tora
-
-
-class Piche(Vazio):
-    """ Poça de Piche que gruda o índio se ele cair nela.
-
-        :param imagem: A figura representando o índio na posição indicada.
-        :param x: Coluna em que o elemento será posicionado.
-        :param y: Cinha em que o elemento será posicionado.
-        :param cena: Cena em que o elemento será posicionado.
-        :param taba: Representa a taba onde o índio faz o desafio.
-    """
-
-    def __init__(self, imagem, x, y, cena, taba):
-        from sucuri.coralpart import Piche
-
-class Oca(Piche):
-
-    def __init__(self, imagem, x, y, cena, taba):
-        from sucuri.coralpart import Oca
-
-class Nulo():
-    
-    def __init__(self):
-        from sucuri.coral.part import Nulo
-
-
 class Indio():
     """ Cria estrutura índio que será chamada no kwarwp"""
     AZIMUTE = Rosa(Ponto(0, -1),Ponto(1, 0),Ponto(0, 1),Ponto(-1, 0))
@@ -269,9 +228,7 @@ class Kwarwp():
         """Inicia a existência do dicionário que a partir de coordenada (i,J) localiza um piso da taba a partir 
            das coordenadas i e j
         """
-        self.cena = self.cria(mapa=self.mapa) if vitollino else None
-        """Tentar entender
-        """
+        self.cena = self.cria(mapa=self.mapa) if vitollino else None #tentar entender
         
     def cria(self, mapa=""):
     
