@@ -249,7 +249,8 @@ class Oca(Piche):
 
     def _pede_sair(self):
         """Objeto tenta sair mas não é autorizado"""
-        self.taba.fala("Você chegou no seu objetivo")
+        if type(ocupante) is Indio:
+            self.taba.fala("Você chegou no seu objetivo")
 
 
     def _acessa(self, ocupante):
