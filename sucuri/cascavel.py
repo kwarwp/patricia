@@ -182,6 +182,8 @@ class Indio():
         """ Roteiro do índio. Conjunto de comandos para ele executar.
         """
         self.anda()
+        self.pega()
+        self.larga()
             
     @property
     def elt(self):
@@ -353,7 +355,7 @@ class Kwarwp():
         self.o_indio.direita()
 
     def pega(self, *_):
-        
+        print("Tô tentando")
         self.o_indio.pega()
         
     def larga(self, *_):
