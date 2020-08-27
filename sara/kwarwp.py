@@ -378,7 +378,6 @@ class Kwarwp():
         """ O Kwarwp é aqui usado para falar algo que ficará escrito no céu.
         """
         self.ceu.elt.html = texto
-        pass
         
 
     def vira_esquerda(self, *_):
@@ -411,7 +410,7 @@ class Kwarwp():
         :param y: linha em que o elemento será posicionado.
         :param cena: cena em que o elemento será posicionado.
         """
-        self.o_indio = Indio(imagem, x=1, y=2, cena=cena, taba=self)
+        self.o_indio = Indio(imagem, x=1, y=0, cena=cena, taba=self)
         """ O índio tem deslocamento zero, pois é relativo à vaga.
             O **x=1** serve para distinguir o indio de outros derivados.
         """
