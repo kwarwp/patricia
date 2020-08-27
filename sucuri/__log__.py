@@ -1032,3 +1032,25 @@ NameError: name 'Piche' is not defined
     self.lado = lado = Kwarwp.LADO
 AttributeError: 'Kwarwp' object has no attribute 'LADO'
 '''},
+{'date': 'Thu Aug 27 2020 15:45:33.399 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 367
+    Kwarwp(Jogo, medidas = STYLE) 
+  module <module> line 227
+    self.cena = self.cria(mapa=self.mapa) if vitollino else None #tentar entender
+  module <module> line 264
+    self.taba = {(i, j): fabrica[caracter].objeto(fabrica[caracter].url, x=i*lado, y=j*lado+lado, cena=cena)
+  module <module> line 316
+    coisa = Tora(imagem, x=0, y=0, cena=cena, ocupante=coisa)
+UnboundLocalError: local variable 'coisa' referenced before assignment
+'''},
