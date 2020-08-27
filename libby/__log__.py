@@ -1722,3 +1722,7 @@ SyntaxError: invalid syntax
     coisa = Piche(imagem, x=0, y=0, cena=cena, taba=self)
 TypeError: 'module' object is not callable
 '''},
+{'date': 'Thu Aug 27 2020 16:49:01.900 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: Cannot read property '$methods' of undefined>
+'''},
