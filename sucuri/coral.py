@@ -143,6 +143,36 @@ class Indio():
         :param texto: O texto a ser falado.
         """
         self.taba.fala(texto)  
+        
+    def pega(self):
+        """Tenta pegar objeto que está a frente dele"""
+        destino = (self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
+        """Posição para onde o índio vai depende do vetor de azimute corrente."""
+        taba = self.taba.taba
+        if destino in taba: 
+            vaga = taba[destino]
+            """Recupera na taba a vaga para o qual o índio irá se transferir"""
+            vaga.pegar(self)
+            
+    def larga(self):
+        taba = self.taba.taba
+        if destino in taba:
+            vaga = taba[destino]
+            vaga.acessa(self.ocupante)
+            
+    def ocupou(self, ocupante):
+        """ O candidato à vaga decidiu ocupá-la e efetivamente entra neste espaço.
+
+        :param ocupante: O canditato a ocupar a posição corrente.
+
+        Este ocupante vai entrar no elemento do Vitollino e definitivamente se tornar
+        o ocupante da vaga. Com isso ele troca o estado do método acessa para primeiro
+        consultar a si mesmo, o ocupante corrente usando o protocolo definido em
+        **_valida_acessa ()**
+
+        """
+        self.indio.ocupa(ocupante)
+        self.ocupante = ocupante
 
     def anda(self):
         """Objeto tenta sair, tem que consultar a vaga onde está"""
@@ -328,6 +358,28 @@ class Kwarwp():
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
         return vaga
         
+    def atora(self, imagem, x, y, cena):
+        
+        coisa = Tora(imagem, x=0, y=0, cena=cena, ocupante=coisa)
+        coisa.vazio.vai = lambda*_: self.o_indio.larga()
+        """O vazio.vai é associado ao método larga do índio"""
+        return vaga
+        
+    def indio(self, imagem, x, y, cena):
+        
+        self.o_indio = Indio(imagem, x=1, y=0, cena=cena, taba=self)
+        """
+           O **x=1** serve para distinguir o índio de outros derivados 
+        """
+        self.o_indio.indio.vai = lambda *_: self.o_indio.pega()
+        """Índio é associado ao próprio método pega"""
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
+        return vaga
+
+    def vazio(self, imagem, x,y ,cena):
+        vaga = Vazio(imagem, x=x, y=y, cena=cena, ocupante=self)
+        return vaga
+
     def fala(self, texto=""):
         """ O Kwarwp é aqui usado para falar algo que ficará escrito no céu.
         """
@@ -343,10 +395,6 @@ class Kwarwp():
         """ Ordena a execução do roteiro do índio.
         """
         self.o_indio.direita()
-        
-    def vazio(self, imagem, x,y ,cena):
-        vaga = Vazio(imagem, x=x, y=y, cena=cena, ocupante=self)
-        return vaga
         
     def ocupa(self, *_):
         """ O Kwarwp é aqui usado como um ocupante falso, o pedido de ocupar é ignorado."""
