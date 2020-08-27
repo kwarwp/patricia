@@ -1,12 +1,26 @@
 # patricia.roxanne.kwarwp_v4.py
 # SPDX-License-Identifier: GPL-3.0-or-later
-# SPDX-License-Identifier: GPL-3.0-or-later
-""" Projeto sem descrição, (mude esta linha).
-.. codeauthor:: Charles Soares Pimentel <pimentelufrj@gmail.com>
+""" 
+Meu Kwarwp Isaac
+.. codeauthor:: Isaac D'Césares <isaac.dcesares@gmail.com>
 Changelog
 ---------
-.. versionadded::    20.08
-        Descreva o que você adicionou no código.
+.. versionadded::    20.08.a4
+        Movimentação do índio
+        Classe tora e piche
+
+.. versionadded::    20.08.a3
+        Classe vazio e correção no movimento do índio
+      
+.. versionadded::    20.08.a2
+        Fazendo o índio andar
+
+.. versionadded::    20.08.a1
+        Classe Índio
+        Fábrica de componentes
+        
+.. versionadded::    20.07
+        Criando novo Kwarwp!
 """
 
 from collections import namedtuple as nt
