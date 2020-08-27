@@ -1679,3 +1679,10 @@ TypeError: 'module' object is not callable
     coisa = Piche(imagem, x=0, y=0, cena=cena, taba=self)
 TypeError: 'module' object is not callable
 '''},
+{'date': 'Thu Aug 27 2020 12:57:51.579 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 3
+  """ Projeto sem descrição, (mude esta linha).
+                                                                                                                                                                                                                                                                                                                                                        ^
+SyntaxError: invalid syntax
+'''},
