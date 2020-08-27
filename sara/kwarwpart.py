@@ -265,11 +265,12 @@ class Oca(Piche):
         ocupante.ocupa(self)
         
     def sai(self):
-        print(self.ocupante)
-        self.vaga.limpa()
+        pass
         
     def limpa(self):
-        pass
+        """ Pedido por um ocupante para ele seja eliminado do jogo.
+        """
+        self._nada.ocupa(self.ocupante)
         
     @property
     def elt(self):
