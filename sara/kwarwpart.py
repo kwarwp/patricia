@@ -55,18 +55,18 @@ class Vazio():
 
 
     def _valida_acessa(self, ocupante):
-        print("Ocupante da vaga: ", ocupante)
+        #print("Ocupante da vaga: ", ocupante)
         self.ocupante.acessa(ocupante)
         
     def _sair(self):
         """Objeto tenta sair e recebe autorização para seguir"""
-        print("Vou chamar o método siga da classe ", type(self.ocupante))
+        #print("Vou chamar o método siga da classe ", type(self.ocupante))
         self.ocupante.siga()
         
 
     def _pede_sair(self):
         """Objeto tenta sair e consulta o ocupante para seguir"""
-        print("Vou chamar o método sair da classe ", type(self.ocupante))
+        #print("Vou chamar o método sair da classe ", type(self.ocupante))
         self.ocupante.sair()
         
         
@@ -77,7 +77,7 @@ class Vazio():
         com uma chamada ocupou.
             :param ocupante: O canditato a ocupar a posição corrente.
         """
-        print("Area vazia")
+        #print("Area vazia")
         ocupante.ocupa(self)  
 
 
@@ -263,6 +263,7 @@ class Oca(Piche):
         ocupante.ocupa(self)
         
     def sai(self):
+        print(ocupante)
         pass
 
 class Nulo:
