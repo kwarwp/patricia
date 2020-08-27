@@ -219,7 +219,8 @@ class Oca(Piche):
         
     def sai(self):
         """ Conserta os desvios de herança do Piche. A Oca não deve sair quando a tora sai."""
-        pass
+        self.ocupante = self
+        self.acessa = self._acessa
         
     @property
     def elt(self):
