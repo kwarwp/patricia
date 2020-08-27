@@ -92,7 +92,32 @@ class Vazio():
         #return self._nada.elt essa linha antes fazia com que o piche "colasse" no sol
 
 
-class Tora(Piche):
+class Piche(Vazio):
+
+    def __init__(self, imagem, x, y, cena, taba):
+        from sucuri.coral import Kwarwp
+        self.taba = taba
+        self.vaga = taba
+        self.lado = lado = Kwarwp.LADO
+        self.posicao = (x//lado,y//lado-1)
+        self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena)
+        self._nada = Kwarwp.VITOLLINO.a()
+        self.acessa = self._acessa
+        """O **acessa ()** é usado como método dinâmico, variando com o estado da vaga.
+        Inicialmente tem o comportamento de **_acessa ()** que é o estado vago, aceitando ocupantes"""
+        self.sair = self._sair
+        """O **sair ()** é usado como método dinâmico, variando com o estado da vaga.
+        Inicialmente tem o comportamento de **_sair ()** que é o estado vago, aceitando ocupantes"""
+
+    def ocupa(self, vaga):
+        self.vaga.sai()
+        self.posicao = vaga.posicao
+        vaga.ocupou(self)
+        self.vaga = vaga
+        
+    def _pede_sair(self):
+        self.taba.fala("Você ficou preso MUAHAHAHA")
+
 
 class Tora(Piche):
     """  A Tora é um pedaço de tronco cortado que o índio pode carregar ou empurrar.
@@ -147,33 +172,7 @@ class Tora(Piche):
         No caso da tora, ela age como um obstáculo e não prossegue com o protocolo.
         """
         pass
-        
 
-class Piche(Vazio):
-
-    def __init__(self, imagem, x, y, cena, taba):
-        from sucuri.coral import Kwarwp
-        self.taba = taba
-        self.vaga = taba
-        self.lado = lado = Kwarwp.LADO
-        self.posicao = (x//lado,y//lado-1)
-        self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena)
-        self._nada = Kwarwp.VITOLLINO.a()
-        self.acessa = self._acessa
-        """O **acessa ()** é usado como método dinâmico, variando com o estado da vaga.
-        Inicialmente tem o comportamento de **_acessa ()** que é o estado vago, aceitando ocupantes"""
-        self.sair = self._sair
-        """O **sair ()** é usado como método dinâmico, variando com o estado da vaga.
-        Inicialmente tem o comportamento de **_sair ()** que é o estado vago, aceitando ocupantes"""
-
-    def ocupa(self, vaga):
-        self.vaga.sai()
-        self.posicao = vaga.posicao
-        vaga.ocupou(self)
-        self.vaga = vaga
-        
-    def _pede_sair(self):
-        self.taba.fala("Você ficou preso MUAHAHAHA")
 
 class Oca(Piche):
 
@@ -231,6 +230,3 @@ class Nulo():
         return self
 
 NULO = Nulo()
-
-
-if __name__ == "__main__":
