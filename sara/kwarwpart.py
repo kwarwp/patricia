@@ -259,12 +259,11 @@ class Oca(Piche):
         com uma chamada ocupou.
             :param ocupante: O canditato a ocupar a posição corrente.
         """
-        if type(ocupante) is Indio:
-            self.taba.fala("Você chegou no seu objetivo")
-            ocupante.ocupa(self)
+        self.taba.fala("Você chegou no seu objetivo")
+        ocupante.ocupa(self)
         
     def sai(self):
-        pass
+        limpa()
 
 class Nulo:
     """Objeto nulo que responde passivamente a todas as requisições."""
