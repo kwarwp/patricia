@@ -10,6 +10,7 @@ Changelog
         - Estudo da Herança 
 
 """
+
 class Vazio():
     """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
         :param imagem: A figura representando o espaço vazio (normalmente transparente).
@@ -183,4 +184,21 @@ class Oca(Piche):
         
 
 class Nulo():
-    pass
+    
+    def __init__(self):
+        self.pegar = self.ocupa = self.nulo
+
+    def nulo(self, *_, **__):
+        """Método nulo, responde passivamente a todas as chamadas.
+
+        :param _: aceita todos os argumentos posicionais.
+        :param __: aceita todos os argumentos nomeados.
+        :return: retorna o próprio objeto nulo.
+        """
+        return self
+
+NULO = Nulo()
+
+
+if __name__ == "__main__":
+    
