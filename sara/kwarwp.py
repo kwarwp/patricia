@@ -113,7 +113,7 @@ class Indio():
         taba = self.taba.taba
         if destino in taba:
             vaga = taba[destino]
-            print(vaga.acessa)
+            #print(vaga.acessa)
             """Recupera na taba a vaga para a qual o índio irá se transferir"""
             vaga.acessa(self)
 
@@ -245,18 +245,19 @@ class Kwarwp():
     LADO = 100
     """Referência estática para definir o lado do piso da casa."""
     
-    self.o_indio = None
-    """Instância do personagem principal, o índio, vai ser atribuído pela fábrica do índio"""
     
     def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
         Kwarwp.VITOLLINO = self.v = vitollino()
         self.mapa = mapa.split()
         """Cria um matriz com os elementos descritos em cada linha de texto"""
         self.taba = {}
+        
+        self.o_indio = NULO
+        """Instância do personagem principal, o índio, vai ser atribuído pela fábrica do índio"""
 
         self.lado, self.col, self.lin = 100, len(self.mapa[0]), len(self.mapa)+1
         """Largura da casa da arena dos desafios, número de colunas e linhas no mapa"""
-        Kwarwp.LADO = self.lado
+        Vazio.LADO = self.lado
         w, h = self.col *self.lado, self.lin *self.lado
         """Dicionário que a partir de coordenada (i,J) localiza um piso da taba"""
         medidas.update(width=w, height=f"{h}px")
