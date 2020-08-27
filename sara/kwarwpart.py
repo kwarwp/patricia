@@ -261,7 +261,8 @@ class Oca(Piche):
         """
         if type(ocupante) is Indio:
             self.taba.fala("Você chegou no seu objetivo")
-            ocupante.ocupa(self)
+            
+        ocupante.ocupa(self)
         
     def sai(self):
         pass
