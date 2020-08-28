@@ -168,7 +168,7 @@ class Indio():
         :param vaga: A vaga que será ocupada pelo componente.
         No caso do índio, requisita que a vaga seja ocupada por ele.
         """
-        vaga.sai()
+        self.vaga.sai()
         self.posicao = vaga.posicao
         vaga.ocupou(self)
         self.vaga = vaga
