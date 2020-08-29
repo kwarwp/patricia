@@ -38,3 +38,8 @@ class Kwarwp():
         sol = self.v.a(self.SOL, w=60, h=60, x=0, y=40, cena=cena)
         cena.vai()
         return cena
+        
+if __name__ == "__main__":
+    from _spy.vitollino.main import Jogo, STYLE
+    STYLE.update(width=600, height="500px")
+    Kwarwp(Jogo).cria()
