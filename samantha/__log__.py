@@ -19,3 +19,10 @@
     cena = self.v.c(self.SOLO)
 AttributeError: 'Kwarwp' object has no attribute 'SOLO'
 '''},
+{'date': 'Sat Aug 29 2020 17:38:32.416 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 47
+  self.v = vitollino()
+  ^
+IndentationError: expected an indented block
+'''},
