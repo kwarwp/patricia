@@ -41,3 +41,10 @@ SyntaxError: non-keyword arg after keyword arg
                                                                            ^
 SyntaxError: non-keyword arg after keyword arg
 '''},
+{'date': 'Sat Aug 29 2020 17:01:14.856 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 30
+  self.boneco = Elemento(self.BONECO, x = self.pos_x, y = self.pos_y, width, height, cena = self.ambiente)
+                                                                           ^
+SyntaxError: non-keyword arg after keyword arg
+'''},
