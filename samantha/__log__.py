@@ -113,3 +113,10 @@ KeyError:
     return self.v.a(self.GLIFOS[imagem], w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena)
 KeyError:  
 '''},
+{'date': 'Sat Aug 29 2020 17:46:11.948 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 46
+  def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
+  ^
+IndentationError: unexpected indent
+'''},
