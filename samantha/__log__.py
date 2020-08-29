@@ -214,3 +214,10 @@ TypeError: cria() got an unexpected keyword argument 'mapa'
     self.cena = self.cria(mapa=mapa) if vitollino else None
 TypeError: cria() got an unexpected keyword argument 'mapa'
 '''},
+{'date': 'Sat Aug 29 2020 17:50:34.708 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 58
+  lado = self.lado
+  ^
+IndentationError: expected an indented block
+'''},
