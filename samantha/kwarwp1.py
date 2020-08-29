@@ -1,14 +1,13 @@
 # patricia.samantha.kwarwp1.py
 # SPDX-License-Identifier: GPL-3.0-or-later
-""" Projeto sem descrição, (mude esta linha).
+""" Projeto Kwarwp da Raquel.
 
 .. codeauthor:: Raquel  <raquelmachado4993@gmail.com>
 
 Changelog
 ---------
-.. versionadded::    29.08
-        Seguindo tutorial - Criando a cena do jogo Kwarwp usando o Vitollino - Inserindo a cerca
-
+.. versionadded::  29.08
+        Seguindo tutorial - Criando a cena do jogo Kwarwp usando o Vitollino - Inserindo as cercas no mapa
 """
 
 MAPA_INICIO = """
