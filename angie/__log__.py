@@ -2883,3 +2883,10 @@ AttributeError: 'module' object has no attribute 'VITOLLINO'
     Kwarwp.VITOLLINO = Kwarwp.VITOLLINO or Jogo()
 AttributeError: 'module' object has no attribute 'VITOLLINO'
 '''},
+{'date': 'Sat Aug 29 2020 18:03:09.545 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 53
+  if self.boneco.x = 500 and self.boneco.y = 500:
+                    ^
+SyntaxError: invalid syntax
+'''},
