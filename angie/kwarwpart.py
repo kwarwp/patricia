@@ -169,13 +169,13 @@ class Vazio():
         """A posição para onde o índio vai depende do vetor de azimute corrente"""
         # o resto é semelhante ao código do _anda no Índio
         #inicio - trabalhando aqui
-        
+        print("to no acessar do vazio") 
         """A posição para onde o índio vai depende do vetor de azimute corrente"""
         taba = self.taba.taba
         if destino in taba:
             vaga = taba[destino]
             """Recupera na taba a vaga para a qual o índio irá se transferir"""
-            vaga.acessa(self)
+            vaga._acessa(self)
         #fim - trabalhando aqui    
             
         
@@ -346,8 +346,8 @@ class Tora(Piche):
         #    """Recupera na taba a vaga para a qual o índio irá se transferir"""
         #    vaga.acessa(self)
 
-        self.vaga.acessar(self, self, azimute) # acrescente o resto do comndo
-
+        self.vaga.acessar(self, azimute) # acrescente o resto do comndo
+        
         #fim - trabalhando aqui
         
         
