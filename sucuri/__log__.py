@@ -1856,3 +1856,25 @@ AttributeError: 'Tora' object has no attribute 'empurrante'
     self.empurrante # .xxx(zzz) if www else None -> continue o código
 AttributeError: 'Tora' object has no attribute 'empurrante'
 '''},
+{'date': 'Thu Sep 03 2020 18:09:08.909 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 177
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 394
+    Kwarwp(Jogo, medidas = STYLE) 
+  module <module> line 251
+    self.cena = self.cria(mapa=self.mapa) if vitollino else None #tentar entender
+  module <module> line 288
+    self.taba = {(i, j): fabrica[caracter].objeto(fabrica[caracter].url, x=i*lado, y=j*lado+lado, cena=cena)
+  module <module> line 356
+    vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
+TypeError: __init__ missing 1 positional argument: 'taba'
+'''},
