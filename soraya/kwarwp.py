@@ -202,7 +202,9 @@ class Tora(Piche):
         self.empurrante 
         self.empurrante = NULO
         self.vaga = vaga    
-        
+    
+    def h():
+        pass
         
     @property
     def posicao(self):
