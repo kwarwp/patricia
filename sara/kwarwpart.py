@@ -139,7 +139,8 @@ class Vazio():
             :param requistante: O ator querendo empurrar o objeto.
             :param azimute: A direção que se quer empurrar  o ocupante.
         """
-        print("Empurrando a Tora")
+        print("Empurrando a Tora", coupante)
+        
         self.ocupante.empurrar(requisitante, azimute)
         
         
