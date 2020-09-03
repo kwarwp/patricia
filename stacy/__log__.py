@@ -278,3 +278,10 @@ SyntaxError: invalid syntax
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Thu Sep 03 2020 16:21:53.790 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 281
+  def limpa(self):
+  ^
+IndentationError: expected an indented block
+'''},
