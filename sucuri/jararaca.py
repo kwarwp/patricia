@@ -45,8 +45,8 @@ class Indio():
         Constante com os pares ordenados que representam os vetores unitários dos pontos cardeais.
     """
 
-     #def __init__(self, imagem, x, y, cena, taba, vai=None):
-    def __init__(self, imagem, x, y, cena, taba):
+    def __init__(self, imagem, x, y, cena, taba, vai=None):
+    #def __init__(self, imagem, x, y, cena, taba):
         self.lado = lado = Vazio.LADO # antes self.lado = lado = Kwarwp.LADO
         self.azimute = self.AZIMUTE.n
         """índio olhando para o norte"""
