@@ -5,7 +5,7 @@
 
 Changelog
 ---------
-.. versionadded::    20.08
+.. versionadded::    3.09
         - índio anda pelo mapa.
         - Armadilha Piche
         - Destino Oca
