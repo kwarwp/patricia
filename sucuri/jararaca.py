@@ -321,7 +321,7 @@ class Kwarwp():
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
         coisa = Oca(imagem, x=0, y=0, cena=cena, taba=self)
-        vaga = Vazio("", x=x, y=y, cena=cena, ocupante= coisa)
+        vaga = Vazio("", x=x, y=y, cena=cena, taba=self, ocupante= coisa)
         return vaga
         
     def barra(self, imagem, x, y, cena):
@@ -334,13 +334,13 @@ class Kwarwp():
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
         coisa = Piche(imagem, x=0, y=0, cena=cena, taba=self)
-        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+        vaga = Vazio("", x=x, y=y, cena=cena, taba=self, ocupante=coisa)
         return vaga
         
     def atora(self, imagem, x, y, cena):
         
         coisa = Tora(imagem, x=x, y=y, cena=cena, taba=self)
-        vaga = Vazio("", x=x, y=y,cena=cena, ocupante=coisa)
+        vaga = Vazio("", x=x, y=y,cena=cena, taba=self, ocupante=coisa)
         coisa.vazio.vai = lambda*_: self.o_indio.larga()
         """O vazio.vai é associado ao método larga do índio"""
         return vaga
