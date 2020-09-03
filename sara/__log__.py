@@ -5659,3 +5659,10 @@ SyntaxError: invalid syntax
     self.indio_segurando = FALSE
 NameError: name 'FALSE' is not defined
 '''},
+{'date': 'Thu Sep 03 2020 16:55:13.838 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 424
+  coisa.vazio.vai = lambda *_: coisa.indio_segurando if self.o_indio.larga(); print(coisa.indio_segurando) else self.o_indio.empurra()
+                                                                                                            ^
+SyntaxError: invalid syntax
+'''},
