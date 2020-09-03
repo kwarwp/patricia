@@ -45,6 +45,8 @@ class Vazio():
         :param x: Coluna em que o elemento será posicionado.
         :param y: Cinha em que o elemento será posicionado.
         :param cena: Cena em que o elemento será posicionado.
+        :param taba: Referência onde ele pode encontrar a taba.
+        :param ocupante: Objeto que ocupa inicialmente a vaga.
     """
     VITOLLINO, LADO = None, None
     
@@ -57,6 +59,8 @@ class Vazio():
         self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         self._nada = Kwarwp.VITOLLINO.a()
         self.acessa = self._acessa
+        self.taba = taba
+                
         """O **acessa ()** é usado como método dinâmico, variando com o estado da vaga.
         Inicialmente tem o comportamento de **_acessa ()** que é o estado vago, aceitando ocupantes"""
         self.ocupante = ocupante or NULO
@@ -146,7 +150,31 @@ class Vazio():
         """
         return self._nada.elt
 
+    def empurrar(self, requisitante, azimute):
+        """ Consulta o ocupante atual se há permissão para empurrá-lo na direção do azimute.
 
+            :param requistante: O ator querendo empurrar o objeto.
+            :param azimute: A direção que se quer empurrar  o ocupante.
+        """
+        self.ocupante.empurrar(requisitante, azimute)
+
+    def acessar(self, ocupante, azimute):
+        """ Obtém o Vazio adjacente na direção dada pelo azimute e envio ocupante para lá.
+        """
+        destino = (self.posicao[0]+azimute.x, self.posicao[1]+azimute.y)
+        """A posição para onde o índio vai depende do vetor de azimute corrente"""
+        # o resto é semelhante ao código do _anda no Índio
+        #inicio - trabalhando aqui
+        
+        """A posição para onde o índio vai depende do vetor de azimute corrente"""
+        taba = self.taba.taba
+        if destino in taba:
+            vaga = taba[destino]
+            """Recupera na taba a vaga para a qual o índio irá se transferir"""
+            vaga.acessa(self)
+        #fim - trabalhando aqui    
+            
+        
 class Piche(Vazio):
     """ Poça de Piche que gruda o índio se ele cair nela.
 
@@ -292,3 +320,50 @@ class Tora(Piche):
         No caso da tora, ela age como um obstáculo e não prossegue com o protocolo.
         """
         pass
+
+    def empurrar(self, empurrante, azimute):
+        """ Registra o empurrante para uso no procolo e inicia dispathc com a vaga.
+        Consulta o espaço Vazio na direção do azimute em que foi empurrada. 
+            :param requistante: O ator querendo pegar o objeto.
+        """
+        self.empurrante = empurrante
+        
+        # continue aqui com o início do double dispatch para ocupar a vaga na direção do azimute
+        #inicio - trabalhando aqui
+        #acessar(self, azimute)
+        #acessa(ocupante)
+        #ocupa(self)
+        
+        #destino = (self.posicao[0]+azimute.x, self.posicao[1]+azimute.y)
+        #"""A posição para onde o índio vai depende do vetor de azimute corrente"""
+        #taba = self.taba.taba
+        #if destino in taba:
+        #    vaga = taba[destino]
+        #    """Recupera na taba a vaga para a qual o índio irá se transferir"""
+        #    vaga.acessa(self)
+
+        self.vaga.acessar(self, self, azimute) # acrescente o resto do comndo
+
+        #fim - trabalhando aqui
+        
+        
+    def ocupa(self, vaga):
+        """ Pedido por uma vaga para que ocupe a posição nela.
+
+        :param vaga: A vaga que será ocupada pelo componente.
+
+        No caso da tora, requisita que a vaga seja ocupada por ele.
+        Também autoriza o empurrante a ocupar a vaga onde estava.
+        """
+        # ocódigo usual do ocupa
+        #inicio - trabalhando aqui
+        self.vaga.sai()
+        self.posicao = vaga.posicao
+        vaga.ocupou(self)
+        self.vaga = vaga
+        #fim - trabalhando aqui
+        
+        self.empurrante # .xxx(zzz) if www else None -> continue o código
+        self.empurrante = NULO
+        self.vaga = vaga
+        
