@@ -205,30 +205,14 @@ class Tora(Piche):
         self.empurrante = NULO
         self.vaga = vaga        
 
-class Vazio():
-    """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
-        :param imagem: A figura representando o espaço vazio (normalmente transparente).
-        :param x: Coluna em que o elemento será posicionado.
-        :param y: linha em que o elemento será posicionado.
-        :param cena: Cena em que o elemento será posicionado.
-    """
-    
-class Vazio():
-    """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
-
-        :param imagem: A figura representando o índio na posição indicada.
-        :param x: Coluna em que o elemento será posicionado.
-        :param y: Cinha em que o elemento será posicionado.
-        :param cena: Cena em que o elemento será posicionado.
-        :param taba: Referência onde ele pode encontrar a taba.
-        :param ocupante: Objeto que ocupa inicialmente a vaga.
-    """
+class Vazio(self.taba):
+   
     VITOLLINO, LADO = None, None
 
     def __init__(self, imagem, x, y, cena, taba, ocupante=None):
         self.taba = taba
-        """ Agora recebe um argumento taba, para que ache os vazios adjacentes"""
-        
+    
+    
     def empurrar(self, requisitante, azimute):
         """ Consulta o ocupante atual se há permissão para empurrá-lo na direção do azimute.
 
