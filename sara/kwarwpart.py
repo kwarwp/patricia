@@ -229,7 +229,7 @@ class Tora(Piche):
     """
     def __init__(self, imagem, x, y, cena, taba):
         super(self.__class__, self).__init__(imagem, x, y, cena, taba)
-        self.ocupante = Nulo
+        self.empurrante = Nulo
 
 
     def pegar(self, requisitante):
