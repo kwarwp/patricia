@@ -226,6 +226,7 @@ class Indio():
             """Recupera na taba a vaga para a qual o índio irá se transferir"""
             # self.ocupante.largar(vaga)
             vaga.acessa(self.ocupante)
+            self.ocupante.indio_segurando = FALSE
 
 
     def ocupou(self, ocupante):
