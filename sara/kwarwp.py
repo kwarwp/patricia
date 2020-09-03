@@ -423,7 +423,7 @@ class Kwarwp():
         #coisa.vazio.vai = lambda *_: self.o_indio.larga()
         
         print(type(coisa.vazio))
-        coisa.vazio.vai = lambda *_: type(coisa.vazio) is Indio if self.o_indio.larga() else self.o_indio.empurra()
+        coisa.vazio.vai = lambda *_: type(coisa) is Indio if self.o_indio.larga() else print(coisa)
         
         """o vazio.vai é associado ao método larga do índio"""
         return vaga
