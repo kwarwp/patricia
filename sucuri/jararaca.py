@@ -124,8 +124,9 @@ class Indio():
         if destino in taba:
             vaga = taba[destino]
             """Recupera na taba a vaga para a qual o índio irá se transferir"""
-            print("vai fio!")
-            vaga.acessa(self)   
+            vaga.empurrar(self, self.azimute) #código retirado do pacote Sara
+            #print("vai fio!")
+            #vaga.acessa(self)   
             
     def larga(self):
         destino = (self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
@@ -169,7 +170,7 @@ class Indio():
         if destino in taba:
             vaga = taba[destino]
             """Recupera na taba a vaga para a qual o índio irá se transferir"""
-            vaga.empurra()
+            #vaga.empurra()
             vaga.acessa(self)   
 
     def sai(self):
