@@ -271,3 +271,10 @@ NameError: name 'MAPA_INICIAL' is not defined
                                       ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Sep 03 2020 16:16:16.131 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 276
+  def limpa(self):
+  ^
+IndentationError: expected an indented block
+'''},
