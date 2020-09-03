@@ -22,14 +22,6 @@ MAPA_INICIAL= """
 #.....^.#
 #########
 """
-#MAPA_INICIAL2= """
-#########
-#...##..#
-#.@.#&.|#
-#.#.##..#
-#.....^.#
-#########
-
 
 Ponto = nt("Ponto", "x y")
 """Par de coordenadas na direção horizontal (x) e vertiacal (y)."""
@@ -252,7 +244,14 @@ class Piche(Vazio):
         self.sair = self._sair
         """O **sair ()** é usado como método dinâmico, variando com o estado da vaga.
         Inicialmente tem o comportamento de **_sair ()** que é o estado vago, aceitando ocupantes"""
-
+        
+    def sai(self):
+        """ Pedido por um ocupante para que desocupe a posição nela.
+        """
+        ... # faz as coisas normais que fazia quando usava o sai do Vazio
+        
+        
+        self.vaga.limpa()
     def ocupa(self, vaga):
         self.vaga.sai()
         self.posicao = vaga.posicao
