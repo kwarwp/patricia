@@ -205,7 +205,7 @@ class Tora(Piche):
         self.empurrante = NULO
         self.vaga = vaga        
 
-class Vazio(self.taba):
+class Vazio():
    
     VITOLLINO, LADO = None, None
 
