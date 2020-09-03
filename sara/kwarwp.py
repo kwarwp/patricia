@@ -248,6 +248,9 @@ class Indio():
 
         # de resto o código é semelhante ao _anda
         # TODO refatorar o método _anda e empurra, pois tem código duplicado
+        
+        print("Estou tentanto empurra a tora para a posição", self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
+        
         destino = (self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
         """A posição para onde o índio vai depende do vetor de azimute corrente"""
         taba = self.taba.taba
