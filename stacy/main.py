@@ -15,21 +15,21 @@ from collections import namedtuple as nt
 
 
 MAPA_INICIAL= """
-.........
-.....@...
-...&.....
-.........
-.........
-......^..
+#########
+#...#....
+#.@.#&.|#
+#.#.#...#
+#.....^.#
+#########
 """
-MAPA_INICIAL2= """
+#MAPA_INICIAL2= """
 #########
 #...##..#
 #.@.#&.|#
 #.#.##..#
 #.....^.#
 #########
-"""
+
 
 Ponto = nt("Ponto", "x y")
 """Par de coordenadas na direção horizontal (x) e vertiacal (y)."""
