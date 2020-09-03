@@ -23,7 +23,7 @@ class Vazio():
     LADO = None
     """Referência estática para definir o lado do piso da casa"""
 
-    def __init__(self, imagem, x, y, cena, ocupante=None):
+    def __init__(self, imagem, x, y, cena, taba, ocupante=None):
         # from sucuri.coral import Kwarwp
         self.lado = lado = Vazio.LADO or 100 # o lado previsto no tabuleiro
         self.posicao = (x//lado,y//lado-1) #o retorno será sempre um inteiro
