@@ -1445,3 +1445,10 @@ TypeError: can't add 'Piche' object to DOMNode instance
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Thu Sep 03 2020 16:02:43.688 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module sucuri.jararacapart line 40
+  self.taba = taba
+  ^
+IndentationError: unexpected indent
+'''},
