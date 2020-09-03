@@ -141,7 +141,7 @@ class Vazio():
         """
         #print("Empurrando a Tora", self.ocupante)
         
-        if (type(self.ocupante) is Tora:
+        if type(self.ocupante) is Tora:
             self.ocupante.empurrar(requisitante, azimute)
         
         
