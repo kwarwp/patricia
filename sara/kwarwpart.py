@@ -279,7 +279,6 @@ class Tora(Piche):
         # continue aqui com o início do double dispatch para ocupar a vaga na direção do azimute
         self.vaga.acessar(self, azimute)
         
-        
     def ocupa(self, vaga):
         """ Pedido por uma vaga para que ocupe a posição nela.
 
