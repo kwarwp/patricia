@@ -325,8 +325,8 @@ class Kwarwp():
         """ O índio tem deslocamento zero, pois é relativo à vaga.
             O **x=1** serve para distinguir o indio de outros derivados.
         """
-        #self.o_indio.indio.vai = lambda *_: self.o_indio.pega()
-        self.o_indio.indio.vai = lambda *_: self.o_indio.empurra()
+        self.o_indio.indio.vai = lambda *_: self.o_indio.pega()
+        #self.o_indio.indio.vai = lambda *_: self.o_indio.empurra()
         """o índio.vai é associado ao seu próprio metodo pega"""
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio, taba=self)
         return vaga
@@ -357,7 +357,7 @@ class Kwarwp():
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
         coisa = Oca(imagem, x=0, y=0, cena=cena, taba=self)
-        
+        coisa.vazio.vai = lambda *_: self.o_indio.empurra() 
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa, taba=self)
         return vaga
 
