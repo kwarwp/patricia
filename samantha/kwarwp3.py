@@ -213,13 +213,16 @@ class Vazio():
         self.taba = taba
     
     
-    def empurrar(self, requisitante, azimute):
-        """ Consulta o ocupante atual se há permissão para empurrá-lo na direção do azimute.
+    def empurrar(self, empurrante, azimute):
+        """ Registra o empurrante para uso no procolo e inicia dispathc com a vaga.
 
-            :param requistante: O ator querendo empurrar o objeto.
-            :param azimute: A direção que se quer empurrar  o ocupante.
+            :param requistante: O ator querendo pegar o objeto.
         """
-        self.ocupante.empurrar(requisitante, azimute)
+        print("A Tora está sendo empurrada") 
+        
+        self.empurrante = empurrante
+        # continue aqui com o início do double dispatch para ocupar a vaga na direção do azimute
+        self.vaga.acessar(self, azimute)
 
     def acessar(self, ocupante, azimute):
         """ Obtém o Vazio adjacente na direção dada pelo azimute e envio ocupante para lá.
