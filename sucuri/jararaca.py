@@ -7,8 +7,7 @@
 Changelog
 ---------
 .. versionadded::    20.08
-        - Elemento Tora sobre o Piche
-        - Oca vazia após tora sair
+        - Indio empurra tora
 
 """
 from _spy.vitollino.main import Jogo, STYLE 
