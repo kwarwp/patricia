@@ -6,6 +6,11 @@
 
 Changelog
 ---------
+
+.. versionadded::    03.08
+        - Empurrando a Tora
+        
+        
 .. versionadded::    27.07
         - Remove o Piche
 
