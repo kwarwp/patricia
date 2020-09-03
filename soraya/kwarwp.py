@@ -18,11 +18,9 @@ class Vazio():
         :param y: linha em que o elemento será posicionado.
         :param cena: Cena em que o elemento será posicionado.
     """
-    VITOLLINO = None
+    VITOLLINO, LADO = None, None
     """Referência estática para obter o engenho de jogo"""
-    LADO = None
-    """Referência estática para definir o lado do piso da casa"""
-
+    
     def __init__(self, imagem, x, y, cena, ocupante=None):
         # from sucuri.coral import Kwarwp
         self.lado = lado = Vazio.LADO or 100 # o lado previsto no tabuleiro
@@ -37,6 +35,7 @@ class Vazio():
         self.sair = self._sair
         """O **sair ()** é usado como método dinâmico, variando com o estado da vaga.
         Inicialmente tem o comportamento de **_sair ()** que é o estado leniente, aceitando saidas"""
+        self.taba = taba
         
     def _sair(self):
         self.ocupante.siga()
@@ -89,6 +88,13 @@ class Vazio():
     
     def pegar(self, requisitante): 
         self.ocupante.pegar(requisitante)
+    
+    def empurrar (self, empurrante,azimute):
+        self.ocupante, empurrar(requisitante, azimute)
+    
+    def acessar(self, ocupante, azimute):
+        destino = (self.posicao[0]+azimute.x, self.posicao[1]+azimute.y)
+        self.vaga.sair()   
         
     def limpa(self):
         """ Pedido por um ocupante para ele seja eliminado do jogo.
@@ -125,6 +131,7 @@ class Piche(Vazio):
         """O **sair ()** é usado como método dinâmico, variando com o estado da vaga.
         Inicialmente tem o comportamento de **_sair ()** que é o estado vago, aceitando ocupantes"""
 
+    # Agora Piche implementa sai:
     def sai(self):
         self.ocupante = self
         self.acessa = self._acessa
@@ -170,6 +177,33 @@ class Tora(Piche):
         vaga.ocupou(self)
         self.vaga = vaga
 
+    def empurrar(self,empurrante,azimute):
+
+        self.empurrante = empurrante
+        # continue aqui com o início do double dispatch para ocupar a vaga na direção do azimute
+        """ Faz a tora empurarr o vazio adjacente.
+        """
+        destino = (self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
+        """A posição para onde a tora vai depende do vetor de azimute corrente do índio?"""
+        taba = self.taba.taba
+        if destino in taba:
+            vaga = taba[destino]
+            """Recupera na taba a vaga para a qual o índio irá se transferir"""
+            vaga.acessa(self)           
+        self.vaga.acessa(destino)
+    
+    def ocupa(self,vaga):
+    
+        self.vaga.sai()
+        self.posicao = vaga.posicao
+        vaga.ocupou(self)
+        
+        
+        self.empurrante 
+        self.empurrante = NULO
+        self.vaga = vaga    
+        
+        
     @property
     def posicao(self):
         """ A propriedade posição faz parte do protocolo do double dispatch com o Indio .
@@ -219,6 +253,7 @@ class Oca(Piche):
         """ Conserta os desvios de herança do Piche. A Oca não deve sair quando a tora sai."""
         self.ocupante = self
         self.acessa = self._acessa
+        # O que devemos fazer aqui para que a oca não seja removida?
         
     @property
     def elt(self):
