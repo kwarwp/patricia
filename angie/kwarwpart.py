@@ -14,10 +14,14 @@
 
     Changelog
     ---------
-    .. versionadded::    20.09.b0
+    .. versionadded::    20.08.b0
         Moveu :class:`Vazio`, :class:`Oca`, :class:`Piche` para cá.
         Adicionou :class:`Tora` e classe :class:`Nulo`
-        Permite jogar a tora no piche
+    .. versionadded::    20.10
+       Permite jogar a tora no piche
+    .. versionadded::    20.10
+       Permite empurrar a tora
+        
 """
 
 class Nulo:
