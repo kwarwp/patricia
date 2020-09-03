@@ -21,7 +21,7 @@ class Vazio():
     """
     VITOLLINO, LADO = None, None
     """Referência estática para obter o engenho de jogo"""
-        """Referência estática para definir o lado do piso da casa"""
+    """Referência estática para definir o lado do piso da casa"""
 
     def __init__(self, imagem, x, y, cena, taba, ocupante=None, requisitante=None):
 
