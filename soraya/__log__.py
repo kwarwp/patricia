@@ -770,3 +770,10 @@ TypeError: 'module' object is not callable
     vaga = Vazio(imagem, x=x, y=y, cena=cena, taba=self, ocupante=self)
 TypeError: 'module' object is not callable
 '''},
+{'date': 'Thu Sep 03 2020 19:23:47.216 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 24
+  """Referência estática para definir o lado do piso da casa"""
+  ^
+IndentationError: unexpected indent
+'''},
