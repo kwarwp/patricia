@@ -7,7 +7,10 @@
 Changelog
 ---------
 .. versionadded::    20.09
-        Indio joga tora no piche
+   Indio joga tora no piche
+.. versionadded::    20.10
+   Indio pode empurrar a tora
+       
 
 """
 from collections import namedtuple as nt
