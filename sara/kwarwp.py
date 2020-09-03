@@ -361,7 +361,7 @@ class Kwarwp():
         vaga = Vazio("", x=x, y=y, cena=cena, taba=self, ocupante=coisa)
         
         # a execução da ação de empurrar deve sair daqui e ir para a tora
-        coisa.vazio.vai = lambda *_: self.o_indio.empurra()
+        # coisa.vazio.vai = lambda *_: self.o_indio.empurra()
         return vaga
         
 
@@ -420,7 +420,9 @@ class Kwarwp():
         """
         coisa = Tora(imagem, x=x, y=y, cena=cena, taba=self)
         vaga = Vazio("", x=x, y=y, cena=cena, taba=self, ocupante=coisa)
-        coisa.vazio.vai = lambda *_: self.o_indio.larga()
+        #coisa.vazio.vai = lambda *_: self.o_indio.larga()
+           
+        coisa.vazio.vai = lambda *_: type(coisa.vazio) is Indio if self.o_indio.larga() else self.o_indio.empurra()
         
         """o vazio.vai é associado ao método larga do índio"""
         return vaga
