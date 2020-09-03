@@ -237,6 +237,11 @@ class Indio():
         self.indio.ocupa(ocupante)
         self.ocupante = ocupante
 
+    def empurra(self):
+        """Objeto tenta sair, tem que consultar a vaga onde está"""
+        # self.vaga.sair() # esta parte vai ser feita mais tarde.
+        ...
+        # de resto o código é semelhante ao _anda
 
 class Kwarwp():
 
