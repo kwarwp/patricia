@@ -173,7 +173,7 @@ class Indio():
         """
         return self.indio.elt
         
-class Tora(Piche):
+class Tora():
     """  A Tora é um pedaço de tronco cortado que o índio pode carregar ou empurrar.
 
         :param imagem: A figura representando o índio na posição indicada.
