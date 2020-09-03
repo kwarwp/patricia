@@ -195,19 +195,20 @@ class Tora(Piche):
         """ Registra o empurrante para uso no procolo e inicia dispathc com a vaga.
 
             :param requistante: O ator querendo pegar o objeto.
+            :param azimute: O local de destino da Tora
         """
         self.empurrante = empurrante
         # continue aqui com o início do double dispatch para ocupar a vaga na direção do azimute
-        """ Faz a tora empurarr o vazio adjacente.
+        """ Faz a tora empurar o vazio adjacente.
         """
         destino = (self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
-        """A posição para onde a tora vai depende do vetor de azimute corrente do índio?"""
+        """A posição para onde a tora vai depende do vetor de azimute corrente do vazio adjacente?"""
         taba = self.taba.taba
         if destino in taba:
             vaga = taba[destino]
             """Recupera na taba a vaga para a qual o índio irá se transferir"""
             vaga.acessa(self)           
-        self.vaga.acessa(destino)
+        self.vaga.acessa(azimute)
         
     def ocupa(self,vaga):
     
