@@ -30,7 +30,7 @@ class Vazio():
         :param cena: Cena em que o elemento será posicionado.
     """
 
-    def __init__(self, imagem, x, y, cena, ocupante=None):
+    def __init__(self, imagem, x, y, cena, taba, ocupante=None):
     
         from sara.kwarwp import Kwarwp
         """Importando localmente o Kwarwp para evitar referência circular."""
@@ -38,7 +38,7 @@ class Vazio():
         Kwarwp.VITOLLINO = vitollino()
         # Bad Smell... Isso em cima está muito estranho, mas funciona
         
-    
+        self.taba = taba
         self.lado = lado = Kwarwp.LADO
         self.posicao = (x//lado,y//lado-1)
         self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
