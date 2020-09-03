@@ -228,7 +228,7 @@ class Tora(Piche):
         :param taba: Representa a taba onde o índio faz o desafio.
     """
     def __init__(self, imagem, x, y, cena, taba):
-        super(Piche, self).__init__(imagem, x, y, cena, taba)
+        super(self.__class__, self).__init__(imagem, x, y, cena, taba)
         self.ocupante = Nulo
 
 
