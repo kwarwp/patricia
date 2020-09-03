@@ -360,9 +360,7 @@ class Kwarwp():
         """
         coisa = Oca(imagem, x=0, y=0, cena=cena, taba=self)
         vaga = Vazio("", x=x, y=y, cena=cena, taba=self, ocupante=coisa)
-        
-        # a execução da ação de empurrar deve sair daqui e ir para a tora
-        # coisa.vazio.vai = lambda *_: self.o_indio.empurra()
+
         return vaga
         
 
