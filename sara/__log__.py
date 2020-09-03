@@ -5628,3 +5628,10 @@ TypeError: __init__ missing 1 positional argument: 'taba'
     vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
 TypeError: __init__ missing 1 positional argument: 'taba'
 '''},
+{'date': 'Thu Sep 03 2020 16:15:45.915 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module sara.kwarwpart line 144
+  if (type(self.ocupante) is Tora:
+                                                                                                                                                                                                                                                                         ^
+SyntaxError: invalid syntax
+'''},
