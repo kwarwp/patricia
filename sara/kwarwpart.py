@@ -132,6 +132,30 @@ class Vazio():
         self.ocupante = self
         self.acessa = self._acessa
         self.sair = self._sair
+        
+    def empurrar(self, requisitante, azimute):
+        """ Consulta o ocupante atual se há permissão para empurrá-lo na direção do azimute.
+
+            :param requistante: O ator querendo empurrar o objeto.
+            :param azimute: A direção que se quer empurrar  o ocupante.
+        """
+        self.ocupante.empurrar(requisitante, azimute)
+        
+        
+    def acessar(self, ocupante, azimute):
+        """ Obtém o Vazio adjacente na direção dada pelo azimute e envio ocupante para lá.
+        """
+        destino = (self.posicao[0]+azimute.x, self.posicao[1]+azimute.y)
+        """A posição para onde o índio vai depende do vetor de azimute corrente"""
+        # o resto é semelhante ao código do _anda no Índio
+        destino = (self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
+        """A posição para onde o índio vai depende do vetor de azimute corrente"""
+        taba = self.taba.taba
+        if destino in taba:
+            vaga = taba[destino]
+            #print(vaga.acessa)
+            """Recupera na taba a vaga para a qual o índio irá se transferir"""
+            vaga.acessa(self)
 
 class Piche(Vazio):
     """ Poça de Piche que gruda o índio se ele cair nela.
