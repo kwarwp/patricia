@@ -291,6 +291,7 @@ class Piche(Vazio):
         self.taba.fala("Você ficou preso MUAHAHAHA")
         
 class Vazio():
+    
     """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
 
         :param imagem: A figura representando o índio na posição indicada.
@@ -300,7 +301,28 @@ class Vazio():
     """
     VITOLLINO, LADO = None, None
 
+    
     def __init__(self, imagem, x, y, cena, ocupante=None):
+        # from sucuri.coral import Kwarwp
+        self.lado = lado = Vazio.LADO or 100 # o lado previsto no tabuleiro
+        self.posicao = (x//lado,y//lado-1) #o retorno será sempre um inteiro
+        self.vazio = Vazio.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena) # o x e o y são substituiddos pelo mapa
+        self._nada = Vazio.VITOLLINO.a() # descobrir o pq disso
+        self.acessa = self._acessa #
+        """É um método dinâmico que varia com o estado da vaga. Inicialmente é _aceesa, ou seja, vago e aceitanto ecupante"""
+        self.ocupante = ocupante or self #Importante para o funcionamento dos métodos abaixo
+        """O ocupante será definido pelo acessa, por default é o vazio"""
+        self.acessa(ocupante)
+        self.sair = self._sair
+        """O **sair ()** é usado como método dinâmico, variando com o estado da vaga.
+        Inicialmente tem o comportamento de **_sair ()** que é o estado leniente, aceitando saidas"""
+        self.taba = taba
+        
+    def _sair(self):
+        self.ocupante.siga()
+
+    def _pede_sair(self):
+        self.ocupante.sair()
     
     def limpa(self):
         """ Pedido por um ocupante para ele seja eliminado do jogo.
