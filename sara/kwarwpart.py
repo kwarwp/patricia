@@ -229,6 +229,7 @@ class Tora(Piche):
     def __init__(self, imagem, x, y, cena, taba):
         super(self.__class__, self).__init__(imagem, x, y, cena, taba)
         self.empurrante = NULO
+        self.indio_segurando = FALSE
 
 
     def pegar(self, requisitante):
@@ -240,6 +241,7 @@ class Tora(Piche):
         # self.posicao = vaga.posicao
         vaga.ocupou(self)
         self.vaga = vaga
+        self.indio_segurando = TRUE
 
     @property
     def posicao(self):
