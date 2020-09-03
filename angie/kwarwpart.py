@@ -99,7 +99,7 @@ class Vazio():
             :param ocupante: O canditato a ocupar a posição corrente.
         """
         ocupante.ocupa(self)
-        print("1") 
+        print(ocupante) 
     
     def _sair(self):
         """Objeto tenta sair e recebe autorização para seguir"""
@@ -176,7 +176,7 @@ class Vazio():
         if destino in taba:
             vaga = taba[destino]
             """Recupera na taba a vaga para a qual o índio irá se transferir"""
-            vaga.acessa(self)
+            vaga._acessa(self)
         #fim - trabalhando aqui    
             
         
@@ -317,14 +317,14 @@ class Tora(Piche):
         """
         return self.vazio.elt
         
-    #def _acessa(self, ocupante):
+    def _acessa(self, ocupante):
         """ Pedido de acesso a essa posição, delegada ao ocupante pela vaga.
         
         :param ocupante: O componente candidato a ocupar a vaga já ocupada pelo índio.
 
         No caso da tora, ela age como um obstáculo e não prossegue com o protocolo.
         """
-    #    pass
+        pass
 
     def empurrar(self, empurrante, azimute):
         """ Registra o empurrante para uso no procolo e inicia dispathc com a vaga.
