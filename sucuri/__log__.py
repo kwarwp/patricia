@@ -1523,3 +1523,10 @@ IndentationError: unexpected indent
     from sucuri.jararacapart import Vazio, Oca, Tora, Nulo, Piche
 ImportError: cannot import name 'Vazio'
 '''},
+{'date': 'Thu Sep 03 2020 16:30:49.379 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 40
+  self.taba = taba
+  ^
+IndentationError: unexpected indent
+'''},
