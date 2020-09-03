@@ -227,6 +227,8 @@ class Tora(Piche):
         :param cena: Cena em que o elemento será posicionado.
         :param taba: Representa a taba onde o índio faz o desafio.
     """
+    def __init__(self):
+        self.ocupante = Nulo
 
     def pegar(self, requisitante):
         """ Consulta o ocupante atual se há permissão para pegar e entregar ao requistante.
@@ -288,8 +290,7 @@ class Tora(Piche):
         self.vaga.sai()
         self.posicao = vaga.posicao
         vaga.ocupou(self)
-        if self.empurrante is None:
-            return
+
         self.empurrante.ocupa(self.vaga) # .xxx(zzz) if www else None -> continue o código
         self.empurrante = NULO
         self.vaga = vaga
