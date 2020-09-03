@@ -255,7 +255,7 @@ class Indio():
         if destino in taba:
             vaga = taba[destino]
             """Recupera na taba a vaga para a qual o índio irá se transferir"""
-            vaga.empurrar(self)
+            vaga.empurrar(self, self.azimute)
 
 class Kwarwp():
 
@@ -359,6 +359,7 @@ class Kwarwp():
         """
         coisa = Oca(imagem, x=0, y=0, cena=cena, taba=self)
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+        coisa.vazio.vai = lambda *_: self.o_indio.empurra()
         return vaga
         
 
@@ -437,7 +438,6 @@ class Kwarwp():
         self.o_indio.indio.vai = lambda *_: self.o_indio.pega()
         """o índio.vai é associado ao seu próprio metodo pega"""
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
-        coisa.vazio.vai = lambda *_: self.o_indio.empurra()
         return vaga
 
 
