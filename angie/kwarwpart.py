@@ -54,7 +54,7 @@ class Vazio():
     """
     VITOLLINO, LADO = None, None
     
-    def __init__(self, imagem, x, y, cena, ocupante=None):
+    def __init__(self, imagem, x, y, cena, ocupante=None, taba=None):
         from angie.kwarwptora import Kwarwp
         from _spy.vitollino.main import Jogo
         Kwarwp.VITOLLINO = Kwarwp.VITOLLINO or Jogo()
