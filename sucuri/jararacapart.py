@@ -235,11 +235,12 @@ class Tora(Piche):
         self.vaga.sai()
         self.posicao = vaga.posicao
         vaga.ocupou(self)
+        self
         # self.vaga = vaga ..ver se há necessidade
         
-        self.empurrante # .xxx(zzz) if www else None -> continue o código
-        self.empurrante = NULO
-        self.vaga = vaga    
+        #elf.requixxx(zzz) if www else None -> continue o código
+        #elf.empurrante = NULO
+        #elf.vaga = vaga    
 
     @property
     def posicao(self):
