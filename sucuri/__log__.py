@@ -1500,3 +1500,10 @@ ImportError: cannot import name 'Vazio'
     from sucuri.jararacapart import Vazio, Oca, Tora, Nulo, Piche
 ImportError: cannot import name 'Vazio'
 '''},
+{'date': 'Thu Sep 03 2020 16:14:51.244 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module sucuri.jararacapart line 40
+  self.taba = taba
+  ^
+IndentationError: unexpected indent
+'''},
