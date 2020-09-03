@@ -260,6 +260,26 @@ class Piche(Vazio):
         
     def _pede_sair(self):
         self.taba.fala("Você ficou preso MUAHAHAHA")
+        
+class Vazio():
+    """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
+
+        :param imagem: A figura representando o índio na posição indicada.
+        :param x: Coluna em que o elemento será posicionado.
+        :param y: Cinha em que o elemento será posicionado.
+        :param cena: Cena em que o elemento será posicionado.
+    """
+    VITOLLINO, LADO = None, None
+
+    def __init__(self, imagem, x, y, cena, ocupante=None):
+    
+    def limpa(self):
+        """ Pedido por um ocupante para ele seja eliminado do jogo.
+        """
+        self._nada.ocupa(self.ocupante)
+        """a figura do ocupante vai ser anexada ao elemento nada, que não é apresentado"""
+        ... # faz as coisas normais que o método sai faz
+
 
 class Oca(Piche):
 
@@ -276,6 +296,9 @@ class Oca(Piche):
         self.sair = self._sair
         """O **sair ()** é usado como método dinâmico, variando com o estado da vaga.
         Inicialmente tem o comportamento de **_sair ()** que é o estado vago, aceitando ocupantes"""
+        
+    def sai(self):
+        ... # O que devemos fazer aqui para que a oca não seja removida?
     
     def _pede_sair(self):
         """Objeto tenta sair mas não é autorizado"""
