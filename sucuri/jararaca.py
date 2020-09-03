@@ -113,7 +113,7 @@ class Indio():
             """Recupera na taba a vaga para o qual o índio irá se transferir"""
             vaga.pegar(self)
             
-    def empurra(empurrado):
+    def empurra(self):
         """Objeto tenta sair, tem que consultar a vaga onde está"""
         self.vaga.sair() # esta parte vai ser feita mais tarde.
         """ Faz o índio caminhar na direção em que está olhando.
@@ -123,7 +123,7 @@ class Indio():
         taba = self.taba.taba
         if destino in taba:
             vaga = taba[destino]
-            """Recupera na taba a vaga para a qual o índio irá se transferir"""
+            """Recupera na taba a vaga para a qual o índio irá se transferir. Self.azimute funciona como o requisitante"""
             vaga.empurrar(self, self.azimute) #código retirado do pacote Sara
             #print("vai fio!")
             #vaga.acessa(self)   
