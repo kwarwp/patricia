@@ -99,7 +99,7 @@ class Vazio():
             :param azimute: A direção que se quer empurrar  o ocupante.
         """
         #self.ocupante.empurrar(requisitante, azimute)    
-        # Resgate do code funcional do Paulo
+
         if type(self.ocupante) is Tora:
             self.ocupante.empurrar(requisitante, azimute)    
     
