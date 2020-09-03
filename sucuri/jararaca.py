@@ -357,7 +357,7 @@ class Kwarwp():
         return vaga
 
     def vazio(self, imagem, x,y ,cena):
-        vaga = Vazio(imagem, x=x, y=y, cena=cena, taba=self)
+        vaga = Vazio(imagem, x=x, y=y, cena=cena, taba=self, ocupante=self)
         return vaga
 
     def fala(self, texto=""):
