@@ -417,7 +417,9 @@ class Kwarwp():
         """
         coisa = Tora(imagem, x=x, y=y, cena=cena, taba=self)
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
-        coisa.vazio.vai = lambda *_: self.o_indio.larga()
+        #coisa.vazio.vai = lambda *_: self.o_indio.larga()
+        
+        coisa.vazio.vai = lambda *_: self.o_indio.empurra()
         """o vazio.vai é associado ao método larga do índio"""
         return vaga
 
