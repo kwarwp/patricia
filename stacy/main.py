@@ -52,7 +52,12 @@ class Indio():
             self.indio.siz = (lado*3, lado*4)
             """Define as proporções da folha de sprites"""
             self.mostra()
-
+            
+    def empurra(self):
+        """Objeto tenta sair, tem que consultar a vaga onde está"""
+        # self.vaga.sair() # esta parte vai ser feita mais tarde.
+        ...
+        # de resto o código é semelhante ao _anda
 
     def mostra(self):
         """ Modifica a figura (Sprite) do índio mostrando para onde está indo.
