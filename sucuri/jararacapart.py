@@ -209,6 +209,7 @@ class Tora(Piche):
         No caso da tora, requisita que a vaga seja ocupada por ele.
         Também autoriza o empurrante a ocupar a vaga onde estava.
         """
+        #Código usual do ocupa
         """ Pedido por uma vaga para que ocupe a posição nela.
         :param vaga: A vaga que será ocupada pelo componente.
         No caso do índio, requisita que a vaga seja ocupada por ele.
@@ -216,7 +217,7 @@ class Tora(Piche):
         self.vaga.sai()
         self.posicao = vaga.posicao
         vaga.ocupou(self)
-        self.vaga = vaga
+        # self.vaga = vaga ..ver se há necessidade
         
         self.empurrante # .xxx(zzz) if www else None -> continue o código
         self.empurrante = NULO
