@@ -356,3 +356,7 @@ NameError: name 'Piche' is not defined
     class Tora(Piche):
 NameError: name 'Piche' is not defined
 '''},
+{'date': 'Thu Sep 03 2020 17:58:51.899 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: bases[i].$dict is undefined>
+'''},
