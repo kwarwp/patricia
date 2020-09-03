@@ -301,3 +301,10 @@ KeyError:
     cena = self.v.c(self.SOLO)
 AttributeError: 'Kwarwp' object has no attribute 'SOLO'
 '''},
+{'date': 'Thu Sep 03 2020 16:13:50.359 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 217
+  """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
+  ^
+IndentationError: expected an indented block
+'''},
