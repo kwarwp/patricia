@@ -170,6 +170,7 @@ class Vazio():
         :param y: linha em que o elemento será posicionado.
         :param cena: Cena em que o elemento será posicionado.
     """
+    VITOLLINO, LADO = None, None
 
     def __init__(self, imagem, x, y, cena, ocupante=None):
         self.lado = lado = Kwarwp.LADO # o lado previsto no tabuleiro
@@ -184,6 +185,22 @@ class Vazio():
         self.sair = self._sair
         """O **sair ()** é usado como método dinâmico, variando com o estado da vaga.
         Inicialmente tem o comportamento de **_sair ()** que é o estado leniente, aceitando saidas"""
+        
+    def empurrar(self, requisitante, azimute):
+        """ Consulta o ocupante atual se há permissão para empurrá-lo na direção do azimute.
+
+            :param requistante: O ator querendo empurrar o objeto.
+            :param azimute: A direção que se quer empurrar  o ocupante.
+        """
+        self.ocupante.empurrar(requisitante, azimute)
+        
+    def acessar(self, ocupante, azimute):
+        """ Obtém o Vazio adjacente na direção dada pelo azimute e envio ocupante para lá.
+        """
+        destino = (self.posicao[0]+azimute.x, self.posicao[1]+azimute.y)
+        """A posição para onde o índio vai depende do vetor de azimute corrente"""
+        ... # o resto é semelhante ao código do _anda no Índio
+
         
     def _sair(self):
         self.ocupante.siga()
