@@ -37,7 +37,7 @@ class Vazio():
         self.sair = self._sair
         """O **sair ()** é usado como método dinâmico, variando com o estado da vaga.
         Inicialmente tem o comportamento de **_sair ()** que é o estado leniente, aceitando saidas"""
-         self.taba = taba
+        self.taba = taba
         """ Agora recebe um argumento taba, para que ache os vazios adjacentes"""
         
     def _sair(self):
