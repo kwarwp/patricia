@@ -19,12 +19,11 @@ class Vazio():
         :param y: linha em que o elemento será posicionado.
         :param cena: Cena em que o elemento será posicionado.
     """
-    VITOLLINO = None
+    VITOLLINO, LADO = None, None
     """Referência estática para obter o engenho de jogo"""
-    LADO = None
-    """Referência estática para definir o lado do piso da casa"""
+        """Referência estática para definir o lado do piso da casa"""
 
-    def __init__(self, imagem, x, y, cena, taba, ocupante=None):
+    def __init__(self, imagem, x, y, cena, taba, ocupante=None, requisitante=None):
 
         self.lado = lado = Vazio.LADO or 100 # o lado previsto no tabuleiro
         self.posicao = (x//lado,y//lado-1) #o retorno será sempre um inteiro
