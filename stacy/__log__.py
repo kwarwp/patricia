@@ -327,3 +327,10 @@ IndentationError: expected an indented block
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Thu Sep 03 2020 17:52:45.797 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 305
+  def limpa(self):
+  ^
+IndentationError: expected an indented block
+'''},
