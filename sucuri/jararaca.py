@@ -115,9 +115,17 @@ class Indio():
             
     def empurra(empurrado):
         """Objeto tenta sair, tem que consultar a vaga onde está"""
-        # self.vaga.sair() # esta parte vai ser feita mais tarde.
-        ...
-        # de resto o código é semelhante ao _anda
+        self.vaga.sair() # esta parte vai ser feita mais tarde.
+        """ Faz o índio caminhar na direção em que está olhando.
+        """
+        destino = (self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
+        """A posição para onde o índio vai depende do vetor de azimute corrente"""
+        taba = self.taba.taba
+        if destino in taba:
+            vaga = taba[destino]
+            """Recupera na taba a vaga para a qual o índio irá se transferir"""
+            print("vai fio!")
+            vaga.acessa(self)   
             
     def larga(self):
         destino = (self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
@@ -161,6 +169,7 @@ class Indio():
         if destino in taba:
             vaga = taba[destino]
             """Recupera na taba a vaga para a qual o índio irá se transferir"""
+            vaga.empurra()
             vaga.acessa(self)   
 
     def sai(self):
