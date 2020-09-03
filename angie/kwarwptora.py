@@ -203,7 +203,7 @@ class Indio():
         if destino in taba:
             vaga = taba[destino]
             """Recupera na taba a vaga para a qual o índio irá se transferir"""
-            vaga.empurrar(self, self, azimute)
+            vaga.empurrar(self, self.azimute)
             #vaga.acessa(self)
             #fim trablhando aqui
         # de resto o código é semelhante ao _anda
@@ -325,7 +325,8 @@ class Kwarwp():
         """ O índio tem deslocamento zero, pois é relativo à vaga.
             O **x=1** serve para distinguir o indio de outros derivados.
         """
-        self.o_indio.indio.vai = lambda *_: self.o_indio.pega()
+        #self.o_indio.indio.vai = lambda *_: self.o_indio.pega()
+        self.o_indio.indio.vai = lambda *_: self.o_indio.empurra()
         """o índio.vai é associado ao seu próprio metodo pega"""
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio, taba=self)
         return vaga
