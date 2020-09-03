@@ -1438,3 +1438,10 @@ NameError: name 'Nulo' is not defined
     self.elt <= ocupante
 TypeError: can't add 'Piche' object to DOMNode instance
 '''},
+{'date': 'Thu Sep 03 2020 16:01:44.888 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 49
+  def __init__(self, imagem, x, y, cena, taba):
+  ^
+IndentationError: unexpected indent
+'''},
