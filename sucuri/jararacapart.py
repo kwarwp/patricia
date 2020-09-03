@@ -98,7 +98,10 @@ class Vazio():
             :param requistante: O ator querendo empurrar o objeto.
             :param azimute: A direção que se quer empurrar  o ocupante.
         """
-        self.ocupante.empurrar(requisitante, azimute)    
+        #self.ocupante.empurrar(requisitante, azimute)    
+        # Resgate do code funcional do Paulo
+        if type(self.ocupante) is Tora:
+            self.ocupante.empurrar(requisitante, azimute)    
     
     def acessar(self, ocupante, azimute):
         """ Obtém o Vazio adjacente na direção dada pelo azimute e envio ocupante para lá.
