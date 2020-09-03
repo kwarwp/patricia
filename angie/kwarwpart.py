@@ -367,7 +367,7 @@ class Tora(Piche):
         self.vaga = vaga
         #fim - trabalhando aqui
         
-        self.empurrante # .xxx(zzz) if www else None -> continue o código
-        self.empurrante = NULO
-        self.vaga = vaga
+        #self.empurrante # .xxx(zzz) if www else None -> continue o código
+        #self.empurrante = NULO
+        #self.vaga = vaga
         
