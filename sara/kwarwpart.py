@@ -273,7 +273,7 @@ class Tora(Piche):
         """
         self.empurrante = empurrante
         # continue aqui com o início do double dispatch para ocupar a vaga na direção do azimute
-        self.vaga.acessa(self, azimute)
+        self.vaga.acessar(self, azimute)
         
         
     def ocupa(self, vaga):
@@ -289,7 +289,7 @@ class Tora(Piche):
         self.posicao = vaga.posicao
         vaga.ocupou(self)
         
-        self.empurrante = vaga # .xxx(zzz) if www else None -> continue o código
+        self.empurrante.ocupa(self.vaga) # .xxx(zzz) if www else None -> continue o código
         self.empurrante = NULO
         self.vaga = vaga
 
