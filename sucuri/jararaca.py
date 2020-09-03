@@ -353,7 +353,7 @@ class Kwarwp():
         """
         self.o_indio.indio.vai = lambda *_: self.o_indio.pega()
         """Índio é associado ao próprio método pega"""
-        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
+        vaga = Vazio("", x=x, y=y, cena=cena, taba=self, ocupante=self.o_indio)
         return vaga
 
     def vazio(self, imagem, x,y ,cena):
