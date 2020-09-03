@@ -37,6 +37,8 @@ class Vazio():
         self.sair = self._sair
         """O **sair ()** é usado como método dinâmico, variando com o estado da vaga.
         Inicialmente tem o comportamento de **_sair ()** que é o estado leniente, aceitando saidas"""
+         self.taba = taba
+        """ Agora recebe um argumento taba, para que ache os vazios adjacentes"""
         
     def _sair(self):
         self.ocupante.siga()
@@ -89,6 +91,22 @@ class Vazio():
     
     def pegar(self, requisitante): 
         self.ocupante.pegar(requisitante)
+        
+    def empurrar(self, empurrante,azimute):
+        """ Consulta o ocupante atual se há permissão para empurrá-lo na direção do azimute.
+
+            :param requistante: O ator querendo empurrar o objeto.
+            :param azimute: A direção que se quer empurrar  o ocupante.
+        """
+        self.ocupante.empurrar(requisitante, azimute)    
+    
+    def acessar(self, ocupante, azimute):
+        """ Obtém o Vazio adjacente na direção dada pelo azimute e envio ocupante para lá.
+        """
+        destino = (self.posicao[0]+azimute.x, self.posicao[1]+azimute.y)
+        """A posição para onde o índio vai depende do vetor de azimute corrente"""     
+        self.vaga.sair()   
+        """Objeto tenta sair, tem que consultar a vaga onde está"""
         
     def limpa(self):
         """ Pedido por um ocupante para ele seja eliminado do jogo.
@@ -171,6 +189,38 @@ class Tora(Piche):
         # self.posicao = vaga.posicao
         vaga.ocupou(self)
         self.vaga = vaga
+        
+    def empurrar(self,empurrante,azimute):
+
+        """ Registra o empurrante para uso no procolo e inicia dispathc com a vaga.
+
+            :param requistante: O ator querendo pegar o objeto.
+        """
+        self.empurrante = empurrante
+        # continue aqui com o início do double dispatch para ocupar a vaga na direção do azimute
+        self.vaga # acrescente o resto do comndo
+        
+    def ocupa(self,vaga):
+    
+        """ Pedido por uma vaga para que ocupe a posição nela.
+
+        :param vaga: A vaga que será ocupada pelo componente.
+
+        No caso da tora, requisita que a vaga seja ocupada por ele.
+        Também autoriza o empurrante a ocupar a vaga onde estava.
+        """
+        """ Pedido por uma vaga para que ocupe a posição nela.
+        :param vaga: A vaga que será ocupada pelo componente.
+        No caso do índio, requisita que a vaga seja ocupada por ele.
+        """
+        self.vaga.sai()
+        self.posicao = vaga.posicao
+        vaga.ocupou(self)
+        self.vaga = vaga
+        
+        self.empurrante # .xxx(zzz) if www else None -> continue o código
+        self.empurrante = NULO
+        self.vaga = vaga    
 
     @property
     def posicao(self):
