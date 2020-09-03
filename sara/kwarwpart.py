@@ -283,8 +283,12 @@ class Tora(Piche):
         No caso da tora, requisita que a vaga seja ocupada por ele.
         Também autoriza o empurrante a ocupar a vaga onde estava.
         """
-        # ocódigo usual do ocupa
-        self.empurrante # .xxx(zzz) if www else None -> continue o código
+        # o código usual do ocupa
+        self.vaga.sai()
+        self.posicao = vaga.posicao
+        vaga.ocupou(self)
+        
+        self.empurrante = vaga # .xxx(zzz) if www else None -> continue o código
         self.empurrante = NULO
         self.vaga = vaga
 
