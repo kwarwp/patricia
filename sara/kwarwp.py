@@ -358,7 +358,7 @@ class Kwarwp():
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
         coisa = Oca(imagem, x=0, y=0, cena=cena, taba=self)
-        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+        vaga = Vazio("", x=x, y=y, cena=cena, taba=self, ocupante=coisa)
         coisa.vazio.vai = lambda *_: self.o_indio.empurra()
         return vaga
         
