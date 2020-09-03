@@ -241,6 +241,29 @@ class Tora(Piche):
         """
         pass
         
+    def empurrar(self, empurrante, azimute):
+        """ Registra o empurrante para uso no procolo e inicia dispathc com a vaga.
+
+            :param requistante: O ator querendo pegar o objeto.
+        """
+        self.empurrante = empurrante
+        # continue aqui com o início do double dispatch para ocupar a vaga na direção do azimute
+        self.vaga # acrescente o resto do comndo
+        
+        
+    def ocupa(self, vaga):
+        """ Pedido por uma vaga para que ocupe a posição nela.
+
+        :param vaga: A vaga que será ocupada pelo componente.
+
+        No caso da tora, requisita que a vaga seja ocupada por ele.
+        Também autoriza o empurrante a ocupar a vaga onde estava.
+        """
+        # ocódigo usual do ocupa
+        self.empurrante # .xxx(zzz) if www else None -> continue o código
+        self.empurrante = NULO
+        self.vaga = vaga
+
 
 class Oca(Piche):
     """ A Oca é o destino final do índio, não poderá sair se ele entrar nela.
