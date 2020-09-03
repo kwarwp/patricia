@@ -228,8 +228,9 @@ class Tora(Piche):
         :param taba: Representa a taba onde o índio faz o desafio.
     """
     def __init__(self, imagem, x, y, cena, taba):
+        super(Piche, self).__init__(imagem, x, y, cena, taba)
         self.ocupante = Nulo
-        super(ChildB, self).__init__()
+
 
     def pegar(self, requisitante):
         """ Consulta o ocupante atual se há permissão para pegar e entregar ao requistante.
