@@ -330,7 +330,7 @@ class Kwarwp():
         :param y: linha em que o elemento será posicionado.
         :param cena: cena em que o elemento será posicionado.
         """
-        vaga = Vazio(imagem, x=x, y=y, cena=cena, ocupante=self)
+        vaga = Vazio(imagem, x=x, y=y, cena=cena, taba=self, ocupante=self)
         """ O Kwarwp é aqui usado como um ocupante nulo, que não ocupa uma vaga vazia."""
         return vaga
         
