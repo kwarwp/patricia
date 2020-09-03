@@ -203,9 +203,7 @@ class Tora(Piche):
         self.empurrante = NULO
         self.vaga = vaga    
     
-    def h():
-        pass
-        
+            
     @property
     def posicao(self):
         """ A propriedade posição faz parte do protocolo do double dispatch com o Indio .
