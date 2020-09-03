@@ -105,8 +105,14 @@ class Vazio():
         """
         destino = (self.posicao[0]+azimute.x, self.posicao[1]+azimute.y)
         """A posição para onde o índio vai depende do vetor de azimute corrente"""     
-        self.vaga.sair()   
-        """Objeto tenta sair, tem que consultar a vaga onde está"""
+
+        """A posição para onde o índio vai depende do vetor de azimute corrente"""
+        taba = self.taba.taba
+        if destino in taba:
+            vaga = taba[destino]
+            """Recupera na taba a vaga para a qual o índio irá se transferir"""
+            vaga.acessa(ocupante)
+
         
     def limpa(self):
         """ Pedido por um ocupante para ele seja eliminado do jogo.
@@ -207,8 +213,7 @@ class Tora(Piche):
         if destino in taba:
             vaga = taba[destino]
             """Recupera na taba a vaga para a qual o índio irá se transferir"""
-            vaga.acessa(self)           
-        self.vaga.acessa(azimute)
+            self.vaga.acessar(self,azimute)
         
     def ocupa(self,vaga):
     
