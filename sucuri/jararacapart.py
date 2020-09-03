@@ -201,13 +201,13 @@ class Tora(Piche):
         """ Faz a tora empurarr o vazio adjacente.
         """
         destino = (self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
-        """A posição para onde o índio vai depende do vetor de azimute corrente"""
+        """A posição para onde a tora vai depende do vetor de azimute corrente do índio?"""
         taba = self.taba.taba
         if destino in taba:
             vaga = taba[destino]
             """Recupera na taba a vaga para a qual o índio irá se transferir"""
             vaga.acessa(self)           
-        self.vaga.acessa(??)
+        self.vaga.acessa(destino)
         
     def ocupa(self,vaga):
     
