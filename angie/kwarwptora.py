@@ -284,7 +284,7 @@ class Kwarwp():
         """
         coisa = Indio(imagem, x=0, y=0, cena=cena, taba=self)
         """o índio tem deslocamento zero, pois é relativo à vaga"""
-        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa, taba=self)
         """Aqui o índio está sendo usado para qualquer objeto, enquanto não tem o próprio"""
         return vaga
 
@@ -295,7 +295,7 @@ class Kwarwp():
         :param y: linha em que o elemento será posicionado.
         :param cena: cena em que o elemento será posicionado.
         """
-        vaga = Vazio(imagem, x=x, y=y, cena=cena, ocupante=self)
+        vaga = Vazio(imagem, x=x, y=y, cena=cena, ocupante=self, taba=self)
         """ O Kwarwp é aqui usado como um ocupante nulo, que não ocupa uma vaga vazia."""
         return vaga
         
@@ -309,7 +309,7 @@ class Kwarwp():
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
         coisa = Tora(imagem, x=0, y=0, cena=cena, taba=self)
-        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa, taba=self)
         coisa.vazio.vai = lambda *_: self.o_indio.larga()
         """o vazio.vai é associado ao método larga do índio"""
         return vaga
@@ -327,7 +327,7 @@ class Kwarwp():
         """
         self.o_indio.indio.vai = lambda *_: self.o_indio.pega()
         """o índio.vai é associado ao seu próprio metodo pega"""
-        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio, taba=self)
         return vaga
             
     def fala(self, texto=""):
@@ -357,7 +357,7 @@ class Kwarwp():
         """
         coisa = Oca(imagem, x=0, y=0, cena=cena, taba=self)
         
-        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa, taba=self)
         return vaga
 
     def barra(self, imagem, x, y, cena):
@@ -370,7 +370,7 @@ class Kwarwp():
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
         coisa = Piche(imagem, x=0, y=0, cena=cena, taba=self)
-        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa, taba=self)
         return vaga
 
     def tora(self, imagem, x, y, cena):
@@ -383,7 +383,7 @@ class Kwarwp():
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
         coisa = Tora(imagem, x=x, y=y, cena=cena, taba=self)
-        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa, taba=self)
         return vaga
 
     def sai(self, *_):
