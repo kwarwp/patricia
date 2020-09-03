@@ -239,3 +239,10 @@ NameError: name 'Rosa' is not defined
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Thu Sep 03 2020 15:31:51.159 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 127
+  self.indio.siz = (lado*3, lado*4)
+  ^
+IndentationError: expected an indented block
+'''},
