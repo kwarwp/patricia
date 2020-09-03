@@ -420,10 +420,7 @@ class Kwarwp():
         """
         coisa = Tora(imagem, x=x, y=y, cena=cena, taba=self)
         vaga = Vazio("", x=x, y=y, cena=cena, taba=self, ocupante=coisa)
-        #coisa.vazio.vai = lambda *_: self.o_indio.larga()
-        
-        print(type(coisa.vazio))
-        coisa.vazio.vai = lambda *_: type(coisa) is Indio if self.o_indio.larga() else print(coisa)
+        coisa.vazio.vai = lambda *_: self.o_indio.larga()
         
         """o vazio.vai é associado ao método larga do índio"""
         return vaga
