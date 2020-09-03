@@ -7,7 +7,7 @@
 Changelog
 ---------
 .. versionadded::    20.08
-        - Estudo da Herança 
+        - Alteração nas classes para que o Índi empurre a tora
 
 """
 
