@@ -320,3 +320,10 @@ IndentationError: expected an indented block
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Thu Sep 03 2020 17:51:55.805 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 306
+  """ Pedido por um ocupante para ele seja eliminado do jogo.
+  ^
+IndentationError: expected an indented block
+'''},
