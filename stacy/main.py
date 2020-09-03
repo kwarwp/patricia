@@ -58,6 +58,13 @@ class Indio():
         # self.vaga.sair() # esta parte vai ser feita mais tarde.
         ...
         # de resto o código é semelhante ao _anda
+        """ Registra o empurrante para uso no procolo e inicia dispathc com a vaga.
+
+            :param requistante: O ator querendo pegar o objeto.
+        """
+        self.empurrante = empurrante
+        # continue aqui com o início do double dispatch para ocupar a vaga na direção do azimute
+        self.vaga # acrescente o resto do comndo
 
     def mostra(self):
         """ Modifica a figura (Sprite) do índio mostrando para onde está indo.
