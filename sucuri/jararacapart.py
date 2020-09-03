@@ -199,14 +199,14 @@ class Tora(Piche):
         vaga.ocupou(self)
         self.vaga = vaga
         
-    def empurrar(self,empurrante,azimute):
+    def empurrar(self,requisitantee):
 
         """ Registra o empurrante para uso no procolo e inicia dispathc com a vaga.
 
             :param requistante: O ator querendo pegar o objeto.
             :param azimute: O local de destino da Tora
         """
-        self.empurrante = empurrante
+        self.requisitante= requisitante
         # continue aqui com o início do double dispatch para ocupar a vaga na direção do azimute
         """ Faz a tora empurar o vazio adjacente.
         """
