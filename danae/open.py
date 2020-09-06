@@ -58,6 +58,7 @@ class Open:
     def close(self):
         return True
 
-with Open("names.txt", "r") as no:
-    # no.write("jo")
-    print(no.read())
+def main():
+    with Open("names.txt", "r") as no:
+        # no.write("jo")
+        print(no.read())
