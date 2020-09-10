@@ -35,7 +35,7 @@
         classe Kwarwp.
 """
 from collections import namedtuple as nt
-from kwarwpart import Vazio, Piche, Oca, Tora, NULO
+from kwarwp.kwarwpart import Vazio, Piche, Oca, Tora, NULO
 
 IMGUR = "https://imgur.com/"
 """Prefixo do site imgur."""
