@@ -25,3 +25,31 @@ class Nulo:
         return self 
 
 NULO = Nulo()
+
+class Vazio():
+    """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
+
+        :param imagem: A figura representando o índio na posição indicada.
+        :param x: Coluna em que o elemento será posicionado.
+        :param y: Cinha em que o elemento será posicionado.
+        :param cena: Cena em que o elemento será posicionado.
+        :param taba: Referência onde ele pode encontrar a taba.
+        :param ocupante: Objeto que ocupa inicialmente a vaga.
+    """
+    VITOLLINO, LADO = None, None
+    
+    def __init__(self, imagem, x, y, cena, taba, ocupante=None):
+        self.lado = lado = self.LADO # or 100
+        self.taba = taba
+        self.posicao = (x//lado,y//lado-1)
+        self.vazio = self.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        self._nada = self.VITOLLINO.a()
+        self.acessa = self._acessa
+        """O **acessa ()** é usado como método dinâmico, variando com o estado da vaga.
+        Inicialmente tem o comportamento de **_acessa ()** que é o estado vago, aceitando ocupantes"""
+        self.ocupante = ocupante or NULO
+        """O ocupante se não for fornecido é encenado pelo próprio vazio, agindo como nulo"""
+        self.acessa(ocupante)
+        self.sair = self._sair
+        """O **sair ()** é usado como método dinâmico, variando com o estado da vaga.
+        Inicialmente tem o comportamento de **_sair ()** que é o estado leniente, aceitando saidas"""
