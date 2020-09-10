@@ -10,6 +10,7 @@ Changelog
         Descreva o que você adicionou no código.
 
 """
+
 from _spy.vitollino.main import Jogo
 from unittest import TestCase
 # from unittest.mock import MagicMock
