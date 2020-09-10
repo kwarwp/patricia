@@ -2,12 +2,12 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 """ Projeto sem descrição, (mude esta linha).
 
-.. codeauthor:: Nome Sobrenome <mail@local.tipo>
+.. codeauthor:: Isaac D'Césares
 
 Changelog
 ---------
 .. versionadded::    20.09
-        Descreva o que você adicionou no código.
+        Criação da classe Teste
 
 """
 
