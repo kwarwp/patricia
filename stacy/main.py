@@ -22,7 +22,7 @@ MAPA_INICIAL= """
 #.....^.#
 #########
 """
-
+"""Mapa com o posicionamento inicial dos elementos."""
 Ponto = nt("Ponto", "x y")
 """Par de coordenadas na direção horizontal (x) e vertiacal (y)."""
 Rosa = nt("Rosa", "n l s o")
