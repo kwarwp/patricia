@@ -389,7 +389,7 @@ def main(vitollino, medidas={}):
     """
     print(f"main(vitollino={vitollino} medidas={medidas}")
     Kwarwp(vitollino, medidas=medidas).cria()
-    main_test()
+    #main_test()
 
 def main_test():
     pass
