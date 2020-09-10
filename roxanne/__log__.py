@@ -1249,3 +1249,5 @@ AttributeError: 'Elemento' object has no attribute 'ocupa'
     coisa = Piche(imagem, x=0, y=0, cena=cena, taba=self)
 TypeError: 'module' object is not callable
 '''},
+{'date': 'Thu Sep 10 2020 17:50:57.30 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': ''''''},
