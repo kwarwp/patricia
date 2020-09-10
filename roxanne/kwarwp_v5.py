@@ -392,7 +392,7 @@ def main(vitollino, medidas={}):
     main_test()
 
 def main_test():
-    from kwarwp.btest_kwarwp import main
+    from patricia.roxanne.test_kw import main
     main()
         
     
