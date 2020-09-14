@@ -736,3 +736,11 @@ SyntaxError: invalid syntax
   def possize(pos, siz=None)
                              ^
 '''},
+{'date': 'Mon Sep 14 2020 15:47:42.227 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+SyntaxError: invalid syntax
+
+ module __ge703 line 2
+  UTF8 -*-# Este arquivo é parte do programa Vi:
+          ^
+'''},
