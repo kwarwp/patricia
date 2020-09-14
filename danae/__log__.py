@@ -662,3 +662,5 @@ NameError: name 'tile' is not defined
     b = [spr(a[x*4+y], x, y) for x in range(4) for y in range(3)]
 IndexError: list index out of range
 '''},
+{'date': 'Mon Sep 14 2020 11:16:15.196 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': ''''''},
