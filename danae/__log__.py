@@ -728,3 +728,11 @@ SyntaxError: invalid syntax
 'error': ''''''},
 {'date': 'Mon Sep 14 2020 15:37:29.239 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
 'error': ''''''},
+{'date': 'Mon Sep 14 2020 15:47:16.885 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+SyntaxError: invalid syntax
+
+ module <string> line 21
+  def possize(pos, siz=None)
+                             ^
+'''},
