@@ -787,3 +787,10 @@ SyntaxError: invalid syntax
     a = [Piso(x, y, (-x*tile, -y*tile), (tile*4, tile*3), cena=cena)
 NameError: name 'tile' is not defined
 '''},
+{'date': 'Mon Sep 14 2020 16:17:04.732 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 18
+  self.elt = Aldeia.J.a(self.ALDEIA, x=x*150, y=y*150, w=tile, h=tile, cena=cena, style=dict(transform:f"rotate({az}deg)"))
+                                                                                                       ^
+SyntaxError: invalid syntax
+'''},
