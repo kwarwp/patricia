@@ -12,19 +12,29 @@ Changelog
 """
 class Aldeia:
     ALDEIA = "https://i.imgur.com/9HQfcNn.png"
-    ALDEIA = "https://i.imgur.com/UCWGCKR.png"
+    #ALDEIA = "https://i.imgur.com/UCWGCKR.png"
     def __init__(self, j):
         def elt(x, y):
-            tile = 100
             ald=j.a(self.ALDEIA, x=x*150, y=y*150, w=tile, h=tile, style=dict(transform="rotate(90deg)"))
             ald.siz = (tile*4, tile*3)
             ald.pos = (-x*tile, -y*tile)
             ald.entra(cena)
-            return
+            return ald
+        def spr(ald, x, y):
+            tile = 100
+            ald.siz = (tile*4, tile*3)
+            ald.pos = (-x*tile, -y*tile)
+            #ald.entra(cena)
+            return ald
             e.elt.html = f"siz {e.siz} pos {e.pos}"
             e.o = 0.5
         cena = j.c("https://i.imgur.com/sGoKfvs.jpg")
-        [elt(x,y) for x in range(4) for y in range(3)]
+        a = [elt(x,y) for x in range(4) for y in range(3)]
+        b = [spr(t, 0, 0) for t in a]
+        
+        # b = [spr(a[x*4+y],x,y) for x in range(4) for y in range(3)]
+        #a[0].siz = (400, 300)
+        #a[0].entra(cena)
         cena.vai()
         
 if __name__ == "__main__":
