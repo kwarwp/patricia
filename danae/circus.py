@@ -18,7 +18,7 @@ class Piso:
         self.elt = Aldeia.J.a(self.ALDEIA, x=x*150, y=y*150, w=tile, h=tile, cena=cena)
         self.elt.pos = pos
         self.elt.siz = siz
-    def possize(pos, siz=None)
+    def possize(self, pos, siz=None):
         self.elt.pos = pos
         self.elt.siz = siz if siz else self.elt.siz
         
@@ -43,6 +43,7 @@ class Aldeia:
             return ald
             e.elt.html = f"siz {e.siz} pos {e.pos}"
             e.o = 0.5
+        tile = 100
         cena = j.c("https://i.imgur.com/sGoKfvs.jpg")
         a = [Piso(x, y, (-x*tile, -y*tile), (tile*4, tile*3), cena=cena)
              for x in range(4) for y in range(3)]
