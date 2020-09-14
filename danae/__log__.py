@@ -612,3 +612,5 @@ IndentationError: expected an indented block
     print(help(int))
 IOError: File http://supygirls.pythonanywhere.com/js/builtins_docstrings.js not found
 '''},
+{'date': 'Mon Sep 14 2020 09:13:12.139 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': ''''''},
