@@ -751,3 +751,10 @@ SyntaxError: invalid syntax
                              ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Mon Sep 14 2020 16:07:32.297 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module __ge703 line 2
+  UTF8 -*-# Este arquivo é parte do programa Vi:
+          ^
+SyntaxError: invalid syntax
+'''},
