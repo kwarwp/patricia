@@ -744,3 +744,10 @@ SyntaxError: invalid syntax
   UTF8 -*-# Este arquivo é parte do programa Vi:
           ^
 '''},
+{'date': 'Mon Sep 14 2020 16:07:07.10 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 21
+  def possize(pos, siz=None)
+                             ^
+SyntaxError: invalid syntax
+'''},
