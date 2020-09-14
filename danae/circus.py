@@ -14,6 +14,7 @@ class Piso:
     ALDEIA = "https://i.imgur.com/Gqoucvd.png"
     #ALDEIA = "https://i.imgur.com/UCWGCKR.png"
     def __init__(self, x, y, pos, siz, cena):
+        tile = 100
         self.elt = j.a(self.ALDEIA, x=x*150, y=y*150, w=tile, h=tile, cena=cena)
         self.elt.pos = pos
         self.elt.siz = siz
