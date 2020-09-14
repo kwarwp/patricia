@@ -672,3 +672,10 @@ SyntaxError: invalid syntax
   UTF8 -*-# Este arquivo é parte do programa Vi:
           ^
 '''},
+{'date': 'Mon Sep 14 2020 11:33:56.677 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module __ge703 line 2
+  UTF8 -*-# Este arquivo é parte do programa Vi:
+          ^
+SyntaxError: invalid syntax
+'''},
