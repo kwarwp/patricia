@@ -801,3 +801,10 @@ SyntaxError: invalid syntax
                                                                      ^
 SyntaxError: non-keyword arg after keyword arg
 '''},
+{'date': 'Mon Sep 14 2020 16:20:38.259 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 33
+  a = [Piso(x, y, (-x*tile, -y*tile), (tile*4, tile*3), cena=cena)
+                                                                            ^
+SyntaxError: invalid syntax
+'''},
