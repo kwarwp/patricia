@@ -15,7 +15,7 @@ class Piso:
     #ALDEIA = "https://i.imgur.com/UCWGCKR.png"
     def __init__(self, x, y, pos, siz, cena):
         tile = 100
-        self.elt = j.a(self.ALDEIA, x=x*150, y=y*150, w=tile, h=tile, cena=cena)
+        self.elt = Aldeia.J.a(self.ALDEIA, x=x*150, y=y*150, w=tile, h=tile, cena=cena)
         self.elt.pos = pos
         self.elt.siz = siz
     def possize(pos, siz=None)
@@ -24,8 +24,10 @@ class Piso:
         
 class Aldeia:
     ALDEIA = "https://i.imgur.com/Gqoucvd.png"
+    J = None
     #ALDEIA = "https://i.imgur.com/UCWGCKR.png"
     def __init__(self, j):
+        Aldeia.J = j
         def elt(x, y):
             tile = 100
             ald=j.a(self.ALDEIA, x=x*150, y=y*150, w=tile, h=tile)  # , style=dict(transform="rotate(90deg)"))
