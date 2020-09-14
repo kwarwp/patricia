@@ -664,3 +664,11 @@ IndexError: list index out of range
 '''},
 {'date': 'Mon Sep 14 2020 11:16:15.196 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
 'error': ''''''},
+{'date': 'Mon Sep 14 2020 11:31:13.930 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+SyntaxError: invalid syntax
+
+ module __ge703 line 2
+  UTF8 -*-# Este arquivo é parte do programa Vi:
+          ^
+'''},
