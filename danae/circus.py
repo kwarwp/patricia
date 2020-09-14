@@ -15,6 +15,7 @@ class Aldeia:
     #ALDEIA = "https://i.imgur.com/UCWGCKR.png"
     def __init__(self, j):
         def elt(x, y):
+            tile = 100
             ald=j.a(self.ALDEIA, x=x*150, y=y*150, w=tile, h=tile, style=dict(transform="rotate(90deg)"))
             ald.siz = (tile*4, tile*3)
             ald.pos = (-x*tile, -y*tile)
