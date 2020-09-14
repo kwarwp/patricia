@@ -758,3 +758,5 @@ SyntaxError: invalid syntax
           ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Mon Sep 14 2020 16:09:01.31 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': ''''''},
