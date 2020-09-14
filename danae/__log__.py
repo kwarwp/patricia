@@ -808,3 +808,10 @@ SyntaxError: non-keyword arg after keyword arg
                                                                             ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Mon Sep 14 2020 16:50:09.892 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 17
+  azz = {key: nk*90 for nk, key in enumerate("NLSO")
+                                                              ^
+SyntaxError: invalid syntax
+'''},
