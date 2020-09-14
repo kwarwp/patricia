@@ -794,3 +794,10 @@ NameError: name 'tile' is not defined
                                                                                                        ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Mon Sep 14 2020 16:19:12.251 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 33
+  a = [Piso(x, y, (-x*tile, -y*tile), (tile*4, tile*3), cena=cena, 90)
+                                                                     ^
+SyntaxError: non-keyword arg after keyword arg
+'''},
