@@ -694,3 +694,9 @@ SyntaxError: invalid syntax
 'error': ''''''},
 {'date': 'Mon Sep 14 2020 12:23:26.517 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
 'error': ''''''},
+{'date': 'Mon Sep 14 2020 12:43:08.75 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''  File <string>, line 13
+    class Piso
+               ^
+SyntaxError: invalid syntax 
+'''},
