@@ -12,7 +12,7 @@ Changelog
 """
 
 from _spy.vitollino.main import Jogo
-# O import do TestCase está dando erro
+# O import do TestCase está dando erro, pq?
 from unittest import TestCase
 # from unittest.mock import MagicMock
 from sara.kwarwp import Kwarwp, Indio
