@@ -11,8 +11,9 @@ Changelog
 
 """
 class Piso:
-    ALDEIA = "https://i.imgur.com/Gqoucvd.png"
+    #ALDEIA = "https://i.imgur.com/Gqoucvd.png"
     #ALDEIA = "https://i.imgur.com/UCWGCKR.png"
+    ALDEIA = "https://i.imgur.com/xsjhNjh.png"
     def __init__(self, cena, x, y, ai="NA"):
         azz = {key: nk*90 for nk, key in enumerate("NLSO")}
         pos = {key: (-(nk%4)*100, -(nk//4)*100) for nk, key in enumerate("ABCDEFGHIJKL")}
