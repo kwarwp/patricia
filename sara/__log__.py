@@ -5858,3 +5858,7 @@ AttributeError: 'module' object has no attribute 'TestResult'
     suite = unittest.TestLoader().loadTestsFromTestCase(Test_Kwarwp)
 AttributeError: 'module' object has no attribute 'TestLoader'
 '''},
+{'date': 'Tue Sep 15 2020 18:22:28.755 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: Cannot read property '$methods' of undefined>
+'''},
