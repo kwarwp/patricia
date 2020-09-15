@@ -5772,3 +5772,7 @@ NameError: name 'TestCase' is not defined
     class Test_Kwarwp(TestCase):
 NameError: name 'TestCase' is not defined
 '''},
+{'date': 'Tue Sep 15 2020 17:57:50.180 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: Cannot read property '$methods' of undefined>
+'''},
