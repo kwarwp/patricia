@@ -7,7 +7,7 @@
 Changelog
 ---------
 .. versionadded::    15.08
-        Classe de teste do jogo Kwarwp
+        Modulo de teste do jogo Kwarwp
 
 """
 
