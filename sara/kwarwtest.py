@@ -12,8 +12,10 @@ Changelog
 """
 
 from _spy.vitollino.main import Jogo
+
 # O import do TestCase está dando erro, Exception: <TypeError: Cannot read property '$methods' of undefined>
 from unittest import TestCase
+
 # from unittest.mock import MagicMock
 from sara.kwarwp import Kwarwp, Indio
 from sara.kwarwpart import Piche, Vazio, Oca, Tora, NULO
