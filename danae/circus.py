@@ -34,8 +34,10 @@ class Aldeia:
         Aldeia.J = j
         tile = 100
         cena = j.c("https://i.imgur.com/sGoKfvs.jpg")
-        a = [Piso(cena, nk%4*150, nk//4*150, ai+"N" ) for nk, ai in enumerate("ABCDEFGHIJKL")]
-        b = [Piso(cena, 600+nk%3*100, nk//3*100, ai ) for nk, ai in enumerate("LS JN LO JO FN JL GS JS GL".split())]
+        big = "LS JN HN JN HN KO HO AN FN FN BN IL JO DO AO BL DO JL IO AO DS DN CL HL GS JS HS HS JS GL".split()
+        # a = [Piso(cena, nk%4*150, nk//4*150, ai+"N" ) for nk, ai in enumerate("ABCDEFGHIJKL")]
+        b = [Piso(cena, nk%6*100, nk//6*100, ai ) for nk, ai in enumerate(big)]
+        c = [Piso(cena, 600+nk%3*100, nk//3*100, ai ) for nk, ai in enumerate("LS JN LO JO FN JL GS JS GL".split())]
         #     for x in range(4) for y in range(3)]
         # b = [spr(a[x*3+y], x, y) for x in range(4) for y in range(3)]
         
@@ -46,6 +48,6 @@ class Aldeia:
         
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
-    STYLE.update(width=1200, height="600px")
+    STYLE.update(width=1400, height="700px")
     Aldeia(Jogo())
         
