@@ -5792,3 +5792,7 @@ Exception: <TypeError: Cannot read property '$methods' of undefined>
     class Test_Kwarwp(TestCase):
 NameError: name 'TestCase' is not defined
 '''},
+{'date': 'Tue Sep 15 2020 18:19:06.446 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: Cannot read property '$methods' of undefined>
+'''},
