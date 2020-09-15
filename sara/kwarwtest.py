@@ -166,7 +166,6 @@ def main():
     import kwarwp.htmlrunner as htmlrun
     suite = unittest.TestLoader().loadTestsFromTestCase(Test_Kwarwp)
     htmlrun.HTMLTestRunner().run(suite)
-    print("teste")
 
 if __name__ == "__main__":
     main()
