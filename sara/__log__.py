@@ -5680,3 +5680,7 @@ SyntaxError: EOL while scanning string literal
                                                              ^
 SyntaxError: EOL while scanning string literal
 '''},
+{'date': 'Tue Sep 15 2020 17:25:04.172 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: Cannot read property '$methods' of undefined>
+'''},
