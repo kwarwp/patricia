@@ -85,9 +85,9 @@ class Test_Kwarwp(TestCase):
             def pos(self, value):
                 self._pos = value
         Vazio.VITOLLINO.a = FakeElemento
-        """Troca o Elemento original pelo fake, na "maternidade""""
+        """Troca o Elemento original pelo fake, na "maternidade"""
         Vazio.VITOLLINO.c = FakeCena
-        """Troca a Cena original pelo fake, na "maternidade""""
+        """Troca a Cena original pelo fake, na "maternidade"""
 
     def testa_cria(self):
         """ Cria o ambiente de programação Kwarwp."""
@@ -96,6 +96,17 @@ class Test_Kwarwp(TestCase):
         cena = self.k.cria()
         self.assertIn(self.INDIO, self.elts)
         """Aqui perguntamos se a imagem do índio foi parar no dicionário elts"""
+
+    def testa_cria_tora(self):
+        """ Cria a tora com a fábrica."""
+        self.set_fake()
+        cena = self.k.cria()
+        coisa = self.k.taba[1,3]
+        self.assertIsInstance(coisa.ocupante,  Tora, f"but ocupante was {coisa.ocupante}")
+        self.assertEqual(100, coisa.lado, f"but coisa.lado was {coisa.lado}")
+        tora = self.elts[self.TORA]
+        self.assertEqual(coisa.ocupante.vazio, tora, f"but coisa.ocupante.indio was {coisa.ocupante.vazio}")
+        self.assertEqual((0, 0), tora.pos, f"but tora.pos was {tora.pos}")
 
     def testa_cria_indio(self):
         """ Cria o índio com a fábrica."""
