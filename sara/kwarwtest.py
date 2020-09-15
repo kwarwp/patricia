@@ -12,7 +12,7 @@ Changelog
 """
 
 from _spy.vitollino.main import Jogo
-from unittest import TestCase
+#from unittest import TestCase
 # from unittest.mock import MagicMock
 from sara.kwarwp import Kwarwp, Indio
 from sara.kwarwpart import Piche, Vazio, Oca, Tora, NULO
@@ -159,10 +159,11 @@ class Test_Kwarwp(TestCase):
         self.assertEqual(tora.vaga,  vaga, f"but tora drop vaga {tora.vaga}")
         
 def main():
-    import unittest
-    import kwarwp.htmlrunner as htmlrun
+    #import unittest
+    #import kwarwp.htmlrunner as htmlrun
     #suite = unittest.TestLoader().loadTestsFromTestCase(Test_Kwarwp)
     #htmlrun.HTMLTestRunner().run(suite)
+    print("teste")
 
 if __name__ == "__main__":
     main()
