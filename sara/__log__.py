@@ -5666,3 +5666,10 @@ NameError: name 'FALSE' is not defined
                                                                                                             ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Sep 15 2020 17:24:15.842 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 88
+  """Troca o Elemento original pelo fake, na "maternidade""""
+                                                             ^
+SyntaxError: EOL while scanning string literal
+'''},
