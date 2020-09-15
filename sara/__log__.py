@@ -5673,3 +5673,10 @@ SyntaxError: invalid syntax
                                                              ^
 SyntaxError: EOL while scanning string literal
 '''},
+{'date': 'Tue Sep 15 2020 17:24:40.86 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 88
+  """Troca o Elemento original pelo fake, na "maternidade""""
+                                                             ^
+SyntaxError: EOL while scanning string literal
+'''},
