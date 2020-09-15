@@ -1,6 +1,6 @@
 # patricia.sara.kwarwtest.py
 # SPDX-License-Identifier: GPL-3.0-or-later
-""" Projeto sem descrição, (mude esta linha).
+""" Projeto Kwarwp (módulo de teste)
 
 .. codeauthor:: Paulo Assumpção <paulo.assump@gmail.com>
 
