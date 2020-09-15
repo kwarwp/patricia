@@ -39,6 +39,7 @@ class Aldeia:
         b = [Piso(cena, nk%6*100, nk//6*100, ai ) for nk, ai in enumerate(big)]
         c = [Piso(cena, 600+nk%3*100, nk//3*100, ai ) for nk, ai in enumerate("LS JN LO JO FN JL GS JS GL".split())]
         #     for x in range(4) for y in range(3)]
+        D = [Piso(cena, 600+nk%3*100, 300+nk//3*100, ai ) for nk, ai in enumerate("AN JN BN DO EO DO KL HS KN".split())]
         # b = [spr(a[x*3+y], x, y) for x in range(4) for y in range(3)]
         
         # b = [spr(a[x*4+y],x,y) for x in range(4) for y in range(3)]
