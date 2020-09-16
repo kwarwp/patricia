@@ -1194,3 +1194,9 @@ Exception: undefined has no properties
   module '$exec_426' line 38
 class Aldeia:
 '''},
+{'date': 'Wed Sep 16 2020 12:47:46.885 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: obj is undefined
+  module '$exec_2049' line 38
+class Aldeia:
+'''},
