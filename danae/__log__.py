@@ -1248,3 +1248,25 @@ NameError: free variable 'KEYS' referenced before assignment in enclosing scope
     self.desafios[desafio](solucao)
 TypeError: list indices must be integer, not dict
 '''},
+{'date': 'Wed Sep 16 2020 13:32:03.541 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 157
+    desafio2(5)
+  module <module> line 150
+    circus(lev, MASMORRA)
+  module <module> line 120
+    Aldeia(Jogo()).circus(desafio, solucao)
+  module <module> line 58
+    self.logger = j.a(TRANSP, x=0, y=500, w=900, h=100, cena=cena)
+NameError: name 'TRANSP' is not defined
+'''},
