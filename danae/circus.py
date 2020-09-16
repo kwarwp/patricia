@@ -52,7 +52,7 @@ class Aldeia:
     KEYS = []
     @staticmethod
     def shuffle_keys():
-        if Aldeia.STOR[COUNT] <= "":
+        if Aldeia.STOR[COUNT] == "":
             keys = [key for line in Aldeia.ORDERED_KEYS for key in line]
             shuffle(keys)
             Aldeia.KEYS = [keys[n:n+3] for n in range(0,9,3)]
