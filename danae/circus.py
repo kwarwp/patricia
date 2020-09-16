@@ -52,11 +52,11 @@ class Aldeia:
     @staticmethod
     def shuffle_keys():
         keys = [key for line in Aldeia.ORDERED_KEYS for key in line]
+        count = Aldeia.STOR[COUNT]
         if Aldeia.STOR[COUNT] == "":
             shuffle(keys)
-            Aldeia.STOR[COUNT] = "@@@"
-        else:
-            Aldeia.STOR[COUNT] = Aldeia.STOR[COUNT][:-1]
+            count = "@@@"
+        Aldeia.STOR[COUNT] = count[:-1]
         Aldeia.KEYS = [keys[n:n+3] for n in range(0,9,3)]
     #COUNT = 2
     #ALDEIA = "https://i.imgur.com/UCWGCKR.png"
