@@ -1121,3 +1121,27 @@ IndexError: string index out of range
     self.desafios = [self.guia, self.desafio0, self.desafio0, self.desafio1, self.desafio2]
 AttributeError: 'Aldeia' object has no attribute 'desafio2'
 '''},
+{'date': 'Tue Sep 15 2020 23:51:32.73 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 133
+    desafio2()
+  module <module> line 126
+    circus(3, MASMORRA)
+  module <module> line 96
+    Aldeia(Jogo()).circus(desafio, solucao)
+  module <module> line 90
+    self.desafios[desafio](solucao)
+  module <module> line 86
+    desafio0(c)
+TypeError: desafio0() takes 0 positional argument but more were given
+'''},
