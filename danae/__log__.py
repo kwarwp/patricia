@@ -997,3 +997,27 @@ IndexError: list index out of range
     az = azz[ai[1]]
 IndexError: string index out of range
 '''},
+{'date': 'Tue Sep 15 2020 23:38:21.156 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 135
+    desafio2()
+  module <module> line 128
+    circus(3, MASMORRA)
+  module <module> line 98
+    Aldeia(Jogo()).circus(desafio, solucao)
+  module <module> line 92
+    self.desafios[desafio](solucao)
+  module <module> line 87
+    c = [Piso(self.cena, i*100, j*100, solucao(ai) ) 
+TypeError: 'dict' object is not callable
+'''},
