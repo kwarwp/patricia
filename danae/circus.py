@@ -51,11 +51,13 @@ class Aldeia:
                     ['Nenea', 'Cahuitz', 'Pallotl']]
     @staticmethod
     def shuffle_keys():
-        if STOR[COUNT] <= 0
-            keys = [key for line in self.ORDERED_KEYS for key in line]
+        if Aldeia.STOR[COUNT] <= 0:
+            keys = [key for line in Aldeia.ORDERED_KEYS for key in line]
             shuffle(KEYS)
-            self.STOR[KEYS] = [keys[n:n+3] for n in range(0,9,3)]
-            STOR[COUNT] = 3
+            Aldeia.STOR[KEYS] = [keys[n:n+3] for n in range(0,9,3)]
+            Aldeia.STOR[COUNT] = 3
+        else:
+            Aldeia.STOR[COUNT] -= 1
     #COUNT = 2
     #ALDEIA = "https://i.imgur.com/UCWGCKR.png"
     def __init__(self, j):
@@ -109,16 +111,9 @@ class Aldeia:
     def desafio3(self, solucao):
         global COUNT, KEYS
         self.desafio2(solucao)
-        if COUNT <= 0:
-            self.log(f"COUNT  --   >  {COUNT}")
-            keys = [key for line in self.ORDERED_KEYS for key in line]
-            shuffle(keys)
-            COUNT = 3
-            KEYS = [keys[n:n+3] for n in range(0,9,3)]
-            akeys = [f"X=X{l}" for l in KEYS]
-            self.log(f"{COUNT} Aldeia.KEYS: {akeys} XXXkeysXXX  {keys}")
+        Aldeia.shuffle_keys()
         COUNT = COUNT -1
-        self.log(f"COUNT{COUNT}")
+        self.log(f"COUNT{Aldeia.STOR[COUNT]}")
         
     def desafio4(self, solucao):
         c = [[solucao[ai] for ai in linha] for linha in self.ORDERED_KEYS]
