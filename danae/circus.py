@@ -84,8 +84,8 @@ class Aldeia:
         c = [Piso(self.cena, i*100, j*100, ai ) for i, linha in enumerate(solucao) for j, ai in enumerate(linha)]
         
     def desafio2(self, solucao):
-        c = [Piso(self.cena, i*100, j*100, solucao(ai) ) 
-             for i, linha in enumerate(solucao) for j, ai in enumerate(self.ORDERED_KEYS)]
+        c = [Piso(self.cena, i*100, j*100, solucao[ai] ) 
+             for i, linha in enumerate(self.ORDERED_KEYS) for j, ai in enumerate(linha)]
 
         
     def circus(self, desafio, solucao):
