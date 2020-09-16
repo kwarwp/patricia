@@ -99,7 +99,7 @@ class Aldeia:
         
     def desafio3(self, solucao):
         self.desafio2(solucao)
-        keys = [key for line in ORDERED_KEYS for key in line]
+        keys = [key for line in self.ORDERED_KEYS for key in line]
         shuffle(keys) if not Aldeia.COUNT else None
         Aldeia.KEYS = [keys[n:n+3] for n in range(0,9,3)] 
         self.log(f"{Aldeia.COUNT} {Aldeia.KEYS} {keys}")
