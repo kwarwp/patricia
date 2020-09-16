@@ -95,8 +95,9 @@ class Aldeia:
         self.desafio0(c)
         
     def desafio3(self, solucao):
-        c = [[solucao[ai] for ai in linha] for linha in self.ORDERED_KEYS]
-        self.desafio0(c)
+        desafio2(solucao)
+        shuffle(Aldeia.KEYS) if self.ODD else None
+        Aldeia.ODD = not Aldeia.ODD
         
     def desafio4(self, solucao):
         c = [[solucao[ai] for ai in linha] for linha in self.ORDERED_KEYS]
@@ -147,5 +148,5 @@ if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
     STYLE.update(width=1300, height="600px")
     #Aldeia(Jogo())
-    desafio2(4)
+    desafio2(5)
         
