@@ -55,7 +55,7 @@ class Aldeia:
         tile = 100
         self.shuffle_keys = self.ORDERED_KEYS[:]
         self.cena = cena = j.c("https://i.imgur.com/sGoKfvs.jpg")
-        self.logger = j.a(TRANSP, x=0, y=500, w=900, h=100, cena=cena)
+        self.logger = j.a(self.TRANSP, x=0, y=500, w=900, h=100, cena=cena)
         # self.guia()
         self.desafios = [self.guia, self.desafio0, self.desafio0, self.desafio1, self.desafio2, self.desafio3, self.desafio4]
         cena.vai()
