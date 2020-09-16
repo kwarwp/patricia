@@ -49,7 +49,6 @@ class Aldeia:
     ORDERED_KEYS = [['Coycol', 'Cauha', 'Tetlah'],
                     ['Huatlya', 'Zitllo', 'Micpe'],
                     ['Nenea', 'Cahuitz', 'Pallotl']]
-    KEYS = []
     @staticmethod
     def shuffle_keys():
         if Aldeia.STOR[COUNT] == "":
