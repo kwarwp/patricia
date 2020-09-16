@@ -46,7 +46,8 @@ class Aldeia:
         Aldeia.J = j
         tile = 100
         self.cena = cena = j.c("https://i.imgur.com/sGoKfvs.jpg")
-        self.guia()
+        # self.guia()
+        self.desafios = [self.guia, self.desafio0]
         cena.vai()
     def guia(self):
         cena = self.cena
@@ -73,12 +74,33 @@ class Aldeia:
         j.a(self.MAPING, x=420, y=220,w=60, h=60, cena=cena)
         j.a(self.YARA, x=520, y=20,w=60, h=60, cena=cena)
         
+    def desafio0(self, solucao):
+        c = [Piso(self.cena, i*100, j*100, ai ) for i, linha in enumerate(solucao) for j, ai in enumerate(linha)]
+
+        
+    def circus(self, desafio, solucao):
+        self.desafios[desafio](solucao)
+        
         # b = [spr(a[x*4+y],x,y) for x in range(4) for y in range(3)]
         #a[0].siz = (400, 300)
         #a[0].entra(cena)
+def circus(desafio, solucao):
+    Aldeia(Jogo()).circus(1, solucao)
+        
+def desafio0():
+    TOPO_ESQUERDA = "AN"
+    TOPO_DIREITA = "AN"
+    TOPO_CENTRO = "AN"
+    MEIO_ESQUERDA, CENTRO, MEIO_DIREITA = "AN", "AN", "AN"
+    FUNDO_ESQUERDA, FUNDO_CENTRO, FUNDO_DIREITA =  "AN", "AN", "AN"
+
+    # O comando abaixo voce vai entender no próximo desafio
+    circus(1, [[TOPO_ESQUERDA, TOPO_CENTRO, TOPO_DIREITA], [MEIO_ESQUERDA, CENTRO,
+            MEIO_DIREITA], [FUNDO_ESQUERDA, FUNDO_CENTRO, FUNDO_DIREITA]])
         
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
     STYLE.update(width=1300, height="600px")
-    Aldeia(Jogo())
+    #Aldeia(Jogo())
+    desafio0()
         
