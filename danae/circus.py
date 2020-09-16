@@ -10,6 +10,7 @@ Changelog
         Descreva o que você adicionou no código.
 
 """
+from random import shuffle
 class Letra:
     TRANSP= "https://i.imgur.com/npb9Oej.png"
     def __init__(self, cena, x, y, lt="A"):
@@ -44,10 +45,13 @@ class Aldeia:
     ORDERED_KEYS = [['Coycol', 'Cauha', 'Tetlah'],
                     ['Huatlya', 'Zitllo', 'Micpe'],
                     ['Nenea', 'Cahuitz', 'Pallotl']]
+    KEYS = shuffle([key for line in Aldeia.ORDERED_KEYS for key in line])
+    ODD = False
     #ALDEIA = "https://i.imgur.com/UCWGCKR.png"
     def __init__(self, j):
         Aldeia.J = j
         tile = 100
+        self.shuffle_keys = self.ORDERED_KEYS[:]
         self.cena = cena = j.c("https://i.imgur.com/sGoKfvs.jpg")
         # self.guia()
         self.desafios = [self.guia, self.desafio0, self.desafio0, self.desafio1]
@@ -81,6 +85,11 @@ class Aldeia:
         c = [Piso(self.cena, i*100, j*100, ai ) for i, linha in enumerate(solucao) for j, ai in enumerate(linha)]
         
     def desafio1(self, solucao):
+        c = [[solucao[ai] for ai in linha] for linha in self.ORDERED_KEYS]
+        self.desafio0(c)
+        
+    def desafio1(self, solucao):
+        solucao = {
         c = [[solucao[ai] for ai in linha] for linha in self.ORDERED_KEYS]
         self.desafio0(c)
 
