@@ -41,6 +41,9 @@ class Aldeia:
     YARA = "https://i.imgur.com/RfLJEhs.png"
     TRANSP= "https://i.imgur.com/npb9Oej.png"
     J = None
+    ORDERED_KEYS = [['Coycol', 'Cauha', 'Tetlah'],
+                    ['Huatlya', 'Zitllo', 'Micpe'],
+                    ['Nenea', 'Cahuitz', 'Pallotl']]
     #ALDEIA = "https://i.imgur.com/UCWGCKR.png"
     def __init__(self, j):
         Aldeia.J = j
@@ -79,6 +82,9 @@ class Aldeia:
         
     def desafio1(self, solucao):
         c = [Piso(self.cena, i*100, j*100, ai ) for i, linha in enumerate(solucao) for j, ai in enumerate(linha)]
+        
+    def desafio1(self, solucao):
+        c = [Piso(self.cena, i*100, j*100, ai ) for i, linha in enumerate(solucao) for j, ai in enumerate(linha)]
 
         
     def circus(self, desafio, solucao):
@@ -111,6 +117,16 @@ def desafio1():
 
     circus(2, MASMORRA)
         
+        
+def desafio2():
+
+    MASMORRA = {'Cahuitz': 'AN', 'Cauha': 'AN', 'Coycol': 'AN',
+     'Huatlya': 'AN', 'Micpe': 'AN', 'Nenea': 'AN',
+     'Pallotl': 'AN', 'Tetlah': 'AN', 'Zitllo': 'AN'}
+
+    circus(3, MASMORRA)
+    
+
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
     STYLE.update(width=1300, height="600px")
