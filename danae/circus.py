@@ -60,7 +60,7 @@ class Aldeia:
         self.desafios = [self.guia, self.desafio0, self.desafio0, self.desafio1, self.desafio2, self.desafio3, self.desafio4]
         cena.vai()
     def log(self, log):
-        print(log)
+        # print(log)
         self.logger.elt.html = log
     def guia(self):
         cena = self.cena
@@ -102,8 +102,9 @@ class Aldeia:
         self.desafio2(solucao)
         keys = [key for line in self.ORDERED_KEYS for key in line]
         shuffle(keys) if not Aldeia.COUNT else None
-        Aldeia.KEYS = [[keys[n:n+3]] for n in range(0,9,3)] 
-        self.log(f"{Aldeia.COUNT} Aldeia.KEYS: {Aldeia.KEYS} XXXkeysXXX  {keys}")
+        Aldeia.KEYS = [[keys[n:n+3]] for n in range(0,9,3)]
+        akeys = [f"X=X{l}" for l in Aldeia.Keys]
+        self.log(f"{Aldeia.COUNT} Aldeia.KEYS: {akeys} XXXkeysXXX  {keys}")
         Aldeia.COUNT = Aldeia.COUNT -1 if Aldeia.COUNT else 2
         
     def desafio4(self, solucao):
