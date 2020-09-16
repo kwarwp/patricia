@@ -11,14 +11,7 @@ Changelog
 
 """
 from random import shuffle
-ORDERED_KEYS = [['Coycol', 'Cauha', 'Tetlah'],
-                ['Huatlya', 'Zitllo', 'Micpe'],
-                ['Nenea', 'Cahuitz', 'Pallotl']]
-KEYS = [key for line in ORDERED_KEYS for key in line]
-shuffle(KEYS)
-KEYS = [KEYS[n:n+3] for n in range(0,9,3)]
-COUNT = 0
-
+KEYS, COUNT = "CIRCUS_KEYS", "CIRCUS_COUNT"
 
 
 class Letra:
@@ -46,6 +39,7 @@ class Piso:
         self.elt.siz = siz if siz else self.elt.siz
         
 class Aldeia:
+    STOR = None
     ALDEIA = "https://i.imgur.com/Gqoucvd.png"
     ESPRIT = "https://i.imgur.com/XFVLtJE.png"
     MAPING = "https://i.imgur.com/MRmfpAv.png"
@@ -55,9 +49,13 @@ class Aldeia:
     ORDERED_KEYS = [['Coycol', 'Cauha', 'Tetlah'],
                     ['Huatlya', 'Zitllo', 'Micpe'],
                     ['Nenea', 'Cahuitz', 'Pallotl']]
-    KEYS = [key for line in ORDERED_KEYS for key in line]
-    shuffle(KEYS)
-    KEYS = [KEYS[n:n+3] for n in range(0,9,3)] 
+    @staticmethod
+    def shuffle_keys():
+        if STOR[COUNT] <= 0
+            keys = [key for line in self.ORDERED_KEYS for key in line]
+            shuffle(KEYS)
+            self.STOR[KEYS] = [keys[n:n+3] for n in range(0,9,3)]
+            STOR[COUNT] = 3
     #COUNT = 2
     #ALDEIA = "https://i.imgur.com/UCWGCKR.png"
     def __init__(self, j):
@@ -169,6 +167,10 @@ def desafio2(lev=3):
 
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
+    from browser.session_storage import storage
+    Aldeia.STOR = storage
+    Aldeia.STOR[KEYS], Aldeia.STOR[COUNT] = [], 0
+    Aldeia.shuffle_keys()
     STYLE.update(width=1300, height="600px")
     #Aldeia(Jogo())
     desafio2(5)
