@@ -48,7 +48,7 @@ class Aldeia:
     KEYS = [key for line in ORDERED_KEYS for key in line]
     shuffle(KEYS)
     KEYS = [KEYS[n:n+3] for n in range(0,9,3)] 
-    ODD = False
+    COUNT = 2
     #ALDEIA = "https://i.imgur.com/UCWGCKR.png"
     def __init__(self, j):
         Aldeia.J = j
@@ -96,8 +96,8 @@ class Aldeia:
         
     def desafio3(self, solucao):
         self.desafio2(solucao)
-        shuffle(Aldeia.KEYS) if Aldeia.ODD else None
-        Aldeia.ODD = not Aldeia.ODD
+        shuffle(Aldeia.KEYS) if not Aldeia.COUNT else None
+        Aldeia.COUNT = Aldeia.COUNT -1 if Aldeia.COUNT else 2
         
     def desafio4(self, solucao):
         c = [[solucao[ai] for ai in linha] for linha in self.ORDERED_KEYS]
