@@ -95,8 +95,8 @@ class Aldeia:
         self.desafio0(c)
         
     def desafio3(self, solucao):
-        desafio2(solucao)
-        shuffle(Aldeia.KEYS) if self.ODD else None
+        self.desafio2(solucao)
+        shuffle(Aldeia.KEYS) if Aldeia.ODD else None
         Aldeia.ODD = not Aldeia.ODD
         
     def desafio4(self, solucao):
