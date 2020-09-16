@@ -45,7 +45,9 @@ class Aldeia:
     ORDERED_KEYS = [['Coycol', 'Cauha', 'Tetlah'],
                     ['Huatlya', 'Zitllo', 'Micpe'],
                     ['Nenea', 'Cahuitz', 'Pallotl']]
-    KEYS = shuffle([key for line in Aldeia.ORDERED_KEYS for key in line])
+    KEYS = [key for line in Aldeia.ORDERED_KEYS for key in line]
+    KEYS = shuffle(KEYS)
+    KEYS = [KEYS[n:n+3] for ni in range(0,9,3)] 
     ODD = False
     #ALDEIA = "https://i.imgur.com/UCWGCKR.png"
     def __init__(self, j):
@@ -54,7 +56,7 @@ class Aldeia:
         self.shuffle_keys = self.ORDERED_KEYS[:]
         self.cena = cena = j.c("https://i.imgur.com/sGoKfvs.jpg")
         # self.guia()
-        self.desafios = [self.guia, self.desafio0, self.desafio0, self.desafio1]
+        self.desafios = [self.guia, self.desafio0, self.desafio0, self.desafio1, self.desafio2, self.desafio3, self.desafio4]
         cena.vai()
     def guia(self):
         cena = self.cena
@@ -92,6 +94,21 @@ class Aldeia:
         solucao = {
         c = [[solucao[ai] for ai in linha] for linha in self.ORDERED_KEYS]
         self.desafio0(c)
+        
+    def desafio2(self, solucao):
+        solucao = {
+        c = [[solucao[ai] for ai in linha] for linha in self.ORDERED_KEYS]
+        self.desafio0(c)
+        
+    def desafio3(self, solucao):
+        solucao = {
+        c = [[solucao[ai] for ai in linha] for linha in self.ORDERED_KEYS]
+        self.desafio0(c)
+        
+    def desafio4(self, solucao):
+        solucao = {
+        c = [[solucao[ai] for ai in linha] for linha in self.ORDERED_KEYS]
+        self.desafio0(c)
 
         
     def circus(self, desafio, solucao):
@@ -125,13 +142,13 @@ def desafio1():
     circus(2, MASMORRA)
         
         
-def desafio2():
+def desafio2(lev=3):
 
-    MASMORRA = {'Cahuitz': 'AN', 'Cauha': 'AN', 'Coycol': 'AN',
-     'Huatlya': 'AN', 'Micpe': 'AN', 'Nenea': 'AN',
-     'Pallotl': 'AN', 'Tetlah': 'AN', 'Zitllo': 'AN'}
+    MASMORRA = {'Cahuitz': 'AN', 'Cauha': 'BN', 'Coycol': 'CN',
+     'Huatlya': 'DN', 'Micpe': 'EN', 'Nenea': 'FN',
+     'Pallotl': 'GN', 'Tetlah': 'HN', 'Zitllo': 'IN'}
 
-    circus(3, MASMORRA)
+    circus(lev, MASMORRA)
     
 
 if __name__ == "__main__":
