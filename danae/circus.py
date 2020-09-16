@@ -132,5 +132,5 @@ if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
     STYLE.update(width=1300, height="600px")
     #Aldeia(Jogo())
-    desafio1()
+    desafio2()
         
