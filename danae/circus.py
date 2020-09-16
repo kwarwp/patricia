@@ -49,15 +49,16 @@ class Aldeia:
     ORDERED_KEYS = [['Coycol', 'Cauha', 'Tetlah'],
                     ['Huatlya', 'Zitllo', 'Micpe'],
                     ['Nenea', 'Cahuitz', 'Pallotl']]
+    KEYS = []
     @staticmethod
     def shuffle_keys():
-        if Aldeia.STOR[COUNT] <= 0:
+        if Aldeia.STOR[COUNT] <= "":
             keys = [key for line in Aldeia.ORDERED_KEYS for key in line]
-            shuffle(KEYS)
-            Aldeia.STOR[KEYS] = [keys[n:n+3] for n in range(0,9,3)]
-            Aldeia.STOR[COUNT] = 3
+            shuffle(keys)
+            Aldeia.KEYS = [keys[n:n+3] for n in range(0,9,3)]
+            Aldeia.STOR[COUNT] = "@@@"
         else:
-            Aldeia.STOR[COUNT] -= 1
+            Aldeia.STOR[COUNT] = Aldeia.STOR[COUNT][:-1]
     #COUNT = 2
     #ALDEIA = "https://i.imgur.com/UCWGCKR.png"
     def __init__(self, j):
@@ -164,7 +165,7 @@ if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
     from browser.session_storage import storage
     Aldeia.STOR = storage
-    Aldeia.STOR[KEYS], Aldeia.STOR[COUNT] = [], 0
+    Aldeia.STOR[KEYS], Aldeia.STOR[COUNT] = "", ""
     Aldeia.shuffle_keys()
     STYLE.update(width=1300, height="600px")
     #Aldeia(Jogo())
