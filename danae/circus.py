@@ -11,6 +11,16 @@ Changelog
 
 """
 from random import shuffle
+ORDERED_KEYS = [['Coycol', 'Cauha', 'Tetlah'],
+                ['Huatlya', 'Zitllo', 'Micpe'],
+                ['Nenea', 'Cahuitz', 'Pallotl']]
+KEYS = [key for line in ORDERED_KEYS for key in line]
+shuffle(KEYS)
+KEYS = [KEYS[n:n+3] for n in range(0,9,3)]
+COUNT = 0
+
+
+
 class Letra:
     TRANSP= "https://i.imgur.com/npb9Oej.png"
     def __init__(self, cena, x, y, lt="A"):
@@ -99,13 +109,17 @@ class Aldeia:
         self.desafio0(c)
         
     def desafio3(self, solucao):
+        global COUNT, KEYS
         self.desafio2(solucao)
-        keys = [key for line in self.ORDERED_KEYS for key in line]
-        shuffle(keys) if not Aldeia.COUNT else None
-        Aldeia.KEYS = [[keys[n:n+3]] for n in range(0,9,3)]
-        akeys = [f"X=X{l}" for l in Aldeia.Keys]
-        self.log(f"{Aldeia.COUNT} Aldeia.KEYS: {akeys} XXXkeysXXX  {keys}")
-        Aldeia.COUNT = Aldeia.COUNT -1 if Aldeia.COUNT else 2
+        if COUNT <= 0:
+            keys = [key for line in self.ORDERED_KEYS for key in line]
+            shuffle(keys)
+            COUNT = 3
+            KEYS = [[keys[n:n+3]] for n in range(0,9,3)]
+            akeys = [f"X=X{l}" for l in KEYS]
+            self.log(f"{COUNT} Aldeia.KEYS: {akeys} XXXkeysXXX  {keys}")
+        COUNT = COUNT -1
+        self.log(f"COUNT{COUNT}")
         
     def desafio4(self, solucao):
         c = [[solucao[ai] for ai in linha] for linha in self.ORDERED_KEYS]
