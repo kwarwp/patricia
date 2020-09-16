@@ -1169,3 +1169,10 @@ TypeError: desafio0() takes 0 positional argument but more were given
     desafio0(c)
 TypeError: desafio0() takes 0 positional argument but more were given
 '''},
+{'date': 'Wed Sep 16 2020 12:43:24.660 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 94
+  solucao = {
+                                                                                                  ^
+SyntaxError: invalid syntax
+'''},
