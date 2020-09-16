@@ -47,7 +47,7 @@ class Aldeia:
         tile = 100
         self.cena = cena = j.c("https://i.imgur.com/sGoKfvs.jpg")
         # self.guia()
-        self.desafios = [self.guia, self.desafio0]
+        self.desafios = [self.guia, self.desafio0, self.desafio0]
         cena.vai()
     def guia(self):
         cena = self.cena
@@ -76,6 +76,9 @@ class Aldeia:
         
     def desafio0(self, solucao):
         c = [Piso(self.cena, i*100, j*100, ai ) for i, linha in enumerate(solucao) for j, ai in enumerate(linha)]
+        
+    def desafio1(self, solucao):
+        c = [Piso(self.cena, i*100, j*100, ai ) for i, linha in enumerate(solucao) for j, ai in enumerate(linha)]
 
         
     def circus(self, desafio, solucao):
@@ -85,7 +88,7 @@ class Aldeia:
         #a[0].siz = (400, 300)
         #a[0].entra(cena)
 def circus(desafio, solucao):
-    Aldeia(Jogo()).circus(1, solucao)
+    Aldeia(Jogo()).circus(desafio, solucao)
         
 def desafio0():
     TOPO_ESQUERDA = "AN"
@@ -98,9 +101,19 @@ def desafio0():
     circus(1, [[TOPO_ESQUERDA, TOPO_CENTRO, TOPO_DIREITA], [MEIO_ESQUERDA, CENTRO,
             MEIO_DIREITA], [FUNDO_ESQUERDA, FUNDO_CENTRO, FUNDO_DIREITA]])
         
+def desafio1():
+    MASMORRA = [[ "AN", "AN", "AN", "AN", "AN", "AN"],
+                [ "AN", "AN", "AN", "AN", "AN", "AN"],
+                [ "AN", "AN", "AN", "AN", "AN", "AN"],
+                [ "AN", "AN", "AN", "AN", "AN", "AN"],
+                [ "AN", "AN", "AN", "AN", "AN", "AN"]
+                ]
+
+    circus(2, MASMORRA)
+        
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
     STYLE.update(width=1300, height="600px")
     #Aldeia(Jogo())
-    desafio0()
+    desafio1()
         
