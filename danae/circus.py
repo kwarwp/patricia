@@ -45,9 +45,9 @@ class Aldeia:
     ORDERED_KEYS = [['Coycol', 'Cauha', 'Tetlah'],
                     ['Huatlya', 'Zitllo', 'Micpe'],
                     ['Nenea', 'Cahuitz', 'Pallotl']]
-    KEYS = [key for line in Aldeia.ORDERED_KEYS for key in line]
-    KEYS = shuffle(KEYS)
-    KEYS = [KEYS[n:n+3] for ni in range(0,9,3)] 
+    KEYS = [key for line in ORDERED_KEYS for key in line]
+    shuffle(KEYS)
+    KEYS = [KEYS[n:n+3] for n in range(0,9,3)] 
     ODD = False
     #ALDEIA = "https://i.imgur.com/UCWGCKR.png"
     def __init__(self, j):
@@ -90,23 +90,15 @@ class Aldeia:
         c = [[solucao[ai] for ai in linha] for linha in self.ORDERED_KEYS]
         self.desafio0(c)
         
-    def desafio1(self, solucao):
-        solucao = {
-        c = [[solucao[ai] for ai in linha] for linha in self.ORDERED_KEYS]
-        self.desafio0(c)
-        
     def desafio2(self, solucao):
-        solucao = {
-        c = [[solucao[ai] for ai in linha] for linha in self.ORDERED_KEYS]
+        c = [[solucao[ai] for ai in linha] for linha in self.KEYS]
         self.desafio0(c)
         
     def desafio3(self, solucao):
-        solucao = {
         c = [[solucao[ai] for ai in linha] for linha in self.ORDERED_KEYS]
         self.desafio0(c)
         
     def desafio4(self, solucao):
-        solucao = {
         c = [[solucao[ai] for ai in linha] for linha in self.ORDERED_KEYS]
         self.desafio0(c)
 
@@ -155,5 +147,5 @@ if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
     STYLE.update(width=1300, height="600px")
     #Aldeia(Jogo())
-    desafio2()
+    desafio2(4)
         
