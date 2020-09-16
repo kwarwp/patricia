@@ -50,7 +50,7 @@ class Aldeia:
         tile = 100
         self.cena = cena = j.c("https://i.imgur.com/sGoKfvs.jpg")
         # self.guia()
-        self.desafios = [self.guia, self.desafio0, self.desafio0, self.desafio1, self.desafio2]
+        self.desafios = [self.guia, self.desafio0, self.desafio0, self.desafio1]
         cena.vai()
     def guia(self):
         cena = self.cena
@@ -81,11 +81,9 @@ class Aldeia:
         c = [Piso(self.cena, i*100, j*100, ai ) for i, linha in enumerate(solucao) for j, ai in enumerate(linha)]
         
     def desafio1(self, solucao):
-        c = [Piso(self.cena, i*100, j*100, ai ) for i, linha in enumerate(solucao) for j, ai in enumerate(linha)]
-        
-    def desafio2(self, solucao):
-        c = [Piso(self.cena, i*100, j*100, solucao[ai] ) 
+        c = [solucao[ai] 
              for i, linha in enumerate(self.ORDERED_KEYS) for j, ai in enumerate(linha)]
+        desafio0(c)
 
         
     def circus(self, desafio, solucao):
