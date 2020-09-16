@@ -1176,3 +1176,9 @@ TypeError: desafio0() takes 0 positional argument but more were given
                                                                                                   ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Sep 16 2020 12:44:41.9 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: obj is undefined
+  module '$exec_334' line 38
+class Aldeia:
+'''},
