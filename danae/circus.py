@@ -113,8 +113,7 @@ class Aldeia:
         global COUNT, KEYS
         self.desafio2(solucao)
         Aldeia.shuffle_keys()
-        COUNT = COUNT -1
-        self.log(f"COUNT{Aldeia.STOR[COUNT]}")
+        self.log(f"COUNT{Aldeia.STOR[COUNT]} XXkeysXX {Aldeia.KEYS}")
         
     def desafio4(self, solucao):
         c = [[solucao[ai] for ai in linha] for linha in self.ORDERED_KEYS]
@@ -165,7 +164,10 @@ if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
     from browser.session_storage import storage
     Aldeia.STOR = storage
-    Aldeia.STOR[KEYS], Aldeia.STOR[COUNT] = "", ""
+    try: 
+        _ = Aldeia.STOR[COUNT]
+    except:
+        Aldeia.STOR[COUNT] = ""
     Aldeia.shuffle_keys()
     STYLE.update(width=1300, height="600px")
     #Aldeia(Jogo())
