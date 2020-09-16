@@ -58,7 +58,7 @@ class Aldeia:
     KEYS = [key for line in ORDERED_KEYS for key in line]
     shuffle(KEYS)
     KEYS = [KEYS[n:n+3] for n in range(0,9,3)] 
-    COUNT = 2
+    #COUNT = 2
     #ALDEIA = "https://i.imgur.com/UCWGCKR.png"
     def __init__(self, j):
         Aldeia.J = j
@@ -112,10 +112,11 @@ class Aldeia:
         global COUNT, KEYS
         self.desafio2(solucao)
         if COUNT <= 0:
+            self.log(f"COUNT  --   >  {COUNT}")
             keys = [key for line in self.ORDERED_KEYS for key in line]
             shuffle(keys)
             COUNT = 3
-            KEYS = [[keys[n:n+3]] for n in range(0,9,3)]
+            KEYS = [keys[n:n+3] for n in range(0,9,3)]
             akeys = [f"X=X{l}" for l in KEYS]
             self.log(f"{COUNT} Aldeia.KEYS: {akeys} XXXkeysXXX  {keys}")
         COUNT = COUNT -1
