@@ -7,7 +7,7 @@
 Changelog
 ---------
 .. versionadded::    20.09
-        Descreva o que você adicionou no código.
+        - Teste Vazio, Indio e Taba
 
 """
 from _spy.vitollino.main import Jogo
@@ -98,7 +98,26 @@ def testa_cria_indio(self):
     """ Cria o índio com a fábrica."""
     self.set_fake()
     cena = self.k.cria()
-    coisa = self.k.taba[3,5]
+    coisa = self.k.taba[2,5]
+    """Nesta posição da taba está colocada a vaga que tem o índio.
+
+    É esperado que coisa.ocupante aponte para o índio criado.
+    """
+    self.assertIsInstance(coisa.ocupante,  Indio, f"but ocupante was {coisa.ocupante}")
+    """Queremos saber se o objeto que está nesta vaga é uma instância da classe Indio.
+
+    O terceiro parâmetro é uma mensagem que será enviada se o teste falhar.
+    """
+    self.assertEqual(100, coisa.lado, f"but coisa.lado was {coisa.lado}")
+    indio = self.elts[self.INDIO]
+    self.assertEqual(coisa.ocupante.indio, indio, f"but coisa.ocupante.indio was {coisa.ocupante.indio}")
+    self.assertEqual((3, 5), indio.pos, f"but indio.pos was {indio.pos}")
+    
+def testa_cria_vazio(self):
+    """ Cria o índio com a fábrica."""
+    self.set_fake()
+    cena = self.k.cria()
+    coisa = self.k.taba[2,4]
     """Nesta posição da taba está colocada a vaga que tem o índio.
 
     É esperado que coisa.ocupante aponte para o índio criado.
