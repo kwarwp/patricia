@@ -85,7 +85,6 @@ class Test_Kwarwp(TestCase):
         """ Cria o ambiente de programação Kwarwp."""
         self.set_fake()
         cena = self.k.cria()
-        # self.assertIn("Vitollino_cria",  str(cena), cena)
         self.assertIn(self.INDIO, self.elts)
 
     def testa_cria_indio(self):
