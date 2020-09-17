@@ -118,19 +118,19 @@ def testa_cria_vazio(self):
     self.set_fake()
     cena = self.k.cria()
     coisa = self.k.taba[2,4]
-    """Nesta posição da taba está colocada a vaga que tem o índio.
+    """Nesta posição da taba está colocada a vaga que tem o Vazio.
 
-    É esperado que coisa.ocupante aponte para o índio criado.
+    É esperado que coisa.ocupante aponte para o vazio criado.
     """
     self.assertIsInstance(coisa.ocupante,  Vazio, f"but ocupante was {coisa.ocupante}")
-    """Queremos saber se o objeto que está nesta vaga é uma instância da classe Indio.
+    """Queremos saber se o objeto que está nesta vaga é uma instância da classe Vazio.
 
     O terceiro parâmetro é uma mensagem que será enviada se o teste falhar.
     """
     self.assertEqual(100, coisa.lado, f"but coisa.lado was {coisa.lado}")
     vazio = self.elts[self.vazio]
-    self.assertEqual(coisa.ocupante.vazio, vazio, f"but coisa.ocupante.indio was {coisa.ocupante.indio}")
-    self.assertEqual((3, 5), vazio.pos, f"but indio.pos was {indio.pos}")
+    self.assertEqual(coisa.ocupante.vazio, vazio, f"but coisa.ocupante.vazio was {coisa.ocupante.indio}")
+    self.assertEqual((3, 5), vazio.pos, f"but indio.pos was {vazio.pos}")
     
 def main():
     import unittest
