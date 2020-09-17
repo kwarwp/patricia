@@ -80,14 +80,14 @@ class Test_Kwarwp(TestCase):
         self.assertIn(self.INDIO, self.elts)
 
     def testa_move_indio(self):
-        """ Cria o índio com a fábrica."""
+        """ Move o índio, andando em frente."""
         self.set_fake()
-        cena = self.k.anda()
+        cena = self.k.move()
         coisa = self.k.taba[3,3]
         self.assertIsInstance(coisa.ocupante,  Indio, f"but ocupante was {coisa.ocupante}")
         self.assertEqual(100, coisa.lado, f"but coisa.lado was {coisa.lado}")
         indio = self.elts[self.INDIO]
-        self.assertEqual(coisa.ocupante.indio, indio, f"but coisa.ocupante.indio was {coisa.ocupante.indio}")
+        self.assertEqual(coisa.ocupante.indio, move, f"but coisa.ocupante.indio was {coisa.ocupante.indio}")
         self.assertEqual((0, 0), indio.pos, f"but indio.pos was {indio.pos}")
 
     def testa_cria_tora(self):
