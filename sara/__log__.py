@@ -5971,3 +5971,8 @@ Exception: <TypeError: Cannot read property '$methods' of undefined>
 'error': '''
 Exception: <TypeError: Cannot read property '$methods' of undefined>
 '''},
+{'date': 'Thu Sep 17 2020 14:39:49.963 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''teste
+
+Exception: <TypeError: Cannot read property '$methods' of undefined>
+'''},
