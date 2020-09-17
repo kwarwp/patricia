@@ -6061,3 +6061,7 @@ Exception: <TypeError: Cannot read property '$methods' of undefined>
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Thu Sep 17 2020 14:45:04.622 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: Cannot read property '$methods' of undefined>
+'''},
