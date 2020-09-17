@@ -5917,3 +5917,8 @@ AttributeError: 'module' object has no attribute 'TestLoader'
 
 Exception: <TypeError: Cannot read property '$methods' of undefined>
 '''},
+{'date': 'Thu Sep 17 2020 14:31:12.195 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''teste
+
+Exception: <TypeError: Cannot read property '$methods' of undefined>
+'''},
