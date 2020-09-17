@@ -122,15 +122,15 @@ def testa_cria_vazio(self):
 
     É esperado que coisa.ocupante aponte para o índio criado.
     """
-    self.assertIsInstance(coisa.ocupante,  Indio, f"but ocupante was {coisa.ocupante}")
+    self.assertIsInstance(coisa.ocupante,  Vazio, f"but ocupante was {coisa.ocupante}")
     """Queremos saber se o objeto que está nesta vaga é uma instância da classe Indio.
 
     O terceiro parâmetro é uma mensagem que será enviada se o teste falhar.
     """
     self.assertEqual(100, coisa.lado, f"but coisa.lado was {coisa.lado}")
-    indio = self.elts[self.INDIO]
-    self.assertEqual(coisa.ocupante.indio, indio, f"but coisa.ocupante.indio was {coisa.ocupante.indio}")
-    self.assertEqual((3, 5), indio.pos, f"but indio.pos was {indio.pos}")
+    vazio = self.elts[self.vazio]
+    self.assertEqual(coisa.ocupante.vazio, vazio, f"but coisa.ocupante.indio was {coisa.ocupante.indio}")
+    self.assertEqual((3, 5), vazio.pos, f"but indio.pos was {indio.pos}")
     
 def main():
     import unittest
