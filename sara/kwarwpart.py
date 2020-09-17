@@ -37,7 +37,7 @@ class Vazio():
         self.taba = taba
         self.posicao = (x//lado,y//lado-1)
         self.vazio = self.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
-        self._nada = seld.VITOLLINO.a()
+        self._nada = self.VITOLLINO.a()
         self.acessa = self._acessa
         """O **acessa ()** é usado como método dinâmico, variando com o estado da vaga.
         Inicialmente tem o comportamento de **_acessa ()** que é o estado vago, aceitando ocupantes"""
