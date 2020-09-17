@@ -161,7 +161,14 @@ class Test_Kwarwp(TestCase):
 
     def testa_cria_piche_oca(self):
         """ Cria o piche e a oca com a fábrica."""
-        pass
+        self.set_fake()
+        cena = self.k.cria()
+        coisa = self.k.taba[1,3]
+        self.assertIsInstance(coisa.ocupante,  Tora, f"but ocupante was {coisa.ocupante}")
+        self.assertEqual(100, coisa.lado, f"but coisa.lado was {coisa.lado}")
+        tora = self.elts[self.TORA]
+        self.assertEqual(coisa.ocupante.vazio, tora, f"but coisa.ocupante.indio was {coisa.ocupante.vazio}")
+        self.assertEqual((0, 0), tora.pos, f"but tora.pos was {tora.pos}")
 
 
     def testa_cria_tora(self):
