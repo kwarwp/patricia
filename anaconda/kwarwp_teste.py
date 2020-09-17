@@ -31,7 +31,7 @@ class Test_Kwarwp(TestCase):
     def setUp(self):
         elts = self.elts = {}
         class FakeTaba:
-            """ Permite capturar as chamadas de fala """
+            """Gera taba fake"""
             def __init__(self):
                 pass
             def sai(self,*_):
@@ -111,7 +111,7 @@ def testa_cria_indio(self):
     self.assertEqual(100, coisa.lado, f"but coisa.lado was {coisa.lado}")
     indio = self.elts[self.INDIO]
     self.assertEqual(coisa.ocupante.indio, indio, f"but coisa.ocupante.indio was {coisa.ocupante.indio}")
-    self.assertEqual((0, 0), indio.pos, f"but indio.pos was {indio.pos}")
+    self.assertEqual((3, 5), indio.pos, f"but indio.pos was {indio.pos}")
     
 def main():
     import unittest
