@@ -3254,3 +3254,5 @@ AttributeError: 'Tora' object has no attribute 'empurrante'
 'error': ''''''},
 {'date': 'Thu Sep 17 2020 14:38:10.182 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
 'error': ''''''},
+{'date': 'Thu Sep 17 2020 16:59:30.113 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': ''''''},
