@@ -167,8 +167,8 @@ class Test_Kwarwp(TestCase):
         self.assertIsInstance(coisa.ocupante,  Piche, f"but ocupante was {coisa.ocupante}")
         self.assertEqual(100, coisa.lado, f"but coisa.lado was {coisa.lado}")
         piche = self.elts[self.PICHE]
-        self.assertEqual(coisa.ocupante.vazio, piche, f"but coisa.ocupante.indio was {coisa.ocupante.vazio}")
-        self.assertEqual((0, 0), piche.pos, f"but tora.pos was {tora.pos}")
+        self.assertEqual(coisa.ocupante.vazio, piche, f"but coisa.ocupante.piche was {coisa.ocupante.vazio}")
+        self.assertEqual((0, 0), piche.pos, f"but piche.pos was {tora.pos}")
 
 
     def testa_cria_tora(self):
