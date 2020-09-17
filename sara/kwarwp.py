@@ -448,17 +448,10 @@ def main(vitollino, medidas={}):
     """
     print(f"main(vitollino={vitollino} medidas={medidas}")
     Kwarwp(vitollino, medidas=medidas).cria()
-    #main_test()
-
-
-def main_test():
-    from sara.kwarwtest import main
-    main()
         
     
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
     STYLE.update(width=600, height="500px")
     main(Jogo, STYLE)
-    #main_test()
     
