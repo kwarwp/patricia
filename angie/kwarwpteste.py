@@ -154,7 +154,40 @@ class Test_Kwarwp(TestCase):
 
     def testa_pega_tora_elimina_piche(self):
         """ Vai até a tora e pega e usa para eliminar o piche."""
+        cena = self.k.cria()
 
+        vaga_tora = self.k.taba[1, 3]
+        self.assertEqual(vaga_tora.taba,  self.k, f"but taba was {vaga_tora.taba}")
+        tora = vaga_tora.ocupante
+        pos = tora.posicao
+        self.assertEqual((1, 3),  pos, f"but last pos was {pos}")
+        indio = self.k.o_indio
+        indio.esquerda()
+        indio.anda()
+        pos = indio.posicao
+        self.assertEqual((2, 3),  pos, f"but indio pos was {pos}")
+        vaga = indio.vaga
+        indio.pega()
+        indio.anda()
+        pos = indio.posicao
+        self.assertEqual((2, 3),  pos, f"but indio pos was {pos}")
+        """verifica se o indio andou para o lugar certo"""
+        
+        #
+        self.assertEqual((2, 3),  pos, f"but indio pos was {pos}")
+        """verifica se o indio andou para o lugar certo"""
+        
+        
+        indio.direita()
+        indio.anda()
+        self.assertEqual((2, 3),  pos, f"but indio pos was {pos}")
+        """verifica se o indio andou para o lugar certo"""
+        r
+        indio.anda()
+        indio.larga()
+        
+        return indio, tora
+        
     def testa_pega_tora(self):
         """ Vai até a tora e pega."""
         cena = self.k.cria()
@@ -212,11 +245,14 @@ class Test_Kwarwp(TestCase):
     def testa_esquerda_indio(self):
         """ Move o índio, andando em frente, esquerda, frente."""
         cena = self.k.cria()
-        self.assertEqual((1, 3),  self.k, f"but taba was {vaga_tora.taba}")
+        self.assertEqual((3, 3),  self.k, f"but taba was {vaga_tora.taba}")
         indio = self.k.o_indio
         indio.esquerda()
         indio.anda()
-
+        pos = indio.posicao
+        self.assertEqual((2, 3),  pos, f"but indio pos was {pos}")
+        
+        
     def testa_volta_indio(self):
         """ Move o índio, andando em frente, meia volta, frente."""
     
