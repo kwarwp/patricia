@@ -90,7 +90,7 @@ def testa_cria(self):
     self.set_fake()
     """instrumentaliza os objetos Vitollino"""
     cena = self.k.cria()
-    self.assertIn(self.Indio, self.elts)
+    self.assertIn(self.INDIO, self.elts)
     
     """Aqui perguntamos se a imagem do índio foi parar no dicionário elts"""
 
@@ -98,7 +98,7 @@ def testa_cria_indio(self):
     """ Cria o índio com a fábrica."""
     self.set_fake()
     cena = self.k.cria()
-    coisa = self.k.taba[2,5]
+    coisa = self.k.taba[2,4]
     """Nesta posição da taba está colocada a vaga que tem o índio.
 
     É esperado que coisa.ocupante aponte para o índio criado.
@@ -111,13 +111,13 @@ def testa_cria_indio(self):
     self.assertEqual(100, coisa.lado, f"but coisa.lado was {coisa.lado}")
     indio_ = self.elts[self.INDIO]
     self.assertEqual(coisa.ocupante.indio_, Indio, f"but coisa.ocupante.indio was {coisa.ocupante.indio}")
-    self.assertEqual((3, 5), indio_.pos, f"but indio.pos was {indio.pos}")
+    self.assertEqual((2, 4), indio_.pos, f"but indio.pos was {indio.pos}")
     
 def testa_cria_vazio(self):
     """ Cria o índio com a fábrica."""
     self.set_fake()
     cena = self.k.cria()
-    coisa = self.k.taba[2,4]
+    coisa = self.k.taba[0,0]
     """Nesta posição da taba está colocada a vaga que tem o Vazio.
 
     É esperado que coisa.ocupante aponte para o vazio criado.
@@ -128,9 +128,9 @@ def testa_cria_vazio(self):
     O terceiro parâmetro é uma mensagem que será enviada se o teste falhar.
     """
     self.assertEqual(100, coisa.lado, f"but coisa.lado was {coisa.lado}")
-    vazio = self.elts[self.vazio]
-    self.assertEqual(coisa.ocupante.vazio, vazio, f"but coisa.ocupante.vazio was {coisa.ocupante.indio}")
-    self.assertEqual((3, 5), vazio.pos, f"but indio.pos was {vazio.pos}")
+    vazio_ = self.elts[self.vazio]
+    self.assertEqual(coisa.ocupante.vazio_, vazio, f"but coisa.ocupante.vazio was {coisa.ocupante.indio}")
+    self.assertEqual((0, 0), vazio_.pos, f"but indio.pos was {vazio.pos}")
     
 def main():
     import unittest
