@@ -164,11 +164,11 @@ class Test_Kwarwp(TestCase):
         self.set_fake()
         cena = self.k.cria()
         coisa = self.k.taba[1,3]
-        self.assertIsInstance(coisa.ocupante,  Tora, f"but ocupante was {coisa.ocupante}")
+        self.assertIsInstance(coisa.ocupante,  Piche, f"but ocupante was {coisa.ocupante}")
         self.assertEqual(100, coisa.lado, f"but coisa.lado was {coisa.lado}")
-        tora = self.elts[self.TORA]
-        self.assertEqual(coisa.ocupante.vazio, tora, f"but coisa.ocupante.indio was {coisa.ocupante.vazio}")
-        self.assertEqual((0, 0), tora.pos, f"but tora.pos was {tora.pos}")
+        piche = self.elts[self.Piche]
+        self.assertEqual(coisa.ocupante.vazio, piche, f"but coisa.ocupante.indio was {coisa.ocupante.vazio}")
+        self.assertEqual((0, 0), piche.pos, f"but tora.pos was {tora.pos}")
 
 
     def testa_cria_tora(self):
