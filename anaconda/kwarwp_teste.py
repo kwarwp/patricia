@@ -90,7 +90,7 @@ def testa_cria(self):
     self.set_fake()
     """instrumentaliza os objetos Vitollino"""
     cena = self.k.cria()
-    self.assertIn(self.indio, self.elts)
+    self.assertIn(self.Indio, self.elts)
     
     """Aqui perguntamos se a imagem do índio foi parar no dicionário elts"""
 
@@ -109,9 +109,9 @@ def testa_cria_indio(self):
     O terceiro parâmetro é uma mensagem que será enviada se o teste falhar.
     """
     self.assertEqual(100, coisa.lado, f"but coisa.lado was {coisa.lado}")
-    indio = self.elts[self.indio]
-    self.assertEqual(coisa.ocupante.indio, indio, f"but coisa.ocupante.indio was {coisa.ocupante.indio}")
-    self.assertEqual((3, 5), indio.pos, f"but indio.pos was {indio.pos}")
+    indio_ = self.elts[self.INDIO]
+    self.assertEqual(coisa.ocupante.indio_, Indio, f"but coisa.ocupante.indio was {coisa.ocupante.indio}")
+    self.assertEqual((3, 5), indio_.pos, f"but indio.pos was {indio.pos}")
     
 def testa_cria_vazio(self):
     """ Cria o índio com a fábrica."""
