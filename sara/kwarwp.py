@@ -265,7 +265,6 @@ class Kwarwp():
     LADO = 100
     """Referência estática para definir o lado do piso da casa."""
     
-    
     def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
         Vazio.VITOLLINO = self.v = vitollino()
         self.mapa = mapa.split()
