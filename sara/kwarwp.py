@@ -76,7 +76,7 @@ class Indio():
     """
     def __init__(self, imagem, x, y, cena, taba, vai=None):
     
-        self.lado = lado = Kwarwp.LADO
+        self.lado = lado = Vazio.LADO
         self.azimute = self.AZIMUTE.n
         """índio olhando para o norte"""
         self.ocupante = NULO
@@ -267,7 +267,7 @@ class Kwarwp():
     
     
     def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
-        Kwarwp.VITOLLINO = self.v = vitollino()
+        Vazio.VITOLLINO = self.v = vitollino()
         self.mapa = mapa.split()
         """Cria um matriz com os elementos descritos em cada linha de texto"""
         self.taba = {}
