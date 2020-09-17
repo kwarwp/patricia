@@ -20,9 +20,9 @@ class Test_Kwarwp(TestCase):
 
     Vamos aqui definir um conjunto de URLs identificadoras das peças.
     """
-    ABERTURA = "https://i.imgur.com/dZQ8liT.jpg"
+    VAZIO = "https://i.imgur.com/dZQ8liT.jpg"
     INDIO = "https://imgur.com/UCWGCKR.png"
-    OCA = "https://imgur.com/dZQ8liT.jpg"
+    #OCA = "https://imgur.com/dZQ8liT.jpg"
     #PICHE = "https://imgur.com/tLLVjfN.png"
     #TORA = "https://imgur.com/0jSB27g.png"
     
