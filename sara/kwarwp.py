@@ -25,7 +25,7 @@ Changelog
 
 """
 
-from _spy.vitollino.main import Jogo, STYLE
+
 from collections import namedtuple as nt
 from sara.kwarwpart import Vazio
 from sara.kwarwpart import Piche
@@ -442,6 +442,17 @@ class Kwarwp():
         return vaga
 
 
+def main(vitollino, medidas={}):
+    """ Rotina principal que invoca a classe Kwarwp.
+    
+    :param vitollino: Empacota o engenho de jogo Vitollino.
+    :param medidas: Um dicionário usado para redimensionar a tela.
+    """
+    print(f"main(vitollino={vitollino} medidas={medidas}")
+    Kwarwp(vitollino, medidas=medidas).cria()
+        
+    
 if __name__ == "__main__":
-    STYLE.update(width=700, height="600px")
-    Kwarwp(Jogo, medidas=STYLE)
+    from _spy.vitollino.main import Jogo, STYLE
+    STYLE.update(width=600, height="500px")
+    main(Jogo, STYLE)
