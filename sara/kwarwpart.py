@@ -53,6 +53,7 @@ class Vazio():
         #print("Ocupante da vaga: ", ocupante)
         self.ocupante.acessa(ocupante)
         
+        
     def _sair(self):
         """Objeto tenta sair e recebe autorização para seguir"""
         #print("Vou chamar o método siga da classe ", type(self.ocupante))
@@ -95,7 +96,7 @@ class Vazio():
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
         No caso do espaço vazio, vai retornar um elemento que não contém nada.
         """
-        return self.vazio.elt
+        return self._nada.elt
         
         
     def ocupa(self, vaga):
@@ -108,7 +109,7 @@ class Vazio():
     def sai(self):
         """ Pedido por um ocupante para que desocupe a posição nela.
         """
-        self.ocupante = self
+        self.ocupante = NULO
         self.acessa = self._acessa
         self.sair = self._sair
         
@@ -161,19 +162,15 @@ class Piche(Vazio):
         :param taba: Representa a taba onde o índio faz o desafio.
     """
     def __init__(self, imagem, x, y, cena, taba):
-    
-        from sara.kwarwp import Kwarwp
-        """Importando localmente o Kwarwp para evitar referência circular."""
-        from _spy.vitollino.main import Jogo
-        Kwarwp.VITOLLINO = vitollino()
-        # Bad Smell... Isso em cima está muito estranho, mas funciona
-        
         self.taba = taba
         self.vaga = taba
-        self.lado = lado = Kwarwp.LADO
+        self.lado = lado = self.LADO or 100
         self.posicao = (x//lado,y//lado-1)
         self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena)
-        self._nada = Kwarwp.VITOLLINO.a()
+        #self._nada = Kwarwp.VITOLLINO.a()
+        self.ocupante = NULO
+        self.empurrante = NULO
+        
         self.acessa = self._acessa
         """O **acessa ()** é usado como método dinâmico, variando com o estado da vaga.
         Inicialmente tem o comportamento de **_acessa ()** que é o estado vago, aceitando ocupantes"""
@@ -197,6 +194,7 @@ class Piche(Vazio):
         """Objeto tenta sair mas não é autorizado"""
         self.taba.fala("Você ficou preso no piche")
         
+        
     @property        
     def elt(self):
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
@@ -207,7 +205,7 @@ class Piche(Vazio):
     def sai(self):
         """ Pedido por um ocupante para que desocupe a posição nela.
         """
-        self.ocupante = self
+        self.ocupante = NULO
         self.acessa = self._acessa
         self.sair = self._sair
         self.vaga.limpa()
@@ -271,11 +269,12 @@ class Tora(Piche):
 
             :param requistante: O ator querendo pegar o objeto.
         """
-        print("A Tora está sendo empurrada") 
+        #print("A Tora está sendo empurrada") 
         
         self.empurrante = empurrante
         # continue aqui com o início do double dispatch para ocupar a vaga na direção do azimute
         self.vaga.acessar(self, azimute)
+        self.empurrante = NULO
         
     def ocupa(self, vaga):
         """ Pedido por uma vaga para que ocupe a posição nela.
@@ -290,8 +289,7 @@ class Tora(Piche):
         self.posicao = vaga.posicao
         vaga.ocupou(self)
 
-        self.empurrante.ocupa(self.vaga) # .xxx(zzz) if www else None -> continue o código
-        self.empurrante = NULO
+        self.empurrante.ocupa(self.vaga) if self.empurrante is not NULO else None
         self.vaga = vaga
 
 
@@ -333,8 +331,9 @@ class Oca(Piche):
     def sai(self):
         """ Pedido por um ocupante para que desocupe a posição nela.
         """
-        self.ocupante = self
+        self.ocupante = NULO
         self.acessa = self._acessa
+        self.sair = self._sair
         
 
 
