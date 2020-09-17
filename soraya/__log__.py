@@ -795,3 +795,7 @@ IndentationError: unexpected indent
 'error': ''''''},
 {'date': 'Thu Sep 17 2020 17:30:36.181 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
 'error': ''''''},
+{'date': 'Thu Sep 17 2020 18:23:49.377 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: Cannot read property '$methods' of undefined>
+'''},
