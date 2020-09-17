@@ -148,6 +148,52 @@ class Test_Kwarwp(TestCase):
         self.assertEqual(tora.vaga,  vaga, f"but tora drop vaga {tora.vaga}")
         return indio, tora
 
+    def testa_cria_piche_oca(self):
+        """ Cria o piche e a oca com a fábrica."""
+        pass
+
+    def testa_cria_tora(self):
+        """ Cria a tora com a fábrica."""
+        pass
+
+    def testa_pega_tora_elimina_piche(self):
+        """ Vai até a tora e pega e usa para eliminar o piche."""
+        pass
+
+    def testa_pega_tora(self):
+        """ Vai até a tora e pega."""
+        cena = self.k.cria()
+        self._pega_tora()
+
+    def testa_larga_tora(self):
+        """ Vai até a tora pega e larga."""
+        pass
+
+
+    def testa_pega_vazio_oca_piche(self):
+        """ Vai até a piche, oca e vazio e tenta pegar."""
+        pass
+
+    def testa_move_indio(self):
+        """ Move o índio, andando em frente."""
+        pass
+
+    def testa_prende_indio(self):
+        """ Tenta mover o índio, mas fica preso."""
+        pass
+
+    def testa_chega_taba_indio(self):
+        """ Chega no seu destino, tenta mover o índio, mas fica preso."""
+        pass
+
+    def testa_esquerda_indio(self):
+        """ Move o índio, andando em frente, esquerda, frente."""
+        pass
+
+    def testa_volta_indio(self):
+        """ Move o índio, andando em frente, meia volta, frente."""
+        pass
+
 def main():
     # from unittest import main
     # main()
