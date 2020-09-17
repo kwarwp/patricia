@@ -13,8 +13,8 @@ Changelog
 from _spy.vitollino.main import Jogo
 from unittest import TestCase
 # from unittest.mock import MagicMock
-from kwarwp.kwarapp import Kwarwp, Indio
-from kwarwp.kwarwpart import Piche, Vazio, Oca, Tora, NULO
+from soraya.kwarapp import Kwarwp, Indio
+from soraya.kwarapp1 import Piche, Vazio, Oca, Tora, NULO
 #sys.path.insert(0, os.path.abspath('../../libs'))
 
 class Test_Kwarwp(TestCase):
