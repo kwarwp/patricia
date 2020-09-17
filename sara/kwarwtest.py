@@ -16,6 +16,7 @@ from unittest import TestCase
 
 from sara.kwarwp import Kwarwp
 from sara.kwarwp import Indio
+
 from sara.kwarwpart import Vazio
 from sara.kwarwpart import Piche
 from sara.kwarwpart import Oca 
