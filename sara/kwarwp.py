@@ -259,9 +259,9 @@ class Indio():
 
 class Kwarwp():
 
-    VITOLLINO = None
+    #VITOLLINO = None
     """Referência estática para obter o engenho de jogo."""
-    LADO = 100
+    #LADO = 100
     """Referência estática para definir o lado do piso da casa."""
     
     
@@ -280,7 +280,7 @@ class Kwarwp():
         w, h = self.col *self.lado, self.lin *self.lado
         """Dicionário que a partir de coordenada (i,J) localiza um piso da taba"""
         medidas.update(width=w, height=f"{h}px")
-        self.cena = self.cria(mapa=self.mapa) if vitollino else None
+        #self.cena = self.cria(mapa=self.mapa) if vitollino else None
 
 
     def cria(self, mapa=""):
