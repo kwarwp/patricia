@@ -24,6 +24,7 @@ from sara.kwarwpart import Tora
 from sara.kwarwpart import NULO
 #sys.path.insert(0, os.path.abspath('../../libs'))
 
+
 class Test_Kwarwp(TestCase):
     """ Teste do Jogo para ensino de programação.
     
@@ -48,6 +49,7 @@ class Test_Kwarwp(TestCase):
         self.k = Kwarwp(Jogo)
         self.t = FakeTaba()
         self.LADO = Vazio.LADO
+    
     
     def set_fake(self):
         elts = self.elts = {}
@@ -84,11 +86,13 @@ class Test_Kwarwp(TestCase):
         Vazio.VITOLLINO.a = FakeElemento
         Vazio.VITOLLINO.c = FakeCena
         
+        
     def testa_cria(self):
         """ Cria o ambiente de programação Kwarwp."""
         self.set_fake()
         cena = self.k.cria()
         self.assertIn(self.INDIO, self.elts)
+
 
     def testa_cria_indio(self):
         """ Cria o índio com a fábrica."""
@@ -101,6 +105,7 @@ class Test_Kwarwp(TestCase):
         self.assertEqual(coisa.ocupante.indio, indio, f"but coisa.ocupante.indio was {coisa.ocupante.indio}")
         self.assertEqual((0, 0), indio.pos, f"but indio.pos was {indio.pos}")
 
+
     def testa_cria_tora(self):
         """ Cria a tora com a fábrica."""
         self.set_fake()
@@ -111,6 +116,7 @@ class Test_Kwarwp(TestCase):
         tora = self.elts[self.TORA]
         self.assertEqual(coisa.ocupante.vazio, tora, f"but coisa.ocupante.indio was {coisa.ocupante.vazio}")
         self.assertEqual((0, 0), tora.pos, f"but tora.pos was {tora.pos}")
+        
         
     def testa_empurra_tora(self):
         """ Vai até a tora e empurra."""
@@ -149,22 +155,27 @@ class Test_Kwarwp(TestCase):
         self.assertEqual(tora.vaga,  vaga, f"but tora drop vaga {tora.vaga}")
         return indio, tora
 
+
     def testa_cria_piche_oca(self):
         """ Cria o piche e a oca com a fábrica."""
         pass
+
 
     def testa_cria_tora(self):
         """ Cria a tora com a fábrica."""
         pass
 
+
     def testa_pega_tora_elimina_piche(self):
         """ Vai até a tora e pega e usa para eliminar o piche."""
         pass
+
 
     def testa_pega_tora(self):
         """ Vai até a tora e pega."""
         cena = self.k.cria()
         self._pega_tora()
+
 
     def testa_larga_tora(self):
         """ Vai até a tora pega e larga."""
