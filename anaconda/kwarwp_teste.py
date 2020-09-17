@@ -22,12 +22,7 @@ class Test_Kwarwp(TestCase):
     """
     VAZIO = "https://i.imgur.com/dZQ8liT.jpg"
     INDIO = "https://imgur.com/UCWGCKR.png"
-    #OCA = "https://imgur.com/dZQ8liT.jpg"
-    #PICHE = "https://imgur.com/tLLVjfN.png"
-    #TORA = "https://imgur.com/0jSB27g.png"
     
-class Test_Kwarwp(TestCase):
-# ...
     def setUp(self):
         elts = self.elts = {}
         class FakeTaba:
@@ -41,10 +36,10 @@ class Test_Kwarwp(TestCase):
         self.t = FakeTaba()
         self.LADO = Vazio.LADO
 
-def set_fake(self):
-    """Cria objetos doublê que irão espionar o que estaria sendo feito com os originais."""
-    elts = self.elts = {}
-    """Coleção de imagens que indicam os Elementos Vitollino que são criados"""
+    def set_fake(self):
+        """Cria objetos doublê que irão espionar o que estaria sendo feito com os originais."""
+        elts = self.elts = {}
+        """Coleção de imagens que indicam os Elementos Vitollino que são criados"""
     class FakeCena:
         """Usado para substituir a Cena original do Vitollino"""
         def __init__(self, *_, **__):
@@ -53,11 +48,11 @@ def set_fake(self):
             pass
 
     class FakeElemento:
-        """Usado para substituir o Elemento original do Vitollino
+         """Usado para substituir o Elemento original do Vitollino
 
-        Captura a imagem recebida e coloca na coleção de imagens **self.elts**.
-        Também coleta os diversos parâmetros recebidos para que possam ser averiguados.
-        """
+         Captura a imagem recebida e coloca na coleção de imagens **self.elts**.
+         Também coleta os diversos parâmetros recebidos para que possam ser averiguados.
+         """
         def __init__(self, img=0, x=0, y=0, w=0, h=0, vai=None, elts=elts, **kwargs):
             elts[img] = self
             """Insere este FakeElemento no dicionário, no verbete indicado pela imagem"""
@@ -65,72 +60,72 @@ def set_fake(self):
             self.destino, self._pos, self._siz = [None]*3
         def ocupa(self, destino):
             self.destino = destino.elt
-        @property
-        def elt(self):
-            return self
-        @property
-        def siz(self):
-            return self._siz
-        @property
-        def pos(self):
-            return self._pos
-        @siz.setter
-        def siz(self, value):
-            self._siz = value
-        @pos.setter
-        def pos(self, value):
-            self._pos = value
+            @property
+            def elt(self):
+                return self
+            @property
+            def siz(self):
+                return self._siz
+            @property
+            def pos(self):
+                return self._pos
+            @siz.setter
+            def siz(self, value):
+                self._siz = value
+            @pos.setter
+            def pos(self, value):
+                self._pos = value
     Vazio.VITOLLINO.a = FakeElemento
     """Troca o Elemento original pelo fake, na "maternidade""""
     Vazio.VITOLLINO.c = FakeCena
     """Troca a Cena original pelo fake, na "maternidade""""
     
-def testa_cria(self):
-    """ Cria o ambiente de programação Kwarwp."""
-    self.set_fake()
-    """instrumentaliza os objetos Vitollino"""
-    cena = self.k.cria()
-    self.assertIn(self.INDIO, self.elts)
+    def testa_cria(self):
+        """ Cria o ambiente de programação Kwarwp."""
+        self.set_fake()
+        """instrumentaliza os objetos Vitollino"""
+        cena = self.k.cria()
+        self.assertIn(self.INDIO, self.elts)
     
-    """Aqui perguntamos se a imagem do índio foi parar no dicionário elts"""
+        """Aqui perguntamos se a imagem do índio foi parar no dicionário elts"""
 
-def testa_cria_indio(self):
-    """ Cria o índio com a fábrica."""
-    self.set_fake()
-    cena = self.k.cria()
-    coisa = self.k.taba[2,4]
-    """Nesta posição da taba está colocada a vaga que tem o índio.
+    def testa_cria_indio(self):
+        """ Cria o índio com a fábrica."""
+        self.set_fake()
+        cena = self.k.cria()
+        coisa = self.k.taba[2,4]
+        """Nesta posição da taba está colocada a vaga que tem o índio.
 
-    É esperado que coisa.ocupante aponte para o índio criado.
-    """
-    self.assertIsInstance(coisa.ocupante,  Indio, f"but ocupante was {coisa.ocupante}")
-    """Queremos saber se o objeto que está nesta vaga é uma instância da classe Indio.
+        É esperado que coisa.ocupante aponte para o índio criado.
+        """
+        self.assertIsInstance(coisa.ocupante,  Indio, f"but ocupante was {coisa.ocupante}")
+        """Queremos saber se o objeto que está nesta vaga é uma instância da classe Indio.
 
-    O terceiro parâmetro é uma mensagem que será enviada se o teste falhar.
-    """
-    self.assertEqual(100, coisa.lado, f"but coisa.lado was {coisa.lado}")
-    indio_ = self.elts[self.INDIO]
-    self.assertEqual(coisa.ocupante.indio_, indio_, f"but coisa.ocupante.indio was {coisa.ocupante.indio}")
-    self.assertEqual((2, 4), indio_.pos, f"but indio.pos was {indio.pos}")
+         O terceiro parâmetro é uma mensagem que será enviada se o teste falhar.
+        """
+        self.assertEqual(100, coisa.lado, f"but coisa.lado was {coisa.lado}")
+        indio_ = self.elts[self.INDIO]
+        self.assertEqual(coisa.ocupante.indio_, indio_, f"but coisa.ocupante.indio was {coisa.ocupante.indio}")
+        self.assertEqual((2, 4), indio_.pos, f"but indio.pos was {indio.pos}")
     
-def testa_cria_vazio(self):
-    """ Cria o índio com a fábrica."""
-    self.set_fake()
-    cena = self.k.cria()
-    coisa = self.k.taba[0,0]
-    """Nesta posição da taba está colocada a vaga que tem o Vazio.
+    def testa_cria_vazio(self):
+        """ Cria o índio com a fábrica."""
+        self.set_fake()
+        cena = self.k.cria()
+        coisa = self.k.taba[0,0]
+        """Nesta posição da taba está colocada a vaga que tem o Vazio.
 
-    É esperado que coisa.ocupante aponte para o vazio criado.
-    """
-    self.assertIsInstance(coisa.ocupante,  Vazio, f"but ocupante was {coisa.ocupante}")
-    """Queremos saber se o objeto que está nesta vaga é uma instância da classe Vazio.
+        É esperado que coisa.ocupante aponte para o vazio criado.
+        """
+        self.assertIsInstance(coisa.ocupante,  Vazio, f"but ocupante was {coisa.ocupante}")
+        """Queremos saber se o objeto que está nesta vaga é uma instância da classe Vazio.
 
-    O terceiro parâmetro é uma mensagem que será enviada se o teste falhar.
-    """
-    self.assertEqual(100, coisa.lado, f"but coisa.lado was {coisa.lado}")
-    vazio_ = self.elts[self.VAZIO]
-    self.assertEqual(coisa.ocupante.vazio_, vazio_, f"but coisa.ocupante.vazio was {coisa.ocupante.vazio_}")
-    self.assertEqual((0, 0), vazio_.pos, f"but indio.pos was {vazio_.pos}")
+        O terceiro parâmetro é uma mensagem que será enviada se o teste falhar.
+        """
+        self.assertEqual(100, coisa.lado, f"but coisa.lado was {coisa.lado}")
+        vazio_ = self.elts[self.VAZIO]
+        self.assertEqual(coisa.ocupante.vazio_, vazio_, f"but coisa.ocupante.vazio was {coisa.ocupante.vazio_}")
+        self.assertEqual((0, 0), vazio_.pos, f"but indio.pos was {vazio_.pos}")
     
 def main():
     import unittest
