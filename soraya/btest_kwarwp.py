@@ -143,7 +143,22 @@ class Test_Kwarwp(TestCase):
     def testa_pega_tora(self):
         """ Vai até a tora e pega."""
         cena = self.k.cria()
-        self._pega_tora()
+        vaga_tora = self.k.taba[1, 3]
+        self.assertEqual(vaga_tora.taba,  self.k, f"but taba was {vaga_tora.taba}")
+        tora = vaga_tora.ocupante
+        pos = tora.posicao
+        self.assertEqual((1, 3),  pos, f"but last pos was {pos}")
+        indio = self.k.o_indio
+        indio.esquerda()
+        indio.anda()
+        pos = indio.posicao
+        
+        self.assertEqual((0, 3),  pos, f"but tora new pos was {pos}")
+        self.assertEqual(vaga.ocupante,  indio, f"but vaga new  ocupante {vaga.ocupante}")
+        vaga = tora.vaga
+        indio.pega()
+        pos = tora.posicao
+        
     
     def testa_larga_tora(self):
         """ Vai até a tora pega e larga."""
