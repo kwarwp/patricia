@@ -140,6 +140,11 @@ class Test_Kwarwp(TestCase):
         self.assertEqual(tora.vaga,  vaga, f"but tora drop vaga {tora.vaga}")
         return indio, tora
         
+    def testa_pega_tora(self):
+        """ Vai até a tora e pega."""
+        cena = self.k.cria()
+        self._pega_tora()
+    
     def testa_larga_tora(self):
         """ Vai até a tora pega e larga."""
         cena = self.k.cria()
@@ -147,30 +152,33 @@ class Test_Kwarwp(TestCase):
         self.assertEqual(vaga_tora.taba,  self.k, f"but taba was {vaga_tora.taba}")
         tora = vaga_tora.ocupante
         pos = tora.posicao
+        
         self.assertEqual((1, 3),  pos, f"but last pos was {pos}")
         indio = self.k.o_indio
         indio.esquerda()
         indio.anda()
         pos = indio.posicao
+        
         self.assertEqual((0, 3),  pos, f"but tora new pos was {pos}")
         self.assertEqual(vaga.ocupante,  indio, f"but vaga new  ocupante {vaga.ocupante}")
         vaga = tora.vaga
         indio.pega()
         pos = tora.posicao
+        
         self.assertEqual((1, 3),  pos, f"but tora taken pos was {pos}")
         self.assertEqual(vaga.ocupante,  NULO, f"but vaga taken  ocupante {vaga.ocupante}")
         self.assertEqual(tora.vaga,  indio, f"but tora vaga {tora.vaga}")
         # vaga = tora.vaga
         indio.larga()
         pos = tora.posicao
+        
         self.assertEqual((0, 3),  pos, f"but tora drop pos was {pos}")
         self.assertEqual(vaga.ocupante,  tora, f"but vaga drop  ocupante {vaga.ocupante}")
         self.assertEqual(tora.vaga,  vaga, f"but tora drop vaga {tora.vaga}")
         return indio, tora
+        
+        
     
-    
-    
-
 def main():
     # from unittest import main
     # main()
