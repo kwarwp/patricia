@@ -141,41 +141,47 @@ class Test_Kwarwp(TestCase):
         self.assertEqual(tora.vaga,  vaga, f"but tora drop vaga {tora.vaga}")
         return indio, tora
 
-def testa_cria_piche_oca(self):
-    """ Cria o piche e a oca com a fábrica."""
+    def testa_cria_piche_oca(self):
 
-def testa_cria_tora(self):
-    """ Cria a tora com a fábrica."""
+        """ Cria a tora com a fábrica."""
+        self.set_fake()
+        cena = self.k.cria()
+        coisa = self.k.taba[1,3]
+        self.assertIsInstance(coisa.ocupante,  Piche, f"but ocupante was {coisa.ocupante}")
+        self.assertEqual(100, coisa.lado, f"but coisa.lado was {coisa.lado}")
+        tora = self.elts[self.TORA]
+        self.assertEqual(coisa.ocupante.vazio, tora, f"but coisa.ocupante.indio was {coisa.ocupante.vazio}")
+        self.assertEqual((0, 0), tora.pos, f"but tora.pos was {tora.pos}")
 
 
-def testa_pega_tora_elimina_piche(self):
-    """ Vai até a tora e pega e usa para eliminar o piche."""
+    def testa_pega_tora_elimina_piche(self):
+        """ Vai até a tora e pega e usa para eliminar o piche."""
 
-def testa_pega_tora(self):
-    """ Vai até a tora e pega."""
-    cena = self.k.cria()
-    self._pega_tora()
+    def testa_pega_tora(self):
+        """ Vai até a tora e pega."""
+        cena = self.k.cria()
+        self._pega_tora()
 
-def testa_larga_tora(self):
-    """ Vai até a tora pega e larga."""
+    def testa_larga_tora(self):
+        """ Vai até a tora pega e larga."""
 
-def testa_pega_vazio_oca_piche(self):
-    """ Vai até a piche, oca e vazio e tenta pegar."""
+    def testa_pega_vazio_oca_piche(self):
+        """ Vai até a piche, oca e vazio e tenta pegar."""
 
-def testa_move_indio(self):
-    """ Move o índio, andando em frente."""
+    def testa_move_indio(self):
+        """ Move o índio, andando em frente."""
 
-def testa_prende_indio(self):
-    """ Tenta mover o índio, mas fica preso."""
+    def testa_prende_indio(self):
+        """ Tenta mover o índio, mas fica preso."""
 
-def testa_chega_taba_indio(self):
-    """ Chega no seu destino, tenta mover o índio, mas fica preso."""
+    def testa_chega_taba_indio(self):
+        """ Chega no seu destino, tenta mover o índio, mas fica preso."""
 
-def testa_esquerda_indio(self):
-    """ Move o índio, andando em frente, esquerda, frente."""
+    def testa_esquerda_indio(self):
+        """ Move o índio, andando em frente, esquerda, frente."""
 
-def testa_volta_indio(self):
-    """ Move o índio, andando em frente, meia volta, frente."""
+    def testa_volta_indio(self):
+        """ Move o índio, andando em frente, meia volta, frente."""
     
 def main():
     # from unittest import main
