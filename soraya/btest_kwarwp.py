@@ -141,8 +141,20 @@ class Test_Kwarwp(TestCase):
         return indio, tora
         
     def testa_larga_tora(self):
-    """ Vai até a tora pega e larga."""
+        """ Vai até a tora pega e larga."""
+        cena = self.k.cria()
+        vaga_tora = self.k.taba[1, 3]
+        self.assertEqual(vaga_tora.taba,  self.k, f"but taba was {vaga_tora.taba}")
+        tora = vaga_tora.ocupante
+        pos = tora.posicao
+        self.assertEqual((1, 3),  pos, f"but last pos was {pos}")
+        indio = self.k.o_indio
+        indio.esquerda()
+        indio.anda()
+        pos = indio.posicao
     ...
+    
+    
 
 def main():
     # from unittest import main
