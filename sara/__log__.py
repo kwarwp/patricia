@@ -5912,3 +5912,8 @@ NameError: name 'TestCase' is not defined
     suite = unittest.TestLoader().loadTestsFromTestCase(Test_Kwarwp)
 AttributeError: 'module' object has no attribute 'TestLoader'
 '''},
+{'date': 'Thu Sep 17 2020 14:30:59.129 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''teste
+
+Exception: <TypeError: Cannot read property '$methods' of undefined>
+'''},
