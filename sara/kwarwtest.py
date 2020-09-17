@@ -91,6 +91,7 @@ class Test_Kwarwp(TestCase):
         """ Cria o ambiente de programação Kwarwp."""
         self.set_fake()
         cena = self.k.cria()
+        print(self.elts)
         self.assertIn(self.INDIO, self.elts)
 
 
