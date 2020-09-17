@@ -29,6 +29,8 @@ class Vazio():
         :param y: Cinha em que o elemento será posicionado.
         :param cena: Cena em que o elemento será posicionado.
     """
+    
+    VITOLLINO, LADO = None, None
 
     def __init__(self, imagem, x, y, cena, taba, ocupante=None):
     
@@ -346,7 +348,7 @@ class Oca(Piche):
 class Nulo:
     """Objeto nulo que responde passivamente a todas as requisições."""
     def __init__(self):
-        self.pegar = self.ocupa = self.nulo
+        self.pegar = self.ocupa = self.empurrar = self.nulo
 
     def nulo(self, *_, **__):
         """Método nulo, responde passivamente a todas as chamadas.
