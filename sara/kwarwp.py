@@ -25,7 +25,6 @@ Changelog
 
 """
 
-from _spy.vitollino.main import Jogo, STYLE
 from collections import namedtuple as nt
 from sara.kwarwpart import Vazio
 from sara.kwarwpart import Piche
@@ -441,6 +440,7 @@ class Kwarwp():
         return vaga
 
 if __name__ == "__main__":
+    from _spy.vitollino.main import Jogo, STYLE
     STYLE.update(width=700, height="600px")
     Kwarwp(Jogo, medidas=STYLE)
     
