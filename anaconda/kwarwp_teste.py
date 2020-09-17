@@ -128,7 +128,7 @@ def testa_cria_vazio(self):
     O terceiro parâmetro é uma mensagem que será enviada se o teste falhar.
     """
     self.assertEqual(100, coisa.lado, f"but coisa.lado was {coisa.lado}")
-    vazio_ = self.elts[self.vazio]
+    vazio_ = self.elts[self.VAZIO]
     self.assertEqual(coisa.ocupante.vazio_, vazio, f"but coisa.ocupante.vazio was {coisa.ocupante.indio}")
     self.assertEqual((0, 0), vazio_.pos, f"but indio.pos was {vazio.pos}")
     
