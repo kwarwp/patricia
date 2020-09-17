@@ -33,22 +33,15 @@ class Vazio():
     VITOLLINO, LADO = None, None
 
     def __init__(self, imagem, x, y, cena, taba, ocupante=None):
-    
-        from sara.kwarwp import Kwarwp
-        """Importando localmente o Kwarwp para evitar referência circular."""
-        from _spy.vitollino.main import Jogo
-        Kwarwp.VITOLLINO = vitollino()
-        # Bad Smell... Isso em cima está muito estranho, mas funciona
-        
+        self.lado = lado = self.LADO # or 100
         self.taba = taba
-        self.lado = lado = Kwarwp.LADO
         self.posicao = (x//lado,y//lado-1)
         self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         self._nada = Kwarwp.VITOLLINO.a()
         self.acessa = self._acessa
         """O **acessa ()** é usado como método dinâmico, variando com o estado da vaga.
         Inicialmente tem o comportamento de **_acessa ()** que é o estado vago, aceitando ocupantes"""
-        self.ocupante = ocupante or self
+        self.ocupante = ocupante or NULO
         """O ocupante se não for fornecido é encenado pelo próprio vazio, agindo como nulo"""
         self.acessa(ocupante)
         self.sair = self._sair
