@@ -6042,3 +6042,7 @@ AttributeError: 'module' object has no attribute 'TestLoader'
 'error': '''
 Exception: <TypeError: Cannot read property '__class__' of null>
 '''},
+{'date': 'Thu Sep 17 2020 14:43:47.743 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: Cannot read property '$methods' of undefined>
+'''},
