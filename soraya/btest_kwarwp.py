@@ -192,7 +192,9 @@ class Test_Kwarwp(TestCase):
         self.assertEqual(tora.vaga,  vaga, f"but tora drop vaga {tora.vaga}")
         return indio, tora
         
-        
+    def testa_move_indio(self):
+        """ Move o índio, andando em frente."""
+    
     
 def main():
     # from unittest import main
