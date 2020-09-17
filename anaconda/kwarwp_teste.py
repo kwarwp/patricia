@@ -110,7 +110,7 @@ def testa_cria_indio(self):
     """
     self.assertEqual(100, coisa.lado, f"but coisa.lado was {coisa.lado}")
     indio_ = self.elts[self.INDIO]
-    self.assertEqual(coisa.ocupante.indio_, Indio, f"but coisa.ocupante.indio was {coisa.ocupante.indio}")
+    self.assertEqual(coisa.ocupante.indio_, indio_, f"but coisa.ocupante.indio was {coisa.ocupante.indio}")
     self.assertEqual((2, 4), indio_.pos, f"but indio.pos was {indio.pos}")
     
 def testa_cria_vazio(self):
@@ -129,7 +129,7 @@ def testa_cria_vazio(self):
     """
     self.assertEqual(100, coisa.lado, f"but coisa.lado was {coisa.lado}")
     vazio_ = self.elts[self.VAZIO]
-    self.assertEqual(coisa.ocupante.vazio_, vazio, f"but coisa.ocupante.vazio was {coisa.ocupante.indio}")
+    self.assertEqual(coisa.ocupante.vazio_, vazio_, f"but coisa.ocupante.vazio was {coisa.ocupante.indio}")
     self.assertEqual((0, 0), vazio_.pos, f"but indio.pos was {vazio.pos}")
     
 def main():
