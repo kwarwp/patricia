@@ -440,25 +440,8 @@ class Kwarwp():
         """o índio.vai é associado ao seu próprio metodo pega"""
         vaga = Vazio("", x=x, y=y, cena=cena, taba=self, ocupante=self.o_indio)
         return vaga
-    
-def main(vitollino, medidas={}):
-    """ Rotina principal que invoca a classe Kwarwp.
-    
-    :param vitollino: Empacota o engenho de jogo Vitollino.
-    :param medidas: Um dicionário usado para redimensionar a tela.
-    """
-    print(f"main(vitollino={vitollino} medidas={medidas}")
-    Kwarwp(vitollino, medidas=medidas).cria()
-    #main_test()
 
-def main_test():
-    from kwarwp.btest_kwarwp import main
-    main()
-        
-    
 if __name__ == "__main__":
-    from _spy.vitollino.main import Jogo, STYLE
-    STYLE.update(width=600, height="500px")
-    main(Jogo, STYLE)
-    #main_test()
+    STYLE.update(width=700, height="600px")
+    Kwarwp(Jogo, medidas=STYLE)
     
