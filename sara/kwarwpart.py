@@ -166,7 +166,7 @@ class Piche(Vazio):
         self.vaga = taba
         self.lado = lado = self.LADO or 100
         self.posicao = (x//lado,y//lado-1)
-        self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena)
+        self.vazio = self.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena)
         #self._nada = Kwarwp.VITOLLINO.a()
         self.ocupante = NULO
         self.empurrante = NULO
