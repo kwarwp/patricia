@@ -441,7 +441,7 @@ class Kwarwp():
         vaga = Vazio("", x=x, y=y, cena=cena, taba=self, ocupante=self.o_indio)
         return vaga
 
-
 if __name__ == "__main__":
     STYLE.update(width=700, height="600px")
     Kwarwp(Jogo, medidas=STYLE)
+    
