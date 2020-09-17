@@ -1013,3 +1013,5 @@ AttributeError: 'NoneType' object has no attribute 'ocupa'
                         ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Sep 17 2020 16:55:17.317 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': ''''''},
