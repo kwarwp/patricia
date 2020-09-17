@@ -142,7 +142,7 @@ class Test_Kwarwp(TestCase):
         return indio, tora
 
     def testa_cria_piche_oca(self):
-        """ Cria a tora com a fábrica."""
+        """ Cria piche com a fábrica."""
         self.set_fake()
         cena = self.k.cria()
         coisa = self.k.taba[0,0]
@@ -158,10 +158,44 @@ class Test_Kwarwp(TestCase):
     def testa_pega_tora(self):
         """ Vai até a tora e pega."""
         cena = self.k.cria()
-        self._pega_tora()
 
+        vaga_tora = self.k.taba[1, 3]
+        self.assertEqual(vaga_tora.taba,  self.k, f"but taba was {vaga_tora.taba}")
+        tora = vaga_tora.ocupante
+        pos = tora.posicao
+        self.assertEqual((1, 3),  pos, f"but last pos was {pos}")
+        indio = self.k.o_indio
+        indio.esquerda()
+        indio.anda()
+        pos = indio.posicao
+        self.assertEqual((2, 3),  pos, f"but indio pos was {pos}")
+        vaga = indio.vaga
+        indio.pega()
+        
+        return indio, tora
+        
     def testa_larga_tora(self):
         """ Vai até a tora pega e larga."""
+        cena = self.k.cria()
+        vaga_tora = self.k.taba[1, 3]
+        self.assertEqual(vaga_tora.taba,  self.k, f"but taba was {vaga_tora.taba}")
+        tora = vaga_tora.ocupante
+        pos = tora.posicao
+        self.assertEqual((1, 3),  pos, f"but last pos was {pos}")
+        indio = self.k.o_indio
+        indio.esquerda()
+        indio.anda()
+        pos = indio.posicao
+        self.assertEqual((2, 3),  pos, f"but indio pos was {pos}")
+        vaga = indio.vaga
+        indio.pega()
+        pos = tora.posicao
+        self.assertEqual((1, 3),  pos, f"but tora taken pos was {pos}")
+        self.assertEqual(vaga.ocupante,  NULO, f"but vaga taken  ocupante {vaga.ocupante}")
+        self.assertEqual(tora.vaga,  indio, f"but tora vaga {tora.vaga}")
+        # vaga = tora.vaga
+        indio.larga()
+        return indio, tora
 
     def testa_pega_vazio_oca_piche(self):
         """ Vai até a piche, oca e vazio e tenta pegar."""
@@ -177,6 +211,11 @@ class Test_Kwarwp(TestCase):
 
     def testa_esquerda_indio(self):
         """ Move o índio, andando em frente, esquerda, frente."""
+        cena = self.k.cria()
+        self.assertEqual((1, 3),  self.k, f"but taba was {vaga_tora.taba}")
+        indio = self.k.o_indio
+        indio.esquerda()
+        indio.anda()
 
     def testa_volta_indio(self):
         """ Move o índio, andando em frente, meia volta, frente."""
