@@ -17,6 +17,9 @@ from kwarwp.kwarapp import Kwarwp, Indio
 from kwarwp.kwarwpart import Piche, Vazio, Oca, Tora, NULO
 #sys.path.insert(0, os.path.abspath('../../libs'))
 
+class Test_Kwarwp(TestCase):
+    """ Teste do Jogo para ensino de programação.
+    """
 
 MAPA_INICIAL= """
 #########
