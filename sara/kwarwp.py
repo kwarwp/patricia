@@ -65,7 +65,6 @@ Ponto = nt("Ponto", "x y")
 Rosa = nt("Rosa", "n l s o")
 """Rosa dos ventos com as direções norte, leste, sul e oeste."""
 
-
 class Indio():
 
     AZIMUTE = Rosa(Ponto(0, -1),Ponto(1, 0),Ponto(0, 1),Ponto(-1, 0),)
@@ -440,6 +439,7 @@ class Kwarwp():
         """o índio.vai é associado ao seu próprio metodo pega"""
         vaga = Vazio("", x=x, y=y, cena=cena, taba=self, ocupante=self.o_indio)
         return vaga
+
 
 if __name__ == "__main__":
     STYLE.update(width=700, height="600px")
