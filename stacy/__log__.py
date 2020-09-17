@@ -413,3 +413,5 @@ AttributeError: 'NoneType' object has no attribute 'a'
     self.vazio = Vazio.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena) # o x e o y são substituiddos pelo mapa
 AttributeError: 'NoneType' object has no attribute 'a'
 '''},
+{'date': 'Thu Sep 17 2020 17:08:19.220 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': ''''''},
