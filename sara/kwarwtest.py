@@ -24,16 +24,18 @@ from sara.kwarwpart import Tora
 from sara.kwarwpart import NULO
 #sys.path.insert(0, os.path.abspath('../../libs'))
 
+IMGUR = 'https://i.imgur.com/'
 
 class Test_Kwarwp(TestCase):
     """ Teste do Jogo para ensino de programação.
     
     """
-    ABERTURA = "https://i.imgur.com/dZQ8liT.jpg"
-    INDIO = "https://imgur.com/UCWGCKR.png"
-    OCA = "https://imgur.com/dZQ8liT.jpg"
-    PICHE = "https://imgur.com/tLLVjfN.png"
-    TORA = "https://imgur.com/0jSB27g.png"
+    
+    ABERTURA = "{IMGUR}dZQ8liT.jpg"
+    INDIO = "{IMGUR}UCWGCKR.png"
+    OCA = "{IMGUR}dZQ8liT.jpg"
+    PICHE = "{IMGUR}tLLVjfN.png"
+    TORA = "{IMGUR}0jSB27g.png"
     
     def setUp(self):
         elts = self.elts = {}
