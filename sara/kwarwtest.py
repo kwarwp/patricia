@@ -163,7 +163,7 @@ class Test_Kwarwp(TestCase):
         """ Cria o piche e a oca com a fábrica."""
         self.set_fake()
         cena = self.k.cria()
-        coisa = self.k.taba[1,3]
+        coisa = self.k.taba[0,0]
         self.assertIsInstance(coisa.ocupante,  Piche, f"but ocupante was {coisa.ocupante}")
         self.assertEqual(100, coisa.lado, f"but coisa.lado was {coisa.lado}")
         piche = self.elts[self.Piche]
