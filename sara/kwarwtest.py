@@ -164,7 +164,7 @@ class Test_Kwarwp(TestCase):
         self.set_fake()
         cena = self.k.cria()
         coisa = self.k.taba[0,0]
-        self.assertIsInstance(coisa.ocupante,  Piche, f"but ocupante was {coisa.ocupante}")
+        self.assertIsInstance(coisa.ocupante, Piche, f"but ocupante was {coisa.ocupante}")
         self.assertEqual(100, coisa.lado, f"but coisa.lado was {coisa.lado}")
         piche = self.elts[self.PICHE]
         self.assertEqual(coisa.ocupante.vazio, piche, f"but coisa.ocupante.piche was {coisa.ocupante.vazio}")
