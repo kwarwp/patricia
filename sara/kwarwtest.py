@@ -12,7 +12,7 @@ Changelog
 """
 from _spy.vitollino.main import Jogo
 from unittest import TestCase
-from unittest.mock import MagicMock
+#from unittest.mock import MagicMock
 from sara.kwarwp import Kwarwp
 from sara.kwarwp import Indio
 from sara.kwarwpart import Vazio
