@@ -31,11 +31,11 @@ class Test_Kwarwp(TestCase):
     
     """
     
-    ABERTURA = "{IMGUR}dZQ8liT.jpg"
-    INDIO = "{IMGUR}UCWGCKR.png"
-    OCA = "{IMGUR}dZQ8liT.jpg"
-    PICHE = "{IMGUR}tLLVjfN.png"
-    TORA = "{IMGUR}0jSB27g.png"
+    ABERTURA = f"{IMGUR}dZQ8liT.jpg"
+    INDIO = f"{IMGUR}UCWGCKR.png"
+    OCA = f"{IMGUR}dZQ8liT.jpg"
+    PICHE = f"{IMGUR}tLLVjfN.png"
+    TORA = f"{IMGUR}0jSB27g.png"
     
     def setUp(self):
         elts = self.elts = {}
