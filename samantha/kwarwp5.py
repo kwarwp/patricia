@@ -104,6 +104,17 @@ class Test_Kwarwp(TestCase):
         self.assertEqual(coisa.ocupante.vazio, tora, f"but coisa.ocupante.indio was {coisa.ocupante.vazio}")
         self.assertEqual((0, 0), tora.pos, f"but tora.pos was {tora.pos}")
         
+    def testa_cria_piche_oca(self):
+        """ Cria o piche e a oca com a fábrica."""
+        self.set_fake()
+        cena = self.k.cria()
+        oca = self.k.piche[3,3]
+        self.assertIsInstance(oca.ocupante,  Piche, f"but ocupante was {oca.piche}")
+        self.assertEqual(100, oca.lado, f"but coisa.lado was {oca.lado}")
+        piche = self.elts[self.piche]
+        self.assertEqual(oca.ocupante.piche, piche, f"but coisa.ocupante.indio was {oca.ocupante.piche}")
+        self.assertEqual((0, 0), piche.pos, f"but piche.pos was {piche.pos}")
+        
     def testa_empurra_tora(self):
         """ Vai até a tora e empurra."""
         cena = self.k.cria()
@@ -140,6 +151,8 @@ class Test_Kwarwp(TestCase):
         self.assertEqual(vaga.ocupante,  tora, f"but vaga drop  ocupante {vaga.ocupante}")
         self.assertEqual(tora.vaga,  vaga, f"but tora drop vaga {tora.vaga}")
         return indio, tora
+
+
 
 def main():
     # from unittest import main
