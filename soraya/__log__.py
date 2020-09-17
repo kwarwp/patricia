@@ -793,3 +793,5 @@ IndentationError: unexpected indent
 'error': ''''''},
 {'date': 'Thu Sep 17 2020 17:28:43.566 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
 'error': ''''''},
+{'date': 'Thu Sep 17 2020 17:30:36.181 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': ''''''},
