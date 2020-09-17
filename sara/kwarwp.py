@@ -25,6 +25,7 @@ Changelog
 
 """
 
+from _spy.vitollino.main import Jogo, STYLE
 from collections import namedtuple as nt
 from sara.kwarwpart import Vazio
 from sara.kwarwpart import Piche
@@ -64,6 +65,7 @@ Ponto = nt("Ponto", "x y")
 Rosa = nt("Rosa", "n l s o")
 """Rosa dos ventos com as direções norte, leste, sul e oeste."""
 
+
 class Indio():
 
     AZIMUTE = Rosa(Ponto(0, -1),Ponto(1, 0),Ponto(0, 1),Ponto(-1, 0),)
@@ -74,7 +76,7 @@ class Indio():
     """
     def __init__(self, imagem, x, y, cena, taba, vai=None):
     
-        self.lado = lado = Vazio.LADO
+        self.lado = lado = Kwarwp.LADO
         self.azimute = self.AZIMUTE.n
         """índio olhando para o norte"""
         self.ocupante = NULO
@@ -439,9 +441,7 @@ class Kwarwp():
         vaga = Vazio("", x=x, y=y, cena=cena, taba=self, ocupante=self.o_indio)
         return vaga
 
-
 if __name__ == "__main__":
-    from _spy.vitollino.main import Jogo, STYLE
     STYLE.update(width=700, height="600px")
     Kwarwp(Jogo, medidas=STYLE)
     
