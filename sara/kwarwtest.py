@@ -35,6 +35,7 @@ class Test_Kwarwp(TestCase):
     
     def setUp(self):
         elts = self.elts = {}
+        
         class FakeTaba:
             def __init__(self):
                 self.falou = ""
@@ -49,6 +50,7 @@ class Test_Kwarwp(TestCase):
     
     def set_fake(self):
         elts = self.elts = {}
+        
         class FakeCena:
             def __init__(self, *_, **__):
                 pass
@@ -77,6 +79,7 @@ class Test_Kwarwp(TestCase):
             @pos.setter
             def pos(self, value):
                 self._pos = value
+                
         Vazio.VITOLLINO.a = FakeElemento
         Vazio.VITOLLINO.c = FakeCena
         
