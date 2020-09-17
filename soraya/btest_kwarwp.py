@@ -139,6 +139,10 @@ class Test_Kwarwp(TestCase):
         self.assertEqual(vaga.ocupante,  tora, f"but vaga drop  ocupante {vaga.ocupante}")
         self.assertEqual(tora.vaga,  vaga, f"but tora drop vaga {tora.vaga}")
         return indio, tora
+        
+    def testa_larga_tora(self):
+    """ Vai até a tora pega e larga."""
+    ...
 
 def main():
     # from unittest import main
