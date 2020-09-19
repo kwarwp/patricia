@@ -11,7 +11,7 @@ Changelog
 
 """
 from random import shuffle
-KEYS, COUNT = "CIRCUS_KEYS", "CIRCUS_COUNT"
+RTAZ, SFAZ, COUNT = "CIRCUS_RTAZ", "CIRCUS_SFAZ", "CIRCUS_COUNT"
 
 
 class Letra:
@@ -46,6 +46,9 @@ class Aldeia:
     YARA = "https://i.imgur.com/RfLJEhs.png"
     TRANSP= "https://i.imgur.com/npb9Oej.png"
     J = None
+    OK_AZIM=list("NLSO")
+    RT_AZIM=list("NLSO")
+    SF_AZIM=list("NLSO")
     ORDERED_KEYS = [['Coycol', 'Cauha', 'Tetlah'],
                     ['Huatlya', 'Zitllo', 'Micpe'],
                     ['Nenea', 'Cahuitz', 'Pallotl']]
@@ -53,9 +56,14 @@ class Aldeia:
     def shuffle_keys():
         keys = [key for line in Aldeia.ORDERED_KEYS for key in line]
         count = Aldeia.STOR[COUNT]
+        rtazim, sfazim = Aldeia.RT_AZIM, Aldeia.SF_AZIM
         if Aldeia.STOR[COUNT] == "":
             shuffle(keys)
+            rtazim = rtazim[1:] + rtazim[[0]]
+            shuffle(sfazim)
             count = "@@@"
+            Aldeia.STOR[RTAZ] = rtazim
+            Aldeia.STOR[SFAZ] = sfazim
         Aldeia.STOR[COUNT] = count[:-1]
         Aldeia.KEYS = [keys[n:n+3] for n in range(0,9,3)]
     #COUNT = 2
@@ -67,7 +75,8 @@ class Aldeia:
         self.cena = cena = j.c("https://i.imgur.com/sGoKfvs.jpg")
         self.logger = j.a(self.TRANSP, x=0, y=500, w=900, h=100, cena=cena)
         # self.guia()
-        self.desafios = [self.guia, self.desafio0, self.desafio0, self.desafio1, self.desafio2, self.desafio3, self.desafio4]
+        self.desafios = [self.guia, self.desafio0, self.desafio0, self.desafio1, self.desafio2,
+                         self.desafio3, self.desafio4, self.desafio5]
         cena.vai()
     def log(self, log):
         # print(log)
@@ -109,14 +118,24 @@ class Aldeia:
         self.desafio0(c)
         
     def desafio3(self, solucao):
-        global COUNT, KEYS
         self.desafio2(solucao)
         Aldeia.shuffle_keys()
         self.log(f"COUNT{Aldeia.STOR[COUNT]} XXkeysXX {Aldeia.KEYS}")
         
     def desafio4(self, solucao):
-        c = [[solucao[ai] for ai in linha] for linha in self.ORDERED_KEYS]
-        self.desafio0(c)
+        Aldeia.shuffle_keys()
+        solucao = {key: ladrilho + Aldeia.OK_AZIM[Aldeia.RT_AZIM.index(azimute)]
+                   for key, (ladrilho, azimute) in solucao.items()}
+        self.desafio2(solucao)
+        xsol = " ".join(v for v in solucao.values())
+        self.log(f"COUNT{Aldeia.STOR[COUNT]} XXkeysXX {Aldeia.KEYS} XXsolXX {xsol}")
+        
+    def desafio5(self, solucao):
+        Aldeia.shuffle_keys()
+        solucao = {key: ladrilho + Aldeia.OK_AZIM[Aldeia.SF_AZIM.index(azimute)]
+                   for key, (ladrilho, azimute) in solucao.items()}
+        self.desafio2(solucao)
+        self.log(f"COUNT{Aldeia.STOR[COUNT]} XXkeysXX {Aldeia.KEYS} XXsolXX {solucao}")
 
         
     def circus(self, desafio, solucao):
@@ -165,10 +184,14 @@ if __name__ == "__main__":
     Aldeia.STOR = storage
     try: 
         _ = Aldeia.STOR[COUNT]
+        _ = Aldeia.STOR[RTAZ]
+        _ = Aldeia.STOR[SFAZ]
     except:
         Aldeia.STOR[COUNT] = ""
+        Aldeia.STOR[RTAZ] = Aldeia.RT_AZIM
+        Aldeia.STOR[SFAZ] = Aldeia.SF_AZIM
     Aldeia.shuffle_keys()
     STYLE.update(width=1300, height="600px")
     #Aldeia(Jogo())
-    desafio2(5)
+    desafio2(6)
         
