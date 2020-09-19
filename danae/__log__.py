@@ -1470,3 +1470,10 @@ TypeError: can only concatenate list (not "str") to list
     raise TypeError("value must be string")
 TypeError: value must be string
 '''},
+{'date': 'Sat Sep 19 2020 20:44:40.374 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 60
+  self.log(f"COUNT: {Aldeia.STOR[COUNT]} XXkeysXX {Aldeia.KEYS} rt {Aldeia.STOR[RTAZ]})
+                                                                                       ^
+SyntaxError: EOL while scanning string literal
+'''},
