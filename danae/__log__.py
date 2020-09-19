@@ -1427,3 +1427,10 @@ ValueError: invalid literal for int() with base 10: '@@'
                             ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Sat Sep 19 2020 19:49:48.32 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 131
+  solucao = {key: ladrilho Aldeia.OK_AZIM[Aldeia.SF_AZIM.index(azimute)]
+                            ^
+SyntaxError: invalid syntax
+'''},
