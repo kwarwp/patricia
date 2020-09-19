@@ -56,15 +56,16 @@ class Aldeia:
     def shuffle_keys():
         keys = [key for line in Aldeia.ORDERED_KEYS for key in line]
         count = Aldeia.STOR[COUNT]
-        rtazim, sfazim = Aldeia.RT_AZIM, list(Aldeia.SF_AZIM)
-        if Aldeia.STOR[COUNT] == "":
+        count = count[:-1]
+        rtazim, sfazim = Aldeia.STOR[RTAZ], list(Aldeia.STOR[SFAZ])
+        if count == "":
             shuffle(keys)
             rtazim = rtazim[1:] + rtazim[0]
             shuffle(sfazim)
-            count = "@@@"
-            Aldeia.STOR[RTAZ] = rtazim
-            Aldeia.STOR[SFAZ] = "".join(sfazim)
-        Aldeia.STOR[COUNT] = count[:-1]
+            count = "@@@@@"
+            Aldeia.STOR[RTAZ] = Aldeia.RT_AZIM = rtazim
+            Aldeia.STOR[SFAZ] = Aldeia.SF_AZIM = "".join(sfazim)
+        Aldeia.STOR[COUNT] = count
         Aldeia.KEYS = [keys[n:n+3] for n in range(0,9,3)]
     #COUNT = 2
     #ALDEIA = "https://i.imgur.com/UCWGCKR.png"
