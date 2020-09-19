@@ -1420,3 +1420,10 @@ AttributeError: 'Aldeia' object has no attribute 'KEYS'
     count = int(Aldeia.STOR[COUNT])
 ValueError: invalid literal for int() with base 10: '@@'
 '''},
+{'date': 'Sat Sep 19 2020 19:49:17.340 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 124
+  solucao = {key: ladrilho Aldeia.OK_AZIM[Aldeia.RT_AZIM.index(azimute)]
+                            ^
+SyntaxError: invalid syntax
+'''},
