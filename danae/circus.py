@@ -57,7 +57,6 @@ class Aldeia:
         keys = [key for line in Aldeia.ORDERED_KEYS for key in line]
         count = Aldeia.STOR[COUNT]
         count = count[:-1]
-        print(f"COUNT: {Aldeia.STOR[COUNT]} XXkeysXX {Aldeia.STOR[SFAZ]} rt {Aldeia.STOR[RTAZ]}")
         rtazim, sfazim = Aldeia.STOR[RTAZ], list(Aldeia.STOR[SFAZ])
         if count == "":
             shuffle(keys)
@@ -130,6 +129,7 @@ class Aldeia:
                    for key, (ladrilho, azimute) in solucao.items()}
         self.desafio2(solucao)
         xsol = " ".join(v for v in solucao.values())
+        self.log(f"COUNT: {Aldeia.STOR[COUNT]} XXkeysXX {Aldeia.STOR[SFAZ]} rt {Aldeia.STOR[RTAZ]}")
         #self.log(f"COUNT{Aldeia.STOR[COUNT]} XXkeysXX {Aldeia.KEYS} XXsolXX {xsol}")
         
     def desafio5(self, solucao):
