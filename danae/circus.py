@@ -47,8 +47,8 @@ class Aldeia:
     TRANSP= "https://i.imgur.com/npb9Oej.png"
     J = None
     OK_AZIM=list("NLSO")
-    RT_AZIM=list("NLSO")
-    SF_AZIM=list("NLSO")
+    RT_AZIM="NLSO"
+    SF_AZIM="NLSO"
     ORDERED_KEYS = [['Coycol', 'Cauha', 'Tetlah'],
                     ['Huatlya', 'Zitllo', 'Micpe'],
                     ['Nenea', 'Cahuitz', 'Pallotl']]
@@ -56,14 +56,14 @@ class Aldeia:
     def shuffle_keys():
         keys = [key for line in Aldeia.ORDERED_KEYS for key in line]
         count = Aldeia.STOR[COUNT]
-        rtazim, sfazim = Aldeia.RT_AZIM, Aldeia.SF_AZIM
+        rtazim, sfazim = Aldeia.RT_AZIM, list(Aldeia.SF_AZIM)
         if Aldeia.STOR[COUNT] == "":
             shuffle(keys)
-            rtazim = rtazim[1:] + rtazim[[0]]
+            rtazim = rtazim[1:] + rtazim[0]
             shuffle(sfazim)
             count = "@@@"
             Aldeia.STOR[RTAZ] = rtazim
-            Aldeia.STOR[SFAZ] = sfazim
+            Aldeia.STOR[SFAZ] = "".join(sfazim)
         Aldeia.STOR[COUNT] = count[:-1]
         Aldeia.KEYS = [keys[n:n+3] for n in range(0,9,3)]
     #COUNT = 2
