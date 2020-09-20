@@ -1564,3 +1564,29 @@ NameError: name 'Jogo' is not defined
     la = j.a(self.TRANSP, x=x+15, y=y ,w=90, h=90, style={'font-size': '52pt'}, cena=cena)
 NameError: name 'j' is not defined
 '''},
+{'date': 'Sun Sep 20 2020 13:01:00.539 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 208
+    desafio2(6)
+  module <module> line 204
+    circus(lev, MASMORRA)
+  module <module> line 174
+    Aldeia(Jogo()).circus(desafio, solucao)
+  module <module> line 152
+    self.guia()
+  module <module> line 99
+    d = [Letra(cena, nk%4*150, nk//4*150, lt ) for nk, lt in enumerate("ABCDEFGHIJKL")]
+  module <module> line 21
+    la = j.a(self.TRANSP, x=x+15, y=y ,w=90, h=90, style={'font-size': '52pt'}, cena=cena)
+NameError: name 'j' is not defined
+'''},
