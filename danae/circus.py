@@ -94,9 +94,9 @@ class Aldeia:
         cena = self.cena
         gap = (LADO*110)//100
         big = ("LS JN HN JN HN KO HO AN FN FN BN IL JO DO AO BL DO JL IO AO DS DN CL HL GS JS HS HS JS GL".split(), 6)
-        small = "AN DN DS CN IN HN HN AS IO KN KL KO GS DS DN KN".split()
+        small = ("AN DN DS CN IN HN HN AS IO KN KL KO GS DS DN KN".split(), 4)
         tiny = ("LS JN LO JO FN JL GS JS GL".split(), 3)
-        planta = [tiny, big, small]
+        planta = [tiny, small, big]
         layout, siz = planta[tipo]
         a = [Piso(cena, nk%2*gap, nk//2*gap, ai+"N" ) for nk, ai in enumerate("ABCDEFGHIJKL")]
         c = [Piso(cena, int(3.5 *LADO)+nk%siz*LADO, nk//siz*LADO, ai ) for nk, ai in enumerate(layout)]
@@ -153,6 +153,7 @@ class Aldeia:
 
         
     def circus(self, desafio, solucao, tipo=0):
+        tipo = [0,2,0,0,0,0,0,0,0,0][tipo]
         self.guia(tipo)
         self.desafios[desafio](solucao)
         
