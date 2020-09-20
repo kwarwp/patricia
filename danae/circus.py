@@ -153,7 +153,7 @@ class Aldeia:
 
         
     def circus(self, desafio, solucao, tipo=0):
-        tipo = [0,2,0,0,0,0,0,0,0,0][tipo]
+        tipo = [0,0,2,0,0,0,0,0,0,0][tipo]
         self.guia(tipo)
         self.desafios[desafio](solucao)
         
