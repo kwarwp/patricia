@@ -155,6 +155,21 @@ class Aldeia:
         #a[0].siz = (400, 300)
         #a[0].entra(cena)
 def circus(desafio, solucao):
+    from _spy.vitollino.main import Jogo, STYLE
+    from browser.session_storage import storage
+    Aldeia.STOR = storage
+    try: 
+        _ = Aldeia.STOR[COUNT]
+        _ = Aldeia.STOR[RTAZ]
+        _ = Aldeia.STOR[SFAZ], Aldeia.STOR[KEYS]
+    except:
+        Aldeia.STOR[COUNT] = ""
+        Aldeia.STOR[RTAZ] = Aldeia.RT_AZIM
+        Aldeia.STOR[SFAZ] = Aldeia.SF_AZIM
+        Aldeia.STOR[KEYS] = " ".join([key for line in Aldeia.ORDERED_KEYS for key in line])
+    #Aldeia.shuffle_keys()
+    STYLE.update(width=1300, height="600px")
+    #Aldeia(Jogo())
     Aldeia(Jogo()).circus(desafio, solucao)
         
 def desafio0():
@@ -189,20 +204,5 @@ def desafio2(lev=3):
     
 
 if __name__ == "__main__":
-    from _spy.vitollino.main import Jogo, STYLE
-    from browser.session_storage import storage
-    Aldeia.STOR = storage
-    try: 
-        _ = Aldeia.STOR[COUNT]
-        _ = Aldeia.STOR[RTAZ]
-        _ = Aldeia.STOR[SFAZ], Aldeia.STOR[KEYS]
-    except:
-        Aldeia.STOR[COUNT] = ""
-        Aldeia.STOR[RTAZ] = Aldeia.RT_AZIM
-        Aldeia.STOR[SFAZ] = Aldeia.SF_AZIM
-        Aldeia.STOR[KEYS] = " ".join([key for line in Aldeia.ORDERED_KEYS for key in line])
-    #Aldeia.shuffle_keys()
-    STYLE.update(width=1300, height="600px")
-    #Aldeia(Jogo())
     desafio2(6)
         
