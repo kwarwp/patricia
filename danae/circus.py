@@ -116,7 +116,7 @@ class Aldeia:
         j.a(self.YARA, x=520, y=20,w=60, h=60, cena=cena)
         
     def desafio0(self, solucao):
-        c = [Piso(self.cena, i*100, j*100, ai ) for i, linha in enumerate(solucao) for j, ai in enumerate(linha)]
+        c = [Piso(self.cena, 800+i*100, j*100, ai ) for i, linha in enumerate(solucao) for j, ai in enumerate(linha)]
         
     def desafio1(self, solucao):
         c = [[solucao[ai] for ai in linha] for linha in self.ORDERED_KEYS]
@@ -149,6 +149,7 @@ class Aldeia:
 
         
     def circus(self, desafio, solucao):
+        self.guia()
         self.desafios[desafio](solucao)
         
         # b = [spr(a[x*4+y],x,y) for x in range(4) for y in range(3)]
