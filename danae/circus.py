@@ -176,7 +176,7 @@ def circus(desafio, solucao, tipo=0):
     #Aldeia.shuffle_keys()
     STYLE.update(width=1300, height="650px")
     #Aldeia(Jogo())
-    Aldeia(Jogo()).circus(desafio, solucao, tipo)
+    Aldeia(Jogo()).circus(desafio, solucao, desafio)
         
 def desafio0():
     TOPO_ESQUERDA = "AN"
