@@ -1515,3 +1515,10 @@ AttributeError: 'GUI' object has no attribute 'log'
     (Aldeia.KEYS)
 AttributeError: 'Aldeia' object has no attribute 'KEYS'
 '''},
+{'date': 'Sun Sep 20 2020 12:52:38.427 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 19
+  circus(1, [[TOPO_ESQUERDA, TOPO_CENTRO, TOPO_DIREITA], [MEIO_ESQUERDA, CENTRO,
+        ^
+SyntaxError: Unbalanced bracket [
+'''},
