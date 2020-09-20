@@ -52,6 +52,10 @@ class Aldeia:
     ORDERED_KEYS = [['Coycol', 'Cauha', 'Tetlah'],
                     ['Huatlya', 'Zitllo', 'Micpe'],
                     ['Nenea', 'Cahuitz', 'Pallotl']]
+    MASMORRA = {'Cahuitz': 'AN', 'Cauha': 'BN', 'Coycol': 'CN',
+     'Huatlya': 'DN', 'Micpe': 'EN', 'Nenea': 'FN',
+     'Pallotl': 'GN', 'Tetlah': 'HN', 'Zitllo': 'IN'}
+
     @staticmethod
     def shuffle_keys():
         #keys = [key for line in Aldeia.ORDERED_KEYS for key in line]
@@ -75,7 +79,9 @@ class Aldeia:
         Aldeia.J = j
         tile = 100
         self.shuffle_keys = self.ORDERED_KEYS[:]
-        self.cena = cena = j.c("https://i.imgur.com/sGoKfvs.jpg")
+        clique = j.c()
+        self.cena = cena = j.c("https://i.imgur.com/sGoKfvs.jpg", direita=clique)
+        clique.vai = lambda *_: self.desafio4(self.MASMORRA)
         self.logger = j.a(self.TRANSP, x=0, y=500, w=900, h=100, cena=cena)
         # self.guia()
         self.desafios = [self.guia, self.desafio0, self.desafio0, self.desafio1, self.desafio2,
@@ -131,7 +137,6 @@ class Aldeia:
         solucao = {key: ladrilho + Aldeia.OK_AZIM[Aldeia.RT_AZIM.index(azimute)]
                    for key, (ladrilho, azimute) in solucao.items()}
         c = self.desafio2(solucao)
-        xsol = " ".join(v for v in solucao.values())
         self.log(f"COUNT: {Aldeia.STOR[COUNT]} st {Aldeia.STOR[SFAZ]} rt {Aldeia.STOR[RTAZ]} XXsolXX {c}  {Aldeia.KEYS}")
         #self.log(f"COUNT{Aldeia.STOR[COUNT]} XXkeysXX {}")
         
@@ -196,7 +201,7 @@ if __name__ == "__main__":
         Aldeia.STOR[RTAZ] = Aldeia.RT_AZIM
         Aldeia.STOR[SFAZ] = Aldeia.SF_AZIM
         Aldeia.STOR[KEYS] = " ".join([key for line in Aldeia.ORDERED_KEYS for key in line])
-    Aldeia.shuffle_keys()
+    #Aldeia.shuffle_keys()
     STYLE.update(width=1300, height="600px")
     #Aldeia(Jogo())
     desafio2(6)
