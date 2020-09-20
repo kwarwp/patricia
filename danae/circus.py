@@ -18,7 +18,7 @@ class Letra:
     TRANSP= "https://i.imgur.com/npb9Oej.png"
     def __init__(self, cena, x, y, lt="A"):
         OFF = 0x24B6 - ord("A")
-        la = j.a(self.TRANSP, x=x+15, y=y ,w=90, h=90, style={'font-size': '52pt'}, cena=cena)
+        la = Aldeia.J.a(self.TRANSP, x=x+15, y=y ,w=90, h=90, style={'font-size': '52pt'}, cena=cena)
         la.elt.html = chr(OFF+ord(lt))
         
         
@@ -92,14 +92,15 @@ class Aldeia:
         self.logger.elt.html = log
     def guia(self):
         cena = self.cena
+        gap = 110
         big = "LS JN HN JN HN KO HO AN FN FN BN IL JO DO AO BL DO JL IO AO DS DN CL HL GS JS HS HS JS GL".split()
         small = "AN DN DS CN IN HN HN AS IO KN KL KO GS DS DN KN".split()
-        a = [Piso(cena, nk%4*150, nk//4*150, ai+"N" ) for nk, ai in enumerate("ABCDEFGHIJKL")]
-        c = [Piso(cena, 600+nk%3*100, nk//3*100, ai ) for nk, ai in enumerate("LS JN LO JO FN JL GS JS GL".split())]
-        d = [Letra(cena, nk%4*150, nk//4*150, lt ) for nk, lt in enumerate("ABCDEFGHIJKL")]
-        e = [Piso(cena, 200+nk%4*150, 450+nk//4*150, "A"+ai ) for nk, ai in enumerate("NLSO")]
+        a = [Piso(cena, nk%4*gap, nk//4*gap, ai+"N" ) for nk, ai in enumerate("ABCDEFGHIJKL")]
+        c = [Piso(cena, 450+nk%3*100, nk//3*100, ai ) for nk, ai in enumerate("LS JN LO JO FN JL GS JS GL".split())]
+        d = [Letra(cena, nk%4*gap, nk//4*gap, lt ) for nk, lt in enumerate("ABCDEFGHIJKL")]
+        e = [Piso(cena, 200+nk%4*gap, 450+nk//4*gap, "A"+ai ) for nk, ai in enumerate("NLSO")]
         #Letra(cena, 0, 0, "A")
-        e = [Letra(cena, 200+nk%4*150, 450+nk//4*150, lt ) for nk, lt in enumerate("NLSO")]
+        e = [Letra(cena, 200+nk%4*gap, 450+nk//4*gap, lt ) for nk, lt in enumerate("NLSO")]
     def todos(self):
         cena = self.cena
         big = "LS JN HN JN HN KO HO AN FN FN BN IL JO DO AO BL DO JL IO AO DS DN CL HL GS JS HS HS JS GL".split()
@@ -116,7 +117,7 @@ class Aldeia:
         j.a(self.YARA, x=520, y=20,w=60, h=60, cena=cena)
         
     def desafio0(self, solucao):
-        c = [Piso(self.cena, 800+i*100, j*100, ai ) for i, linha in enumerate(solucao) for j, ai in enumerate(linha)]
+        c = [Piso(self.cena, 870+i*100, j*100, ai ) for i, linha in enumerate(solucao) for j, ai in enumerate(linha)]
         
     def desafio1(self, solucao):
         c = [[solucao[ai] for ai in linha] for linha in self.ORDERED_KEYS]
@@ -137,7 +138,7 @@ class Aldeia:
         solucao = {key: ladrilho + Aldeia.OK_AZIM[Aldeia.RT_AZIM.index(azimute)]
                    for key, (ladrilho, azimute) in solucao.items()}
         c = self.desafio2(solucao)
-        self.log(f"COUNT: {Aldeia.STOR[COUNT]} st {Aldeia.STOR[SFAZ]} rt {Aldeia.STOR[RTAZ]} XXsolXX {c}  {Aldeia.KEYS}")
+        #self.log(f"COUNT: {Aldeia.STOR[COUNT]} st {Aldeia.STOR[SFAZ]} rt {Aldeia.STOR[RTAZ]} XXsolXX {c}  {Aldeia.KEYS}")
         #self.log(f"COUNT{Aldeia.STOR[COUNT]} XXkeysXX {}")
         
     def desafio5(self, solucao):
