@@ -11,7 +11,7 @@ Changelog
 
 """
 from random import shuffle
-RTAZ, SFAZ, COUNT = "CIRCUS_RTAZ", "CIRCUS_SFAZ", "CIRCUS_COUNT"
+RTAZ, SFAZ, COUNT, KEYS = "CIRCUS_RTAZ", "CIRCUS_SFAZ", "CIRCUS_COUNT", "CIRCUS_KEYS"
 
 
 class Letra:
@@ -54,7 +54,8 @@ class Aldeia:
                     ['Nenea', 'Cahuitz', 'Pallotl']]
     @staticmethod
     def shuffle_keys():
-        keys = [key for line in Aldeia.ORDERED_KEYS for key in line]
+        #keys = [key for line in Aldeia.ORDERED_KEYS for key in line]
+        keys = Aldeia.STOR[KEYS].split()
         count = Aldeia.STOR[COUNT]
         count = count[:-1]
         rtazim, sfazim = Aldeia.STOR[RTAZ], list(Aldeia.STOR[SFAZ])
@@ -65,6 +66,7 @@ class Aldeia:
             count = "@@@@@"
             Aldeia.STOR[RTAZ] = Aldeia.RT_AZIM = rtazim
             Aldeia.STOR[SFAZ] = Aldeia.SF_AZIM = "".join(sfazim)
+            Aldeia.STOR[KEYS] = " ".join(keys)
         Aldeia.STOR[COUNT] = count
         Aldeia.KEYS = [keys[n:n+3] for n in range(0,9,3)]
     #COUNT = 2
@@ -115,8 +117,9 @@ class Aldeia:
         self.desafio0(c)
         
     def desafio2(self, solucao):
-        c = [[solucao[ai] for ai in linha] for linha in self.KEYS]
+        c = [[solucao[ai] for ai in linha] for linha in Aldeia.KEYS]
         self.desafio0(c)
+        return c
         
     def desafio3(self, solucao):
         self.desafio2(solucao)
@@ -127,10 +130,10 @@ class Aldeia:
         Aldeia.shuffle_keys()
         solucao = {key: ladrilho + Aldeia.OK_AZIM[Aldeia.RT_AZIM.index(azimute)]
                    for key, (ladrilho, azimute) in solucao.items()}
-        self.desafio2(solucao)
+        c = self.desafio2(solucao)
         xsol = " ".join(v for v in solucao.values())
-        self.log(f"COUNT: {Aldeia.STOR[COUNT]} XXkeysXX {Aldeia.STOR[SFAZ]} rt {Aldeia.STOR[RTAZ]}")
-        #self.log(f"COUNT{Aldeia.STOR[COUNT]} XXkeysXX {Aldeia.KEYS} XXsolXX {xsol}")
+        self.log(f"COUNT: {Aldeia.STOR[COUNT]} st {Aldeia.STOR[SFAZ]} rt {Aldeia.STOR[RTAZ]} XXsolXX {c}  {Aldeia.KEYS}")
+        #self.log(f"COUNT{Aldeia.STOR[COUNT]} XXkeysXX {}")
         
     def desafio5(self, solucao):
         Aldeia.shuffle_keys()
@@ -187,11 +190,12 @@ if __name__ == "__main__":
     try: 
         _ = Aldeia.STOR[COUNT]
         _ = Aldeia.STOR[RTAZ]
-        _ = Aldeia.STOR[SFAZ]
+        _ = Aldeia.STOR[SFAZ], Aldeia.STOR[KEYS]
     except:
         Aldeia.STOR[COUNT] = ""
         Aldeia.STOR[RTAZ] = Aldeia.RT_AZIM
         Aldeia.STOR[SFAZ] = Aldeia.SF_AZIM
+        Aldeia.STOR[KEYS] = " ".join([key for line in Aldeia.ORDERED_KEYS for key in line])
     Aldeia.shuffle_keys()
     STYLE.update(width=1300, height="600px")
     #Aldeia(Jogo())
