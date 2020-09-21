@@ -1655,3 +1655,10 @@ ValueError: too many values to unpack (expected 2)
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Mon Sep 21 2020 18:12:41.734 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 214
+  #desafio2(6)
+              ^
+IndentationError: expected an indented block
+'''},
