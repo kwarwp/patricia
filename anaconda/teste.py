@@ -14,9 +14,9 @@ Changelog
 from danae.circus import  circus
 
 def desafio0():
-    TOPO_ESQUERDA = "AN"
-    TOPO_DIREITA = "AN"
-    TOPO_CENTRO = "AN"
+    TOPO_ESQUERDA = "K"
+    TOPO_DIREITA = "L"
+    TOPO_CENTRO = "J"
     MEIO_ESQUERDA, CENTRO, MEIO_DIREITA = "AN", "AN", "AN"
     FUNDO_ESQUERDA, FUNDO_CENTRO, FUNDO_DIREITA =  "AN", "AN", "AN"
 
