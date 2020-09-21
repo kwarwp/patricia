@@ -1063,3 +1063,10 @@ SyntaxError: invalid syntax
 'error': ''''''},
 {'date': 'Thu Sep 17 2020 18:22:32.24 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
 'error': ''''''},
+{'date': 'Mon Sep 21 2020 18:20:13.109 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module danae.circus line 215
+  
+  ^
+IndentationError: expected an indented block
+'''},
