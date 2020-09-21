@@ -1648,3 +1648,10 @@ TypeError: circus() takes 2 positional arguments but more were given
     layout, siz = planta[tipo]
 ValueError: too many values to unpack (expected 2)
 '''},
+{'date': 'Mon Sep 21 2020 18:12:31.118 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 215
+  
+  ^
+IndentationError: expected an indented block
+'''},
