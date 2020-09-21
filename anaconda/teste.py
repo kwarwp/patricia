@@ -10,8 +10,8 @@ Changelog
         Descreva o que você adicionou no código.
 
 """
-from patricia.danae.circus import Letra, Piso, Aldeia, circus
-#from danae.circus import  circus
+#from patricia.danae.circus import Letra, Piso, Aldeia, circus
+from danae.circus import  circus
 
 def desafio0():
     TOPO_ESQUERDA = "AN"
