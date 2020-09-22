@@ -13,13 +13,16 @@ Changelog
 #from patricia.danae.circus import Letra, Piso, Aldeia, circus
 from danae.circus import  circus
 
-def desafio2(lev=3):
+def desafio1():
+    MASMORRA = [[ "AN", "AN", "AN", "AN", "AN", "AN"],
+                [ "AN", "AN", "AN", "AN", "AN", "AN"],
+                [ "AN", "AN", "AN", "AN", "AN", "AN"],
+                [ "AN", "AN", "AN", "AN", "AN", "AN"],
+                [ "AN", "AN", "AN", "AN", "AN", "AN"]
+                ]
 
-    MASMORRA = {'Cahuitz': 'AN', 'Cauha': 'BN', 'Coycol': 'LN',
-     'Huatlya': 'DN', 'Micpe': 'lN', 'Nenea': 'FN',
-     'Pallotl': 'LN', 'Tetlah': 'HN', 'Zitllo': 'IN'}
-
-    circus(lev, MASMORRA)
+    circus(2, MASMORRA, 2)
+        
     
 if __name__ == "__main__":
-    desafio2(3)
+    desafio1()
