@@ -621,7 +621,7 @@ def main(vitollino, medidas={}):
     :param medidas: Um dicionário usado para redimensionar a tela.
     """
     print(f"main(vitollino={vitollino} medidas={medidas}")
-    Kwarwp(vitollino, medidas=medidas).cria()
+    Kwarwp(JogoProxy(), medidas=medidas).cria()
         
     
 if __name__ == "__main__":
