@@ -360,3 +360,10 @@ NameError: name 'Piche' is not defined
 'error': '''
 Exception: <TypeError: bases[i].$dict is undefined>
 '''},
+{'date': 'Thu Sep 24 2020 15:57:33.762 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 40
+  """ Proxy que enfileira comandos gráficos.
+  ^
+IndentationError: expected an indented block
+'''},
