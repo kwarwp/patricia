@@ -228,9 +228,9 @@ class Kwarwp():
 
         :param vitollino: Empacota o engenho de jogo Vitollino.
     """
-#    VITOLLINO = None
+    VITOLLINO = None
     """Referência estática para obter o engenho de jogo."""
-#    LADO = None
+    LADO = None
     """Referência estática para definir o lado do piso da casa."""
 
 #    def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
