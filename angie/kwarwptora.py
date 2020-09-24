@@ -41,24 +41,29 @@ class Indio():
         :param y: Cinha em que o elemento será posicionado.
         :param cena: Cena em que o elemento será posicionado.
         :param taba: Representa a taba onde o índio faz o desafio.
+        :param vitollino: Recebe referência para o vitollino ou proxy.
     """
     AZIMUTE = Rosa(Ponto(0, -1),Ponto(1, 0),Ponto(0, 1),Ponto(-1, 0),)
     """Constante com os pares ordenados que representam os vetores unitários dos pontos cardeais."""
 
-    def __init__(self, imagem, x, y, cena, taba):
+    def __init__(self, imagem, x, y, cena, taba, vitollino=None):
+        self.vitollino = vitollino or Vazio.VITOLLINO
         self.lado = lado = Kwarwp.LADO
         self.azimute = self.AZIMUTE.n
         """índio olhando para o norte"""
         self.taba = taba
         self.vaga = self
+        self.ocupante = NULO
         self.posicao = (x//lado,y//lado)
-        self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+#      self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+        self.indio = self.vitollino.e(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         self.x = x
         """Este x provisoriamente distingue o índio de outras coisas construídas com esta classe"""
         if x:
             self.indio.siz = (lado*3, lado*4)
             """Define as proporções da folha de sprites"""
-            self.mostra()
+#            self.mostra()
+            self.gira()
 
     def mostra(self):
         """ Modifica a figura (Sprite) do índio mostrando para onde está indo.
@@ -87,7 +92,16 @@ class Indio():
         :param texto: O texto a ser falado.
         """
         self.taba.fala(texto)
-    
+
+    def ativa(self):
+        """ Ativa o proxy do índio para enfileirar comandos.
+        """
+        #self.vitollino.ativa()
+        self.indio.ativa()
+
+    def passo(self):
+        self.indio.executa()
+        
     def anda(self):
         """Objeto tenta sair, tem que consultar a vaga onde está"""
         self.vaga.sair()
