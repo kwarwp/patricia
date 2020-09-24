@@ -7643,3 +7643,32 @@ TypeError: 'JogoProxy' object is not callable
     Vazio.VITOLLINO = self.v = vitollino()
 TypeError: 'JogoProxy' object is not callable
 '''},
+{'date': 'Thu Sep 24 2020 17:00:09.521 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''False False <function _command>
+False False <function _command>
+False False <function _command>
+Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 631
+    main(Jogo, STYLE)
+  module <module> line 625
+    Kwarwp(jogo_proxy, medidas=medidas, mapa=MAPA_INICIO)
+  module <module> line 436
+    self.cena = self.cria(mapa=self.mapa) if vitollino else None
+  module <module> line 473
+    self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
+  module <module> line 604
+    self.o_indio = self.indios[0](imagem, x=1, y=0, cena=cena, taba=self, vitollino=self.v)
+  module <module> line 232
+    self.gira()
+AttributeError: 'Indio' object has no attribute 'gira'
+'''},
