@@ -82,7 +82,6 @@ class JogoProxy():
             """ Adapta um Elemento do Vitollino para agrupar ocupa e pos.
 
             """
-
             def ocupa(self, ocupante=None, pos=(0, 0)):
                 # super().elt.pos = pos
                 #vitollino.a.pos.fset(self, pos)
@@ -623,7 +622,6 @@ def main(vitollino, medidas={}):
     """
     
     jogo_proxy = JogoProxy(vitollino=vitollino)
-    jogo_proxy.cria()
     Kwarwp(jogo_proxy, medidas=medidas)
         
     
