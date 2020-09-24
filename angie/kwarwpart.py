@@ -24,6 +24,150 @@
         
 """
 
+
+class JogoProxy():
+
+    """ Proxy que enfileira comandos gráficos.
+
+    :param vitollino: Empacota o engenho de jogo Vitollino.
+    :param elt: Elemento que vai ser encapsulado pelo proxy.
+    :param proxy: Referência para o objeto proxy parente.
+    :param master: Determina se este elemento vai ser mestre de comandos.
+    """
+
+    def __init__(self, vitollino=None, elt=None, proxy=None, master=False):
+        class AdaptaElemento(vitollino.a):
+            """ Adapta um Elemento do Vitollino para agrupar ocupa e pos.
+
+            """
+
+            def ocupa(self, ocupante=None, pos=(0, 0)):
+                # super().elt.pos = pos
+                #vitollino.a.pos.fset(self, pos)
+                ocupante = ocupante or NULO
+                ocupante.pos = pos
+                # print(f"AdaptaElemento pos: {self.pos}")
+                super().ocupa(ocupante) if ocupante else None
+
+        self.v = vitollino
+        self.proxy = proxy or self
+        self.master = master # or NULO
+        self._corrente = self
+        self.comandos = []
+        self._ativa = False
+        """Cria um referência para o jogo do vitollino"""
+        self.ae = AdaptaElemento
+        """Cria um referência o Adapador de Eelementos"""
+        self.elt = elt
+
+    @property
+    def siz(self):
+        """Propriedade tamanho"""
+        return self.elt.siz
+
+    def a(self, *args, **kwargs):
+        """Método fábrica - Encapsula a criação de elementos
+
+        :param args: coleção de argumentos posicionais.
+        :param kwargs: coleção de argumentos nominais.
+        :return: Proxy para um Elemento construído com estes argumentos.
+
+        """
+        return JogoProxy(elt=self.ae(*args, **kwargs), vitollino=self.v, proxy=self)
+
+    def e(self, *args, **kwargs):
+        """Método fábrica - Encapsula a criação de elementos ativos, que executam scripts
+
+        :param args: coleção de argumentos posicionais.
+        :param kwargs: coleção de argumentos nominais.
+        :return: Proxy para um Elemento construído com estes argumentos.
+
+        """
+        return JogoProxy(elt=self.ae(*args, **kwargs), vitollino=self.v, proxy=self, master=True)
+
+    def cria(self):
+        """Fábrica do JogoProxy"""
+        return self
+
+    @property
+    def corrente(self):
+        """Retorna o proxy master acertado no parente"""
+        return self.proxy._corrente
+
+    @corrente.setter
+    def corrente(self, mestre):
+        """Estabelece o proxy master"""
+        self._corrente = mestre
+
+    def ativa(self):
+        """Ativa bufferização do JogoProxy"""
+        # JogoProxy.ATIVA = True
+        self._ativa = True
+        self.proxy.corrente = self
+
+    def lidar(self, metodo_command):
+        """Lida com modo de operação do JogoProxy - bufferizado ou não"""
+        self.ativa() if self.master else None
+        print(self._ativa, self.proxy._ativa, metodo_command)
+        self.corrente._enfileira(metodo_command) if self.proxy._ativa else self._executa(metodo_command)
+
+    def c(self, *args, **kwargs):
+        """Método fábrica - Encapsula a criação de cenas - apenas delega.
+
+        :param args: coleção de argumentos posicionais.
+        :param kwargs: coleção de argumentos nominais.
+        :return: Uma Cena do Vitollino construída com estes argumentos.
+
+        """
+        return self.v.c(*args, **kwargs)
+
+    @siz.setter
+    def siz(self, value):
+        """Propriedade tamanho"""
+        self.elt.siz = value
+
+    @property
+    def pos(self):
+        """Propriedade posição"""
+        return self.elt.pos
+
+    @property
+    def x(self):
+        """Propriedade posição x"""
+        return self.elt.x
+
+    @property
+    def y(self):
+        """Propriedade posição y"""
+        return self.elt.y
+
+    @pos.setter
+    def pos(self, value):
+        """Propriedade posição"""
+        def _command(val=value):
+            self.elt.pos = val
+        self.lidar(_command)
+
+    def ocupa(self, ocupante=None, pos=(0, 0)):
+        """Muda a posição e atitude de um elemento"""
+        def _command(val=ocupante):
+            destino = val.elt if val else None
+            self.elt.ocupa(destino, pos)
+        self.lidar(_command)
+
+    def _enfileira(self, metodo_command):
+        """Coloca um comando na fila"""
+        self.comandos.append(metodo_command)
+
+    def _executa(self, metodo_command):
+        """Executa imediamente um comando, não põe na fila"""
+        metodo_command()
+
+    def executa(self, *_):
+        """Tira e executa um comando na fila"""
+        self.comandos.pop(0)() if self.comandos else None
+
+
 class Nulo:
     """Objeto nulo que responde passivamente a todas as requisições."""
     def __init__(self):
