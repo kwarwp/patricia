@@ -6365,3 +6365,36 @@ Traceback (most recent call last):
     self.indios = nt(indios or [Indio])
 TypeError: namedtuple missing 1 positional argument: 'field_names'
 '''},
+{'date': 'Thu Sep 24 2020 15:40:37.917 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''main(vitollino=function(){
+if(kls.$instanciable!==undefined){return function(){throw _b_.TypeError(
+"Can't instantiate abstract "+
+"class interface with abstract methods")}}
+var args=[kls.$factory]
+for(var i=0;i < arguments.length;i++){args.push(arguments[i])}
+return meta_call.apply(null,args)} medidas=[object Object]
+Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 629
+    main(Jogo, STYLE)
+  module <module> line 623
+    Kwarwp(vitollino, medidas=medidas).cria()
+  module <module> line 435
+    self.cena = self.cria(mapa=self.mapa) if vitollino else None
+  module <module> line 472
+    self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
+  module <module> line 603
+    self.o_indio = self.indios[0](imagem, x=1, y=0, cena=cena, taba=self, vitollino=self.v)
+  module <module> line 225
+    self.indio = self.vitollino.e(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+AttributeError: 'Jogo' object has no attribute 'e'
+'''},
