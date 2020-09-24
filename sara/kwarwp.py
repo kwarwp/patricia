@@ -282,6 +282,13 @@ class Indio():
         """ Roteiro do índio. Conjunto de comandos para ele executar.
         """
         self.anda()
+        self.esquerda()
+        self.anda()
+        self.esquerda()
+        self.anda()
+        self.esquerda()
+        self.anda()
+        self.esquerda()
         
         
     def sai(self):
