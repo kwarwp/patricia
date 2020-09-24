@@ -3260,3 +3260,10 @@ AttributeError: 'Tora' object has no attribute 'empurrante'
 'error': ''''''},
 {'date': 'Thu Sep 17 2020 17:34:43.823 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
 'error': ''''''},
+{'date': 'Thu Sep 24 2020 16:01:10.599 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 286
+  style={"padding-top": "10px", "text-align": "center"})
+  ^
+IndentationError: unexpected indent
+'''},
