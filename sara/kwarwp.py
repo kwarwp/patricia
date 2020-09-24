@@ -77,6 +77,7 @@ class JogoProxy():
     """
 
     def __init__(self, vitollino=None, elt=None, proxy=None, master=False):
+    
         class AdaptaElemento(vitollino.a):
             """ Adapta um Elemento do Vitollino para agrupar ocupa e pos.
 
@@ -621,7 +622,7 @@ def main(vitollino, medidas={}):
     :param medidas: Um dicionário usado para redimensionar a tela.
     """
     print(f"main(vitollino={vitollino} medidas={medidas}")
-    Kwarwp(JogoProxy(), medidas=medidas).cria()
+    Kwarwp(JogoProxy(vitollino), medidas=medidas).cria()
         
     
 if __name__ == "__main__":
