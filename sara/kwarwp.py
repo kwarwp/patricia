@@ -621,7 +621,10 @@ def main(vitollino, medidas={}):
     :param vitollino: Empacota o engenho de jogo Vitollino.
     :param medidas: Um dicionário usado para redimensionar a tela.
     """
-    Kwarwp(JogoProxy(vitollino=vitollino), medidas=medidas).cria()
+    
+    jogo_proxy = JogoProxy(vitollino=vitollino)
+    jogo_proxy.cria()
+    Kwarwp(jogo_proxy, medidas=medidas)
         
     
 if __name__ == "__main__":
