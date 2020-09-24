@@ -8,144 +8,112 @@ Changelog
 .. versionadded::    17.09
        
 """
-from _spy.vitollino.main import Jogo
-from unittest import TestCase
-# from unittest.mock import MagicMock
-from kwarwp.kwarapp import Kwarwp, Indio
-from kwarwp.kwarwpart import Piche, Vazio, Oca, Tora, NULO
-#sys.path.insert(0, os.path.abspath('../../libs'))
+class Kwarwp():
+""" Jogo para ensino de programação.
 
-class Test_Kwarwp(TestCase):
-    """ Teste do Jogo para ensino de programação.
+    :param vitollino: Empacota o engenho de jogo Vitollino.
+    :param mapa: Um texto representando o mapa do desafio.
+    :param medidas: Um dicionário usado para redimensionar a tela.
+    :param indios: Uma coleção com outros índios e outros comportamentos.
+"""
+
+def __init__(self, vitollino=None, mapa=None, medidas={}, indios=()):
+    Vazio.VITOLLINO = self.v = vitollino()
+    self.vitollino = vitollino
+    """Referência estática para obter o engenho de jogo."""
+    self.mapa = (mapa or MAPA_INICIO).split()
+    """Cria um matriz com os elementos descritos em cada linha de texto"""
+    self.taba = {}
+    """Cria um dicionário com os elementos traduzidos a partir da interpretação do mapa"""
+    self.o_indio = NULO
+    self.os_indios = []
+    """Instância do personagem principal, o índio, vai ser atribuído pela fábrica do índio"""
+    self.lado, self.col, self.lin = 100, len(self.mapa[0]), len(self.mapa)+1
+    """Largura da casa da arena dos desafios, número de colunas e linhas no mapa"""
+    Vazio.LADO = self.lado
+    """Referência estática para definir o lado do piso da casa."""
+    w, h = self.col *self.lado, self.lin *self.lado
+    medidas.update(width=w, height=f"{h}px")
+    self.indios = deque(indios or [Indio])
+    self.cena = self.cria(mapa=self.mapa) if vitollino else None
+
+def cria(self, mapa=""):
+    """ Fábrica de componentes.
+
+    :param mapa: Um texto representando o mapa do desafio.
     """
+    Fab = nt("Fab", "objeto imagem")
+    """Esta tupla nomeada serve para definir o objeto construido e sua imagem."""
 
-    ABERTURA = "https://i.imgur.com/dZQ8liT.jpg"
-    INDIO = "https://imgur.com/UCWGCKR.png"
-    OCA = "https://imgur.com/dZQ8liT.jpg"
-    PICHE = "https://imgur.com/tLLVjfN.png"
-    TORA = "https://imgur.com/0jSB27g.png"
-    
-    def setUp(self):
-        elts = self.elts = {}
-        class FakeTaba:
-            def __init__(self):
-                self.falou = ""
-            def sai(self,*_):
-                pass
-            def fala(self, falou):
-                self.falou = falou
-                
-        self.k = Kwarwp(Jogo)
-        self.t = FakeTaba()
-        self.LADO = Vazio.LADO
-    
-    def set_fake(self):
-        elts = self.elts = {}
-        class FakeCena:
-            def __init__(self, *_, **__):
-                pass
-            def vai(self, *_, **__):
-                pass
-            
-        class FakeElemento:
-            def __init__(self, img=0, x=0, y=0, w=0, h=0, vai=None, elts=elts, **kwargs):
-                elts[img] = self
-                self.img, self.x, self.y, self.w, self.h, self.vai = img, x, y, w, h, vai
-                self.destino, self._pos, self._siz = [None]*3
-            def ocupa(self, destino):
-                self.destino = destino.elt
-            @property
-            def elt(self):
-                return self
-            @property
-            def siz(self):
-                return self._siz
-            @property
-            def pos(self):
-                return self._pos
-            @siz.setter
-            def siz(self, value):
-                self._siz = value
-            @pos.setter
-            def pos(self, value):
-                self._pos = value
-        Vazio.VITOLLINO.a = FakeElemento
-        Vazio.VITOLLINO.c = FakeCena
-        
-    def testa_cria(self):
-        """ Cria o ambiente de programação Kwarwp."""
-        self.set_fake()
-        cena = self.k.cria()
-        # self.assertIn("Vitollino_cria",  str(cena), cena)
-        self.assertIn(self.INDIO, self.elts)
+    fabrica = {
+    "&": Fab(self.maloc, f"{IMGUR}dZQ8liT.jpg"), # OCA
+    "^": Fab(self.indio, f"{IMGUR}UCWGCKR.png"), # INDIO
+    "$": Fab(self.indio, f"{IMGUR}nvrwu0r.png"), # INDIA
+    "p": Fab(self.indio, f"{IMGUR}HeiupbP.png"), # PAJE
+    ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), # VAZIO
+    "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), # SOLO
+    "#": Fab(self.atora, f"{IMGUR}0jSB27g.png"), # TORA
+    "@": Fab(self.barra, f"{IMGUR}tLLVjfN.png"), # PICHE
+    "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), # CEU
+    "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), # SOL
+    "|": Fab(self.coisa, f"{IMGUR}uwYPNlz.png")  # CERCA
+    }
+    """Dicionário que define o tipo e a imagem do objeto para cada elemento."""
+    mapa = mapa if mapa != "" else self.mapa
+    """Cria um cenário com imagem de terra de chão batido, céu e sol"""
+    mapa = self.mapa
+    lado = self.lado
+    cena = self.v.c(fabrica["_"].imagem)
+    self.ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado-10, x=0, y=0, cena=cena, vai=self.passo,
+                   style={"padding-top": "10px", "text-align": "center"})
+    """No argumento *vai*, associamos o clique no céu com o método **executa ()** desta classe.
+       O *ceu* agora é um argumento de instância e por isso é referenciado como **self.ceu**.
+    """
+    sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena, vai=self.executa)
+    """No argumento *vai*, associamos o clique no sol com o método **esquerda ()** desta classe."""
+    self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
+        for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
+    """Posiciona os elementos segundo suas posições i, j na matriz mapa"""
+    cena.vai()
+    return cena
 
-    def testa_move_indio(self):
-        """ Move o índio, andando em frente."""
-        self.set_fake()
-        cena = self.k.move()
-        coisa = self.k.indio[3,3]
-        self.assertIsInstance(coisa.ocupante,  Move, f"but ocupante was {coisa.ocupante}")
-        self.assertEqual(100, coisa.lado, f"but coisa.lado was {coisa.lado}")
-        indio = self.elts[self.MOVE]
-        self.assertEqual(coisa.ocupante.indio, move, f"but coisa.ocupante.indio was {coisa.ocupante.indio}")
-        self.assertEqual((0, 0), move.pos, f"but indio.pos was {indio.pos}")
-        
-    def testa_cria_tora(self):
-        """ Cria a tora com a fábrica."""
-        self.set_fake()
-        cena = self.k.cria()
-        coisa = self.k.taba[1,3]
-        self.assertIsInstance(coisa.ocupante,  Tora, f"but ocupante was {coisa.ocupante}")
-        self.assertEqual(100, coisa.lado, f"but coisa.lado was {coisa.lado}")
-        tora = self.elts[self.TORA]
-        self.assertEqual(coisa.ocupante.vazio, tora, f"but coisa.ocupante.indio was {coisa.ocupante.vazio}")
-        self.assertEqual((0, 0), tora.pos, f"but tora.pos was {tora.pos}")
-        
-    def testa_empurra_tora(self):
-        """ Vai até a tora e empurra."""
-        cena = self.k.cria()
-        vaga_tora = self.k.taba[1, 3]
-        self.assertEqual(vaga_tora.taba,  self.k, f"but taba was {vaga_tora.taba}")
-        tora = vaga_tora.ocupante
-        pos = tora.posicao
-        self.assertEqual((1, 3),  pos, f"but last pos was {pos}")
-        indio = self.k.o_indio
-        indio.esquerda()
-        indio.anda()
-        pos = indio.posicao
-        self.assertEqual((2, 3),  pos, f"but indio pos was {pos}")
-        vaga = indio.vaga
-        indio.empurra()
-        pos = tora.posicao
-        self.assertEqual((0, 3),  pos, f"but tora pos was {pos}")
-        self.assertEqual(vaga.ocupante,  NULO, f"but vaga ocupante was {vaga.ocupante}")
-        vaga = indio.vaga
-        indio.empurra()
-        pos = tora.posicao
-        self.assertEqual((0, 3),  pos, f"but tora new pos was {pos}")
-        self.assertEqual(vaga.ocupante,  indio, f"but vaga new  ocupante {vaga.ocupante}")
-        vaga = tora.vaga
-        indio.pega()
-        pos = tora.posicao
-        self.assertEqual((1, 3),  pos, f"but tora taken pos was {pos}")
-        self.assertEqual(vaga.ocupante,  NULO, f"but vaga taken  ocupante {vaga.ocupante}")
-        self.assertEqual(tora.vaga,  indio, f"but tora vaga {tora.vaga}")
-        # vaga = tora.vaga
-        indio.larga()
-        pos = tora.posicao
-        self.assertEqual((0, 3),  pos, f"but tora drop pos was {pos}")
-        self.assertEqual(vaga.ocupante,  tora, f"but vaga drop  ocupante {vaga.ocupante}")
-        self.assertEqual(tora.vaga,  vaga, f"but tora drop vaga {tora.vaga}")
-        return indio, tora
+def passo(self, *_):
+    """ Ordena a execução do roteiro do índio.
+    """
+    # self.o_indio.esquerda()
+    # self.v.executa()
+    # self.o_indio.passo()
 
-def main():
-    # from unittest import main
-    # main()
+    [indio.passo() for indio in self.os_indios]
 
-    import unittest
-    import kwarwp.htmlrunner as htmlrun
-    suite = unittest.TestLoader().loadTestsFromTestCase(Test_Kwarwp)
-    htmlrun.HTMLTestRunner().run(suite)        
-    
-if __name__ == "__main__":
-    main()
+
+def executa(self, *_):
+    """ Ordena a execução do roteiro do índio.
+    """
+    # self.v.ativa()
+    # JogoProxy.ATIVA = True
+    # self.o_indio.ativa()
+    # self.o_indio.executa()
+    # [indio.ativa() and indio.executa() for indio in self.os_indios]
+    self.os_indios[0].ativa()
+    self.v.ativa()
+    self.os_indios[0].executa()
+
+def indio(self, imagem, x, y, cena):
+    """ Cria o personagem principal na arena do Kwarwp na posição definida.
+
+    :param x: coluna em que o elemento será posicionado.
+    :param y: linha em que o elemento será posicionado.
+    :param cena: cena em que o elemento será posicionado.
+    """
+    self.o_indio = self.indios[0](imagem, x=1, y=0, cena=cena, taba=self, vitollino=self.v)
+    """ O índio tem deslocamento zero, pois é relativo à vaga.
+        O **x=1** serve para distinguir o indio de outros derivados.
+    """
+    self.o_indio.indio.vai = lambda *_: self.o_indio.pega()
+    """o índio.vai é associado ao seu próprio metodo pega"""
+    vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
+    self.os_indios.append(self.o_indio)
+    self.indios.rotate()
+    """recebe a definição do próximo índio"""
+    return vaga
