@@ -283,11 +283,11 @@ class Kwarwp():
         lado = self.lado
         cena = self.v.c(fabrica["_"].imagem)
 #        self.ceu = self.v.a(fabrica["~"].imagem, w=lado*self.col, h=lado-10, x=0, y=0, cena=cena, vai=self.executa,
-                       style={"padding-top": "10px", "text-align": "center"})
+#                       style={"padding-top": "10px", "text-align": "center"})
         """No argumento *vai*, associamos o clique no céu com o método **executa ()** desta classe.
            O *ceu* agora é um argumento de instância e por isso é referenciado como **self.ceu**.
         """
-#        sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena, vai=self.esquerda)
+#        sol = self.v.a(fabrica["*"].imagem, w=60, h=60, x=0, y=40, cena=cena, vai=self.esqu
         """No argumento *vai*, associamos o clique no sol com o método **esquerda ()** desta classe."""
 #        self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
 #            for j, linha in enumerate(mapa) for i, imagem in enumerate(linha)}
@@ -401,8 +401,8 @@ class Kwarwp():
     # self.o_indio.ativa()
     # self.o_indio.executa()
     # [indio.ativa() and indio.executa() for indio in self.os_indios]
-    self.os_indios[0].ativa()
-    self.v.ativa()
+        self.os_indios[0].ativa()
+        self.v.ativa()
     self.os_indios[0].executa()
     
     def maloc(self, imagem, x, y, cena):
