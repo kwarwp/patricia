@@ -423,3 +423,10 @@ Exception: <TypeError: Cannot read property '$methods' of undefined>
 'error': '''
 Exception: <TypeError: Cannot read property '$methods' of undefined>
 '''},
+{'date': 'Thu Sep 24 2020 17:42:43.848 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 19
+  """ Jogo para ensino de programação.
+  ^
+IndentationError: expected an indented block
+'''},
