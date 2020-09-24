@@ -1794,3 +1794,10 @@ TypeError: 'module' object is not callable
     coisa = Piche(imagem, x=0, y=0, cena=cena, taba=self)
 TypeError: 'module' object is not callable
 '''},
+{'date': 'Thu Sep 24 2020 16:54:50.755 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 31
+  """ Proxy que enfileira comandos gráficos.
+  ^
+IndentationError: expected an indented block
+'''},
