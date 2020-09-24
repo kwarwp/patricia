@@ -420,7 +420,7 @@ class Kwarwp():
     """Referência estática para definir o lado do piso da casa."""
     
     def __init__(self, vitollino=None, mapa=None, medidas={}, indios=()):
-        Vazio.VITOLLINO = self.v = vitollino()
+        Vazio.VITOLLINO = self.v = vitollino.cria()
         self.vitollino = vitollino
         """Referência estática para obter o engenho de jogo."""
         self.mapa = (mapa or MAPA_INICIO).split()
@@ -625,7 +625,7 @@ def main(vitollino, medidas={}):
     :param medidas: Um dicionário usado para redimensionar a tela.
     """
     
-    jogo_proxy = JogoProxy(vitollino=vitollino()).cria()
+    jogo_proxy = JogoProxy(vitollino=vitollino())
     Kwarwp(jogo_proxy, medidas=medidas, mapa=MAPA_INICIO)
         
     
