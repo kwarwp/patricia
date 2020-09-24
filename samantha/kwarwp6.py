@@ -203,14 +203,14 @@ class Indio():
             self.mostra()
             
     def ativa(self):
-    """ Ativa o proxy do índio para enfileirar comandos.
-    """
-    #self.vitollino.ativa()
-    self.indio.ativa()
+        """ Ativa o proxy do índio para enfileirar comandos.
+        """
+        #self.vitollino.ativa()
+        self.indio.ativa()
 
 
     def passo(self):
-    self.indio.executa()
+        self.indio.executa()
             
     def empurra(self):
         """Objeto tenta sair, tem que consultar a vaga onde está"""
