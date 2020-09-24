@@ -27,6 +27,7 @@ Changelog
 
 
 from collections import namedtuple as nt
+from collections import deque
 from sara.kwarwpart import Vazio
 from sara.kwarwpart import Piche
 from sara.kwarwpart import Oca 
