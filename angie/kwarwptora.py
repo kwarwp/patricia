@@ -227,9 +227,9 @@ class Kwarwp():
 
         :param vitollino: Empacota o engenho de jogo Vitollino.
     """
-    VITOLLINO = None
+#    VITOLLINO = None
     """Referência estática para obter o engenho de jogo."""
-    LADO = None
+#    LADO = None
     """Referência estática para definir o lado do piso da casa."""
 
 #    def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
@@ -257,7 +257,7 @@ class Kwarwp():
         """Cria um matriz com os elementos descritos em cada linha de texto"""
         self.taba = {}
         """Cria um dicionário com os elementos traduzidos a partir da interpretação do mapa"""
-        self.o_indio = NULO
+        self.o_indio = None
         self.os_indios = []
         """Instância do personagem principal, o índio, vai ser atribuído pela fábrica do índio"""
         self.lado, self.col, self.lin = 100, len(self.mapa[0]), len(self.mapa)+1
@@ -266,7 +266,7 @@ class Kwarwp():
         """Referência estática para definir o lado do piso da casa."""
         w, h = self.col *self.lado, self.lin *self.lado
         medidas.update(width=w, height=f"{h}px")
-        self.indios = deque(indios or [Indio])
+#        self.indios = deque(indios or [Indio])
         self.cena = self.cria(mapa=self.mapa) if vitollino else None
 
     def cria(self, mapa=""):
@@ -411,13 +411,13 @@ class Kwarwp():
         """
     #    self.o_indio.executa()
     # self.v.ativa()
-    # JogoProxy.ATIVA = True
-    # self.o_indio.ativa()
-    # self.o_indio.executa()
+        JogoProxy.ATIVA = True
+        self.o_indio.ativa()
+        self.o_indio.executa()
     # [indio.ativa() and indio.executa() for indio in self.os_indios]
-        self.os_indios[0].ativa()
-        self.v.ativa()
-    self.os_indios[0].executa()
+#        self.os_indios[0].ativa()
+#        self.v.ativa()
+#    self.os_indios[0].executa()
     
     def maloc(self, imagem, x, y, cena):
         """ Cria uma maloca na arena do Kwarwp na posição definida.
