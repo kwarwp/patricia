@@ -611,7 +611,7 @@ class Kwarwp():
         """
         self.o_indio.indio.vai = lambda *_: self.o_indio.pega()
         """o índio.vai é associado ao seu próprio metodo pega"""
-        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio)
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio, taba=self)
         self.os_indios.append(self.o_indio)
         self.indios.rotate()
         """recebe a definição do próximo índio"""
