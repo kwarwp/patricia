@@ -6998,3 +6998,28 @@ Traceback (most recent call last):
     JogoProxy(vitollino, medidas=medidas).cria()
 TypeError: __init__() got an unexpected keyword argument 'medidas'
 '''},
+{'date': 'Thu Sep 24 2020 16:05:28.634 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''main(vitollino=function(){
+if(kls.$instanciable!==undefined){return function(){throw _b_.TypeError(
+"Can't instantiate abstract "+
+"class interface with abstract methods")}}
+var args=[kls.$factory]
+for(var i=0;i < arguments.length;i++){args.push(arguments[i])}
+return meta_call.apply(null,args)} medidas=[object Object]
+Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 630
+    main(Jogo, STYLE)
+  module <module> line 624
+    JogoProxy(vitollino, medidas=medidas).cria()
+TypeError: __init__() got an unexpected keyword argument 'medidas'
+'''},
