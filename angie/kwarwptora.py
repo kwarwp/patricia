@@ -470,10 +470,21 @@ class Kwarwp():
         """
         pass
 
-
+def main(vitollino, medidas={}):
+    """ Rotina principal que invoca a classe Kwarwp.
+    
+    :param vitollino: Empacota o engenho de jogo Vitollino.
+    :param medidas: Um dicionário usado para redimensionar a tela.
+    """
+    
+    jogo_proxy = JogoProxy(vitollino=vitollino())
+    Kwarwp(jogo_proxy, medidas=medidas, mapa=MAPA_INICIO)
+    
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo, STYLE
     STYLE["width"] = 600
     STYLE["heigth"] = "500px"
     Kwarwp(Jogo, mapa=MAPA_INICIO)
+    
+#    main(Jogo, STYLE)
     
