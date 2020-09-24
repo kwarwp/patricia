@@ -117,3 +117,43 @@ def indio(self, imagem, x, y, cena):
     self.indios.rotate()
     """recebe a definição do próximo índio"""
     return vaga
+    
+    class Indio():
+""" Cria o personagem principal na arena do Kwarwp na posição definida.
+
+    :param imagem: A figura representando o índio na posição indicada.
+    :param x: Coluna em que o elemento será posicionado.
+    :param y: Cinha em que o elemento será posicionado.
+    :param cena: Cena em que o elemento será posicionado.
+    :param taba: Representa a taba onde o índio faz o desafio.
+    :param vitollino: Recebe referência para o vitollino ou proxy.
+"""
+AZIMUTE = Rosa(Ponto(0, -1),Ponto(1, 0),Ponto(0, 1),Ponto(-1, 0),)
+"""Constante com os pares ordenados que representam os vetores unitários dos pontos cardeais."""
+
+def __init__(self, imagem, x, y, cena, taba, vitollino=None):
+    self.vitollino = vitollino or Vazio.VITOLLINO
+    self.lado = lado = Vazio.LADO
+    self.azimute = self.AZIMUTE.n
+    """índio olhando para o norte"""
+    self.taba = taba
+    self.vaga = self
+    self.ocupante = NULO
+    self.posicao = (x//lado,y//lado)
+    self.indio = self.vitollino.e(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
+    self.x = x
+    """Este x provisoriamente distingue o índio de outras coisas construídas com esta classe"""
+    if x:
+        self.indio.siz = (lado*3, lado*4)
+        """Define as proporções da folha de sprites"""
+        self.gira()
+
+def ativa(self):
+    """ Ativa o proxy do índio para enfileirar comandos.
+    """
+    #self.vitollino.ativa()
+    self.indio.ativa()
+
+
+def passo(self):
+    self.indio.executa()
