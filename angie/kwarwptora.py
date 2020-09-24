@@ -412,13 +412,13 @@ class Kwarwp():
         """
     #    self.o_indio.executa()
     # self.v.ativa()
-        JogoProxy.ATIVA = True
-        self.o_indio.ativa()
-        self.o_indio.executa()
+    #    JogoProxy.ATIVA = True
+    #    self.o_indio.ativa()
+    #    self.o_indio.executa()
     # [indio.ativa() and indio.executa() for indio in self.os_indios]
-#        self.os_indios[0].ativa()
-#        self.v.ativa()
-#    self.os_indios[0].executa()
+        self.os_indios[0].ativa()
+        self.v.ativa()
+        self.os_indios[0].executa()
     
     def maloc(self, imagem, x, y, cena):
         """ Cria uma maloca na arena do Kwarwp na posição definida.
