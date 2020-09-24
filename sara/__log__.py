@@ -6550,3 +6550,10 @@ AttributeError: 'Jogo' object has no attribute 'e'
     return Kwarwp(vitollino=vitollino_proxy, medidas=medidas, mapa=mapa, indios=indios)
 NameError: name 'mapa' is not defined
 '''},
+{'date': 'Thu Sep 24 2020 15:53:49.43 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 623
+  JogoProxy.COMANDOS, JogoProxy.ATIVA = [], False
+  ^
+IndentationError: unexpected indent
+'''},
