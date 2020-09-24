@@ -9,13 +9,13 @@ Changelog
        
 """
 class Kwarwp():
-""" Jogo para ensino de programação.
+    """ Jogo para ensino de programação.
 
     :param vitollino: Empacota o engenho de jogo Vitollino.
     :param mapa: Um texto representando o mapa do desafio.
     :param medidas: Um dicionário usado para redimensionar a tela.
     :param indios: Uma coleção com outros índios e outros comportamentos.
-"""
+    """
 
 def __init__(self, vitollino=None, mapa=None, medidas={}, indios=()):
     Vazio.VITOLLINO = self.v = vitollino()
