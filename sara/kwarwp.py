@@ -621,7 +621,7 @@ def main(vitollino, medidas={}):
     :param medidas: Um dicionário usado para redimensionar a tela.
     """
     
-    jogo_proxy = JogoProxy(vitollino=vitollino()).cria()
+    jogo_proxy = JogoProxy(vitollino=vitollino())
     Kwarwp(jogo_proxy, medidas=medidas, mapa=MAPA_INICIO)
         
     
