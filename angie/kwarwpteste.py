@@ -184,24 +184,9 @@ class Test_Kwarwp(TestCase):
         self.assertEqual((0, 1),  pos, f"but indio pos was {pos}")
         indio.larga()
         indio.anda()
+        """ verifica se o índio não conseguiu entrar no piche pois a tora está no lugar"""
         pos = indio.posicao
         self.assertEqual((0, 1),  pos, f"but indio pos was {pos}")
-        
-        
-        
-        #
-        self.assertEqual((2, 3),  pos, f"but indio pos was {pos}")
-        """verifica se o indio andou para o lugar certo"""
-        
-        
-        indio.direita()
-        indio.anda()
-        self.assertEqual((2, 3),  pos, f"but indio pos was {pos}")
-        """verifica se o indio andou para o lugar certo"""
-        r
-        indio.anda()
-        indio.larga()
-        
         return indio, tora
         
     def testa_pega_tora(self):
