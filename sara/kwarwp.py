@@ -431,7 +431,7 @@ class Kwarwp():
         """Referência estática para definir o lado do piso da casa."""
         w, h = self.col *self.lado, self.lin *self.lado
         medidas.update(width=w, height=f"{h}px")
-        #self.indios = deque(indios or [Indio])
+        self.indios = deque(indios or [Indio])
         self.cena = self.cria(mapa=self.mapa) if vitollino else None
 
 
