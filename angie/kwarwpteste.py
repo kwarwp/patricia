@@ -170,8 +170,24 @@ class Test_Kwarwp(TestCase):
         indio.pega()
         indio.anda()
         pos = indio.posicao
-        self.assertEqual((2, 3),  pos, f"but indio pos was {pos}")
+        self.assertEqual((1, 3),  pos, f"but indio pos was {pos}")
         """verifica se o indio andou para o lugar certo"""
+        indio.anda()
+        pos = indio.posicao
+        self.assertEqual((0, 3),  pos, f"but indio pos was {pos}")
+        indio.direita()
+        indio.anda()
+        pos = indio.posicao
+        self.assertEqual((0, 2),  pos, f"but indio pos was {pos}")
+        indio.anda()
+        pos = indio.posicao
+        self.assertEqual((0, 1),  pos, f"but indio pos was {pos}")
+        indio.larga()
+        indio.anda()
+        pos = indio.posicao
+        self.assertEqual((0, 1),  pos, f"but indio pos was {pos}")
+        
+        
         
         #
         self.assertEqual((2, 3),  pos, f"but indio pos was {pos}")
