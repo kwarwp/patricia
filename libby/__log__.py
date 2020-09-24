@@ -1801,3 +1801,10 @@ TypeError: 'module' object is not callable
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Thu Sep 24 2020 17:02:50.301 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 31
+  """ Proxy que enfileira comandos gráficos.
+  ^
+IndentationError: expected an indented block
+'''},
