@@ -367,3 +367,10 @@ Exception: <TypeError: bases[i].$dict is undefined>
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Thu Sep 24 2020 15:58:27.156 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 206
+  """ Ativa o proxy do índio para enfileirar comandos.
+  ^
+IndentationError: expected an indented block
+'''},
