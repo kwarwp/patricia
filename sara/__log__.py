@@ -6219,3 +6219,10 @@ Exception: <TypeError: Cannot read property '$methods' of undefined>
 'error': '''
 Exception: <TypeError: Cannot read property '$methods' of undefined>
 '''},
+{'date': 'Thu Sep 24 2020 15:37:02.808 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 417
+  def __init__(self, vitollino=None, mapa=None, medidas={}, indios=()):
+  ^
+IndentationError: unexpected indent
+'''},
