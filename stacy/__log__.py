@@ -415,3 +415,7 @@ AttributeError: 'NoneType' object has no attribute 'a'
 '''},
 {'date': 'Thu Sep 17 2020 17:08:19.220 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
 'error': ''''''},
+{'date': 'Thu Sep 24 2020 15:32:32.73 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: Cannot read property '$methods' of undefined>
+'''},
