@@ -37,13 +37,13 @@ Rosa = nt("Rosa", "n l s o")
 """Rosa dos ventos com as direções norte, leste, sul e oeste."""
 
 class JogoProxy():
-""" Proxy que enfileira comandos gráficos.
+    """ Proxy que enfileira comandos gráficos.
 
-:param vitollino: Empacota o engenho de jogo Vitollino.
-:param elt: Elemento que vai ser encapsulado pelo proxy.
-:param proxy: Referência para o objeto proxy parente.
-:param master: Determina se este elemento vai ser mestre de comandos.
-"""
+    :param vitollino: Empacota o engenho de jogo Vitollino.
+    :param elt: Elemento que vai ser encapsulado pelo proxy.
+    :param proxy: Referência para o objeto proxy parente.
+    :param master: Determina se este elemento vai ser mestre de comandos.
+    """
 
 def __init__(self, vitollino=None, elt=None, proxy=None, master=False):
     class AdaptaElemento(vitollino.a):
