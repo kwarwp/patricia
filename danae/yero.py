@@ -120,7 +120,7 @@ class kkkk():
         
     
     def entrou_9(self,*_):
-        self.belem
+        self.belem.vai()
         self.padre.entra(self.belem)
         self.padre.vai=Texto(self.belem, "Após traduzir a sagrada escritura , Jerônimo mudou-se para Belém a cidade onde nasceu nosso Salvador.", foi=self.entrou_10).vai
     
