@@ -1683,3 +1683,10 @@ SyntaxError: invalid syntax
                                      ^
 SyntaxError: keyword can't be an expression
 '''},
+{'date': 'Fri Sep 25 2020 18:39:57.686 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 93
+  def entrou_curi(self,*_)
+                           ^
+SyntaxError: invalid syntax
+'''},
