@@ -108,7 +108,7 @@ class kkkk():
         self.padre.entra(self.caverna)
         self.padre.vai=Texto(self.caverna,"Por ter aprendido as linguas originais para melhor compreender as escrituras, Nosso padroeiro pôde a pedido do Papa Damaso traduzir as escrituras para o Latim.", foi=self.entrou_7).vai 
     
-    def entro_7(self,*_):
+    def entrou_7(self,*_):
         self.biblia.vai()
         self.padre.entra(self.biblia)
         self.padre.vai=Texto(self.biblia, "A tradução da sagrada escritura recebeu o nome Vulgata.", foi=self.entrou_8).vai
