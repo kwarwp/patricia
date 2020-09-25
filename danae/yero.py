@@ -50,7 +50,7 @@ class kkkk():
         self.roma= Cena(img=ROMA)
         self.ordenacao= Cena(img=ORDDENACAO_SACERDOTAL)
         self.sonho= Cena(img=SONHO)
-        self.cr= Cena(img=CURIOSIDADE)
+        self.curiosidade= Cena(img=CURIOSIDADE)
         self.caverna= Cena(img=CAVERNA)
         #self.pl= Elemento(img=PAPA_LIBERIO)
         self.pl= Cena(img=PAPA_LIBERIO)
