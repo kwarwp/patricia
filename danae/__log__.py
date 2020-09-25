@@ -1697,3 +1697,10 @@ SyntaxError: invalid syntax
                          ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Sep 25 2020 18:40:37.994 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 121
+  self.padre.vai=Texto(self.leao "É um leão!!").vai
+                                  ^
+SyntaxError: invalid syntax
+'''},
