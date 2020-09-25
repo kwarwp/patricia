@@ -1669,3 +1669,10 @@ IndentationError: expected an indented block
                         ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Sep 25 2020 18:38:10.867 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 86
+  self.padre.vai=.vai=Texto(self.pl, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.").vai
+                  ^
+SyntaxError: invalid syntax
+'''},
