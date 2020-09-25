@@ -17,14 +17,14 @@ STYLE["height"]='650px'
 
 FLAVINHO ="https://i.imgur.com/fv9BZ54.jpeg"
 FOTO_PRINCIPAL ="https://i.imgur.com/aisVckn.jpg"
-DALMACIA ="https://imgur.com/dyLIQib"
+DALMACIA ="https://imgur.com/dyLIQib.jpg"
 JERONIMO_JOVEM ="blob:https://web.whatsapp.com/edad8633-e384-4538-b7f3-ddd4837df1c0"
 JERONIMO_VELHO =""
 CURIOSIDADE ="" 
 LEAO ="blob:https://web.whatsapp.com/78b2c07d-57e3-4b38-92d1-2dfff506a540"
 PAPA_LIBERIO="https://imgur.com/vlIrMHW"
 BATIZADO_JERONIMO  =""
-ROMA ="https://imgur.com/Zh5yUpP"
+ROMA ="https://imgur.com/Zh5yUpP.jpg"
 ORDDENACAO_SACERDOTAL ="https://imgur.com/qZ3zINX"
 SONHO ="blob:https://web.whatsapp.com/2960c698-2f09-4eff-abd9-6ee5d4b7ee47"
 JERONIMO_CAVERNA =""
@@ -66,17 +66,19 @@ class kkkk():
     
     def entrou_padre(self,*_):
             self.padre.entra(self.f_t)
-            fala=Texto(self.f_t, "Eu sou o Padre Flávio e vou te ajudar nessa aventura sobre a história do nosso amado padroeiro").vai
+            fala=Texto(self.f_t, "Eu sou o Padre Flávio e vou te ajudar nessa aventura sobre a história do nosso amado padroeiro", foi=self.entrou_1)
             self.padre.vai=Texto(self.f_t, "olá pessoal, certinho?", foi=fala.vai).vai
         
     def entrou_1(self,*_):
-            self.padre.entra(self.dalmacia)
-            self.padre.vai=Texto(self.dalmacia, "São Jerônimo nasceu na Dalmácia no ano de 340.").vai
+        self.dalmacia.vai()
+        self.padre.entra(self.dalmacia)
+        self.padre.vai=Texto(self.dalmacia, "São Jerônimo nasceu na Dalmácia no ano de 340.", foi=self.entrou_2).vai
         
         
     def entrou_2(self,*_):
-            self.padre.entra(self.roma)
-            self.padre.vai=Texto(self.roma, "Após a morte de seus pais, Jerônimo foi para Roma estudar e durante sua permanencia teve um sonho muito importante para sua conversão.").vai
+        self.roma.vai()
+        self.padre.entra(self.roma)
+        self.padre.vai=Texto(self.roma, "Após a morte de seus pais, Jerônimo foi para Roma estudar e durante sua permanencia teve um sonho muito importante para sua conversão.").vai
         
         
     def entrou_3(self,*_):
