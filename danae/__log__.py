@@ -1704,3 +1704,10 @@ SyntaxError: invalid syntax
                                   ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Sep 25 2020 18:42:31.586 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 123
+  def entrou_12(self,*_)
+                         ^
+SyntaxError: invalid syntax
+'''},
