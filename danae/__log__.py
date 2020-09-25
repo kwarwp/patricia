@@ -1662,3 +1662,10 @@ IndentationError: expected an indented block
               ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Fri Sep 25 2020 18:36:20.487 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 80
+  def entrou_3(self,*_)
+                        ^
+SyntaxError: invalid syntax
+'''},
