@@ -83,14 +83,14 @@ class kkkk():
 
     def entrou_4(self,*_):
             self.padre.entra(self.pl)
-            self.padre.vai=.vai=Texto(self.pl, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.").vai
-            self.padre.vai=Texto(self.fp, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.").vai
+            self.padre.vai=Texto(self.pl, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.").vai
+            #self.padre.vai=Texto(self.fp, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.").vai
         
     def entrou_5(self,*_):
             self.padre.entra(self.ordenacao)
-            self.padre.vai=Texto(self.ordenacao= "Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
+            self.padre.vai=Texto(self.ordenacao, "Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
     
-    def entrou_curi(self,*_)
+    def entrou_curi(self,*_):
             self.padre.entra(self.curiosidade)
             self.padre.vai=Texto(self.curiosidade,"Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
 
@@ -116,7 +116,7 @@ class kkkk():
         self.padre.vai=Texto(self.f_p, "Jerônimo morreu no dia 30 de setembro de 420 em Belém, por isso o dia da Biblía e de São Jerônimo são comemorados no dia 30 de setembro.").vai
     
     
-    def entrou_11(self,*_)
+    def entrou_11(self,*_):
         self.padre.entra(self.leao)
         self.padre.vai=Texto(self.leao "É um leão!!").vai
     
