@@ -10,13 +10,13 @@ Changelog
         Descreva o que você adicionou no código.
 
 """
-from _spy.vitollino.main import Cena, Elemento, Texto, Sala
-from _spy.vitollino.main import inventario as inv
+from _spy.vitollino.main import Cena, Elemento, Texto, Sala, STYLE
+from _spy.vitollino.main import INVENTARIO as inv
 STYLE["width"]=900
 STYLE["height"]='650px'
 
-FLAVINHO ="https://imgur.com/fv9BZ54"
-FOTO_PRINCIPAL =""
+FLAVINHO ="https://i.imgur.com/fv9BZ54.jpeg"
+FOTO_PRINCIPAL ="https://i.imgur.com/aisVckn.jpg"
 DALMACIA ="https://imgur.com/dyLIQib"
 JERONIMO_JOVEM ="blob:https://web.whatsapp.com/edad8633-e384-4538-b7f3-ddd4837df1c0"
 JERONIMO_VELHO =""
@@ -31,7 +31,7 @@ JERONIMO_CAVERNA =""
 BIBLIA ="https://imgur.com/QPELbOd"
 VULGATA =""
 BELEM ="https://imgur.com/sf5X4cr"
-FOTO_DO_PADROEIRO ="https://imgur.com/Y0CZrXO"
+FOTO_DO_PADROEIRO ="https://imgur.com/Y0CZrXO.jpg"
 FRASE =""
 CENA_FINAL="https://imgur.com/kRQyK02"
 PAPAD="https://imgur.com/a/bO5ZNKx"
@@ -41,7 +41,7 @@ class kkkk():
     def __init__(self):
         self.ft= Cena(img=FOTO_PAROQUIA)
         self.leao= Cena(img=LEAO)
-        self.padre= Elemento(img=FALVINHO)
+        self.padre= Elemento(img=FLAVINHO)
         self.f_t= Cena(img=FOTO_PRINCIPAL)
         self.dalmacia= Cena(img=DALMACIA)
         self.j_j= Elemento(img=JERONIMO_JOVEM)
@@ -61,11 +61,13 @@ class kkkk():
         self.frase= Cena(img=FRASE)
         self.cf= Cena(img=CENA_FINAL)
         self.pd= Elemento(img=PAPAD)
+        self.f_t.vai()
+        self.entrou_padre()
     
     def entrou_padre(self,*_):
             self.padre.entra(self.f_t)
-            self.padre.vai=Texto(self.f_t, "olá pessoal, certinho?").vai
-            self.padre.vai=Texto(self.f_t, "Eu sou o Padre Flávio e vou te ajudar nessa aventura sobre a história do nosso amado padroeiro").vai
+            fala=Texto(self.f_t, "Eu sou o Padre Flávio e vou te ajudar nessa aventura sobre a história do nosso amado padroeiro").vai
+            self.padre.vai=Texto(self.f_t, "olá pessoal, certinho?", foi=fala.vai).vai
         
     def entrou_1(self,*_):
             self.padre.entra(self.dalmacia)
@@ -118,15 +120,15 @@ class kkkk():
     
     def entrou_11(self,*_):
         self.padre.entra(self.leao)
-        self.padre.vai=Texto(self.leao "É um leão!!").vai
+        self.padre.vai=Texto(self.leao, "É um leão!!").vai
     
-    def entrou_12(self,*_)
+    def entrou_12(self,*_):
         self.padre.entra(self.frase)
         self.padre.vai=Texto(self.frase, "A frase mais conhecida de nosso padroeiro é:  Ignorar as Escrituras Sagradas é ignorar a Cristo").vai
     
-        def entrou_final(self,*_)
+    def entrou_final(self,*_):
             self.padre.entra(self.cf)
             self.padre.vai=Texto(self.cf, "Espero que tenham gostado de aprender um pouco mais da história do nosso amdado padroeiro São Jerônimo!").vai
             self.padre.vai=Texto(self.cf, " Até a próxima !!!").vai
-f_T.vai()
+#f_T.vai()
 kkkk()
