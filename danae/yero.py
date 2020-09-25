@@ -52,7 +52,8 @@ class kkkk():
         self.sonho= Cena(img=SONHO)
         self.cr= Cena(img=CURIOSIDADE)
         self.caverna= Cena(img=CAVERNA)
-        self.pl= Elemento(img=PAPA_LIBERIO)
+        #self.pl= Elemento(img=PAPA_LIBERIO)
+        self.pl= Cena(img=PAPA_LIBERIO)
         self.j_c= Cena(img=JERONIMO_CAVERNA)
         self.biblia= Cena(img=BIBLIA)
         self.vulgata= Cena(img=VULGATA)
@@ -84,7 +85,7 @@ class kkkk():
     def entrou_3(self,*_):
         self.sonho.vai()
         self.padre.entra(self.sonho)
-        self.padre.vai=Texto(sonho, "No sonho, Jerônimo apresentava-se como cristão e era repreedindo pelo próprio Cristo por estar faltando com a verdade.", foi=self.entrou_4).vai
+        self.padre.vai=Texto(self.sonho, "No sonho, Jerônimo apresentava-se como cristão e era repreedindo pelo próprio Cristo por estar faltando com a verdade.", foi=self.entrou_4).vai
 
     def entrou_4(self,*_):
         self.pl.vai()
