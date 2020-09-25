@@ -71,9 +71,17 @@ class kkkk():
         self.padre.vai=Texto(self.f_t, "olá pessoal, certinho?", foi=fala.vai).vai
         
     def entrou_1(self,*_):
+        def resposta(optou):
+            respondeu = dict(
+            A=Texto(self.dalmacia, "Ele foi para Roma depois, e não foi onde ele nasceu"),
+            B=Texto(self.dalmacia, "São Jerônimo nasceu na Dalmácia no ano de 340.", foi=self.entrou_2),
+            C=Texto(self.dalmacia, "Libério é o nome do Papa que vamos ficar conhecendo mais adiante"),
+            )
+            respondeu[optou].vai()
         self.dalmacia.vai()
         self.padre.entra(self.dalmacia)
-        self.padre.vai=Texto(self.dalmacia, "São Jerônimo nasceu na Dalmácia no ano de 340.", foi=self.entrou_2).vai
+        self.padre.vai=Texto(self.dalmacia, "Sabe onde Jerônimo nasceu?",
+            foi=resposta, A="Roma", B="Dalmácia", C="Libério").vai
         
         
     def entrou_2(self,*_):
