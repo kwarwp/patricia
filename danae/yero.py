@@ -101,7 +101,7 @@ class kkkk():
     def entrou_curi(self,*_):
         self.curiosidade.vai()
         self.padre.entra(self.curiosidade)
-        self.padre.vai=Texto(self.curiosidade,"Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.", foi=self.entrou_6).vai
+        self.padre.vai=Texto(self.curiosidade,"Jerônimo foi ordenado sacerdote no ano de 379DC, retirando-se para dedicar-se ao estudo.", foi=self.entrou_6).vai
 
     def entrou_6(self,*_):
         self.caverna.vai()
