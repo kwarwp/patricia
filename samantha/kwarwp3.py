@@ -14,7 +14,7 @@ from _spy.vitollino.main import Jogo, STYLE
 from collections import namedtuple as nt
 from kwarwp.kwarwpart import Vazio, Piche, Oca, Tora, NULO
 
-MAPA_INICIAL= """
+MAPA_INICIO= """
 .........
 .....@...
 ...&.....
@@ -383,7 +383,7 @@ class Kwarwp():
     LADO = None
     """Referência estática para definir o lado do piso da casa"""
 
-    def __init__(self, vitollino=None, mapa = MAPA_INICIAL2, medidas = {}):
+    def __init__(self, vitollino=None, mapa = MAPA_INICIO, medidas = {}):
         Kwarwp.VITOLLINO = self.v = vitollino()
         """Transforma o texto matriz, explicitando o bloco de strings para cada linha."""
         self.mapa = mapa.split()
