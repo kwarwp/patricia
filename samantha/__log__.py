@@ -496,3 +496,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Sun Sep 27 2020 12:57:22.397 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 62
+  def empurra(self):
+  ^
+IndentationError: unexpected indent
+'''},
