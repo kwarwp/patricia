@@ -741,3 +741,10 @@ SyntaxError: invalid syntax
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Sun Sep 27 2020 15:59:34.738 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 427
+  fabrica = {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ^
+SyntaxError: invalid syntax
+'''},
