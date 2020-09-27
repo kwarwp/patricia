@@ -678,3 +678,10 @@ NameError: name 'Caverna' is not defined
     coisa = Caverna(imagem, x=0, y=0, cena=cena, taba=self)
 NameError: name 'Caverna' is not defined
 '''},
+{'date': 'Sun Sep 27 2020 14:43:47.930 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 419
+  :param x: coluna em que o elemento será posicionado.
+   ^
+SyntaxError: invalid syntax
+'''},
