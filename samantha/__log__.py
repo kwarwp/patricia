@@ -685,3 +685,10 @@ NameError: name 'Caverna' is not defined
    ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Sun Sep 27 2020 14:44:06.760 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 419
+  :param x: coluna em que o elemento será posicionado.
+   ^
+SyntaxError: invalid syntax
+'''},
