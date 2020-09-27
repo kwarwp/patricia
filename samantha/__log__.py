@@ -535,3 +535,10 @@ NameError: name 'MAPA_INICIO' is not defined
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Sun Sep 27 2020 13:04:00.253 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 51
+  """Cria um cenário com imagem de terra de chão batido, céu e sol"""
+  ^
+IndentationError: expected an indented block
+'''},
