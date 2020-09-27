@@ -7862,3 +7862,7 @@ TypeError: 'JogoProxy' object is not callable
     Vazio.VITOLLINO = self.v = vitollino()
 TypeError: 'JogoProxy' object is not callable
 '''},
+{'date': 'Sun Sep 27 2020 12:17:42.668 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: bases[i].$dict is undefined>
+'''},
