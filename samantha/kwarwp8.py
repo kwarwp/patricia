@@ -1,9 +1,9 @@
 # patricia.samantha.kwarwp8.py
 # SPDX-License-Identifier: GPL-3.0-or-later
 """ Projeto final - três desafios
-Desafio 2: Agora você precisa atravessar a caverna 
-para chegar até a floresta!
-Tome cuidado para não cair no riacho!
+Desafio2:
+Agora você precisa atravessar a caverna pra chegar na floresta.
+TOME CUIDADO PARA NÃO CAIR NO CÓRREGO!
 
 .. codeauthor:: Raquel M. M. Fernandes - raquelmachado4993@gmail.com
 
@@ -294,7 +294,7 @@ class Piche(Vazio):
         self.vaga = vaga
         
     def _pede_sair(self):
-        self.taba.fala("Você caiu na água!")
+        self.taba.fala("Você caiu no córrego!")
 
 class Caverna(Piche):
 
@@ -433,7 +433,7 @@ class Kwarwp():
                  ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), #VAZIO
                  "_": Fab(self.coisa, f"{IMGUR}XL8f17Z.jpg"), #INTERIOR DA CAVERNA
                  "&": Fab(self.caverna, f"{IMGUR}Ggh8KNw.jpg"), #CAVERNA
-                 "@": Fab(self.barra, f"{IMGUR}8VAR7mN.png"), #RIACHO
+                 "@": Fab(self.barra, f"{IMGUR}8VAR7mN.png"), #CÓRREGO
                 "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), #SOL
                 "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), #CEU
                 "#": Fab(self.atora, f"{IMGUR}J60I1wn.png"), # TORA QUE AGORA É PEDRA
