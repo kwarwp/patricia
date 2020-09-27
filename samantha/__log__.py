@@ -417,3 +417,7 @@ Traceback (most recent call last):
     self.o_indio = self.indios[0](imagem, x=1, y=0, cena=cena, taba=self, vitollino=self.v)
 AttributeError: 'Kwarwp' object has no attribute 'indios'
 '''},
+{'date': 'Sun Sep 27 2020 12:46:34.312 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: bases[i].$dict is undefined>
+'''},
