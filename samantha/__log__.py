@@ -1016,3 +1016,10 @@ SyntaxError: invalid syntax
     coisa = Piche(imagem, x=0, y=0, cena=cena, taba=self)
 TypeError: 'module' object is not callable
 '''},
+{'date': 'Sun Sep 27 2020 17:31:03.237 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 415
+  Vazio.VITOLLINO = self.v = vitollino()
+  ^
+IndentationError: expected an indented block
+'''},
