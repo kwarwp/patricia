@@ -806,3 +806,10 @@ AttributeError: 'Piche' object has no attribute '_acessa'
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Sun Sep 27 2020 16:24:00.512 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 308
+  "
+  ^
+IndentationError: expected an indented block
+'''},
