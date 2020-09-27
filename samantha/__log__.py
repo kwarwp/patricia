@@ -799,3 +799,10 @@ IndentationError: expected an indented block
     self.acessa = self._acessa
 AttributeError: 'Piche' object has no attribute '_acessa'
 '''},
+{'date': 'Sun Sep 27 2020 16:23:34.140 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 307
+  def _acessa(self, ocupante):
+  ^
+IndentationError: unexpected indent
+'''},
