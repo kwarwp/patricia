@@ -528,3 +528,10 @@ IndentationError: unexpected indent
     def __init__(self, vitollino=None, mapa = MAPA_INICIO, medidas = {}):
 NameError: name 'MAPA_INICIO' is not defined
 '''},
+{'date': 'Sun Sep 27 2020 13:03:52.563 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 42
+  def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
+  ^
+IndentationError: unexpected indent
+'''},
