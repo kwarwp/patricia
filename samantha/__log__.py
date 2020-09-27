@@ -985,3 +985,10 @@ Exception: <TypeError: bases[i].$dict is undefined>
     coisa = Piche(imagem, x=0, y=0, cena=cena, taba=self)
 TypeError: 'module' object is not callable
 '''},
+{'date': 'Sun Sep 27 2020 17:11:22.115 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 13
+  """
+                                                                                                                                                   ^
+SyntaxError: invalid syntax
+'''},
