@@ -542,3 +542,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Sun Sep 27 2020 13:04:06.244 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 51
+  """Cria um cenário com imagem de terra de chão batido, céu e sol"""
+  ^
+IndentationError: expected an indented block
+'''},
