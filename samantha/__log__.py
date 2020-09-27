@@ -706,3 +706,10 @@ IndentationError: expected an indented block
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Sun Sep 27 2020 15:57:39.229 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 68
+  """tenta largar o objeto que está segurando"""
+  ^
+IndentationError: expected an indented block
+'''},
