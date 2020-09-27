@@ -1,7 +1,7 @@
 # patricia.samantha.kwarwp7.py
 # SPDX-License-Identifier: GPL-3.0-or-later
 """ Projeto final - três desafios
-Desafio 1: chegar até a oca
+Desafio 1: chegar até a caverna
 
 .. codeauthor:: Raquel M. M. Fernandes - raquelmachado4993@gmail.com
 
@@ -275,14 +275,14 @@ class Piche(Vazio):
     def _pede_sair(self):
         self.taba.fala("Você ficou preso MUAHAHAHA")
 
-class Oca(Piche):
+class Caverna(Piche):
 
     def __init__(self, imagem, x, y, cena, taba):
         self.taba = taba
         self.vaga = taba
         self.lado = lado = Kwarwp.LADO
         self.posicao = (x//lado,y//lado-1)
-        self.maloc = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena) 
+        self.caverna = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena) 
         self._nada = Kwarwp.VITOLLINO.a()
         self.acessa = self._acessa
         """O **acessa ()** é usado como método dinâmico, variando com o estado da vaga.
@@ -309,10 +309,8 @@ class Oca(Piche):
 
     @property
     def elt(self):
-        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
-        No caso da oca, vai retornar o maloc.
-        """
-        return self.maloc.elt
+        
+        return self.caverna.elt
         
          
          
@@ -370,7 +368,7 @@ class Kwarwp():
                  "^": Fab(self.indio, f"{IMGUR}UCWGCKR.png"), # INDIO
                  ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), #VAZIO
                  "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), #SOLO
-                 "&": Fab(self.maloc, f"{IMGUR}dZQ8liT.jpg"), #OCA
+                 "&": Fab(self.caverna, f"{IMGUR}nyNvZWJ.jpg"), #OCA
                  "@": Fab(self.barra, f"{IMGUR}tLLVjfN.png"), #PICHE
                 "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), #SOL
                 "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), #CEU
@@ -416,16 +414,15 @@ class Kwarwp():
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante = self.o_indio)
         return vaga 
         
-    def maloc(self, imagem, x, y, cena):
-        """ Cria uma maloca na arena do Kwarwp na posição definida.
-
+    def caverna(self, imagem, x, y, cena):
+       
         :param x: coluna em que o elemento será posicionado.
         :param y: linha em que o elemento será posicionado.
         :param cena: cena em que o elemento será posicionado.
 
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
-        coisa = Oca(imagem, x=0, y=0, cena=cena, taba=self)
+        coisa = Caverna(imagem, x=0, y=0, cena=cena, taba=self)
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante= coisa)
         return vaga
         
