@@ -43,8 +43,7 @@ class Indio():
         
         Constante com os pares ordenados que representam os vetores unitários dos pontos cardeais.
     """
-
-    def __init__(self, imagem, x, y, cena, taba, vai=None):
+def __init__(self, imagem, x, y, cena, taba, vai=None):
     
         self.lado = lado = Kwarwp.LADO
         self.azimute = self.AZIMUTE.n
@@ -60,13 +59,13 @@ class Indio():
             """Define as proporções da folha de sprites"""
             self.mostra()
             
-    def empurra(self):
+def empurra(self):
         """Objeto tenta sair, tem que consultar a vaga onde está"""
         # self.vaga.sair() # esta parte vai ser feita mais tarde.
         ...
         # de resto o código é semelhante ao _anda
 
-    def mostra(self):
+def mostra(self):
         """ Modifica a figura (Sprite) do índio mostrando para onde está indo.
         """
         sprite_col = sum(self.posicao) % 3
@@ -86,7 +85,7 @@ class Indio():
            self.elt.style.backgroundPosition = '{}px {}px'.format(*xy)
         """
         
-    def esquerda(self):
+def esquerda(self):
         """ Faz o índio mudar da direção em que está olhando para a esquerda.
         """
         self.azimute = self.AZIMUTE[self.AZIMUTE.index(self.azimute)-1]
@@ -94,7 +93,7 @@ class Indio():
         self.mostra()
     
     
-    def direita(self):
+def direita(self):
         """ Faz o índio mudar da direção em que está olhando para a direita.
         """
         self.azimute = self.AZIMUTE[self.AZIMUTE.index(self.azimute)-3]
@@ -102,7 +101,7 @@ class Indio():
         self.mostra()
 
 
-    def fala(self, texto=""):
+def fala(self, texto=""):
         """ O índio fala um texto dado.
 
         :param texto: O texto a ser falado.
@@ -110,22 +109,22 @@ class Indio():
         self.taba.fala(texto) 
         
 
-    def anda(self):
+def anda(self):
         """Objeto tenta sair, tem que consultar a vaga onde está"""
         self.vaga.sair()
         
 
-    def sair(self):
+def sair(self):
         """Objeto de posse do índio tenta sair e é autorizado"""
         self.vaga.ocupante.siga()
         
 
-    def siga(self):
+def siga(self):
         """Objeto tentou sair e foi autorizado"""
         self._anda()
         
 
-    def _anda(self):
+def _anda(self):
         """ Faz o índio caminhar na direção em que está olhando.
         """
         destino = (self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
@@ -137,13 +136,13 @@ class Indio():
             vaga.acessa(self)   
 
 
-    def sai(self):
+def sai(self):
         """ Rotina de saída falsa, o objeto Indio é usado como uma vaga nula.
         """
         pass
 
 
-    def ocupa(self, vaga):
+def ocupa(self, vaga):
         """ Pedido por uma vaga para que ocupe a posição nela.
         :param vaga: A vaga que será ocupada pelo componente.
         No caso do índio, requisita que a vaga seja ocupada por ele.
@@ -154,7 +153,7 @@ class Indio():
         self.vaga = vaga
         
 
-    def acessa(self, ocupante):
+def acessa(self, ocupante):
         """ Pedido de acesso a essa posição, delegada ao ocupante pela vaga.
         :param ocupante: O componente candidato a ocupar a vaga já ocupada pelo índio.
         No caso do índio, ele age como um obstáculo e não prossegue com o protocolo.
@@ -162,14 +161,14 @@ class Indio():
         pass
     
     
-    def executa(self):
+def executa(self):
         """ Roteiro do índio. Conjunto de comandos para ele executar.
         """
         self.anda()
             
             
-    @property
-    def elt(self):
+@property
+def elt(self):
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
         No caso do índio, retorna o elt do elemento do atributo **self.indio**.
         """
@@ -384,7 +383,7 @@ class Kwarwp():
     LADO = None
     """Referência estática para definir o lado do piso da casa"""
 
-    def __init__(self, vitollino=None, mapa = MAPA_INICIAL, medidas = {}):
+    def __init__(self, vitollino=None, mapa = MAPA_INICIAL2, medidas = {}):
         Kwarwp.VITOLLINO = self.v = vitollino()
         """Transforma o texto matriz, explicitando o bloco de strings para cada linha."""
         self.mapa = mapa.split()
@@ -446,9 +445,7 @@ class Kwarwp():
         sol = self.v.a(fabrica["*"].url, w=60, h=60, x=0, y=20, cena=cena, vai = self.esquerda)
         """No argumento *vai*, associamos o clique no sol com o método **esquerda ()** desta classe.""""""Gera o elemento sol"""
 
-        self.taba = {(i, j): fabrica[caracter].objeto(fabrica[caracter].url, x=i*lado, y=j*lado+lado, cena=cena)
-              for j, linha in enumerate(mapa) for i, caracter in enumerate(linha)}
-        """Posiciona os elementos segundo suas posições i, j na matriz mapa"""     
+        
         cena.vai()
         return cena
     
