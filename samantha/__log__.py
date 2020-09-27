@@ -482,3 +482,10 @@ NameError: name 'MAPA_INICIAL' is not defined
     self.taba = {(i, j): fabrica[caracter].objeto(fabrica[caracter].url, x=i*lado, y=j*lado+lado, cena=cena)
 KeyError: +
 '''},
+{'date': 'Sun Sep 27 2020 12:56:54.493 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 47
+  def __init__(self, imagem, x, y, cena, taba, vai=None):
+  ^
+IndentationError: unexpected indent
+'''},
