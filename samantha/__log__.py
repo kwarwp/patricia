@@ -727,3 +727,10 @@ IndentationError: expected an indented block
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Sun Sep 27 2020 15:58:50.953 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 427
+  fabrica ={"^": Fab(self.indio, f"{IMGUR}UCWGCKR.png"), # INDIO
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+SyntaxError: invalid syntax
+'''},
