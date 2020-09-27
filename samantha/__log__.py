@@ -699,3 +699,10 @@ SyntaxError: invalid syntax
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Sun Sep 27 2020 15:57:09.416 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 58
+  """tenta pegar o objeto que está diante dele"""
+  ^
+IndentationError: expected an indented block
+'''},
