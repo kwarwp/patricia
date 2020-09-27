@@ -768,3 +768,10 @@ SyntaxError: invalid syntax
     fabrica = {
 AttributeError: 'Kwarwp' object has no attribute 'atora'
 '''},
+{'date': 'Sun Sep 27 2020 16:05:10.953 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 43
+  self.lado = lado = Kwarwp.LADO
+  ^
+IndentationError: expected an indented block
+'''},
