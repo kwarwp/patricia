@@ -3731,3 +3731,10 @@ TypeError: 'JogoProxy' object is not callable
     Kwarwp.VITOLLINO = Kwarwp.VITOLLINO or Jogo()
 AttributeError: 'Kwarwp' object has no attribute 'VITOLLINO'
 '''},
+{'date': 'Sun Sep 27 2020 16:20:50.726 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 63
+  """tenta largar o objeto que está segurando"""
+  ^
+IndentationError: expected an indented block
+'''},
