@@ -1,7 +1,9 @@
 # patricia.samantha.kwarwp8.py
 # SPDX-License-Identifier: GPL-3.0-or-later
 """ Projeto final - três desafios
-Desafio 1: chegar até a Caverna
+Desafio 2: Agora você precisa atravessar a caverna 
+para chegar até a floresta!
+Tome cuidado para não cair no riacho!
 
 .. codeauthor:: Raquel M. M. Fernandes - raquelmachado4993@gmail.com
 
@@ -14,19 +16,22 @@ Changelog
 
 from _spy.vitollino.main import Jogo, STYLE 
 from collections import namedtuple as nt
+from kwarwp.kwarwpart import Vazio, Piche, Oca, Tora, NULO
+
 MAPA_INICIAL= """
-|||||||||
-|@..@...|
-|..&|.@.|
-|..@|...|
-|...@...|
-|@....^.|
+@@@@@@@@@
+@...|...@
+&....|.|@
+|...|...@
+|.#.|.|.@
+|@^@..|.@
 """
 
 Ponto = nt("Ponto", "x y")
 """Par de coordenadas na direção horizontal (x) e vertiacal (y)."""
 Rosa = nt("Rosa", "n l s o")
 """Rosa dos ventos com as direções norte, leste, sul e oeste."""
+
 
 
 class Indio():
@@ -37,8 +42,7 @@ class Indio():
         Constante com os pares ordenados que representam os vetores unitários dos pontos cardeais.
     """
 
-    def __init__(self, imagem, x, y, cena, taba, vai=None):
-    
+    def __init__(self, imagem, x, y, cena, taba):
         self.lado = lado = Kwarwp.LADO
         self.azimute = self.AZIMUTE.n
         """índio olhando para o norte"""
@@ -47,11 +51,37 @@ class Indio():
         self.posicao = (x//lado,y//lado)
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         self.x = x
+        """Este x provisoriamente distingue o índio de outras coisas construídas com esta classe"""
         if x:
             self.indio.siz = (lado*3, lado*4)
             """Define as proporções da folha de sprites"""
             self.mostra()
 
+    def pega(self):
+        """tenta pegar o objeto que está diante dele"""
+        destino = (self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
+        """A posição para onde o índio vai depende do vetor de azimute corrente"""
+        taba = self.taba.taba
+        if destino in taba:
+            vaga = taba[destino]
+            """Recupera na taba a vaga para a qual o índio irá se transferir"""
+            vaga.pegar(self)
+
+    def larga(self):
+        """tenta largar o objeto que está segurando"""
+        destino = (self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
+        """A posição para onde o índio vai depende do vetor de azimute corrente"""
+        taba = self.taba.taba
+        if destino in taba:
+            vaga = taba[destino]
+            """Recupera na taba a vaga para a qual o índio irá se transferir"""
+            # self.ocupante.largar(vaga)
+            vaga.acessa(self.ocupante)
+
+    def ocupou(self, ocupante):
+       
+        self.indio.ocupa(ocupante)
+        self.ocupante = ocupante
 
 
     def mostra(self):
@@ -264,7 +294,7 @@ class Piche(Vazio):
         self.vaga = vaga
         
     def _pede_sair(self):
-        self.taba.fala("Você ficou preso MUAHAHAHA")
+        self.taba.fala("Você caiu na água!")
 
 class Caverna(Piche):
 
@@ -284,7 +314,7 @@ class Caverna(Piche):
     
     def _pede_sair(self):
         """Objeto tenta sair mas não é autorizado"""
-        self.taba.fala("Você chegou na caverna!!!")
+        self.taba.fala("Você saiu da caverna!!!")
         
     def _acessa(self, ocupante):
         """ Atualmente a posição está vaga e pode ser acessada pelo novo ocupante.
@@ -295,7 +325,7 @@ class Caverna(Piche):
 
             :param ocupante: O canditato a ocupar a posição corrente.
         """
-        self.taba.fala("Você chegou na caverna!!!")
+        self.taba.fala("Você saiu da caverna!!!")
         ocupante.ocupa(self)       
 
     @property
@@ -304,6 +334,49 @@ class Caverna(Piche):
         """
         return self.caverna.elt
         
+class Tora(Piche):
+
+    def pegar(self,requisitante):
+        vaga=requisitante
+        self.vaga.sai()
+        #self.posicao=vaga.posicao
+        vaga.ocupou(self)
+        self.vaga=vaga
+    
+    @property
+    def posicao(self):
+        """ A propriedade posição faz parte do protocolo do double dispatch com o Indio .
+
+        No caso da tora, retorna o a posição do atributo **self.vaga**.
+        """
+        return self.vaga.posicao
+
+    @posicao.setter
+    def posicao(self, _):
+        """ A propriedade posição faz parte do protocolo do double dispatch com o Indio .
+
+        No caso da tora, é uma propriedade de somente leitura, não executa nada.
+        """
+        pass
+
+    @property
+    def elt(self):
+        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
+
+        No caso da tora, retorna o elt do elemento do atributo **self.vazio**.
+        """
+        return self.vazio.elt
+
+    def _acessa(self, ocupante):
+        """ Pedido de acesso a essa posição, delegada ao ocupante pela vaga.
+
+        :param ocupante: O componente candidato a ocupar a vaga já ocupada pelo índio.
+
+        No caso da tora, ela age como um obstáculo e não prossegue com o protocolo.
+        """
+        pass
+        
+    
          
 class Kwarwp():
 
@@ -355,15 +428,16 @@ class Kwarwp():
             Criado uma nova coleção de dados, do tipo fab que acolhe informações quanto ao objeto e
             a url deste 
         """
-        fabrica ={"#": Fab(self.coisa, f"{IMGUR}uwYPNlz.png"), # CERCA
+        fabrica = {
                  "^": Fab(self.indio, f"{IMGUR}UCWGCKR.png"), # INDIO
                  ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), #VAZIO
                  "_": Fab(self.coisa, f"{IMGUR}XL8f17Z.jpg"), #INTERIOR DA CAVERNA
-                 "&": Fab(self.caverna, f"{IMGUR}nyNvZWJ.jpg"), #CAVERNA
-                 "@": Fab(self.barra, f"{IMGUR}tLLVjfN.png"), #PICHE
+                 "&": Fab(self.caverna, f"{IMGUR}Ggh8KNw.jpg"), #CAVERNA
+                 "@": Fab(self.barra, f"{IMGUR}8VAR7mN.png"), #RIACHO
                 "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), #SOL
                 "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), #CEU
-                "|": Fab(self.coisa, f"{IMGUR}ldI7IbK.png")  # TORA 
+                "#": Fab(self.atora, f"{IMGUR}J60I1wn.png"), # TORA QUE AGORA É PEDRA
+                "|": Fab(self.coisa, f"{IMGUR}VIIwXhQ.png")  # PEDRA 
                 }
         """Dicionário que define o tipo e a imagem do objeto para cada elemento"""
         mapa = mapa if mapa != "" else self.mapa 
@@ -397,10 +471,18 @@ class Kwarwp():
         coisa = Indio(imagem, x=0, y=0, cena=cena, taba=self)
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
         return vaga
+    
+    def atora(self, imagem, x, y, cena):
+   
+        coisa = Tora(imagem, x=0, y=0, cena=cena, taba=self)
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+        coisa.vazio.vai = lambda *_: self.o_indio.larga()
+        return vaga
         
     def indio(self, imagem,x,y,cena):
-        self.o_indio = Indio(imagem, x=1, y=2, cena=cena, taba=self)
+        self.o_indio = Indio(imagem, x=1, y=0, cena=cena, taba=self)
         """indio tem deslocamento zro pois é relativo à vaga"""
+        self.o_indio.indio.vai = lambda *_: self.o_indio.pega()
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante = self.o_indio)
         return vaga 
         
@@ -466,7 +548,7 @@ class Kwarwp():
     def cria_elemento(self, x, y, cena):
         lado = self.lado
         return self.v.a(self.GLIFOS[imagem], w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena)
-        
+      
 
 if __name__ == "__main__":
     Kwarwp(Jogo, medidas = STYLE) 
