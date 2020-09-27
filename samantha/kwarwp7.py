@@ -282,7 +282,7 @@ class Oca(Piche):
         self.vaga = taba
         self.lado = lado = Kwarwp.LADO
         self.posicao = (x//lado,y//lado-1)
-        self.maloc = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena) #ACHO QUE DEVE TROCAR POR PICHE AQUI
+        self.maloc = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena) 
         self._nada = Kwarwp.VITOLLINO.a()
         self.acessa = self._acessa
         """O **acessa ()** é usado como método dinâmico, variando com o estado da vaga.
@@ -305,7 +305,7 @@ class Oca(Piche):
             :param ocupante: O canditato a ocupar a posição corrente.
         """
         self.taba.fala("Você chegou no seu objetivo")
-        ocupante.ocupa(self)        
+        ocupante.ocupa(self)       
 
     @property
     def elt(self):
