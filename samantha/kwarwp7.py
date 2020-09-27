@@ -54,7 +54,6 @@ class Indio():
         self.posicao = (x//lado,y//lado)
         self.indio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
         self.x = x
-        """Este x provisoriamente distingue o índio de outras coisas construídas com esta classe"""
         if x:
             self.indio.siz = (lado*3, lado*4)
             """Define as proporções da folha de sprites"""
@@ -249,7 +248,6 @@ class Vazio():
         No caso do espaço vazio, vai retornar um elemento que não contém nada.
         """
         return self.vazio.elt
-        #return self._nada.elt essa linha antes fazia com que o piche "colasse" no sol
 
 class Piche(Vazio):
     def __init__(self, imagem, x, y, cena, taba):
@@ -304,7 +302,7 @@ class Caverna(Piche):
 
             :param ocupante: O canditato a ocupar a posição corrente.
         """
-        self.taba.fala("Você chegou no seu objetivo")
+        self.taba.fala("Você chegou na caverna!!!")
         ocupante.ocupa(self)       
 
     @property
@@ -313,7 +311,6 @@ class Caverna(Piche):
         """
         return self.caverna.elt
         
-         
          
 class Kwarwp():
 
