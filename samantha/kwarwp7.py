@@ -1,26 +1,26 @@
 # patricia.samantha.kwarwp7.py
 # SPDX-License-Identifier: GPL-3.0-or-later
-""" Projeto sem descrição, (mude esta linha).
+""" Projeto final - três desafios
+Desafio 1: chegar até a oca
 
-.. codeauthor:: Nome Sobrenome <mail@local.tipo>
+.. codeauthor:: Raquel M. M. Fernandes - raquelmachado4993@gmail.com
 
 Changelog
 ---------
-.. versionadded::    20.09
-        Descreva o que você adicionou no código.
-
+.. versionadded::    27.09
+    
 """
 
 
 from _spy.vitollino.main import Jogo, STYLE 
 from collections import namedtuple as nt
 MAPA_INICIAL= """
-.........
-.....@...
-...&.....
-.........
-.........
-......^..
+|||||||||
+|...|@..|
+|..&|...|
+|...|...|
+|.......|
+|.....^.|
 """
 MAPA_INICIAL2= """
 #########
@@ -474,6 +474,10 @@ class Kwarwp():
         """ Ordena a execução do roteiro do índio.
         """
         self.o_indio.executa()
+        
+    def cria_elemento(self, x, y, cena):
+        lado = self.lado
+        return self.v.a(self.GLIFOS[imagem], w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena)
         
 
 if __name__ == "__main__":
