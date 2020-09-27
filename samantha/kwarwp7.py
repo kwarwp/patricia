@@ -1,7 +1,9 @@
 # patricia.samantha.kwarwp7.py
 # SPDX-License-Identifier: GPL-3.0-or-later
 """ Projeto final - três desafios
-Desafio 1: chegar até a Caverna
+FASE 1.
+Nessa primeira aventura o índio precisa vencer obstáculos 
+para chegar até a caverna!
 
 .. codeauthor:: Raquel M. M. Fernandes - raquelmachado4993@gmail.com
 
