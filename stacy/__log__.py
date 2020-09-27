@@ -437,3 +437,10 @@ IndentationError: expected an indented block
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Sun Sep 27 2020 16:11:51.460 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 122
+  """ Cria o personagem principal na arena do Kwarwp na posição definida.
+  ^
+IndentationError: expected an indented block
+'''},
