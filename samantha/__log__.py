@@ -421,3 +421,10 @@ AttributeError: 'Kwarwp' object has no attribute 'indios'
 'error': '''
 Exception: <TypeError: bases[i].$dict is undefined>
 '''},
+{'date': 'Sun Sep 27 2020 12:51:06.949 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 19
+  +++++++
+          ^
+SyntaxError: invalid syntax
+'''},
