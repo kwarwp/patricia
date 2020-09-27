@@ -1,7 +1,7 @@
 # patricia.samantha.kwarwp7.py
 # SPDX-License-Identifier: GPL-3.0-or-later
 """ Projeto final - três desafios
-Desafio 1: chegar até a caverna
+Desafio 1: chegar até a Caverna
 
 .. codeauthor:: Raquel M. M. Fernandes - raquelmachado4993@gmail.com
 
@@ -293,7 +293,7 @@ class Caverna(Piche):
     
     def _pede_sair(self):
         """Objeto tenta sair mas não é autorizado"""
-        self.taba.fala("Você chegou no seu objetivo")
+        self.taba.fala("Você chegou na caverna!!!")
         
     def _acessa(self, ocupante):
         """ Atualmente a posição está vaga e pode ser acessada pelo novo ocupante.
@@ -309,7 +309,8 @@ class Caverna(Piche):
 
     @property
     def elt(self):
-        
+        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
+        """
         return self.caverna.elt
         
          
@@ -368,14 +369,14 @@ class Kwarwp():
                  "^": Fab(self.indio, f"{IMGUR}UCWGCKR.png"), # INDIO
                  ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), #VAZIO
                  "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), #SOLO
-                 "&": Fab(self.caverna, f"{IMGUR}nyNvZWJ.jpg"), #OCA
+                 "&": Fab(self.caverna, f"{IMGUR}nyNvZWJ.jpg"), #CAVERNA
                  "@": Fab(self.barra, f"{IMGUR}tLLVjfN.png"), #PICHE
                 "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), #SOL
                 "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), #CEU
                 "|": Fab(self.coisa, f"{IMGUR}ldI7IbK.png")  # TORA 
                 }
         """Dicionário que define o tipo e a imagem do objeto para cada elemento"""
-        mapa = mapa if mapa != "" else self.mapa #descobrir o que isso faz
+        mapa = mapa if mapa != "" else self.mapa 
         """Cria um cenáriocom imagem de terra de chão batido, ceu e sol"""
         mapa = self.mapa 
         lado = self.lado 
@@ -408,14 +409,14 @@ class Kwarwp():
         return vaga
         
     def indio(self, imagem,x,y,cena):
-        #self.o_indio = Indio(imagem, x=x, y=y, cena=cena) #era para estar funcionando este imagem mesmo?
-        self.o_indio = Indio(imagem, x=1, y=2, cena=cena, taba=self)#estou precisando de um deslocamento mínimo. pq?
+        self.o_indio = Indio(imagem, x=1, y=2, cena=cena, taba=self)
         """indio tem deslocamento zro pois é relativo à vaga"""
         vaga = Vazio("", x=x, y=y, cena=cena, ocupante = self.o_indio)
         return vaga 
         
     def caverna(self, imagem, x, y, cena):
-       
+        """ Cria uma caverna na arena do Kwarwp na posição definida.
+
         :param x: coluna em que o elemento será posicionado.
         :param y: linha em que o elemento será posicionado.
         :param cena: cena em que o elemento será posicionado.
