@@ -957,3 +957,7 @@ AttributeError: 'Tora' object has no attribute 'vazio'
     fabrica = {
 AttributeError: 'Kwarwp' object has no attribute 'vazio'
 '''},
+{'date': 'Sun Sep 27 2020 16:41:46.266 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: bases[i].$dict is undefined>
+'''},
