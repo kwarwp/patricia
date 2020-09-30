@@ -11,7 +11,7 @@ Changelog
 
 """
 
-class Nulo:
+class Nulo():
     """Objeto nulo que responde passivamente a todas as requisições."""
     def __init__(self):
         self.pegar = self.ocupa = self.ocupou = self.elt = self.corrente = self.nulo
@@ -25,7 +25,7 @@ class Nulo:
         """
         return self 
 
-    NULO = Nulo()
+NULO = Nulo()
 
 class Vazio():
     """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
