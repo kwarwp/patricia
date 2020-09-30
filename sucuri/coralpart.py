@@ -25,7 +25,7 @@ class Nulo:
         """
         return self 
 
-NULO = Nulo()
+    NULO = Nulo()
 
 class Vazio():
     """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
