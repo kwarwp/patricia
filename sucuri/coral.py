@@ -229,7 +229,7 @@ class Kwarwp():
     """Referência estática para definir o lado do piso da casa."""
     
     
-    def __init__(self, vitollino=None, mapa=MAPA_INICIO, medidas={}):
+    def __init__(self, vitollino=None, mapa=MAPA_INICIAL, medidas={}):
         Kwarwp.VITOLLINO = self.v = vitollino()
         self.mapa = mapa.split()
         """Cria um matriz com os elementos descritos em cada linha de texto"""
