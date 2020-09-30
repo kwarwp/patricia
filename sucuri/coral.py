@@ -254,6 +254,8 @@ class Kwarwp():
         """
         Fab = nt("Fab", "objeto imagem")
         """Esta tupla nomeada serve para definir o objeto construido e sua imagem."""
+        
+        IMGUR = "https://imgur.com/"
 
         fabrica = {
         "&": Fab(self.maloc, f"{IMGUR}dZQ8liT.jpg"), # OCA
