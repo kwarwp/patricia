@@ -11,6 +11,22 @@ Changelog
 
 """
 
+class Nulo:
+    """Objeto nulo que responde passivamente a todas as requisições."""
+    def __init__(self):
+        self.pegar = self.ocupa = self.ocupou = self.elt = self.corrente = self.nulo
+        
+    def nulo(self, *_, **__):
+        """Método nulo, responde passivamente a todas as chamadas.
+        
+        :param _: aceita todos os argumentos posicionais.
+        :param __: aceita todos os argumentos nomeados.
+        :return: retorna o próprio objeto nulo.
+        """
+        return self 
+
+NULO = Nulo()
+
 class Vazio():
     """ Cria um espaço vazio na taba, para alojar os elementos do desafio.
         :param imagem: A figura representando o índio na posição indicada.
@@ -325,19 +341,3 @@ class Oca(Piche):
         """
         self.ocupante = self
         self.acessa = self._acessa
-
-class Nulo:
-    """Objeto nulo que responde passivamente a todas as requisições."""
-    def __init__(self):
-        self.pegar = self.ocupa = self.ocupou = self.elt = self.corrente = self.nulo
-        
-    def nulo(self, *_, **__):
-        """Método nulo, responde passivamente a todas as chamadas.
-        
-        :param _: aceita todos os argumentos posicionais.
-        :param __: aceita todos os argumentos nomeados.
-        :return: retorna o próprio objeto nulo.
-        """
-        return self 
-
-NULO = Nulo()
