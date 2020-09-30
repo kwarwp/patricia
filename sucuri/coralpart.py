@@ -325,20 +325,19 @@ class Oca(Piche):
         """
         self.ocupante = self
         self.acessa = self._acessa
-        
-
 
 class Nulo:
     """Objeto nulo que responde passivamente a todas as requisições."""
     def __init__(self):
-        self.pegar = self.ocupa = self.nulo
-
+        self.pegar = self.ocupa = self.ocupou = self.elt = self.corrente = self.nulo
+        
     def nulo(self, *_, **__):
         """Método nulo, responde passivamente a todas as chamadas.
+        
         :param _: aceita todos os argumentos posicionais.
         :param __: aceita todos os argumentos nomeados.
         :return: retorna o próprio objeto nulo.
         """
-        return self
-        
+        return self 
+
 NULO = Nulo()
