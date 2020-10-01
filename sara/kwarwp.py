@@ -321,14 +321,15 @@ class Indio():
         """
         self.azimute = self.AZIMUTE[self.AZIMUTE.index(self.azimute)-1]
         #print(self.azimute)
-        self.mostra()
+        #self.mostra()
+        self.gira()
 
 
     def direita(self):
         """ Faz o índio mudar da direção em que está olhando para a direita.
         """
         self.azimute = self.AZIMUTE[self.AZIMUTE.index(self.azimute)-3]
-        self.mostra()
+        self.gira()
 
 
     def fala(self, texto=""):
