@@ -22,6 +22,20 @@ MAPA_INICIO = """
 .#.p`.
 """
 
+MAPA_FASE_2 = """
+@....&
+......
+.....#
+.#.p`.
+"""
+
+MAPA_FASE_3 = """
+@....&
+......
+.....#
+.#.p`.
+"""
+
 class Game(Indio):
     def executa(self):
         """ Roteiro do índio. Conjunto de comandos para ele executar.
