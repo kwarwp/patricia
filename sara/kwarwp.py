@@ -360,10 +360,11 @@ class Indio():
         """
         self.vaga.sai()
         self.posicao = vaga.posicao
-        vaga.ocupou(self)
+        #vaga.ocupou(self)
+        self.mostra(vaga) if self.x else vaga.ocupou(self)
         self.vaga = vaga
-        if self.x:
-            self.mostra()
+        #if self.x:
+        #    self.mostra()
 
 
     def acessa(self, ocupante):
