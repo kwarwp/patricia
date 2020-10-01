@@ -77,15 +77,17 @@ class Vazio():
         ocupante.ocupa(self)  
 
 
-    def ocupou(self, ocupante):
+    def ocupou(self, ocupante, pos=(0, 0)):
         """ O candidato à vaga decidiu ocupá-la e efetivamente entra neste espaço.
+        
         :param ocupante: O canditato a ocupar a posição corrente.
+        :param pos: A posição (atitude) do sprite do ocupante.
         Este ocupante vai entrar no elemento do Vitollino e definitivamente se tornar
         o ocupante da vaga. Com isso ele troca o estado do método acessa para primeiro
         consultar a si mesmo, o ocupante corrente usando o protocolo definido em
         **_valida_acessa ()**
         """
-        self.vazio.ocupa(ocupante)
+        self.vazio.ocupa(ocupante, pos)
         self.ocupante = ocupante
         self.acessa = self._valida_acessa
         self.sair = self._pede_sair
