@@ -7982,3 +7982,39 @@ Traceback (most recent call last):
     vaga.ocupou(self, pos) # if vaga else self.indio.ocupa(None,pos=pos)
 TypeError: ocupou() takes 2 positional arguments but more were given
 '''},
+{'date': 'Thu Oct 01 2020 18:29:06.776 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''False False <function _command>
+False False <function _command>
+False False <function _command>
+True False <function _command>
+Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 656
+    main(Jogo, STYLE)
+  module <module> line 650
+    Kwarwp(jogo_proxy, medidas=medidas, mapa=MAPA_INICIO)
+  module <module> line 461
+    self.cena = self.cria(mapa=self.mapa) if vitollino else None
+  module <module> line 498
+    self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
+  module <module> line 635
+    vaga = Vazio("", x=x, y=y, cena=cena, ocupante=self.o_indio, taba=self)
+  module sara.kwarwpart line 46
+    self.acessa(ocupante)
+  module sara.kwarwpart line 77
+    ocupante.ocupa(self)  
+  module <module> line 365
+    self.mostra(vaga) if self.x else vaga.ocupou(self)
+  module <module> line 319
+    vaga.ocupou(self, pos) # if vaga else self.indio.ocupa(None,pos=pos)
+TypeError: ocupou() takes 2 positional arguments but more were given
+'''},
