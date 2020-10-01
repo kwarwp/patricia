@@ -208,6 +208,7 @@ class JogoProxy():
         """Tira e executa um comando na fila"""
         self.comandos.pop(0)() if self.comandos else None
 
+
 class Indio():
 
     AZIMUTE = Rosa(Ponto(0, -1),Ponto(1, 0),Ponto(0, 1),Ponto(-1, 0),)
