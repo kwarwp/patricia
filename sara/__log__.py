@@ -8262,3 +8262,10 @@ TypeError: main() got an unexpected keyword argument 'mapa'
                                           ^
 SyntaxError: non-keyword arg after keyword arg
 '''},
+{'date': 'Sun Oct 04 2020 20:40:04.274 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module sara.kwarwp line 652
+  Kwarwp(jogo_proxy, medidas=medidas, mapa, indios=indios)
+                                          ^
+SyntaxError: non-keyword arg after keyword arg
+'''},
