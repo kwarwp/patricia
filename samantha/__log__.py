@@ -1312,3 +1312,10 @@ Traceback (most recent call last):
   module <module> line 19
     from samantha.kwarwp8 import main as desafio2, Indio 
 '''},
+{'date': 'Sun Oct 04 2020 12:01:59.660 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 98
+  def limpa(self):
+  ^
+IndentationError: unexpected indent
+'''},
