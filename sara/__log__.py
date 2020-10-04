@@ -8401,3 +8401,10 @@ SyntaxError: non-keyword arg after keyword arg
                                         ^
 SyntaxError: non-keyword arg after keyword arg
 '''},
+{'date': 'Sun Oct 04 2020 20:59:41.418 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 651
+  JogoProxy.COMANDOS, JogoProxy.ATIVA = [], False
+  ^
+IndentationError: unexpected indent
+'''},
