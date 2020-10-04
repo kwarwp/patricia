@@ -16,6 +16,7 @@ Changelog
 
 from _spy.vitollino.main import Jogo, STYLE 
 from collections import namedtuple as nt
+from patricia.samantha import kwarwp8.py as desafio2
 MAPA_INICIAL= """
 |||||||||
 |@..@...|
@@ -294,6 +295,7 @@ class Caverna(Piche):
     def _pede_sair(self):
         """Objeto tenta sair mas não é autorizado"""
         self.taba.fala("Você chegou na caverna!!!")
+        return desafio2(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIAL)
         
     def _acessa(self, ocupante):
         """ Atualmente a posição está vaga e pode ser acessada pelo novo ocupante.
@@ -305,7 +307,8 @@ class Caverna(Piche):
             :param ocupante: O canditato a ocupar a posição corrente.
         """
         self.taba.fala("Você chegou na caverna!!!")
-        ocupante.ocupa(self)       
+        ocupante.ocupa(self)
+        return desafio2
 
     @property
     def elt(self):
