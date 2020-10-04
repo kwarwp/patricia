@@ -370,7 +370,7 @@ class Kwarwp():
                  ".": Fab(self.vazio, f"{IMGUR}npb9Oej.png"), #VAZIO
                  "_": Fab(self.coisa, f"{IMGUR}sGoKfvs.jpg"), #SOLO
                  "&": Fab(self.caverna, f"{IMGUR}nyNvZWJ.jpg"), #CENARIO
-                 "@": Fab(self.barra, f"{IMGUR}mTYhzWK.png"), #TOCA DO TATU
+                 "@": Fab(self.barra, f"{IMGUR}53TFSpA.png"), #TOCA DO TATU
                 "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), #SOL
                 "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), #CEU
                 "|": Fab(self.coisa, f"{IMGUR}tlhuzFQ.png")  # ARVORE
