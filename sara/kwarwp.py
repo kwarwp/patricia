@@ -546,7 +546,7 @@ class Kwarwp():
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
         coisa = Indio(imagem, x=0, y=0, cena=cena, taba=self)
-        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=NULO, taba=self)
         return vaga
         
 
@@ -613,7 +613,7 @@ class Kwarwp():
 
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
-        coisa = Tora(imagem, x=x, y=y, cena=cena, taba=self)
+        coisa = Tora(imagem, x=0, y=0, cena=cena, taba=self)
         vaga = Vazio("", x=x, y=y, cena=cena, taba=self, ocupante=coisa)
         coisa.vazio.vai = lambda *_: coisa.indio_segurando if self.o_indio.empurra() else self.o_indio.larga()
         
