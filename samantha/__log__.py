@@ -1061,3 +1061,10 @@ NameError: name 'MAPA_INICIO' is not defined
     self.ceu = self.v.a(fabrica["~"].url, w=lado*self.coluna, h=lado-10, x=0, y=0, cena=cena, vai=self.executa,
 AttributeError: 'Kwarwp' object has no attribute 'coluna'
 '''},
+{'date': 'Sun Oct 04 2020 10:47:04.541 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 368
+  fabrica ={"#": Fab(self.coisa, f"{IMGUR}uwYPNlz.png"), # CERCA
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ^
+SyntaxError: invalid syntax
+'''},
