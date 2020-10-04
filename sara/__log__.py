@@ -8183,3 +8183,21 @@ TypeError: ocupou() takes 2 positional arguments but more were given
     return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIO, indios=(Indio, Kaiowa))
 NameError: name 'Kaiowa' is not defined
 '''},
+{'date': 'Sun Oct 04 2020 14:46:17.808 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 63
+    main(Jogo, STYLE)
+  module <module> line 59
+    return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIO, indios=(Game,))
+TypeError: main() got an unexpected keyword argument 'mapa'
+'''},
