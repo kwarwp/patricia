@@ -642,14 +642,18 @@ class Kwarwp():
 
 
 def main(vitollino, mapa=MAPA_INICIO, medidas={}, indios=()):
-    """ Rotina principal que invoca a classe Kwarwp.
+     """ Rotina principal que invoca a classe Kwarwp.
     
     :param vitollino: Empacota o engenho de jogo Vitollino.
     :param medidas: Um dicionário usado para redimensionar a tela.
     """
+    # print(f"main(vitollino={vitollino} medidas={medidas}")
     JogoProxy.COMANDOS, JogoProxy.ATIVA = [], False
+    # print(f"def main: {JogoProxy} vitollino {vitollino}")
     vitollino_proxy = JogoProxy(vitollino=vitollino()).cria
-    Kwarwp(vitollino=vitollino_proxy, mapa, medidas=medidas, indios=indios)
+    # print(f"def main vitollino_proxy: {vitollino_proxy}, {vitollino_proxy()}")
+    # mapa, indios = alternate()
+    return Kwarwp(vitollino=vitollino_proxy, medidas=medidas, mapa=mapa, indios=indios)
         
     
 if __name__ == "__main__":
