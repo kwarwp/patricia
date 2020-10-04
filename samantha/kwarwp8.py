@@ -16,12 +16,12 @@ from _spy.vitollino.main import Jogo, STYLE
 from collections import namedtuple as nt
 
 MAPA_INICIAL= """
-T||||||||
+T||@||@||
 |@..@...|
-|..&|.@.|
-|..@|...|
-|...@...|
-|@....^.|
+@..&|.@.|
+|..@|.@.|
+@.|.@.|.@
+|@.|.^.|
 """
 MAPA_INICIAL2= """
 #########
@@ -373,7 +373,7 @@ class Kwarwp():
                  "@": Fab(self.barra, f"{IMGUR}53TFSpA.png"), #TOCA DO TATU
                 "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), #SOL
                 "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), #CEU
-                "|": Fab(self.coisa, f"{IMGUR}tlhuzFQ.png")  # ARVORE
+                "|": Fab(self.coisa, f"{IMGUR}tlhuzFQ.png"),  # ARVORE
                 "T": Fab(self.coisa, f"{IMGUR}3uGc7zn.png")  # TATU
                 }
         """Dicionário que define o tipo e a imagem do objeto para cada elemento"""
