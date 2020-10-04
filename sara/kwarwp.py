@@ -435,9 +435,9 @@ class Indio():
 
 class Kwarwp():
 
-    VITOLLINO = None
+    #VITOLLINO = None
     """Referência estática para obter o engenho de jogo."""
-    LADO = 100
+    #LADO = 100
     """Referência estática para definir o lado do piso da casa."""
     
     def __init__(self, vitollino=None, mapa=None, medidas={}, indios=()):
