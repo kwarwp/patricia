@@ -1068,3 +1068,10 @@ AttributeError: 'Kwarwp' object has no attribute 'coluna'
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Sun Oct 04 2020 11:10:33.293 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 459
+  def fala_tatu(self,texto="");
+                              ^
+SyntaxError: invalid syntax
+'''},
