@@ -8255,3 +8255,10 @@ NameError: name 'Kaiowa' is not defined
     return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIO, indios=(Indio, Kaiowa))
 TypeError: main() got an unexpected keyword argument 'mapa'
 '''},
+{'date': 'Sun Oct 04 2020 20:38:20.490 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module sara.kwarwp line 652
+  Kwarwp(jogo_proxy, medidas=medidas, mapa)
+                                          ^
+SyntaxError: non-keyword arg after keyword arg
+'''},
