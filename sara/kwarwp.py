@@ -641,7 +641,7 @@ class Kwarwp():
         return vaga
 
 
-def main(vitollino, mapa=MAPA_INICIO, medidas={}):
+def main(vitollino, mapa=MAPA_INICIO, medidas={}, indios=()):
     """ Rotina principal que invoca a classe Kwarwp.
     
     :param vitollino: Empacota o engenho de jogo Vitollino.
@@ -649,7 +649,7 @@ def main(vitollino, mapa=MAPA_INICIO, medidas={}):
     """
     
     jogo_proxy = JogoProxy(vitollino=vitollino())
-    Kwarwp(jogo_proxy, medidas=medidas, mapa)
+    Kwarwp(jogo_proxy, medidas=medidas, mapa, indios=indios)
         
     
 if __name__ == "__main__":
