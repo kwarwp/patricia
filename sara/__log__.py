@@ -8387,3 +8387,10 @@ SyntaxError: non-keyword arg after keyword arg
                                    ^
 SyntaxError: non-keyword arg after keyword arg
 '''},
+{'date': 'Sun Oct 04 2020 20:57:49.300 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 652
+  Kwarwp(vitollino=vitollino_proxy, mapa, medidas=medidas, indios=indios)
+                                        ^
+SyntaxError: non-keyword arg after keyword arg
+'''},
