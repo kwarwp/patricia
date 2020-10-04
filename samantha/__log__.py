@@ -1384,3 +1384,23 @@ TypeError: object() takes no parameters
     vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
 NameError: name 'coisa' is not defined
 '''},
+{'date': 'Sun Oct 04 2020 12:03:13.561 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 776
+    Kwarwp(Jogo, medidas = STYLE) 
+  module <module> line 650
+    self.cena = self.cria(mapa=self.mapa) if vitollino else None
+  module <module> line 663
+    fabrica = {
+AttributeError: 'Kwarwp' object has no attribute 'coisa'
+'''},
