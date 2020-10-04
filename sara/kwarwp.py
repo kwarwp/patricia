@@ -649,7 +649,7 @@ def main(vitollino, mapa=MAPA_INICIO, medidas={}, indios=()):
     """
     
     jogo_proxy = JogoProxy(vitollino=vitollino())
-    Kwarwp(jogo_proxy, medidas=medidas, mapa, indios=indios)
+    Kwarwp(jogo_proxy, mapa, medidas=medidas, indios=indios)
         
     
 if __name__ == "__main__":
