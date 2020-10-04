@@ -1333,3 +1333,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Sun Oct 04 2020 12:02:31.785 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 187
+  def ocupa(self, vaga, *_):
+  ^
+IndentationError: unexpected indent
+'''},
