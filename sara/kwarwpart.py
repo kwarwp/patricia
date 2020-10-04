@@ -101,7 +101,7 @@ class Vazio():
         return self._nada.elt
         
         
-    def ocupa(self, vaga):
+    def ocupa(self, vaga, *_):
         """ Pedido por uma vaga para que ocupe a posição nela.
         No caso do espaço vazio, não faz nada.
         """
@@ -204,13 +204,13 @@ class Piche(Vazio):
         """
         return self.vazio.elt
         
-    def sai(self):
-        """ Pedido por um ocupante para que desocupe a posição nela.
-        """
-        self.ocupante = NULO
-        self.acessa = self._acessa
-        self.sair = self._sair
-        self.vaga.limpa()
+    #def sai(self):
+    #    """ Pedido por um ocupante para que desocupe a posição nela.
+    #    """
+    #    self.ocupante = NULO
+    #    self.acessa = self._acessa
+    #    self.sair = self._sair
+    #    self.vaga.limpa()
 
 
 class Tora(Piche):
@@ -330,19 +330,19 @@ class Oca(Piche):
         return self.vazio.elt
         
         
-    def sai(self):
-        """ Pedido por um ocupante para que desocupe a posição nela.
-        """
-        self.ocupante = NULO
-        self.acessa = self._acessa
-        self.sair = self._sair
+    #def sai(self):
+    #    """ Pedido por um ocupante para que desocupe a posição nela.
+    #    """
+    #    self.ocupante = NULO
+    #    self.acessa = self._acessa
+    #    self.sair = self._sair
         
 
 
 class Nulo:
     """Objeto nulo que responde passivamente a todas as requisições."""
     def __init__(self):
-        self.pegar = self.ocupa = self.empurrar = self.nulo
+        self.pegar = self.ocupa = self.ocupou = self.elt = self.corrente = self.nulo
 
     def nulo(self, *_, **__):
         """Método nulo, responde passivamente a todas as chamadas.
