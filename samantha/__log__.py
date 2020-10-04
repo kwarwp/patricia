@@ -1319,3 +1319,10 @@ Traceback (most recent call last):
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Sun Oct 04 2020 12:02:07.886 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 146
+  def _sair(self):
+  ^
+IndentationError: unexpected indent
+'''},
