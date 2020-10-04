@@ -36,7 +36,7 @@ MAPA_FASE_3 = """
 .#.p`.
 """
 
-class Game(Indio):
+class Kaiowa(Indio):
     def executa(self):
         """ Roteiro do índio. Conjunto de comandos para ele executar.
         """
