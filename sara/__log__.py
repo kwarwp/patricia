@@ -8359,3 +8359,10 @@ AttributeError: 'dict' object has no attribute 'split'
     self.mapa = (mapa or MAPA_INICIO).split()
 AttributeError: 'dict' object has no attribute 'split'
 '''},
+{'date': 'Sun Oct 04 2020 20:56:07.724 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 652
+  Kwarwp(vitolino=jogo_proxy, mapa, medidas=medidas, indios=indios)
+                                  ^
+SyntaxError: non-keyword arg after keyword arg
+'''},
