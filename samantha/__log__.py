@@ -1326,3 +1326,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Sun Oct 04 2020 12:02:16.997 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 169
+  @property        
+  ^
+IndentationError: unexpected indent
+'''},
