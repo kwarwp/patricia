@@ -1,8 +1,8 @@
 # patricia.samantha.kwarwp8.py
 # SPDX-License-Identifier: GPL-3.0-or-later
 """ Projeto final - três desafios
-Desafio2:
-
+Desafio2: Você chegou numa floresta e precisa atravessá-la para chegar ao seu
+próximo destino. Cuidado para não cair em um buraco de tatu!
 
 .. codeauthor:: Raquel M. M. Fernandes - raquelmachado4993@gmail.com
 
