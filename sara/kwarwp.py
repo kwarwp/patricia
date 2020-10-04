@@ -649,7 +649,7 @@ def main(vitollino, mapa=MAPA_INICIO, medidas={}, indios=()):
     """
     JogoProxy.COMANDOS, JogoProxy.ATIVA = [], False
     vitollino_proxy = JogoProxy(vitollino=vitollino()).cria
-    Kwarwp(vitollino=jogo_proxy, mapa, medidas=medidas, indios=indios)
+    Kwarwp(vitollino=vitollino_proxy, mapa, medidas=medidas, indios=indios)
         
     
 if __name__ == "__main__":
