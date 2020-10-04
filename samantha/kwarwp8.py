@@ -16,11 +16,11 @@ from _spy.vitollino.main import Jogo, STYLE
 from collections import namedtuple as nt
 
 MAPA_INICIAL= """
-T||@||@|&
-|@..@|...
-@..&|..@|
-|..@|.@.|
-@.|...|.@
+T.|@||@|&
+@...@|...
+@......@|
+|.|@|@..|
+@..|....@
 |@^..|..|
 """
 MAPA_INICIAL2= """
@@ -272,7 +272,7 @@ class Piche(Vazio):
         self.vaga = vaga
         
     def _pede_sair(self):
-        self.taba.fala("Você ficou preso MUAHAHAHA")
+        self.taba.fala("Você caiu na toca do tatu!")
 
 class Caverna(Piche):
 
