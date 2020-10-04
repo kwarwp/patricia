@@ -16,7 +16,7 @@ from _spy.vitollino.main import Jogo, STYLE
 from collections import namedtuple as nt
 
 MAPA_INICIAL= """
-|||||||||
+T||||||||
 |@..@...|
 |..&|.@.|
 |..@|...|
@@ -374,6 +374,7 @@ class Kwarwp():
                 "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), #SOL
                 "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), #CEU
                 "|": Fab(self.coisa, f"{IMGUR}tlhuzFQ.png")  # ARVORE
+                "T": Fab(self.coisa, f"{IMGUR}3uGc7zn.png")  # TATU
                 }
         """Dicionário que define o tipo e a imagem do objeto para cada elemento"""
         mapa = mapa if mapa != "" else self.mapa 
