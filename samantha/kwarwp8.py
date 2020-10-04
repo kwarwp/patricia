@@ -16,12 +16,12 @@ from _spy.vitollino.main import Jogo, STYLE
 from collections import namedtuple as nt
 
 MAPA_INICIAL= """
-T||@||@||
-|@..@...|
-@..&|.@.|
+T||@||@|&
+|@..@|...
+@..&|..@|
 |..@|.@.|
-@.|.@.|.@
-|@.|.^.|
+@.|...|.@
+|@^..|..|
 """
 MAPA_INICIAL2= """
 #########
