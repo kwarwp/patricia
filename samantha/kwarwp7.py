@@ -25,7 +25,7 @@ MAPA_INICIO = """
 MAPA_INICIAL= """
 |||||||||
 |@..@...|
-|..&|.@.|
+|..v|.@.|
 |..@|...|
 |...@.r.|
 |@....^.|
@@ -33,7 +33,7 @@ MAPA_INICIAL= """
 
 MAPA_INICIAL2= """
 T.oaooaoa
-a...ao...
+a...ao..v
 a......ao
 o.oaoa..o
 a..o....a
