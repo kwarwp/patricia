@@ -1617,3 +1617,10 @@ ImportError: cannot import name 'main'
     from samantha.kwarwp9 import main as kwarwp_main, Indio
 ImportError: cannot import name 'main'
 '''},
+{'date': 'Mon Oct 05 2020 10:02:48.5 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module samantha.kwarwp8 line 283
+  def empurrar(self.empurrante, azimute):
+                    ^
+SyntaxError: invalid syntax
+'''},
