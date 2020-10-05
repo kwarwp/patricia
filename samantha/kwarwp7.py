@@ -32,12 +32,12 @@ MAPA_INICIAL= """
 """
 
 MAPA_INICIAL2= """
-T.|@||@|&
-@...@|...
-@......@|
-|.|@|@..|
-@..|....@
-|@^..|..|
+T.oaooaoa
+a...ao...
+a......ao
+o.oaoa..o
+a..o....a
+oa^..o..o
 """
 
 MAPA_INICIAL3= """
