@@ -116,7 +116,7 @@ class Fase3Indio2(Indio):
 
     
 
-class TelaPrincipal:
+class Game:
 
     from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
     
@@ -128,7 +128,7 @@ class TelaPrincipal:
         self.cena = cena
         self.image = image
         
-    def start():
+    def vai():
         self.fase_1 = Elemento(IMG_FASE_1, tit="Fase 1", x=0, y=0, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.cena.vai()
 
@@ -141,7 +141,7 @@ def start_game():
 
 
 def main(vitollino, medidas):
-    return TelaPrincipal().vai()
+    return Game().vai()
         
     
 if __name__ == "__main__":
