@@ -36,9 +36,12 @@ MAPA_FASE_3 = """
 .#.p$.
 """
 
-IMG_FASE1 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Gitlab.png?disp=inline"
-IMG_FASE2 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_github.png?disp=inline"
-IMG_FASE3 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Activ.png?disp=inline"
+IMG_FASE_1 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Gitlab.png?disp=inline"
+IMG_FASE_2 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_github.png?disp=inline"
+IMG_FASE_3 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Activ.png?disp=inline"
+
+IMG_WIDTH = 150
+IMG_HEIGHT = 150
 
 class Fase1(Indio):
     def executa(self):
@@ -114,11 +117,21 @@ class Fase3Indio2(Indio):
     
 
 class TelaPrincipal:
+
+    from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
+    
+    cena = Cena()
+
     def __init__(self, name, image, position, cena, rule):
         self.rule = rule
         self.name = name
         self.cena = cena
         self.image = image
+        
+    def start():
+        self.fase_1 = Elemento(IMG_FASE_1, tit="Fase 1", x=0, y=0, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
+        self.cena.vai()
+
     
     
 def start_game():
@@ -126,9 +139,9 @@ def start_game():
     fase2 = kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_FASE_2, indios=(Fase2,))
     fase3 = kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_FASE_3, indios=(Fase3Indio1,Fase3Indio2))
 
+
 def main(vitollino, medidas):
-    return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_FASE_1, indios=(Fase1,))
-    
+    return TelaPrincipal().vai()
         
     
 if __name__ == "__main__":
