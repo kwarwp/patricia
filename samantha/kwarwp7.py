@@ -33,7 +33,7 @@ MAPA_INICIAL= """
 
 MAPA_INICIAL2= """
 T.oaooaoa
-a...ao..v
+a...ao..&
 a......ao
 o.oaoa..o
 a..o....a
