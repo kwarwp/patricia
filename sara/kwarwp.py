@@ -352,7 +352,7 @@ class Indio():
         return self.indio.elt
 
 
-    def ocupa(self, vaga):
+    def ocupa(self, vaga, *_):
         """ Pedido por uma vaga para que ocupe a posição nela.
 
         :param vaga: A vaga que será ocupada pelo componente.
@@ -507,7 +507,7 @@ class Kwarwp():
         # self.o_indio.esquerda()
         # self.v.executa()
         # self.o_indio.passo()
-        print("Passo")
+
         [indio.passo() for indio in self.os_indios]
         
     
@@ -518,7 +518,7 @@ class Kwarwp():
         # JogoProxy.ATIVA = True
         # self.o_indio.ativa()
         # self.o_indio.executa()
-        print("Executa")
+        
         self.v.ativa()
         [indio.ativa() and indio.executa() for indio in self.os_indios]
 
