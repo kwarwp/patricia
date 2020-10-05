@@ -8474,3 +8474,33 @@ AttributeError: 'method' object has no attribute 'c'
     cena = self.v.c(fabrica["_"].imagem)
 AttributeError: 'method' object has no attribute 'c'
 '''},
+{'date': 'Mon Oct 05 2020 12:13:47.701 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''False False <function _command>
+False False <function _command>
+False False <function _command>
+False False <function _command>
+True False <function _command>
+False False <function _command>
+Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 63
+    main(Jogo, STYLE)
+  module <module> line 59
+    return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIO, indios=(Indio, Kaiowa))
+  module sara.kwarwp line 652
+    return Kwarwp(vitollino=vitollino_proxy, medidas=medidas, mapa=mapa, indios=indios)
+  module sara.kwarwp line 461
+    self.cena = self.cria(mapa=self.mapa) if vitollino else None
+  module sara.kwarwp line 498
+    self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
+KeyError: `
+'''},
