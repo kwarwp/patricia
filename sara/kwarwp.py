@@ -149,7 +149,7 @@ class JogoProxy():
     def lidar(self, metodo_command):
         """Lida com modo de operação do JogoProxy - bufferizado ou não"""
         self.ativa() if self.master else None
-        print(self._ativa, self.proxy._ativa, metodo_command)
+        #print(self._ativa, self.proxy._ativa, metodo_command)
         self.corrente._enfileira(metodo_command) if self.proxy._ativa else self._executa(metodo_command)
 
     def c(self, *args, **kwargs):
