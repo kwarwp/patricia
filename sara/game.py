@@ -59,9 +59,7 @@ class Fase1(Indio):
         self.esquerda()
         self.anda()
         self.anda()
-        self.esquerda()
-        self.esquerda()
-        self.esquerda()
+        self.anda()
 
 class Fase2(Indio):
     def executa(self):
@@ -104,9 +102,9 @@ class Fase2(Indio):
         self.esquerda()
         self.anda()
         self.anda()
-        self.esquerda()
-        self.esquerda()
-        self.esquerda()
+        self.anda()
+        
+        
 class Fase3Indio1(Indio):
     def executa(self):
         """ Roteiro do índio. Conjunto de comandos para ele executar.
