@@ -538,7 +538,7 @@ class Kwarwp():
         :param y: linha em que o elemento será posicionado.
         :param cena: cena em que o elemento será posicionado.
         """
-        vaga = Vazio(imagem, x=x, y=y, cena=cena, taba=self, ocupante=self)
+        vaga = Vazio(imagem, x=x, y=y, cena=cena, taba=self, ocupante=NULO)
         """ O Kwarwp é aqui usado como um ocupante nulo, que não ocupa uma vaga vazia."""
         return vaga
         
@@ -552,7 +552,7 @@ class Kwarwp():
         Cria uma vaga vazia e coloca o componente dentro dela.
         """
         coisa = Indio(imagem, x=0, y=0, cena=cena, taba=self)
-        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=NULO, taba=self)
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa, taba=self)
         return vaga
         
 
