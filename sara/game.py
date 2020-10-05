@@ -77,7 +77,7 @@ class Vitollino(Jogo):
     pass
 
 def main(vitollino, medidas):
-    return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIO, indios=(Fase1))
+    return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIO, indios=(Fase1,))
         
     
 if __name__ == "__main__":
