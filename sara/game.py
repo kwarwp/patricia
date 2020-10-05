@@ -146,7 +146,7 @@ class Game:
         self.medidas = medidas
     
     def vai(self):
-        from _spy.vitollino.main import Cena, Elemento, STYLE
+        from _spy.vitollino.main import Cena, Elemento
         
         cena = Cena()
         
