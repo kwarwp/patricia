@@ -36,8 +36,8 @@ MAPA_FASE_3 = """
 .#.p$.
 """
 
-IMG = "https://i.imgur.com/dZQ8liT.jpg"
-IMG_FUNDO = "https://i.imgur.com/sGoKfvs.jpg"
+IMG = f"https://i.imgur.com/dZQ8liT.jpg"
+IMG_FUNDO = f"https://i.imgur.com/sGoKfvs.jpg"
 
 IMG_WIDTH = 50
 IMG_HEIGHT = 50
@@ -149,7 +149,7 @@ class Game:
     def vai(self):
         from _spy.vitollino.main import Cena, Elemento
         
-        cena = Cena(IMG_FUNDO.imagem)
+        cena = Cena(IMG_FUNDO)
         
         fase_1 = Elemento(IMG, tit="Fase 1", x=50, y=0, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
         fase_1.elt.bind("click", self.run_fase_1)
