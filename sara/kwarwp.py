@@ -299,6 +299,10 @@ class Indio():
         self.esquerda()
         self.anda()
         self.larga()
+        self.esquerda()
+        self.esquerda()
+        self.anda()
+        self.anda()
         
         
     def sai(self):
