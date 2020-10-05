@@ -46,7 +46,7 @@ IMG_WIDTH_OCA = 50
 IMG_HEIGHT_OCA = 50
 
 IMG_WIDTH_FUNDO = 150
-IMG_HEIGHT_FUNDO = 150
+IMG_HEIGHT_FUNDO = 300
 
 class Fase1(Indio):
     def executa(self):
