@@ -8891,3 +8891,25 @@ NameError: name 'execute' is not defined
     Game().vai()
 TypeError: __init__() missing 2 positional arguments: vitollino,medidas
 '''},
+{'date': 'Mon Oct 05 2020 19:30:57.541 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 179
+    main(Jogo, STYLE)
+  module <module> line 175
+    Game(vitollino, medidas).vai()
+  module <module> line 153
+    fase_1 = Elemento(IMG, tit="Fase 1", x=50, y=0, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
+  module _spy.vitollino.main line 554
+    self.scorer = dict(ponto=1, valor=cena.nome, carta=tit or img, casa=self.xy, move=None)
+AttributeError: 'Jogo' object has no attribute 'nome'
+'''},
