@@ -42,8 +42,8 @@ T.|@||@|&
 
 MAPA_INICIAL3= """
 ccccccccc
-@...e...c
-&....e.ec
+c...e...c
+m....e.ec
 e...e...c
 e.#.e.e.c
 ec^c..e.c
