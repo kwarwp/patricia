@@ -1404,3 +1404,10 @@ NameError: name 'coisa' is not defined
     fabrica = {
 AttributeError: 'Kwarwp' object has no attribute 'coisa'
 '''},
+{'date': 'Mon Oct 05 2020 09:38:41.316 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module samantha.kwarwp9 line 387
+  fabrica = {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ^
+SyntaxError: invalid syntax
+'''},
