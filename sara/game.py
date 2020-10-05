@@ -35,7 +35,11 @@ MAPA_FASE_3 = """
 .....#
 .#.p$.
 """
-        
+
+IMG_FASE1 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Gitlab.png?disp=inline"
+IMG_FASE2 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_github.png?disp=inline"
+IMG_FASE3 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Activ.png?disp=inline"
+
 class Fase1(Indio):
     def executa(self):
         """ Roteiro do índio. Conjunto de comandos para ele executar.
@@ -106,18 +110,24 @@ class Fase3Indio2(Indio):
         self.direita()
         self.larga()
         
-class Vitollino(Jogo):
-    """ Empacota o engenho de jogo Vitollino """
-    pass
+
+    
+
+class TelaPrincipal:
+    def __init__(self, name, image, position, cena, rule):
+        self.rule = rule
+        self.name = name
+        self.cena = cena
+        self.image = image
+    
     
 def start_game():
-    fase1 = kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIO, indios=(Fase1,))
+    fase1 = kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_FASE_1, indios=(Fase1,))
     fase2 = kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_FASE_2, indios=(Fase2,))
     fase3 = kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_FASE_3, indios=(Fase3Indio1,Fase3Indio2))
 
 def main(vitollino, medidas):
-    a = kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIO, indios=(Fase1,))
-    print(a)
+    return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIO, indios=(Fase1,))
     
         
     
