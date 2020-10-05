@@ -15,7 +15,7 @@ Changelog
 """
 
 from collections import namedtuple as nt, deque
-from kwarwp.kwarwpart import Vazio, Piche, Oca, Tora, NULO
+from samantha.kwarwp8 import Vazio, Piche, Oca, Tora, NULO
 
 IMGUR = "https://imgur.com/"
 """Prefixo do site imgur."""
