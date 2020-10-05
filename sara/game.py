@@ -78,7 +78,21 @@ class Fase2(Indio):
         self.anda()
         self.anda()
 
-class Kaiowa(Indio):
+class Fase3Indio1(Indio):
+    def executa(self):
+        """ Roteiro do índio. Conjunto de comandos para ele executar.
+        """
+        self.anda()
+        self.direita()
+        self.pega()
+        self.esquerda()
+        self.anda()
+        self.anda()
+        self.anda()
+        self.direita()
+        self.larga()
+
+class Fase3Indio2(Indio):
     def executa(self):
         """ Roteiro do índio. Conjunto de comandos para ele executar.
         """
@@ -101,7 +115,7 @@ def game():
     return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_FASE_2, indios=(Fase2,))
 
 def main(vitollino, medidas):
-    a = kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_FASE_2, indios=(Fase2,))
+    a = kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_FASE_2, indios=(Fase3Indio1,Fase3Indio2))
     print(a)
     
         
