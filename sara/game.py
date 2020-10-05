@@ -36,7 +36,7 @@ MAPA_FASE_3 = """
 .#.p$.
 """
 
-IMG_FASE_1 = f"https://activufrj.nce.ufrj.br/file/ProgOO/fase1.png?disp=inline"
+IMG_FASE_1 = "https://activufrj.nce.ufrj.br/file/ProgOO/fase1.png?disp=inline"
 IMG_FASE_2 = f"https://activufrj.nce.ufrj.br/file/ProgOO/fase2.png?disp=inline"
 IMG_FASE_3 = f"https://activufrj.nce.ufrj.br/file/ProgOO/fase3.png?disp=inline"
 IMG_OCA = f"https://i.imgur.com/dZQ8liT.jpg"
