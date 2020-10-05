@@ -143,8 +143,6 @@ class Fase3Indio2(Indio):
         self.esquerda()
         self.anda()
         self.anda()
-
-
     
 
 class Game:
