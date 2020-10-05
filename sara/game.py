@@ -117,12 +117,9 @@ class Fase3Indio2(Indio):
     
 
 class Game:
-
-    
-    cena = Cena()
         
     def vai(self):
-        from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
+        from _spy.vitollino.main import Cena, Elemento, STYLE
         
         self.fase_1 = Elemento(IMG_FASE_1, tit="Fase 1", x=0, y=0, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.cena.vai()
