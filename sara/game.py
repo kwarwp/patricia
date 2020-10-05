@@ -127,7 +127,7 @@ def start_game():
     fase3 = kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_FASE_3, indios=(Fase3Indio1,Fase3Indio2))
 
 def main(vitollino, medidas):
-    return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIO, indios=(Fase1,))
+    return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_FASE_1, indios=(Fase1,))
     
         
     
