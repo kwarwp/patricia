@@ -395,8 +395,16 @@ class Kwarwp():
         "@": Fab(self.barra, f"{IMGUR}tLLVjfN.png"), # PICHE
         "~": Fab(self.coisa, f"{IMGUR}UAETaiP.gif"), # CEU
         "*": Fab(self.coisa, f"{IMGUR}PfodQmT.gif"), # SOL
-        "|": Fab(self.coisa, f"{IMGUR}uwYPNlz.png")  # CERCA       
+        "|": Fab(self.coisa, f"{IMGUR}uwYPNlz.png")  # CERCA
+        "T": Fab(self.coisa, f"{IMGUR}3uGc7zn.png")  # TATU
+        "a": Fab(self.coisa, f"{IMGUR}tlhuzFQ.png"),  # ARVORE
+        "o": Fab(self.barra, f"{IMGUR}53TFSpA.png"), #TOCA DO TATU
+        "r": Fab(self.atora, f"{IMGUR}J60I1wn.png"), # TORA QUE AGORA É PEDRA
+        "c": Fab(self.barra, f"{IMGUR}8VAR7mN.png"), #CÓRREGO
+        "v": Fab(self.caverna, f"{IMGUR}Ggh8KNw.jpg"), #CAVERNA
+        "e": Fab(self.coisa, f"{IMGUR}VIIwXhQ.png")  # PEDRA 
         }
+        
         """Dicionário que define o tipo e a imagem do objeto para cada elemento."""
         mapa = mapa if mapa != "" else self.mapa
         """Cria um cenário com imagem de terra de chão batido, céu e sol"""
