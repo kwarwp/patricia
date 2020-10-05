@@ -60,6 +60,7 @@ class Fase1(Indio):
         self.anda()
         self.anda()
         self.anda()
+        self.anda()
 
 class Fase2(Indio):
     def executa(self):
@@ -100,6 +101,7 @@ class Fase2(Indio):
         self.larga()
         self.esquerda()
         self.esquerda()
+        self.anda()
         self.anda()
         self.anda()
         self.anda()
