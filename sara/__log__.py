@@ -8534,3 +8534,27 @@ Traceback (most recent call last):
     self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
 KeyError: `
 '''},
+{'date': 'Mon Oct 05 2020 16:29:53.439 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 84
+    main(Jogo, STYLE)
+  module <module> line 80
+    return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIO, indios=(Fase1))
+  module sara.kwarwp line 658
+    return Kwarwp(vitollino=vitollino_proxy, medidas=medidas, mapa=mapa, indios=indios)
+  module sara.kwarwp line 466
+    self.indios = deque(indios or [Indio])
+  module _collections line 48
+    for elem in iterable:
+TypeError: 'undefined' object is not iterable
+'''},
