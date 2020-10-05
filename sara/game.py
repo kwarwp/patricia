@@ -120,8 +120,6 @@ class Fase3Indio1(Indio):
         self.direita()
         self.anda()
         self.anda()
-        self.esquerda()
-        self.anda()
         self.direita()
         self.anda()
 
