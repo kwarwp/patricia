@@ -279,3 +279,8 @@ class Tora(Piche):
         No caso da tora, ela age como um obstáculo e não prossegue com o protocolo.
         """
         pass
+        
+    def empurrar(self.empurrante, azimute):
+        self.empurrante = empurrante
+        self.vaga.acessar(self, azimute)
+        self.empurrante = NULO
