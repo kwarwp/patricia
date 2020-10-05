@@ -45,7 +45,7 @@ IMG_FUNDO = f"https://i.imgur.com/sGoKfvs.jpg"
 IMG_WIDTH_OCA = 50
 IMG_HEIGHT_OCA = 50
 
-IMG_WIDTH_FUNDO = 100
+IMG_WIDTH_FUNDO = 150
 IMG_HEIGHT_FUNDO = 150
 
 class Fase1(Indio):
