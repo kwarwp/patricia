@@ -122,7 +122,7 @@ class Game:
     
     cena = Cena()
 
-    def __init__(self, name, image, position, cena, rule):
+    def __init__(self):
         self.rule = rule
         self.name = name
         self.cena = cena
