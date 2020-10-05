@@ -73,7 +73,8 @@ class Kaiowa(Indio):
         self.gira()
         self.gira()
         self.gira()
-        self.gira()
+        self.anda()
+        self.anda()
         self.anda()
 
 
