@@ -53,7 +53,19 @@ class Kaiowa(Indio):
     def executa(self):
         """ Roteiro do índio. Conjunto de comandos para ele executar.
         """
-        self.empurra()
+        #roteiro kwarwp
+        #self.empurra()
+        #self.anda()
+        #self.direita()
+        #self.pega()
+        #self.esquerda()
+        #self.anda()
+        #self.anda()
+        #self.anda()
+        #self.direita()
+        #self.larga()
+        
+        #roteiro desafio 1
         self.anda()
         self.direita()
         self.pega()
