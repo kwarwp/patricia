@@ -122,7 +122,7 @@ class Game:
     
     cena = Cena()
         
-    def vai():
+    def vai(self):
         self.fase_1 = Elemento(IMG_FASE_1, tit="Fase 1", x=0, y=0, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.cena.vai()
 
