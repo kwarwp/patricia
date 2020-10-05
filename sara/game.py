@@ -157,7 +157,7 @@ class Game:
         
         cena = Cena(IMG_FUNDO)
 
-        img_fase_1 = Elemento(IMG_FASE_1, tit="Img Fase 1", x=80, y=0, width=IMG_WIDTH_FUNDO, height=IMG_HEIGHT_FUNDO, cena=cena)
+        img_fase_1 = Elemento(IMG_FASE_1, x=80, y=0, width=IMG_WIDTH_FUNDO, height=IMG_HEIGHT_FUNDO, cena=cena)
         fase_1 = Elemento(IMG_OCA, tit="Fase 1", x=100, y=20, width=IMG_WIDTH_OCA, height=IMG_HEIGHT_OCA, cena=cena)
         fase_1.elt.bind("click", self.run_fase_1)
         
