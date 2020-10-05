@@ -89,6 +89,8 @@ class Fase2(Indio):
         self.esquerda()
         self.anda()
         self.esquerda()
+        self.esquerda()
+        self.esquerda()
         self.anda()
         self.pega()
         self.direita()
