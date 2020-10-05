@@ -66,15 +66,12 @@ class Kaiowa(Indio):
         #self.larga()
         
         #roteiro desafio 1
-        self.anda()
-        self.direita()
-        self.pega()
         self.esquerda()
         self.anda()
         self.anda()
         self.anda()
-        self.direita()
-        self.larga()
+        self.gira()
+        self.anda()
 
 
 class Vitollino(Jogo):
