@@ -124,6 +124,8 @@ class Fase3Indio1(Indio):
         self.anda()
         self.direita()
         self.anda()
+        self.esquerda()
+        self.anda()
 
 class Fase3Indio2(Indio):
     def executa(self):
@@ -135,9 +137,12 @@ class Fase3Indio2(Indio):
         self.esquerda()
         self.anda()
         self.anda()
-        self.anda()
-        self.direita()
         self.larga()
+        self.direita()
+        self.anda()
+        self.esquerda()
+        self.anda()
+
 
     
 
