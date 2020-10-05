@@ -36,9 +36,7 @@ MAPA_FASE_3 = """
 .#.p$.
 """
 
-IMG_FASE_1 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Gitlab.png?disp=inline"
-IMG_FASE_2 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_github.png?disp=inline"
-IMG_FASE_3 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Activ.png?disp=inline"
+IMG = "https://i.imgur.com/dZQ8liT.jpg"
 
 IMG_WIDTH = 150
 IMG_HEIGHT = 150
@@ -121,8 +119,10 @@ class Game:
     def vai(self):
         from _spy.vitollino.main import Cena, Elemento, STYLE
         
-        self.fase_1 = Elemento(IMG_FASE_1, tit="Fase 1", x=0, y=0, width=IMG_WIDTH, height=IMG_HEIGHT, cena=Cena())
-        self.cena.vai()
+        cena = Cena()
+        
+        fase_1 = Elemento(IMG_FASE_1, tit="Fase 1", x=0, y=0, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
+        cena.vai()
 
     
     
