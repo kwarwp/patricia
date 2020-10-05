@@ -115,7 +115,11 @@ class Fase3Indio2(Indio):
     
 
 class Game:
-        
+    
+    def __init__(self, vitollino, medidas):
+        self.vitollino = vitollino
+        self.medidas = medidas
+    
     def vai(self):
         from _spy.vitollino.main import Cena, Elemento, STYLE
         
@@ -128,7 +132,8 @@ class Game:
         cena.vai()
         
     def execute(self, env=None):
-        fase1 = kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_FASE_1, indios=(Fase1,))
+        
+        fase1 = kwarwp_main(vitollino=self.vitollino, medidas=self.medidas, mapa=MAPA_FASE_1, indios=(Fase1,))
 
     
     
