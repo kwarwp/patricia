@@ -280,7 +280,7 @@ class Tora(Piche):
         """
         pass
         
-    def empurrar(self.empurrante, azimute):
+    def empurrar(self,empurrante, azimute):
         self.empurrante = empurrante
         self.vaga.acessar(self, azimute)
         self.empurrante = NULO
