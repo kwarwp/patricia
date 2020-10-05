@@ -8558,3 +8558,10 @@ KeyError: `
     for elem in iterable:
 TypeError: 'undefined' object is not iterable
 '''},
+{'date': 'Mon Oct 05 2020 17:45:59.19 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 118
+  self.rule = rule
+  ^
+IndentationError: expected an indented block
+'''},
