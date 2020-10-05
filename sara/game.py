@@ -144,7 +144,7 @@ def start_game():
 
 
 def main(vitollino, medidas):
-    Game().vai()
+    Game(vitollino, medidas).vai()
         
     
 if __name__ == "__main__":
