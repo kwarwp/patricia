@@ -115,7 +115,7 @@ def game():
     return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_FASE_2, indios=(Fase2,))
 
 def main(vitollino, medidas):
-    a = kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_FASE_2, indios=(Fase3Indio1,Fase3Indio2))
+    a = kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_FASE_3, indios=(Fase3Indio1,Fase3Indio2))
     print(a)
     
         
