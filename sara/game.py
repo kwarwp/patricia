@@ -45,7 +45,7 @@ IMG_FUNDO = f"https://i.imgur.com/sGoKfvs.jpg"
 IMG_WIDTH_OCA = 50
 IMG_HEIGHT_OCA = 50
 
-IMG_WIDTH_FUNDO = 150
+IMG_WIDTH_FUNDO = 300
 IMG_HEIGHT_FUNDO = 300
 
 class Fase1(Indio):
@@ -157,16 +157,16 @@ class Game:
         
         cena = Cena(IMG_FUNDO)
 
-        Elemento(IMG_FASE_1, x=80, y=5, width=IMG_WIDTH_FUNDO, height=IMG_HEIGHT_FUNDO, cena=cena)
-        fase_1 = Elemento(IMG_OCA, tit="Fase 1", x=100, y=20, width=IMG_WIDTH_OCA, height=IMG_HEIGHT_OCA, cena=cena)
+        Elemento(IMG_FASE_1, x=100, y=5, width=IMG_WIDTH_FUNDO, height=IMG_HEIGHT_FUNDO, cena=cena)
+        fase_1 = Elemento(IMG_OCA, tit="Fase 1", x=100, y=30, width=IMG_WIDTH_OCA, height=IMG_HEIGHT_OCA, cena=cena)
         fase_1.elt.bind("click", self.run_fase_1)
         
-        Elemento(IMG_FASE_2, x=230, y=5, width=IMG_WIDTH_FUNDO, height=IMG_HEIGHT_FUNDO, cena=cena)
-        fase_2 = Elemento(IMG_OCA, tit="Fase 2", x=250, y=20, width=IMG_WIDTH_OCA, height=IMG_HEIGHT_OCA, cena=cena)
+        Elemento(IMG_FASE_2, x=250, y=5, width=IMG_WIDTH_FUNDO, height=IMG_HEIGHT_FUNDO, cena=cena)
+        fase_2 = Elemento(IMG_OCA, tit="Fase 2", x=250, y=30, width=IMG_WIDTH_OCA, height=IMG_HEIGHT_OCA, cena=cena)
         fase_2.elt.bind("click", self.run_fase_2)
         
-        Elemento(IMG_FASE_3, x=380, y=5, width=IMG_WIDTH_FUNDO, height=IMG_HEIGHT_FUNDO, cena=cena)
-        fase_3 = Elemento(IMG_OCA, tit="Fase 3", x=400, y=20, width=IMG_WIDTH_OCA, height=IMG_HEIGHT_OCA, cena=cena)
+        Elemento(IMG_FASE_3, x=400, y=5, width=0, height=0, cena=cena)
+        fase_3 = Elemento(IMG_OCA, tit="Fase 3", x=400, y=30, width=IMG_WIDTH_OCA, height=IMG_HEIGHT_OCA, cena=cena)
         fase_3.elt.bind("click", self.run_fase_3)
         
         cena.vai()
