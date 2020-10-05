@@ -121,12 +121,6 @@ class Game:
     from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
     
     cena = Cena()
-
-    def __init__(self):
-        self.rule = rule
-        self.name = name
-        self.cena = cena
-        self.image = image
         
     def vai():
         self.fase_1 = Elemento(IMG_FASE_1, tit="Fase 1", x=0, y=0, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
