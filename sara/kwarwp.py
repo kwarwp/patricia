@@ -641,8 +641,8 @@ class Kwarwp():
         return vaga
 
 
-def main(vitollino, mapa=MAPA_INICIO, medidas={}, indios=()):
-     """ Rotina principal que invoca a classe Kwarwp.
+def main(vitollino, medidas={}, mapa=None, indios=()):
+    """ Rotina principal que invoca a classe Kwarwp.
     
     :param vitollino: Empacota o engenho de jogo Vitollino.
     :param medidas: Um dicionário usado para redimensionar a tela.
