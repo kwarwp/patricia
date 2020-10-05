@@ -526,7 +526,7 @@ class Kwarwp():
         # self.o_indio.executa()
         
         self.v.ativa()
-        print([indio.ativa() or indio.executa() for indio in self.os_indios])
+        [indio.ativa() or indio.executa() for indio in self.os_indios]
 
         #self.os_indios[0].ativa()
         #self.os_indios[0].executa()
