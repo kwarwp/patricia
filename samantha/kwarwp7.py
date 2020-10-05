@@ -27,7 +27,7 @@ MAPA_INICIAL= """
 |@..@...|
 |..&|.@.|
 |..@|...|
-|...@...|
+|...@.r.|
 |@....^.|
 """
 
@@ -53,6 +53,7 @@ class Kaiowa(Indio):
     def executa(self):
         """ Roteiro do índio. Conjunto de comandos para ele executar.
         """
+        self.empurra()
         self.anda()
         self.direita()
         self.pega()
