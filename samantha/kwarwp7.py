@@ -25,9 +25,9 @@ MAPA_INICIO = """
 MAPA_INICIAL= """
 |||||||||
 |@..@...|
-|..v|.@.|
+|..&|.@.|
 |..@|...|
-|...@.r.|
+|...@...|
 |@....^.|
 """
 
@@ -82,8 +82,8 @@ class Vitollino(Jogo):
     pass
 
 def main(vitollino, medidas):
-    #return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIAL, indios=(Kaiowa,))
-    return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIAL2, indios=(Kaiowa,))
+    return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIAL, indios=(Kaiowa,))
+    #return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIAL2, indios=(Kaiowa,))
     #return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIAL3, indios=(Kaiowa,))
         
     
