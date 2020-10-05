@@ -134,7 +134,6 @@ class Fase3Indio2(Indio):
         self.anda()
         self.direita()
         self.larga()
-        
 
     
 
