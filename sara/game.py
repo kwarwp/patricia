@@ -36,7 +36,7 @@ MAPA_FASE_3 = """
 .#.p$.
 """
 
-IMG = "https://i.imgur.com/HeiupbP.jpg"
+IMG = "https://i.imgur.com/dZQ8liT.jpg"
 
 IMG_WIDTH = 50
 IMG_HEIGHT = 50
@@ -121,9 +121,9 @@ class Game:
         
         cena = Cena()
         
-        fase_1 = Elemento(IMG, tit="Fase 1", x=0, y=0, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
-        fase_2 = Elemento(IMG, tit="Fase 2", x=IMG_WIDTH+10, y=0, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
-        fase_3 = Elemento(IMG, tit="Fase 3", x=IMG_HEIGHT*2+20, y=0, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
+        fase_1 = Elemento(IMG, tit="Fase 1", x=50, y=0, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
+        fase_2 = Elemento(IMG, tit="Fase 2", x=200, y=0, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
+        fase_3 = Elemento(IMG, tit="Fase 3", x=500, y=0, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
         cena.vai()
 
     
