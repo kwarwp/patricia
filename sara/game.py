@@ -36,11 +36,17 @@ MAPA_FASE_3 = """
 .#.p$.
 """
 
-IMG = f"https://i.imgur.com/dZQ8liT.jpg"
+IMG_FASE_1 = f"https://activufrj.nce.ufrj.br/file/info/ProgOO/fase1.png"
+IMG_FASE_2 = f"https://activufrj.nce.ufrj.br/file/info/ProgOO/fase2.png"
+IMG_FASE_3 = f"https://activufrj.nce.ufrj.br/file/info/ProgOO/fase3.png"
+IMG_OCA = f"https://i.imgur.com/dZQ8liT.jpg"
 IMG_FUNDO = f"https://i.imgur.com/sGoKfvs.jpg"
 
-IMG_WIDTH = 50
-IMG_HEIGHT = 50
+IMG_WIDTH_OCA = 50
+IMG_HEIGHT_OCA = 50
+
+IMG_WIDTH_FUNDO = 100
+IMG_HEIGHT_FUNDO = 150
 
 class Fase1(Indio):
     def executa(self):
@@ -150,14 +156,15 @@ class Game:
         from _spy.vitollino.main import Cena, Elemento
         
         cena = Cena(IMG_FUNDO)
-        
-        fase_1 = Elemento(IMG, tit="Fase 1", x=100, y=0, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
+
+        img_fase_1 = Elemento(IMG_FASE_1, tit="Img Fase 1", x=80, y=0, width=IMG_WIDTH_FUNDO, height=IMG_HEIGHT_FUNDO, cena=cena)
+        fase_1 = Elemento(IMG_OCA, tit="Fase 1", x=100, y=20, width=IMG_WIDTH_OCA, height=IMG_HEIGHT_OCA, cena=cena)
         fase_1.elt.bind("click", self.run_fase_1)
         
-        fase_2 = Elemento(IMG, tit="Fase 2", x=250, y=0, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
+        fase_2 = Elemento(IMG_OCA, tit="Fase 2", x=250, y=0, width=IMG_WIDTH_OCA, height=IMG_HEIGHT_OCA, cena=cena)
         fase_2.elt.bind("click", self.run_fase_2)
         
-        fase_3 = Elemento(IMG, tit="Fase 3", x=400, y=0, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
+        fase_3 = Elemento(IMG_OCA, tit="Fase 3", x=400, y=0, width=IMG_WIDTH_OCA, height=IMG_HEIGHT_OCA, cena=cena)
         fase_3.elt.bind("click", self.run_fase_3)
         
         cena.vai()
