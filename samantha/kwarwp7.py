@@ -41,12 +41,12 @@ T.|@||@|&
 """
 
 MAPA_INICIAL3= """
-@@@@@@@@@
-@...|...@
-&....|.|@
-|...|...@
-|.#.|.|.@
-|@^@..|.@
+ccccccccc
+@...e...c
+&....e.ec
+e...e...c
+e.#.e.e.c
+ec^c..e.c
 """
 
 class Kaiowa(Indio):
@@ -70,7 +70,9 @@ class Vitollino(Jogo):
     pass
 
 def main(vitollino, medidas):
-    return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIAL, indios=(Kaiowa,))
+    #return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIAL, indios=(Kaiowa,))
+    #return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIAL2, indios=(Kaiowa,))
+    return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIAL3, indios=(Kaiowa,))
         
     
 if __name__ == "__main__":
