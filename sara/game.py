@@ -110,12 +110,13 @@ class Vitollino(Jogo):
     """ Empacota o engenho de jogo Vitollino """
     pass
     
-def game():
-    return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIO, indios=(Fase1,))
-    return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_FASE_2, indios=(Fase2,))
+def start_game():
+    fase1 = kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIO, indios=(Fase1,))
+    fase2 = kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_FASE_2, indios=(Fase2,))
+    fase3 = kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_FASE_3, indios=(Fase3Indio1,Fase3Indio2))
 
 def main(vitollino, medidas):
-    a = kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_FASE_3, indios=(Fase3Indio1,Fase3Indio2))
+    a = kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIO, indios=(Fase1,))
     print(a)
     
         
