@@ -38,8 +38,8 @@ MAPA_FASE_3 = """
 
 IMG = "https://i.imgur.com/dZQ8liT.jpg"
 
-IMG_WIDTH = 150
-IMG_HEIGHT = 150
+IMG_WIDTH = 50
+IMG_HEIGHT = 50
 
 class Fase1(Indio):
     def executa(self):
@@ -121,7 +121,7 @@ class Game:
         
         cena = Cena()
         
-        fase_1 = Elemento(IMG_FASE_1, tit="Fase 1", x=0, y=0, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
+        fase_1 = Elemento(IMG, tit="Fase 1", x=0, y=0, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
         cena.vai()
 
     
