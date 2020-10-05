@@ -507,7 +507,7 @@ class Kwarwp():
         # self.o_indio.esquerda()
         # self.v.executa()
         # self.o_indio.passo()
-
+        print("Passo")
         [indio.passo() for indio in self.os_indios]
         
     
@@ -518,7 +518,7 @@ class Kwarwp():
         # JogoProxy.ATIVA = True
         # self.o_indio.ativa()
         # self.o_indio.executa()
-        
+        print("Executa")
         self.v.ativa()
         [indio.ativa() and indio.executa() for indio in self.os_indios]
 
