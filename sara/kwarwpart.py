@@ -317,7 +317,7 @@ class Oca(Piche):
         com uma chamada ocupou.
             :param ocupante: O canditato a ocupar a posição corrente.
         """
-        print(type(ocupante))
+        print(type(self.taba))
         if type(ocupante) is Indio:
             self.taba.fala("Você chegou no seu objetivo")
         ocupante.ocupa(self)
