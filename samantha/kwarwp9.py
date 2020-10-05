@@ -347,6 +347,12 @@ class Indio():
         """
         pass
 
+    def empurra(self):
+        destino = (self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
+        taba = self.taba.taba
+        if destino in taba:
+            vaga = taba[destino]
+            vaga.empurrar(self, self.azimute)
 
 class Kwarwp():
     """ Jogo para ensino de programação.
