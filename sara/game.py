@@ -122,10 +122,13 @@ class Game:
         cena = Cena()
         
         fase_1 = Elemento(IMG, tit="Fase 1", x=50, y=0, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
-        fase_1.elt.bind("click", kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_FASE_1, indios=(Fase1,)))
+        fase_1.elt.bind("click", execute)
         fase_2 = Elemento(IMG, tit="Fase 2", x=200, y=0, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
         fase_3 = Elemento(IMG, tit="Fase 3", x=350, y=0, width=IMG_WIDTH, height=IMG_HEIGHT, cena=cena)
         cena.vai()
+        
+    def execute(self, env=None):
+        fase1 = kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_FASE_1, indios=(Fase1,))
 
     
     
