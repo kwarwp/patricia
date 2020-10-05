@@ -401,7 +401,7 @@ class Kwarwp():
         "o": Fab(self.barra, f"{IMGUR}53TFSpA.png"), #TOCA DO TATU
         "r": Fab(self.atora, f"{IMGUR}J60I1wn.png"), # TORA QUE AGORA É PEDRA
         "c": Fab(self.barra, f"{IMGUR}8VAR7mN.png"), #CÓRREGO
-        "v": Fab(self.Oca, f"{IMGUR}Ggh8KNw.jpg"), #CAVERNA
+        "v": Fab(self.maloc, f"{IMGUR}Ggh8KNw.jpg"), #CAVERNA
         "e": Fab(self.coisa, f"{IMGUR}VIIwXhQ.png")  # PEDRA 
         }
         
