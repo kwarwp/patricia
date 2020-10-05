@@ -86,9 +86,7 @@ class Fase2(Indio):
         self.larga()
         self.esquerda()
         self.anda()
-        self.anda()
         self.esquerda()
-        self.anda()
         self.anda()
 
 class Fase3Indio1(Indio):
