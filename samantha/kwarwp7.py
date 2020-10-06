@@ -80,8 +80,8 @@ class Kaiowa(Indio):
         self.empurra()
         self.anda()
         self.empurra()
-        self.esquerda()
         self.anda()
+        self.esquerda()
         self.anda()
         self.anda()
        
