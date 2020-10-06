@@ -1720,3 +1720,10 @@ KeyError: v
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Tue Oct 06 2020 18:11:23.160 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module samantha.kwarwp8 line 233
+  def elt(self)
+                ^
+SyntaxError: invalid syntax
+'''},
