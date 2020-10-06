@@ -69,7 +69,8 @@ class Kaiowa(Indio):
         #roteiro desafio2
         self.direita()
         self.anda()
-        self.direita()
+        self.anda()
+        self.esquerda()
         self.anda()
         self.direita()
         self.anda()
