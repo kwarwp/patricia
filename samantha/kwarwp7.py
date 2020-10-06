@@ -85,15 +85,15 @@ class Kaiowa(Indio):
        #self.anda()
        
        #roteiro desafio 3
-       self.empurra()
-       self.anda()
-       self.empurra()
-       self.anda()
-       self.empurra()
-       self.anda()
-       self.esquerda()
-       self.anda()
-       self.anda()
+        self.empurra()
+        self.anda()
+        self.empurra()
+        self.anda()
+        self.empurra()
+        self.anda()
+        self.esquerda()
+        self.anda()
+        self.anda()
        
 
 class Vitollino(Jogo):
