@@ -1802,3 +1802,62 @@ Traceback (most recent call last):
     return self.oca.elt 
 AttributeError: 'Oca' object has no attribute 'oca'
 '''},
+{'date': 'Tue Oct 06 2020 18:12:43.890 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''False False <function _pos>
+False False <function _pos>
+False False <function _pos>
+False False <function _pos>
+False False <function _pos>
+False False <function _pos>
+False False <function _pos>
+False False <function _pos>
+False False <function _pos>
+False False <function _pos>
+False False <function _pos>
+False False <function _pos>
+False False <function _pos>
+False False <function _pos>
+False False <function _pos>
+Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 110
+    main(Jogo, STYLE)
+  module <module> line 104
+    return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIAL, indios=(Kaiowa,))
+  module samantha.kwarwp9 line 561
+    return Kwarwp(vitollino=vitollino_proxy, medidas=medidas, mapa=mapa, indios=indios)
+  module samantha.kwarwp9 line 383
+    self.cena = self.cria(mapa=self.mapa) if vitollino else None
+  module samantha.kwarwp9 line 427
+    self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
+  module samantha.kwarwp9 line 493
+    vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa, taba=self)
+  module samantha.kwarwp8 line 54
+    self.acessa(ocupante)
+  module samantha.kwarwp8 line 101
+    ocupante.ocupa(self)
+  module samantha.kwarwp8 line 200
+    vaga.ocupou(self)
+  module samantha.kwarwp8 line 134
+    self.vazio.ocupa(ocupante, pos)
+  module samantha.kwarwp9 line 160
+    self.lidar(_pos)
+  module samantha.kwarwp9 line 116
+    self.corrente._enfileira(metodo) if self.proxy._ativa else self._executa(metodo)
+  module samantha.kwarwp9 line 168
+    metodo()
+  module samantha.kwarwp9 line 158
+    destino = val.elt if val else None
+  module samantha.kwarwp8 line 234
+    return self.oca.elt 
+AttributeError: 'Oca' object has no attribute 'oca'
+'''},
