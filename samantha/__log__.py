@@ -1713,3 +1713,10 @@ Traceback (most recent call last):
     self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
 KeyError: v
 '''},
+{'date': 'Tue Oct 06 2020 17:42:49.252 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 78
+  self.empurra()
+  ^
+IndentationError: unexpected indent
+'''},
