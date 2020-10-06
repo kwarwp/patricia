@@ -75,6 +75,13 @@ class Kaiowa(Indio):
         self.direita()
         self.anda()
         self.anda()
+        self.esquerda()
+        self.anda()
+        self.anda()
+        self.anda()
+        self.direita()
+        self.anda()
+        self.anda()
        
        #roteiro desafio 3
        #self.empurra()
