@@ -64,7 +64,6 @@ class Kaiowa(Indio):
         self.anda()
         self.anda()
         self.anda()
-        self.anda()
         self.direita()
         self.anda()
         
