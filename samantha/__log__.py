@@ -1861,3 +1861,10 @@ Traceback (most recent call last):
     return self.oca.elt 
 AttributeError: 'Oca' object has no attribute 'oca'
 '''},
+{'date': 'Tue Oct 06 2020 18:17:49.969 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 88
+  self.empurra()
+  ^
+IndentationError: unexpected indent
+'''},
