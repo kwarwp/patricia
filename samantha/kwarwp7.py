@@ -54,18 +54,18 @@ class Kaiowa(Indio):
     def executa(self):
         """ Roteiro do índio. Conjunto de comandos para ele executar.
         """
-        #roteiro desafio 1
-        self.esquerda()
-        self.anda()
-        self.anda()
-        self.anda()
-        self.anda()
-        self.direita()
-        self.anda()
-        self.anda()
-        self.anda()
-        self.direita()
-        self.anda()
+       #roteiro desafio 1
+       #self.esquerda()
+       #self.anda()
+       #self.anda()
+       #self.anda()
+       #self.anda()
+       #self.direita()
+       #self.anda()
+       #self.anda()
+       #self.anda()
+       #self.direita()
+       #self.anda()
         
        #roteiro desafio2
        #self.direita()
@@ -85,15 +85,15 @@ class Kaiowa(Indio):
        #self.anda()
        
        #roteiro desafio 3
-       #self.empurra()
-       #self.anda()
-       #self.empurra()
-       #self.anda()
-       #self.empurra()
-       #self.anda()
-       #self.esquerda()
-       #self.anda()
-       #self.anda()
+       self.empurra()
+       self.anda()
+       self.empurra()
+       self.anda()
+       self.empurra()
+       self.anda()
+       self.esquerda()
+       self.anda()
+       self.anda()
        
 
 class Vitollino(Jogo):
