@@ -55,12 +55,17 @@ class Kaiowa(Indio):
         """ Roteiro do índio. Conjunto de comandos para ele executar.
         """
         #roteiro desafio 1
-        self.anda()
-        self.direita()
-        self.pega()
         self.esquerda()
         self.anda()
         self.anda()
+        self.anda()
+        self.anda()
+        self.direita()
+        self.anda()
+        self.anda()
+        self.anda()
+        self.anda()
+        self.direita()
         self.anda()
         
        #roteiro desafio2
