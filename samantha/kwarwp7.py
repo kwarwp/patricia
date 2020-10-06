@@ -67,11 +67,11 @@ class Kaiowa(Indio):
         #self.larga()
         
         #roteiro desafio2
-        self.esquerda()
-        self.gira()
-        self.gira()
-        self.gira()
+        self.direita()
         self.anda()
+        self.direita()
+        self.anda()
+        self.direita()
         self.anda()
         self.anda()
        
