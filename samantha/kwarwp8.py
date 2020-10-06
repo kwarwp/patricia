@@ -230,7 +230,7 @@ class Oca(Piche):
         self.taba.fala("Você chegou no seu objetivo")       
         ocupante.ocupa(self)
     @property
-    def elt(self)
+    def elt(self):
         return self.oca.elt 
 
 
