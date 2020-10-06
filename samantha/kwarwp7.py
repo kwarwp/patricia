@@ -66,23 +66,30 @@ class Kaiowa(Indio):
         #self.larga()
         
         #roteiro desafio 1
+        #self.esquerda()
+        #self.gira()
+        #self.gira()
+        #self.gira()
+       # self.anda()
+        #self.anda()
+       # self.anda()
+       
+       #roteiro desafio 3
+        self.empurra()
+        self.anda()
+        self.anda()
+        self.anda()
         self.esquerda()
-        self.gira()
-        self.gira()
-        self.gira()
-        self.anda()
-        self.anda()
-        self.anda()
-
+       
 
 class Vitollino(Jogo):
     """ Empacota o engenho de jogo Vitollino """
     pass
 
 def main(vitollino, medidas):
-    return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIAL, indios=(Kaiowa,))
+    #return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIAL, indios=(Kaiowa,))
     #return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIAL2, indios=(Kaiowa,))
-    #return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIAL3, indios=(Kaiowa,))
+    return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIAL3, indios=(Kaiowa,))
         
     
 if __name__ == "__main__":
