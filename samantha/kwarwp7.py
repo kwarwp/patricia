@@ -1,15 +1,16 @@
 # patricia.samantha.kwarwp7.py
 # SPDX-License-Identifier: GPL-3.0-or-later
 """ Projeto final - três desafios
-FASE 1.
-Nessa primeira aventura o índio precisa vencer obstáculos 
+FASE 1.Na primeira aventura o índio precisa vencer obstáculos 
 para chegar até a caverna!
-
+FASE 2. Na segunda fase o índio precisa tomar cuidado para não cair na toca do tatu!
+FASE 3. Na terceira fase o índio precisa chegar até a caverna sem cair no córrego!
+PARA JOGAR, COMENTE OU DESCOMENTE OS DESAFIOS NA DEF MAIN! 
 .. codeauthor:: Raquel M. M. Fernandes - raquelmachado4993@gmail.com
 
 Changelog
 ---------
-.. versionadded::    27.09
+.. versionadded::    06.10
     
 """
 
@@ -65,25 +66,25 @@ class Kaiowa(Indio):
         #self.direita()
         #self.larga()
         
-        #roteiro desafio 1
-        #self.esquerda()
-        #self.gira()
-        #self.gira()
-        #self.gira()
-       # self.anda()
-        #self.anda()
-       # self.anda()
+        #roteiro desafio2
+        self.esquerda()
+        self.gira()
+        self.gira()
+        self.gira()
+        self.anda()
+        self.anda()
+        self.anda()
        
        #roteiro desafio 3
-        self.empurra()
-        self.anda()
-        self.empurra()
-        self.anda()
-        self.empurra()
-        self.anda()
-        self.esquerda()
-        self.anda()
-        self.anda()
+       #self.empurra()
+       #self.anda()
+       #self.empurra()
+       #self.anda()
+       #self.empurra()
+       #self.anda()
+       #self.esquerda()
+       #self.anda()
+       #self.anda()
        
 
 class Vitollino(Jogo):
@@ -92,8 +93,8 @@ class Vitollino(Jogo):
 
 def main(vitollino, medidas):
     #return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIAL, indios=(Kaiowa,))
-    #return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIAL2, indios=(Kaiowa,))
-    return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIAL3, indios=(Kaiowa,))
+    return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIAL2, indios=(Kaiowa,))
+    #return kwarwp_main(vitollino=vitollino, medidas=medidas, mapa=MAPA_INICIAL3, indios=(Kaiowa,))
         
     
 if __name__ == "__main__":
