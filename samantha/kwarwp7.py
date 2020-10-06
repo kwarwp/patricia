@@ -45,7 +45,7 @@ ccccccccc
 c...e...c
 m....e.ec
 e...e...c
-e.#.e.e.c
+e.r.e.e.c
 ec^c..e.c
 """
 
