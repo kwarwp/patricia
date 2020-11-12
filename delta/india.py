@@ -1,27 +1,20 @@
 # patricia.delta.india.py
 # SPDX-License-Identifier: GPL-3.0-or-later
 """ Jogo da Memória, 3x4.
-..codeauthor:: Paulo Assumpção <>
-.. sub-codeauthor:: Emanuelle Simas <ellesimas@gmail.com>
+..codeauthor:: Emanuelle Simas <ellesimas@gmail.com>
 
 Changelog
 ---------
 .. versionadded::    20.07.01
-        Transforma o tabuleiro 2x5 em 2x4
+        - 
 
 """
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
-from delta.hotel import Game  
+#from delta.hotel import Game  
 import random
 import time
 
-__version__ = "20.07"
-__author__ = "Paulo Assumpção"
-
-__version__ = "20.07.01"
-__author__ = "Emanuelle Simas"
-
-IMG_CARD_FACE_DOWN = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline"
+CARD_BAIXO = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_verso.png?disp=inline"
 IMG_CARD_1 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_pycharm.png?disp=inline"
 IMG_CARD_2 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Linux.png?disp=inline"
 IMG_CARD_3 = "http://activufrj.nce.ufrj.br/file/ProgOO/Card_Gitlab.png?disp=inline"
