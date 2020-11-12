@@ -25,8 +25,7 @@ IMG_WIDTH = 150
 IMG_HEIGHT = 150
 
 class Card:
-    def __init__(self, name, image, position, cena, rule):
-        self.rule = rule
+    def __init__(self, name, image, position, cena):
         self.name = name
         self.cena = cena
         self.image = image
@@ -36,38 +35,79 @@ class Card:
         self.pos_y = 50 + self.position[1] * IMG_HEIGHT
         self.card = Elemento(IMG_CARD_FACE_DOWN, tit=self.name, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.card.elt.bind("click", self.turnUp)
-        self.removed = False
+        #self.removed = False
         
     def turnUp(self, env=None):
         self.card = Elemento(self.image, tit=self.name, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.faceDown = False 
-        self.card.elt.bind("click", self.turnDown)
-        self.rule(self)
+        self.card.elt.bind("click", self.turnDown) # DIZ QUE AO CLICAR NA CARTA ELA VIRA PRA BAIXO
         
     def turnDown(self, env=None):
         self.card = Elemento(IMG_CARD_FACE_DOWN, tit=self.name, x=self.pos_x, y=self.pos_y, width=IMG_WIDTH, height=IMG_HEIGHT, cena=self.cena)
         self.faceDown = True
-        self.card.elt.bind("click", self.turnUp)
+        self.card.elt.bind("click", self.turnUp) # DIZ QUE AO CLICAR ELA DEVE VIRAR PRA CIMA
         
         
-class Tabuleiro():
-    """ Jogo da Memória para entendimento da POO
-       
-        :param dimensao: Resgata o número de linhas e colunas para gerar o tamanho da matriz do game
+class Tabuleiro:
+    """ Contém uma matriz de casas.
+ 
+    :param matriz: Uma tupla com número de colunas e linhas - default (2, 2).
     """
-    n_linhas = None
-    n_colunas = None
+        
+    def __init__(self, matriz = (2,2)):
+        _col, _lin = matriz
+        self.tabuleiro = [Casa(self, (col,lin)) for col in range(_col) for lin in range(_lin)]
+        
+    def monta(self,imagem,casa):
+        _col, _lin = casa
+        _casa = self.tabuleiro[_col][_lin]
+        _casa.joga(tipo) # coloca o tipo de pino no local
+        
+class Casa:
+    """ Local onde se pode colocar um pino.
+        :param tabuleiro: a referencia do tabuleiro.
+        :param posicao: Uma tupla com a ordem da coluna e da linha.
+    """   
+    cena = Cena() 
     
-    def __init__(self, dimensao=(l,c):
-        self.lado, self.linha, self.coluna
-        self.c = n_colunas <= 5
-        self.dimensao = dim
+    CARD_LIST = [self.card1a = Card("PyCharm", IMG_CARD_1, list_cards[0], Tabuleiro.cena),
+                 self.card1b = Card("PyCharm", IMG_CARD_1, list_cards[1], Tabuleiro.cena),
+                 self.card2a = Card("Linux", IMG_CARD_2, list_cards[2], Tabuleiro.cena),
+                 self.card2b = Card("Linux", IMG_CARD_2, list_cards[3], Tabuleiro.cena),
+                 self.card3a = Card("GitLab", IMG_CARD_3, list_cards[4], Tabuleiro.cena),
+                 self.card3b = Card("GitLab", IMG_CARD_3, list_cards[5], Tabuleiro.cena),
+                 self.card4a = Card("GitHub", IMG_CARD_4, list_cards[6], Tabuleiro.cena),
+                 self.card4b = Card("GitHub", IMG_CARD_4, list_cards[7], Tabuleiro.cena),
+                 self.card5a = Card("Activ", IMG_CARD_5, list_cards[8], Tabuleiro.cena),
+                 self.card5b = Card("Activ", IMG_CARD_5, list_cards[9], Tabuleiro.cena)]
+                 
+    def __init__(self, tabuleiro, posicao):
+        self.tabuleiro, self.posicao = tabuleiro, posicao
+        self.carta = None
+
+    def joga(self, tipo):
+        """ Coloca o pino de um tipo nesta casa.
+            :param tipo: tipo do pino que será colocado.
+        """         
+        self.pino = Card().self.card
         
-    def gera_tabu():
-        pass
+    def __repr__(self):
+        return str(self.pino)
         
-    def regra():
-       pass
+def Main():
+
+    jogo = Tabuleiro()
+    _col, _lin = (3, 3)
+    casas = [(col, lin)  for col in range(_col) for lin in range(_lin)]
+    tipo = True
+    while casas:
+        perg_lin = int(input("Em qual linha coloco a peça?"))
+        perg_col = int(input("Em qual coluna  coloco a peça?"))
+        jogo.joga(tipo,(perg_lin,perg_col))
+        tipo = not tipo
+        print(jogo)
+
+        
 
 if __name__ == "__main__":
-    Tabuleiro().vai()
+    Main().vai()
