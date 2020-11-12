@@ -4228,3 +4228,10 @@ ImportError: cannot import name 'Calcada'
                                     ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Nov 12 2020 18:25:09.784 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 84
+  def Main:
+           ^
+SyntaxError: invalid syntax
+'''},
