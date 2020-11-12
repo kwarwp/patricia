@@ -4221,3 +4221,10 @@ ImportError: cannot import name 'Calcada'
     from adda.main import Calcada
 ImportError: cannot import name 'Calcada'
 '''},
+{'date': 'Thu Nov 12 2020 18:24:59.868 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 57
+  def __init__(self, matriz = (2,2):
+                                    ^
+SyntaxError: invalid syntax
+'''},
