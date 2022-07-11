@@ -167,3 +167,10 @@ IndentationError: expected an indented block
                  ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Mon Jul 11 2022 17:34:19.893 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 24
+  class Kwarwp():
+                 ^
+IndentationError: expected an indented block
+'''},
