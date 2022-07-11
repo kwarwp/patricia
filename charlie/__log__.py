@@ -146,3 +146,10 @@ AttributeError: 'normal' object has no attribute 'mostra_conteudo_minipython'
     minipython(self.monitor, self.mostra_conteudo_minipython)
 AttributeError: 'normal' object has no attribute 'mostra_conteudo_minipython'
 '''},
+{'date': 'Mon Jul 11 2022 17:34:04.791 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 24
+  class Kwarwp():
+                 ^
+IndentationError: expected an indented block
+'''},
