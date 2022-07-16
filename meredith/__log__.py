@@ -482,3 +482,10 @@ NameError: name 'kwarwp' is not defined
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Sat Jul 16 2022 20:16:01.841 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 93
+  """def executa(self, *_):
+                                        ^
+SyntaxError: invalid syntax
+'''},
