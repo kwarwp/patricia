@@ -56,3 +56,10 @@ SyntaxError: invalid syntax
                                                                                              ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Sat Jul 16 2022 10:25:31.404 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 52
+  [self.cria_elemento(imagem, x=i*lado, y=j*lado+lado, cena=cena)
+                                                                                                                            ^
+SyntaxError: invalid syntax
+'''},
