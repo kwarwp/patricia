@@ -26,7 +26,7 @@ class Kwarwp():
     ".": "https://i.imgur.com/npb9Oej.png", # VAZIO
     "_": "https://i.imgur.com/sGoKfvs.jpg", # SOLO
     "#": "https://imgur.com/jCWaQHm.png", # TORA
-    "@": "https://imgur.com/emU1u7J.png", # PICHE
+    "@": "https://imgur.com/eMEESZW.png", # PICHE
     "~": "https://i.imgur.com/UAETaiP.gif", # CEU 
     "*": "https://i.imgur.com/PfodQmT.gif"} # SOL
 
