@@ -38,4 +38,6 @@ class Kwarwp():
         return cena
 if __name__ == "__main__":
     from _spy.vitollino.main import Jogo
+    STYLE["width"]=600
+    STYLE["height"]=500
     Kwarwp(Jogo)      
