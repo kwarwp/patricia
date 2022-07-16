@@ -21,11 +21,11 @@ class Kwarwp():
     :param vitollino: Empacota o engenho de jogo Vitollino.
     """
     GLIFOS = {
-    "&": "https://imgur.com/9sQjdJ1.png", # OCA
+    "&": "https://imgur.com/zUbUHO7.png", # OCA
     "^": "https://imgur.com/8jMuupz.png", # INDIO
     ".": "https://i.imgur.com/npb9Oej.png", # VAZIO
     "_": "https://i.imgur.com/sGoKfvs.jpg", # SOLO
-    "#": "https://imgur.com/jCWaQHm.png", # TORA
+    "#": "https://imgur.com/kNoAnjR.png", # TORA
     "@": "https://imgur.com/eMEESZW.png", # PICHE
     "~": "https://i.imgur.com/UAETaiP.gif", # CEU 
     "*": "https://i.imgur.com/PfodQmT.gif"} # SOL
