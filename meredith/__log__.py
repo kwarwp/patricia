@@ -42,3 +42,10 @@ TypeError: 'NoneType' object is not callable
                                                                     ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Sat Jul 16 2022 10:19:38.714 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 23
+  GLIFOS = {
+                                                                     ^
+SyntaxError: invalid syntax
+'''},
