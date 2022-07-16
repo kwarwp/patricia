@@ -65,7 +65,7 @@ class Kwarwp():
         "^": Fab(self.indio, f"https://imgur.com/8jMuupz.png"), # INDIO
         ".": Fab(self.vazio, f"https://i.imgur.com/npb9Oej.png"), # VAZIO
         "_": Fab(self.coisa, f"https://i.imgur.com/sGoKfvs.jpg"), # SOLO
-        "#": Fab(self.coisa, f"https://imgur.com/kNoAnjR.png"), # TORA
+        "#": Fab(self.coisa, f"https://imgur.com/izPRRu7.png"), # TORA
         "@": Fab(self.coisa, f"https://imgur.com/eMEESZW.png"), # PICHE
         "~": Fab(self.coisa, f"https://i.imgur.com/UAETaiP.gif"), # CEU 
         "*": Fab(self.coisa, f"https://i.imgur.com/PfodQmT.gif")} # SOL
