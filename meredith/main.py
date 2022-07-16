@@ -13,7 +13,7 @@ class Kwarwp():
 
         :param vitollino: Empacota o engenho de jogo Vitollino.
     """
-    OCA = "https://imgur.com/9sQjdJ1"
+    OCA = "https://imgur.com/9sQjdJ1.png"
     INDIO = "https://imgur.com/8jMuupz.png"
     SOLO = "https://i.imgur.com/sGoKfvs.jpg"
     TORA = "https://imgur.com/ldI7IbK.png"
