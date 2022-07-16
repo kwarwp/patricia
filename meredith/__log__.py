@@ -475,3 +475,10 @@ NameError: name 'kwarwp' is not defined
     self.indio = kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=x, y=y, cena=cena)
 NameError: name 'kwarwp' is not defined
 '''},
+{'date': 'Sat Jul 16 2022 19:14:20.5 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 31
+  """ Roteiro do índio. Conjunto de comandos para ele executar."""
+  ^
+IndentationError: expected an indented block
+'''},
