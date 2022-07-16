@@ -63,3 +63,10 @@ SyntaxError: invalid syntax
                                                                                                                             ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Sat Jul 16 2022 10:26:13.530 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 59
+  eturn self.v.a(self.GLIFOS[imagem], w=lado, h=lado, x=i*lado, y=j*lado+lado, cena=cena)
+         ^
+SyntaxError: invalid syntax
+'''},
