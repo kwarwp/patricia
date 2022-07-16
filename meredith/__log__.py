@@ -489,3 +489,10 @@ IndentationError: expected an indented block
                                         ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Sat Jul 16 2022 20:32:35.652 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 30
+  """def executa(self):
+                                     ^
+SyntaxError: invalid syntax
+'''},
