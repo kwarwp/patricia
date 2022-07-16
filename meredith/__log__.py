@@ -35,3 +35,10 @@ TypeError: 'NoneType' object is not callable
     self.v = vitollino()
 TypeError: 'NoneType' object is not callable
 '''},
+{'date': 'Sat Jul 16 2022 10:18:42.501 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 23
+  GLIFOS = {
+                                                                    ^
+SyntaxError: invalid syntax
+'''},
