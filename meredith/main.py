@@ -214,7 +214,7 @@ class Indio():
     
     AZIMUTE = Rosa(Ponto(0, -1),Ponto(1, 0),Ponto(0, 1),Ponto(-1, 0),)
     """Constante com os pares ordenados que representam os vetores unitários dos pontos cardeais."""
-    def __init__(self, imagem, x, y, cena):
+    def __init__(self, imagem, x, y, cena, taba):
         self.lado = lado = Kwarwp.LADO
         self.azimute = self.AZIMUTE.n
         """índio olhando para o norte"""
@@ -351,7 +351,7 @@ class Kwarwp():
         self.lado, self.col, self.lin = 100, len(self.mapa[0]), len(self.mapa)+1
         Kwarwp.LADO = self.lado
         w, h = self.col *self.lado, self.lin *self.lado
-        self.taba = {}
+        self.taba ={}
         """Dicionário que a partir de coordenada (i,J) localiza um piso da taba"""
         medidas.update(width=w, height=f"{h}px")
         self.cena = self.cria(mapa=self.mapa) if vitollino else None
