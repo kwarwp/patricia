@@ -854,3 +854,10 @@ TypeError: __init__() got an unexpected keyword argument 'taba'
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Sun Jul 17 2022 18:07:17.657 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 10
+  Ponto = nt("Ponto", "x y")
+  ^
+IndentationError: unexpected indent
+'''},
