@@ -654,3 +654,10 @@ NameError: name 'cena' is not defined
     cena.vai()
 NameError: name 'cena' is not defined
 '''},
+{'date': 'Sun Jul 17 2022 12:46:30.974 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 1
+  Docs » Tutorial Kwarwp » Adicionando o Indio
+       ^
+SyntaxError: invalid syntax
+'''},
