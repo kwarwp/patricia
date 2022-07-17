@@ -811,3 +811,10 @@ TypeError: __init__() got an unexpected keyword argument 'taba'
     self.o_indio = Indio(imagem, x=0, y=0, cena=cena, taba=self)
 TypeError: __init__() got an unexpected keyword argument 'taba'
 '''},
+{'date': 'Sun Jul 17 2022 18:03:20.596 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 147
+  Ponto = nt("Ponto", "x y")
+  ^
+IndentationError: unexpected indent
+'''},
