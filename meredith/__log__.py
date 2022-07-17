@@ -847,3 +847,10 @@ IndentationError: expected an indented block
     coisa = Indio(imagem, x=0, y=0, cena=cena, taba=self)
 TypeError: __init__() got an unexpected keyword argument 'taba'
 '''},
+{'date': 'Sun Jul 17 2022 18:07:13.256 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 10
+  Ponto = nt("Ponto", "x y")
+  ^
+IndentationError: unexpected indent
+'''},
