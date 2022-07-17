@@ -88,7 +88,7 @@ class Kwarwp():
     
     def executa(self, *_):
         """ Ordena a execução do roteiro do índio."""   
-        self.o_indio.executa ()  
+        self.o_indio.executa()  
            
     def coisa(self,imagem, x, y, cena):
         lado = self.lado
