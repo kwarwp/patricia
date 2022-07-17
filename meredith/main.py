@@ -6,6 +6,12 @@ Projeto para Estudo do Tutorial.
 .. codeauthor:: Erica Scheffel <ericascheffel@nce.ufrj.br>
 
 """
+from collections import namedtuple as nt
+from kwarwp.kwarwpart import Vazio, Piche, Oca, Tora, NULO
+
+IMGUR = "https://imgur.com/"
+"""Prefixo do site imgur."""
+
 MAPA_INICIO = """
 @....&
 ......
@@ -87,7 +93,6 @@ class Vazio():
         
 class Piche(Vazio):
     """ Poça de Piche que gruda o índio se ele cair nela.
-
         :param imagem: A figura representando o índio na posição indicada.
         :param x: Coluna em que o elemento será posicionado.
         :param y: Cinha em que o elemento será posicionado.
@@ -95,6 +100,8 @@ class Piche(Vazio):
         :param taba: Representa a taba onde o índio faz o desafio."""
 
     def __init__(self, imagem, x, y, cena, taba):
+        from kwarwp.kwarapp import Kwarwp
+        """Importando localmente o Kwarwp para evitar referência circular."""
         self.taba = taba
         self.vaga = taba
         self.lado = lado = Kwarwp.LADO
@@ -141,6 +148,68 @@ class Oca(Piche):
         :param ocupante: O canditato a ocupar a posição corrente."""
         self.taba.fala("Você chegou no seu objetivo")
         ocupante.ocupa(self)
+        
+class Tora(Piche):
+    """  A Tora é um pedaço de tronco cortado que o índio pode carregar ou empurrar.
+        :param imagem: A figura representando o índio na posição indicada.
+        :param x: Coluna em que o elemento será posicionado.
+        :param y: Linha em que o elemento será posicionado.
+        :param cena: Cena em que o elemento será posicionado.
+        :param taba: Representa a taba onde o índio faz o desafio.
+    """
+
+    def pegar(self, requisitante):
+        """ Consulta o ocupante atual se há permissão para pegar e entregar ao requistante.
+            :param requistante: O ator querendo pegar o objeto.
+        """
+        vaga = requisitante
+        self.vaga.sai()
+        # self.posicao = vaga.posicao
+        vaga.ocupou(self)
+        self.vaga = vaga
+
+    @property
+    def posicao(self):
+        """ A propriedade posição faz parte do protocolo do double dispatch com o Indio .
+        No caso da tora, retorna o a posição do atributo **self.vaga**.
+        """
+        return self.vaga.posicao
+
+    @posicao.setter
+    def posicao(self, _):
+        """ A propriedade posição faz parte do protocolo do double dispatch com o Indio .
+        No caso da tora, é uma propriedade de somente leitura, não executa nada.
+        """
+        pass
+
+    @property
+    def elt(self):
+        """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
+        No caso da tora, retorna o elt do elemento do atributo **self.vazio**.
+        """
+        return self.vazio.elt
+
+    def _acessa(self, ocupante):
+        """ Pedido de acesso a essa posição, delegada ao ocupante pela vaga.
+        :param ocupante: O componente candidato a ocupar a vaga já ocupada pelo índio.
+        No caso da tora, ela age como um obstáculo e não prossegue com o protocolo.
+        """
+        pass
+        
+class Nulo:
+    """Objeto nulo que responde passivamente a todas as requisições."""
+    def __init__(self):
+        self.pegar = self.ocupa = self.nulo
+
+    def nulo(self, *_, **__):
+        """Método nulo, responde passivamente a todas as chamadas.
+        :param _: aceita todos os argumentos posicionais.
+        :param __: aceita todos os argumentos nomeados.
+        :return: retorna o próprio objeto nulo.
+        """
+        return self
+
+NULO = Nulo()
 
 class Indio():
     from collections import namedtuple as nt
@@ -166,6 +235,37 @@ class Indio():
             self.indio.siz = (lado*3, lado*4)
             """Define as proporções da folha de sprites"""
             self.mostra()
+            
+    def pega(self):
+        """tenta pegar o objeto que está diante dele"""
+        destino = (self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
+        """A posição para onde o índio vai depende do vetor de azimute corrente"""
+        taba = self.taba.taba
+        if destino in taba:
+            vaga = taba[destino]
+            """Recupera na taba a vaga para a qual o índio irá se transferir"""
+            vaga.pegar(self)
+
+    def larga(self):
+        """tenta largar o objeto que está segurando"""
+        destino = (self.posicao[0]+self.azimute.x, self.posicao[1]+self.azimute.y)
+        """A posição para onde o índio vai depende do vetor de azimute corrente"""
+        taba = self.taba.taba
+        if destino in taba:
+            vaga = taba[destino]
+            """Recupera na taba a vaga para a qual o índio irá se transferir"""
+            # self.ocupante.largar(vaga)
+            vaga.acessa(self.ocupante)
+
+    def ocupou(self, ocupante):
+        """ O candidato à vaga decidiu ocupá-la e efetivamente entra neste espaço.
+        :param ocupante: O canditato a ocupar a posição corrente.
+        Este ocupante vai entrar no elemento do Vitollino e definitivamente se tornar
+        o ocupante da vaga. Com isso ele troca o estado do método acessa para primeiro
+        consultar a si mesmo, o ocupante corrente usando o protocolo definido em
+        **_valida_acessa ()**"""    
+        self.indio.ocupa(ocupante)
+        self.ocupante = ocupante
         
     def mostra(self):
         """ Modifica a figura (Sprite) do índio mostrando para onde está indo. """
