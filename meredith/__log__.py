@@ -818,3 +818,10 @@ TypeError: __init__() got an unexpected keyword argument 'taba'
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Sun Jul 17 2022 18:04:16.784 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 303
+  """ O Kwarwp é aqui usado para falar algo que ficará escrito no céu."""
+  ^
+IndentationError: expected an indented block
+'''},
