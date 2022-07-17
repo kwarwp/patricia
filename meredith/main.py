@@ -155,13 +155,11 @@ class Tora(Piche):
         :param x: Coluna em que o elemento será posicionado.
         :param y: Linha em que o elemento será posicionado.
         :param cena: Cena em que o elemento será posicionado.
-        :param taba: Representa a taba onde o índio faz o desafio.
-    """
+        :param taba: Representa a taba onde o índio faz o desafio."""    
 
     def pegar(self, requisitante):
         """ Consulta o ocupante atual se há permissão para pegar e entregar ao requistante.
-            :param requistante: O ator querendo pegar o objeto.
-        """
+            :param requistante: O ator querendo pegar o objeto."""        
         vaga = requisitante
         self.vaga.sai()
         # self.posicao = vaga.posicao
@@ -171,29 +169,25 @@ class Tora(Piche):
     @property
     def posicao(self):
         """ A propriedade posição faz parte do protocolo do double dispatch com o Indio .
-        No caso da tora, retorna o a posição do atributo **self.vaga**.
-        """
+        No caso da tora, retorna o a posição do atributo **self.vaga**."""        
         return self.vaga.posicao
 
     @posicao.setter
     def posicao(self, _):
         """ A propriedade posição faz parte do protocolo do double dispatch com o Indio .
-        No caso da tora, é uma propriedade de somente leitura, não executa nada.
-        """
+        No caso da tora, é uma propriedade de somente leitura, não executa nada."""        
         pass
 
     @property
     def elt(self):
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
-        No caso da tora, retorna o elt do elemento do atributo **self.vazio**.
-        """
+        No caso da tora, retorna o elt do elemento do atributo **self.vazio**."""        
         return self.vazio.elt
 
     def _acessa(self, ocupante):
         """ Pedido de acesso a essa posição, delegada ao ocupante pela vaga.
         :param ocupante: O componente candidato a ocupar a vaga já ocupada pelo índio.
-        No caso da tora, ela age como um obstáculo e não prossegue com o protocolo.
-        """
+        No caso da tora, ela age como um obstáculo e não prossegue com o protocolo."""        
         pass
         
 class Nulo:
@@ -205,8 +199,7 @@ class Nulo:
         """Método nulo, responde passivamente a todas as chamadas.
         :param _: aceita todos os argumentos posicionais.
         :param __: aceita todos os argumentos nomeados.
-        :return: retorna o próprio objeto nulo.
-        """
+        :return: retorna o próprio objeto nulo."""        
         return self
 
 NULO = Nulo()
