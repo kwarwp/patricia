@@ -165,7 +165,7 @@ class Vazio():
     :param cena: Cena em que o elemento será posicionado."""    
     VITOLLINO, LADO = None, None
 
-    def __init__(self, imagem, x, y, cena, ocupante=None):
+    def __init__(self, imagem, x, y, cena, taba, ocupante=None):
         self.lado = lado = self.LADO # or 100
         self.taba = taba
         self.posicao = (x//lado,y//lado-1)
@@ -236,7 +236,7 @@ class Vazio():
         """Objeto tenta sair e consulta o ocupante para seguir"""
         self.ocupante.sair()      
 
-    def ocupou(self, ocupante, pos=(0, 0)):
+    def ocupou(self, ocupante, pos=(0,0)):
         """ O candidato à vaga decidiu ocupá-la e efetivamente entra neste espaço.        
         :param ocupante: O canditato a ocupar a posição corrente.
         :param pos: A posição (atitude) do sprite do ocupante.
@@ -275,13 +275,11 @@ class Piche(Vazio):
         :param taba: Representa a taba onde o índio faz o desafio."""
 
     def __init__(self, imagem, x, y, cena, taba):
-        from kwarwp.kwarapp import Kwarwp
-        """Importando localmente o Kwarwp para evitar referência circular."""
         self.taba = taba
         self.vaga = taba
         self.lado = lado = self.LADO or 100
         self.posicao = (x//lado,y//lado-1)
-        self.vazio = Kwarwp.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena)
+        self.vazio = self.VITOLLINO.a(imagem, w=lado, h=lado, x=0, y=0, cena=cena)
         #self._nada = Kwarwp.VITOLLINO.a()
         self.ocupante = NULO
         self.empurrante = NULO        
@@ -292,11 +290,10 @@ class Piche(Vazio):
         """O **sair ()** é usado como método dinâmico, variando com o estado da vaga.
         Inicialmente tem o comportamento de **_sair ()** que é o estado vago, aceitando ocupantes"""
         
-        @property        
-        def elt(self):
+    @property        
+    def elt(self):
         """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
-        No caso do espaço vazio, vai retornar um elemento que não contém nada.
-        """
+        No caso do espaço vazio, vai retornar um elemento que não contém nada."""        
         return self.vazio.elt
 
     def ocupa(self, vaga):
@@ -685,7 +682,7 @@ class Kwarwp():
         :param cena: cena em que o elemento será posicionado.
         Cria uma vaga vazia e coloca o componente dentro dela."""
         coisa = Piche(imagem, x=0, y=0, cena=cena, taba=self)
-        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa)
+        vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa, taba=self)
         return vaga
         
     def sai(self, *_):
