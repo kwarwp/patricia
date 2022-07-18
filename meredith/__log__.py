@@ -1478,3 +1478,10 @@ AttributeError: 'module' object has no attribute 'LADO'
     self.lado = lado = Kwarwp.LADO
 AttributeError: 'module' object has no attribute 'LADO'
 '''},
+{'date': 'Sun Jul 17 2022 21:39:23.718 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 297
+  """ A propriedade elt faz parte do protocolo do Vitollino para anexar um elemento no outro .
+  ^
+IndentationError: expected an indented block
+'''},
