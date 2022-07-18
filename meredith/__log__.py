@@ -1244,3 +1244,27 @@ AttributeError: 'module' object has no attribute 'VITOLLINO'
     self.lado = lado = Kwarwp.LADO
 AttributeError: 'module' object has no attribute 'LADO'
 '''},
+{'date': 'Sun Jul 17 2022 21:06:56.464 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 677
+    Kwarwp(Jogo)    
+  module <module> line 514
+    self.cena = self.cria(mapa=self.mapa) if vitollino else None
+  module <module> line 548
+    self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
+  module <module> line 609
+    coisa = Piche(imagem, x=0, y=0, cena=cena, taba=self)
+  module <module> line 243
+    self.lado = lado = Kwarwp.LADO
+AttributeError: 'module' object has no attribute 'LADO'
+'''},
