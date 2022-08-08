@@ -1795,3 +1795,33 @@ TypeError: ocupa() takes 2 positional arguments but more were given
     self.vazio.ocupa(ocupante, pos)
 TypeError: ocupa() takes 2 positional arguments but more were given
 '''},
+{'date': 'Mon Aug 08 2022 11:08:59.143 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 752
+    Kwarwp(Jogo)    
+  module <module> line 589
+    self.cena = self.cria(mapa=self.mapa) if vitollino else None
+  module <module> line 623
+    self.taba = {(i, j): fabrica[imagem].objeto(fabrica[imagem].imagem, x=i*lado, y=j*lado+lado, cena=cena)
+  module <module> line 685
+    vaga = Vazio("", x=x, y=y, cena=cena, ocupante=coisa, taba=self)
+  module <module> line 179
+    self.acessa(ocupante)
+  module <module> line 219
+    ocupante.ocupa(self)
+  module <module> line 305
+    vaga.ocupou(self)
+  module <module> line 247
+    self.vazio.ocupa(ocupante, pos)
+TypeError: ocupa() takes 2 positional arguments but more were given
+'''},
